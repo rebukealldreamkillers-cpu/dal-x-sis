@@ -48,7 +48,7 @@ Without runtime authority, AI systems operate in a governance vacuum. They are f
 
 DAL-X is developing the conceptual and operational foundation for runtime authority in AI-generated work. Jochanni Labs is the research organization through which this work is conducted.
 
-The **DAL-X Strategic Intelligence Series** is the publication through which we share frameworks, analysis, and operational concepts for organizations building in an era of AI-augmented decision-making.
+The **Decision Governance Strategic Intelligence Series** is the publication through which we share frameworks, analysis, and operational concepts for organizations building in an era of AI-augmented decision-making.
 
 Decision Governance is not a software category. It is a discipline. One that organizations will need to build, and one that the AI systems of the near future will need to respect.
 

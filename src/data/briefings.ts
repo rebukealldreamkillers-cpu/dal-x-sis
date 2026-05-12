@@ -1,5 +1,5 @@
 /* ══════════════════════════════════════════════════════════════════
-   DAL-X STRATEGIC INTELLIGENCE SERIES
+   DECISION GOVERNANCE STRATEGIC INTELLIGENCE SERIES
    Decision Governance Briefing Map — All 20 Briefings
    ══════════════════════════════════════════════════════════════════ */
 
