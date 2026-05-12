@@ -1,0 +1,6 @@
+.vercel
+node_modules/
+dist/
+.astro/
+.claude/
+briefings-source/

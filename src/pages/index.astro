@@ -1,0 +1,164 @@
+---
+import Base from '../layouts/Base.astro';
+import { BRIEFINGS, PHASES } from '../data/briefings';
+
+const featuredPublished = BRIEFINGS.filter(b => b.status === 'Published').slice(0, 1);
+const featuredScheduled = BRIEFINGS.filter(b => b.status === 'Scheduled').slice(0, 2);
+
+function formatDate(iso: string) {
+  const [y, m, d] = iso.split('-').map(Number);
+  return new Date(y, m - 1, d).toLocaleDateString('en-US', {
+    month: 'long', day: 'numeric', year: 'numeric',
+  });
+}
+
+function padIssue(n: number) {
+  return String(n).padStart(2, '0');
+}
+
+const seriesTopics = [
+  'Runtime Authority',
+  'Decision Governance',
+  'AI Assisted Execution',
+  'Trigger Logic',
+  'Authority Routing',
+  'Escalation Paths',
+  'Audit Evidence',
+  'Scope Containment',
+  'Conformance Validation',
+  'The Execution Gap',
+];
+---
+
+<Base
+  title="DAL-X"
+  description="DAL-X Strategic Intelligence Series — Decision Governance and Runtime Authority for AI-generated work before execution."
+>
+  <!-- 1. Hero -->
+  <section class="hero">
+    <div class="container">
+      <p class="hero-label">Strategic Intelligence Series</p>
+      <h1>Decision Governance For AI Generated Work Before Execution.</h1>
+      <p class="hero-lead">
+        A founder led strategic intelligence publication series exploring runtime authority,
+        AI assisted execution, trigger logic, authority routing, escalation paths, audit evidence,
+        and the emerging enterprise need for Decision Governance.
+      </p>
+      <div class="btn-row">
+        <a href="/briefings" class="btn-primary">Read the Briefings</a>
+        <a href="/dal-x" class="btn-outline">What Is DAL-X?</a>
+      </div>
+    </div>
+  </section>
+
+  <main>
+
+    <!-- 2. Latest Briefings -->
+    <section class="home-section">
+      <div class="container">
+        <p class="section-label">Latest Briefings</p>
+        <div class="briefing-grid">
+          {featuredPublished.map(b => (
+            <a href={`/briefings/${b.slug}`} class="briefing-card">
+              <p class="briefing-issue">Issue {padIssue(b.briefingNumber)}</p>
+              <h3>{b.title}</h3>
+              <p class="briefing-card-desc">{b.corePosition}</p>
+              <p class="briefing-meta">
+                <time datetime={b.publicationDate}>{formatDate(b.publicationDate)}</time>
+              </p>
+            </a>
+          ))}
+          {featuredScheduled.map(b => (
+            <div class="briefing-card briefing-card--preview">
+              <p class="briefing-issue">Issue {padIssue(b.briefingNumber)}</p>
+              <h3>{b.title}</h3>
+              <p class="briefing-card-desc">{b.corePosition}</p>
+              <p class="briefing-meta">
+                <time datetime={b.publicationDate}>{formatDate(b.publicationDate)}</time>
+              </p>
+            </div>
+          ))}
+        </div>
+        <p style="margin-top: 2rem;">
+          <a href="/briefings" class="view-all-link">View all 20 briefings →</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- 3. The Decision Governance Strategic Intelligence Series -->
+    <section class="home-section" style="border-top: 1px solid var(--border-light);">
+      <div class="container">
+        <p class="section-label">The Decision Governance Strategic Intelligence Series</p>
+        <p class="home-lead">
+          Twenty briefings defining the governance discipline emerging inside AI-assisted enterprise
+          workflows — from first principles through deployment reality and category defense.
+        </p>
+        <div class="topic-strip">
+          {seriesTopics.map(tag => (
+            <span class="topic-tag">{tag}</span>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Four Phase Publication Map -->
+    <section class="home-section--dark">
+      <div class="container">
+        <p class="section-label--on-dark">Four Phase Publication Map</p>
+        <div class="phase-map">
+          {PHASES.map(phase => (
+            <div class="phase-map-card">
+              <p class="phase-map-num">Phase {phase.number}</p>
+              <p class="phase-map-name">{phase.name}</p>
+              <p class="phase-map-range">{phase.range}</p>
+              <p class="phase-map-summary">{phase.summary}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. The Emergence of DAL-X -->
+    <div class="emergence-block">
+      <div class="container">
+        <p class="emergence-label">The Emergence of DAL-X</p>
+        <p class="emergence-statement">
+          The Decision Governance Strategic Intelligence Series defines the governance gap emerging
+          inside AI assisted enterprise workflows. DAL-X is the runtime authority layer emerging
+          in response to that gap.
+        </p>
+        <a href="/dal-x" class="emergence-link">What Is DAL-X? →</a>
+      </div>
+    </div>
+
+    <!-- 6 + 7. About Kevin Moore + Jochanni Labs -->
+    <section class="home-section">
+      <div class="container">
+        <p class="section-label">The People and Institutions Behind the Work</p>
+        <div class="preview-grid">
+          <div class="preview-card">
+            <p class="preview-card-label">About the Author</p>
+            <h3>Kevin Moore</h3>
+            <p>
+              Kevin Moore is the founder of Jochanni Labs and the author of the DAL-X Strategic
+              Intelligence Series. He writes on Decision Governance, runtime authority, and the
+              structural disciplines required for AI-augmented enterprise operations.
+            </p>
+            <a href="/about" class="preview-link">About Kevin Moore →</a>
+          </div>
+          <div class="preview-card">
+            <p class="preview-card-label">Publisher</p>
+            <h3>Jochanni Labs</h3>
+            <p>
+              Jochanni Labs is the independent research and publishing institution behind DAL-X.
+              The institution produces governance frameworks, applied research, and the Strategic
+              Intelligence Series for enterprise leaders navigating AI-assisted decision environments.
+            </p>
+            <a href="/jochanni-labs" class="preview-link">Jochanni Labs →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</Base>

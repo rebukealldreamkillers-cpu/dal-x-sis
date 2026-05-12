@@ -1,0 +1,153 @@
+---
+import Base from '../../layouts/Base.astro';
+import { BRIEFINGS, PHASES, getBriefingsByPhase } from '../../data/briefings';
+import type { Briefing } from '../../data/briefings';
+
+const total     = BRIEFINGS.length;
+const published = BRIEFINGS.filter(b => b.status === 'Published').length;
+const scheduled = BRIEFINGS.filter(b => b.status === 'Scheduled').length;
+const upcoming  = BRIEFINGS.filter(b => b.status === 'Upcoming').length;
+
+function padNum(n: number) {
+  return String(n).padStart(2, '0');
+}
+
+function formatDate(iso: string) {
+  const [y, m, d] = iso.split('-').map(Number);
+  return new Date(y, m - 1, d).toLocaleDateString('en-US', {
+    month: 'long', day: 'numeric', year: 'numeric',
+  });
+}
+
+function statusClass(status: Briefing['status']) {
+  return {
+    Published: 'status-badge--published',
+    Scheduled: 'status-badge--scheduled',
+    Upcoming:  'status-badge--upcoming',
+  }[status];
+}
+
+function cardClass(status: Briefing['status']) {
+  return {
+    Published: '',
+    Scheduled: 'archive-card--scheduled',
+    Upcoming:  'archive-card--upcoming',
+  }[status];
+}
+---
+
+<Base
+  title="Decision Governance Strategic Intelligence Series"
+  description="A structured publication series by Kevin Moore and Jochanni Labs exploring runtime authority, AI influenced decision paths, execution governance, trigger logic, escalation models, audit evidence, and enterprise control before action moves forward."
+>
+  <div class="page-header">
+    <div class="container">
+      <p class="page-label">DAL-X Strategic Intelligence Series</p>
+      <h1>Decision Governance Strategic Intelligence Series</h1>
+      <p>
+        A structured publication series by Kevin Moore and Jochanni Labs exploring runtime
+        authority, AI influenced decision paths, execution governance, trigger logic, escalation
+        models, audit evidence, and enterprise control before action moves forward.
+      </p>
+    </div>
+  </div>
+
+  <main class="archive-main">
+    <div class="container">
+
+      <!-- Series stats -->
+      <div class="archive-stats">
+        <div>
+          <p class="archive-stat-label">Total Briefings</p>
+          <p class="archive-stat-value">{total}</p>
+        </div>
+        <div>
+          <p class="archive-stat-label archive-stat-label--orange">Published</p>
+          <p class="archive-stat-value">{published}</p>
+        </div>
+        <div>
+          <p class="archive-stat-label">Scheduled</p>
+          <p class="archive-stat-value">{scheduled}</p>
+        </div>
+        <div>
+          <p class="archive-stat-label">Upcoming</p>
+          <p class="archive-stat-value">{upcoming}</p>
+        </div>
+      </div>
+
+      <!-- Phase blocks -->
+      {PHASES.map(phase => {
+        const briefings = getBriefingsByPhase(phase.number);
+        return (
+          <div class="archive-phase">
+
+            <div class="archive-phase-header">
+              <div>
+                <p class="archive-phase-label">Phase {phase.number}</p>
+                <p class="archive-phase-name">{phase.name}</p>
+              </div>
+              <span class="archive-phase-range">{phase.range}</span>
+            </div>
+
+            <p class="archive-phase-summary">{phase.summary}</p>
+
+            <div class="archive-cards">
+              {briefings.map(b => {
+                const num = padNum(b.briefingNumber);
+                const route = `/briefings/Strategic_Intelligence_Briefing_${num}`;
+                return (
+                  <div class={`archive-card ${cardClass(b.status)}`}>
+
+                    <div class="archive-card-top">
+                      <span class="archive-card-number">Issue {num}</span>
+                      <div class="archive-card-meta-right">
+                        <span class={`status-badge ${statusClass(b.status)}`}>
+                          {b.status}
+                        </span>
+                        <span class="archive-card-readtime">{b.estimatedReadTime} min</span>
+                      </div>
+                    </div>
+
+                    <h3>{b.title}</h3>
+
+                    <p class="archive-card-position">{b.corePosition}</p>
+
+                    <div class="archive-card-footer">
+                      <time class="archive-card-date" datetime={b.publicationDate}>
+                        {formatDate(b.publicationDate)}
+                      </time>
+                      <a href={route} class="btn-read">Read Briefing →</a>
+                    </div>
+
+                  </div>
+                );
+              })}
+            </div>
+
+          </div>
+        );
+      })}
+
+      <!-- Footer stats -->
+      <div class="archive-footer-stats">
+        <div>
+          <p class="archive-stat-label">Four Phases</p>
+          <p class="archive-stat-value">{PHASES.length}</p>
+        </div>
+        <div>
+          <p class="archive-stat-label">Total Briefings</p>
+          <p class="archive-stat-value">{total}</p>
+        </div>
+        <div>
+          <p class="archive-stat-label archive-stat-label--orange">Available Now</p>
+          <p class="archive-stat-value">{total}</p>
+        </div>
+        <div>
+          <p class="archive-stat-label">Author</p>
+          <p class="archive-stat-value" style="font-size: 0.9rem; font-weight: 600;">Kevin Moore</p>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</Base>
