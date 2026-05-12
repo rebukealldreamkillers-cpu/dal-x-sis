@@ -1,0 +1,78 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M 48 0 L 0 0 0 48" fill="none" stroke="rgba(255,255,255,0.022)" stroke-width="0.5"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#08080A"/>
+
+  <!-- Grid overlay -->
+  <rect width="1200" height="630" fill="url(#grid)"/>
+
+  <!-- Left orange accent bar -->
+  <rect x="0" y="0" width="4" height="630" fill="#D05010"/>
+
+  <!-- Architectural grid element — right side -->
+  <g opacity="0.07">
+    <rect x="824" y="144" width="80" height="80" fill="none" stroke="#D05010" stroke-width="1"/>
+    <rect x="924" y="144" width="80" height="80" fill="none" stroke="#D05010" stroke-width="1"/>
+    <rect x="1024" y="144" width="80" height="80" fill="none" stroke="#D05010" stroke-width="1"/>
+    <rect x="1124" y="144" width="76" height="80" fill="none" stroke="#D05010" stroke-width="1"/>
+    <rect x="824" y="244" width="80" height="80" fill="none" stroke="#D05010" stroke-width="1"/>
+    <rect x="924" y="244" width="80" height="80" fill="none" stroke="#D05010" stroke-width="1"/>
+    <rect x="1024" y="244" width="80" height="80" fill="none" stroke="#D05010" stroke-width="1"/>
+    <rect x="1124" y="244" width="76" height="80" fill="none" stroke="#D05010" stroke-width="1"/>
+    <rect x="824" y="344" width="80" height="80" fill="none" stroke="#D05010" stroke-width="1"/>
+    <rect x="924" y="344" width="80" height="80" fill="none" stroke="#D05010" stroke-width="1"/>
+    <rect x="1024" y="344" width="80" height="80" fill="none" stroke="#D05010" stroke-width="1"/>
+    <rect x="1124" y="344" width="76" height="80" fill="none" stroke="#D05010" stroke-width="1"/>
+    <rect x="824" y="444" width="80" height="80" fill="none" stroke="#D05010" stroke-width="1"/>
+    <rect x="924" y="444" width="80" height="80" fill="none" stroke="#D05010" stroke-width="1"/>
+    <rect x="1024" y="444" width="80" height="80" fill="none" stroke="#D05010" stroke-width="1"/>
+    <rect x="1124" y="444" width="76" height="80" fill="none" stroke="#D05010" stroke-width="1"/>
+  </g>
+
+  <!-- Bright accent cell -->
+  <rect x="924" y="244" width="80" height="80" fill="rgba(208,80,16,0.07)" stroke="#D05010" stroke-width="1" opacity="0.45"/>
+
+  <!-- Series label -->
+  <text
+    x="72" y="190"
+    font-family="'Courier New', Courier, monospace"
+    font-size="12"
+    font-weight="400"
+    fill="#4A5560"
+    letter-spacing="5">STRATEGIC INTELLIGENCE SERIES</text>
+
+  <!-- Main wordmark -->
+  <text
+    x="66" y="340"
+    font-family="system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif"
+    font-size="152"
+    font-weight="800"
+    fill="#FFFFFF"
+    letter-spacing="-4">DAL-X</text>
+
+  <!-- Subtitle -->
+  <text
+    x="72" y="390"
+    font-family="system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif"
+    font-size="21"
+    font-weight="400"
+    fill="#D4CEC6"
+    letter-spacing="0.3">Decision Governance · Runtime Authority</text>
+
+  <!-- Separator line -->
+  <line x1="72" y1="420" x2="520" y2="420" stroke="#D05010" stroke-width="1" opacity="0.4"/>
+
+  <!-- Attribution -->
+  <text
+    x="72" y="452"
+    font-family="'Courier New', Courier, monospace"
+    font-size="13"
+    font-weight="400"
+    fill="#6A7A88"
+    letter-spacing="3.5">JOCHANNI LABS · KEVIN MOORE</text>
+</svg>

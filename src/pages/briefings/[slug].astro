@@ -1,0 +1,241 @@
+---
+import Base from '../../layouts/Base.astro';
+import { BRIEFINGS } from '../../data/briefings';
+import type { Briefing } from '../../data/briefings';
+import mammoth from 'mammoth';
+import path from 'path';
+
+export async function getStaticPaths() {
+  return BRIEFINGS.map((b, i) => {
+    const num = String(b.briefingNumber).padStart(2, '0');
+    return {
+      params: { slug: `Strategic_Intelligence_Briefing_${num}` },
+      props: {
+        briefing: b,
+        num,
+        prev: i > 0 ? BRIEFINGS[i - 1] : null,
+        next: i < BRIEFINGS.length - 1 ? BRIEFINGS[i + 1] : null,
+      },
+    };
+  });
+}
+
+interface Props {
+  briefing: Briefing;
+  num: string;
+  prev: Briefing | null;
+  next: Briefing | null;
+}
+
+const { briefing, num, prev, next } = Astro.props;
+
+// ─── Convert docx to HTML ──────────────────────────────────────────────
+const docxPath = path.join(
+  process.cwd(),
+  'briefings-source',
+  `Strategic_Intelligence_Briefing_${num}.docx`
+);
+
+const result = await mammoth.convertToHtml({ path: docxPath });
+
+let bodyHtml = result.value
+  .replace(/<p>\s*<img[^>]*>\s*<\/p>/g, '')
+  .replace(/<img[^>]*>/g, '')
+  .replace(/\bnewsletter\b/gi, 'briefing')
+  .replace(/\bNewsletters\b/g, 'Briefings');
+
+const essayMarker = '<p><strong>Essay</strong></p>';
+const essayIdx = bodyHtml.indexOf(essayMarker);
+if (essayIdx !== -1) {
+  bodyHtml = bodyHtml.slice(essayIdx + essayMarker.length);
+}
+
+const sourceNotesMarker = '<p><strong>Source Notes</strong></p>';
+const sourceNotesIdx = bodyHtml.indexOf(sourceNotesMarker);
+let mainBody = bodyHtml.trim();
+let sourceNotesHtml = '';
+if (sourceNotesIdx !== -1) {
+  mainBody      = bodyHtml.slice(0, sourceNotesIdx).trim();
+  sourceNotesHtml = bodyHtml.slice(sourceNotesIdx).trim();
+}
+
+// ─── Helpers ───────────────────────────────────────────────────────────
+function padNum(n: number) {
+  return String(n).padStart(2, '0');
+}
+
+function briefingRoute(b: Briefing) {
+  return `/briefings/Strategic_Intelligence_Briefing_${padNum(b.briefingNumber)}`;
+}
+
+function formatDate(iso: string) {
+  const [y, m, d] = iso.split('-').map(Number);
+  return new Date(y, m - 1, d).toLocaleDateString('en-US', {
+    month: 'long', day: 'numeric', year: 'numeric',
+  });
+}
+
+function commaSep(n: number) {
+  return n.toLocaleString('en-US');
+}
+---
+
+<Base
+  title={`Issue ${num} — ${briefing.title} — DAL-X`}
+  description={briefing.corePosition}
+  type="article"
+  publishedDate={briefing.publicationDate}
+>
+
+  <!-- ── Dark header zone ─────────────────────────────────────────── -->
+  <div class="article-zone-header">
+    <div class="container">
+
+      <a href="/briefings" class="article-back">← Decision Governance Series</a>
+
+      <p class="article-kicker">
+        Phase {briefing.phase} &nbsp;·&nbsp; {briefing.phaseName}
+      </p>
+
+      <p class="article-issue">Issue {num}</p>
+
+      <h1>{briefing.title}</h1>
+
+      <p class="article-thesis">{briefing.purpose}</p>
+
+      <div class="article-byline">
+        <span>Kevin Moore</span>
+        <span class="article-byline-sep">·</span>
+        <span>Jochanni Labs</span>
+        <span class="article-byline-sep">·</span>
+        <span>{briefing.estimatedReadTime} min read</span>
+        <span class="article-byline-sep">·</span>
+        <span>~{commaSep(briefing.approximateWordCount)} words</span>
+        <span class="article-byline-sep">·</span>
+        <time datetime={briefing.publicationDate}>
+          {formatDate(briefing.publicationDate)}
+        </time>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ── Body zone ────────────────────────────────────────────────── -->
+  <main class="article-zone-body">
+    <div class="container">
+      <div class="article-body-grid">
+
+        <!-- ── Main content column ──────────────────────────────── -->
+        <div class="article-main-col">
+
+          <!-- Core Position card -->
+          <div class="article-core-position">
+            <p class="article-core-label">Core Position</p>
+            <p class="article-core-text">{briefing.corePosition}</p>
+          </div>
+
+          <!-- Full essay body -->
+          <div class="article-content" set:html={mainBody} />
+
+          <!-- Source Notes -->
+          {sourceNotesHtml && (
+            <div class="article-source-notes" set:html={sourceNotesHtml} />
+          )}
+
+          <!-- Prev / Next navigation -->
+          <nav class="article-nav" aria-label="Briefing series navigation">
+            <div class="article-nav-prev">
+              {prev ? (
+                <a href={briefingRoute(prev)}>
+                  <span class="article-nav-dir">← Previous</span>
+                  <span class="article-nav-issue">Issue {padNum(prev.briefingNumber)}</span>
+                  <span class="article-nav-title">{prev.title}</span>
+                </a>
+              ) : <span />}
+            </div>
+
+            <div class="article-nav-center">
+              <a href="/briefings">
+                <span class="article-nav-dir">↑ All Briefings</span>
+                <span class="article-nav-issue">Series Archive</span>
+              </a>
+            </div>
+
+            <div class="article-nav-next">
+              {next ? (
+                <a href={briefingRoute(next)}>
+                  <span class="article-nav-dir">Next →</span>
+                  <span class="article-nav-issue">Issue {padNum(next.briefingNumber)}</span>
+                  <span class="article-nav-title">{next.title}</span>
+                </a>
+              ) : <span />}
+            </div>
+          </nav>
+
+        </div>
+
+        <!-- ── Sidebar ───────────────────────────────────────────── -->
+        <aside class="article-sidebar">
+
+          <!-- Issue metadata card -->
+          <div class="sidebar-card sidebar-card--meta">
+            <p class="sidebar-issue-badge">Briefing {num}</p>
+            <p class="sidebar-phase-tag">Phase {briefing.phase} · {briefing.phaseName}</p>
+            <div class="sidebar-stats">
+              <div class="sidebar-stat">
+                <p class="sidebar-stat-label">Read Time</p>
+                <p class="sidebar-stat-value">{briefing.estimatedReadTime} min</p>
+              </div>
+              <div class="sidebar-stat">
+                <p class="sidebar-stat-label">Words</p>
+                <p class="sidebar-stat-value">~{commaSep(briefing.approximateWordCount)}</p>
+              </div>
+            </div>
+            <p class="sidebar-date">
+              <time datetime={briefing.publicationDate}>
+                {formatDate(briefing.publicationDate)}
+              </time>
+            </p>
+          </div>
+
+          <!-- Navigation card -->
+          <div class="sidebar-card sidebar-card--nav">
+            <p class="sidebar-card-label">Series Navigation</p>
+            {prev && (
+              <a href={briefingRoute(prev)} class="sidebar-nav-link">
+                <span class="sidebar-nav-dir">← Issue {padNum(prev.briefingNumber)}</span>
+                <span class="sidebar-nav-title">{prev.title}</span>
+              </a>
+            )}
+            <a href="/briefings" class="sidebar-nav-link sidebar-nav-link--archive">
+              <span class="sidebar-nav-dir">↑ Series Archive</span>
+              <span class="sidebar-nav-title">All 20 Briefings</span>
+            </a>
+            {next && (
+              <a href={briefingRoute(next)} class="sidebar-nav-link">
+                <span class="sidebar-nav-dir">Issue {padNum(next.briefingNumber)} →</span>
+                <span class="sidebar-nav-title">{next.title}</span>
+              </a>
+            )}
+          </div>
+
+          <!-- Series branding card -->
+          <div class="sidebar-card sidebar-card--series">
+            <p class="sidebar-series-name">DAL-X Strategic Intelligence Series</p>
+            <p class="sidebar-series-topics">
+              Decision Governance &nbsp;·&nbsp; Runtime Authority &nbsp;·&nbsp;
+              AI Execution Governance &nbsp;·&nbsp; Trigger Logic &nbsp;·&nbsp;
+              Escalation Architecture &nbsp;·&nbsp; Audit Evidence
+            </p>
+            <p class="sidebar-series-attribution">
+              Kevin Moore &nbsp;·&nbsp; Jochanni Labs
+            </p>
+          </div>
+
+        </aside>
+
+      </div>
+    </div>
+  </main>
+
+</Base>
