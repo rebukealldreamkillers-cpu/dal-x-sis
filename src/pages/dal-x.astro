@@ -17,9 +17,9 @@ import Base from '../layouts/Base.astro';
           <h1 class="dalx-header-mark">DAL-X</h1>
           <p class="dalx-header-sub">Kevin Moore &nbsp;·&nbsp; Jochanni Labs</p>
           <p class="dalx-header-body">
-            Most enterprise AI deployments have a gap: between what AI produces
-            and what actually gets authorized before action is taken. DAL-X is
-            the framework being built to close it.
+            Most enterprise AI deployments have a problem: AI produces output, someone
+            acts on it, and nothing in between confirms the decision was authorized.
+            DAL-X is the framework being built to close that gap.
           </p>
         </div>
 
@@ -56,16 +56,15 @@ import Base from '../layouts/Base.astro';
             </p>
             <p>
               DAL-X is not a product category, a compliance framework, or a monitoring
-              dashboard. It is the foundational framework for a discipline most
-              enterprises do not yet have a name for: the authority layer that governs
-              AI-influenced decisions at the moment they would move toward consequence.
+              dashboard. It is the foundational work for a discipline most enterprises
+              do not yet have a name for: the authority layer that sits between AI output
+              and the decisions that follow.
             </p>
             <p>
-              Kevin Moore and Jochanni Labs are developing DAL-X as the definitional
-              research initiative for this discipline — establishing the vocabulary,
-              architecture, and operational requirements of Decision Governance before
-              regulatory pressure, organizational incident, or competitive disadvantage
-              forces the issue.
+              Kevin Moore and Jochanni Labs are developing DAL-X as the primary research
+              initiative defining this discipline — the terms, the architecture, and the
+              requirements — before regulatory pressure or an organizational incident
+              makes the work unavoidable.
             </p>
           </div>
 
@@ -118,24 +117,23 @@ import Base from '../layouts/Base.astro';
 
         <div class="dalx-body dalx-body--wide">
           <p>
-            AI systems are participating in consequential organizational decisions.
+            AI systems are already participating in consequential organizational decisions.
             They write contracts, classify risk, route customers, recommend exceptions,
-            and approve actions — increasingly at machine speed, inside workflows
-            designed for human-speed work. The authority structures governing those
-            decisions have not kept up.
+            and approve actions — increasingly at machine speed, inside workflows that
+            were designed for humans. The authority structures governing those decisions
+            have not kept up.
           </p>
           <p>
-            Every enterprise has formal authority requirements for consequential
-            decisions: approval rights, escalation thresholds, supervisory review,
-            evidence obligations. These requirements exist in policy documents, in
-            control frameworks, in audit protocols. What most enterprises do not have
-            is the operational layer that enforces those requirements at the moment
-            AI-influenced work would move toward consequence.
+            Every enterprise has formal authority requirements for its most consequential
+            decisions: who can approve what, at what level, with what documentation.
+            These requirements exist in policy documents and audit protocols. What most
+            enterprises do not have is the active layer that enforces those requirements
+            at the moment AI-influenced work is about to move.
           </p>
           <p>
-            The problem is not a lack of policies. Policies without runtime enforcement
+            The problem is not a lack of policies. Policies without active enforcement
             are intent, not governance. DAL-X names the absent layer and defines what
-            closing that gap requires.
+            it takes to close the gap.
           </p>
         </div>
 
@@ -152,8 +150,8 @@ import Base from '../layouts/Base.astro';
               <div class="dalx-fs-node dalx-fs-node--consequence">Consequence</div>
             </div>
             <p class="dalx-gap-note">
-              AI output moves directly toward action. Nothing confirms the decision
-              was authorized before consequence occurred.
+              AI output moves directly toward action. Nothing in the chain confirms
+              the decision was authorized before it happened.
             </p>
           </div>
           <div class="dalx-gap-divider"></div>
@@ -167,8 +165,8 @@ import Base from '../layouts/Base.astro';
               <div class="dalx-fs-node dalx-fs-node--gate">Authorized Action</div>
             </div>
             <p class="dalx-gap-note">
-              Authority is active at the execution point. The decision cannot
-              move forward without scope, conformance, and acknowledgment confirmed.
+              Authority is active before the decision moves. Scope, alignment, and
+              sign-off must all be confirmed first.
             </p>
           </div>
         </div>
@@ -187,21 +185,18 @@ import Base from '../layouts/Base.astro';
 
         <div class="dalx-body dalx-body--wide">
           <p>
-            The runtime authority problem is structural. AI-influenced work enters
-            an organization's decision path at the point of output. From there, the
-            path moves toward action — through human review, automated routing,
-            manager approval, or direct execution. At each step, the question of
-            whether the AI's participation was authorized, and whether the decision
-            had standing to proceed at that consequence level, goes unasked
-            and unanswered.
+            The runtime authority problem is straightforward. AI output enters an
+            organization's workflow. From there it moves toward action — through human
+            review, automated routing, manager approval, or direct execution. At every
+            step, the question of whether the AI's involvement was authorized goes
+            unasked and unanswered.
           </p>
           <p>
-            Runtime authority does not mean slowing every decision. It means that
-            for each decision path where AI participates, the organization has
-            defined — and is actively enforcing — the authority requirements at the
-            moment the decision would take effect. Scope: was AI allowed here?
-            Conformance: does the path meet the governing framework? Acknowledgment:
-            has the right person accepted responsibility?
+            Runtime authority does not mean slowing every decision. It means that where
+            AI participates, the organization has defined and is actively enforcing the
+            authority requirements at the moment a decision takes effect. Scope: was AI
+            authorized to be here? Alignment: does this decision follow the rules in
+            place? Sign-Off: has the right person accepted responsibility?
           </p>
         </div>
 
@@ -226,7 +221,7 @@ import Base from '../layouts/Base.astro';
             </div>
             <div class="dalx-flow-node dalx-flow-node--route">
               <p class="dalx-flow-node-label">Authority Routing</p>
-              <p class="dalx-flow-node-sub">Principal mapping<br>Threshold match<br>Escalation path</p>
+              <p class="dalx-flow-node-sub">Reviewer mapping<br>Level match<br>Escalation path</p>
             </div>
             <div class="dalx-flow-connector">
               <div class="dalx-flow-line"></div>
@@ -234,7 +229,7 @@ import Base from '../layouts/Base.astro';
             </div>
             <div class="dalx-flow-node dalx-flow-node--gate">
               <p class="dalx-flow-node-label">Execution Gate</p>
-              <p class="dalx-flow-node-sub">Scope<br>Conformance<br>Acknowledgment</p>
+              <p class="dalx-flow-node-sub">Scope<br>Alignment<br>Sign-Off</p>
             </div>
             <div class="dalx-flow-connector">
               <div class="dalx-flow-line"></div>
@@ -242,7 +237,7 @@ import Base from '../layouts/Base.astro';
             </div>
             <div class="dalx-flow-node dalx-flow-node--record">
               <p class="dalx-flow-node-label">Decision Record</p>
-              <p class="dalx-flow-node-sub">Pre-execution<br>Evidence capture<br>Authority stamp</p>
+              <p class="dalx-flow-node-sub">Before action<br>Evidence capture<br>Authority stamp</p>
             </div>
             <div class="dalx-flow-connector">
               <div class="dalx-flow-line"></div>
@@ -256,7 +251,7 @@ import Base from '../layouts/Base.astro';
         </div>
         <p class="dalx-flow-caption">
           The DAL-X authority chain — AI output through runtime governance to authorized action.
-          Each node is a required layer; removing any one breaks governance continuity.
+          Each node is a required layer; removing any one breaks the chain.
         </p>
 
       </div>
@@ -307,17 +302,16 @@ import Base from '../layouts/Base.astro';
 
           <div class="dalx-body">
             <p>
-              Trigger logic is the mechanism that converts AI participation into a
-              governance event. Without it, AI output enters the decision path
-              silently — carrying no signal that would activate authority requirements.
+              Trigger logic is the mechanism that flags AI participation so governance
+              kicks in. Without it, AI output enters the workflow silently — no different
+              from any other input, carrying no signal that authority requirements apply.
             </p>
             <p>
-              A trigger fires when a defined condition is met: the consequence level
-              exceeds a threshold, AI participation is flagged, the risk classification
-              requires escalation, or the decision enters a domain with specific
-              authority requirements. When the trigger fires, governance becomes
-              operational — not as a checklist completed after the fact, but as an
-              active constraint on what the decision path is permitted to do next.
+              A trigger fires when a defined condition is met: the stakes exceed a
+              threshold, AI involvement is detected, the risk level requires escalation,
+              or the decision falls into a domain with specific authority requirements.
+              When the trigger fires, governance is no longer a policy on paper — it
+              becomes an active requirement before the decision can proceed.
             </p>
             <p>
               Trigger logic is the boundary between AI governance as policy and
@@ -343,29 +337,27 @@ import Base from '../layouts/Base.astro';
 
           <div class="dalx-body">
             <p>
-              Authority routing maps the triggered decision to the right person —
-              the individual or body with the authority level required to review
-              and accept responsibility for AI-influenced work at the specific
-              consequence level that decision carries.
+              Authority routing maps each triggered decision to the right reviewer —
+              the person or body with the actual authority level required to own that
+              decision at its specific stakes.
             </p>
             <p>
-              The routing is not generic. It maps the consequence level and risk
-              profile of a specific AI-influenced decision to the specific person
-              whose authority threshold matches. A decision requiring senior compliance
-              review cannot be routed to a department manager. A decision above a
-              regulatory threshold cannot be approved by someone who lacks the standing
-              to accept that authority level.
+              The routing is specific. A decision requiring senior compliance review
+              cannot go to a department manager. A decision at regulatory exposure
+              levels cannot be approved by someone whose authority does not reach that
+              high. The routing matches the decision to the person, not the other way
+              around.
             </p>
             <p>
-              Authority routing is what makes human oversight an actual control
-              rather than a procedural step. The right person, with the right
-              authority, for the right decision — this is the operational requirement
-              that most human-in-the-loop implementations do not satisfy.
+              Authority routing is what turns human oversight into an actual control.
+              Most human-in-the-loop implementations do not satisfy this requirement.
+              They have a human. They do not have the right human, at the right level,
+              for the right decision.
             </p>
           </div>
 
           <div class="dalx-routing-diagram">
-            <p class="dalx-diagram-label">Principal Authority Map</p>
+            <p class="dalx-diagram-label">Authority Level Map</p>
             <div class="dalx-route-tier dalx-route-tier--3">
               <div>
                 <span class="dalx-route-tier-label">Executive Authority</span>
@@ -423,29 +415,28 @@ import Base from '../layouts/Base.astro';
                 <span class="dalx-gate-req-name">Scope</span>
               </div>
               <p class="dalx-gate-req-desc">
-                The AI's participation was within its authorized boundaries.
-                It had standing to weigh in on this decision at this consequence level.
+                The AI was authorized to be involved in this type of decision.
+                It did not exceed what it was permitted to do.
               </p>
             </div>
             <div class="dalx-gate-requirement dalx-gate-req--pass">
               <div class="dalx-gate-req-status">
                 <span class="dalx-gate-req-indicator dalx-gate-req-indicator--pass"></span>
-                <span class="dalx-gate-req-name">Conformance</span>
+                <span class="dalx-gate-req-name">Alignment</span>
               </div>
               <p class="dalx-gate-req-desc">
-                The decision meets the active governance requirements —
-                the policies, thresholds, and evidence obligations the
-                organization has put in place.
+                The decision follows the rules the organization has established —
+                the policies, thresholds, and review requirements currently in force.
               </p>
             </div>
             <div class="dalx-gate-requirement dalx-gate-req--pass">
               <div class="dalx-gate-req-status">
                 <span class="dalx-gate-req-indicator dalx-gate-req-indicator--pass"></span>
-                <span class="dalx-gate-req-name">Acknowledgment</span>
+                <span class="dalx-gate-req-name">Sign-Off</span>
               </div>
               <p class="dalx-gate-req-desc">
-                An accountable person with the right authority has formally accepted
-                responsibility before this decision moves toward execution.
+                The right person — with the authority level this decision requires —
+                has reviewed it and taken ownership before it moves.
               </p>
             </div>
             <div class="dalx-gate-result dalx-gate-result--open">
@@ -455,25 +446,21 @@ import Base from '../layouts/Base.astro';
 
           <div class="dalx-body">
             <p>
-              The execution gate is the point at which all three governance
-              requirements must be satisfied simultaneously before a decision
-              is permitted to move toward consequence. Scope is confirmed,
-              conformance is validated, and acknowledgment is recorded from
-              the correct person.
+              The execution gate is the point at which all three requirements must be
+              satisfied at the same time before a decision moves. Scope is confirmed,
+              alignment is validated, and sign-off is recorded from the right person.
             </p>
             <p>
-              The gate is not a sequential checklist. All three requirements
-              must be active at the moment of execution. A decision that
-              satisfies scope and conformance but lacks acknowledgment has not
-              passed the gate. A decision where the acknowledging person lacks
-              the authority required for that consequence level has not passed
-              the gate either.
+              The gate is not a sequential checklist. All three requirements must be
+              active at the same moment. A decision that clears scope and alignment
+              but lacks sign-off has not passed the gate. A decision where the person
+              who signed off lacked the authority for the stakes involved has not
+              passed the gate either.
             </p>
             <p>
-              Execution gating is what converts intent-based governance into
-              enforced governance. The gate does not close when policy exists.
-              It closes only when the specific requirements for this decision,
-              at this consequence level, have been satisfied.
+              Execution gating is what converts policy into enforcement. The gate does
+              not close because a policy exists. It closes only when the specific
+              requirements for this specific decision have been satisfied.
             </p>
           </div>
 
@@ -495,25 +482,23 @@ import Base from '../layouts/Base.astro';
 
           <div class="dalx-body">
             <p>
-              Decision recording is the capture of the authority record before
-              execution moves forward. The record is not a post-action log. It is
-              a pre-execution artifact — establishing what authority was active,
-              which person accepted responsibility, what governance requirements
-              were satisfied, and when each of those conditions was confirmed,
-              all before the decision produced consequence.
+              Decision recording creates the authority record before execution moves.
+              The record is not a log created after the fact. It is proof — documenting
+              what authority was in place, who accepted responsibility, what requirements
+              were met, and when all of that was confirmed, before the decision moved.
             </p>
             <p>
-              The distinction between pre-execution recording and post-execution
-              audit is critical. A record created after the fact can explain what
-              happened. It cannot prove the decision was authorized when control
-              was still possible. Decision recording makes that proof available
-              because the record precedes the action.
+              There is a real difference between recording authority before a decision
+              moves and logging what happened after. A record made after the fact can
+              explain events. It cannot prove the decision was authorized while there
+              was still a chance to stop it. Decision recording makes that proof
+              available because it happens first.
             </p>
             <p>
-              The record is the evidence that governance was active, not
-              retrospective. It is what an organization produces when a decision
-              is challenged — internally, by a customer, by a regulator, or
-              under legal scrutiny.
+              The record proves governance was active before — not assembled after a
+              challenge. When a decision is questioned by an auditor, a customer, a
+              regulator, or a court, the record is what shows it was authorized when
+              it counted.
             </p>
           </div>
 
@@ -536,11 +521,11 @@ import Base from '../layouts/Base.astro';
               <span class="dalx-record-val dalx-record-val--pass">Confirmed within boundaries</span>
             </div>
             <div class="dalx-record-field">
-              <span class="dalx-record-key">Conformance Status</span>
-              <span class="dalx-record-val dalx-record-val--pass">Framework requirements satisfied</span>
+              <span class="dalx-record-key">Alignment Status</span>
+              <span class="dalx-record-val dalx-record-val--pass">Rules and policies satisfied</span>
             </div>
             <div class="dalx-record-field">
-              <span class="dalx-record-key">Acknowledging Principal</span>
+              <span class="dalx-record-key">Authorized Sign-Off</span>
               <span class="dalx-record-val">Supervisory authority — confirmed</span>
             </div>
             <div class="dalx-record-field">
@@ -569,19 +554,19 @@ import Base from '../layouts/Base.astro';
 
         <div class="dalx-body dalx-body--wide">
           <p>
-            Audit evidence in the DAL-X framework is the durable record demonstrating
-            governance was active before consequence occurred. It answers the questions
-            any challenge will produce: Was AI used in this decision? Was its use
-            authorized? Who reviewed it? Under what authority? What was the consequence
-            level? Was the governing framework in effect? Was the evidence captured
-            before or after the decision moved forward?
+            Audit evidence is the record that proves governance was working before
+            anything went wrong. It answers the questions any challenge will produce:
+            Was AI involved in this decision? Was that involvement authorized? Who
+            reviewed it and under what authority? Were the requirements satisfied?
+            Was all of this documented before the decision moved — or assembled
+            afterward?
           </p>
           <p>
-            The distinction between instrumentation and evidence is structural.
+            There is a real difference between instrumentation and evidence.
             Instrumentation records what happened. Evidence proves what was authorized.
-            An organization that has built monitoring infrastructure without a
-            pre-execution authority record has documented its governance gap — it
-            knows more about what went wrong than it can prove about what was permitted.
+            An organization with monitoring tools but no authority record created before
+            decisions move knows more about what went wrong than it can prove about
+            what was permitted.
           </p>
         </div>
 
@@ -607,8 +592,8 @@ import Base from '../layouts/Base.astro';
             </div>
             <div class="dalx-evidence-node">
               <p class="dalx-evidence-node-num">03</p>
-              <p class="dalx-evidence-node-label">Principal Authority Record</p>
-              <p class="dalx-evidence-node-desc">Who reviewed, under what authority level, with what mandate</p>
+              <p class="dalx-evidence-node-label">Sign-Off Authority Record</p>
+              <p class="dalx-evidence-node-desc">Who reviewed, at what authority level, with what mandate</p>
             </div>
             <div class="dalx-evidence-connector">
               <div class="dalx-evidence-line"></div>
@@ -617,7 +602,7 @@ import Base from '../layouts/Base.astro';
             <div class="dalx-evidence-node">
               <p class="dalx-evidence-node-num">04</p>
               <p class="dalx-evidence-node-label">Gate Clearance Record</p>
-              <p class="dalx-evidence-node-desc">Scope, conformance, and acknowledgment — all confirmed before execution</p>
+              <p class="dalx-evidence-node-desc">Scope, alignment, and sign-off — all confirmed before the decision moved</p>
             </div>
             <div class="dalx-evidence-connector">
               <div class="dalx-evidence-line"></div>
@@ -626,7 +611,7 @@ import Base from '../layouts/Base.astro';
             <div class="dalx-evidence-node dalx-evidence-node--terminal">
               <p class="dalx-evidence-node-num">05</p>
               <p class="dalx-evidence-node-label">Pre-Execution Timestamp</p>
-              <p class="dalx-evidence-node-desc">The governance proof point — evidence that record precedes action</p>
+              <p class="dalx-evidence-node-desc">The proof point — evidence that the record precedes the action</p>
             </div>
           </div>
         </div>
@@ -645,54 +630,53 @@ import Base from '../layouts/Base.astro';
 
         <div class="dalx-body dalx-body--wide">
           <p>
-            The DAL-X framework applies wherever AI participates in a decision that
-            carries organizational consequence — whether the AI is acting directly
-            or shaping a human decision. Consequence attaches to the decision, not
-            to whether a human was formally present.
+            DAL-X applies wherever AI participates in a decision that carries real
+            consequences — whether AI is acting directly or shaping a human decision.
+            Consequences attach to the decision, not to whether a human was technically
+            in the process.
           </p>
           <p>
-            The framework covers both workflow types. Agentic AI workflows require
-            runtime authority at the execution point — a gate that prevents the AI
-            from moving forward without an active authority structure. Human-led
-            AI-assisted workflows require authority mapping — the human reviewer
-            must hold the authority level that the AI's participation creates at
-            that consequence level, not merely the authority required for the same
-            decision without AI involvement.
+            Two workflow types come up in practice. When AI is acting autonomously —
+            executing tasks directly — it needs a gate that stops it before any
+            consequential action without a confirmed authority structure in place. When
+            a human is in the lead but AI is shaping the inputs, the human reviewer
+            needs to hold the authority level that the AI's involvement creates — not
+            just the level required for the same decision made without AI.
           </p>
         </div>
 
         <div class="dalx-workflow-grid">
 
           <div class="dalx-workflow-card">
-            <p class="dalx-workflow-type">Agentic AI Workflow</p>
+            <p class="dalx-workflow-type">Autonomous AI Workflow</p>
             <p class="dalx-workflow-desc">AI takes direct action within defined scope</p>
             <div class="dalx-workflow-steps">
               <div class="dalx-wf-step">
                 <span class="dalx-wf-num">1</span>
-                <span>AI agent receives task within assigned scope</span>
+                <span>AI receives task within assigned scope</span>
               </div>
               <div class="dalx-wf-step">
                 <span class="dalx-wf-num">2</span>
-                <span>Trigger evaluates consequence level of proposed action</span>
+                <span>Trigger evaluates the stakes of the proposed action</span>
               </div>
               <div class="dalx-wf-step">
                 <span class="dalx-wf-num">3</span>
-                <span>Authority routing activates if threshold met</span>
+                <span>Authority routing activates if threshold is met</span>
               </div>
               <div class="dalx-wf-step">
                 <span class="dalx-wf-num">4</span>
-                <span>Execution gate requires scope, conformance, and acknowledgment</span>
+                <span>Execution gate requires scope, alignment, and sign-off</span>
               </div>
               <div class="dalx-wf-step dalx-wf-step--terminal">
                 <span class="dalx-wf-num dalx-wf-num--orange">5</span>
-                <span>Pre-execution record captured — action authorized to proceed</span>
+                <span>Authority record captured — action authorized to proceed</span>
               </div>
             </div>
           </div>
 
           <div class="dalx-workflow-card">
             <p class="dalx-workflow-type">Human-Led AI-Assisted Workflow</p>
-            <p class="dalx-workflow-desc">AI shapes the decision path; human acts on it</p>
+            <p class="dalx-workflow-desc">AI shapes the inputs; a person acts on them</p>
             <div class="dalx-workflow-steps">
               <div class="dalx-wf-step">
                 <span class="dalx-wf-num">1</span>
@@ -700,19 +684,19 @@ import Base from '../layouts/Base.astro';
               </div>
               <div class="dalx-wf-step">
                 <span class="dalx-wf-num">2</span>
-                <span>Trigger flags AI participation and consequence level</span>
+                <span>Trigger flags AI involvement and the stakes involved</span>
               </div>
               <div class="dalx-wf-step">
                 <span class="dalx-wf-num">3</span>
-                <span>Authority routing maps to principal with matching threshold</span>
+                <span>Authority routing maps to reviewer with matching authority level</span>
               </div>
               <div class="dalx-wf-step">
                 <span class="dalx-wf-num">4</span>
-                <span>Principal reviews with required context, evidence, and mandate</span>
+                <span>Reviewer evaluates with required context, information, and clear mandate</span>
               </div>
               <div class="dalx-wf-step dalx-wf-step--terminal">
                 <span class="dalx-wf-num dalx-wf-num--orange">5</span>
-                <span>Acknowledgment recorded — decision path authorized before action</span>
+                <span>Sign-off recorded — decision authorized before action is taken</span>
               </div>
             </div>
           </div>
@@ -722,9 +706,9 @@ import Base from '../layouts/Base.astro';
         <div class="dalx-statement">
           <p class="dalx-statement-text">
             "The runtime authority problem is not a technology problem. It is an
-            organizational design problem — the structural void that exists when
-            enterprises deploy AI systems without building the authority layer that
-            governs what those systems are permitted to do."
+            organizational design problem — the gap that opens when enterprises deploy
+            AI without building the layer that determines what those systems are
+            allowed to do."
           </p>
           <p class="dalx-statement-attr">— DAL-X Framework &nbsp;·&nbsp; Jochanni Labs</p>
         </div>
@@ -737,9 +721,9 @@ import Base from '../layouts/Base.astro';
       <div class="container">
         <p class="dalx-footer-cta-label">Decision Governance Strategic Intelligence Series</p>
         <p class="dalx-footer-cta-text">
-          Twenty briefings building the complete Decision Governance framework —
-          from the core problem through the structural requirements and what
-          real deployment demands. Published by Jochanni Labs.
+          Twenty briefings covering the complete Decision Governance framework — from
+          first principles through the authority structures organizations need to govern
+          AI work before it produces consequences. Published by Jochanni Labs.
         </p>
         <div class="btn-row">
           <a href="/briefings" class="btn-primary">Read All 20 Briefings</a>
