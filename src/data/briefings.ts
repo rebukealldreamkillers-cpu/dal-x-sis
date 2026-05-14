@@ -39,7 +39,7 @@ export const PHASES: Phase[] = [
     name: 'Operational Control Mechanics',
     range: 'Briefings 6 – 12',
     summary:
-      'Specifies the operational architecture of Decision Governance: the three control points, scope containment, conformance validation, acknowledgment layers, governance velocity, and the failure modes that break these systems under load.',
+      'Specifies the operational architecture of Decision Governance: the three control points, scope containment, alignment verification, sign-off layers, governance velocity, and the failure modes that break these systems under load.',
   },
   {
     number: 3,
