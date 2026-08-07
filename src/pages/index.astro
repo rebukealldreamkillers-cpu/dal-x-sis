@@ -51,7 +51,7 @@ const seriesTopics = [
         <div class="briefing-grid">
           {featuredBriefings.map(b => (
             <a href={`/briefings/${b.slug}`} class="briefing-card">
-              <p class="briefing-issue">Issue {padIssue(b.briefingNumber)}</p>
+              <p class="briefing-issue">{padIssue(b.briefingNumber)}</p>
               <h3>{b.title}</h3>
               <p class="briefing-card-desc">{b.corePosition}</p>
             </a>
