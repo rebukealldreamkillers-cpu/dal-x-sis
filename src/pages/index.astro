@@ -2,8 +2,7 @@
 import Base from '../layouts/Base.astro';
 import { BRIEFINGS } from '../data/briefings';
 
-const publishedBriefings = BRIEFINGS.filter(b => b.status === 'Published');
-const upcomingBriefings  = BRIEFINGS.filter(b => b.status === 'Upcoming');
+const featuredBriefings = BRIEFINGS.slice(0, 3);
 
 function formatDate(iso: string) {
   const [y, m, d] = iso.split('-').map(Number);
@@ -57,7 +56,7 @@ const seriesTopics = [
       <div class="container">
         <p class="section-label">Latest Briefings</p>
         <div class="briefing-grid">
-          {publishedBriefings.map(b => (
+          {featuredBriefings.map(b => (
             <a href={`/briefings/${b.slug}`} class="briefing-card">
               <p class="briefing-issue">Issue {padIssue(b.briefingNumber)}</p>
               <h3>{b.title}</h3>
@@ -68,14 +67,6 @@ const seriesTopics = [
                 </p>
               )}
             </a>
-          ))}
-          {upcomingBriefings.slice(0, 2).map(b => (
-            <div class="briefing-card briefing-card--preview">
-              <p class="briefing-issue">Issue {padIssue(b.briefingNumber)}</p>
-              <h3>{b.title}</h3>
-              <p class="briefing-card-desc">{b.corePosition}</p>
-              <p class="briefing-meta">Coming next</p>
-            </div>
           ))}
         </div>
         <p style="margin-top: 2rem;">
