@@ -69,13 +69,6 @@ function briefingRoute(b: Briefing) {
   return `/briefings/Strategic_Intelligence_Briefing_${padNum(b.briefingNumber)}`;
 }
 
-function formatDate(iso: string) {
-  const [y, m, d] = iso.split('-').map(Number);
-  return new Date(y, m - 1, d).toLocaleDateString('en-US', {
-    month: 'long', day: 'numeric', year: 'numeric',
-  });
-}
-
 function commaSep(n: number) {
   return n.toLocaleString('en-US');
 }
@@ -85,8 +78,8 @@ function commaSep(n: number) {
   title={`Issue ${num} — ${briefing.title} — DAL-X`}
   description={briefing.corePosition}
   type="article"
-  publishedDate={briefing.publicationDate}
 >
+
 
   <!-- ── Dark header zone ─────────────────────────────────────────── -->
   <div class="article-zone-header">
@@ -112,14 +105,6 @@ function commaSep(n: number) {
         <span>{briefing.estimatedReadTime} min read</span>
         <span class="article-byline-sep">·</span>
         <span>~{commaSep(briefing.approximateWordCount)} words</span>
-        {briefing.publicationDate && (
-          <>
-            <span class="article-byline-sep">·</span>
-            <time datetime={briefing.publicationDate}>
-              {formatDate(briefing.publicationDate)}
-            </time>
-          </>
-        )}
       </div>
 
     </div>
@@ -196,13 +181,6 @@ function commaSep(n: number) {
                 <p class="sidebar-stat-value">~{commaSep(briefing.approximateWordCount)}</p>
               </div>
             </div>
-            {briefing.publicationDate && (
-              <p class="sidebar-date">
-                <time datetime={briefing.publicationDate}>
-                  {formatDate(briefing.publicationDate)}
-                </time>
-              </p>
-            )}
           </div>
 
           <!-- Navigation card -->

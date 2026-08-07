@@ -30,7 +30,6 @@ export const BRIEFINGS: Briefing[] = [
     estimatedReadTime: 5,
     approximateWordCount: 930,
     purpose: 'Authority must exist before AI influenced work creates consequence.',
-    publicationDate: '2026-05-11',
     status: 'Published',
     slug: 'Strategic_Intelligence_Briefing_01',
   },

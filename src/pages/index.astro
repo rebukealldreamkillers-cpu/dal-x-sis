@@ -4,13 +4,6 @@ import { BRIEFINGS } from '../data/briefings';
 
 const featuredBriefings = BRIEFINGS.slice(0, 3);
 
-function formatDate(iso: string) {
-  const [y, m, d] = iso.split('-').map(Number);
-  return new Date(y, m - 1, d).toLocaleDateString('en-US', {
-    month: 'long', day: 'numeric', year: 'numeric',
-  });
-}
-
 function padIssue(n: number) {
   return String(n).padStart(2, '0');
 }
@@ -61,11 +54,6 @@ const seriesTopics = [
               <p class="briefing-issue">Issue {padIssue(b.briefingNumber)}</p>
               <h3>{b.title}</h3>
               <p class="briefing-card-desc">{b.corePosition}</p>
-              {b.publicationDate && (
-                <p class="briefing-meta">
-                  <time datetime={b.publicationDate}>{formatDate(b.publicationDate)}</time>
-                </p>
-              )}
             </a>
           ))}
         </div>
