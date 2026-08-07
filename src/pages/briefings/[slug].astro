@@ -6,15 +6,16 @@ import mammoth from 'mammoth';
 import path from 'path';
 
 export async function getStaticPaths() {
-  return BRIEFINGS.map((b, i) => {
+  const published = BRIEFINGS.filter(b => b.status === 'Published');
+  return published.map((b, i) => {
     const num = String(b.briefingNumber).padStart(2, '0');
     return {
       params: { slug: `Strategic_Intelligence_Briefing_${num}` },
       props: {
         briefing: b,
         num,
-        prev: i > 0 ? BRIEFINGS[i - 1] : null,
-        next: i < BRIEFINGS.length - 1 ? BRIEFINGS[i + 1] : null,
+        prev: i > 0 ? published[i - 1] : null,
+        next: i < published.length - 1 ? published[i + 1] : null,
       },
     };
   });
@@ -111,10 +112,14 @@ function commaSep(n: number) {
         <span>{briefing.estimatedReadTime} min read</span>
         <span class="article-byline-sep">·</span>
         <span>~{commaSep(briefing.approximateWordCount)} words</span>
-        <span class="article-byline-sep">·</span>
-        <time datetime={briefing.publicationDate}>
-          {formatDate(briefing.publicationDate)}
-        </time>
+        {briefing.publicationDate && (
+          <>
+            <span class="article-byline-sep">·</span>
+            <time datetime={briefing.publicationDate}>
+              {formatDate(briefing.publicationDate)}
+            </time>
+          </>
+        )}
       </div>
 
     </div>
@@ -191,11 +196,13 @@ function commaSep(n: number) {
                 <p class="sidebar-stat-value">~{commaSep(briefing.approximateWordCount)}</p>
               </div>
             </div>
-            <p class="sidebar-date">
-              <time datetime={briefing.publicationDate}>
-                {formatDate(briefing.publicationDate)}
-              </time>
-            </p>
+            {briefing.publicationDate && (
+              <p class="sidebar-date">
+                <time datetime={briefing.publicationDate}>
+                  {formatDate(briefing.publicationDate)}
+                </time>
+              </p>
+            )}
           </div>
 
           <!-- Navigation card -->
@@ -209,7 +216,7 @@ function commaSep(n: number) {
             )}
             <a href="/briefings" class="sidebar-nav-link sidebar-nav-link--archive">
               <span class="sidebar-nav-dir">↑ Series Archive</span>
-              <span class="sidebar-nav-title">All 20 Briefings</span>
+              <span class="sidebar-nav-title">All Briefings</span>
             </a>
             {next && (
               <a href={briefingRoute(next)} class="sidebar-nav-link">

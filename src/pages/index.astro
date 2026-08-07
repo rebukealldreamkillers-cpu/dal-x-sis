@@ -1,9 +1,9 @@
 ---
 import Base from '../layouts/Base.astro';
-import { BRIEFINGS, PHASES } from '../data/briefings';
+import { BRIEFINGS } from '../data/briefings';
 
-const featuredPublished = BRIEFINGS.filter(b => b.status === 'Published').slice(0, 1);
-const featuredScheduled = BRIEFINGS.filter(b => b.status === 'Scheduled').slice(0, 2);
+const publishedBriefings = BRIEFINGS.filter(b => b.status === 'Published');
+const upcomingBriefings  = BRIEFINGS.filter(b => b.status === 'Upcoming');
 
 function formatDate(iso: string) {
   const [y, m, d] = iso.split('-').map(Number);
@@ -32,16 +32,16 @@ const seriesTopics = [
 
 <Base
   title="DAL-X"
-  description="Decision Governance Strategic Intelligence Series — Decision Governance and Runtime Authority for AI-generated work before execution."
+  description="Execution control for AI-influenced decisions. A publication on Decision Governance and runtime authority for AI-generated work before execution."
 >
   <!-- 1. Hero -->
   <section class="hero">
     <div class="container">
       <p class="hero-label">Strategic Intelligence Series</p>
-      <h1>Decision Governance For AI Generated Work Before Execution.</h1>
+      <h1>Execution Control for AI-Influenced Decisions.</h1>
       <p class="hero-lead">
-        A twenty-briefing publication series on Decision Governance — the discipline of
-        establishing who has authority over AI-influenced decisions before they produce consequences.
+        A publication on Decision Governance — the discipline of establishing who has
+        authority over AI-influenced decisions before they produce consequences.
       </p>
       <div class="btn-row">
         <a href="/briefings" class="btn-primary">Read the Briefings</a>
@@ -57,29 +57,29 @@ const seriesTopics = [
       <div class="container">
         <p class="section-label">Latest Briefings</p>
         <div class="briefing-grid">
-          {featuredPublished.map(b => (
+          {publishedBriefings.map(b => (
             <a href={`/briefings/${b.slug}`} class="briefing-card">
               <p class="briefing-issue">Issue {padIssue(b.briefingNumber)}</p>
               <h3>{b.title}</h3>
               <p class="briefing-card-desc">{b.corePosition}</p>
-              <p class="briefing-meta">
-                <time datetime={b.publicationDate}>{formatDate(b.publicationDate)}</time>
-              </p>
+              {b.publicationDate && (
+                <p class="briefing-meta">
+                  <time datetime={b.publicationDate}>{formatDate(b.publicationDate)}</time>
+                </p>
+              )}
             </a>
           ))}
-          {featuredScheduled.map(b => (
+          {upcomingBriefings.slice(0, 2).map(b => (
             <div class="briefing-card briefing-card--preview">
               <p class="briefing-issue">Issue {padIssue(b.briefingNumber)}</p>
               <h3>{b.title}</h3>
               <p class="briefing-card-desc">{b.corePosition}</p>
-              <p class="briefing-meta">
-                <time datetime={b.publicationDate}>{formatDate(b.publicationDate)}</time>
-              </p>
+              <p class="briefing-meta">Coming next</p>
             </div>
           ))}
         </div>
         <p style="margin-top: 2rem;">
-          <a href="/briefings" class="view-all-link">View all 20 briefings →</a>
+          <a href="/briefings" class="view-all-link">View all briefings →</a>
         </p>
       </div>
     </section>
@@ -89,8 +89,8 @@ const seriesTopics = [
       <div class="container">
         <p class="section-label">The Decision Governance Strategic Intelligence Series</p>
         <p class="home-lead">
-          Twenty briefings covering what Decision Governance actually requires — from first
-          principles through the authority structures organizations need to govern AI-influenced
+          A structured publication covering what Decision Governance actually requires — from
+          first principles through the authority structures organizations need to govern AI-influenced
           work before it produces consequences.
         </p>
         <div class="topic-strip">
@@ -101,24 +101,7 @@ const seriesTopics = [
       </div>
     </section>
 
-    <!-- 4. Four Phase Publication Map -->
-    <section class="home-section--dark">
-      <div class="container">
-        <p class="section-label--on-dark">Four Phase Publication Map</p>
-        <div class="phase-map">
-          {PHASES.map(phase => (
-            <div class="phase-map-card">
-              <p class="phase-map-num">Phase {phase.number}</p>
-              <p class="phase-map-name">{phase.name}</p>
-              <p class="phase-map-range">{phase.range}</p>
-              <p class="phase-map-summary">{phase.summary}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-
-    <!-- 5. The Emergence of DAL-X -->
+    <!-- 4. The Emergence of DAL-X -->
     <div class="emergence-block">
       <div class="container">
         <p class="emergence-label">The Emergence of DAL-X</p>
@@ -129,7 +112,7 @@ const seriesTopics = [
       </div>
     </div>
 
-    <!-- 6 + 7. About Kevin Moore + Jochanni Labs -->
+    <!-- 5. About Kevin Moore + Jochanni Labs -->
     <section class="home-section">
       <div class="container">
         <p class="section-label">The People and Institutions Behind the Work</p>

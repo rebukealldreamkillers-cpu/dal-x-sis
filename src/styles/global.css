@@ -152,7 +152,7 @@ main { flex: 1; }
   flex-shrink: 0;
 }
 .masthead-logo:hover { color: var(--white-pure); text-decoration: none; }
-.masthead-logo span { color: var(--orange-bright); }
+.masthead-logo::after { content: "-X"; color: var(--orange-bright); }
 
 .masthead-tagline {
   font-family: var(--font-mono);
