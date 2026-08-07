@@ -44,7 +44,7 @@ export const BRIEFINGS: Briefing[] = [
     estimatedReadTime: 4,
     approximateWordCount: 880,
     purpose: 'AI participation is outpacing named authority controls.',
-    status: 'Upcoming',
+    status: 'Published',
     slug: 'Strategic_Intelligence_Briefing_02',
   },
   {
@@ -57,7 +57,7 @@ export const BRIEFINGS: Briefing[] = [
     estimatedReadTime: 5,
     approximateWordCount: 930,
     purpose: 'Decision Governance requires control before consequence.',
-    status: 'Upcoming',
+    status: 'Published',
     slug: 'Strategic_Intelligence_Briefing_03',
   },
   {
@@ -70,7 +70,7 @@ export const BRIEFINGS: Briefing[] = [
     estimatedReadTime: 5,
     approximateWordCount: 1040,
     purpose: 'Consequence attaches to the decision path.',
-    status: 'Upcoming',
+    status: 'Published',
     slug: 'Strategic_Intelligence_Briefing_04',
   },
   {
@@ -83,7 +83,7 @@ export const BRIEFINGS: Briefing[] = [
     estimatedReadTime: 5,
     approximateWordCount: 1120,
     purpose: 'Output becomes control relevant when it starts moving toward action.',
-    status: 'Upcoming',
+    status: 'Published',
     slug: 'Strategic_Intelligence_Briefing_05',
   },
 ];
