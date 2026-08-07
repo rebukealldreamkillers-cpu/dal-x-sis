@@ -6,12 +6,6 @@ function padNum(n: number) {
   return String(n).padStart(2, '0');
 }
 
-function formatDate(iso: string) {
-  const [y, m, d] = iso.split('-').map(Number);
-  return new Date(y, m - 1, d).toLocaleDateString('en-US', {
-    month: 'long', day: 'numeric', year: 'numeric',
-  });
-}
 ---
 
 <Base
@@ -50,11 +44,6 @@ function formatDate(iso: string) {
               <p class="archive-card-position">{b.corePosition}</p>
 
               <div class="archive-card-footer">
-                {b.publicationDate && (
-                  <time class="archive-card-date" datetime={b.publicationDate}>
-                    {formatDate(b.publicationDate)}
-                  </time>
-                )}
                 <a href={route} class="btn-read">Read Briefing →</a>
               </div>
 
