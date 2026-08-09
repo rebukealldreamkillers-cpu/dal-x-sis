@@ -253,7 +253,6 @@ main { flex: 1; }
   font-weight: 400;
   line-height: 1.75;
   color: var(--silver-faint);
-  max-width: 62ch;
   margin-bottom: 2.5rem;
 }
 
@@ -291,7 +290,6 @@ main { flex: 1; }
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.7;
-  max-width: 52ch;
   margin-top: 0.875rem;
 }
 
@@ -1006,7 +1004,6 @@ main { flex: 1; }
 }
 
 .prose-section {
-  max-width: var(--max-prose);
 }
 
 .prose-section h2 {
@@ -1384,7 +1381,6 @@ a.briefing-row:hover .briefing-row-title { color: var(--orange-bright); }
   font-size: 1.0625rem;
   line-height: 1.75;
   color: var(--silver-light);
-  max-width: 60ch;
 }
 
 .view-all-link {
@@ -2257,8 +2253,7 @@ a.briefing-row:hover .briefing-row-title { color: var(--orange-bright); }
   font-size: clamp(1rem, 1.8vw, 1.1875rem);
   color: var(--text-body);
   line-height: 1.6;
-  max-width: 54ch;
-  margin: 0 auto 2rem;
+  margin: 0 0 2rem;
 }
 
 /* ═══════════════════════════════════════════════════════════════
@@ -2458,7 +2453,6 @@ a.briefing-row:hover .briefing-row-title { color: var(--orange-bright); }
 .km-prose:last-child { margin-bottom: 0; }
 
 .km-prose-wide {
-  max-width: 84ch;
   margin-bottom: 3rem;
 }
 
@@ -2817,8 +2811,7 @@ a.briefing-row:hover .briefing-row-title { color: var(--orange-bright); }
   font-size: clamp(1rem, 1.8vw, 1.1875rem);
   color: var(--text-body);
   line-height: 1.6;
-  max-width: 54ch;
-  margin: 0 auto 2rem;
+  margin: 0 0 2rem;
 }
 
 /* ═══════════════════════════════════════════════════════════════
@@ -2897,7 +2890,6 @@ a.briefing-row:hover .briefing-row-title { color: var(--orange-bright); }
   font-size: clamp(1rem, 1.8vw, 1.1875rem);
   color: var(--text-body);
   line-height: 1.65;
-  max-width: 54ch;
   margin: 0;
 }
 
@@ -2984,11 +2976,9 @@ a.briefing-row:hover .briefing-row-title { color: var(--orange-bright); }
 
 /* Body prose */
 .dalx-body {
-  max-width: 62ch;
 }
 
 .dalx-body--wide {
-  max-width: 80ch;
   margin-bottom: 3rem;
 }
 
@@ -3763,8 +3753,7 @@ a.briefing-row:hover .briefing-row-title { color: var(--orange-bright); }
   font-size: clamp(1rem, 1.8vw, 1.1875rem);
   color: var(--text-body);
   line-height: 1.6;
-  max-width: 54ch;
-  margin: 0 auto 2rem;
+  margin: 0 0 2rem;
 }
 
 /* ═══════════════════════════════════════════════════════════════
@@ -3826,7 +3815,6 @@ a.briefing-row:hover .briefing-row-title { color: var(--orange-bright); }
 }
 
 .dg-section-body {
-  max-width: 72ch;
 }
 
 .dg-section-body p {
@@ -4071,8 +4059,7 @@ a.briefing-row:hover .briefing-row-title { color: var(--orange-bright); }
   font-size: clamp(1rem, 1.8vw, 1.1875rem);
   color: var(--text-body);
   line-height: 1.6;
-  max-width: 56ch;
-  margin: 0 auto 2rem;
+  margin: 0 0 2rem;
 }
 
 /* ═══════════════════════════════════════════════════════════════
