@@ -27,8 +27,8 @@ export const BRIEFINGS: Briefing[] = [
     phaseName: 'Category Establishment',
     corePosition:
       'The authority problem is the gap between knowing AI was used and proving the AI shaped decision path was permitted to move forward.',
-    estimatedReadTime: 5,
-    approximateWordCount: 930,
+    estimatedReadTime: 4,
+    approximateWordCount: 680,
     purpose: 'Authority must exist before AI influenced work creates consequence.',
     status: 'Published',
     slug: 'Strategic_Intelligence_Briefing_01',
@@ -41,7 +41,7 @@ export const BRIEFINGS: Briefing[] = [
     corePosition:
       'Decision Governance is the missing enterprise category because AI is no longer only a system to be managed. It is becoming a participant in consequential decision paths that require authority, traceability, escalation, and evidence before action moves forward.',
     estimatedReadTime: 4,
-    approximateWordCount: 880,
+    approximateWordCount: 640,
     purpose: 'AI participation is outpacing named authority controls.',
     status: 'Published',
     slug: 'Strategic_Intelligence_Briefing_02',
@@ -53,8 +53,8 @@ export const BRIEFINGS: Briefing[] = [
     phaseName: 'Category Establishment',
     corePosition:
       'DAL-X is not a visibility surface, policy repository, or readiness checklist. It is the control layer required when AI influenced work needs authority, routing, evidence, and execution restraint before consequence is created.',
-    estimatedReadTime: 5,
-    approximateWordCount: 930,
+    estimatedReadTime: 4,
+    approximateWordCount: 700,
     purpose: 'Decision Governance requires control before consequence.',
     status: 'Published',
     slug: 'Strategic_Intelligence_Briefing_03',
@@ -66,8 +66,8 @@ export const BRIEFINGS: Briefing[] = [
     phaseName: 'Category Establishment',
     corePosition:
       'The AI agent is only a participant in the control problem. The decision is the governed object because the decision carries consequence, authority, evidence, and institutional accountability.',
-    estimatedReadTime: 5,
-    approximateWordCount: 1040,
+    estimatedReadTime: 4,
+    approximateWordCount: 760,
     purpose: 'Consequence attaches to the decision path.',
     status: 'Published',
     slug: 'Strategic_Intelligence_Briefing_04',
@@ -80,7 +80,7 @@ export const BRIEFINGS: Briefing[] = [
     corePosition:
       'The enterprise control gap sits between AI output and business execution. Output is not consequence until the organization allows it to move into action.',
     estimatedReadTime: 5,
-    approximateWordCount: 1120,
+    approximateWordCount: 900,
     purpose: 'Output becomes control relevant when it starts moving toward action.',
     status: 'Published',
     slug: 'Strategic_Intelligence_Briefing_05',
