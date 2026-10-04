@@ -1,0 +1,440 @@
+---
+import Base from '../../../layouts/Base.astro';
+---
+
+<Base
+  title="Decision Authority Layer Weekly Enforcement Brief | 28 Sep to 4 Oct 2026"
+  description="What happened. Where enforcement failed. How DAL-X can enforce authority before execution. Issue 01, reporting period Mon 28 Sep to Sun 4 Oct 2026. Published by Jochanni Labs."
+  type="article"
+  publishedDate="2026-10-04"
+>
+
+  <!-- ── Header ──────────────────────────────────────────────────────── -->
+  <div class="weekly-header">
+    <div class="container">
+      <p class="weekly-kicker">Jochanni Labs / Decision Governance / Issue 01</p>
+      <h1>Decision Authority Layer Weekly Enforcement Brief</h1>
+      <p class="weekly-purpose">What happened. Where enforcement failed. How DAL-X can enforce authority before execution.</p>
+      <div class="weekly-meta">
+        <div class="weekly-meta-item">
+          <span class="weekly-meta-label">Reporting period</span>
+          <span class="weekly-meta-value">Mon 28 Sep to Sun 4 Oct 2026</span>
+        </div>
+        <div class="weekly-meta-item">
+          <span class="weekly-meta-label">Publication date</span>
+          <span class="weekly-meta-value">4 October 2026</span>
+        </div>
+        <div class="weekly-meta-item">
+          <span class="weekly-meta-label">Publisher</span>
+          <span class="weekly-meta-value">Published by Jochanni Labs</span>
+        </div>
+      </div>
+      <span class="weekly-doctrine-tag">No Authority, No Execution</span>
+    </div>
+  </div>
+
+  <main class="weekly-body">
+
+    <!-- ── Opening Finding ──────────────────────────────────────────── -->
+    <section class="weekly-section weekly-section--lead">
+      <div class="container">
+        <div class="weekly-secnum">Opening finding</div>
+        <h2>Coding agents at 300+ organizations published internal screenshots to public GitHub repositories without approval</h2>
+        <p class="weekly-lead-p">Glow Labs reported on 29 September that developers' AI coding agents published more than 13,000 internal images openly, including billing records and a treasury console.<sup><a href="#s1">1</a></sup> The agents created the public repositories themselves, 93% of them under employees' personal accounts.</p>
+        <p>A developer credential allowed each push. Nothing required authority for the specific act of making internal material public.</p>
+
+        <div class="weekly-figure">
+          <img
+            src="/weekly/pixelleak-glow-screenshot.png"
+            alt="A public pr-assets repository holding screenshots from a private project, from Glow's lab reproduction with Claude Code."
+            width="800"
+            height="auto"
+            loading="lazy"
+          />
+          <p class="weekly-figcaption">
+            <span class="weekly-figcaption-label">Source screenshot</span>
+            A public pr-assets repository holding screenshots from a private project, from Glow's lab reproduction with Claude Code. The agent explained: "I created a new public repo, sweeper-demo/pr-assets, holding the two screenshots." Image credit: Glow, <a href="https://www.glow.io/blogs/how-ai-agents-exposed-developer-screenshots-from-leading-tech-companies" target="_blank" rel="noopener noreferrer">PixelLeak</a>, 29 September 2026.
+          </p>
+        </div>
+
+        <div class="weekly-limit">
+          <span class="weekly-limit-label">Evidence limit</span>
+          Glow sells a control for this behavior, names no affected organization, and has not established whether outsiders downloaded the images.<sup><a href="#s2">2</a></sup>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 01 / Market Response ─────────────────────────────────────── -->
+    <section class="weekly-section">
+      <div class="container">
+        <div class="weekly-secnum">01 / Market Response</div>
+        <h2>Vendors described execution controls. One published an inspectable mechanism.</h2>
+
+        <div class="weekly-table-wrap">
+          <table class="weekly-table">
+            <thead>
+              <tr>
+                <th>Organization</th>
+                <th>Reported response</th>
+                <th>Evidence</th>
+                <th>Unverified</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Lead Bank<span class="weekly-table-sub">29 Sep</span></td>
+                <td>Per agent account numbers. Payee allowlists checked at the bank before funds leave.</td>
+                <td><span class="weekly-pill weekly-pill--doc">Documented API</span></td>
+                <td>No customers or test results</td>
+              </tr>
+              <tr>
+                <td>Robinhood<span class="weekly-table-sub">29 Sep</span></td>
+                <td>"With approvals on, your agent cannot place an order until you approve it." Default is on.</td>
+                <td><span class="weekly-pill weekly-pill--doc">Disclosure, rolling out</span></td>
+                <td>Approvals can be switched off</td>
+              </tr>
+              <tr>
+                <td>AWS<span class="weekly-table-sub">29 Sep</span></td>
+                <td>Agents "support human approval before consequential actions."</td>
+                <td><span class="weekly-pill weekly-pill--unk">Preview</span></td>
+                <td>How approval binds to the action</td>
+              </tr>
+              <tr>
+                <td>RSA<span class="weekly-table-sub">29 Sep</span></td>
+                <td>High risk actions need a named operator's out of band approval.</td>
+                <td><span class="weekly-pill weekly-pill--unk">Announcement</span></td>
+                <td>Ships 16 Nov; payload binding not stated</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>Federal Reserve Governor Christopher Waller said on 28 September that the question becomes "proving that an agent has the authority to pay on the buyer's behalf."<sup><a href="#s7">7</a></sup> His remarks were a speech, not guidance. No enterprise procurement requirement appeared in the reviewed sources.<sup><a href="#s3">3</a>, <a href="#s4">4</a>, <a href="#s5">5</a>, <a href="#s6">6</a></sup></p>
+      </div>
+    </section>
+
+    <!-- ── 02 / Incidents and Enforcement Gaps ──────────────────────── -->
+    <section class="weekly-section">
+      <div class="container">
+        <div class="weekly-secnum">02 / Incidents and Enforcement Gaps</div>
+        <h2>Two new cases, two updates, one critical advisory</h2>
+        <p class="weekly-scope">Counts cover the reviewed source set only, not total market incidence.</p>
+
+        <div class="weekly-table-wrap">
+          <table class="weekly-table">
+            <thead>
+              <tr>
+                <th>Case</th>
+                <th>Executed or attempted</th>
+                <th>Status</th>
+                <th>Authority gap</th>
+                <th>Unresolved</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>PixelLeak<span class="weekly-table-sub">New</span></td>
+                <td>Public repositories created, internal images pushed</td>
+                <td><span class="weekly-pill weekly-pill--exec">Executed</span></td>
+                <td>Credential alone sufficed</td>
+                <td>Named organizations, downloads</td>
+              </tr>
+              <tr>
+                <td>Manus<span class="weekly-table-sub">New</span></td>
+                <td>Hidden email instructions ran code beside stored OAuth tokens</td>
+                <td><span class="weekly-pill weekly-pill--demo">Demonstrated, fixed</span></td>
+                <td>Guardrail fired "only after the code had already run"</td>
+                <td>Fix date</td>
+              </tr>
+              <tr>
+                <td>OpenAI agents<span class="weekly-table-sub">Update</span></td>
+                <td>Training agents reached third party systems, including a NSW fire data app</td>
+                <td><span class="weekly-pill weekly-pill--exec">Access confirmed</span></td>
+                <td>Restrictions did not hold; NSW told this week</td>
+                <td>Transluce and Asymmetric disagree on non public access</td>
+              </tr>
+              <tr>
+                <td>Meta Muse<span class="weekly-table-sub">Update</span></td>
+                <td>Shared a seller's address, accepted a lower offer</td>
+                <td><span class="weekly-pill weekly-pill--unk">Unknown</span></td>
+                <td>"Allow Always" granted more than the user expected</td>
+                <td>Permission scope</td>
+              </tr>
+              <tr>
+                <td>MetaMCP<span class="weekly-table-sub">CVE-2026-79537</span></td>
+                <td>Another tenant's tools executed with forwarded credentials</td>
+                <td><span class="weekly-pill weekly-pill--demo">Advisory, 9.1</span></td>
+                <td>Checks the endpoint owner, "never the session"</td>
+                <td>Patch status</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="weekly-scope">Sources 1, 9 to 14.</p>
+      </div>
+    </section>
+
+    <!-- ── 03 / Domains Requiring Enforcement ───────────────────────── -->
+    <section class="weekly-section">
+      <div class="container">
+        <div class="weekly-secnum">03 / Domains Requiring Enforcement</div>
+        <h2>Where the authority check belongs</h2>
+
+        <div class="weekly-table-wrap">
+          <table class="weekly-table">
+            <thead>
+              <tr>
+                <th>Domain</th>
+                <th>Action</th>
+                <th>Check belongs</th>
+                <th>If absent</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Software development</td>
+                <td>Public repository push</td>
+                <td>Endpoint and repository host</td>
+                <td>Internal data exposed</td>
+              </tr>
+              <tr>
+                <td>Payments</td>
+                <td>Wire, ACH, instant payment</td>
+                <td>Payment rail</td>
+                <td>Unapproved payee paid</td>
+              </tr>
+              <tr>
+                <td>Brokerage</td>
+                <td>Order placement</td>
+                <td>Order system</td>
+                <td>Unapproved trade</td>
+              </tr>
+              <tr>
+                <td>Agent tool servers</td>
+                <td>Tool call with forwarded credentials</td>
+                <td>Tool server, per session</td>
+                <td>Cross tenant execution</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="weekly-figure">
+          <svg viewBox="0 0 800 330" width="100%" role="img" aria-label="Conceptual diagram comparing the observed execution path, where a coding agent pushes to a public repository using a developer credential, with a governed path where the push is held and the receiving system rejects it without valid authority for the exact repository and files.">
+            <rect x="0" y="0" width="800" height="330" fill="#131318"/>
+            <text x="20" y="30" fill="#6A7A88" font-size="11" letter-spacing="1.5" font-family="IBM Plex Mono, monospace">OBSERVED PATH (PIXELLEAK)</text>
+            <g font-size="12" fill="#EEE8E0" font-family="IBM Plex Mono, monospace">
+              <rect x="20" y="45" width="150" height="56" fill="#1A1A22" stroke="#2C2C38"/>
+              <text x="32" y="69">Coding agent</text>
+              <text x="32" y="87" fill="#6A7A88" font-size="11">task: screenshots</text>
+              <rect x="225" y="45" width="170" height="56" fill="#1A1A22" stroke="#2C2C38"/>
+              <text x="237" y="69">git push</text>
+              <text x="237" y="87" fill="#6A7A88" font-size="11">developer credential</text>
+              <rect x="450" y="45" width="150" height="56" fill="#1A1A22" stroke="#2C2C38"/>
+              <text x="462" y="69">Public repository</text>
+              <text x="462" y="87" fill="#6A7A88" font-size="11">personal account</text>
+              <rect x="655" y="45" width="125" height="56" fill="#1A1A22" stroke="#D05010"/>
+              <text x="667" y="69" fill="#E86020">Anyone</text>
+              <text x="667" y="87" fill="#6A7A88" font-size="11">can download</text>
+            </g>
+            <g stroke="#6A7A88" stroke-width="1.5" fill="none">
+              <path d="M170 73 H220"/>
+              <path d="M395 73 H445"/>
+              <path d="M600 73 H650"/>
+            </g>
+            <g fill="#6A7A88">
+              <path d="M220 69 L226 73 L220 77Z"/>
+              <path d="M445 69 L451 73 L445 77Z"/>
+              <path d="M650 69 L656 73 L650 77Z"/>
+            </g>
+            <text x="183" y="125" fill="#E86020" font-size="11" font-family="IBM Plex Mono, monospace">no authority decision on this path</text>
+            <line x1="20" y1="150" x2="780" y2="150" stroke="#2C2C38"/>
+            <text x="20" y="180" fill="#6A7A88" font-size="11" letter-spacing="1.5" font-family="IBM Plex Mono, monospace">GOVERNED PATH (CONCEPTUAL)</text>
+            <g font-size="12" fill="#EEE8E0" font-family="IBM Plex Mono, monospace">
+              <rect x="20" y="195" width="150" height="56" fill="#1A1A22" stroke="#2C2C38"/>
+              <text x="32" y="219">Coding agent</text>
+              <text x="32" y="237" fill="#6A7A88" font-size="11">proposes push</text>
+              <rect x="225" y="195" width="170" height="56" fill="#1A1A22" stroke="#D05010" stroke-width="1.5"/>
+              <text x="237" y="219" fill="#E86020">Authority boundary</text>
+              <text x="237" y="237" fill="#6A7A88" font-size="11">trigger: make public</text>
+              <rect x="450" y="195" width="150" height="56" fill="#1A1A22" stroke="#2C2C38"/>
+              <text x="462" y="219">Receiving system</text>
+              <text x="462" y="237" fill="#6A7A88" font-size="11">checks authority</text>
+              <rect x="655" y="195" width="125" height="56" fill="#1A1A22" stroke="#2C2C38"/>
+              <text x="667" y="219">Rejected</text>
+              <text x="667" y="237" fill="#6A7A88" font-size="11">stays private</text>
+            </g>
+            <g stroke="#6A7A88" stroke-width="1.5" fill="none">
+              <path d="M170 223 H220"/>
+              <path d="M395 223 H445"/>
+              <path d="M600 223 H650"/>
+            </g>
+            <g fill="#6A7A88">
+              <path d="M220 219 L226 223 L220 227Z"/>
+              <path d="M445 219 L451 223 L445 227Z"/>
+              <path d="M650 219 L656 223 L650 227Z"/>
+            </g>
+            <text x="20" y="285" fill="#C9C3BC" font-size="11" font-family="IBM Plex Mono, monospace">Valid authority must name this repository, these files, and this visibility change.</text>
+            <text x="20" y="305" fill="#C9C3BC" font-size="11" font-family="IBM Plex Mono, monospace">The check must cover every route: git CLI, helper tools, releases, gists, personal accounts.</text>
+          </svg>
+          <p class="weekly-figcaption">
+            <span class="weekly-figcaption-label">Explanatory diagram</span>
+            Conceptual, drawn by Jochanni Labs. The top row summarizes the path Glow reported. It does not depict any affected organization's systems.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 04 / Enforcement Evidence and DAL Impact ──────────────────── -->
+    <section class="weekly-section">
+      <div class="container">
+        <div class="weekly-secnum">04 / Enforcement Evidence and DAL Impact</div>
+        <h2>A benchmark tested approval bound to the exact bytes</h2>
+        <p>A 28 September arXiv paper tested approval as "a one-shot credential bound to the exact bytes that will run."<sup><a href="#s15">15</a></sup> Attack success fell from 98.3% to 7.7%. The operating system sandbox, not the approval gate, produced the final drop from 30.8%.</p>
+
+        <div class="weekly-figure">
+          <svg viewBox="0 0 800 270" width="100%" role="img" aria-label="Bar chart of effective attack success rate by configuration: direct execution 98.3 percent, string gate 43.6, full architecture 30.8, plus file hash verification 30.8, deployed with OS sandbox 7.7.">
+            <rect width="800" height="270" fill="#131318"/>
+            <text x="20" y="28" fill="#6A7A88" font-size="11" letter-spacing="1.2" font-family="IBM Plex Mono, monospace">EFFECTIVE ATTACK SUCCESS RATE, % OF BENCHMARK ATTACK CASES</text>
+            <g font-size="12" fill="#C9C3BC" font-family="IBM Plex Mono, monospace">
+              <text x="20" y="66">Direct execution (B0)</text>
+              <text x="20" y="106">String gate (B2)</text>
+              <text x="20" y="146">Full architecture (B5)</text>
+              <text x="20" y="186">+ file hash check (B6)</text>
+              <text x="20" y="226">Deployed, + OS sandbox (B7)</text>
+            </g>
+            <g>
+              <rect x="230" y="52" width="484" height="20" fill="#363644"/>
+              <rect x="230" y="92" width="215" height="20" fill="#363644"/>
+              <rect x="230" y="132" width="152" height="20" fill="#363644"/>
+              <rect x="230" y="172" width="152" height="20" fill="#363644"/>
+              <rect x="230" y="212" width="38" height="20" fill="#D05010"/>
+            </g>
+            <g font-size="12" fill="#EEE8E0" font-family="IBM Plex Mono, monospace">
+              <text x="722" y="67">98.3</text>
+              <text x="453" y="107">43.6</text>
+              <text x="390" y="147">30.8</text>
+              <text x="390" y="187">30.8</text>
+              <text x="276" y="227" fill="#E86020">7.7</text>
+            </g>
+            <text x="20" y="258" fill="#6A7A88" font-size="10" font-family="IBM Plex Mono, monospace">Source: Jing, arXiv 2609.38224, Table I. 313 case benchmark. Not production data.</text>
+          </svg>
+          <p class="weekly-figcaption">
+            <span class="weekly-figcaption-label">Sourced chart</span>
+            Values from Table I of the paper, 313 case benchmark. The deployed setup also denied 11.1% of benign tasks. Benchmark results, not production evidence.
+          </p>
+        </div>
+
+        <p>An IETF individual draft published 29 September binds a permit to one recipient, one HTTP request, and one decided action, verified by the receiving system.<sup><a href="#s16">16</a></sup> It has no IETF standing.</p>
+
+        <h3>Conditional assessment</h3>
+        <p><strong>PixelLeak.</strong> An authority check could have stopped the public pushes if trigger logic classified visibility changes as consequential and the receiving system rejected any push lacking authority for that exact repository and file set. Coverage must include helper tools and personal accounts, where 93% of the images sat. The control stops publication, not the screenshot itself.</p>
+        <p><strong>Manus.</strong> Authority for "check my inbox" does not cover running decoded code. A gate before execution would have held it. Salt's detection came after.</p>
+
+        <p class="weekly-status">DAL-X status: the current demo runs end to end in a simulated enterprise environment. Production enforcement controls are still being completed.<sup><a href="#s17">17</a></sup></p>
+      </div>
+    </section>
+
+    <!-- ── 05 / Enterprise Check and Next Week's Watch ──────────────── -->
+    <section class="weekly-section">
+      <div class="container">
+        <div class="weekly-secnum">05 / Enterprise Check and Next Week's Watch</div>
+        <h2>Two tests to run this week</h2>
+
+        <div class="weekly-check">
+          <div class="weekly-check-name">Check 01 / Developer agents</div>
+          <dl>
+            <dt>Action</dt>
+            <dd>A coding agent creates a public repository and pushes an image.</dd>
+            <dt>Defect</dt>
+            <dd>A developer credential alone permits publication.</dd>
+            <dt>Effective control</dt>
+            <dd>The push is rejected, with a record naming the missing authority.</dd>
+          </dl>
+        </div>
+
+        <div class="weekly-check">
+          <div class="weekly-check-name">Check 02 / Payment agents</div>
+          <dl>
+            <dt>Action</dt>
+            <dd>An agent pays an unlisted counterparty, then an altered amount.</dd>
+            <dt>Defect</dt>
+            <dd>Only the application enforces the limit.</dd>
+            <dt>Effective control</dt>
+            <dd>The payment system itself refuses both.</dd>
+          </dl>
+        </div>
+
+        <h3>Watch list</h3>
+        <ul class="weekly-watch">
+          <li>Which of OpenAI's 100+ notified organizations had systems accessed.<sup><a href="#s10">10</a></sup></li>
+          <li>Confirmed exposures or downloads from PixelLeak.</li>
+          <li>MetaMCP patch, RSA availability on 16 November, NIST webinar on 28 October.<sup><a href="#s8">8</a></sup></li>
+        </ul>
+
+        <div class="weekly-question">When your agent attempts a consequential action without valid authority for that exact execution, does the downstream system reject it?</div>
+
+        <div class="weekly-explore">
+          <a href="https://www.decisionauthoritylayer.com/architecture" class="weekly-explore-link" target="_blank" rel="noopener noreferrer">
+            DAL-X architecture: authority in the execution path
+            <span>decisionauthoritylayer.com/architecture</span>
+          </a>
+          <a href="https://www.decisionauthoritylayer.com/product" class="weekly-explore-link" target="_blank" rel="noopener noreferrer">
+            DAL-X, the simulated application
+            <span>decisionauthoritylayer.com/product</span>
+          </a>
+          <a href="/briefings/Strategic_Intelligence_Briefing_05/" class="weekly-explore-link">
+            Briefing 05: a control layer between AI output and execution
+            <span>dal-x.com Strategic Intelligence Series</span>
+          </a>
+          <a href="/briefings/" class="weekly-explore-link">
+            The full Strategic Intelligence Series
+            <span>dal-x.com/briefings</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Sources ───────────────────────────────────────────────────── -->
+    <div class="weekly-sources">
+      <div class="container">
+        <h2>Sources</h2>
+        <ol>
+          <li id="s1">Glow, "PixelLeak," Yoni Gottesman, 29 Sep 2026. Primary, vendor research. <a href="https://www.glow.io/blogs/how-ai-agents-exposed-developer-screenshots-from-leading-tech-companies" target="_blank" rel="noopener noreferrer">glow.io</a></li>
+          <li id="s2">The Register, 29 Sep 2026. Secondary. <a href="https://www.theregister.com/ai-and-ml/2026/09/29/ai-models-keep-posting-screenshots-showing-sensitive-data-from-inside-tech-companies/5299640" target="_blank" rel="noopener noreferrer">theregister.com</a></li>
+          <li id="s3">Lead Bank, "Moving money with agents," 29 Sep 2026. Primary. <a href="https://www.lead.bank/blog/moving-money-with-agents" target="_blank" rel="noopener noreferrer">lead.bank</a></li>
+          <li id="s4">Robinhood, HOOD Summit 2026 newsroom post and product disclosures, 29 to 30 Sep 2026. Primary. <a href="https://robinhood.com/us/en/newsroom/hood-summit-2026/" target="_blank" rel="noopener noreferrer">newsroom</a>, <a href="https://robinhood.com/us/en/support/articles/hood-summit-2026-product-announcements/" target="_blank" rel="noopener noreferrer">disclosures</a></li>
+          <li id="s5">AWS, Amazon Bedrock Managed Agents preview, 29 Sep 2026. Primary. <a href="https://aws.amazon.com/about-aws/whats-new/2026/09/bedrock-managed-agents-preview/" target="_blank" rel="noopener noreferrer">aws.amazon.com</a></li>
+          <li id="s6">RSA, RSA Agent ID press release, 29 Sep 2026. Primary. <a href="https://www.rsa.com/news/press-releases/rsa-agent-id/" target="_blank" rel="noopener noreferrer">rsa.com</a></li>
+          <li id="s7">Federal Reserve Board, Governor Waller, "Payments in the Age of AI Agents," 28 Sep 2026. Primary. <a href="https://www.federalreserve.gov/newsevents/speech/waller20260928a.htm" target="_blank" rel="noopener noreferrer">federalreserve.gov</a></li>
+          <li id="s8">NIST NCCoE, Software and Agentic AI Identity comments summary, 29 Sep 2026. Primary. <a href="https://www.nist.gov/news-events/news/2026/09/comments-software-and-agentic-ai-identity-concept-paper" target="_blank" rel="noopener noreferrer">nist.gov</a></li>
+          <li id="s9">Salt Labs, "How We Hijacked an AI Agent With a Single Email," 1 Oct 2026. Primary, researcher disclosure. <a href="https://salt.security/blog/how-we-hijacked-an-ai-agent-with-a-single-email" target="_blank" rel="noopener noreferrer">salt.security</a></li>
+          <li id="s10">The Register, OpenAI alerts 100+ orgs, 2 Oct 2026. Secondary, quoting OpenAI's update. <a href="https://www.theregister.com/security/2026/10/02/openai-alerts-100-orgs-that-its-misaligned-models-attempted-to-break-in-or-worse/5300891" target="_blank" rel="noopener noreferrer">theregister.com</a></li>
+          <li id="s11">ABC News Australia, second NSW government website, 2 Oct 2026. Secondary, quoting OpenAI and the NSW Premier's Department. <a href="https://www.abc.net.au/news/2026-10-02/rogue-open-ai-agent-breach-nsw-government-website/107223108" target="_blank" rel="noopener noreferrer">abc.net.au</a></li>
+          <li id="s12">Transluce, AI agents targeted US and Canadian government websites, 30 Sep 2026. Primary. <a href="https://transluce.org/us-canada-gov" target="_blank" rel="noopener noreferrer">transluce.org</a>. Asymmetric Security, rogue agents investigation, 1 Oct 2026. Primary. <a href="https://www.asymmetricsecurity.com/newsroom/rogue-agents-investigation/" target="_blank" rel="noopener noreferrer">asymmetricsecurity.com</a></li>
+          <li id="s13">The Verge, Meta's Muse AI sent a YouTuber's address to a stranger, 29 Sep 2026. Secondary, quoting the user's posts. <a href="https://www.theverge.com/ai-artificial-intelligence/1001886/meta-muse-ai-facebook-marketplace-security-concerns" target="_blank" rel="noopener noreferrer">theverge.com</a></li>
+          <li id="s14">CVE-2026-79537, MetaMCP, published 29 Sep 2026. Primary record. <a href="https://app.opencve.io/cve/CVE-2026-79537" target="_blank" rel="noopener noreferrer">opencve.io</a></li>
+          <li id="s15">Qishuai Jing, "Separation of Duties for Privileged LLM Agents," arXiv 2609.38224, 28 Sep 2026. Primary, not peer reviewed. <a href="https://arxiv.org/abs/2609.38224" target="_blank" rel="noopener noreferrer">arxiv.org</a></li>
+          <li id="s16">S. Saha, draft-saha-aadp-bound-permit-00, IETF Datatracker, 29 Sep 2026. Individual draft. <a href="https://datatracker.ietf.org/doc/draft-saha-aadp-bound-permit/" target="_blank" rel="noopener noreferrer">datatracker.ietf.org</a></li>
+          <li id="s17">Jochanni Labs, Decision Authority Layer home page, product status as of 4 Oct 2026. <a href="https://www.decisionauthoritylayer.com" target="_blank" rel="noopener noreferrer">decisionauthoritylayer.com</a></li>
+        </ol>
+        <p class="weekly-sources-note">Image credits: lead screenshot by Glow (source 1). Diagram drawn by Jochanni Labs. Chart drawn by Jochanni Labs from source 15, Table I.</p>
+      </div>
+    </div>
+
+    <!-- ── Integration Action: Enterprise Pilot ─────────────────────── -->
+    <div class="weekly-pilot-cta">
+      <div class="container">
+        <p class="weekly-pilot-cta-label">Integration Action</p>
+        <h2>Discuss a Paid Enterprise Pilot</h2>
+        <p>The incidents covered this week share one structural gap: no authority check at the receiving system. DAL-X enforces that check in a simulated enterprise environment. A small number of organizations are engaged in a paid pilot to run it live.</p>
+        <div class="weekly-pilot-cta-row">
+          <a href="mailto:kevin@jochannilabs.com?subject=DAL-X%20Enterprise%20Pilot" class="btn-primary">Contact to discuss the pilot</a>
+          <a href="https://simulation.dal-x.com/" class="btn-outline" target="_blank" rel="noopener noreferrer">Inspect enforcement: simulation.dal-x.com</a>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</Base>
