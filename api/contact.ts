@@ -74,6 +74,24 @@ export async function POST(request: Request): Promise<Response> {
       html,
     });
 
+    const confirmText = `Hi ${name},\n\nYour message has been received. Kevin will reply to this address.\n\nSubject: ${subject}\n\n---\n${message}\n\n— Jochanni Labs\ndal-x.com`;
+    const confirmHtml = `
+      <p>Hi ${esc(name)},</p>
+      <p>Your message has been received. Kevin will reply to this address.</p>
+      <p><strong>Subject:</strong> ${esc(subject)}</p>
+      <hr>
+      <p style="white-space:pre-wrap;color:#666">${esc(message)}</p>
+      <p style="margin-top:2em;color:#999">— Jochanni Labs &middot; <a href="https://www.dal-x.com">dal-x.com</a></p>
+    `;
+
+    await transporter.sendMail({
+      from: `"Kevin Moore / Jochanni Labs" <${SMTP_USER}>`,
+      to: `"${name}" <${email}>`,
+      subject: `Re: ${subject}`,
+      text: confirmText,
+      html: confirmHtml,
+    });
+
     return json({ ok: true }, 200);
   } catch (err) {
     console.error('Contact form error:', err);
