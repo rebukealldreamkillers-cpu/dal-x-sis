@@ -1,0 +1,135 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base
+  title="Contact Jochanni Labs"
+  description="Contact Kevin Moore at Jochanni Labs to discuss Decision Governance, the DAL-X application, or a paid enterprise pilot."
+>
+  <div class="page-header">
+    <div class="container">
+      <p class="page-label">Jochanni Labs</p>
+      <h1>Contact</h1>
+      <p>Questions about Decision Governance, the DAL-X application, or a paid enterprise pilot.</p>
+    </div>
+  </div>
+
+  <main class="contact-outer">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- ── Form ───────────────────────────────────────────────── -->
+        <div class="contact-form-wrap">
+
+          <form
+            class="contact-form"
+            action="https://formspree.io/f/YOUR_FORM_ID"
+            method="POST"
+          >
+            <!-- Hidden fields for Formspree routing -->
+            <input type="hidden" name="_subject" value="Contact form — DAL-X" />
+
+            <div class="form-group">
+              <label class="form-label" for="name">Name</label>
+              <input
+                class="form-input"
+                type="text"
+                id="name"
+                name="name"
+                autocomplete="name"
+                required
+                placeholder="Your name"
+              />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="organization">
+                Organization
+                <span class="form-label-optional">(optional)</span>
+              </label>
+              <input
+                class="form-input"
+                type="text"
+                id="organization"
+                name="organization"
+                autocomplete="organization"
+                placeholder="Company or institution"
+              />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="email">Email</label>
+              <input
+                class="form-input"
+                type="email"
+                id="email"
+                name="email"
+                autocomplete="email"
+                required
+                placeholder="you@example.com"
+              />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="subject">Subject</label>
+              <select class="form-select" id="subject" name="subject" required>
+                <option value="" disabled selected>Select a subject</option>
+                <option value="Enterprise pilot">Enterprise pilot discussion</option>
+                <option value="Decision Governance">Decision Governance</option>
+                <option value="DAL-X application">DAL-X application</option>
+                <option value="Strategic Intelligence Series">Strategic Intelligence Series</option>
+                <option value="Press">Press inquiry</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="message">Message</label>
+              <textarea
+                class="form-textarea"
+                id="message"
+                name="message"
+                required
+                placeholder="Describe what you would like to discuss."
+              ></textarea>
+            </div>
+
+            <div class="form-submit-row">
+              <button type="submit" class="btn-primary">Send message</button>
+              <span class="form-note">Sent to kevin@jochannilabs.com</span>
+            </div>
+
+          </form>
+
+        </div>
+
+        <!-- ── Sidebar ────────────────────────────────────────────── -->
+        <aside class="contact-sidebar">
+
+          <div class="contact-sidebar-card">
+            <p class="contact-sidebar-label">Enterprise Pilot</p>
+            <h3>Discuss a paid pilot</h3>
+            <p>A small number of organizations are engaged in a paid pilot to run DAL-X enforcement in a live environment. Use the form or reach out directly.</p>
+            <a href="mailto:kevin@jochannilabs.com" class="contact-direct-email">kevin@jochannilabs.com</a>
+          </div>
+
+          <div class="contact-sidebar-card">
+            <p class="contact-sidebar-label">Inspect enforcement</p>
+            <h3>DAL-X simulation</h3>
+            <p>The current build runs end to end in a simulated enterprise environment. Production enforcement controls are still being completed.</p>
+            <a href="https://simulation.dal-x.com/" class="contact-direct-email" target="_blank" rel="noopener noreferrer">simulation.dal-x.com</a>
+          </div>
+
+          <div class="contact-sidebar-card">
+            <p class="contact-sidebar-label">Publication</p>
+            <h3>Strategic Intelligence Series</h3>
+            <p>Twenty briefings defining Decision Governance as the runtime authority discipline for consequential AI agent executions.</p>
+            <a href="/briefings" class="contact-direct-email">dal-x.com/briefings</a>
+          </div>
+
+        </aside>
+
+      </div>
+    </div>
+  </main>
+</Base>

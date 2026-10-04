@@ -1595,6 +1595,187 @@ a.briefing-row:hover .briefing-row-title { color: var(--orange-bright); }
 .preview-link:hover { color: var(--white-pure); text-decoration: none; }
 
 /* ═══════════════════════════════════════════════════════════════
+   CONTACT PAGE
+   ═══════════════════════════════════════════════════════════════ */
+
+.contact-outer {
+  padding: 4rem 0 6rem;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 0 5rem;
+  align-items: start;
+}
+
+/* Form column */
+.contact-form-wrap { min-width: 0; }
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-label {
+  font-family: var(--font-mono);
+  font-size: 0.5625rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--silver-light);
+}
+
+.form-label-optional {
+  color: var(--silver);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: none;
+  margin-left: 0.5rem;
+}
+
+.form-input,
+.form-textarea,
+.form-select {
+  width: 100%;
+  background: var(--charcoal-3);
+  border: 1px solid var(--border-mid);
+  color: var(--white);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 0.75rem 1rem;
+  outline: none;
+  transition: border-color 0.12s, background 0.12s;
+  appearance: none;
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+  border-color: var(--orange);
+  background: var(--charcoal-4);
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: var(--silver);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 9rem;
+  line-height: 1.65;
+}
+
+.form-select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236A7A88' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  padding-right: 2.5rem;
+  cursor: pointer;
+}
+
+.form-select option {
+  background: var(--charcoal-3);
+  color: var(--white);
+}
+
+.form-note {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  color: var(--silver-mid);
+  line-height: 1.6;
+}
+
+.form-submit-row {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding-top: 0.5rem;
+}
+
+/* Sidebar column */
+.contact-sidebar {
+  position: sticky;
+  top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact-sidebar-card {
+  background: var(--charcoal-3);
+  border: 1px solid var(--border-faint);
+  border-top: 3px solid var(--orange);
+  padding: 1.5rem 1.75rem;
+}
+
+.contact-sidebar-label {
+  font-family: var(--font-mono);
+  font-size: 0.5625rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--orange-bright);
+  margin-bottom: 0.75rem;
+}
+
+.contact-sidebar-card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--white-pure);
+  margin: 0 0 0.625rem;
+  line-height: 1.3;
+}
+
+.contact-sidebar-card p {
+  font-size: 0.9rem;
+  color: var(--silver-light);
+  line-height: 1.75;
+  margin: 0;
+}
+
+.contact-direct-email {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  color: var(--orange-bright);
+  word-break: break-all;
+  display: block;
+  margin-top: 0.875rem;
+  text-decoration: none;
+  border-bottom: 1px solid var(--orange-border);
+  padding-bottom: 0.125rem;
+  transition: color 0.12s, border-color 0.12s;
+}
+
+.contact-direct-email:hover {
+  color: var(--white-pure);
+  border-color: var(--border-mid);
+  text-decoration: none;
+}
+
+/* Responsive */
+@media (max-width: 860px) {
+  .contact-grid { grid-template-columns: 1fr; gap: 3.5rem 0; }
+  .contact-sidebar { position: static; }
+}
+
+@media (max-width: 480px) {
+  .contact-outer { padding: 3rem 0 5rem; }
+  .form-submit-row { flex-direction: column; align-items: flex-start; }
+}
+
+/* ═══════════════════════════════════════════════════════════════
    DECISION GOVERNANCE WEEKLY
    ═══════════════════════════════════════════════════════════════ */
 
