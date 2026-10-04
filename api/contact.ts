@@ -1,23 +1,23 @@
-import type { APIRoute } from 'astro';
 import nodemailer from 'nodemailer';
-
-export const prerender = false;
 
 function esc(s: string): string {
   return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 }
 
-export const POST: APIRoute = async ({ request }) => {
+export default async function handler(req: Request): Promise<Response> {
   const json = (body: object, status: number) =>
     new Response(JSON.stringify(body), {
       status,
       headers: { 'Content-Type': 'application/json' },
     });
 
-  try {
-    const data = await request.formData();
+  if (req.method !== 'POST') {
+    return json({ ok: false, error: 'Method not allowed.' }, 405);
+  }
 
-    // Honeypot: bots fill this, humans don't
+  try {
+    const data = await req.formData();
+
     if (data.get('_honey')) return json({ ok: true }, 200);
 
     const name         = (data.get('name')         ?? '').toString().trim();
@@ -33,7 +33,11 @@ export const POST: APIRoute = async ({ request }) => {
       return json({ ok: false, error: 'Enter a valid email address.' }, 400);
     }
 
-    const { SMTP_HOST, SMTP_PORT, SMTP_SECURE, SMTP_USER, SMTP_PASS } = import.meta.env;
+    const SMTP_HOST   = process.env.SMTP_HOST   ?? '';
+    const SMTP_PORT   = process.env.SMTP_PORT   ?? '587';
+    const SMTP_SECURE = process.env.SMTP_SECURE ?? '';
+    const SMTP_USER   = process.env.SMTP_USER   ?? '';
+    const SMTP_PASS   = process.env.SMTP_PASS   ?? '';
 
     if (!SMTP_HOST || !SMTP_USER || !SMTP_PASS) {
       console.error('Contact: SMTP env vars not set (SMTP_HOST, SMTP_USER, SMTP_PASS).');
@@ -42,7 +46,7 @@ export const POST: APIRoute = async ({ request }) => {
 
     const transporter = nodemailer.createTransport({
       host: SMTP_HOST,
-      port: Number(SMTP_PORT ?? 587),
+      port: Number(SMTP_PORT),
       secure: SMTP_SECURE === 'true',
       auth: { user: SMTP_USER, pass: SMTP_PASS },
     });
@@ -79,4 +83,4 @@ export const POST: APIRoute = async ({ request }) => {
     console.error('Contact form error:', err);
     return json({ ok: false, error: 'Message failed to send. Try again or email kevin@jochannilabs.com directly.' }, 500);
   }
-};
+}
