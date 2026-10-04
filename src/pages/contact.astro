@@ -21,25 +21,23 @@ import Base from '../layouts/Base.astro';
         <!-- ── Form ───────────────────────────────────────────────── -->
         <div class="contact-form-wrap">
 
-          <form
-            class="contact-form"
-            action="https://formspree.io/f/YOUR_FORM_ID"
-            method="POST"
-          >
-            <!-- Hidden fields for Formspree routing -->
-            <input type="hidden" name="_subject" value="Contact form — DAL-X" />
+          <div id="contact-success" class="contact-result contact-result--success" hidden>
+            <p class="contact-result-heading">Message sent</p>
+            <p>Kevin will reply to the email address you provided.</p>
+          </div>
+
+          <div id="contact-error" class="contact-result contact-result--error" hidden>
+            <p class="contact-result-heading">Something went wrong</p>
+            <p id="contact-error-msg">Please try again or email <a href="mailto:kevin@jochannilabs.com">kevin@jochannilabs.com</a> directly.</p>
+          </div>
+
+          <form id="contact-form" class="contact-form" novalidate>
+            <!-- Honeypot: hidden from real users, bots fill it in -->
+            <input type="text" name="_honey" tabindex="-1" aria-hidden="true" style="position:absolute;left:-9999px;opacity:0;pointer-events:none;" />
 
             <div class="form-group">
               <label class="form-label" for="name">Name</label>
-              <input
-                class="form-input"
-                type="text"
-                id="name"
-                name="name"
-                autocomplete="name"
-                required
-                placeholder="Your name"
-              />
+              <input class="form-input" type="text" id="name" name="name" autocomplete="name" required placeholder="Your name" />
             </div>
 
             <div class="form-group">
@@ -47,27 +45,12 @@ import Base from '../layouts/Base.astro';
                 Organization
                 <span class="form-label-optional">(optional)</span>
               </label>
-              <input
-                class="form-input"
-                type="text"
-                id="organization"
-                name="organization"
-                autocomplete="organization"
-                placeholder="Company or institution"
-              />
+              <input class="form-input" type="text" id="organization" name="organization" autocomplete="organization" placeholder="Company or institution" />
             </div>
 
             <div class="form-group">
               <label class="form-label" for="email">Email</label>
-              <input
-                class="form-input"
-                type="email"
-                id="email"
-                name="email"
-                autocomplete="email"
-                required
-                placeholder="you@example.com"
-              />
+              <input class="form-input" type="email" id="email" name="email" autocomplete="email" required placeholder="you@example.com" />
             </div>
 
             <div class="form-group">
@@ -85,20 +68,13 @@ import Base from '../layouts/Base.astro';
 
             <div class="form-group">
               <label class="form-label" for="message">Message</label>
-              <textarea
-                class="form-textarea"
-                id="message"
-                name="message"
-                required
-                placeholder="Describe what you would like to discuss."
-              ></textarea>
+              <textarea class="form-textarea" id="message" name="message" required placeholder="Describe what you would like to discuss."></textarea>
             </div>
 
             <div class="form-submit-row">
-              <button type="submit" class="btn-primary">Send message</button>
+              <button id="contact-submit" type="submit" class="btn-primary">Send message</button>
               <span class="form-note">Sent to kevin@jochannilabs.com</span>
             </div>
-
           </form>
 
         </div>
@@ -133,3 +109,49 @@ import Base from '../layouts/Base.astro';
     </div>
   </main>
 </Base>
+
+<script>
+(function () {
+  const form    = document.getElementById('contact-form')    as HTMLFormElement;
+  const submit  = document.getElementById('contact-submit')  as HTMLButtonElement;
+  const success = document.getElementById('contact-success') as HTMLElement;
+  const errBox  = document.getElementById('contact-error')   as HTMLElement;
+  const errMsg  = document.getElementById('contact-error-msg') as HTMLElement;
+
+  if (!form) return;
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    submit.textContent = 'Sending…';
+    submit.disabled = true;
+    success.hidden = true;
+    errBox.hidden = true;
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        body: new FormData(form),
+      });
+
+      const payload = await res.json();
+
+      if (payload.ok) {
+        form.hidden = true;
+        success.hidden = false;
+      } else {
+        errMsg.innerHTML = (payload.error ?? 'Something went wrong.') +
+          ' Email <a href="mailto:kevin@jochannilabs.com">kevin@jochannilabs.com</a> directly.';
+        errBox.hidden = false;
+        submit.textContent = 'Send message';
+        submit.disabled = false;
+      }
+    } catch {
+      errMsg.innerHTML = 'Message failed to send. Email <a href="mailto:kevin@jochannilabs.com">kevin@jochannilabs.com</a> directly.';
+      errBox.hidden = false;
+      submit.textContent = 'Send message';
+      submit.disabled = false;
+    }
+  });
+})();
+</script>
