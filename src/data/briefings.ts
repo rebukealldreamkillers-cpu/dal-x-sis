@@ -29,7 +29,7 @@ export const BRIEFINGS: Briefing[] = [
       'The authority problem is the gap between knowing AI was used and proving the AI shaped decision path was permitted to move forward.',
     estimatedReadTime: 4,
     approximateWordCount: 680,
-    purpose: 'Authority must exist before AI influenced work creates consequence.',
+    purpose: 'Authority must exist before consequential AI agent executions proceed.',
     status: 'Published',
     slug: 'Strategic_Intelligence_Briefing_01',
   },
@@ -52,7 +52,7 @@ export const BRIEFINGS: Briefing[] = [
     phase: 1,
     phaseName: 'Category Establishment',
     corePosition:
-      'DAL-X is not a visibility surface, policy repository, or readiness checklist. It is the control layer required when AI influenced work needs authority, routing, evidence, and execution restraint before consequence is created.',
+      'DAL-X is not a visibility surface, policy repository, or readiness checklist. It is the control layer required when AI agent executions need authority, routing, evidence, and execution gating before consequence is created.',
     estimatedReadTime: 4,
     approximateWordCount: 700,
     purpose: 'Decision Governance requires control before consequence.',
