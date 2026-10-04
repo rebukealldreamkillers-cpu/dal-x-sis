@@ -4,19 +4,15 @@ function esc(s: string): string {
   return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 }
 
-export default async function handler(req: Request): Promise<Response> {
+export async function POST(request: Request): Promise<Response> {
   const json = (body: object, status: number) =>
     new Response(JSON.stringify(body), {
       status,
       headers: { 'Content-Type': 'application/json' },
     });
 
-  if (req.method !== 'POST') {
-    return json({ ok: false, error: 'Method not allowed.' }, 405);
-  }
-
   try {
-    const data = await req.formData();
+    const data = await request.formData();
 
     if (data.get('_honey')) return json({ ok: true }, 200);
 
