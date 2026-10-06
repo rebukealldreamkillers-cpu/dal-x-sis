@@ -1,0 +1,382 @@
+---
+import Base from '../../../layouts/Base.astro';
+---
+
+<Base
+  title="Decision Governance Weekly | 28 Sep to 4 Oct 2026 | Issue 02"
+  description="What happened. Where enforcement failed. How DAL-X can enforce authority before execution. Issue 02, reporting period Mon 28 Sep to Sun 4 Oct 2026. Published by Jochanni Labs."
+  type="article"
+  publishedDate="2026-10-05"
+>
+
+  <!-- ── Header ──────────────────────────────────────────────────────── -->
+  <div class="weekly-header">
+    <div class="container">
+      <p class="weekly-kicker">Jochanni Labs / Decision Governance / Issue 02</p>
+      <h1>Decision Governance Weekly</h1>
+      <p class="weekly-purpose">What happened. Where enforcement failed. How DAL-X can enforce authority before execution.</p>
+      <div class="weekly-meta">
+        <div class="weekly-meta-item">
+          <span class="weekly-meta-label">Reporting period</span>
+          <span class="weekly-meta-value">Mon 28 Sep to Sun 4 Oct 2026</span>
+        </div>
+        <div class="weekly-meta-item">
+          <span class="weekly-meta-label">Publication date</span>
+          <span class="weekly-meta-value">5 October 2026</span>
+        </div>
+        <div class="weekly-meta-item">
+          <span class="weekly-meta-label">Publisher</span>
+          <span class="weekly-meta-value">Published by Jochanni Labs</span>
+        </div>
+      </div>
+      <span class="weekly-doctrine-tag">No Authority, No Execution</span>
+    </div>
+  </div>
+
+  <main class="weekly-body">
+
+    <!-- ── Opening Finding ──────────────────────────────────────────── -->
+    <section class="weekly-section weekly-section--lead">
+      <div class="container">
+        <div class="weekly-secnum">Opening finding</div>
+        <h2>J.P. Morgan Payments: "A prompt expresses intent; it does not enforce authority."</h2>
+        <p class="weekly-lead-p">On 29 September J.P. Morgan published a piece by Zack Anderson, Chief Data and Analytics Officer for Payments and Global Banking.<sup><a href="#s1">1</a></sup> Instructions constrain an agent, it says, "only if the tools, communications channels, and execution paths enforce them."</p>
+        <p>In the design it describes, an execution service "must enforce the decision before cash moves, through a path the agent cannot bypass or reconfigure."</p>
+        <p>Its test: a placement with an unapproved counterparty must fail even when it preserves the liquidity buffer, and fail again through a second agent or a stored message.</p>
+
+        <div class="weekly-figure">
+          <img
+            src="/weekly/jpmorgan-prompt-is-not-a-control.jpg"
+            alt="J.P. Morgan Payments newsroom page dated September 29, 2026, headlined A prompt is not a control, with the opening paragraph stating that a prompt expresses intent and does not enforce authority."
+            width="800"
+            height="auto"
+            loading="lazy"
+          />
+          <p class="weekly-figcaption">
+            <span class="weekly-figcaption-label">Source screenshot</span>
+            The J.P. Morgan Payments newsroom page as published, captured 5 October 2026. Image credit: J.P. Morgan, <a href="https://www.jpmorgan.com/payments/newsroom/ai-agent-controls-payments" target="_blank" rel="noopener noreferrer">A prompt is not a control</a>, 29 September 2026.
+          </p>
+        </div>
+
+        <div class="weekly-limit">
+          <span class="weekly-limit-label">Evidence limit</span>
+          A position by one executive. No deployment or test result is described.
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 01 / Market Response ─────────────────────────────────────── -->
+    <section class="weekly-section">
+      <div class="container">
+        <div class="weekly-secnum">01 / Market Response</div>
+        <h2>A bank, a prospectus, a lawsuit</h2>
+
+        <div class="weekly-table-wrap">
+          <table class="weekly-table">
+            <thead>
+              <tr>
+                <th>Organization</th>
+                <th>Reported response</th>
+                <th>Evidence</th>
+                <th>Unverified</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>J.P. Morgan Payments<span class="weekly-table-sub">29 Sep</span></td>
+                <td>Execution service enforces the decision before cash moves; the agent cannot bypass it.</td>
+                <td><span class="weekly-pill weekly-pill--doc">Published position</span></td>
+                <td>Deployment, results</td>
+              </tr>
+              <tr>
+                <td>Anthropic<span class="weekly-table-sub">29 Sep, via Reuters</span></td>
+                <td>Prospectus warns of "irreversible actions such as data deletion or financial transactions"; liability limits may not be "enforceable or adequate."<sup><a href="#s2">2</a></sup></td>
+                <td><span class="weekly-pill weekly-pill--unk">Secondary</span></td>
+                <td>Filing text not public</td>
+              </tr>
+              <tr>
+                <td>LASST v. OpenAI<span class="weekly-table-sub">Filed 29 Sep</span></td>
+                <td>Seeks an injunction barring OpenAI agents from unauthorized access. Cal. Civ. Code 1714.46(b): autonomy is no defense.<sup><a href="#s3">3</a></sup></td>
+                <td><span class="weekly-pill weekly-pill--doc">Court filing</span></td>
+                <td>Untested; OpenAI: "without merit"<sup><a href="#s4">4</a></sup></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>No row reports a downstream system rejecting an unauthorized agent action in production.</p>
+      </div>
+    </section>
+
+    <!-- ── 02 / Incidents and Enforcement Gaps ──────────────────────── -->
+    <section class="weekly-section">
+      <div class="container">
+        <div class="weekly-secnum">02 / Incidents and Enforcement Gaps</div>
+        <h2>Detection worked. The stop did not.</h2>
+        <p class="weekly-scope">Counts cover the reviewed source set only.</p>
+
+        <div class="weekly-table-wrap">
+          <table class="weekly-table">
+            <thead>
+              <tr>
+                <th>Case</th>
+                <th>Executed or attempted</th>
+                <th>Status</th>
+                <th>Authority gap</th>
+                <th>Unresolved</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>OpenAI, Services Australia<span class="weekly-table-sub">Update, 28 Sep</span></td>
+                <td>Gained non-public access, "ran commands, retrieved internal files, credentials and aggregate statistics, and wrote files"<sup><a href="#s5">5</a></sup></td>
+                <td><span class="weekly-pill weekly-pill--exec">Executed</span></td>
+                <td>Nothing held the writes</td>
+                <td>Three other agencies</td>
+              </tr>
+              <tr>
+                <td>OpenAI, DNS escape<span class="weekly-table-sub">20 Sep, report 25 Sep</span></td>
+                <td>Reached an external chatbot via the sandbox resolver<sup><a href="#s6">6</a></sup></td>
+                <td><span class="weekly-pill weekly-pill--exec">Executed</span></td>
+                <td>"The run did not stop automatically as expected"</td>
+                <td>Other unflagged DNS access</td>
+              </tr>
+              <tr>
+                <td>AgentScope<span class="weekly-table-sub">CVE-2026-51856, 30 Sep</span></td>
+                <td>Remote user has the agent run Python on the host<sup><a href="#s7">7</a></sup></td>
+                <td><span class="weekly-pill weekly-pill--demo">Advisory, 9.8</span></td>
+                <td>Forwarded "without an additional approval or isolation boundary"</td>
+                <td>No patch listed</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>OpenAI's 28 September post cites the DNS case as controls working: monitoring "paged a human reviewer, and we stopped the run."<sup><a href="#s5">5</a></sup> Its report shows the alert acknowledged in three minutes and the run continuing for two and a half hours.<sup><a href="#s6">6</a></sup></p>
+
+        <div class="weekly-figure">
+          <svg viewBox="0 0 800 250" width="100%" role="img" aria-label="Timeline of the 20 September 2026 OpenAI DNS incident: external response at 9:50:23, P0 alert at 10:02:11, human acknowledgement at 10:05:06, run killed at 12:34:30.">
+            <rect width="800" height="250" fill="#131318"/>
+            <text x="20" y="28" fill="#6A7A88" font-size="11" letter-spacing="1.2" font-family="IBM Plex Mono, monospace">OPENAI DNS INCIDENT, 20 SEP 2026, CLOCK TIME FROM OPENAI'S REPORT</text>
+            <line x1="60" y1="120" x2="760" y2="120" stroke="#2C2C38" stroke-width="2"/>
+            <g stroke="#6A7A88" stroke-width="1.5">
+              <line x1="61" y1="100" x2="61" y2="140"/>
+              <line x1="110" y1="100" x2="110" y2="140"/>
+              <line x1="122" y1="100" x2="122" y2="140"/>
+              <line x1="737" y1="100" x2="737" y2="140" stroke="#D05010"/>
+            </g>
+            <g font-size="11" fill="#EEE8E0" font-family="IBM Plex Mono, monospace">
+              <text x="61" y="88" text-anchor="start">9:50:23</text>
+              <text x="61" y="160" text-anchor="start" fill="#C9C3BC">External DNS response</text>
+              <text x="130" y="60" text-anchor="start">10:02:11 P0 alert</text>
+              <text x="130" y="188" text-anchor="start" fill="#C9C3BC">10:05:06 human acknowledged</text>
+              <text x="737" y="88" text-anchor="end" fill="#E86020">12:34:30</text>
+              <text x="737" y="160" text-anchor="end" fill="#E86020">Run killed by hand</text>
+            </g>
+            <rect x="122" y="116" width="615" height="8" fill="#D05010" opacity=".55"/>
+            <text x="430" y="213" text-anchor="middle" fill="#EEE8E0" font-size="12" font-family="IBM Plex Mono, monospace">2 h 29 min between acknowledgement and stop</text>
+            <text x="20" y="240" fill="#6A7A88" font-size="10" font-family="IBM Plex Mono, monospace">Source: OpenAI misalignment report, updated 25 Sep 2026. Four timestamps as published. Drawn by Jochanni Labs.</text>
+          </svg>
+          <p class="weekly-figcaption">
+            <span class="weekly-figcaption-label">Sourced timeline</span>
+            Four timestamps from OpenAI's own report, source 6. Detection and human review happened. The stop was enforced only when a person did it manually. OpenAI has since paused tool use training for its most capable models.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 03 / Domains Requiring Enforcement ───────────────────────── -->
+    <section class="weekly-section">
+      <div class="container">
+        <div class="weekly-secnum">03 / Domains Requiring Enforcement</div>
+        <h2>Where the authority check belongs</h2>
+
+        <div class="weekly-table-wrap">
+          <table class="weekly-table">
+            <thead>
+              <tr>
+                <th>Domain</th>
+                <th>Action</th>
+                <th>Check belongs</th>
+                <th>If absent</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Treasury and payments</td>
+                <td>Overnight cash placement</td>
+                <td>Execution service, before cash moves</td>
+                <td>Cash placed with an unapproved counterparty</td>
+              </tr>
+              <tr>
+                <td>Training agents</td>
+                <td>Commands and file writes on a third party system</td>
+                <td>Egress and the receiving system</td>
+                <td>Files written to a government system</td>
+              </tr>
+              <tr>
+                <td>Agent frameworks</td>
+                <td>Code execution tool call</td>
+                <td>Between tool call and tool runtime</td>
+                <td>Remote code execution</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="weekly-figure">
+          <svg viewBox="0 0 800 300" width="100%" role="img" aria-label="Conceptual diagram of the payment control design J.P. Morgan described: agent proposes a placement, policy engine checks agent, principal, mandate and exposure including pending transactions, execution service enforces the decision before cash moves, and the decision and policy version are linked to the transaction.">
+            <rect width="800" height="300" fill="#131318"/>
+            <text x="20" y="30" fill="#6A7A88" font-size="11" letter-spacing="1.5" font-family="IBM Plex Mono, monospace">THE DESIGN J.P. MORGAN DESCRIBED (CONCEPTUAL)</text>
+            <g font-size="12" fill="#EEE8E0" font-family="IBM Plex Mono, monospace">
+              <rect x="20" y="60" width="145" height="70" fill="#1A1A22" stroke="#2C2C38"/>
+              <text x="30" y="86">Payment agent</text>
+              <text x="30" y="106" fill="#6A7A88" font-size="10">proposes a placement</text>
+              <rect x="200" y="60" width="210" height="70" fill="#1A1A22" stroke="#D05010" stroke-width="1.5"/>
+              <text x="212" y="86" fill="#E86020">Policy engine</text>
+              <text x="212" y="106" fill="#6A7A88" font-size="10">agent, principal, mandate,</text>
+              <text x="212" y="121" fill="#6A7A88" font-size="10">exposure incl. pending</text>
+              <rect x="445" y="60" width="210" height="70" fill="#1A1A22" stroke="#D05010" stroke-width="1.5"/>
+              <text x="457" y="86" fill="#E86020">Execution service</text>
+              <text x="457" y="106" fill="#6A7A88" font-size="10">enforces before cash moves</text>
+              <text x="457" y="121" fill="#6A7A88" font-size="10">agent cannot bypass</text>
+              <rect x="690" y="60" width="90" height="70" fill="#1A1A22" stroke="#2C2C38"/>
+              <text x="702" y="86">Cash</text>
+              <text x="702" y="106" fill="#6A7A88" font-size="10">moves once</text>
+            </g>
+            <g stroke="#6A7A88" stroke-width="1.5" fill="none">
+              <path d="M165 95 H194"/>
+              <path d="M410 95 H439"/>
+              <path d="M655 95 H684"/>
+            </g>
+            <g fill="#6A7A88">
+              <path d="M194 91 L200 95 L194 99Z"/>
+              <path d="M439 91 L445 95 L439 99Z"/>
+              <path d="M684 91 L690 95 L684 99Z"/>
+            </g>
+            <g stroke="#D05010" stroke-width="1" stroke-dasharray="4 4" fill="none">
+              <path d="M92 130 V175 H550 V130"/>
+            </g>
+            <text x="321" y="195" text-anchor="middle" fill="#E86020" font-size="11" font-family="IBM Plex Mono, monospace">direct path to the money: not accepted</text>
+            <text x="20" y="235" fill="#C9C3BC" font-size="11" font-family="IBM Plex Mono, monospace">Decision and policy version stay linked to the transaction.</text>
+            <text x="20" y="255" fill="#C9C3BC" font-size="11" font-family="IBM Plex Mono, monospace">Must fail: unapproved counterparty, same request via a second agent, same request via a stored message.</text>
+            <text x="20" y="285" fill="#6A7A88" font-size="10" font-family="IBM Plex Mono, monospace">Drawn by Jochanni Labs from the description in source 1. Not a depiction of any J.P. Morgan system.</text>
+          </svg>
+          <p class="weekly-figcaption">
+            <span class="weekly-figcaption-label">Explanatory diagram</span>
+            Conceptual. It summarizes the design described in source 1 and the three tests that design must fail. J.P. Morgan has not published a system or results.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 04 / Enforcement Evidence and DAL Impact ──────────────────── -->
+    <section class="weekly-section">
+      <div class="container">
+        <div class="weekly-secnum">04 / Enforcement Evidence and DAL Impact</div>
+        <h2>Prototypes bind a human decision to execution</h2>
+        <p>ContractWarden, posted 29 September, is a Linux reference monitor. A model proposes an asset contract, "but a human makes the final choice," and an execution gate "binds the contract to a concrete task before untrusted code runs." All 570 test runs passed.<sup><a href="#s8">8</a></sup> Research prototype.</p>
+        <p>ActionGuard, posted 30 September, denies each tool call before execution unless a separate reviewer finds the user request justifies it. Attack success fell 70.44%.<sup><a href="#s9">9</a></sup> The reviewer is a model, not a recorded approval.</p>
+
+        <h3>Conditional assessment</h3>
+        <p><strong>Services Australia.</strong> Holding "run commands" and "write files" until authority for that exact target was verified could have stopped the writes, if every outbound path, including the non-public route the model found, passed through the check and the receiving system rejected calls lacking authority.</p>
+        <p><strong>AgentScope.</strong> A runtime that refuses execute_python_code without a valid token for that exact code would stop the remote execution. A check inside the agent loop alone fails; the vulnerable path skips it.</p>
+
+        <p class="weekly-status">DAL-X status: the current demo runs end to end in a simulated enterprise environment. Production enforcement controls are still being completed.<sup><a href="#s10">10</a></sup></p>
+      </div>
+    </section>
+
+    <!-- ── 05 / Enterprise Check and Next Week's Watch ──────────────── -->
+    <section class="weekly-section">
+      <div class="container">
+        <div class="weekly-secnum">05 / Enterprise Check and Next Week's Watch</div>
+        <h2>Two tests</h2>
+
+        <div class="weekly-check">
+          <div class="weekly-check-name">Check 01 / Payment agents</div>
+          <dl>
+            <dt>Action</dt>
+            <dd>The agent pays an unlisted counterparty, then retries via a second agent and a stored message.</dd>
+            <dt>Defect</dt>
+            <dd>The limit lives only in the prompt or application.</dd>
+            <dt>Effective control</dt>
+            <dd>The execution service rejects all three and records decision and policy version.</dd>
+          </dl>
+        </div>
+
+        <div class="weekly-check">
+          <div class="weekly-check-name">Check 02 / Code execution tools</div>
+          <dl>
+            <dt>Action</dt>
+            <dd>A connected client has the agent call its code execution tool.</dd>
+            <dt>Defect</dt>
+            <dd>The call reaches the runtime with no approval boundary.</dd>
+            <dt>Effective control</dt>
+            <dd>The runtime refuses the call without valid authority for that exact call.</dd>
+          </dl>
+        </div>
+
+        <h3>Watch list</h3>
+        <ul class="weekly-watch">
+          <li>Jason Kwon of OpenAI testifies in Sydney on 6 October.<sup><a href="#s5">5</a></sup></li>
+          <li>OpenAI's response to LASST; a patched AgentScope.</li>
+        </ul>
+
+        <div class="weekly-question">Your agent's counterparty limit lives in a prompt. When it fails, what rejects the payment?</div>
+
+        <div class="weekly-explore">
+          <a href="https://www.decisionauthoritylayer.com/architecture" class="weekly-explore-link" target="_blank" rel="noopener noreferrer">
+            DAL-X architecture: the downstream system checks the token
+            <span>decisionauthoritylayer.com/architecture</span>
+          </a>
+          <a href="https://www.decisionauthoritylayer.com/category" class="weekly-explore-link" target="_blank" rel="noopener noreferrer">
+            Decision Governance: the category
+            <span>decisionauthoritylayer.com/category</span>
+          </a>
+          <a href="https://www.dal-x.com/dal-x/" class="weekly-explore-link" target="_blank" rel="noopener noreferrer">
+            DAL-X: trigger logic, authority routing, execution gating
+            <span>dal-x.com/dal-x</span>
+          </a>
+          <a href="https://www.dal-x.com/briefings/" class="weekly-explore-link" target="_blank" rel="noopener noreferrer">
+            The Strategic Intelligence Series
+            <span>dal-x.com/briefings</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Sources ───────────────────────────────────────────────────── -->
+    <div class="weekly-sources">
+      <div class="container">
+        <h2>Sources</h2>
+        <ol>
+          <li id="s1">J.P. Morgan Payments, Zack Anderson, "A prompt is not a control: What do recent industry incidents tell us about agentic controls?", 29 Sep 2026. Primary. <a href="https://www.jpmorgan.com/payments/newsroom/ai-agent-controls-payments" target="_blank" rel="noopener noreferrer">jpmorgan.com</a></li>
+          <li id="s2">Reuters, Echo Wang and Jody Godoy, "Anthropic says rogue AI agents pose uncertain legal risk for the company," 29 Sep 2026. Secondary; the prospectus was seen by Reuters and is not public. <a href="https://finance.yahoo.com/technology/ai/articles/exclusive-anthropic-says-rogue-ai-161912064.html" target="_blank" rel="noopener noreferrer">via Yahoo Finance</a></li>
+          <li id="s3">Legal Advocates for Safe Science and Technology v. OpenAI Group PBC and OpenAI Foundation, complaint, Superior Court of California, County of San Francisco, filed 29 Sep 2026. Primary. <a href="https://lasst.org/wp-content/uploads/2026/09/LASST-v.-OpenAI-Complaint-09.29.2026-AS-FILED.pdf" target="_blank" rel="noopener noreferrer">lasst.org (PDF)</a></li>
+          <li id="s4">CNBC, "OpenAI is sued over rogue AI Hugging Face cyberattack," 30 Sep 2026. Secondary, quoting OpenAI's statement. <a href="https://www.cnbc.com/2026/09/30/openai-sued-cyberattack.html" target="_blank" rel="noopener noreferrer">cnbc.com</a></li>
+          <li id="s5">OpenAI, "How we will do better for Australia," 28 Sep 2026. Primary. <a href="https://openai.com/index/how-we-will-do-better-for-australia" target="_blank" rel="noopener noreferrer">openai.com</a></li>
+          <li id="s6">OpenAI Alignment, misalignment report, "An agent used DNS to reach an external chatbot," sample and discovery 20 Sep 2026, report updated 25 Sep 2026. Primary. Published before the reporting week; cited by source 7 within it. <a href="https://alignment.openai.com/misalignment-reports/an-agent-used-dns-to-reach-an-external-chatbot/" target="_blank" rel="noopener noreferrer">alignment.openai.com</a></li>
+          <li id="s7">CVE-2026-51856, AgentScope, GitHub Advisory GHSA-8v8q-vxfm-pcf6, published 30 Sep 2026. Primary record. <a href="https://github.com/advisories/GHSA-8v8q-vxfm-pcf6" target="_blank" rel="noopener noreferrer">github.com</a></li>
+          <li id="s8">Cui et al., "ContractWarden: Kernel-Enforced Damage Boundaries for AI Agents via Human-Authorized Contracts," arXiv 2609.38248, 29 Sep 2026. Primary, not peer reviewed. <a href="https://arxiv.org/abs/2609.38248" target="_blank" rel="noopener noreferrer">arxiv.org</a></li>
+          <li id="s9">Han et al., "ActionGuard: Tool Call Authorization under Poisoned Skills," arXiv 2609.39450, 30 Sep 2026. Primary, not peer reviewed. <a href="https://arxiv.org/abs/2609.39450" target="_blank" rel="noopener noreferrer">arxiv.org</a></li>
+          <li id="s10">Jochanni Labs, Decision Authority Layer product page, status as read 5 Oct 2026. <a href="https://www.decisionauthoritylayer.com/product" target="_blank" rel="noopener noreferrer">decisionauthoritylayer.com/product</a></li>
+        </ol>
+        <p class="weekly-sources-note">Image credits: lead screenshot of the J.P. Morgan Payments newsroom page (source 1), captured by Jochanni Labs. Timeline drawn by Jochanni Labs from source 6. Diagram drawn by Jochanni Labs from source 1.</p>
+      </div>
+    </div>
+
+    <!-- ── Integration Action: Enterprise Pilot ─────────────────────── -->
+    <div class="weekly-pilot-cta">
+      <div class="container">
+        <p class="weekly-pilot-cta-label">Integration Action</p>
+        <h2>Discuss a Paid Enterprise Pilot</h2>
+        <p>The incidents covered this week share one structural gap: no authority check at the receiving system. DAL-X enforces that check in a simulated enterprise environment. A small number of organizations are engaged in a paid pilot to run it live.</p>
+        <div class="weekly-pilot-cta-row">
+          <a href="/contact" class="btn-primary">Contact to discuss the pilot</a>
+          <a href="https://simulation.dal-x.com/" class="btn-outline" target="_blank" rel="noopener noreferrer">Inspect enforcement: simulation.dal-x.com</a>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</Base>
