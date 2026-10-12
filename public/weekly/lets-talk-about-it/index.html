@@ -71,6 +71,19 @@
 .lt-sphere { fill: #10141a; stroke: none; }
 .lt-land { fill: #2b3542; stroke: #3d4858; stroke-width: .6; }
 .lt-pin .hit { fill: transparent; }
+.lt-pin text.num { font-family: var(--lt-sans); font-size: 13px; font-weight: 700; fill: #0d1015; stroke: none; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+.lt-leader line { stroke: #8a95a3; stroke-width: 1.2; }
+.lt-leader circle { stroke: #10141a; stroke-width: 1; }
+.lt-leader.is-dim { opacity: .22; }
+.lt-key { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 17rem), 1fr)); gap: 6px var(--lt-s4); }
+.lt-key-item { display: flex; align-items: flex-start; gap: var(--lt-s2); padding: 6px 8px; border-radius: var(--lt-r-sm); cursor: pointer; font-size: var(--lt-fs-xs); line-height: 1.4; color: var(--lt-mut); min-width: 0; }
+.lt-key-item:hover, .lt-key-item:focus-visible { background: var(--lt-panel2); outline: none; }
+.lt-key-item.is-on { background: var(--lt-panel2); box-shadow: inset 0 0 0 1px var(--lt-fg); }
+.lt-key-item.is-dim { opacity: .3; }
+.lt-key-num { flex: none; min-width: 22px; height: 22px; padding: 0 5px; border-radius: 11px; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 11px; color: #0d1015; font-variant-numeric: tabular-nums; }
+.lt-key-txt { display: grid; min-width: 0; }
+.lt-key-txt b { color: var(--lt-fg); font-weight: 500; }
+.lt-key-txt span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .lt-map-hint { display: none; font-size: var(--lt-fs-xs); color: var(--lt-dim); margin-top: calc(var(--lt-s3) * -1); }
 @media (max-width: 760px) {
   .lt-map svg { min-width: 760px; }
@@ -234,7 +247,8 @@ html, body { margin: 0; background: #0d1015; }
       <div class="lt-map" data-source="incidents world">
         <div class="lt-mapbox dash-skeleton" style="min-height:240px"></div>
       </div>
-      <p class="lt-map-hint">Swipe the map sideways to see every pin. Tap a pin to open its finding.</p>
+      <p class="lt-map-hint">Swipe the map sideways to see every pin. Tap a pin or a key entry to open its finding.</p>
+      <ol class="lt-key" id="pinkey" aria-label="Map key: pinned incidents by number"></ol>
       <div class="lt-legend" id="legend" data-source="defect_patterns"></div>
     </section>
 
@@ -439,29 +453,62 @@ html, body { margin: 0; background: #0d1015; }
     const pins = d3.select(svg).select('.lt-pins');
     pins.selectAll('*').remove();
     const placed = fs.filter((x) => x.f.location && x.f.location.status === 'established' && x.f.location.lat != null);
-    const taken = [];
-    const fits = (b) => !taken.some((t) => b.x1 < t.x2 && b.x2 > t.x1 && b.y1 < t.y2 && b.y2 > t.y1);
-    placed.forEach((x) => { const [qx, qy] = ne(x.f.location.lon, x.f.location.lat); taken.push({ x1: qx - 11, x2: qx + 11, y1: qy - 11, y2: qy + 11 }); });
-    const groups = d3.group(placed, (x) => x.f.location.lat + ',' + x.f.location.lon);
-    placed.forEach((x) => {
-      const grp = groups.get(x.f.location.lat + ',' + x.f.location.lon); const gi = grp.indexOf(x); const gn = grp.length;
-      let [px, py] = ne(x.f.location.lon, x.f.location.lat);
-      if (gn > 1) { const ang = (gi / gn) * 2 * Math.PI - Math.PI / 2; px += Math.cos(ang) * 16; py += Math.sin(ang) * 16; }
-      const c = colorOf(x.f.defect_category);
-      const g = pins.append('g').attr('class', 'lt-pin' + (st.sel === x.id ? ' is-on' : '') + (st.pat && st.pat !== x.f.defect_category ? ' is-dim' : ''))
-        .attr('transform', `translate(${px},${py})`).attr('tabindex', 0).attr('role', 'button')
+    const num = (x) => String(parseInt(String(x.id).replace(/\D/g, ''), 10) || '');
+
+    // Each pin carries its incident number. Pins that would overlap are pushed apart,
+    // with a leader line back to the true location.
+    const R = 14, GAP = R * 2 + 3;
+    const nodes = placed.map((x, i) => {
+      const [ax, ay] = ne(x.f.location.lon, x.f.location.lat);
+      return { x, ax, ay, px: ax + Math.cos(i * 2.4) * 0.5, py: ay + Math.sin(i * 2.4) * 0.5 };
+    });
+    for (let it = 0; it < 400; it++) {
+      let moved = false;
+      for (let i = 0; i < nodes.length; i++) for (let j = i + 1; j < nodes.length; j++) {
+        const a = nodes[i], b = nodes[j];
+        const dx = b.px - a.px, dy = b.py - a.py, d = Math.hypot(dx, dy) || 0.01;
+        if (d < GAP) { const k = (GAP - d) / 2 / d; a.px -= dx * k; a.py -= dy * k; b.px += dx * k; b.py += dy * k; moved = true; }
+      }
+      if (it < 300) nodes.forEach((n) => { n.px += (n.ax - n.px) * 0.02; n.py += (n.ay - n.py) * 0.02; });
+      nodes.forEach((n) => { n.px = Math.max(R + 2, Math.min(W - R - 2, n.px)); n.py = Math.max(R + 2, Math.min(H - R - 2, n.py)); });
+      if (!moved && it >= 300) break;
+    }
+
+    const dimmed = (x) => st.pat && st.pat !== x.f.defect_category;
+    nodes.forEach((n) => {
+      if (Math.hypot(n.px - n.ax, n.py - n.ay) < 4) return;
+      const c = colorOf(n.x.f.defect_category);
+      const lg = pins.append('g').attr('class', 'lt-leader' + (dimmed(n.x) ? ' is-dim' : ''));
+      lg.append('line').attr('x1', n.ax).attr('y1', n.ay).attr('x2', n.px).attr('y2', n.py);
+      lg.append('circle').attr('cx', n.ax).attr('cy', n.ay).attr('r', 3).style('fill', c);
+    });
+    nodes.forEach((n) => {
+      const x = n.x, c = colorOf(x.f.defect_category);
+      const g = pins.append('g').attr('class', 'lt-pin' + (st.sel === x.id ? ' is-on' : '') + (dimmed(x) ? ' is-dim' : ''))
+        .attr('transform', `translate(${n.px},${n.py})`).attr('tabindex', 0).attr('role', 'button')
         .attr('aria-label', `${x.id}: ${x.f.title}. ${x.f.location.label}`);
-      g.append('circle').attr('class', 'hit').attr('r', 26);
-      g.append('circle').attr('class', 'halo').attr('r', 24).style('fill', c);
-      g.append('circle').attr('class', 'ring').attr('r', 10).style('fill', c).attr('stroke', '#10141a').attr('stroke-width', 2);
-      const label = place(x.f) + (gn > 1 ? ' (' + gn + ')' : '');
-      const right = px < W - 220;
-      // Skip a place name that would overlap one already drawn; the pin, its tooltip and its card still carry it
-      const lw = label.length * 8.4, lx = right ? px + 17 : px - 17 - lw;
-      const lb = { x1: lx - 2, x2: lx + lw + 2, y1: py - 11, y2: py + 9 };
-      if (gi === 0 && fits(lb)) { taken.push(lb); g.append('text').attr('x', right ? 17 : -17).attr('y', 5).attr('text-anchor', right ? 'start' : 'end').text(label); }
+      g.append('title').text(`${x.id}: ${place(x.f)}. ${x.f.title}`);
+      g.append('circle').attr('class', 'hit').attr('r', R + 8);
+      g.append('circle').attr('class', 'halo').attr('r', R + 8).style('fill', c);
+      g.append('circle').attr('class', 'ring').attr('r', R).style('fill', c).attr('stroke', '#10141a').attr('stroke-width', 2);
+      g.append('text').attr('class', 'num').attr('y', 0.5).text(num(x));
       g.on('click', () => select(x.id)).on('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); select(x.id); } });
     });
+
+    // Key: every pinned incident by number, place and title
+    const key = root.querySelector('#pinkey');
+    if (key) {
+      key.replaceChildren();
+      placed.slice().sort((p, q) => Number(num(p)) - Number(num(q))).forEach((x) => {
+        const li = el('li', 'lt-key-item' + (st.sel === x.id ? ' is-on' : '') + (dimmed(x) ? ' is-dim' : ''));
+        const chip = el('span', 'lt-key-num', num(x)); chip.style.background = colorOf(x.f.defect_category);
+        const txt = el('span', 'lt-key-txt'); txt.append(el('b', null, place(x.f)), el('span', null, x.f.title));
+        li.append(chip, txt);
+        li.setAttribute('aria-label', `${x.id}: ${place(x.f)}. ${x.f.title}`);
+        pressable(li, () => select(x.id));
+        key.append(li);
+      });
+    }
     // On phones the map scrolls sideways; open it at the westernmost pin
     if (!box.dataset.scrolled && box.scrollWidth > box.clientWidth && placed.length) {
       const xs = placed.map((x) => ne(x.f.location.lon, x.f.location.lat)[0]);
