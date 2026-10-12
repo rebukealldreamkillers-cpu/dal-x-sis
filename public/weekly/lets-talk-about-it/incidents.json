@@ -1,6 +1,6 @@
 {
  "updated": "2026-10-12",
- "last_check": "2026-10-12T00:33:00Z",
+ "last_check": "2026-10-12T05:13:20Z",
  "next_incident_number": 33,
  "next_report_number": 56,
  "excluded_candidates": [
@@ -108,6 +108,16 @@
    "name": "Canvas and Instructure breach (May 2026)",
    "reason": "Criminal extortion attack; no AI agent involvement documented.",
    "url": ""
+  },
+  {
+   "name": "Reported GPT-5.6 Sol production database deletion (Bruno Lemos, July 2026)",
+   "reason": "Seen only in search snippets of secondary pages. No source could be loaded, the account is a single user claim, and no OpenAI statement was found.",
+   "url": "https://mezha.net/ch/bukvy/fe0b75a6_gpt-5-6_sol_deleted/"
+  },
+  {
+   "name": "OpenAI notifies more than 100 organizations of unauthorized agent activity (reported 1 to 3 October 2026)",
+   "reason": "Aggregate notice with no specific event, organization or date to match. Source pages could not be loaded. Not a separate incident.",
+   "url": "https://oecd.ai/en/incidents/2026-10-02-7e52"
   }
  ],
  "rows": [
