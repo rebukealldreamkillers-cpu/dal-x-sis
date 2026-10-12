@@ -66,10 +66,16 @@
 .lt-card { background: var(--lt-panel); border: 1px solid var(--lt-line); border-radius: var(--lt-r); padding: var(--lt-pad); display: grid; gap: var(--lt-s5); min-width: 0; }
 
 /* Map */
-.lt-map { position: relative; border-radius: var(--lt-r-sm); overflow: hidden; background: #10141a; }
+.lt-map { position: relative; border-radius: var(--lt-r-sm); overflow-x: auto; overflow-y: hidden; -webkit-overflow-scrolling: touch; overscroll-behavior-x: contain; background: #10141a; }
 .lt-map svg { display: block; width: 100%; height: auto; }
 .lt-sphere { fill: #10141a; stroke: none; }
-.lt-land { fill: #222a34; stroke: #2d3642; stroke-width: .5; }
+.lt-land { fill: #2b3542; stroke: #3d4858; stroke-width: .6; }
+.lt-pin .hit { fill: transparent; }
+.lt-map-hint { display: none; font-size: var(--lt-fs-xs); color: var(--lt-dim); margin-top: calc(var(--lt-s3) * -1); }
+@media (max-width: 760px) {
+  .lt-map svg { min-width: 760px; }
+  .lt-map-hint { display: block; }
+}
 .lt-pin { cursor: pointer; outline: none; }
 .lt-pin .halo { opacity: .2; }
 .lt-pin.is-on .ring { stroke: var(--lt-fg); stroke-width: 2.5; }
@@ -228,6 +234,7 @@ html, body { margin: 0; background: #0d1015; }
       <div class="lt-map" data-source="incidents world">
         <div class="lt-mapbox dash-skeleton" style="min-height:240px"></div>
       </div>
+      <p class="lt-map-hint">Swipe the map sideways to see every pin. Tap a pin to open its finding.</p>
       <div class="lt-legend" id="legend" data-source="defect_patterns"></div>
     </section>
 
@@ -432,6 +439,9 @@ html, body { margin: 0; background: #0d1015; }
     const pins = d3.select(svg).select('.lt-pins');
     pins.selectAll('*').remove();
     const placed = fs.filter((x) => x.f.location && x.f.location.status === 'established' && x.f.location.lat != null);
+    const taken = [];
+    const fits = (b) => !taken.some((t) => b.x1 < t.x2 && b.x2 > t.x1 && b.y1 < t.y2 && b.y2 > t.y1);
+    placed.forEach((x) => { const [qx, qy] = ne(x.f.location.lon, x.f.location.lat); taken.push({ x1: qx - 11, x2: qx + 11, y1: qy - 11, y2: qy + 11 }); });
     const groups = d3.group(placed, (x) => x.f.location.lat + ',' + x.f.location.lon);
     placed.forEach((x) => {
       const grp = groups.get(x.f.location.lat + ',' + x.f.location.lon); const gi = grp.indexOf(x); const gn = grp.length;
@@ -441,13 +451,23 @@ html, body { margin: 0; background: #0d1015; }
       const g = pins.append('g').attr('class', 'lt-pin' + (st.sel === x.id ? ' is-on' : '') + (st.pat && st.pat !== x.f.defect_category ? ' is-dim' : ''))
         .attr('transform', `translate(${px},${py})`).attr('tabindex', 0).attr('role', 'button')
         .attr('aria-label', `${x.id}: ${x.f.title}. ${x.f.location.label}`);
+      g.append('circle').attr('class', 'hit').attr('r', 26);
       g.append('circle').attr('class', 'halo').attr('r', 24).style('fill', c);
       g.append('circle').attr('class', 'ring').attr('r', 10).style('fill', c).attr('stroke', '#10141a').attr('stroke-width', 2);
       const label = place(x.f) + (gn > 1 ? ' (' + gn + ')' : '');
       const right = px < W - 220;
-      if (gi === 0) g.append('text').attr('x', right ? 17 : -17).attr('y', 5).attr('text-anchor', right ? 'start' : 'end').text(label);
+      // Skip a place name that would overlap one already drawn; the pin, its tooltip and its card still carry it
+      const lw = label.length * 8.4, lx = right ? px + 17 : px - 17 - lw;
+      const lb = { x1: lx - 2, x2: lx + lw + 2, y1: py - 11, y2: py + 9 };
+      if (gi === 0 && fits(lb)) { taken.push(lb); g.append('text').attr('x', right ? 17 : -17).attr('y', 5).attr('text-anchor', right ? 'start' : 'end').text(label); }
       g.on('click', () => select(x.id)).on('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); select(x.id); } });
     });
+    // On phones the map scrolls sideways; open it at the westernmost pin
+    if (!box.dataset.scrolled && box.scrollWidth > box.clientWidth && placed.length) {
+      const xs = placed.map((x) => ne(x.f.location.lon, x.f.location.lat)[0]);
+      box.scrollLeft = (Math.min(...xs) / W) * box.scrollWidth - 30;
+      box.dataset.scrolled = '1';
+    }
   }
 
   function drawTiles(fs, colorOf) {
