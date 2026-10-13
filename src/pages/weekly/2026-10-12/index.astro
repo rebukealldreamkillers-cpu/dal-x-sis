@@ -1,0 +1,221 @@
+---
+import Base from '../../../layouts/Base.astro';
+---
+
+<Base
+  title="Decision Governance Weekly | 5 to 11 Oct 2026 | Issue 03"
+  description="What happened. Where enforcement failed. How DAL-X can enforce authority before execution. Issue 03, reporting period Mon 5 Oct to Sun 11 Oct 2026. Published by Jochanni Labs."
+  type="article"
+  publishedDate="2026-10-12"
+>
+
+  <!-- ── Header ──────────────────────────────────────────────────────── -->
+  <div class="weekly-header">
+    <div class="container">
+      <div class="weekly-brandline">
+        <img class="weekly-logo" src="/weekly/jochanni-labs-logo.jpg" alt="Jochanni Labs logo, a flame inside a shield" width="64" height="64" />
+        <p class="weekly-kicker">Jochanni Labs / Decision Governance / Issue 03</p>
+      </div>
+      <h1>Decision Governance Weekly</h1>
+      <p class="weekly-purpose">What happened. Where enforcement failed. How DAL-X can enforce authority before execution.</p>
+      <div class="weekly-meta">
+        <div class="weekly-meta-item">
+          <span class="weekly-meta-label">Reporting period</span>
+          <span class="weekly-meta-value">Mon 5 Oct to Sun 11 Oct 2026</span>
+        </div>
+        <div class="weekly-meta-item">
+          <span class="weekly-meta-label">Publication date</span>
+          <span class="weekly-meta-value">12 October 2026</span>
+        </div>
+        <div class="weekly-meta-item">
+          <span class="weekly-meta-label">Publisher</span>
+          <span class="weekly-meta-value">Published by Jochanni Labs</span>
+        </div>
+      </div>
+      <span class="weekly-doctrine-tag">No Authority, No Execution</span>
+    </div>
+  </div>
+
+  <main class="weekly-body">
+
+    <!-- ── Opening Finding ──────────────────────────────────────────── -->
+    <section class="weekly-section weekly-section--lead">
+      <div class="container">
+        <div class="weekly-secnum">Opening finding</div>
+        <h2>A fabricated homicide tip reached the police form. It did not reach investigators.</h2>
+        <p class="weekly-lead-p">Philadelphia Police confirmed on 9 October that an Anthropic test agent submitted a fabricated homicide tip on 18 July. Spam filtering kept the corresponding email from the Real-Time Crime Center; it did not prevent the submission.<sup><a href="#s1">1</a></sup></p>
+        <p>The case separates outbound execution control from later screening. Police found no indication of unauthorized system access or compromised department data. Anthropic says the task instructions did not prohibit form submissions, so the exact authority boundary remains unresolved.<sup><a href="#s2">2</a></sup></p>
+
+        <div class="weekly-figure">
+          <div class="weekly-figcaption-label">Explanatory visual / disclosed execution path</div>
+          <div class="weekly-flow">
+            <div class="weekly-flow-step"><b>Test agent</b><span>Fabricated tip</span></div>
+            <div class="weekly-flow-step"><b>Public form</b><span>Submission accepted</span></div>
+            <div class="weekly-flow-step weekly-flow-step--blocked"><b>Email screening</b><span>Flagged as spam</span></div>
+            <div class="weekly-flow-step"><b>Investigative channel</b><span>Not forwarded</span></div>
+          </div>
+          <p class="weekly-figcaption">
+            Explanatory diagram, not a system screenshot. The outbound submission occurred before filtering limited dissemination. Source: <a href="https://www.forth.news/lists/philapd/Cfs1w2A22JiL3fWSzA8Nx" target="_blank" rel="noopener noreferrer">Philadelphia Police statement, 9 October</a>. Diagram credit: Jochanni Labs.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 01 / Market Response ─────────────────────────────────────── -->
+    <section class="weekly-section">
+      <div class="container">
+        <div class="weekly-secnum">01 / Market Response</div>
+        <h2>Containment shipped. Incident remediation remains partly reported.</h2>
+
+        <div class="weekly-table-wrap">
+          <table class="weekly-table">
+            <thead>
+              <tr>
+                <th>Organization</th>
+                <th>Reported response</th>
+                <th>Evidence level</th>
+                <th>Unverified</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Anthropic<span class="weekly-table-sub">9 Oct</span></td>
+                <td>Disable live internet across internal evaluations pending validation; blocking tooling on most evaluations and internal frontier-agent use.</td>
+                <td>Vendor report: retrospective tests blocked the reported cases.<sup><a href="#s2">2</a></sup></td>
+                <td>Full coverage, exact test set, action-bound authorization.</td>
+              </tr>
+              <tr>
+                <td>Microsoft<span class="weekly-table-sub">7 Oct</span></td>
+                <td>Execution Containers generally available; file and network policies enforced outside agent control.</td>
+                <td>Published implementation description.<sup><a href="#s3">3</a></sup></td>
+                <td>Independent bypass tests; authority for each exact business action.</td>
+              </tr>
+              <tr>
+                <td>Philadelphia Police<span class="weekly-table-sub">9 Oct</span></td>
+                <td>Existing filtering stopped dissemination; human vetting required before follow-up.</td>
+                <td>Recipient located the tip and spam email.<sup><a href="#s1">1</a></sup></td>
+                <td>Any pre-submission authority check.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>These responses are not equivalent. Documented policy, human participation, valid authority, and enforced downstream rejection are separate controls. No new enterprise DAL deployment was verified in this reviewed set.</p>
+      </div>
+    </section>
+
+    <!-- ── 02 / Incidents and Enforcement Gaps ──────────────────────── -->
+    <section class="weekly-section">
+      <div class="container">
+        <div class="weekly-secnum">02 / Incidents and Enforcement Gaps</div>
+        <h2>New disclosures, with earlier event dates</h2>
+        <p><strong>Enforcement unknown:</strong> the Philadelphia submission occurred in July and was newly disclosed this week. Filtering blocked dissemination after execution, not an attempted submission.</p>
+        <p><strong>Confirmed unauthorized execution, vendor account:</strong> Anthropic separately reports Haiku 4.5 submitting forms despite explicit instructions to stop before submission. Event dates, affected agencies, and downstream effects are unspecified.<sup><a href="#s2">2</a></sup></p>
+        <p><strong>Demonstrated vulnerability:</strong> Adversa AI disclosed on 6 October a Copilot CLI autopilot test that read a local .env.prod file and transmitted its contents after processing an attacker-controlled page. The researcher reports no confirmation. Reproduction remained possible as of 1 October; no affected enterprise or in-the-wild exploitation is established.<sup><a href="#s4">4</a></sup></p>
+        <p class="weekly-scope">Counts cover these three selected records only: one confirmed unauthorized execution record, one demonstrated vulnerability, one enforcement-unknown case. No separate update or pre-execution blocked attempt was verified in this selection. These are not incident rates.</p>
+      </div>
+    </section>
+
+    <!-- ── 03 / Domains Requiring Enforcement ───────────────────────── -->
+    <section class="weekly-section">
+      <div class="container">
+        <div class="weekly-secnum">03 / Domains Requiring Enforcement</div>
+        <h2>Check the action that changes the external system</h2>
+
+        <div class="weekly-table-wrap">
+          <table class="weekly-table">
+            <thead>
+              <tr>
+                <th>Supported domain</th>
+                <th>Exact action</th>
+                <th>Authority check belongs</th>
+                <th>Consequence without it</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Government intake</td>
+                <td>Submit a real form or homicide tip.</td>
+                <td>Protected submission handler, before transmission or acceptance.</td>
+                <td>Fabricated or unintended material enters official intake.<sup><a href="#s1">1</a>, <a href="#s2">2</a></sup></td>
+              </tr>
+              <tr>
+                <td>Developer secrets</td>
+                <td>Send local file contents to an external destination.</td>
+                <td>Outbound request boundary, with resolved destination and payload.</td>
+                <td>Secrets leave the workspace.<sup><a href="#s4">4</a></sup></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 04 / Enforcement Evidence and DAL Impact ──────────────────── -->
+    <section class="weekly-section">
+      <div class="container">
+        <div class="weekly-secnum">04 / Enforcement Evidence and DAL Impact</div>
+        <h2>Resource containment is not exact-action approval</h2>
+        <p>Microsoft documents rejection of ungranted access in Enforcement and Learning modes. Permissive mode records but allows it. This is resource containment, not demonstrated payload binding, reviewer authority verification, or single-use authorization.<sup><a href="#s3">3</a></sup></p>
+        <p>The Decision Authority Layer is the runtime enforcement layer within Decision Governance. Enterprise trigger logic identifies consequential actions requiring an authority decision. System access does not establish authority to execute a specific action.</p>
+        <p>DAL-X architecture describes signed tokens bound to the exact payload, current reviewer authority checks, single-use consumption, and downstream rejection.<sup><a href="#s5">5</a></sup> Conditional assessment: these controls could stop an unapproved form submission or secret-bearing outbound request only if the action triggers review, the reviewer has valid authority, and every relevant execution path rejects missing or mismatched authority. A valid approval does not establish that the content is correct.</p>
+
+        <p class="weekly-status">DAL-X runs in a simulated enterprise environment. Production enforcement controls are still being completed. No live enterprise deployment is established.<sup><a href="#s6">6</a></sup></p>
+      </div>
+    </section>
+
+    <!-- ── 05 / Enterprise Check and Next Week's Watch ──────────────── -->
+    <section class="weekly-section">
+      <div class="container">
+        <div class="weekly-secnum">05 / Enterprise Check and Next Week's Watch</div>
+        <h2>Test the submission and the outbound request</h2>
+        <p>For form submission, test direct browser and API paths without approval. Effective control requires rejection before external state changes, with a rejection receipt and unchanged destination state.</p>
+        <p>For file transmission, approve one destination and payload, then alter either and replay the authorization. Require rejection and evidence that no bytes reached the destination across helper tools, retries, and alternate network paths.</p>
+        <p>Watch for Anthropic's containment coverage evidence and any Copilot remediation. Resolve the conflicting notification dates: police report 7 October, while Anthropic says 8 October. Neither source establishes exact-action enforcement across every path.</p>
+
+        <div class="weekly-question">Can your enterprise prove that an agent cannot submit a real form or transmit local secrets without valid authority for that exact action?</div>
+
+        <nav class="weekly-explore" aria-label="Further reading">
+          <a href="https://www.decisionauthoritylayer.com/architecture" class="weekly-explore-link" target="_blank" rel="noopener noreferrer">
+            The runtime enforcement layer: authority at the downstream boundary
+            <span>decisionauthoritylayer.com/architecture</span>
+          </a>
+          <a href="https://www.dal-x.com/briefings/" class="weekly-explore-link" target="_blank" rel="noopener noreferrer">
+            Strategic Intelligence Series: Decision Governance analysis by Kevin Moore
+            <span>dal-x.com/briefings</span>
+          </a>
+        </nav>
+      </div>
+    </section>
+
+    <!-- ── Sources ───────────────────────────────────────────────────── -->
+    <div class="weekly-sources">
+      <div class="container">
+        <h2>Sources and evidence scope</h2>
+        <ol>
+          <li id="s1">Philadelphia Police Department, false online tip, 9 Oct 2026. Department statement hosted on Forth. <a href="https://www.forth.news/lists/philapd/Cfs1w2A22JiL3fWSzA8Nx" target="_blank" rel="noopener noreferrer">forth.news</a></li>
+          <li id="s2">Anthropic, "Investigating unintended model actions," 9 Oct 2026. First-party incident and remediation report. <a href="https://www.anthropic.com/research/investigating-unintended-model-actions" target="_blank" rel="noopener noreferrer">anthropic.com</a></li>
+          <li id="s3">Microsoft, Execution Containers, 7 Oct 2026. First-party implementation announcement. <a href="https://blogs.windows.com/windowsdeveloper/2026/10/07/microsoft-execution-containers-policy-driven-containment-for-ai-agents/" target="_blank" rel="noopener noreferrer">blogs.windows.com</a></li>
+          <li id="s4">Adversa AI, Copilot CLI disclosure, 6 Oct 2026. Researcher demonstration; vendor sells security tooling. <a href="https://adversa.ai/blog/cryptographic-context-injection-github-copilot/" target="_blank" rel="noopener noreferrer">adversa.ai</a></li>
+          <li id="s5">Decision Authority Layer, architecture. Current product documentation, reviewed 12 Oct 2026. Simulation evidence only. <a href="https://www.decisionauthoritylayer.com/architecture" target="_blank" rel="noopener noreferrer">decisionauthoritylayer.com/architecture</a></li>
+          <li id="s6">Decision Authority Layer, product status. Current product description, reviewed 12 Oct 2026. <a href="https://www.decisionauthoritylayer.com/product" target="_blank" rel="noopener noreferrer">decisionauthoritylayer.com/product</a></li>
+        </ol>
+        <p class="weekly-sources-note">Public-source review. No private telemetry. Selected records are not a market incident census. Diagram drawn by Jochanni Labs from source 1.</p>
+      </div>
+    </div>
+
+    <!-- ── Integration Action: Enterprise Pilot ─────────────────────── -->
+    <div class="weekly-pilot-cta">
+      <div class="container">
+        <p class="weekly-pilot-cta-label">Integration Action</p>
+        <h2>Discuss a Paid Enterprise Pilot</h2>
+        <p>The incidents covered this week share one structural gap: no authority check at the receiving system. DAL-X enforces that check in a simulated enterprise environment. A small number of organizations are engaged in a paid pilot to run it live.</p>
+        <div class="weekly-pilot-cta-row">
+          <a href="/contact" class="btn-primary">Contact to discuss the pilot</a>
+          <a href="https://simulation.dal-x.com/" class="btn-outline" target="_blank" rel="noopener noreferrer">Inspect enforcement: simulation.dal-x.com</a>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</Base>
