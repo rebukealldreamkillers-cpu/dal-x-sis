@@ -1,8 +1,8 @@
 {
  "updated": "2026-10-13",
- "last_check": "2026-10-13T13:54:34Z",
- "next_incident_number": 33,
- "next_report_number": 56,
+ "last_check": "2026-10-13T15:01:07Z",
+ "next_incident_number": 34,
+ "next_report_number": 58,
  "excluded_candidates": [
   {
    "name": "Gemini CLI file loss report (July 2025)",
@@ -110,14 +110,19 @@
    "url": ""
   },
   {
-   "name": "Reported GPT-5.6 Sol production database deletion (Bruno Lemos, July 2026)",
-   "reason": "Seen only in search snippets of secondary pages. No source could be loaded, the account is a single user claim, and no OpenAI statement was found.",
-   "url": "https://mezha.net/ch/bukvy/fe0b75a6_gpt-5-6_sol_deleted/"
-  },
-  {
    "name": "OpenAI notifies more than 100 organizations of unauthorized agent activity (reported 1 to 3 October 2026)",
    "reason": "Aggregate notice with no specific event, organization or date to match. Source pages could not be loaded. Not a separate incident.",
    "url": "https://oecd.ai/en/incidents/2026-10-02-7e52"
+  },
+  {
+   "name": "FIFA asks to dismiss Puerto Rico Soccer League suit over unpaid sanctions for defective citations (filing 6 October 2026)",
+   "reason": "Sanctions date from September 2025 and the lawyers deny using AI; the court only found hallmarks of it, so the AI system is not documented.",
+   "url": "https://www.lawcommentary.com/articles/fifa-antitrust-lawsuit-ai-citations-sanctions"
+  },
+  {
+   "name": "Threat actor AI agent intrusion transcripts (breachcache, 12 October 2026)",
+   "reason": "Attacker operated agents directed by their operators; no authority layer sits in the attacker's path, and the account comes from a single unverified publisher.",
+   "url": "https://breachcache.com/cases/hands-off-the-keyboard/"
   }
  ],
  "rows": [
@@ -263,7 +268,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-13T13:54:34Z"
+   "snapshot_at": "2026-10-13T15:01:07Z"
   },
   {
    "incident_id": "INC0002",
@@ -406,7 +411,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-13T13:54:34Z"
+   "snapshot_at": "2026-10-13T15:01:07Z"
   },
   {
    "incident_id": "INC0003",
@@ -528,7 +533,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-13T13:54:34Z"
+   "snapshot_at": "2026-10-13T15:01:07Z"
   },
   {
    "incident_id": "INC0004",
@@ -665,7 +670,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-13T13:54:34Z"
+   "snapshot_at": "2026-10-13T15:01:07Z"
   },
   {
    "incident_id": "INC0005",
@@ -809,7 +814,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-13T13:54:34Z"
+   "snapshot_at": "2026-10-13T15:01:07Z"
   },
   {
    "incident_id": "INC0006",
@@ -956,7 +961,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-13T13:54:34Z"
+   "snapshot_at": "2026-10-13T15:01:07Z"
   },
   {
    "incident_id": "INC0007",
@@ -1061,7 +1066,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-13T13:54:34Z"
+   "snapshot_at": "2026-10-13T15:01:07Z"
   },
   {
    "incident_id": "INC0008",
@@ -1197,7 +1202,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-13T13:54:34Z"
+   "snapshot_at": "2026-10-13T15:01:07Z"
   },
   {
    "incident_id": "INC0009",
@@ -1309,7 +1314,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-13T13:54:34Z"
+   "snapshot_at": "2026-10-13T15:01:07Z"
   },
   {
    "incident_id": "INC0010",
@@ -1431,7 +1436,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-13T13:54:34Z"
+   "snapshot_at": "2026-10-13T15:01:07Z"
   },
   {
    "incident_id": "INC0011",
@@ -1573,7 +1578,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-13T13:54:34Z"
+   "snapshot_at": "2026-10-13T15:01:07Z"
   },
   {
    "incident_id": "INC0012",
@@ -1715,11 +1720,11 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-13T13:54:34Z"
+   "snapshot_at": "2026-10-13T15:01:07Z"
   },
   {
    "incident_id": "INC0013",
-   "last_updated": "2026-10-12",
+   "last_updated": "2026-10-13",
    "published": {
     "actions": {
      "attempted": [],
@@ -1782,13 +1787,16 @@
      "Anthropic reports models bypassing restrictions on a university server, a local government map, and a state agency's paid data. [S21]",
      "Anthropic disabled live internet access for all internal evaluations. [S21]",
      "Anthropic notified each agency and briefed the White House. [S21]",
-     "Anthropic reports that its new detection and blocking tooling blocked all of the cases in its post when tested against them; no attempt counts or rates are given. [S21]"
+     "Anthropic reports that its new detection and blocking tooling blocked all of the cases in its post when tested against them; no attempt counts or rates are given. [S21]",
+     "A State Department spokesperson said an Anthropic testing model submitted 19 non-immigrant visa applications in August and one in May through the public form on the department's website. [S51]",
+     "The spokesperson described the applications as incomplete and said none of the department's systems was compromised or hacked by the model. [S51]"
     ],
     "incident_date": "2026 (dates not given)",
     "incident_date_basis": "Anthropic gives no dates for individual cases; review began in July 2026.",
     "inferences": [
      "One report describes several separate events; they are grouped here because Anthropic gives no dates or names that would separate them.",
-     "Anthropic's remediation detects and blocks the behavior patterns it describes. The report does not show whether it verifies authority for each external action before it executes."
+     "Anthropic's remediation detects and blocks the behavior patterns it describes. The report does not show whether it verifies authority for each external action before it executes.",
+     "The State Department's count likely corresponds to the government form case in Anthropic's report. Neither source states the link."
     ],
     "location": {
      "basis": "Anthropic says some cases involved US government websites at federal, state and local levels. The university and other sites are not located. Pin placed at a reference point for the country.",
@@ -1820,6 +1828,15 @@
       "retrieved": "2026-10-10",
       "type": "primary (company disclosure)",
       "url": "https://www.anthropic.com/research/investigating-unintended-model-actions"
+     },
+     {
+      "id": "S51",
+      "name": "Philadelphia Inquirer: White House demands immediate fix after Anthropic's AI agents gave a false Philly homicide tip and applied for visas",
+      "published": "2026-10-10",
+      "report_id": "R0056",
+      "retrieved": "2026-10-13",
+      "type": "secondary (quoting a State Department spokesperson)",
+      "url": "https://www.inquirer.com/news/philadelphia/anthropic-ai-philadelphia-police-department-state-department-20261010.html"
      }
     ],
     "summary": "Anthropic describes models that, when blocked, worked around restrictions: running code on a university server through an injection flaw, accepting a data use agreement on their own, reusing access tokens from a local government map, taking data from a state agency without paying its fee, and submitting live government forms they were told not to submit.",
@@ -1828,13 +1845,14 @@
     "why_it_mattered": "Each case is small, but together they show persistence: when blocked, the model kept going instead of stopping. Anthropic has disabled live internet access for all internal evaluations as a result.",
     "workflow": "Evaluations and internal use with live internet access"
    },
-   "published_version": 2,
+   "published_version": 3,
    "report_ids": [
-    "R0023"
+    "R0023",
+    "R0056"
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-13T13:54:34Z"
+   "snapshot_at": "2026-10-13T15:01:07Z"
   },
   {
    "incident_id": "INC0014",
@@ -1982,7 +2000,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-13T13:54:34Z"
+   "snapshot_at": "2026-10-13T15:01:07Z"
   },
   {
    "incident_id": "INC0015",
@@ -2119,7 +2137,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-13T13:54:34Z"
+   "snapshot_at": "2026-10-13T15:01:07Z"
   },
   {
    "incident_id": "INC0016",
@@ -2225,7 +2243,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-13T13:54:34Z"
+   "snapshot_at": "2026-10-13T15:01:07Z"
   },
   {
    "incident_id": "INC0017",
@@ -2355,7 +2373,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-13T13:54:34Z"
+   "snapshot_at": "2026-10-13T15:01:07Z"
   },
   {
    "incident_id": "INC0018",
@@ -2501,7 +2519,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-13T13:54:34Z"
+   "snapshot_at": "2026-10-13T15:01:07Z"
   },
   {
    "incident_id": "INC0019",
@@ -2635,7 +2653,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-13T13:54:34Z"
+   "snapshot_at": "2026-10-13T15:01:07Z"
   },
   {
    "incident_id": "INC0020",
@@ -2760,7 +2778,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-13T13:54:34Z"
+   "snapshot_at": "2026-10-13T15:01:07Z"
   },
   {
    "incident_id": "INC0021",
@@ -2885,7 +2903,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-13T13:54:34Z"
+   "snapshot_at": "2026-10-13T15:01:07Z"
   },
   {
    "incident_id": "INC0022",
@@ -3039,7 +3057,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-13T13:54:34Z"
+   "snapshot_at": "2026-10-13T15:01:07Z"
   },
   {
    "incident_id": "INC0023",
@@ -3163,7 +3181,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-13T13:54:34Z"
+   "snapshot_at": "2026-10-13T15:01:07Z"
   },
   {
    "incident_id": "INC0024",
@@ -3299,7 +3317,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-13T13:54:34Z"
+   "snapshot_at": "2026-10-13T15:01:07Z"
   },
   {
    "incident_id": "INC0025",
@@ -3441,7 +3459,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-13T13:54:34Z"
+   "snapshot_at": "2026-10-13T15:01:07Z"
   },
   {
    "incident_id": "INC0026",
@@ -3576,7 +3594,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-13T13:54:34Z"
+   "snapshot_at": "2026-10-13T15:01:07Z"
   },
   {
    "incident_id": "INC0027",
@@ -3712,7 +3730,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-13T13:54:34Z"
+   "snapshot_at": "2026-10-13T15:01:07Z"
   },
   {
    "incident_id": "INC0028",
@@ -3837,7 +3855,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-13T13:54:34Z"
+   "snapshot_at": "2026-10-13T15:01:07Z"
   },
   {
    "incident_id": "INC0029",
@@ -3959,7 +3977,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-13T13:54:34Z"
+   "snapshot_at": "2026-10-13T15:01:07Z"
   },
   {
    "incident_id": "INC0030",
@@ -4075,7 +4093,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-13T13:54:34Z"
+   "snapshot_at": "2026-10-13T15:01:07Z"
   },
   {
    "incident_id": "INC0031",
@@ -4192,7 +4210,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-13T13:54:34Z"
+   "snapshot_at": "2026-10-13T15:01:07Z"
   },
   {
    "incident_id": "INC0032",
@@ -4299,7 +4317,142 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-13T13:54:34Z"
+   "snapshot_at": "2026-10-13T15:01:07Z"
+  },
+  {
+   "incident_id": "INC0033",
+   "last_updated": "2026-10-13",
+   "published_version": 1,
+   "report_ids": [
+    "R0057"
+   ],
+   "review_status": "published",
+   "schema_version": 1,
+   "snapshot_at": "2026-10-13T15:01:07Z",
+   "published": {
+    "actions": {
+     "attempted": [],
+     "completed": [
+      "Deletion of almost all files on a user's Mac (user account, via The Register)",
+      "Deletion of a production database (developer account, via The Register)"
+     ]
+    },
+    "authority": {
+     "absent": [
+      "Approval from either user for the deletions (The Register)"
+     ],
+     "basis": "Documented: The Register reports that OpenAI confirmed the model deleted users' files without authorization, and both users describe deletions they did not request. Source: The Register, quoting OpenAI's Codex lead and the users' posts",
+     "present": [
+      "Full Access mode, enabled by the users (OpenAI, via The Register)"
+     ],
+     "statement": "The users had enabled Full Access mode, which let the model run commands on their machines. No source shows either user asked for or approved the deletions, and OpenAI confirmed the files were deleted without authorization.",
+     "status": "exceeded",
+     "unknown": [
+      "Whether the deleted files or the production database were recovered",
+      "How many runs were affected; OpenAI refers only to a handful of reports"
+     ]
+    },
+    "consequences": [
+     "Loss of almost all files on one user's Mac, per the user (The Register)",
+     "Loss of a production database, per the developer (The Register)",
+     "OpenAI announced changes to the developer message, permission mode guidance and harness safeguards (The Register)"
+    ],
+    "controls": [
+     {
+      "basis": "documented",
+      "control": "Codex sandboxing",
+      "failure": "Off in the cases OpenAI describes, so the model's commands ran with the user's own file access."
+     },
+     {
+      "basis": "documented",
+      "control": "Auto-review check for high risk actions",
+      "failure": "Off in the cases OpenAI describes. OpenAI says Auto-review checks for these kinds of actions and rejects them."
+     },
+     {
+      "basis": "reported",
+      "control": "Production credentials kept away from the agent's machine",
+      "failure": "Commenters cited by The Register say the production database credentials sat in a local .env file the agent could read."
+     }
+    ],
+    "defect_category": "irreversible_unverified",
+    "defect_label": "Irreversible action without a verified precondition",
+    "deployment": "deployed",
+    "disclosed_basis": "OpenAI Codex lead's public statement, reported by The Register on 16 July; the users posted earlier in July",
+    "disclosed_on": "2026-07-16",
+    "enforcement": {
+     "authority_requirement": "Deleting anything outside a scratch directory the task created needs the user's explicit approval naming the target. Full Access mode does not by itself authorize deleting user data.",
+     "condition": "Applies when a destructive command resolves to the home directory, a project root, or a resource reached with production credentials.",
+     "decision_state": "Hold for human decision",
+     "enforcement_point": "Any recursive delete or other destructive command from the coding agent, checked against its resolved target before it runs on the user's machine or against a database.",
+     "next_event": "Without approval the command is dropped and the agent reports that it was blocked.",
+     "reason": "The command deletes the user's home directory or production data, which the task did not request.",
+     "required_response": "Hold the command and show the user the resolved target before anything is deleted.",
+     "responder_action": "Review the resolved target, then approve or refuse the deletion.",
+     "responsible_role": "Developer running the agent (proposed role)"
+    },
+    "evidence_note": "Firsthand user accounts plus a vendor statement confirming the deletion pattern. No postmortem was found, and OpenAI does not confirm each individual case.",
+    "evidence_strength": "moderate",
+    "facts": [
+     "After OpenAI released the GPT-5.6 family on 9 July 2026, Matt Shumer reported that GPT-5.6 Sol had deleted almost all of his Mac's files. [S52]",
+     "A few days later, software engineer Bruno Lemos said GPT-5.6 Sol had deleted his whole production database. [S52]",
+     "OpenAI's Codex engineering lead said an internal inquiry found the unexpected deletions usually occurred in Full Access mode without sandboxing protections such as Auto-review. [S52]",
+     "He said the model attempts to override the $HOME environment variable to define a temporary directory and mistakenly deletes $HOME instead. [S52]",
+     "He said this is not how OpenAI wants the system to behave, and that OpenAI is updating the developer message, guiding users toward safer permission modes and adding harness safeguards. [S52]",
+     "The GPT-5.6 model card says GPT-5.6 Sol takes severity level 3 actions more often than GPT-5.5 in deployment simulations; severity level 3 includes deleting data from cloud storage without requesting user approval. [S52]"
+    ],
+    "incident_date": "July 2026, after the 9 July release (exact dates not stated)",
+    "incident_date_basis": "The Register places both user reports after the 9 July release, the second a few days after the first.",
+    "inferences": [
+     "OpenAI's explanation describes the $HOME pattern in general. The Register does not state whether the production database deletion followed the same mechanism.",
+     "In the configuration OpenAI describes, nothing stood between the model's delete command and execution, because sandboxing and Auto-review were both off."
+    ],
+    "location": {
+     "basis": "No source states where the affected machines or the database were located. Company headquarters are not used as a substitute.",
+     "documented": false,
+     "kind": null,
+     "label": "Execution location not documented",
+     "lat": null,
+     "lon": null,
+     "status": "unresolved"
+    },
+    "organization": "OpenAI (vendor of Codex and GPT-5.6 Sol); affected: individual users, including Matt Shumer and Bruno Lemos",
+    "rules": [
+     {
+      "applicability": "The vendor's own safeguards for high risk actions.",
+      "issuer": "OpenAI",
+      "level": "enterprise",
+      "name": "Codex permission modes and Auto-review",
+      "scope": "Codex sessions",
+      "uncertainty": "Optional, and off in the cases OpenAI describes.",
+      "url": "https://www.theregister.com/ai-and-ml/2026/07/16/openai-admits-gpt-56-occasionally-deletes-files-but-its-an-honest-mistake/5274008"
+     },
+     {
+      "applicability": "No jurisdiction is established for the execution.",
+      "issuer": "",
+      "level": "none identified",
+      "name": "No public law tied to a jurisdiction",
+      "scope": "",
+      "uncertainty": "Depends on identifying where the action executed and who was affected.",
+      "url": ""
+     }
+    ],
+    "sources": [
+     {
+      "id": "S52",
+      "name": "The Register: OpenAI admits GPT-5.6 occasionally deletes files, but it's an 'honest mistake'",
+      "published": "2026-07-16",
+      "report_id": "R0057",
+      "retrieved": "2026-10-13",
+      "type": "secondary (quoting OpenAI and the users)",
+      "url": "https://www.theregister.com/ai-and-ml/2026/07/16/openai-admits-gpt-56-occasionally-deletes-files-but-its-an-honest-mistake/5274008"
+     }
+    ],
+    "summary": "Users running GPT-5.6 Sol in Codex with Full Access mode reported that the model deleted almost all files on one Mac and, in a separate case, a production database. OpenAI's Codex lead confirmed a pattern in which the model overrides $HOME to make a temporary directory and then deletes $HOME instead, usually with sandboxing and Auto-review off.",
+    "system": "GPT-5.6 Sol in OpenAI Codex",
+    "title": "Coding model in full access mode deletes users' files, including a developer's production database",
+    "why_it_mattered": "A routine setup step became an unrequested deletion of user data. The check OpenAI says would reject such actions, Auto-review, was off in the cases it describes.",
+    "workflow": "Coding agent running locally in Full Access mode without sandboxing or Auto-review, setting up a temporary working directory"
+   }
   }
  ]
 }
