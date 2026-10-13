@@ -408,39 +408,42 @@
       var xy = proj(lonlat(r));
       return { r: r, id: r.incident_id, n: incNum(r.incident_id), x: xy[0], y: xy[1] };
     }).filter(function (q) { return q.x > -pinR && q.x < W + pinR && q.y > -pinR && q.y < H + pinR; });
-    var groups = clusterPoints(pts, pinR * 2.3);
+    var groups = [];
+
+    // Every pin stays visible. Crowded pins are pushed apart and keep a thin
+    // leader line to their documented point.
+    var gap = pinR + 2.5;
+    var nodes = pts.map(function (q, i) {
+      var a = i * 2.39996, j = 0.6 * (i + 1);
+      return { q: q, x0: q.x, y0: q.y, x: q.x + Math.cos(a) * j, y: q.y + Math.sin(a) * j };
+    });
+    if (nodes.length > 1) {
+      var sim = d3.forceSimulation(nodes)
+        .force('x', d3.forceX(function (d) { return d.x0; }).strength(0.18))
+        .force('y', d3.forceY(function (d) { return d.y0; }).strength(0.18))
+        .force('collide', d3.forceCollide(gap).strength(1).iterations(6))
+        .stop();
+      for (var t = 0; t < 320; t++) {
+        sim.tick();
+        nodes.forEach(function (d) {
+          d.x = Math.min(Math.max(d.x, pinR + 3), W - pinR - 3);
+          d.y = Math.min(Math.max(d.y, pinR + 3), H - pinR - 3);
+        });
+      }
+    }
 
     var h = [];
     var gd = path(d3.geoGraticule10());
     if (gd) h.push('<path class="grat" d="' + gd + '"/>');
     h.push('<g>' + world.map(function (f) { var d = path(f); return d ? '<path class="land" d="' + d + '"/>' : ''; }).join('') + '</g>');
-    var expanded = null;
-    groups.forEach(function (g) {
-      if (g.pts.length === 1) h.push(pinMarkup(g.pts[0], g.pts[0].x, g.pts[0].y, pinR));
-      else if (expandedCluster && expandedCluster === g.key) expanded = g;
-      else {
-        var ids = g.pts.map(function (p) { return p.n; }).join(', ');
-        h.push('<g class="pin cluster" role="button" tabindex="0" data-cluster="' + g.key + '" transform="translate(' + g.x.toFixed(1) + ',' + g.y.toFixed(1) + ')" aria-label="' + g.pts.length + ' incidents grouped here: ' + ids + '. Expand">' +
-          '<circle class="ring" r="' + (pinR + 5) + '"/><circle class="stack2" cx="4" cy="-4" r="' + (pinR + 1) + '"/><circle class="stack1" cx="2" cy="-2" r="' + (pinR + 1) + '"/><circle class="dot" r="' + (pinR + 1) + '"/><text>' + g.pts.length + '</text></g>');
+    h.push('<g class="leaders">');
+    nodes.forEach(function (d) {
+      if (Math.hypot(d.x - d.x0, d.y - d.y0) > pinR * 0.6) {
+        h.push('<line class="leader" x1="' + d.x0.toFixed(1) + '" y1="' + d.y0.toFixed(1) + '" x2="' + d.x.toFixed(1) + '" y2="' + d.y.toFixed(1) + '"/><circle class="anchor" r="2" cx="' + d.x0.toFixed(1) + '" cy="' + d.y0.toFixed(1) + '"/>');
       }
     });
-    if (expanded) {
-      var n = expanded.pts.length;
-      var rad = Math.max(pinR * 2.8, (n * (pinR * 2 + 6)) / (2 * Math.PI));
-      var cx = Math.min(Math.max(expanded.x, rad + pinR + 4), W - rad - pinR - 4);
-      var cy = Math.min(Math.max(expanded.y, rad + pinR + 4), H - rad - pinR - 4);
-      h.push('<g class="fan"><circle class="fan-bg" cx="' + cx + '" cy="' + cy + '" r="' + (rad + pinR + 4) + '" data-collapse="1"/>');
-      expanded.pts.forEach(function (p, i) {
-        var a = -Math.PI / 2 + (i / n) * Math.PI * 2;
-        var fx = cx + rad * Math.cos(a), fy = cy + rad * Math.sin(a);
-        h.push('<line class="leader" x1="' + p.x.toFixed(1) + '" y1="' + p.y.toFixed(1) + '" x2="' + fx.toFixed(1) + '" y2="' + fy.toFixed(1) + '"/><circle class="anchor" r="2" cx="' + p.x.toFixed(1) + '" cy="' + p.y.toFixed(1) + '"/>');
-      });
-      expanded.pts.forEach(function (p, i) {
-        var a = -Math.PI / 2 + (i / n) * Math.PI * 2;
-        h.push(pinMarkup(p, cx + rad * Math.cos(a), cy + rad * Math.sin(a), pinR));
-      });
-      h.push('</g>');
-    }
+    h.push('</g>');
+    nodes.forEach(function (d) { h.push(pinMarkup(d.q, d.x, d.y, pinR)); });
     svg.innerHTML = h.join('');
     var zb = $('mapzoomout');
     zb.hidden = !mapFocus;
