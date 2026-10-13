@@ -1,6 +1,6 @@
 {
  "updated": "2026-10-13",
- "last_check": "2026-10-13T13:49:43Z",
+ "last_check": "2026-10-13T13:54:34Z",
  "next_incident_number": 33,
  "next_report_number": 56,
  "excluded_candidates": [
@@ -263,7 +263,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-12T01:21:00Z"
+   "snapshot_at": "2026-10-13T13:54:34Z"
   },
   {
    "incident_id": "INC0002",
@@ -406,7 +406,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-12T01:21:00Z"
+   "snapshot_at": "2026-10-13T13:54:34Z"
   },
   {
    "incident_id": "INC0003",
@@ -528,7 +528,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-12T01:21:00Z"
+   "snapshot_at": "2026-10-13T13:54:34Z"
   },
   {
    "incident_id": "INC0004",
@@ -665,7 +665,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-12T01:21:00Z"
+   "snapshot_at": "2026-10-13T13:54:34Z"
   },
   {
    "incident_id": "INC0005",
@@ -809,7 +809,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-12T01:21:00Z"
+   "snapshot_at": "2026-10-13T13:54:34Z"
   },
   {
    "incident_id": "INC0006",
@@ -956,7 +956,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-12T01:21:00Z"
+   "snapshot_at": "2026-10-13T13:54:34Z"
   },
   {
    "incident_id": "INC0007",
@@ -1061,7 +1061,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-12T01:21:00Z"
+   "snapshot_at": "2026-10-13T13:54:34Z"
   },
   {
    "incident_id": "INC0008",
@@ -1197,7 +1197,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-12T01:21:00Z"
+   "snapshot_at": "2026-10-13T13:54:34Z"
   },
   {
    "incident_id": "INC0009",
@@ -1309,7 +1309,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-12T01:21:00Z"
+   "snapshot_at": "2026-10-13T13:54:34Z"
   },
   {
    "incident_id": "INC0010",
@@ -1431,7 +1431,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-12T01:21:00Z"
+   "snapshot_at": "2026-10-13T13:54:34Z"
   },
   {
    "incident_id": "INC0011",
@@ -1573,7 +1573,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-12T01:21:00Z"
+   "snapshot_at": "2026-10-13T13:54:34Z"
   },
   {
    "incident_id": "INC0012",
@@ -1715,7 +1715,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-12T01:21:00Z"
+   "snapshot_at": "2026-10-13T13:54:34Z"
   },
   {
    "incident_id": "INC0013",
@@ -1834,7 +1834,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-12T01:21:00Z"
+   "snapshot_at": "2026-10-13T13:54:34Z"
   },
   {
    "incident_id": "INC0014",
@@ -1982,7 +1982,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-12T01:21:00Z"
+   "snapshot_at": "2026-10-13T13:54:34Z"
   },
   {
    "incident_id": "INC0015",
@@ -2119,7 +2119,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-12T01:21:00Z"
+   "snapshot_at": "2026-10-13T13:54:34Z"
   },
   {
    "incident_id": "INC0016",
@@ -2225,7 +2225,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-12T01:21:00Z"
+   "snapshot_at": "2026-10-13T13:54:34Z"
   },
   {
    "incident_id": "INC0017",
@@ -2355,7 +2355,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-12T01:21:00Z"
+   "snapshot_at": "2026-10-13T13:54:34Z"
   },
   {
    "incident_id": "INC0018",
@@ -2501,7 +2501,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-12T01:21:00Z"
+   "snapshot_at": "2026-10-13T13:54:34Z"
   },
   {
    "incident_id": "INC0019",
@@ -2635,7 +2635,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-12T01:21:00Z"
+   "snapshot_at": "2026-10-13T13:54:34Z"
   },
   {
    "incident_id": "INC0020",
@@ -2760,7 +2760,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-12T01:21:00Z"
+   "snapshot_at": "2026-10-13T13:54:34Z"
   },
   {
    "incident_id": "INC0021",
@@ -2885,7 +2885,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-12T01:21:00Z"
+   "snapshot_at": "2026-10-13T13:54:34Z"
   },
   {
    "incident_id": "INC0022",
@@ -3039,7 +3039,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-12T01:21:00Z"
+   "snapshot_at": "2026-10-13T13:54:34Z"
   },
   {
    "incident_id": "INC0023",
@@ -3163,7 +3163,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-12T01:21:00Z"
+   "snapshot_at": "2026-10-13T13:54:34Z"
   },
   {
    "incident_id": "INC0024",
@@ -3299,7 +3299,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-12T01:21:00Z"
+   "snapshot_at": "2026-10-13T13:54:34Z"
   },
   {
    "incident_id": "INC0025",
@@ -3441,7 +3441,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-12T01:21:00Z"
+   "snapshot_at": "2026-10-13T13:54:34Z"
   },
   {
    "incident_id": "INC0026",
@@ -3576,7 +3576,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-12T01:21:00Z"
+   "snapshot_at": "2026-10-13T13:54:34Z"
   },
   {
    "incident_id": "INC0027",
@@ -3712,7 +3712,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-12T01:21:00Z"
+   "snapshot_at": "2026-10-13T13:54:34Z"
   },
   {
    "incident_id": "INC0028",
@@ -3837,7 +3837,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-12T01:21:00Z"
+   "snapshot_at": "2026-10-13T13:54:34Z"
   },
   {
    "incident_id": "INC0029",
@@ -3959,7 +3959,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-12T01:21:00Z"
+   "snapshot_at": "2026-10-13T13:54:34Z"
   },
   {
    "incident_id": "INC0030",
@@ -4075,7 +4075,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-12T01:21:00Z"
+   "snapshot_at": "2026-10-13T13:54:34Z"
   },
   {
    "incident_id": "INC0031",
@@ -4192,7 +4192,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-12T01:21:00Z"
+   "snapshot_at": "2026-10-13T13:54:34Z"
   },
   {
    "incident_id": "INC0032",
@@ -4299,7 +4299,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-12T01:21:00Z"
+   "snapshot_at": "2026-10-13T13:54:34Z"
   }
  ]
 }
