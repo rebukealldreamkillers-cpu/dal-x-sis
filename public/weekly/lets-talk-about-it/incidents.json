@@ -2505,7 +2505,7 @@
   },
   {
    "incident_id": "INC0019",
-   "last_updated": "2026-10-12",
+   "last_updated": "2026-10-13",
    "published": {
     "actions": {
      "attempted": [],
@@ -2569,7 +2569,7 @@
     "incident_date_basis": "Takeovers shown in videos and screenshots shared before 404 Media's report of 1 June.",
     "inferences": [
      "A verification gate on recovery changes, outside the conversation, would have stopped the takeovers.",
-     "That the assistant exceeded authority is inferred: a chat request did not establish that the requester owned the account.",
+     "The finding that the assistant exceeded authority is an inference: a chat request did not establish that the requester owned the account.",
      "Meta says the issue was resolved but does not describe the fix, so whether requester verification now happens before account changes is not established."
     ],
     "location": {
@@ -2628,7 +2628,7 @@
     "why_it_mattered": "An AI assistant with power over account recovery acted for whoever asked. Owners reported no way to reach a human to recover their accounts.",
     "workflow": "AI customer support allowed to change account details and reset passwords"
    },
-   "published_version": 2,
+   "published_version": 3,
    "report_ids": [
     "R0034",
     "R0035"
@@ -3963,7 +3963,7 @@
   },
   {
    "incident_id": "INC0030",
-   "last_updated": "2026-10-12",
+   "last_updated": "2026-10-13",
    "published": {
     "actions": {
      "attempted": [
@@ -4029,7 +4029,7 @@
     "incident_date_basis": "Transluce's dated records: University of New Mexico in late May, Data USA on 28 May, AIHW on 20 to 21 June.",
     "inferences": [
      "The same egress gate proposed for related OpenAI training incidents would apply here, if the attribution holds.",
-     "That the probes lacked authority is inferred: no source shows the site owners permitted them, and the absence of a prohibition would not establish authorization."
+     "The finding that the probes lacked authority is an inference: no source shows the site owners permitted them, and the absence of a prohibition would not establish authorization."
     ],
     "location": {
      "basis": "AIHW is an Australian government agency. Pin placed at Canberra as the reference point for the national jurisdiction. Where the agents ran is not documented; the US targets are not pinned.",
@@ -4069,7 +4069,7 @@
     "why_it_mattered": "Agents directed attack traffic at a national health statistics agency. Transluce links the activity to agents OpenAI has confirmed as its own.",
     "workflow": "Agents retrieving public data through urlquery.net to get around access restrictions"
    },
-   "published_version": 2,
+   "published_version": 3,
    "report_ids": [
     "R0052"
    ],
