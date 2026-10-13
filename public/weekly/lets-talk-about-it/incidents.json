@@ -1,8 +1,8 @@
 {
  "updated": "2026-10-13",
  "last_check": "2026-10-13T15:01:07Z",
- "next_incident_number": 34,
- "next_report_number": 58,
+ "next_incident_number": 36,
+ "next_report_number": 60,
  "excluded_candidates": [
   {
    "name": "Gemini CLI file loss report (July 2025)",
@@ -4452,6 +4452,276 @@
     "title": "Coding model in full access mode deletes users' files, including a developer's production database",
     "why_it_mattered": "A routine setup step became an unrequested deletion of user data. The check OpenAI says would reject such actions, Auto-review, was off in the cases it describes.",
     "workflow": "Coding agent running locally in Full Access mode without sandboxing or Auto-review, setting up a temporary working directory"
+   }
+  },
+  {
+   "incident_id": "INC0034",
+   "last_updated": "2026-10-13",
+   "published_version": 1,
+   "report_ids": [
+    "R0058"
+   ],
+   "review_status": "published",
+   "schema_version": 1,
+   "snapshot_at": "2026-10-13T15:01:07Z",
+   "published": {
+    "actions": {
+     "attempted": [],
+     "completed": [
+      "Filing of an opposition drafted with AI that contained fictitious and misattributed citations (order)",
+      "Later filings with citation errors after the defendants raised the problem (order)"
+     ]
+    },
+    "authority": {
+     "absent": [
+      "Verification of the citations before filing (order)"
+     ],
+     "basis": "Documented: the court's order finds counsel did not confirm the truthfulness of his citations. Source: Court's sanctions order",
+     "present": [
+      "Rule 11 certification duty for signed filings (order)"
+     ],
+     "statement": "Rule 11 required counsel to certify, after a reasonable inquiry, that the legal contentions were warranted by existing law. The court found he did not confirm his citations.",
+     "status": "exceeded",
+     "unknown": [
+      "Which AI product was used; the order does not name it"
+     ]
+    },
+    "cluster": "AI drafted court filings with fabricated citations (2026)",
+    "consequences": [
+     "Counsel's firm ordered to pay the moving defendants' fees and costs, capped at 10,000 US dollars (order)",
+     "Counsel's pro hac vice admission revoked; local counsel remains in the case (order)"
+    ],
+    "controls": [
+     {
+      "basis": "documented",
+      "control": "Signing attorney's Rule 11 certification",
+      "failure": "Counsel signed and filed without confirming the citations."
+     },
+     {
+      "basis": "documented",
+      "control": "Notice of errors from opposing counsel",
+      "failure": "Later briefs still contained citation errors after the defendants raised the problem."
+     },
+     {
+      "basis": "documented",
+      "control": "Supervision by local counsel",
+      "failure": "Lead counsel said he alone was responsible; the court reminded local counsel of the duty to supervise."
+     }
+    ],
+    "defect_category": "external_output_unverified",
+    "defect_label": "Unverified AI output released to an outside party",
+    "deployment": "deployed",
+    "disclosed_basis": "Memorandum and order on motion for sanctions",
+    "disclosed_on": "2026-09-25",
+    "enforcement": {
+     "authority_requirement": "The signing attorney certifies that every citation was checked against its source before filing.",
+     "condition": "Applies to any filing with an unverified citation.",
+     "decision_state": "Block",
+     "enforcement_point": "Signature and electronic filing of each paper.",
+     "next_event": "Filing proceeds after certification.",
+     "reason": "The filing contains citations not verified against their sources.",
+     "required_response": "Return the filing with unverified citations listed.",
+     "responder_action": "Verify or remove each citation and certify before filing.",
+     "responsible_role": "Signing attorney and local counsel (proposed roles)"
+    },
+    "evidence_note": "Court order with findings, including counsel's admission that AI drafted the first opposition.",
+    "evidence_strength": "strong",
+    "facts": [
+     "Counsel admitted pro hac vice filed an opposition in which approximately half of the citations in the memorandum contained an error. [S53 p. 11]",
+     "The opposition cited a First Circuit case six times for a proposition it does not stand for and attributed a quotation to a case with a fictitious Westlaw citation. [S53 p. 4]",
+     "Counsel admitted using AI to draft that opposition, saying he believed the enterprise-level version of the AI software he used did not hallucinate cases. [S53 p. 6]",
+     "Later briefs also contained citation errors, including a case the court could not find in Westlaw, Lexis, or Bloomberg. [S53 p. 13]",
+     "The court found that continued filing of false or misleading citations after notice was not mere carelessness. [S53 p. 15]",
+     "The court ordered counsel's firm to pay fees and costs not exceeding 10,000 US dollars and revoked counsel's pro hac vice status. [S53 p. 18]"
+    ],
+    "incident_date": "21 November 2025 onward",
+    "incident_date_basis": "The order says the first opposition was filed within five hours of the 21 November 2025 motion to strike; later briefs followed over several months.",
+    "inferences": [
+     "A citation verification gate at filing would have held the first opposition before it reached the court.",
+     "Counsel's belief that an enterprise tool would not fabricate citations stood in place of checking the citations against their sources."
+    ],
+    "location": {
+     "basis": "The filings were delivered to the US District Court for the District of Massachusetts. Pin placed at Boston as the reference point for the court.",
+     "documented": true,
+     "kind": "jurisdiction",
+     "label": "Boston, Massachusetts (US District Court, District of Massachusetts)",
+     "lat": 42.3601,
+     "lon": -71.0589,
+     "status": "established"
+    },
+    "organization": "Plaintiff's pro hac vice counsel and his law firm; affected: US District Court for the District of Massachusetts and the Enterprise defendants",
+    "rules": [
+     {
+      "applicability": "The basis for the sanctions.",
+      "issuer": "US federal courts",
+      "level": "national",
+      "name": "Federal Rule of Civil Procedure 11",
+      "scope": "Signed filings in federal civil cases",
+      "uncertainty": "None noted.",
+      "url": "https://storage.courtlistener.com/recap/gov.uscourts.mad.288446/gov.uscourts.mad.288446.155.0.pdf"
+     },
+     {
+      "applicability": "Findings and sanctions for the filings.",
+      "issuer": "US District Court for the District of Massachusetts",
+      "level": "national",
+      "name": "Sanctions order in Aguilar v. The Crawford Group, No. 25-cv-12395",
+      "scope": "This case",
+      "uncertainty": "Fee amount not yet fixed.",
+      "url": "https://storage.courtlistener.com/recap/gov.uscourts.mad.288446/gov.uscourts.mad.288446.155.0.pdf"
+     }
+    ],
+    "sources": [
+     {
+      "id": "S53",
+      "name": "US District Court, D. Massachusetts: Aguilar v. The Crawford Group, memorandum and order on motion for sanctions",
+      "published": "2026-09-25",
+      "report_id": "R0058",
+      "retrieved": "2026-10-13",
+      "type": "primary (court order)",
+      "url": "https://storage.courtlistener.com/recap/gov.uscourts.mad.288446/gov.uscourts.mad.288446.155.0.pdf"
+     }
+    ],
+    "summary": "Out of state counsel filed an opposition, drafted with AI, in which about half the citations contained errors, including a fictitious Westlaw citation. Later briefs repeated the problem after the defendants raised it. The court sanctioned his firm and revoked his admission to the case.",
+    "system": "Enterprise-level AI drafting software (product not named in the order)",
+    "title": "AI drafted brief with fictitious and misattributed citations; federal court revokes counsel's admission to the case",
+    "why_it_mattered": "Fabricated and misattributed authority reached a federal court in a case over a fatal crash, and kept arriving after counsel was warned. Counsel relied on the tool's tier instead of checking.",
+    "workflow": "Drafting and filing oppositions in federal civil litigation"
+   }
+  },
+  {
+   "incident_id": "INC0035",
+   "last_updated": "2026-10-13",
+   "published_version": 1,
+   "report_ids": [
+    "R0059"
+   ],
+   "review_status": "published",
+   "schema_version": 1,
+   "snapshot_at": "2026-10-13T15:01:07Z",
+   "published": {
+    "actions": {
+     "attempted": [],
+     "completed": [
+      "Filing of a summary judgment response citing a nonexistent case with fake quotes (order)"
+     ]
+    },
+    "authority": {
+     "absent": [
+      "Verification of the citations before filing (order)"
+     ],
+     "basis": "Documented: the court's order finds the signed filing contained fictitious citations, quotes and unsupported propositions. Source: Court's sanctions order",
+     "present": [
+      "Rule 11 certification duty for signed filings (order)",
+      "Local Rule AT-3(m), requiring review and verification of content produced with generative AI (order)"
+     ],
+     "statement": "Rule 11 and the district's local rule required counsel to review and verify the filing. The court found she did not.",
+     "status": "exceeded",
+     "unknown": [
+      "Which AI tool the drafter used",
+      "Whether AI was used; counsel's written and hearing statements differ"
+     ]
+    },
+    "cluster": "AI drafted court filings with fabricated citations (2026)",
+    "consequences": [
+     "Public reprimand, served on every judge in the district (order)",
+     "5,000 US dollar penalty, with counsel and her firm jointly responsible (order)",
+     "Response stricken (order)",
+     "Review of every filing counsel signed since 1 January 2026, and a one year citation certification requirement (order)"
+    ],
+    "controls": [
+     {
+      "basis": "documented",
+      "control": "Signing attorney's Rule 11 certification",
+      "failure": "Counsel signed and filed without verifying the citations."
+     },
+     {
+      "basis": "documented",
+      "control": "Local Rule AT-3(m) review of AI generated content",
+      "failure": "Not followed."
+     },
+     {
+      "basis": "documented",
+      "control": "Correction after notice from the opposing party",
+      "failure": "Counsel did not correct the filing after the reply flagged the problems."
+     }
+    ],
+    "defect_category": "external_output_unverified",
+    "defect_label": "Unverified AI output released to an outside party",
+    "deployment": "deployed",
+    "disclosed_basis": "Order sanctioning counsel",
+    "disclosed_on": "2026-06-11",
+    "enforcement": {
+     "authority_requirement": "The signing attorney certifies that every citation was checked against its source before filing.",
+     "condition": "Applies to any filing with an unverified citation.",
+     "decision_state": "Block",
+     "enforcement_point": "Signature and electronic filing of each paper.",
+     "next_event": "Filing proceeds after certification.",
+     "reason": "The filing contains citations not verified against their sources.",
+     "required_response": "Return the filing with unverified citations listed.",
+     "responder_action": "Verify or remove each citation and certify before filing.",
+     "responsible_role": "Signing attorney (proposed role)"
+    },
+    "evidence_note": "Court order with findings. AI use rests on counsel's written statement that the drafter appears to have used AI, which she qualified at the hearing.",
+    "evidence_strength": "moderate",
+    "facts": [
+     "Counsel signed a summary judgment response that cited a fictitious case and included fake quotes and unsupported propositions. [S54 pp. 2 to 3]",
+     "Counsel did not correct the filing after the opposing party's reply flagged the problems. [S54 p. 2]",
+     "In her written response, counsel said it appears her law clerk used AI to assist in drafting; at the hearing she said she could not know for certain because the drafter had left the firm. [S54 p. 3]",
+     "The court rejected her explanation that a paralegal filed the wrong version. [S54 p. 11]",
+     "The court publicly reprimanded counsel, ordered a 5,000 US dollar penalty, struck the response, and required a review of every filing she signed since 1 January 2026 and a citation certification for one year. [S54 pp. 17 to 18]"
+    ],
+    "incident_date": "14 January 2026",
+    "incident_date_basis": "The order dates the summary judgment response to 14 January 2026.",
+    "inferences": [
+     "A citation verification gate at filing would have held the response before it reached the court.",
+     "The district's local rule already required review of AI generated content. Nothing enforced it at the moment of filing."
+    ],
+    "location": {
+     "basis": "The filing was delivered to the Sherman Division of the US District Court for the Eastern District of Texas. Pin placed at Sherman as the reference point for the court.",
+     "documented": true,
+     "kind": "jurisdiction",
+     "label": "Sherman, Texas (US District Court, Eastern District of Texas, Sherman Division)",
+     "lat": 33.6357,
+     "lon": -96.6089,
+     "status": "established"
+    },
+    "organization": "Plaintiff's counsel and her law firm; affected: US District Court for the Eastern District of Texas and the defendant",
+    "rules": [
+     {
+      "applicability": "The basis for the sanctions.",
+      "issuer": "US federal courts",
+      "level": "national",
+      "name": "Federal Rule of Civil Procedure 11",
+      "scope": "Signed filings in federal civil cases",
+      "uncertainty": "None noted.",
+      "url": "https://storage.courtlistener.com/recap/gov.uscourts.txed.239283/gov.uscourts.txed.239283.25.0.pdf"
+     },
+     {
+      "applicability": "Directly applicable to AI drafted filings in the district.",
+      "issuer": "US District Court for the Eastern District of Texas",
+      "level": "national",
+      "name": "Local Rule AT-3(m)",
+      "scope": "Attorneys practicing in the district",
+      "uncertainty": "None noted.",
+      "url": "https://storage.courtlistener.com/recap/gov.uscourts.txed.239283/gov.uscourts.txed.239283.25.0.pdf"
+     }
+    ],
+    "sources": [
+     {
+      "id": "S54",
+      "name": "US District Court, E.D. Texas: McCormick v. Texakoma Financial, order sanctioning counsel",
+      "published": "2026-06-11",
+      "report_id": "R0059",
+      "retrieved": "2026-10-13",
+      "type": "primary (court order)",
+      "url": "https://storage.courtlistener.com/recap/gov.uscourts.txed.239283/gov.uscourts.txed.239283.25.0.pdf"
+     }
+    ],
+    "summary": "Counsel filed a summary judgment response citing a case that does not exist, with fake quotes and unsupported propositions, and left it uncorrected after the other side flagged it. She said a law clerk appears to have used AI and that a paralegal filed the wrong version. The court rejected that account and publicly reprimanded her.",
+    "system": "Unnamed generative AI tool used by a law clerk, per counsel",
+    "title": "Summary judgment brief cites a nonexistent case and fake quotes; federal court publicly reprimands counsel",
+    "why_it_mattered": "Fabricated authority reached a federal court in a district whose own rule required review of AI generated content. The court found that a reprimand alone, or a fine alone, would not be enough to deter.",
+    "workflow": "Drafting and filing a summary judgment response in federal civil litigation"
    }
   }
  ]
