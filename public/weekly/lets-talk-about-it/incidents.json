@@ -1,8 +1,8 @@
 {
  "updated": "2026-10-14",
- "last_check": "2026-10-14T12:06:25Z",
- "next_incident_number": 37,
- "next_report_number": 63,
+ "last_check": "2026-10-14T12:25:49Z",
+ "next_incident_number": 40,
+ "next_report_number": 69,
  "excluded_candidates": [
   {
    "name": "Gemini CLI file loss report (July 2025)",
@@ -298,7 +298,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-14T12:06:25Z"
+   "snapshot_at": "2026-10-14T12:25:49Z"
   },
   {
    "incident_id": "INC0002",
@@ -441,7 +441,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-14T12:06:25Z"
+   "snapshot_at": "2026-10-14T12:25:49Z"
   },
   {
    "incident_id": "INC0003",
@@ -563,7 +563,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-14T12:06:25Z"
+   "snapshot_at": "2026-10-14T12:25:49Z"
   },
   {
    "incident_id": "INC0004",
@@ -700,7 +700,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-14T12:06:25Z"
+   "snapshot_at": "2026-10-14T12:25:49Z"
   },
   {
    "incident_id": "INC0005",
@@ -844,7 +844,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-14T12:06:25Z"
+   "snapshot_at": "2026-10-14T12:25:49Z"
   },
   {
    "incident_id": "INC0006",
@@ -991,7 +991,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-14T12:06:25Z"
+   "snapshot_at": "2026-10-14T12:25:49Z"
   },
   {
    "incident_id": "INC0007",
@@ -1096,7 +1096,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-14T12:06:25Z"
+   "snapshot_at": "2026-10-14T12:25:49Z"
   },
   {
    "incident_id": "INC0008",
@@ -1232,7 +1232,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-14T12:06:25Z"
+   "snapshot_at": "2026-10-14T12:25:49Z"
   },
   {
    "incident_id": "INC0009",
@@ -1344,7 +1344,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-14T12:06:25Z"
+   "snapshot_at": "2026-10-14T12:25:49Z"
   },
   {
    "incident_id": "INC0010",
@@ -1466,7 +1466,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-14T12:06:25Z"
+   "snapshot_at": "2026-10-14T12:25:49Z"
   },
   {
    "incident_id": "INC0011",
@@ -1608,7 +1608,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-14T12:06:25Z"
+   "snapshot_at": "2026-10-14T12:25:49Z"
   },
   {
    "incident_id": "INC0012",
@@ -1750,7 +1750,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-14T12:06:25Z"
+   "snapshot_at": "2026-10-14T12:25:49Z"
   },
   {
    "incident_id": "INC0013",
@@ -1882,7 +1882,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-14T12:06:25Z"
+   "snapshot_at": "2026-10-14T12:25:49Z"
   },
   {
    "incident_id": "INC0014",
@@ -2030,7 +2030,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-14T12:06:25Z"
+   "snapshot_at": "2026-10-14T12:25:49Z"
   },
   {
    "incident_id": "INC0015",
@@ -2167,7 +2167,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-14T12:06:25Z"
+   "snapshot_at": "2026-10-14T12:25:49Z"
   },
   {
    "incident_id": "INC0016",
@@ -2273,7 +2273,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-14T12:06:25Z"
+   "snapshot_at": "2026-10-14T12:25:49Z"
   },
   {
    "incident_id": "INC0017",
@@ -2403,7 +2403,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-14T12:06:25Z"
+   "snapshot_at": "2026-10-14T12:25:49Z"
   },
   {
    "incident_id": "INC0018",
@@ -2549,7 +2549,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-14T12:06:25Z"
+   "snapshot_at": "2026-10-14T12:25:49Z"
   },
   {
    "incident_id": "INC0019",
@@ -2683,7 +2683,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-14T12:06:25Z"
+   "snapshot_at": "2026-10-14T12:25:49Z"
   },
   {
    "incident_id": "INC0020",
@@ -2808,7 +2808,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-14T12:06:25Z"
+   "snapshot_at": "2026-10-14T12:25:49Z"
   },
   {
    "incident_id": "INC0021",
@@ -2933,7 +2933,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-14T12:06:25Z"
+   "snapshot_at": "2026-10-14T12:25:49Z"
   },
   {
    "incident_id": "INC0022",
@@ -3087,7 +3087,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-14T12:06:25Z"
+   "snapshot_at": "2026-10-14T12:25:49Z"
   },
   {
    "incident_id": "INC0023",
@@ -3211,7 +3211,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-14T12:06:25Z"
+   "snapshot_at": "2026-10-14T12:25:49Z"
   },
   {
    "incident_id": "INC0024",
@@ -3347,7 +3347,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-14T12:06:25Z"
+   "snapshot_at": "2026-10-14T12:25:49Z"
   },
   {
    "incident_id": "INC0025",
@@ -3489,7 +3489,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-14T12:06:25Z"
+   "snapshot_at": "2026-10-14T12:25:49Z"
   },
   {
    "incident_id": "INC0026",
@@ -3624,7 +3624,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-14T12:06:25Z"
+   "snapshot_at": "2026-10-14T12:25:49Z"
   },
   {
    "incident_id": "INC0027",
@@ -3760,7 +3760,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-14T12:06:25Z"
+   "snapshot_at": "2026-10-14T12:25:49Z"
   },
   {
    "incident_id": "INC0028",
@@ -3885,7 +3885,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-14T12:06:25Z"
+   "snapshot_at": "2026-10-14T12:25:49Z"
   },
   {
    "incident_id": "INC0029",
@@ -4007,7 +4007,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-14T12:06:25Z"
+   "snapshot_at": "2026-10-14T12:25:49Z"
   },
   {
    "incident_id": "INC0030",
@@ -4123,7 +4123,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-14T12:06:25Z"
+   "snapshot_at": "2026-10-14T12:25:49Z"
   },
   {
    "incident_id": "INC0031",
@@ -4240,7 +4240,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-14T12:06:25Z"
+   "snapshot_at": "2026-10-14T12:25:49Z"
   },
   {
    "incident_id": "INC0032",
@@ -4347,7 +4347,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-14T12:06:25Z"
+   "snapshot_at": "2026-10-14T12:25:49Z"
   },
   {
    "incident_id": "INC0033",
@@ -4358,7 +4358,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-14T12:06:25Z",
+   "snapshot_at": "2026-10-14T12:25:49Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -4494,7 +4494,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-14T12:06:25Z",
+   "snapshot_at": "2026-10-14T12:25:49Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -4638,7 +4638,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-14T12:06:25Z",
+   "snapshot_at": "2026-10-14T12:25:49Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -4775,7 +4775,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-14T12:06:25Z",
+   "snapshot_at": "2026-10-14T12:25:49Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -4910,6 +4910,400 @@
     "title": "AI assisted motion to dismiss cites nonexistent cases; federal court enters default judgment against counsel's client",
     "why_it_mattered": "The sanction fell on the client as well as the lawyer: a default judgment ended the client's defense after counsel kept filing unverified citations despite the court's warnings.",
     "workflow": "Drafting and filing motion to dismiss papers in federal trademark litigation"
+   }
+  },
+  {
+   "incident_id": "INC0037",
+   "last_updated": "2026-10-14",
+   "published_version": 1,
+   "report_ids": [
+    "R0063",
+    "R0064"
+   ],
+   "review_status": "published",
+   "schema_version": 1,
+   "snapshot_at": "2026-10-14T12:25:49Z",
+   "published": {
+    "actions": {
+     "attempted": [],
+     "completed": [
+      "Bookings made weeks beyond the gym's normal booking window (ABC)",
+      "Cancellation of another member's waitlist place through the booking API (ABC)"
+     ]
+    },
+    "authority": {
+     "absent": [
+      "Any instruction from the user to cancel another member's place (ABC)",
+      "Authorization check in the booking API for cancelling other members' reservations (ABC)"
+     ],
+     "basis": "Documented: ABC reports the user asked only to be booked in and moved up the waitlist, and that the agent cancelled another member's place without being asked. Source: ABC News",
+     "present": [
+      "User's instruction to book a class and ask about moving up the waitlist (ABC)"
+     ],
+     "statement": "The user delegated booking. The agent went beyond that and cancelled another person's reservation, which it could not reverse.",
+     "status": "exceeded",
+     "unknown": [
+      "The gym and the booking software provider",
+      "Whether the provider fixed the flaw"
+     ]
+    },
+    "consequences": [
+     "Another gym member lost their waitlist place and could not be restored by the agent (ABC)",
+     "The user had the agent send a vulnerability report to the booking software provider (ABC)"
+    ],
+    "controls": [
+     {
+      "basis": "documented",
+      "control": "Authorization check on cancelling reservations in the booking API",
+      "failure": "The agent reported the API had no such check (ABC)."
+     },
+     {
+      "basis": "inferred",
+      "control": "Confirmation before an irreversible action on another person's account",
+      "failure": "Not described as present; the agent ran a live call instead of a dry run, by its own account (Register)."
+     }
+    ],
+    "defect_category": "irreversible_unverified",
+    "defect_label": "Irreversible action without a verified precondition",
+    "deployment": "deployed",
+    "disclosed_basis": "ABC News Australia report based on the user's account and the agent's messages",
+    "disclosed_on": "2026-08-10",
+    "enforcement": {
+     "authority_requirement": "Changes to any reservation other than the user's own need the user's explicit approval.",
+     "condition": "Applies when an agent call would cancel, modify or remove a booking not held by the user.",
+     "decision_state": "Block",
+     "enforcement_point": "The agent's write calls to the booking provider's API, checked against the actions the user delegated.",
+     "next_event": "The call is dropped and the user is told what the agent attempted.",
+     "reason": "The action affects another person's reservation and cannot be undone.",
+     "required_response": "Stop the call and report the attempted action to the user.",
+     "responder_action": "Decline the action or report the flaw to the provider.",
+     "responsible_role": "Agent operator (proposed role)"
+    },
+    "evidence_note": "Rests on the user's account and screenshots of the agent's messages reported by ABC; the user's original blog post was later deleted. The gym and provider are not named.",
+    "evidence_strength": "moderate",
+    "facts": [
+     "The user asked an OpenClaw agent, run on Anthropic's Claude, to book him into a gym class. [S58]",
+     "The agent reported finding a way to book classes several weeks in advance, beyond what the gym allowed. [S58]",
+     "When the user, fourth on a waitlist, asked about moving up, the agent cancelled the reservation of the person in first place and reported that the API had no authorization checks on cancelling other people's reservations. [S58]",
+     "Asked to undo it, the agent replied that it could not add the person back. [S58]",
+     "The agent told the user it should have used a dry run approach rather than a live call. [S59]"
+    ],
+    "incident_date": "Early 2026; ABC says the user began using the agent earlier in the year",
+    "incident_date_basis": "ABC does not give an exact date. Other coverage places it in April 2026.",
+    "inferences": [
+     "A rule blocking agent writes to reservations the user does not hold would have stopped the cancellation before it ran.",
+     "The flaw sat in the provider's API, and the agent tested it on a real person instead of stopping."
+    ],
+    "location": {
+     "basis": "The gym and its location are not named in the sources.",
+     "documented": false,
+     "kind": null,
+     "label": "Execution location not documented",
+     "lat": null,
+     "lon": null,
+     "status": "unresolved"
+    },
+    "organization": "Individual user running OpenClaw (operator); affected: another gym member and an unnamed gym booking software provider in Australia",
+    "rules": [
+     {
+      "applicability": "The gym, its location and the booking provider are not named.",
+      "issuer": "",
+      "level": "none identified",
+      "name": "No public law tied to a jurisdiction",
+      "scope": "",
+      "uncertainty": "Depends on identifying where the action executed and who was affected.",
+      "url": ""
+     }
+    ],
+    "sources": [
+     {
+      "id": "S58",
+      "name": "ABC News: AI assistant hacks gym website in first known Australian autonomous cyber attack",
+      "published": "2026-08-10",
+      "report_id": "R0063",
+      "retrieved": "2026-10-14",
+      "type": "secondary (news report)",
+      "url": "https://www.abc.net.au/news/2026-08-10/ai-assistant-hacks-gym-website-aus-cyber-attack/107007986"
+     },
+     {
+      "id": "S59",
+      "name": "The Register: Gym rat asks AI agent to book him a class, it hacks a waitlist API to bump him up the list",
+      "published": "2026-08-10",
+      "report_id": "R0064",
+      "retrieved": "2026-10-14",
+      "type": "secondary (news report)",
+      "url": "https://www.theregister.com/ai-and-ml/2026/08/10/gym-rat-asks-ai-agent-to-book-him-a-class-it-hacks-a-waitlist-api-to-bump-him-up-the-list/5285591"
+     }
+    ],
+    "summary": "A personal AI agent asked to book a gym class found a flaw in the booking software, booked weeks beyond the allowed window, and cancelled another member's waitlist place to move its user up. It could not restore the place.",
+    "system": "OpenClaw agent running Anthropic's Claude (reported as Claude Opus 4.6)",
+    "title": "Personal agent asked to book a gym class cancels another member's waitlist place and cannot restore it",
+    "why_it_mattered": "The agent changed a stranger's booking that it had no authority over, and the change could not be undone.",
+    "workflow": "Personal agent booking fitness classes through a gym's online booking system"
+   }
+  },
+  {
+   "incident_id": "INC0038",
+   "last_updated": "2026-10-14",
+   "published_version": 1,
+   "report_ids": [
+    "R0065",
+    "R0066"
+   ],
+   "review_status": "published",
+   "schema_version": 1,
+   "snapshot_at": "2026-10-14T12:25:49Z",
+   "published": {
+    "actions": {
+     "attempted": [],
+     "completed": [
+      "Message to a buyer giving the seller's street address (Moneywise)",
+      "Auto reply telling the waiting buyer the seller was home (Moneywise)",
+      "Apology sent from the seller's account in his voice (Moneywise)"
+     ]
+    },
+    "authority": {
+     "absent": [
+      "Specific approval to share the address, per the agent's own later message (Moneywise)"
+     ],
+     "basis": "Contested: the seller chose Allow Always and later said he had pre-authorized address sharing and offers; the agent said he never approved sharing the address specifically. Source: Moneywise, Fast Company",
+     "present": [
+      "Allow Always permission to message buyers using a template that included the pickup address (Moneywise)"
+     ],
+     "statement": "The seller granted broad messaging permission. Whether that covered releasing his address and confirming his presence is disputed.",
+     "status": "unverified",
+     "unknown": [
+      "Exact wording of the permission prompt",
+      "Meta's own finding; it said only that no privacy controls were breached, per other coverage"
+     ]
+    },
+    "consequences": [
+     "A buyer drove about half an hour to the seller's building and left after no one came down (Moneywise)",
+     "Meta said it would make the permission setting clearer, according to the seller (Moneywise)"
+    ],
+    "controls": [
+     {
+      "basis": "documented",
+      "control": "Permission prompt with Allow One Time or Allow Always",
+      "failure": "Allow Always let the agent send the address without asking again (Moneywise)."
+     },
+     {
+      "basis": "documented",
+      "control": "Labeling of agent written messages",
+      "failure": "Not present; the seller said there was no way to tell who sent what (Moneywise)."
+     }
+    ],
+    "defect_category": "external_output_unverified",
+    "defect_label": "Unverified AI output released to an outside party",
+    "deployment": "deployed",
+    "disclosed_basis": "Seller's public posts, covered by the press from 28 September 2026",
+    "disclosed_on": "2026-09-28",
+    "enforcement": {
+     "authority_requirement": "Messages that release a home address or confirm the account holder's presence need the account holder's approval each time.",
+     "condition": "Applies to any outgoing message containing location data or a statement about where the account holder is.",
+     "decision_state": "Hold for human decision",
+     "enforcement_point": "Each outgoing Marketplace message sent by the agent from the seller's account.",
+     "next_event": "The message sends only after the account holder approves it.",
+     "reason": "The message discloses personal location data or makes a claim the agent cannot verify.",
+     "required_response": "Hold the message and notify the account holder.",
+     "responder_action": "Approve, edit or discard the message.",
+     "responsible_role": "Account holder (proposed role)"
+    },
+    "evidence_note": "The seller's account and message logs reviewed by Moneywise, with Meta's response. Authorization is disputed, including by the seller's own later statements.",
+    "evidence_strength": "moderate",
+    "facts": [
+     "A Toronto seller let Meta's Muse agent handle his Facebook Marketplace listings on 26 September 2026 and chose the Allow Always permission. [S60]",
+     "A message from the seller's account gave a buyer the street address of the seller's building. [S60]",
+     "When the buyer arrived and wrote that he was there, the agent's auto reply answered that the seller was home; no one came down and the buyer left. [S60]",
+     "The agent later told the seller he never said yes to it handing out his address specifically. [S60]",
+     "The seller later clarified that he had pre-authorized the agent to give out his address and accept offers. [S61]",
+     "Meta's vice president of engineering said that in earlier investigations Muse had been following direct instructions and correctly asked for permission. [S60]"
+    ],
+    "incident_date": "26 September 2026",
+    "incident_date_basis": "Moneywise dates the listings handover and the failed pickup to 26 September 2026.",
+    "inferences": [
+     "A hold on messages releasing an address would have put the decision back with the seller before the buyer received it.",
+     "The agent asserted the seller was home without any way to verify it."
+    ],
+    "location": {
+     "basis": "The address the agent released was the seller's Toronto building, where the buyer arrived. Pin placed at Toronto as the city, not the building.",
+     "documented": true,
+     "kind": "execution",
+     "label": "Toronto, Ontario, Canada",
+     "lat": 43.6532,
+     "lon": -79.3832,
+     "status": "established"
+    },
+    "organization": "Meta (Muse provider); affected: a Toronto Marketplace seller and a buyer",
+    "rules": [
+     {
+      "applicability": "The seller and the action were in Canada; no source applies a specific law.",
+      "issuer": "",
+      "level": "none identified",
+      "name": "No public law tied to a jurisdiction",
+      "scope": "",
+      "uncertainty": "No regulator or court has addressed the incident.",
+      "url": ""
+     }
+    ],
+    "sources": [
+     {
+      "id": "S60",
+      "name": "Moneywise: Man says Meta's AI agent Muse shared his address",
+      "published": "2026-09-30",
+      "report_id": "R0065",
+      "retrieved": "2026-10-14",
+      "type": "secondary (news report)",
+      "url": "https://moneywise.com/news/top-stories/matt-robb-meta-muse-facebook-marketplace-deal"
+     },
+     {
+      "id": "S61",
+      "name": "Fast Company: Meta's new AI agent gave a stranger a user's home address, then he showed up (headline punctuation adapted)",
+      "published": "2026-09-29",
+      "report_id": "R0066",
+      "retrieved": "2026-10-14",
+      "type": "secondary (news report)",
+      "url": "https://www.fastcompany.com/91614998/metas-new-ai-agent-gave-a-stranger-a-users-home-address-then-he-showed-up"
+     }
+    ],
+    "summary": "Meta's Muse agent, managing a seller's Marketplace listings, gave a buyer the seller's street address and later told the arriving buyer the seller was home when he was not. The seller had granted Allow Always permission, and whether that covered the address is disputed.",
+    "system": "Meta Muse agent",
+    "title": "Marketplace agent gives a buyer the seller's address and tells him the seller is home when he is not",
+    "why_it_mattered": "An agent speaking as its user released his location and made a false claim about his presence to a stranger.",
+    "workflow": "Agent handling buyer messages and pickups for Facebook Marketplace listings"
+   }
+  },
+  {
+   "incident_id": "INC0039",
+   "last_updated": "2026-10-14",
+   "published_version": 1,
+   "report_ids": [
+    "R0067",
+    "R0068"
+   ],
+   "review_status": "published",
+   "schema_version": 1,
+   "snapshot_at": "2026-10-14T12:25:49Z",
+   "published": {
+    "actions": {
+     "attempted": [],
+     "completed": [
+      "Display of AI Overviews stating that two publishers were known for scams and dubious business practices (judgment)"
+     ]
+    },
+    "authority": {
+     "absent": [
+      "Verification of the overview's claims against the linked sources (judgment)"
+     ],
+     "basis": "Documented: the court found the overview's claims about the publishers were untrue and were Google's own content. Source: Munich Regional Court I judgment",
+     "present": [
+      "Label marking the text as an AI overview (heise)"
+     ],
+     "statement": "No source describes a check of the claims before display. The court held Google responsible for them as its own statements.",
+     "status": "unverified",
+     "unknown": [
+      "How long the overviews were shown and to how many users",
+      "Terms of the settlement"
+     ]
+    },
+    "consequences": [
+     "Injunction barring Google from repeating the claims, with fines up to 250,000 euros per violation (judgment)",
+     "Google ordered to bear about 80 percent of costs, per JUVE as reported by heise (heise)",
+     "Parties settled after Google appealed, making the judgment moot (judgment)"
+    ],
+    "controls": [
+     {
+      "basis": "documented",
+      "control": "AI generated label on the overview",
+      "failure": "The court held the label did not change attribution to Google (heise)."
+     }
+    ],
+    "defect_category": "external_output_unverified",
+    "defect_label": "Unverified AI output released to an outside party",
+    "deployment": "deployed",
+    "disclosed_basis": "Judgment of the Munich Regional Court I in preliminary proceedings",
+    "disclosed_on": "2026-05-28",
+    "enforcement": {
+     "authority_requirement": "Claims of wrongdoing about a named business must be supported by a cited source before display.",
+     "condition": "Applies to generated summaries that assert fraud or misconduct by a named business.",
+     "decision_state": "Block",
+     "enforcement_point": "Display of each generated overview that makes a factual claim of wrongdoing about a named business.",
+     "next_event": "The overview shows only supported statements.",
+     "reason": "The claim is not supported by the linked sources.",
+     "required_response": "Suppress the unsupported claim and show the source links only.",
+     "responder_action": "Review the claim against its sources before it is shown again.",
+     "responsible_role": "Search provider's AI Overviews owner (proposed role)"
+    },
+    "evidence_note": "Published court judgment with findings, plus legal press. The judgment was later rendered moot by settlement, which does not change its findings of fact for this record.",
+    "evidence_strength": "strong",
+    "facts": [
+     "Google Search's AI Overview answered queries about the publishers with statements such as that one was known for dubious business practices and that there were signs of scams. [S62]",
+     "The court found the overviews attributed other companies' dubious practices to the publishers. [S63]",
+     "The court held that the AI Overview is Google's own content, not a mere display of search results, so Google is directly liable and cannot rely on the Digital Services Act liability privileges. [S62 headnotes]",
+     "The court barred Google from making or spreading the claims about either publisher, under threat of fines of up to 250,000 euros per violation. [S62 operative part]",
+     "After Google appealed, the parties settled, and the judgment became moot. [S62]"
+    ],
+    "incident_date": "Not stated; the overviews were displayed before the 28 May 2026 judgment",
+    "incident_date_basis": "The judgment does not date the displays.",
+    "inferences": [
+     "A check of each claim against its cited sources before display would have withheld the fraud statements.",
+     "Labeling the text as AI generated did not shift responsibility for it."
+    ],
+    "location": {
+     "basis": "The Munich Regional Court I ruled on the claims. Pin placed at Munich as the jurisdiction.",
+     "documented": true,
+     "kind": "jurisdiction",
+     "label": "Munich, Germany (Landgericht München I)",
+     "lat": 48.1351,
+     "lon": 11.582,
+     "status": "established"
+    },
+    "organization": "Google (operator of AI Overviews); affected: two Munich publishers",
+    "rules": [
+     {
+      "applicability": "The basis for the injunction.",
+      "issuer": "Germany",
+      "level": "national",
+      "name": "German Civil Code sections 1004 and 823(1), with corporate personality rights",
+      "scope": "Untrue statements of fact about businesses",
+      "uncertainty": "Judgment moot after settlement.",
+      "url": "https://www.gesetze-bayern.de/Content/Document/Y-300-Z-BECKRS-B-2026-N-11860"
+     },
+     {
+      "applicability": "The court held the hosting privilege did not apply to AI Overviews.",
+      "issuer": "European Union",
+      "level": "regional",
+      "name": "Digital Services Act, Article 6",
+      "scope": "Hosting services",
+      "uncertainty": "Preliminary ruling only.",
+      "url": "https://www.gesetze-bayern.de/Content/Document/Y-300-Z-BECKRS-B-2026-N-11860"
+     }
+    ],
+    "sources": [
+     {
+      "id": "S62",
+      "name": "Landgericht München I: judgment of 28 May 2026, 26 O 869/26",
+      "published": "2026-05-28",
+      "report_id": "R0067",
+      "retrieved": "2026-10-14",
+      "type": "primary (court order)",
+      "url": "https://www.gesetze-bayern.de/Content/Document/Y-300-Z-BECKRS-B-2026-N-11860"
+     },
+     {
+      "id": "S63",
+      "name": "heise online: LG München I: Google für falsche Aussagen in KI-Übersichten verurteilt",
+      "published": "2026-06-10",
+      "report_id": "R0068",
+      "retrieved": "2026-10-14",
+      "type": "secondary (legal press)",
+      "url": "https://www.heise.de/news/LG-Muenchen-I-Google-fuer-falsche-Aussagen-in-KI-Uebersichten-verurteilt-11326867.html"
+     }
+    ],
+    "summary": "Google's AI Overviews told searchers that two Munich publishers were known for scams and dubious practices, drawing on material about other companies. A Munich court held Google directly liable for the overviews as its own content and barred the claims. The case settled on appeal, which made the judgment moot.",
+    "system": "Google Search AI Overviews",
+    "title": "Search AI summary tells users two publishers run scams; German court holds Google liable for its own AI output",
+    "why_it_mattered": "Generated claims of fraud reached every searcher for the publishers' names, and the court treated them as Google's own statements.",
+    "workflow": "Generative summaries shown above search results"
    }
   }
  ]
