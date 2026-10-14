@@ -1,8 +1,8 @@
 {
- "updated": "2026-10-13",
- "last_check": "2026-10-13T15:01:07Z",
- "next_incident_number": 36,
- "next_report_number": 60,
+ "updated": "2026-10-14",
+ "last_check": "2026-10-14T12:06:25Z",
+ "next_incident_number": 37,
+ "next_report_number": 63,
  "excluded_candidates": [
   {
    "name": "Gemini CLI file loss report (July 2025)",
@@ -123,6 +123,36 @@
    "name": "Threat actor AI agent intrusion transcripts (breachcache, 12 October 2026)",
    "reason": "Attacker operated agents directed by their operators; no authority layer sits in the attacker's path, and the account comes from a single unverified publisher.",
    "url": "https://breachcache.com/cases/hands-off-the-keyboard/"
+  },
+  {
+   "name": "OpenAI models bypass a GET only restriction and register a benefits portal account (incidents 19 to 20 June 2026, posted 9 October 2026)",
+   "reason": "OpenAI uses fictional names for the services and data sources, so no outside party can be identified, and no effect on the services is described. Revisit if the services are identified.",
+   "url": "https://alignment.openai.com/misalignment-reports/obtaining-public-statistics-with-disallowed-requests/"
+  },
+  {
+   "name": "Spain AEPD breach notification describing an attack executed through an AI agent (announced 14 September 2026, covered 13 October 2026)",
+   "reason": "Attacker operated agent with the organization and model unnamed; as with the DIVD case, no authority layer sits in the attacker's path.",
+   "url": "https://untrace.network/blog/ai-agent-data-breach-spain"
+  },
+  {
+   "name": "Salt Labs hijack of the Manus agent through a malicious email (October 2026)",
+   "reason": "Security research demonstration, not an incident in a live deployment.",
+   "url": "https://www.streetinsider.com/PRNewswire/Nearly+Half+of+Enterprises+Report+an+AI+Agent+Took+an+Unauthorized+Action+Last+Year%2C+Salt+Security+Research+Finds/27177443.html"
+  },
+  {
+   "name": "West Virginia Supreme Court questions counsel over AI errors in a parental rights brief (reported 13 October 2026)",
+   "reason": "Questioning at oral argument only; no order, sanction or findings yet. Revisit if the court issues one.",
+   "url": "https://www.abajournal.com/news/article/west-virginia-attorney-questioned-over-ai-errors-in-parental-rights-appeal"
+  },
+  {
+   "name": "DiffVibe report of a Claude agent wiping a firm's database (14 October 2026)",
+   "reason": "Restates the April 2026 PocketOS deletion already recorded as INC0014; no new facts.",
+   "url": "https://diffvibe.com/articles/claude-agent-wipes-firm-s-database-admits-i-violated-every-principle-088d2395"
+  },
+  {
+   "name": "GPT-5.6 erases local drives in full access mode (ai.cm, 13 October 2026)",
+   "reason": "Restates the incident already recorded as INC0033; no new facts.",
+   "url": "https://www.ai.cm/article/gpt-56-erases-local-drives-as-autonomous-coding-agents-overstep-safeguards/"
   }
  ],
  "rows": [
@@ -268,7 +298,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-13T15:01:07Z"
+   "snapshot_at": "2026-10-14T12:06:25Z"
   },
   {
    "incident_id": "INC0002",
@@ -411,7 +441,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-13T15:01:07Z"
+   "snapshot_at": "2026-10-14T12:06:25Z"
   },
   {
    "incident_id": "INC0003",
@@ -533,7 +563,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-13T15:01:07Z"
+   "snapshot_at": "2026-10-14T12:06:25Z"
   },
   {
    "incident_id": "INC0004",
@@ -670,7 +700,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-13T15:01:07Z"
+   "snapshot_at": "2026-10-14T12:06:25Z"
   },
   {
    "incident_id": "INC0005",
@@ -814,7 +844,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-13T15:01:07Z"
+   "snapshot_at": "2026-10-14T12:06:25Z"
   },
   {
    "incident_id": "INC0006",
@@ -961,7 +991,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-13T15:01:07Z"
+   "snapshot_at": "2026-10-14T12:06:25Z"
   },
   {
    "incident_id": "INC0007",
@@ -1066,7 +1096,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-13T15:01:07Z"
+   "snapshot_at": "2026-10-14T12:06:25Z"
   },
   {
    "incident_id": "INC0008",
@@ -1202,7 +1232,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-13T15:01:07Z"
+   "snapshot_at": "2026-10-14T12:06:25Z"
   },
   {
    "incident_id": "INC0009",
@@ -1314,7 +1344,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-13T15:01:07Z"
+   "snapshot_at": "2026-10-14T12:06:25Z"
   },
   {
    "incident_id": "INC0010",
@@ -1436,7 +1466,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-13T15:01:07Z"
+   "snapshot_at": "2026-10-14T12:06:25Z"
   },
   {
    "incident_id": "INC0011",
@@ -1578,7 +1608,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-13T15:01:07Z"
+   "snapshot_at": "2026-10-14T12:06:25Z"
   },
   {
    "incident_id": "INC0012",
@@ -1720,7 +1750,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-13T15:01:07Z"
+   "snapshot_at": "2026-10-14T12:06:25Z"
   },
   {
    "incident_id": "INC0013",
@@ -1852,7 +1882,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-13T15:01:07Z"
+   "snapshot_at": "2026-10-14T12:06:25Z"
   },
   {
    "incident_id": "INC0014",
@@ -2000,7 +2030,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-13T15:01:07Z"
+   "snapshot_at": "2026-10-14T12:06:25Z"
   },
   {
    "incident_id": "INC0015",
@@ -2137,7 +2167,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-13T15:01:07Z"
+   "snapshot_at": "2026-10-14T12:06:25Z"
   },
   {
    "incident_id": "INC0016",
@@ -2243,7 +2273,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-13T15:01:07Z"
+   "snapshot_at": "2026-10-14T12:06:25Z"
   },
   {
    "incident_id": "INC0017",
@@ -2373,7 +2403,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-13T15:01:07Z"
+   "snapshot_at": "2026-10-14T12:06:25Z"
   },
   {
    "incident_id": "INC0018",
@@ -2519,7 +2549,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-13T15:01:07Z"
+   "snapshot_at": "2026-10-14T12:06:25Z"
   },
   {
    "incident_id": "INC0019",
@@ -2653,7 +2683,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-13T15:01:07Z"
+   "snapshot_at": "2026-10-14T12:06:25Z"
   },
   {
    "incident_id": "INC0020",
@@ -2778,7 +2808,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-13T15:01:07Z"
+   "snapshot_at": "2026-10-14T12:06:25Z"
   },
   {
    "incident_id": "INC0021",
@@ -2903,7 +2933,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-13T15:01:07Z"
+   "snapshot_at": "2026-10-14T12:06:25Z"
   },
   {
    "incident_id": "INC0022",
@@ -3057,7 +3087,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-13T15:01:07Z"
+   "snapshot_at": "2026-10-14T12:06:25Z"
   },
   {
    "incident_id": "INC0023",
@@ -3181,7 +3211,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-13T15:01:07Z"
+   "snapshot_at": "2026-10-14T12:06:25Z"
   },
   {
    "incident_id": "INC0024",
@@ -3317,7 +3347,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-13T15:01:07Z"
+   "snapshot_at": "2026-10-14T12:06:25Z"
   },
   {
    "incident_id": "INC0025",
@@ -3459,7 +3489,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-13T15:01:07Z"
+   "snapshot_at": "2026-10-14T12:06:25Z"
   },
   {
    "incident_id": "INC0026",
@@ -3594,7 +3624,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-13T15:01:07Z"
+   "snapshot_at": "2026-10-14T12:06:25Z"
   },
   {
    "incident_id": "INC0027",
@@ -3730,7 +3760,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-13T15:01:07Z"
+   "snapshot_at": "2026-10-14T12:06:25Z"
   },
   {
    "incident_id": "INC0028",
@@ -3855,7 +3885,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-13T15:01:07Z"
+   "snapshot_at": "2026-10-14T12:06:25Z"
   },
   {
    "incident_id": "INC0029",
@@ -3977,7 +4007,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-13T15:01:07Z"
+   "snapshot_at": "2026-10-14T12:06:25Z"
   },
   {
    "incident_id": "INC0030",
@@ -4093,7 +4123,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-13T15:01:07Z"
+   "snapshot_at": "2026-10-14T12:06:25Z"
   },
   {
    "incident_id": "INC0031",
@@ -4210,7 +4240,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-13T15:01:07Z"
+   "snapshot_at": "2026-10-14T12:06:25Z"
   },
   {
    "incident_id": "INC0032",
@@ -4317,7 +4347,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-13T15:01:07Z"
+   "snapshot_at": "2026-10-14T12:06:25Z"
   },
   {
    "incident_id": "INC0033",
@@ -4328,7 +4358,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-13T15:01:07Z",
+   "snapshot_at": "2026-10-14T12:06:25Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -4456,14 +4486,15 @@
   },
   {
    "incident_id": "INC0034",
-   "last_updated": "2026-10-13",
-   "published_version": 1,
+   "last_updated": "2026-10-14",
+   "published_version": 2,
    "report_ids": [
-    "R0058"
+    "R0058",
+    "R0062"
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-13T15:01:07Z",
+   "snapshot_at": "2026-10-14T12:06:25Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -4483,7 +4514,7 @@
      "statement": "Rule 11 required counsel to certify, after a reasonable inquiry, that the legal contentions were warranted by existing law. The court found he did not confirm his citations.",
      "status": "exceeded",
      "unknown": [
-      "Which AI product was used; the order does not name it"
+      "Which AI product was used; the order does not name it, and the product name rests on counsel's statement as reported by the press"
      ]
     },
     "cluster": "AI drafted court filings with fabricated citations (2026)",
@@ -4524,7 +4555,7 @@
      "responder_action": "Verify or remove each citation and certify before filing.",
      "responsible_role": "Signing attorney and local counsel (proposed roles)"
     },
-    "evidence_note": "Court order with findings, including counsel's admission that AI drafted the first opposition.",
+    "evidence_note": "Court order with findings, including counsel's admission that AI drafted the first opposition. The product name comes from press reporting of counsel's statement.",
     "evidence_strength": "strong",
     "facts": [
      "Counsel admitted pro hac vice filed an opposition in which approximately half of the citations in the memorandum contained an error. [S53 p. 11]",
@@ -4532,7 +4563,8 @@
      "Counsel admitted using AI to draft that opposition, saying he believed the enterprise-level version of the AI software he used did not hallucinate cases. [S53 p. 6]",
      "Later briefs also contained citation errors, including a case the court could not find in Westlaw, Lexis, or Bloomberg. [S53 p. 13]",
      "The court found that continued filing of false or misleading citations after notice was not mere carelessness. [S53 p. 15]",
-     "The court ordered counsel's firm to pay fees and costs not exceeding 10,000 US dollars and revoked counsel's pro hac vice status. [S53 p. 18]"
+     "The court ordered counsel's firm to pay fees and costs not exceeding 10,000 US dollars and revoked counsel's pro hac vice status. [S53 p. 18]",
+     "Massachusetts Lawyers Weekly reports that counsel acknowledged preparing the brief using AI-assisted legal research utilizing the highest-grade enterprise version of Claude. [S57]"
     ],
     "incident_date": "21 November 2025 onward",
     "incident_date_basis": "The order says the first opposition was filed within five hours of the 21 November 2025 motion to strike; later briefs followed over several months.",
@@ -4579,10 +4611,19 @@
       "retrieved": "2026-10-13",
       "type": "primary (court order)",
       "url": "https://storage.courtlistener.com/recap/gov.uscourts.mad.288446/gov.uscourts.mad.288446.155.0.pdf"
+     },
+     {
+      "id": "S57",
+      "name": "Massachusetts Lawyers Weekly: Lawyer forfeits pro hac vice status in AI debacle",
+      "published": "2026-10-13",
+      "report_id": "R0062",
+      "retrieved": "2026-10-14",
+      "type": "secondary (legal press)",
+      "url": "https://masslawyersweekly.com/2026/10/13/lawyer-ai-citations-pro-hac-vice-sanctions/"
      }
     ],
     "summary": "Out of state counsel filed an opposition, drafted with AI, in which about half the citations contained errors, including a fictitious Westlaw citation. Later briefs repeated the problem after the defendants raised it. The court sanctioned his firm and revoked his admission to the case.",
-    "system": "Enterprise-level AI drafting software (product not named in the order)",
+    "system": "Claude, enterprise version, per counsel as reported by Massachusetts Lawyers Weekly; the order refers only to enterprise-level AI software",
     "title": "AI drafted brief with fictitious and misattributed citations; federal court revokes counsel's admission to the case",
     "why_it_mattered": "Fabricated and misattributed authority reached a federal court in a case over a fatal crash, and kept arriving after counsel was warned. Counsel relied on the tool's tier instead of checking.",
     "workflow": "Drafting and filing oppositions in federal civil litigation"
@@ -4597,7 +4638,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-13T15:01:07Z",
+   "snapshot_at": "2026-10-14T12:06:25Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -4722,6 +4763,153 @@
     "title": "Summary judgment brief cites a nonexistent case and fake quotes; federal court publicly reprimands counsel",
     "why_it_mattered": "Fabricated authority reached a federal court in a district whose own rule required review of AI generated content. The court found that a reprimand alone, or a fine alone, would not be enough to deter.",
     "workflow": "Drafting and filing a summary judgment response in federal civil litigation"
+   }
+  },
+  {
+   "incident_id": "INC0036",
+   "last_updated": "2026-10-14",
+   "published_version": 1,
+   "report_ids": [
+    "R0060",
+    "R0061"
+   ],
+   "review_status": "published",
+   "schema_version": 1,
+   "snapshot_at": "2026-10-14T12:06:25Z",
+   "published": {
+    "actions": {
+     "attempted": [],
+     "completed": [
+      "Filing of a motion to dismiss brief citing nonexistent cases and misattributed quotes (order)",
+      "Filing of a response to the order to show cause containing a false citation (order)",
+      "Submission of a proposed reply brief citing a nonexistent case (order)"
+     ]
+    },
+    "authority": {
+     "absent": [
+      "Verification of the citations before filing (order)"
+     ],
+     "basis": "Documented: the court's opinion finds counsel misused AI in three filings and did not verify his citations. Source: Court's sanctions opinion",
+     "present": [
+      "Rule 11 certification duty for signed filings (order)",
+      "Court's order to show cause and written warnings after the first filing (order)"
+     ],
+     "statement": "Rule 11 required counsel to read and confirm the authorities he cited. The court found he did not, and that he acted in bad faith.",
+     "status": "exceeded",
+     "unknown": [
+      "Which AI tool produced each false citation; the order does not resolve it"
+     ]
+    },
+    "cluster": "AI drafted court filings with fabricated citations (2026)",
+    "consequences": [
+     "Default judgment entered against counsel's client (order)",
+     "Client's motion to dismiss papers stricken (order)",
+     "38,877.59 US dollars in attorneys' fees and costs payable by counsel (fee order)"
+    ],
+    "controls": [
+     {
+      "basis": "documented",
+      "control": "Signing attorney's Rule 11 certification",
+      "failure": "Counsel filed without reading the cases he cited."
+     },
+     {
+      "basis": "documented",
+      "control": "Correction after notice from opposing counsel",
+      "failure": "Counsel said he would correct the brief but never did."
+     },
+     {
+      "basis": "documented",
+      "control": "Court's order to show cause and warnings",
+      "failure": "Counsel filed two more submissions with false citations after notice."
+     }
+    ],
+    "defect_category": "external_output_unverified",
+    "defect_label": "Unverified AI output released to an outside party",
+    "deployment": "deployed",
+    "disclosed_basis": "Opinion and order sanctioning counsel, followed by a fee award opinion dated 9 October 2026",
+    "disclosed_on": "2026-02-05",
+    "enforcement": {
+     "authority_requirement": "The signing attorney certifies that every citation was checked against its source before filing.",
+     "condition": "Applies to any filing with an unverified citation.",
+     "decision_state": "Block",
+     "enforcement_point": "Signature and electronic filing of each paper.",
+     "next_event": "Filing proceeds after certification.",
+     "reason": "The filing contains citations not verified against their sources.",
+     "required_response": "Return the filing with unverified citations listed.",
+     "responder_action": "Verify or remove each citation and certify before filing.",
+     "responsible_role": "Signing attorney (proposed role)"
+    },
+    "evidence_note": "Two court opinions with findings, including a finding that counsel misused AI in three filings, and counsel's own hearing account of running the brief through AI review tools.",
+    "evidence_strength": "strong",
+    "facts": [
+     "Opposing counsel alerted the court that the motion to dismiss brief cited at least thirteen cases that did not exist and eight real cases for quotes they did not contain. [S55 p. 3]",
+     "Counsel told the court he found cases through vLex, Google Scholar and Google search, then ran the brief through three rounds of AI review, including Paxton AI, and never cite checked it himself. [S55 p. 19]",
+     "The court found counsel misused AI in three separate filings, which resulted in the submission of nonexistent cases and misattributed quotes. [S55 p. 23]",
+     "The court found counsel relied on AI to draft his response to the order to show cause, which contained another faulty citation, and that a later proposed reply brief contained another nonexistent case. [S55 p. 30]",
+     "The court found the misconduct was in bad faith, struck the client's motion to dismiss papers and entered default judgment against the client. [S55 pp. 30 to 33]",
+     "On 9 October 2026 the court ordered counsel to pay 38,877.59 US dollars in attorneys' fees and costs within 30 days. [S56 p. 18]"
+    ],
+    "incident_date": "20 June 2025",
+    "incident_date_basis": "The order dates the motion to dismiss filing to 20 June 2025. The two later filings came before the 22 August 2025 hearing.",
+    "inferences": [
+     "A citation verification gate at filing would have held the motion to dismiss brief before it reached the court.",
+     "Written warnings from the court did not stop two further filings with false citations. Nothing enforced verification at the moment of filing."
+    ],
+    "location": {
+     "basis": "The filings were delivered to the US District Court for the Southern District of New York, and both opinions are dated at New York, New York. Pin placed in Lower Manhattan as the reference point for the court.",
+     "documented": true,
+     "kind": "jurisdiction",
+     "label": "New York, New York (US District Court, Southern District of New York)",
+     "lat": 40.7143,
+     "lon": -74.0021,
+     "status": "established"
+    },
+    "organization": "Counsel for defendant Affable Avenue LLC; affected: US District Court for the Southern District of New York, Affable Avenue LLC, and the other parties",
+    "rules": [
+     {
+      "applicability": "The basis for the sanctions, together with the court's inherent powers.",
+      "issuer": "US federal courts",
+      "level": "national",
+      "name": "Federal Rule of Civil Procedure 11",
+      "scope": "Signed filings in federal civil cases",
+      "uncertainty": "None noted.",
+      "url": "https://storage.courtlistener.com/recap/gov.uscourts.nysd.633195/gov.uscourts.nysd.633195.227.0.pdf"
+     },
+     {
+      "applicability": "The basis for the fee award, after the court found counsel multiplied the proceedings unreasonably and vexatiously.",
+      "issuer": "US Congress",
+      "level": "national",
+      "name": "28 U.S.C. section 1927",
+      "scope": "Attorneys practicing in US federal courts",
+      "uncertainty": "None noted.",
+      "url": "https://storage.courtlistener.com/recap/gov.uscourts.nysd.633195/gov.uscourts.nysd.633195.364.0.pdf"
+     }
+    ],
+    "sources": [
+     {
+      "id": "S55",
+      "name": "US District Court, S.D.N.Y.: Flycatcher Corp. v. Affable Avenue LLC, opinion and order sanctioning counsel",
+      "published": "2026-02-05",
+      "report_id": "R0060",
+      "retrieved": "2026-10-14",
+      "type": "primary (court order)",
+      "url": "https://storage.courtlistener.com/recap/gov.uscourts.nysd.633195/gov.uscourts.nysd.633195.227.0.pdf"
+     },
+     {
+      "id": "S56",
+      "name": "US District Court, S.D.N.Y.: Flycatcher Corp. v. Ozmos Company LLC, opinion and order on attorneys' fees",
+      "published": "2026-10-09",
+      "report_id": "R0061",
+      "retrieved": "2026-10-14",
+      "type": "primary (court order)",
+      "url": "https://storage.courtlistener.com/recap/gov.uscourts.nysd.633195/gov.uscourts.nysd.633195.364.0.pdf"
+     }
+    ],
+    "summary": "Counsel for a defendant in a trademark case filed a motion to dismiss brief with nonexistent cases and misattributed quotes, then filed two more papers that each contained another false citation. The court found he misused AI in all three filings and acted in bad faith. It entered default judgment against his client and later ordered him to pay 38,877.59 US dollars in fees.",
+    "system": "Generative AI research and cite checking tools, including vLex and Paxton AI, per counsel's account at the hearing",
+    "title": "AI assisted motion to dismiss cites nonexistent cases; federal court enters default judgment against counsel's client",
+    "why_it_mattered": "The sanction fell on the client as well as the lawyer: a default judgment ended the client's defense after counsel kept filing unverified citations despite the court's warnings.",
+    "workflow": "Drafting and filing motion to dismiss papers in federal trademark litigation"
    }
   }
  ]
