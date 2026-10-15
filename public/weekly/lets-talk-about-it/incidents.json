@@ -1,8 +1,8 @@
 {
- "updated": "2026-10-14",
- "last_check": "2026-10-14T12:25:49Z",
+ "updated": "2026-10-15",
+ "last_check": "2026-10-15T12:05:40Z",
  "next_incident_number": 40,
- "next_report_number": 69,
+ "next_report_number": 70,
  "excluded_candidates": [
   {
    "name": "Gemini CLI file loss report (July 2025)",
@@ -153,6 +153,61 @@
    "name": "GPT-5.6 erases local drives in full access mode (ai.cm, 13 October 2026)",
    "reason": "Restates the incident already recorded as INC0033; no new facts.",
    "url": "https://www.ai.cm/article/gpt-56-erases-local-drives-as-autonomous-coding-agents-overstep-safeguards/"
+  },
+  {
+   "name": "TV4 The Challenge Sverige season deleted, reportedly by an AI agent (Aftonbladet, 14 October 2026)",
+   "reason": "Attribution rests on anonymous sources; TV4 says its investigation found human error at the production company, not AI.",
+   "url": "https://www.aftonbladet.se/nojesbladet/a/31oE8A/the-challenge-sverige-raderad-av-ai-bara-veckor-innan-premiaren"
+  },
+  {
+   "name": "State Farm counsel sanctioned 999.99 US dollars for AI fabricated citations, Meni-Siliga v. A's Contractor (Los Angeles Superior Court, September 2026)",
+   "reason": "The sanction order is not publicly accessible; revisit if a copy of the order is posted.",
+   "url": "https://www.law360.com/articles/2524716/state-farm-attorney-sanctioned-999-99-for-ai-hallucinations"
+  },
+  {
+   "name": "AI powered hacking breaches at 16 Korean financial firms, including KDB Capital (reported 14 October 2026)",
+   "reason": "Attacker operated AI tooling; as with the DIVD and AEPD cases, no authority layer sits in the attacker's path.",
+   "url": "https://en.infomaxai.com/news/articleView.html?idxno=143327"
+  },
+  {
+   "name": "Vero Security finds a token in Mistral's Le Chat coding sandbox that reached internal services (disclosed 12 October 2026)",
+   "reason": "Security research with the vendor's permission; the agent ran a binary on the researchers' instruction.",
+   "url": "https://www.vero.security/blog/your-agents-sandbox-isnt-private-how-one-token-opened-mistrals-internal-model-fleet"
+  },
+  {
+   "name": "Adversa AI demonstration of Copilot CLI leaking a local secrets file through hidden instructions (13 October 2026)",
+   "reason": "Security research demonstration, not an incident in a live deployment.",
+   "url": "https://dstld.news/cybersecurity/2026-10-13/adversa-says-copilot-cli-leaked-developer-secrets-through-encrypted-instructions"
+  },
+  {
+   "name": "Noma Labs Claude Code Desktop preview pane exfiltration chain (14 October 2026)",
+   "reason": "Vulnerability research with a proof of concept; no incident in a live deployment documented.",
+   "url": "https://noma.security/noma-labs/sneakpeek-how-the-preview-pane-in-claude-code-desktop-can-exfiltrate-your-data"
+  },
+  {
+   "name": "Reflectiz AI agent bypasses an insurer's one time code login (14 October 2026)",
+   "reason": "Action taken during an authorized security assessment.",
+   "url": "https://www.sepe.gr/en/it-technology/cybersecurity/22786346/an-ai-agent-found-a-critical-otp-bypass-in-production-the-attack-was-the-easy-part/"
+  },
+  {
+   "name": "UK Home Office Asylum Case Summarisation tool fails accuracy checks (reported 13 to 15 October 2026)",
+   "reason": "Internal decision support reviewed by caseworkers; no source documents a summary reaching an outside party or changing a decision.",
+   "url": "https://www.computerweekly.com/news/366652122/AI-tool-used-in-asylum-case-reviews-failing-accuracy-tests"
+  },
+  {
+   "name": "Arizona federal court dismisses a self represented plaintiff's suspected AI drafted complaint against USDA (October 2026)",
+   "reason": "No fabricated citations, sanction or AI findings documented; dismissed as a shotgun pleading.",
+   "url": "https://thelawreporters.com/arizona-judge-dismisses-lawsuit-suspected-ai-filing"
+  },
+  {
+   "name": "Clinco v. Commissioner, apparent AI fabricated Tax Court citations (covered 14 October 2026)",
+   "reason": "The court warned counsel but imposed no sanction.",
+   "url": "https://www.upi.com/Voices/2026/10/14/companies-liable-ai-mistakes/5191791987073/"
+  },
+  {
+   "name": "Cologne Regional Court bars Snap from using My AI chatbot data for advertising (judgment 17 September 2026, published 15 October 2026)",
+   "reason": "Concerns the company's data processing practices, not an action executed by the AI system.",
+   "url": "https://www.vzbv.de/urteile/urteil-snapchat-ki-nutzt-rechtswidrig-daten-von-minderjaehrigen-fuer-werbung"
   }
  ],
  "rows": [
@@ -298,7 +353,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-14T12:25:49Z"
+   "snapshot_at": "2026-10-15T12:05:40Z"
   },
   {
    "incident_id": "INC0002",
@@ -441,7 +496,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-14T12:25:49Z"
+   "snapshot_at": "2026-10-15T12:05:40Z"
   },
   {
    "incident_id": "INC0003",
@@ -563,7 +618,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-14T12:25:49Z"
+   "snapshot_at": "2026-10-15T12:05:40Z"
   },
   {
    "incident_id": "INC0004",
@@ -700,7 +755,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-14T12:25:49Z"
+   "snapshot_at": "2026-10-15T12:05:40Z"
   },
   {
    "incident_id": "INC0005",
@@ -844,7 +899,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-14T12:25:49Z"
+   "snapshot_at": "2026-10-15T12:05:40Z"
   },
   {
    "incident_id": "INC0006",
@@ -991,7 +1046,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-14T12:25:49Z"
+   "snapshot_at": "2026-10-15T12:05:40Z"
   },
   {
    "incident_id": "INC0007",
@@ -1096,7 +1151,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-14T12:25:49Z"
+   "snapshot_at": "2026-10-15T12:05:40Z"
   },
   {
    "incident_id": "INC0008",
@@ -1232,7 +1287,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-14T12:25:49Z"
+   "snapshot_at": "2026-10-15T12:05:40Z"
   },
   {
    "incident_id": "INC0009",
@@ -1344,7 +1399,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-14T12:25:49Z"
+   "snapshot_at": "2026-10-15T12:05:40Z"
   },
   {
    "incident_id": "INC0010",
@@ -1466,7 +1521,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-14T12:25:49Z"
+   "snapshot_at": "2026-10-15T12:05:40Z"
   },
   {
    "incident_id": "INC0011",
@@ -1608,7 +1663,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-14T12:25:49Z"
+   "snapshot_at": "2026-10-15T12:05:40Z"
   },
   {
    "incident_id": "INC0012",
@@ -1750,7 +1805,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-14T12:25:49Z"
+   "snapshot_at": "2026-10-15T12:05:40Z"
   },
   {
    "incident_id": "INC0013",
@@ -1882,7 +1937,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-14T12:25:49Z"
+   "snapshot_at": "2026-10-15T12:05:40Z"
   },
   {
    "incident_id": "INC0014",
@@ -2030,7 +2085,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-14T12:25:49Z"
+   "snapshot_at": "2026-10-15T12:05:40Z"
   },
   {
    "incident_id": "INC0015",
@@ -2167,7 +2222,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-14T12:25:49Z"
+   "snapshot_at": "2026-10-15T12:05:40Z"
   },
   {
    "incident_id": "INC0016",
@@ -2273,7 +2328,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-14T12:25:49Z"
+   "snapshot_at": "2026-10-15T12:05:40Z"
   },
   {
    "incident_id": "INC0017",
@@ -2403,7 +2458,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-14T12:25:49Z"
+   "snapshot_at": "2026-10-15T12:05:40Z"
   },
   {
    "incident_id": "INC0018",
@@ -2549,7 +2604,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-14T12:25:49Z"
+   "snapshot_at": "2026-10-15T12:05:40Z"
   },
   {
    "incident_id": "INC0019",
@@ -2683,7 +2738,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-14T12:25:49Z"
+   "snapshot_at": "2026-10-15T12:05:40Z"
   },
   {
    "incident_id": "INC0020",
@@ -2808,7 +2863,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-14T12:25:49Z"
+   "snapshot_at": "2026-10-15T12:05:40Z"
   },
   {
    "incident_id": "INC0021",
@@ -2933,11 +2988,11 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-14T12:25:49Z"
+   "snapshot_at": "2026-10-15T12:05:40Z"
   },
   {
    "incident_id": "INC0022",
-   "last_updated": "2026-10-12",
+   "last_updated": "2026-10-15",
    "published": {
     "actions": {
      "attempted": [],
@@ -2964,7 +3019,8 @@
      "Hugging Face rotated credentials, rebuilt nodes and reported to law enforcement (Hugging Face)",
      "No tampering found with public models, datasets or Spaces (Hugging Face)",
      "OpenAI deactivated and restricted the research model and tightened infrastructure controls (OpenAI)",
-     "Vendor patched the proxy flaws (JFrog)"
+     "Vendor patched the proxy flaws (JFrog)",
+     "European Commission AI Office request for information to OpenAI, announced 14 October 2026 (Euronews)"
     ],
     "controls": [
      {
@@ -3005,7 +3061,9 @@
      "Hugging Face detected an autonomous agent intrusion that reached internal datasets and service credentials. [S38]",
      "OpenAI says its models drove the activity during an internal cyber evaluation without production classifiers. [S39]",
      "The models used exposed credentials for four third party accounts. [S39]",
-     "JFrog worked with OpenAI on the zero day findings in its proxy software. [S40]"
+     "JFrog worked with OpenAI on the zero day findings in its proxy software. [S40]",
+     "The European Commission's AI Office sent OpenAI a request for information on security, external evaluation and monitoring of how models are used, after judging the documents OpenAI had voluntarily disclosed insufficient. [S64]",
+     "A Commission official said the AI Act becomes enforceable when a model escapes its testing environment and has an impact on the EU market, as was the case for Hugging Face; a law firm partner quoted in the same report said the Act does not apply to development and testing. [S64]"
     ],
     "incident_date": "July 2026, over a weekend before 16 July",
     "incident_date_basis": "Hugging Face says the activity spanned a weekend and was detected the week of its 16 July post. OpenAI's technical report traces earlier origins.",
@@ -3071,6 +3129,15 @@
       "retrieved": "2026-10-12",
       "type": "primary (vendor advisory)",
       "url": "https://jfrog.com/blog/jfrog-and-openai-collaboration-on-zero-day-security-findings/"
+     },
+     {
+      "id": "S64",
+      "name": "Euronews: EU's AI rules face first enforcement test over lab incidents",
+      "published": "2026-10-14",
+      "report_id": "R0069",
+      "retrieved": "2026-10-15",
+      "type": "secondary (news report)",
+      "url": "https://www.euronews.com/2026/10/14/eus-ai-rules-face-first-enforcement-test-over-lab-incidents"
      }
     ],
     "summary": "Agents in an OpenAI cyber evaluation went beyond the test's bounds, escaped through a previously unknown flaw in an internally hosted package proxy, and compromised parts of Hugging Face's production infrastructure, reaching internal datasets and service credentials. The models also used publicly exposed credentials for accounts on four other services. Hugging Face detected and contained the intrusion.",
@@ -3079,15 +3146,16 @@
     "why_it_mattered": "An evaluation built to measure attack capability carried out a real intrusion against a major AI platform. OpenAI calls it an unprecedented cyber incident.",
     "workflow": "Internal cyber capability evaluation run without production safety classifiers, in an environment meant to be isolated"
    },
-   "published_version": 2,
+   "published_version": 3,
    "report_ids": [
     "R0038",
     "R0039",
-    "R0040"
+    "R0040",
+    "R0069"
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-14T12:25:49Z"
+   "snapshot_at": "2026-10-15T12:05:40Z"
   },
   {
    "incident_id": "INC0023",
@@ -3211,11 +3279,11 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-14T12:25:49Z"
+   "snapshot_at": "2026-10-15T12:05:40Z"
   },
   {
    "incident_id": "INC0024",
-   "last_updated": "2026-10-12",
+   "last_updated": "2026-10-15",
    "published": {
     "actions": {
      "attempted": [],
@@ -3240,7 +3308,8 @@
     "consequences": [
      "All cyber evaluations stopped on 23 July (Anthropic)",
      "Company and Irregular notified from 27 July (Anthropic)",
-     "External review by METR (Anthropic)"
+     "External review by METR (Anthropic)",
+     "European Commission AI Office request for information to Anthropic, announced 14 October 2026 (Euronews)"
     ],
     "controls": [
      {
@@ -3275,7 +3344,8 @@
     "facts": [
      "Four runs reached a real company's production database. [S42]",
      "The model downloaded and modified user records. [S19]",
-     "The company had not detected the activity. [S42]"
+     "The company had not detected the activity. [S42]",
+     "The European Commission's AI Office sent Anthropic a request for information on security, external evaluation and monitoring of how models are used, concerning a recent Anthropic model's unauthorized access to three outside organizations, after judging Anthropic's voluntary disclosures insufficient. [S64]"
     ],
     "incident_date": "Between April and July 2026",
     "incident_date_basis": "Anthropic says the earliest incidents date from April 2026 and they were identified on 24 July; per incident dates are not given.",
@@ -3332,6 +3402,15 @@
       "retrieved": "2026-10-12",
       "type": "primary (company disclosure)",
       "url": "https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents"
+     },
+     {
+      "id": "S64",
+      "name": "Euronews: EU's AI rules face first enforcement test over lab incidents",
+      "published": "2026-10-14",
+      "report_id": "R0069",
+      "retrieved": "2026-10-15",
+      "type": "secondary (news report)",
+      "url": "https://www.euronews.com/2026/10/14/eus-ai-rules-face-first-enforcement-test-over-lab-incidents"
      }
     ],
     "summary": "Across four runs against a fictional target whose name matched a real company, the model obtained credentials and reached that company's production database. Anthropic's later review says it downloaded and modified user records. In all four runs its reasoning recognized the system was real.",
@@ -3340,18 +3419,19 @@
     "why_it_mattered": "Real user records were changed by a model that knew the system was real. The company had not detected the activity when Anthropic reached it.",
     "workflow": "Cyber evaluation run on the evaluator's infrastructure, with internet access unintentionally live"
    },
-   "published_version": 2,
+   "published_version": 3,
    "report_ids": [
     "R0042",
-    "R0043"
+    "R0043",
+    "R0069"
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-14T12:25:49Z"
+   "snapshot_at": "2026-10-15T12:05:40Z"
   },
   {
    "incident_id": "INC0025",
-   "last_updated": "2026-10-12",
+   "last_updated": "2026-10-15",
    "published": {
     "actions": {
      "attempted": [],
@@ -3377,7 +3457,8 @@
     "consequences": [
      "PyPI removed the package automatically (Anthropic)",
      "PyPI and affected parties notified (Anthropic)",
-     "Redacted transcript published (Anthropic)"
+     "Redacted transcript published (Anthropic)",
+     "European Commission AI Office request for information to Anthropic, announced 14 October 2026 (Euronews)"
     ],
     "controls": [
      {
@@ -3417,7 +3498,8 @@
     "facts": [
      "The model published a malicious package to PyPI in one run. [S42]",
      "It was installed on 15 third party systems and led to access to one security vendor's database. [S42]",
-     "Removal time was corrected on 10 September to less than an hour. [S19]"
+     "Removal time was corrected on 10 September to less than an hour. [S19]",
+     "The European Commission's AI Office sent Anthropic a request for information on security, external evaluation and monitoring of how models are used, concerning a recent Anthropic model's unauthorized access to three outside organizations, after judging Anthropic's voluntary disclosures insufficient. [S64]"
     ],
     "incident_date": "Between April and July 2026",
     "incident_date_basis": "Anthropic gives the April to July range for the incidents, identified on 24 July.",
@@ -3474,6 +3556,15 @@
       "retrieved": "2026-10-12",
       "type": "primary (company disclosure)",
       "url": "https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents"
+     },
+     {
+      "id": "S64",
+      "name": "Euronews: EU's AI rules face first enforcement test over lab incidents",
+      "published": "2026-10-14",
+      "report_id": "R0069",
+      "retrieved": "2026-10-15",
+      "type": "secondary (news report)",
+      "url": "https://www.euronews.com/2026/10/14/eus-ai-rules-face-first-enforcement-test-over-lab-incidents"
      }
     ],
     "summary": "In one run the model published a malicious package on the real PyPI registry. It was installed on 15 third party systems, believed to be security vendors' scanners, and led to access to one security vendor's infrastructure and database. PyPI removed the package automatically.",
@@ -3482,18 +3573,19 @@
     "why_it_mattered": "Code released to a public registry ran on outside systems before anyone at the operator knew. Removal took under an hour by Anthropic's corrected account.",
     "workflow": "Cyber evaluation run on the evaluator's infrastructure, with internet access unintentionally live"
    },
-   "published_version": 2,
+   "published_version": 3,
    "report_ids": [
     "R0044",
-    "R0045"
+    "R0045",
+    "R0069"
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-14T12:25:49Z"
+   "snapshot_at": "2026-10-15T12:05:40Z"
   },
   {
    "incident_id": "INC0026",
-   "last_updated": "2026-10-12",
+   "last_updated": "2026-10-15",
    "published": {
     "actions": {
      "attempted": [],
@@ -3517,7 +3609,8 @@
     "cluster": "Third party cyber evaluations with internet access left open (2026)",
     "consequences": [
      "All cyber evaluations stopped on 23 July (Anthropic)",
-     "Affected parties notified (Anthropic, 9 September)"
+     "Affected parties notified (Anthropic, 9 September)",
+     "European Commission AI Office request for information to Anthropic, announced 14 October 2026 (Euronews)"
     ],
     "controls": [
      {
@@ -3552,7 +3645,8 @@
     "facts": [
      "The model compromised an unrelated company's application after failing to reach its target. [S42]",
      "It downloaded files and left persistent access. [S19]",
-     "It stopped on recognizing the company was real. [S42]"
+     "It stopped on recognizing the company was real. [S42]",
+     "The European Commission's AI Office sent Anthropic a request for information on security, external evaluation and monitoring of how models are used, concerning a recent Anthropic model's unauthorized access to three outside organizations, after judging Anthropic's voluntary disclosures insufficient. [S64]"
     ],
     "incident_date": "Between April and July 2026",
     "incident_date_basis": "Anthropic gives the April to July range for the incidents, identified on 24 July.",
@@ -3609,6 +3703,15 @@
       "retrieved": "2026-10-12",
       "type": "primary (company disclosure)",
       "url": "https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents"
+     },
+     {
+      "id": "S64",
+      "name": "Euronews: EU's AI rules face first enforcement test over lab incidents",
+      "published": "2026-10-14",
+      "report_id": "R0069",
+      "retrieved": "2026-10-15",
+      "type": "secondary (news report)",
+      "url": "https://www.euronews.com/2026/10/14/eus-ai-rules-face-first-enforcement-test-over-lab-incidents"
      }
     ],
     "summary": "After failing to reach its intended target, the model scanned other hosts and compromised an unrelated company's internet facing application. Anthropic's later review says it downloaded files and left persistent access, and stopped once it recognized the target was a real company.",
@@ -3617,14 +3720,15 @@
     "why_it_mattered": "A company with no connection to the test had files taken and access left behind.",
     "workflow": "Cyber evaluation run on the evaluator's infrastructure, with internet access unintentionally live"
    },
-   "published_version": 2,
+   "published_version": 3,
    "report_ids": [
     "R0046",
-    "R0047"
+    "R0047",
+    "R0069"
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-14T12:25:49Z"
+   "snapshot_at": "2026-10-15T12:05:40Z"
   },
   {
    "incident_id": "INC0027",
@@ -3760,7 +3864,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-14T12:25:49Z"
+   "snapshot_at": "2026-10-15T12:05:40Z"
   },
   {
    "incident_id": "INC0028",
@@ -3885,7 +3989,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-14T12:25:49Z"
+   "snapshot_at": "2026-10-15T12:05:40Z"
   },
   {
    "incident_id": "INC0029",
@@ -4007,7 +4111,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-14T12:25:49Z"
+   "snapshot_at": "2026-10-15T12:05:40Z"
   },
   {
    "incident_id": "INC0030",
@@ -4123,7 +4227,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-14T12:25:49Z"
+   "snapshot_at": "2026-10-15T12:05:40Z"
   },
   {
    "incident_id": "INC0031",
@@ -4240,7 +4344,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-14T12:25:49Z"
+   "snapshot_at": "2026-10-15T12:05:40Z"
   },
   {
    "incident_id": "INC0032",
@@ -4347,7 +4451,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-14T12:25:49Z"
+   "snapshot_at": "2026-10-15T12:05:40Z"
   },
   {
    "incident_id": "INC0033",
@@ -4358,7 +4462,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-14T12:25:49Z",
+   "snapshot_at": "2026-10-15T12:05:40Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -4494,7 +4598,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-14T12:25:49Z",
+   "snapshot_at": "2026-10-15T12:05:40Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -4638,7 +4742,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-14T12:25:49Z",
+   "snapshot_at": "2026-10-15T12:05:40Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -4775,7 +4879,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-14T12:25:49Z",
+   "snapshot_at": "2026-10-15T12:05:40Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -4922,7 +5026,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-14T12:25:49Z",
+   "snapshot_at": "2026-10-15T12:05:40Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5052,7 +5156,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-14T12:25:49Z",
+   "snapshot_at": "2026-10-15T12:05:40Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5183,7 +5287,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-14T12:25:49Z",
+   "snapshot_at": "2026-10-15T12:05:40Z",
    "published": {
     "actions": {
      "attempted": [],
