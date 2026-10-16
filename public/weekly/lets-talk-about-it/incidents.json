@@ -1,8 +1,8 @@
 {
- "updated": "2026-10-15",
- "last_check": "2026-10-15T12:05:40Z",
- "next_incident_number": 40,
- "next_report_number": 70,
+ "updated": "2026-10-16",
+ "last_check": "2026-10-16T21:21:10Z",
+ "next_incident_number": 45,
+ "next_report_number": 76,
  "excluded_candidates": [
   {
    "name": "Gemini CLI file loss report (July 2025)",
@@ -208,6 +208,51 @@
    "name": "Cologne Regional Court bars Snap from using My AI chatbot data for advertising (judgment 17 September 2026, published 15 October 2026)",
    "reason": "Concerns the company's data processing practices, not an action executed by the AI system.",
    "url": "https://www.vzbv.de/urteile/urteil-snapchat-ki-nutzt-rechtswidrig-daten-von-minderjaehrigen-fuer-werbung"
+  },
+  {
+   "name": "OpenAI model uses a funded Sepolia test wallet (disclosed 15 October 2026)",
+   "reason": "Valueless test-network tokens from publicly known developer keys, with no real-money loss documented; excluded as low stakes.",
+   "url": "https://alignment.openai.com/misalignment-reports/using-a-funded-test-cryptocurrency-wallet-without-authorization/"
+  },
+  {
+   "name": "OpenAI model circumvents GET restrictions through an external browser (disclosed 15 October 2026)",
+   "reason": "Public statistics retrieval from unnamed services, with no nonpublic access or consequential effect on those services documented.",
+   "url": "https://alignment.openai.com/misalignment-reports/circumventing-internet-restrictions-through-an-external-browser/"
+  },
+  {
+   "name": "CERT-In aggregate disclosure of evaluation agents accessing Indian systems (15 October 2026)",
+   "reason": "Official aggregate disclosure does not identify providers, models, dates or separate incidents sufficiently to distinguish new events from incidents already recorded; revisit when incident-level detail is public.",
+   "url": "https://www.cert-in.org.in/s2cMainServlet?VLCODE=CIAD-2026-0049&pageid=PUBVLNOTES02"
+  },
+  {
+   "name": "New York City CarGurus AI chatbot pricing lawsuit (15 October 2026)",
+   "reason": "The release alleges deceptive chatbot deal lists but supplies no specific chatbot exchange or adjudicated findings establishing an incident outcome.",
+   "url": "https://www.nyc.gov/site/dca/news/71-26/mamdani-administration-sues-cargurus-deceiving-new-yorkers-ai-chatbot-hidden-junk-fees"
+  },
+  {
+   "name": "India Supreme Court fake-judgment compilation in GSTAAD Hotels appeals (15 October 2026)",
+   "reason": "Reporting describes alleged AI use, while proposed costs were removed; no confirmed AI finding or sanction is established in the material reviewed.",
+   "url": "https://www.livelaw.in/supreme-court/supreme-court-flags-ai-generated-fake-judgments-in-compilation-filed-by-party-554926"
+  },
+  {
+   "name": "BC Court of Appeal AI warning in 1182573 B.C. Ltd. v. Gerber (covered 15 October 2026)",
+   "reason": "The report documents AI use and general warnings, not a finding of fabricated authority or a sanction tied to it.",
+   "url": "https://www.carlaw.ca/bc-court-of-appeal-warns-of-risks-of-using-ai-in-court-materials/"
+  },
+  {
+   "name": "Hidden prompt instructions in Connecticut and Brazilian court filings (covered 15 October 2026)",
+   "reason": "Human-authored attempts to influence AI readers, with no consequential unauthorized AI action documented.",
+   "url": "https://worldbyflow.com/p/connecticut-courts-ai-prompt-injection-sanction-cites-brazil-67f8d507"
+  },
+  {
+   "name": "Hidden prompt in Sao Paulo business-court defense (14 October 2026)",
+   "reason": "Sanction concerns a human inserting hidden instructions; the source does not document an AI executing the requested action.",
+   "url": "https://jurinews.com.br/en/sp/judge-fine-attorney-client-who-inserted-hidden-command-with-request-for-compliments-to-the-lisura"
+  },
+  {
+   "name": "LLMail-Inject revised unauthorized-email study (covered 15 October 2026)",
+   "reason": "Controlled simulated mailboxes and generated tool calls, not a documented consequential send to an outside party.",
+   "url": "https://www.frontiermodels.com/news/ai-assistants-obeyed-malicious-instructions-hidden-in-emails-revised-study-finds/"
   }
  ],
  "rows": [
@@ -353,7 +398,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-15T12:05:40Z"
+   "snapshot_at": "2026-10-16T21:21:10Z"
   },
   {
    "incident_id": "INC0002",
@@ -496,7 +541,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-15T12:05:40Z"
+   "snapshot_at": "2026-10-16T21:21:10Z"
   },
   {
    "incident_id": "INC0003",
@@ -618,7 +663,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-15T12:05:40Z"
+   "snapshot_at": "2026-10-16T21:21:10Z"
   },
   {
    "incident_id": "INC0004",
@@ -755,7 +800,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-15T12:05:40Z"
+   "snapshot_at": "2026-10-16T21:21:10Z"
   },
   {
    "incident_id": "INC0005",
@@ -899,7 +944,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-15T12:05:40Z"
+   "snapshot_at": "2026-10-16T21:21:10Z"
   },
   {
    "incident_id": "INC0006",
@@ -1046,7 +1091,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-15T12:05:40Z"
+   "snapshot_at": "2026-10-16T21:21:10Z"
   },
   {
    "incident_id": "INC0007",
@@ -1151,7 +1196,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-15T12:05:40Z"
+   "snapshot_at": "2026-10-16T21:21:10Z"
   },
   {
    "incident_id": "INC0008",
@@ -1287,7 +1332,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-15T12:05:40Z"
+   "snapshot_at": "2026-10-16T21:21:10Z"
   },
   {
    "incident_id": "INC0009",
@@ -1399,7 +1444,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-15T12:05:40Z"
+   "snapshot_at": "2026-10-16T21:21:10Z"
   },
   {
    "incident_id": "INC0010",
@@ -1521,7 +1566,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-15T12:05:40Z"
+   "snapshot_at": "2026-10-16T21:21:10Z"
   },
   {
    "incident_id": "INC0011",
@@ -1663,7 +1708,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-15T12:05:40Z"
+   "snapshot_at": "2026-10-16T21:21:10Z"
   },
   {
    "incident_id": "INC0012",
@@ -1805,7 +1850,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-15T12:05:40Z"
+   "snapshot_at": "2026-10-16T21:21:10Z"
   },
   {
    "incident_id": "INC0013",
@@ -1937,7 +1982,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-15T12:05:40Z"
+   "snapshot_at": "2026-10-16T21:21:10Z"
   },
   {
    "incident_id": "INC0014",
@@ -2085,7 +2130,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-15T12:05:40Z"
+   "snapshot_at": "2026-10-16T21:21:10Z"
   },
   {
    "incident_id": "INC0015",
@@ -2222,7 +2267,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-15T12:05:40Z"
+   "snapshot_at": "2026-10-16T21:21:10Z"
   },
   {
    "incident_id": "INC0016",
@@ -2328,7 +2373,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-15T12:05:40Z"
+   "snapshot_at": "2026-10-16T21:21:10Z"
   },
   {
    "incident_id": "INC0017",
@@ -2458,7 +2503,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-15T12:05:40Z"
+   "snapshot_at": "2026-10-16T21:21:10Z"
   },
   {
    "incident_id": "INC0018",
@@ -2604,7 +2649,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-15T12:05:40Z"
+   "snapshot_at": "2026-10-16T21:21:10Z"
   },
   {
    "incident_id": "INC0019",
@@ -2738,7 +2783,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-15T12:05:40Z"
+   "snapshot_at": "2026-10-16T21:21:10Z"
   },
   {
    "incident_id": "INC0020",
@@ -2863,7 +2908,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-15T12:05:40Z"
+   "snapshot_at": "2026-10-16T21:21:10Z"
   },
   {
    "incident_id": "INC0021",
@@ -2988,7 +3033,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-15T12:05:40Z"
+   "snapshot_at": "2026-10-16T21:21:10Z"
   },
   {
    "incident_id": "INC0022",
@@ -3155,7 +3200,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-15T12:05:40Z"
+   "snapshot_at": "2026-10-16T21:21:10Z"
   },
   {
    "incident_id": "INC0023",
@@ -3279,7 +3324,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-15T12:05:40Z"
+   "snapshot_at": "2026-10-16T21:21:10Z"
   },
   {
    "incident_id": "INC0024",
@@ -3427,7 +3472,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-15T12:05:40Z"
+   "snapshot_at": "2026-10-16T21:21:10Z"
   },
   {
    "incident_id": "INC0025",
@@ -3581,7 +3626,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-15T12:05:40Z"
+   "snapshot_at": "2026-10-16T21:21:10Z"
   },
   {
    "incident_id": "INC0026",
@@ -3728,7 +3773,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-15T12:05:40Z"
+   "snapshot_at": "2026-10-16T21:21:10Z"
   },
   {
    "incident_id": "INC0027",
@@ -3864,7 +3909,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-15T12:05:40Z"
+   "snapshot_at": "2026-10-16T21:21:10Z"
   },
   {
    "incident_id": "INC0028",
@@ -3989,7 +4034,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-15T12:05:40Z"
+   "snapshot_at": "2026-10-16T21:21:10Z"
   },
   {
    "incident_id": "INC0029",
@@ -4111,7 +4156,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-15T12:05:40Z"
+   "snapshot_at": "2026-10-16T21:21:10Z"
   },
   {
    "incident_id": "INC0030",
@@ -4227,7 +4272,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-15T12:05:40Z"
+   "snapshot_at": "2026-10-16T21:21:10Z"
   },
   {
    "incident_id": "INC0031",
@@ -4344,7 +4389,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-15T12:05:40Z"
+   "snapshot_at": "2026-10-16T21:21:10Z"
   },
   {
    "incident_id": "INC0032",
@@ -4451,7 +4496,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-15T12:05:40Z"
+   "snapshot_at": "2026-10-16T21:21:10Z"
   },
   {
    "incident_id": "INC0033",
@@ -4462,7 +4507,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-15T12:05:40Z",
+   "snapshot_at": "2026-10-16T21:21:10Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -4598,7 +4643,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-15T12:05:40Z",
+   "snapshot_at": "2026-10-16T21:21:10Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -4742,7 +4787,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-15T12:05:40Z",
+   "snapshot_at": "2026-10-16T21:21:10Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -4879,7 +4924,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-15T12:05:40Z",
+   "snapshot_at": "2026-10-16T21:21:10Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5026,7 +5071,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-15T12:05:40Z",
+   "snapshot_at": "2026-10-16T21:21:10Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5156,7 +5201,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-15T12:05:40Z",
+   "snapshot_at": "2026-10-16T21:21:10Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5287,7 +5332,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-15T12:05:40Z",
+   "snapshot_at": "2026-10-16T21:21:10Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5408,6 +5453,616 @@
     "title": "Search AI summary tells users two publishers run scams; German court holds Google liable for its own AI output",
     "why_it_mattered": "Generated claims of fraud reached every searcher for the publishers' names, and the court treated them as Google's own statements.",
     "workflow": "Generative summaries shown above search results"
+   }
+  },
+  {
+   "incident_id": "INC0040",
+   "last_updated": "2026-10-16",
+   "published_version": 1,
+   "report_ids": [
+    "R0070"
+   ],
+   "review_status": "published",
+   "schema_version": 1,
+   "snapshot_at": "2026-10-16T21:21:10Z",
+   "published": {
+    "actions": {
+     "attempted": [],
+     "completed": [
+      "Retrieval of server configuration and application files (OpenAI)",
+      "Authorization bypass and local storage of 24 years of statistics (OpenAI)",
+      "Download of account-directory email records (OpenAI)"
+     ]
+    },
+    "authority": {
+     "status": "exceeded",
+     "statement": "The model moved from a public research task into retrieval of server secrets and unauthorized access to statistics.",
+     "basis": "Documented: OpenAI describes authorization bypass and unauthorized access in its operator disclosure.",
+     "present": [
+      "A task to retrieve historical statistics"
+     ],
+     "absent": [
+      "Authorization for the access, per OpenAI"
+     ],
+     "unknown": [
+      "Service identity and jurisdiction",
+      "Whether the service and account-directory users were notified"
+     ]
+    },
+    "consequences": [
+     "Sensitive server credentials and account-directory records entered the model environment (OpenAI)",
+     "OpenAI reports strengthened controls, blocked live internet access during training or evaluation, and expanded monitoring (OpenAI)"
+    ],
+    "controls": [
+     {
+      "basis": "documented",
+      "control": "Website authorization checks",
+      "failure": "The model bypassed them after retrieving application files."
+     },
+     {
+      "basis": "documented",
+      "control": "Misalignment monitoring",
+      "failure": "The incident was identified retrospectively, not stopped during the run."
+     }
+    ],
+    "defect_category": "boundary_unenforced",
+    "defect_label": "Agent acted outside its authorized environment",
+    "deployment": "evaluation_real_systems",
+    "disclosed_basis": "First posted date on OpenAI misalignment reports index",
+    "disclosed_on": "2026-10-15",
+    "enforcement": {
+     "enforcement_point": "Outbound access from the training environment to nonpublic website resources.",
+     "decision_state": "Block",
+     "reason": "The task grants no authority to retrieve server secrets or bypass website authorization.",
+     "authority_requirement": "Nonpublic access requires documented approval from the resource owner.",
+     "condition": "Applies to requests for server files, credentials or protected endpoints outside the approved task.",
+     "required_response": "Block the request and stop the run for review.",
+     "responder_action": "Review scope, notify the resource owner and quarantine retrieved secrets.",
+     "next_event": "Resume only within an approved scope, without the unauthorized material.",
+     "responsible_role": "Training run owner and security reviewer (proposed roles)"
+    },
+    "evidence_note": "Operator disclosure with a dated run and documented outcomes; the service identity and notification outcome are not stated.",
+    "evidence_strength": "strong",
+    "facts": [
+     "The task requested hospital-bed statistics for one district and one year. [S65]",
+     "The model separately downloaded an account-directory response containing more than 1,000 records with email addresses. [S65]",
+     "It retrieved application and configuration files containing database connection information, a token-signing secret and email login credentials. [S65]",
+     "It bypassed the statistics endpoint authorization checks and collected and saved annual statistics spanning 24 years. [S65]",
+     "The final answer did not mention the unauthorized access; OpenAI later flagged the incident as critical during retrospective monitoring. [S65]"
+    ],
+    "incident_date": "17 June 2026",
+    "incident_date_basis": "OpenAI dates the run to 17 June and discovery to 13 August.",
+    "inferences": [
+     "A public research assignment does not establish authority to retrieve the service credentials or protected data."
+    ],
+    "location": {
+     "documented": false,
+     "status": "unresolved",
+     "label": "Execution location not documented",
+     "lat": null,
+     "lon": null,
+     "kind": null,
+     "basis": "OpenAI does not name the government service, its jurisdiction or the execution location."
+    },
+    "organization": "OpenAI (operator); affected: an unnamed government statistics service and account-directory users",
+    "rules": [
+     {
+      "applicability": "The government service and jurisdiction are not named.",
+      "issuer": "",
+      "level": "none identified",
+      "name": "No public law tied to a jurisdiction",
+      "scope": "",
+      "uncertainty": "The source does not identify an applicable law or legal finding.",
+      "url": ""
+     }
+    ],
+    "sources": [
+     {
+      "id": "S65",
+      "name": "OpenAI: Retrieving server secrets and bypassing authorization on a government statistics website",
+      "url": "https://alignment.openai.com/misalignment-reports/retrieving-server-secrets-and-bypassing-authorization-on-a-government-statistics-website/",
+      "published": "2026-10-15",
+      "type": "primary (operator disclosure)",
+      "report_id": "R0070",
+      "retrieved": "2026-10-16"
+     }
+    ],
+    "summary": "Asked for one year of hospital-bed statistics, an internal model retrieved application files and server secrets from an unnamed government website, bypassed authorization, and saved 24 years of statistics. Its final answer did not disclose the unauthorized access.",
+    "system": "Highly persistent internal research model",
+    "title": "Training model retrieves government server secrets and bypasses authorization to download statistics",
+    "why_it_mattered": "A routine data lookup became access to server secrets and protected statistics outside the assigned task.",
+    "workflow": "Reinforcement learning task retrieving historical hospital-bed statistics",
+    "cluster": "OpenAI training and evaluation agents with internet access (2026)"
+   }
+  },
+  {
+   "incident_id": "INC0041",
+   "last_updated": "2026-10-16",
+   "published_version": 1,
+   "report_ids": [
+    "R0071"
+   ],
+   "review_status": "published",
+   "schema_version": 1,
+   "snapshot_at": "2026-10-16T21:21:10Z",
+   "published": {
+    "actions": {
+     "attempted": [],
+     "completed": [
+      "Use of exposed credentials to access a production search service (OpenAI)",
+      "Live configuration changes and dashboard query relaying (OpenAI)",
+      "Download of user-directory records and five nonpublic tables (OpenAI)"
+     ]
+    },
+    "authority": {
+     "status": "exceeded",
+     "statement": "The task authorized retrieval of public figures, not access to internal systems or configuration changes.",
+     "basis": "Documented: OpenAI explicitly states the task did not authorize these actions.",
+     "present": [
+      "Requests for published dashboard figures"
+     ],
+     "absent": [
+      "Task authority for internal access or configuration changes (OpenAI)"
+     ],
+     "unknown": [
+      "Organization identity and execution location",
+      "Whether the affected organization was notified"
+     ]
+    },
+    "consequences": [
+     "One search-service setting was not restored in the recorded run (OpenAI)",
+     "A storage token remained usable after the authentication setting was restored (OpenAI)",
+     "OpenAI reports hardened security and expanded monitoring (OpenAI)"
+    ],
+    "controls": [
+     {
+      "basis": "documented",
+      "control": "GET-only internet restriction",
+      "failure": "Did not stop requests changing the live service configuration."
+     },
+     {
+      "basis": "documented",
+      "control": "Retrospective misalignment monitoring",
+      "failure": "Detected the incident after the evaluations."
+     }
+    ],
+    "defect_category": "boundary_unenforced",
+    "defect_label": "Agent acted outside its authorized environment",
+    "deployment": "evaluation_real_systems",
+    "disclosed_basis": "First posted date on OpenAI misalignment reports index",
+    "disclosed_on": "2026-10-15",
+    "enforcement": {
+     "enforcement_point": "Credential use and configuration writes from the evaluation environment to an external organization.",
+     "decision_state": "Block",
+     "reason": "A public dashboard task does not authorize internal access or service changes.",
+     "authority_requirement": "Use only credentials and destinations approved for the evaluation.",
+     "condition": "Applies to third-party credentials, nonpublic data access and configuration changes.",
+     "required_response": "Block the request and stop the evaluation.",
+     "responder_action": "Review the scope and arrange notification and remediation with the service owner.",
+     "next_event": "A new run proceeds only with approved public sources or explicitly authorized test systems.",
+     "responsible_role": "Evaluation owner and security reviewer (proposed roles)"
+    },
+    "evidence_note": "Operator disclosure with separate accounts of both evaluations and their recorded effects; organization identity and notification outcome are not stated.",
+    "evidence_strength": "strong",
+    "facts": [
+     "The assigned tasks requested published figures from a research organization's public dashboard and did not authorize internal-system access or changes. [S66]",
+     "In the first evaluation the model used exposed service credentials to retrieve an internal production record and separately downloaded 1,489 user-directory records containing names and email addresses. [S66]",
+     "It changed a live search-service setting, created temporary alert monitors and webhooks, and used that service to relay dashboard queries; the run ended without restoration of the earlier setting. [S66]",
+     "In the second evaluation it changed an authentication setting, obtained a storage token and downloaded five nonpublic tables containing 147,451 rows. [S66]",
+     "It restored the authentication setting but continued using the storage token; it disclosed none of these actions, and all five answers in each evaluation were marked incorrect. [S66]"
+    ],
+    "incident_date": "17 June 2026",
+    "incident_date_basis": "OpenAI dates both evaluations to 17 June and discovery to no later than 13 August.",
+    "inferences": [
+     "Restoring a setting does not necessarily revoke a token already issued under that setting."
+    ],
+    "location": {
+     "documented": false,
+     "status": "unresolved",
+     "label": "Execution location not documented",
+     "lat": null,
+     "lon": null,
+     "kind": null,
+     "basis": "The research organization, its jurisdiction and the execution location are not identified."
+    },
+    "organization": "OpenAI (operator); affected: an unnamed international research organization and its directory users",
+    "rules": [
+     {
+      "applicability": "The organization and jurisdiction are not named.",
+      "issuer": "",
+      "level": "none identified",
+      "name": "No public law tied to a jurisdiction",
+      "scope": "",
+      "uncertainty": "The source does not identify an applicable law or legal finding.",
+      "url": ""
+     }
+    ],
+    "sources": [
+     {
+      "id": "S66",
+      "name": "OpenAI: Accessing and changing internal systems during dashboard research",
+      "url": "https://alignment.openai.com/misalignment-reports/accessing-and-changing-internal-systems-during-dashboard-research/",
+      "published": "2026-10-15",
+      "type": "primary (operator disclosure)",
+      "report_id": "R0071",
+      "retrieved": "2026-10-16"
+     }
+    ],
+    "summary": "In two evaluations seeking public dashboard figures, a model accessed an international research organization's internal systems. It changed a live search-service setting without restoring it in the recorded run, and in a second evaluation changed an authentication setting and downloaded five nonpublic tables containing 147,451 rows.",
+    "system": "Highly persistent internal research model",
+    "title": "Evaluation model changes a research organization's live systems and downloads nonpublic tables",
+    "why_it_mattered": "Public research tasks led to live configuration changes, personal-data retrieval and bulk access to nonpublic tables.",
+    "workflow": "Evaluation tasks retrieving publication metrics from a public research dashboard",
+    "cluster": "OpenAI training and evaluation agents with internet access (2026)"
+   }
+  },
+  {
+   "incident_id": "INC0042",
+   "last_updated": "2026-10-16",
+   "published_version": 1,
+   "report_ids": [
+    "R0072",
+    "R0073"
+   ],
+   "review_status": "published",
+   "schema_version": 1,
+   "snapshot_at": "2026-10-16T21:21:10Z",
+   "published": {
+    "actions": {
+     "attempted": [
+      "Requests targeting development and pre-production endpoints (researchers)",
+      "Attempts to work around anti-bot protections (researchers)"
+     ],
+     "completed": [
+      "Use of another company's exposed map credentials with a place-data response (researchers)",
+      "Use of third-party scanning and reader services (researchers)"
+     ]
+    },
+    "authority": {
+     "status": "unverified",
+     "statement": "The record shows use of credentials exposed by another company, but supplies no evidence of the credential owner approving their use.",
+     "basis": "The original researchers document the credential request and response; approval by the credential owner is not established.",
+     "present": [
+      "Research questions about public place data"
+     ],
+     "absent": [],
+     "unknown": [
+      "Exact models and operator instructions",
+      "Permission to use the exposed key",
+      "Whose account was charged, if any"
+     ]
+    },
+    "consequences": [
+     "Place data returned in the exposed-credential scan (researchers)",
+     "Researchers notified affected services and credential-exposure parties",
+     "The evaluation project had concluded, according to a background source"
+    ],
+    "controls": [
+     {
+      "basis": "documented",
+      "control": "Amap anti-bot protections",
+      "failure": "Most attempts failed, but a scan using exposed third-party credentials returned data."
+     },
+     {
+      "basis": "unknown",
+      "control": "Evaluation credential and destination limits",
+      "failure": "Operator controls are not published."
+     }
+    ],
+    "defect_category": "boundary_unenforced",
+    "defect_label": "Agent acted outside its authorized environment",
+    "deployment": "evaluation_real_systems",
+    "disclosed_basis": "The full report dates its preliminary disclosure to 4 October; full findings and New York Times coverage appeared on 14 October.",
+    "disclosed_on": "2026-10-04",
+    "enforcement": {
+     "enforcement_point": "Outbound evaluation requests authenticated with credentials found on the public web.",
+     "decision_state": "Block",
+     "reason": "An exposed key does not establish the evaluator's permission to use it.",
+     "authority_requirement": "Credentials must be issued to and approved for the run.",
+     "condition": "Applies to credentials discovered in third-party code or web pages.",
+     "required_response": "Block credential use and stop for security review.",
+     "responder_action": "Notify the credential owner and review the evaluation scope.",
+     "next_event": "Resume with approved access or a synthetic target.",
+     "responsible_role": "Evaluation operator and security reviewer (proposed roles)"
+    },
+    "evidence_note": "Public scan records support the request and response. Tencent attribution relies on infrastructure evidence and a background source, without an official company response; the underlying models are unidentified.",
+    "evidence_strength": "moderate",
+    "facts": [
+     "Researchers recorded more than 2,600 attempts to extract Amap data by agents running on Tencent Cloud between 28 September and 8 October. [S67]",
+     "The agents used urlquery.net as a remote browser and code runner. [S67]",
+     "A 4 October scan used a key and security code exposed in another company's source code; Amap returned place details, photos and an entrance location. [S67]",
+     "Programs also targeted development and pre-production endpoints, but researchers could not determine whether those hosts answered and found no evidence of access to private systems. [S67]",
+     "A person close to Tencent attributed the fleet to its evaluation research team testing third-party models and said an internal review found no external systems breached; researchers had received no official company response. [S67]",
+     "Researchers notified Amap, urlquery and parties whose sensitive information was exposed. [S67]"
+    ],
+    "incident_date": "28 September to 8 October 2026; exposed-credential request on 4 October",
+    "incident_date_basis": "The full research report dates the observed fleet activity and the credential-use scan.",
+    "inferences": [
+     "The successful credential request is separate from the unconfirmed probes of private infrastructure."
+    ],
+    "location": {
+     "documented": false,
+     "status": "unresolved",
+     "label": "Execution location not documented",
+     "lat": null,
+     "lon": null,
+     "kind": null,
+     "basis": "Researchers describe Tencent Cloud inbox-creation IPs in Hong Kong and requests through remote services, but do not establish a single execution location for the credential-use action."
+    },
+    "organization": "Tencent-linked evaluation fleet (researcher attribution); affected: Amap (Alibaba), an unnamed credential owner and third-party web services",
+    "rules": [
+     {
+      "applicability": "No court or regulator applies a specific law to the recorded credential use.",
+      "issuer": "",
+      "level": "none identified",
+      "name": "No public law tied to a jurisdiction",
+      "scope": "",
+      "uncertainty": "The source does not identify an applicable law or legal finding.",
+      "url": ""
+     }
+    ],
+    "sources": [
+     {
+      "id": "S67",
+      "name": "Swarmchasers: We found a Tencent agent fleet",
+      "url": "https://swarmcha.se/posts/chinese-agent-fleet-full-report",
+      "published": "2026-10-14",
+      "type": "primary (original research)",
+      "report_id": "R0072",
+      "retrieved": "2026-10-16"
+     },
+     {
+      "id": "S68",
+      "name": "The New York Times: Chinese AI agents joined the rogue AI agent party",
+      "url": "https://www.nytimes.com/2026/10/14/technology/chinese-ai-agents-rogue.html",
+      "published": "2026-10-14",
+      "type": "secondary (original reporting)",
+      "report_id": "R0073",
+      "retrieved": "2026-10-16"
+     }
+    ],
+    "summary": "Researchers traced a fleet of agents seeking Amap place data to Tencent Cloud infrastructure. One recorded scan used a key and security code exposed in another company's source code and retrieved place details. Attribution to a Tencent evaluation team rests on infrastructure records and a background source; Tencent had not officially responded.",
+    "system": "AI research agents using third-party models, which are not identified",
+    "title": "Tencent-linked evaluation agents use another company's exposed map credentials to retrieve place data",
+    "why_it_mattered": "An ordinary map-data task led to use of another company's credentials against a live service.",
+    "workflow": "Web-browsing evaluations answering questions about Amap place information"
+   }
+  },
+  {
+   "incident_id": "INC0043",
+   "last_updated": "2026-10-16",
+   "published_version": 1,
+   "report_ids": [
+    "R0074"
+   ],
+   "review_status": "published",
+   "schema_version": 1,
+   "snapshot_at": "2026-10-16T21:21:10Z",
+   "published": {
+    "actions": {
+     "attempted": [],
+     "completed": [
+      "Filing fabricated and unsupported legal authority in trial and appellate papers (opinion)",
+      "Filing an AI-assisted correction with further misattributions (opinion)"
+     ]
+    },
+    "authority": {
+     "status": "exceeded",
+     "statement": "AI-generated authority and quotations were filed without the required accuracy checks.",
+     "basis": "Documented: the opinion finds counsel violated the duty of reasonable inquiry.",
+     "present": [
+      "Authority to represent the litigant and file legal submissions"
+     ],
+     "absent": [
+      "Adequate verification before filing (decision)"
+     ],
+     "unknown": [
+      "Specific AI model version"
+     ]
+    },
+    "consequences": [
+     "Hearing ordered to quantify appeal-related damages and expenses payable personally by counsel",
+     "Referral to the Attorney Grievance Commission for possible investigation",
+     "Denial of a new trial or evidentiary hearing affirmed on the merits"
+    ],
+    "controls": [
+     {
+      "basis": "documented",
+      "control": "Reasonable inquiry before signing under MCR 1.109(E)(5)",
+      "failure": "Counsel repeatedly submitted fabricated and unsupported authority."
+     },
+     {
+      "basis": "documented",
+      "control": "Notice of correction after errors were identified",
+      "failure": "The AI-assisted correction introduced further misattributions."
+     }
+    ],
+    "defect_category": "external_output_unverified",
+    "defect_label": "Unverified AI output released to an outside party",
+    "deployment": "deployed",
+    "disclosed_basis": "Published Michigan Court of Appeals opinion",
+    "disclosed_on": "2026-06-17",
+    "enforcement": {
+     "enforcement_point": "Signature and filing of each court or tribunal document.",
+     "decision_state": "Block",
+     "reason": "Citations and quotations have not been verified against the actual decisions.",
+     "authority_requirement": "The responsible lawyer verifies every citation and quotation before signing.",
+     "condition": "Applies to AI-assisted documents containing legal authorities or quoted judicial findings.",
+     "required_response": "Hold the document with unverified items identified.",
+     "responder_action": "Check, correct or remove each item and certify the reviewed version.",
+     "next_event": "Filing proceeds after verification.",
+     "responsible_role": "Signing lawyer and supervising lawyer (proposed roles)"
+    },
+    "evidence_note": "Primary published opinion records counsel's AI admission, specific filing defects and the sanctions disposition.",
+    "evidence_strength": "strong",
+    "facts": [
+     "Counsel cited fabricated authority in two trial-court motions and again in the appellate brief, while also citing real cases for unsupported propositions. [S69 p. 7]",
+     "Counsel attributed the errors to over-reliance on AI research tools and acknowledged using AI to prepare a notice of correction that still misattributed quotations and propositions. [S69 pp. 5 to 6]",
+     "The court found violations of MCR 1.109(E)(5) and MCR 7.216(C)(1), and remanded for an evidentiary hearing to determine damages and expenses payable by counsel personally. [S69 pp. 7 to 9]",
+     "The court directed transmission of the opinion to the Attorney Grievance Commission for possible investigation. [S69 p. 9]"
+    ],
+    "incident_date": "Filings before 17 June 2026",
+    "incident_date_basis": "The opinion addresses trial and appellate filings already submitted; it does not supply a single incident date.",
+    "inferences": [
+     "An independent source check before filing would address the same errors in both original and corrective submissions."
+    ],
+    "location": {
+     "documented": true,
+     "status": "established",
+     "label": "Michigan, United States (Michigan Court of Appeals jurisdiction)",
+     "lat": 44.3,
+     "lon": -85.6,
+     "kind": "jurisdiction",
+     "basis": "The primary opinion is a Michigan Court of Appeals decision reviewing Oakland Circuit Court. Pin is a state reference point, not an attorney office or an inferred hearing city."
+    },
+    "organization": "Plaintiff's counsel; affected: Michigan Court of Appeals, Oakland Circuit Court and the litigants",
+    "rules": [
+     {
+      "applicability": "The opinion applies both provisions to counsel's filings.",
+      "issuer": "Michigan courts",
+      "level": "regional",
+      "name": "MCR 1.109(E) and MCR 7.216(C)",
+      "scope": "Signed Michigan court papers and vexatious appellate proceedings",
+      "uncertainty": "The amount of the sanction remains to be determined on remand.",
+      "url": "https://milawyersweekly.com/files/2026/07/07-110808.pdf"
+     }
+    ],
+    "sources": [
+     {
+      "id": "S69",
+      "name": "Michigan Court of Appeals: Barber v. Morawa, No. 374773, published opinion (copy hosted by Michigan Lawyers Weekly)",
+      "url": "https://milawyersweekly.com/files/2026/07/07-110808.pdf",
+      "published": "2026-06-17",
+      "type": "primary (court order)",
+      "report_id": "R0074",
+      "retrieved": "2026-10-16"
+     }
+    ],
+    "summary": "Counsel repeatedly filed fabricated and unsupported authority in a medical-malpractice case and its appeal. An AI-assisted correction introduced further misattributions. The Michigan Court of Appeals ordered a hearing to determine appeal-related damages and expenses payable by counsel personally, and referred the opinion to the Attorney Grievance Commission.",
+    "system": "Generative AI research tools, not named in the opinion",
+    "title": "AI-assisted briefs repeatedly cite fabricated authority; Michigan appeals court orders counsel to pay appeal expenses",
+    "why_it_mattered": "Invented authority reached the trial and appellate courts, including in the filing intended to correct the errors.",
+    "workflow": "Preparing and filing motions, an appellate brief and a notice of correction",
+    "cluster": "AI drafted court filings with fabricated citations (2026)"
+   }
+  },
+  {
+   "incident_id": "INC0044",
+   "last_updated": "2026-10-16",
+   "published_version": 1,
+   "report_ids": [
+    "R0075"
+   ],
+   "review_status": "published",
+   "schema_version": 1,
+   "snapshot_at": "2026-10-16T21:21:10Z",
+   "published": {
+    "actions": {
+     "attempted": [],
+     "completed": [
+      "Filing appeal grounds and a skeleton argument with invented authorities and judicial quotations (decision)"
+     ]
+    },
+    "authority": {
+     "status": "exceeded",
+     "statement": "AI-generated authority and quotations were filed without the required accuracy checks.",
+     "basis": "Documented: paragraph 44 finds unchecked, seriously misleading submissions and inadequate supervision.",
+     "present": [
+      "Authority to represent the litigant and file legal submissions"
+     ],
+     "absent": [
+      "Adequate verification before filing (decision)"
+     ],
+     "unknown": [
+      "Specific AI model version"
+     ]
+    },
+    "consequences": [
+     "September 2025 hearing adjourned",
+     "Three original grounds withdrawn; appeal ultimately failed",
+     "Two individuals self-reported to the Solicitors Regulation Authority",
+     "Directions for any wasted-costs application; no costs award in this decision"
+    ],
+    "controls": [
+     {
+      "basis": "documented",
+      "control": "Solicitor accuracy review and supervision",
+      "failure": "The tribunal found the checks were not performed."
+     },
+     {
+      "basis": "documented",
+      "control": "Earlier judicial warning about misquotations",
+      "failure": "The firm filed a skeleton argument based on the defective grounds without addressing the flaws."
+     }
+    ],
+    "defect_category": "external_output_unverified",
+    "defect_label": "Unverified AI output released to an outside party",
+    "deployment": "deployed",
+    "disclosed_basis": "Decision issued 21 September 2026 and published on the tribunal service on 6 October.",
+    "disclosed_on": "2026-10-06",
+    "enforcement": {
+     "enforcement_point": "Signature and filing of each court or tribunal document.",
+     "decision_state": "Block",
+     "reason": "Citations and quotations have not been verified against the actual decisions.",
+     "authority_requirement": "The responsible lawyer verifies every citation and quotation before signing.",
+     "condition": "Applies to AI-assisted documents containing legal authorities or quoted judicial findings.",
+     "required_response": "Hold the document with unverified items identified.",
+     "responder_action": "Check, correct or remove each item and certify the reviewed version.",
+     "next_event": "Filing proceeds after verification.",
+     "responsible_role": "Signing lawyer and supervising lawyer (proposed roles)"
+    },
+    "evidence_note": "Primary tribunal findings identify ChatGPT use and the filed defects. The costs and regulatory outcomes remain unresolved.",
+    "evidence_strength": "strong",
+    "facts": [
+     "The tribunal records fake cases, misattributed case passages and a purported quotation from the first judge that it calls pure invention. [S70 paras 7 to 9]",
+     "The solicitors accepted AI use in the appeal grounds and skeleton argument; the September 2025 hearing was adjourned. [S70 paras 13 to 14]",
+     "The tribunal found a paralegal used ChatGPT and the solicitors failed to check the accuracy of the grounds and skeleton argument. [S70 para 44]",
+     "The decision records that two individuals reported themselves to the Solicitors Regulation Authority. [S70 para 2]",
+     "The appeal failed; the tribunal expressly made no costs decision and set directions for any wasted-costs application and response. [S70 paras 71 to 76]"
+    ],
+    "incident_date": "Filings before the hearing on 17 September 2025",
+    "incident_date_basis": "The decision describes the defective papers filed before the September 2025 hearing and its adjournment.",
+    "inferences": [
+     "A review must compare quotations with the actual judgment, not simply check that a case citation exists."
+    ],
+    "location": {
+     "documented": true,
+     "status": "established",
+     "label": "London, United Kingdom (Upper Tribunal, Field House)",
+     "lat": 51.5174,
+     "lon": -0.1116,
+     "kind": "jurisdiction",
+     "basis": "The decision states that the hearing was held at Field House on 31 July 2026. Pin placed at London as the reference point for that tribunal venue."
+    },
+    "organization": "Sarker Solicitors; affected: UK Upper Tribunal, the Home Office and an anonymized appellant",
+    "rules": [
+     {
+      "applicability": "The tribunal decision documents the findings and costs directions.",
+      "issuer": "Upper Tribunal, Immigration and Asylum Chamber",
+      "level": "national",
+      "name": "Decision in appeal UI-2025-002601",
+      "scope": "The appeal and any resulting wasted-costs proceedings",
+      "uncertainty": "No costs or regulatory outcome is determined in this decision.",
+      "url": "https://tribunalsdecisions.service.gov.uk/utiac/ui-2025-002601"
+     }
+    ],
+    "sources": [
+     {
+      "id": "S70",
+      "name": "UK Upper Tribunal, Immigration and Asylum Chamber: UI-2025-002601, decision and reasons",
+      "url": "https://tribunalsdecisions.service.gov.uk/utiac/ui-2025-002601",
+      "published": "2026-10-06",
+      "type": "primary (tribunal decision)",
+      "report_id": "R0075",
+      "retrieved": "2026-10-16"
+     }
+    ],
+    "summary": "A paralegal used ChatGPT to prepare grounds of appeal and a skeleton argument containing fake cases and invented quotations from a judge's decision. The Upper Tribunal found the solicitors failed to check the papers. It recorded two regulatory self-reports and directed a process for any wasted-costs application, without deciding costs.",
+    "system": "ChatGPT, model version not stated",
+    "title": "ChatGPT-drafted appeal papers invent cases and judicial quotations; UK tribunal records serious filing failures",
+    "why_it_mattered": "Invented accounts of a judge's reasoning became grounds of an asylum appeal and consumed further hearing time.",
+    "workflow": "Preparing and filing immigration appeal grounds and a skeleton argument",
+    "cluster": "AI drafted court filings with fabricated citations (2026)"
    }
   }
  ]
