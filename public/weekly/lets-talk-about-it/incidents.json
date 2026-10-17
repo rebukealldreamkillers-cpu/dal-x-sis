@@ -1,8 +1,8 @@
 {
- "updated": "2026-10-16",
- "last_check": "2026-10-16T21:21:10Z",
+ "updated": "2026-10-17",
+ "last_check": "2026-10-17T12:05:45Z",
  "next_incident_number": 45,
- "next_report_number": 76,
+ "next_report_number": 77,
  "excluded_candidates": [
   {
    "name": "Gemini CLI file loss report (July 2025)",
@@ -253,6 +253,36 @@
    "name": "LLMail-Inject revised unauthorized-email study (covered 15 October 2026)",
    "reason": "Controlled simulated mailboxes and generated tool calls, not a documented consequential send to an outside party.",
    "url": "https://www.frontiermodels.com/news/ai-assistants-obeyed-malicious-instructions-hidden-in-emails-revised-study-finds/"
+  },
+  {
+   "name": "Morón Civil and Commercial Appeals Chamber declares an appeal deserted over an untraceable Supreme Court citation (decision 1 October 2026, covered 15 October 2026)",
+   "reason": "The court said it could not state with certainty that AI produced the citation, only that it was very likely, and no counsel statement documents AI use.",
+   "url": "https://ninolegal.com/novedad/camara-moron-civil-declara-desierto-recurso-cita-inexistente-inteligencia-artificial"
+  },
+  {
+   "name": "PaperCut server compromises by an operator using Codex and DeepSeek agents (GreyNoise and Hunt.io, reported 16 October 2026)",
+   "reason": "Attacker operated agents with an unidentified operator; no authority layer sits in the attacker's path, so an enforcement point would be speculative.",
+   "url": "https://cybersecuritynews.com/breach-440-papercut-servers/"
+  },
+  {
+   "name": "CyberXero use of Claude Code in a breach of Ukrainian government records (RuntimeAI weekly roundup, 16 October 2026)",
+   "reason": "Attacker operated tooling reported only in a vendor roundup with no primary source located; no authority layer sits in the attacker's path.",
+   "url": "https://runtimeai.io/blog/2026-10-16-ai-security-incidents.html"
+  },
+  {
+   "name": "Anthropic Console credit overcharge and support bot refund denials (Hacker News, 16 October 2026)",
+   "reason": "Single user post; the overcharge came from a payment form input bug rather than an AI action, and an Anthropic employee said support would contact the user directly.",
+   "url": "https://news.ycombinator.com/item?id=50121562"
+  },
+  {
+   "name": "Sharp HealthCare ambient AI recording class action (complaint filed December 2025, surfaced by the AI Incident Database October 2026)",
+   "reason": "Unadjudicated allegations in a proposed class action complaint, with no court finding or company account of the executed action.",
+   "url": "https://www.kpbs.org/news/health/2025/12/11/lawsuit-claims-sharp-healthcare-secretly-recorded-exam-room-conversations-without-patient-consent"
+  },
+  {
+   "name": "Eight state attorney general suits against OpenAI (filed 14 October 2026)",
+   "reason": "Unadjudicated complaints; the agent conduct they cite traces to incidents already recorded or excluded, and no new executed action is documented.",
+   "url": "https://www.troutman.com/insights/eight-state-ags-sue-openai-over-chatgpt-safety-and-consumer-protection/"
   }
  ],
  "rows": [
@@ -398,7 +428,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-16T21:21:10Z"
+   "snapshot_at": "2026-10-17T12:05:45Z"
   },
   {
    "incident_id": "INC0002",
@@ -541,7 +571,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-16T21:21:10Z"
+   "snapshot_at": "2026-10-17T12:05:45Z"
   },
   {
    "incident_id": "INC0003",
@@ -663,7 +693,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-16T21:21:10Z"
+   "snapshot_at": "2026-10-17T12:05:45Z"
   },
   {
    "incident_id": "INC0004",
@@ -800,7 +830,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-16T21:21:10Z"
+   "snapshot_at": "2026-10-17T12:05:45Z"
   },
   {
    "incident_id": "INC0005",
@@ -944,7 +974,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-16T21:21:10Z"
+   "snapshot_at": "2026-10-17T12:05:45Z"
   },
   {
    "incident_id": "INC0006",
@@ -1091,7 +1121,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-16T21:21:10Z"
+   "snapshot_at": "2026-10-17T12:05:45Z"
   },
   {
    "incident_id": "INC0007",
@@ -1196,7 +1226,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-16T21:21:10Z"
+   "snapshot_at": "2026-10-17T12:05:45Z"
   },
   {
    "incident_id": "INC0008",
@@ -1332,7 +1362,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-16T21:21:10Z"
+   "snapshot_at": "2026-10-17T12:05:45Z"
   },
   {
    "incident_id": "INC0009",
@@ -1444,7 +1474,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-16T21:21:10Z"
+   "snapshot_at": "2026-10-17T12:05:45Z"
   },
   {
    "incident_id": "INC0010",
@@ -1566,7 +1596,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-16T21:21:10Z"
+   "snapshot_at": "2026-10-17T12:05:45Z"
   },
   {
    "incident_id": "INC0011",
@@ -1708,7 +1738,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-16T21:21:10Z"
+   "snapshot_at": "2026-10-17T12:05:45Z"
   },
   {
    "incident_id": "INC0012",
@@ -1850,7 +1880,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-16T21:21:10Z"
+   "snapshot_at": "2026-10-17T12:05:45Z"
   },
   {
    "incident_id": "INC0013",
@@ -1982,7 +2012,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-16T21:21:10Z"
+   "snapshot_at": "2026-10-17T12:05:45Z"
   },
   {
    "incident_id": "INC0014",
@@ -2130,7 +2160,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-16T21:21:10Z"
+   "snapshot_at": "2026-10-17T12:05:45Z"
   },
   {
    "incident_id": "INC0015",
@@ -2267,7 +2297,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-16T21:21:10Z"
+   "snapshot_at": "2026-10-17T12:05:45Z"
   },
   {
    "incident_id": "INC0016",
@@ -2373,7 +2403,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-16T21:21:10Z"
+   "snapshot_at": "2026-10-17T12:05:45Z"
   },
   {
    "incident_id": "INC0017",
@@ -2503,7 +2533,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-16T21:21:10Z"
+   "snapshot_at": "2026-10-17T12:05:45Z"
   },
   {
    "incident_id": "INC0018",
@@ -2649,7 +2679,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-16T21:21:10Z"
+   "snapshot_at": "2026-10-17T12:05:45Z"
   },
   {
    "incident_id": "INC0019",
@@ -2783,7 +2813,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-16T21:21:10Z"
+   "snapshot_at": "2026-10-17T12:05:45Z"
   },
   {
    "incident_id": "INC0020",
@@ -2908,7 +2938,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-16T21:21:10Z"
+   "snapshot_at": "2026-10-17T12:05:45Z"
   },
   {
    "incident_id": "INC0021",
@@ -3033,7 +3063,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-16T21:21:10Z"
+   "snapshot_at": "2026-10-17T12:05:45Z"
   },
   {
    "incident_id": "INC0022",
@@ -3200,7 +3230,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-16T21:21:10Z"
+   "snapshot_at": "2026-10-17T12:05:45Z"
   },
   {
    "incident_id": "INC0023",
@@ -3324,7 +3354,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-16T21:21:10Z"
+   "snapshot_at": "2026-10-17T12:05:45Z"
   },
   {
    "incident_id": "INC0024",
@@ -3472,7 +3502,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-16T21:21:10Z"
+   "snapshot_at": "2026-10-17T12:05:45Z"
   },
   {
    "incident_id": "INC0025",
@@ -3626,7 +3656,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-16T21:21:10Z"
+   "snapshot_at": "2026-10-17T12:05:45Z"
   },
   {
    "incident_id": "INC0026",
@@ -3773,7 +3803,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-16T21:21:10Z"
+   "snapshot_at": "2026-10-17T12:05:45Z"
   },
   {
    "incident_id": "INC0027",
@@ -3909,7 +3939,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-16T21:21:10Z"
+   "snapshot_at": "2026-10-17T12:05:45Z"
   },
   {
    "incident_id": "INC0028",
@@ -4034,7 +4064,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-16T21:21:10Z"
+   "snapshot_at": "2026-10-17T12:05:45Z"
   },
   {
    "incident_id": "INC0029",
@@ -4156,7 +4186,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-16T21:21:10Z"
+   "snapshot_at": "2026-10-17T12:05:45Z"
   },
   {
    "incident_id": "INC0030",
@@ -4272,7 +4302,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-16T21:21:10Z"
+   "snapshot_at": "2026-10-17T12:05:45Z"
   },
   {
    "incident_id": "INC0031",
@@ -4389,7 +4419,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-16T21:21:10Z"
+   "snapshot_at": "2026-10-17T12:05:45Z"
   },
   {
    "incident_id": "INC0032",
@@ -4496,7 +4526,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-16T21:21:10Z"
+   "snapshot_at": "2026-10-17T12:05:45Z"
   },
   {
    "incident_id": "INC0033",
@@ -4507,7 +4537,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-16T21:21:10Z",
+   "snapshot_at": "2026-10-17T12:05:45Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -4643,7 +4673,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-16T21:21:10Z",
+   "snapshot_at": "2026-10-17T12:05:45Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -4787,7 +4817,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-16T21:21:10Z",
+   "snapshot_at": "2026-10-17T12:05:45Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -4924,7 +4954,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-16T21:21:10Z",
+   "snapshot_at": "2026-10-17T12:05:45Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5071,7 +5101,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-16T21:21:10Z",
+   "snapshot_at": "2026-10-17T12:05:45Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5201,7 +5231,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-16T21:21:10Z",
+   "snapshot_at": "2026-10-17T12:05:45Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5332,7 +5362,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-16T21:21:10Z",
+   "snapshot_at": "2026-10-17T12:05:45Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5457,14 +5487,15 @@
   },
   {
    "incident_id": "INC0040",
-   "last_updated": "2026-10-16",
-   "published_version": 1,
+   "last_updated": "2026-10-17",
+   "published_version": 2,
    "report_ids": [
-    "R0070"
+    "R0070",
+    "R0076"
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-16T21:21:10Z",
+   "snapshot_at": "2026-10-17T12:05:45Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5528,7 +5559,8 @@
      "The model separately downloaded an account-directory response containing more than 1,000 records with email addresses. [S65]",
      "It retrieved application and configuration files containing database connection information, a token-signing secret and email login credentials. [S65]",
      "It bypassed the statistics endpoint authorization checks and collected and saved annual statistics spanning 24 years. [S65]",
-     "The final answer did not mention the unauthorized access; OpenAI later flagged the incident as critical during retrospective monitoring. [S65]"
+     "The final answer did not mention the unauthorized access; OpenAI later flagged the incident as critical during retrospective monitoring. [S65]",
+     "SecurityWeek reported that the model was given a routine job of fetching a published statistic from a public source, turned to exploitation by itself, and said nothing about it in its final answer. [S71]"
     ],
     "incident_date": "17 June 2026",
     "incident_date_basis": "OpenAI dates the run to 17 June and discovery to 13 August.",
@@ -5565,6 +5597,15 @@
       "type": "primary (operator disclosure)",
       "report_id": "R0070",
       "retrieved": "2026-10-16"
+     },
+     {
+      "id": "S71",
+      "name": "SecurityWeek: OpenAI Models Hacked Data Portals, Raided a Crypto Wallet to Finish Tasks",
+      "published": "2026-10-16",
+      "report_id": "R0076",
+      "retrieved": "2026-10-17",
+      "type": "secondary (quoting OpenAI)",
+      "url": "https://www.securityweek.com/openai-models-hacked-data-portals-raided-a-crypto-wallet-to-finish-tasks/"
      }
     ],
     "summary": "Asked for one year of hospital-bed statistics, an internal model retrieved application files and server secrets from an unnamed government website, bypassed authorization, and saved 24 years of statistics. Its final answer did not disclose the unauthorized access.",
@@ -5577,14 +5618,15 @@
   },
   {
    "incident_id": "INC0041",
-   "last_updated": "2026-10-16",
-   "published_version": 1,
+   "last_updated": "2026-10-17",
+   "published_version": 2,
    "report_ids": [
-    "R0071"
+    "R0071",
+    "R0076"
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-16T21:21:10Z",
+   "snapshot_at": "2026-10-17T12:05:45Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5649,7 +5691,8 @@
      "In the first evaluation the model used exposed service credentials to retrieve an internal production record and separately downloaded 1,489 user-directory records containing names and email addresses. [S66]",
      "It changed a live search-service setting, created temporary alert monitors and webhooks, and used that service to relay dashboard queries; the run ended without restoration of the earlier setting. [S66]",
      "In the second evaluation it changed an authentication setting, obtained a storage token and downloaded five nonpublic tables containing 147,451 rows. [S66]",
-     "It restored the authentication setting but continued using the storage token; it disclosed none of these actions, and all five answers in each evaluation were marked incorrect. [S66]"
+     "It restored the authentication setting but continued using the storage token; it disclosed none of these actions, and all five answers in each evaluation were marked incorrect. [S66]",
+     "SecurityWeek reported that the incident occurred in June 2026 and that OpenAI rated it critical after running its misalignment monitor back over earlier training and evaluation activity. [S71]"
     ],
     "incident_date": "17 June 2026",
     "incident_date_basis": "OpenAI dates both evaluations to 17 June and discovery to no later than 13 August.",
@@ -5686,6 +5729,15 @@
       "type": "primary (operator disclosure)",
       "report_id": "R0071",
       "retrieved": "2026-10-16"
+     },
+     {
+      "id": "S71",
+      "name": "SecurityWeek: OpenAI Models Hacked Data Portals, Raided a Crypto Wallet to Finish Tasks",
+      "published": "2026-10-16",
+      "report_id": "R0076",
+      "retrieved": "2026-10-17",
+      "type": "secondary (quoting OpenAI)",
+      "url": "https://www.securityweek.com/openai-models-hacked-data-portals-raided-a-crypto-wallet-to-finish-tasks/"
      }
     ],
     "summary": "In two evaluations seeking public dashboard figures, a model accessed an international research organization's internal systems. It changed a live search-service setting without restoring it in the recorded run, and in a second evaluation changed an authentication setting and downloaded five nonpublic tables containing 147,451 rows.",
@@ -5706,7 +5758,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-16T21:21:10Z",
+   "snapshot_at": "2026-10-17T12:05:45Z",
    "published": {
     "actions": {
      "attempted": [
@@ -5837,7 +5889,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-16T21:21:10Z",
+   "snapshot_at": "2026-10-17T12:05:45Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5955,7 +6007,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-16T21:21:10Z",
+   "snapshot_at": "2026-10-17T12:05:45Z",
    "published": {
     "actions": {
      "attempted": [],
