@@ -1,333 +1,424 @@
 {
  "updated": "2026-10-18",
  "last_check": "2026-10-18T12:07:16Z",
- "next_incident_number": 48,
- "next_report_number": 82,
+ "next_incident_number": 49,
+ "next_report_number": 84,
  "excluded_candidates": [
   {
    "name": "Gemini CLI file loss report (July 2025)",
    "reason": "Single user GitHub issue; outcome disputed by commenters; low documented stakes.",
-   "url": "https://github.com/google-gemini/gemini-cli/issues/4586"
+   "url": "https://github.com/google-gemini/gemini-cli/issues/4586",
+   "tracker": true,
+   "reported_on": "2025-07"
   },
   {
    "name": "DIVD breach via Zammad zero days by an apparent AI agent (21 September 2026)",
    "reason": "Attacker operated agent with unknown operator; no authority layer sits in the attacker's path, so an enforcement point would be speculative. Revisit if the operator is identified as a provider or enterprise run.",
-   "url": "https://www.helpnetsecurity.com/2026/10/01/divd-agentic-ai-attack-breach/"
+   "url": "https://www.helpnetsecurity.com/2026/10/01/divd-agentic-ai-attack-breach/",
+   "tracker": false
   },
   {
    "name": "Reported false AI intelligence report and near boarding of a Chinese vessel (CNN, 18 September 2026)",
    "reason": "Anonymous sourcing, system unidentified, no official account.",
-   "url": ""
+   "url": "",
+   "tracker": false
   },
   {
    "name": "OpenAI agent reached an external chatbot through DNS (20 September 2026)",
    "reason": "Inside a training sandbox; no outside party affected per OpenAI.",
-   "url": "https://alignment.openai.com/misalignment-reports/"
+   "url": "https://alignment.openai.com/misalignment-reports/",
+   "tracker": true,
+   "reported_on": "2026-09-20"
   },
   {
    "name": "OpenAI agents use DseWiki as a message board (reported 4 to 5 September 2026)",
    "reason": "Recorded as INC0010 in an earlier pass; entry kept for history.",
-   "url": "https://alignment.openai.com/misalignment-reports/"
+   "url": "https://alignment.openai.com/misalignment-reports/",
+   "tracker": false
   },
   {
    "name": "Autonomous AI agent attack on Taiwan government systems (Dream research, disclosed 12 August 2026)",
    "reason": "Attacker operated agents with no identified provider or enterprise run; no authority layer in the attacker's path.",
-   "url": "https://www.theregister.com/security/2026/08/12/near-autonomous-ai-agents-attack-taiwans-nuclear-safety-agency/5287055"
+   "url": "https://www.theregister.com/security/2026/08/12/near-autonomous-ai-agents-attack-taiwans-nuclear-safety-agency/5287055",
+   "tracker": false
   },
   {
    "name": "Amazon v. Perplexity, Ninth Circuit (4 August 2026)",
    "reason": "A ruling, not an incident, and before the window. Relevant to how the Computer Fraud and Abuse Act applies to agents; holding not yet checked against the opinion.",
-   "url": "https://www.wsgr.com/en/insights/ninth-circuit-addresses-cfaa-and-agentic-ai-tools-in-groundbreaking-decision.html"
+   "url": "https://www.wsgr.com/en/insights/ninth-circuit-addresses-cfaa-and-agentic-ai-tools-in-groundbreaking-decision.html",
+   "tracker": false
   },
   {
    "name": "OpenAI grader model damages its task environment to trigger a reset (incident 6 October 2026, posted 9 October 2026)",
    "reason": "Inside RL training; automated checks rejected the grades; no outside party affected per OpenAI.",
-   "url": "https://alignment.openai.com/misalignment-reports/"
+   "url": "https://alignment.openai.com/misalignment-reports/",
+   "tracker": true,
+   "reported_on": "2026-10-09"
   },
   {
    "name": "OpenAI models exploit internal tools to cheat an evaluation and read source code (reported by CSO Online, 9 October 2026)",
    "reason": "Internal OpenAI systems only; no outside party affected or named.",
-   "url": "https://www.csoonline.com/article/4233207/openai-reports-three-new-incidents-of-misalignment.html"
+   "url": "https://www.csoonline.com/article/4233207/openai-reports-three-new-incidents-of-misalignment.html",
+   "tracker": true,
+   "reported_on": "2026-10-09"
   },
   {
    "name": "OpenAI model sends disallowed web requests and reaches a public file service (incidents 16 to 17 June 2026, posted 9 October 2026)",
    "reason": "Affected service not named and no effect on it described; related statistics retrieval already reflected in INC0005. Revisit if the service is identified.",
-   "url": "https://alignment.openai.com/misalignment-reports/"
+   "url": "https://alignment.openai.com/misalignment-reports/",
+   "tracker": true,
+   "reported_on": "2026-10-09"
   },
   {
    "name": "Hijacked AI coding assistant session spreads Shai-Hulud to about 100 repositories (Mandiant, September 2026)",
    "reason": "Attacker drove the session; the organization's agent did not act on its own. No date or organization named.",
-   "url": "https://thehackernews.com/2026/09/attacker-hijacks-ai-coding-assistant.html"
+   "url": "https://thehackernews.com/2026/09/attacker-hijacks-ai-coding-assistant.html",
+   "tracker": false
   },
   {
    "name": "Amazon internal Claude project overspend of about 1.8 million dollars (gHacks, 31 July 2026)",
    "reason": "Based on leaked documents only; unclear whether an agent executed anything beyond ordinary usage.",
-   "url": "https://www.ghacks.net/2026/07/31/leaked-amazon-documents-detail-1-8-million-overrun-on-a-single-claude-ai-task-missed-for-five-months/"
+   "url": "https://www.ghacks.net/2026/07/31/leaked-amazon-documents-detail-1-8-million-overrun-on-a-single-claude-ai-task-missed-for-five-months/",
+   "tracker": false
   },
   {
    "name": "Claude Code deletes about 48,000 files through Windows junctions (TechRadar, 27 September 2026)",
    "reason": "Single developer report; primary post deleted; low documented stakes beyond one user.",
-   "url": "https://www.techradar.com/pro/security/i-broke-something-a-claude-code-ai-agent-deleted-48-000-files-in-just-over-100-seconds-then-apologized-for-doing-so"
+   "url": "https://www.techradar.com/pro/security/i-broke-something-a-claude-code-ai-agent-deleted-48-000-files-in-just-over-100-seconds-then-apologized-for-doing-so",
+   "tracker": true,
+   "reported_on": "2026-09-27"
   },
   {
    "name": "DOJ filing with a nonexistent Sixth Circuit citation, Daghra v. Hinkley (W.D. Mich., July 2026)",
    "reason": "Single citation, no sanction, AI use only suspected by the judge. Candidate if the court finds AI use.",
-   "url": "https://news.bloomberglaw.com/litigation/doj-called-out-by-judge-for-alleged-ai-use-fake-case-citation"
+   "url": "https://news.bloomberglaw.com/litigation/doj-called-out-by-judge-for-alleged-ai-use-fake-case-citation",
+   "tracker": false
   },
   {
    "name": "Binnall Law phantom quotes (N.D. Cal., May 2026) and LiveVideo.AI v. Redstone (S.D.N.Y., June 2026)",
    "reason": "Weaker than the three court cases recorded; primary order not confirmed for LiveVideo.",
-   "url": "https://incidentdatabase.ai/cite/1499/"
+   "url": "https://incidentdatabase.ai/cite/1499/",
+   "tracker": false
   },
   {
    "name": "KPMG report pulled over fabricated citations (June 2026)",
    "reason": "Self published thought piece from October 2025, not delivered to a client in the window.",
-   "url": ""
+   "url": "",
+   "tracker": false
   },
   {
    "name": "OpenAI agents upload files to public temporary hosting services (14 April 2026, posted 16 September)",
    "reason": "Low documented stakes; no outside party affected beyond use of public services.",
-   "url": "https://alignment.openai.com/misalignment-reports/unauthorized-communication-via-temporary-file-hosting-services/"
+   "url": "https://alignment.openai.com/misalignment-reports/unauthorized-communication-via-temporary-file-hosting-services/",
+   "tracker": true,
+   "reported_on": "2026-09-16"
   },
   {
    "name": "Modal Labs hosted application compromise linked to the Hugging Face incident (Axios, 28 July 2026)",
    "reason": "Only secondary reporting; OpenAI's account does not mention Modal. Revisit if confirmed; would extend INC0022.",
-   "url": "https://axios.com/2026/07/28/openai-hugging-face-modal-labs-hack"
+   "url": "https://axios.com/2026/07/28/openai-hugging-face-modal-labs-hack",
+   "tracker": true,
+   "reported_on": "2026-07-28"
   },
   {
    "name": "AISI GPT-6 Astra supply chain attacks (28 September 2026)",
    "reason": "All actions simulated; no real system touched per AISI.",
-   "url": "https://www.aisi.gov.uk/blog/gpt-6-astra-performs-unsanctioned-supply-chain-attacks-in-simulations"
+   "url": "https://www.aisi.gov.uk/blog/gpt-6-astra-performs-unsanctioned-supply-chain-attacks-in-simulations",
+   "tracker": false
   },
   {
    "name": "Meta internal agent data exposure, Sev 1 (March 2026)",
    "reason": "Disclosed 18 March 2026, before the six month window.",
-   "url": ""
+   "url": "https://www.theguardian.com/technology/2026/mar/20/meta-ai-agents-instruction-causes-large-sensitive-data-leak-to-employees",
+   "tracker": true,
+   "reported_on": "2026-03-18"
   },
   {
    "name": "Canvas and Instructure breach (May 2026)",
    "reason": "Criminal extortion attack; no AI agent involvement documented.",
-   "url": ""
+   "url": "",
+   "tracker": false
   },
   {
    "name": "OpenAI notifies more than 100 organizations of unauthorized agent activity (reported 1 to 3 October 2026)",
    "reason": "Aggregate notice with no specific event, organization or date to match. Source pages could not be loaded. Not a separate incident.",
-   "url": "https://oecd.ai/en/incidents/2026-10-02-7e52"
+   "url": "https://oecd.ai/en/incidents/2026-10-02-7e52",
+   "tracker": true,
+   "reported_on": "2026-10-01"
   },
   {
    "name": "FIFA asks to dismiss Puerto Rico Soccer League suit over unpaid sanctions for defective citations (filing 6 October 2026)",
    "reason": "Sanctions date from September 2025 and the lawyers deny using AI; the court only found hallmarks of it, so the AI system is not documented.",
-   "url": "https://www.lawcommentary.com/articles/fifa-antitrust-lawsuit-ai-citations-sanctions"
+   "url": "https://www.lawcommentary.com/articles/fifa-antitrust-lawsuit-ai-citations-sanctions",
+   "tracker": false
   },
   {
    "name": "Threat actor AI agent intrusion transcripts (breachcache, 12 October 2026)",
    "reason": "Attacker operated agents directed by their operators; no authority layer sits in the attacker's path, and the account comes from a single unverified publisher.",
-   "url": "https://breachcache.com/cases/hands-off-the-keyboard/"
+   "url": "https://breachcache.com/cases/hands-off-the-keyboard/",
+   "tracker": false
   },
   {
    "name": "OpenAI models bypass a GET only restriction and register a benefits portal account (incidents 19 to 20 June 2026, posted 9 October 2026)",
    "reason": "OpenAI uses fictional names for the services and data sources, so no outside party can be identified, and no effect on the services is described. Revisit if the services are identified.",
-   "url": "https://alignment.openai.com/misalignment-reports/obtaining-public-statistics-with-disallowed-requests/"
+   "url": "https://alignment.openai.com/misalignment-reports/obtaining-public-statistics-with-disallowed-requests/",
+   "tracker": true,
+   "reported_on": "2026-10-09"
   },
   {
    "name": "Spain AEPD breach notification describing an attack executed through an AI agent (announced 14 September 2026, covered 13 October 2026)",
    "reason": "Attacker operated agent with the organization and model unnamed; as with the DIVD case, no authority layer sits in the attacker's path.",
-   "url": "https://untrace.network/blog/ai-agent-data-breach-spain"
+   "url": "https://untrace.network/blog/ai-agent-data-breach-spain",
+   "tracker": false
   },
   {
    "name": "Salt Labs hijack of the Manus agent through a malicious email (October 2026)",
    "reason": "Security research demonstration, not an incident in a live deployment.",
-   "url": "https://www.streetinsider.com/PRNewswire/Nearly+Half+of+Enterprises+Report+an+AI+Agent+Took+an+Unauthorized+Action+Last+Year%2C+Salt+Security+Research+Finds/27177443.html"
+   "url": "https://www.streetinsider.com/PRNewswire/Nearly+Half+of+Enterprises+Report+an+AI+Agent+Took+an+Unauthorized+Action+Last+Year%2C+Salt+Security+Research+Finds/27177443.html",
+   "tracker": false
   },
   {
    "name": "West Virginia Supreme Court questions counsel over AI errors in a parental rights brief (reported 13 October 2026)",
    "reason": "Questioning at oral argument only; no order, sanction or findings yet. Revisit if the court issues one.",
-   "url": "https://www.abajournal.com/news/article/west-virginia-attorney-questioned-over-ai-errors-in-parental-rights-appeal"
+   "url": "https://www.abajournal.com/news/article/west-virginia-attorney-questioned-over-ai-errors-in-parental-rights-appeal",
+   "tracker": true,
+   "reported_on": "2026-10-13"
   },
   {
    "name": "DiffVibe report of a Claude agent wiping a firm's database (14 October 2026)",
    "reason": "Restates the April 2026 PocketOS deletion already recorded as INC0014; no new facts.",
-   "url": "https://diffvibe.com/articles/claude-agent-wipes-firm-s-database-admits-i-violated-every-principle-088d2395"
+   "url": "https://diffvibe.com/articles/claude-agent-wipes-firm-s-database-admits-i-violated-every-principle-088d2395",
+   "tracker": false
   },
   {
    "name": "GPT-5.6 erases local drives in full access mode (ai.cm, 13 October 2026)",
    "reason": "Restates the incident already recorded as INC0033; no new facts.",
-   "url": "https://www.ai.cm/article/gpt-56-erases-local-drives-as-autonomous-coding-agents-overstep-safeguards/"
+   "url": "https://www.ai.cm/article/gpt-56-erases-local-drives-as-autonomous-coding-agents-overstep-safeguards/",
+   "tracker": false
   },
   {
    "name": "TV4 The Challenge Sverige season deleted, reportedly by an AI agent (Aftonbladet, 14 October 2026)",
    "reason": "Attribution rests on anonymous sources; TV4 says its investigation found human error at the production company, not AI.",
-   "url": "https://www.aftonbladet.se/nojesbladet/a/31oE8A/the-challenge-sverige-raderad-av-ai-bara-veckor-innan-premiaren"
+   "url": "https://www.aftonbladet.se/nojesbladet/a/31oE8A/the-challenge-sverige-raderad-av-ai-bara-veckor-innan-premiaren",
+   "tracker": false
   },
   {
    "name": "State Farm counsel sanctioned 999.99 US dollars for AI fabricated citations, Meni-Siliga v. A's Contractor (Los Angeles Superior Court, September 2026)",
    "reason": "The sanction order is not publicly accessible; revisit if a copy of the order is posted.",
-   "url": "https://www.law360.com/articles/2524716/state-farm-attorney-sanctioned-999-99-for-ai-hallucinations"
+   "url": "https://www.law360.com/articles/2524716/state-farm-attorney-sanctioned-999-99-for-ai-hallucinations",
+   "tracker": true,
+   "reported_on": "2026-09",
+   "tracker_title": "State Farm outside counsel sanctioned 999.99 US dollars for AI fabricated citations (Los Angeles Superior Court, September 2026)"
   },
   {
    "name": "AI powered hacking breaches at 16 Korean financial firms, including KDB Capital (reported 14 October 2026)",
    "reason": "Attacker operated AI tooling; as with the DIVD and AEPD cases, no authority layer sits in the attacker's path.",
-   "url": "https://en.infomaxai.com/news/articleView.html?idxno=143327"
+   "url": "https://en.infomaxai.com/news/articleView.html?idxno=143327",
+   "tracker": false
   },
   {
    "name": "Vero Security finds a token in Mistral's Le Chat coding sandbox that reached internal services (disclosed 12 October 2026)",
    "reason": "Security research with the vendor's permission; the agent ran a binary on the researchers' instruction.",
-   "url": "https://www.vero.security/blog/your-agents-sandbox-isnt-private-how-one-token-opened-mistrals-internal-model-fleet"
+   "url": "https://www.vero.security/blog/your-agents-sandbox-isnt-private-how-one-token-opened-mistrals-internal-model-fleet",
+   "tracker": false
   },
   {
    "name": "Adversa AI demonstration of Copilot CLI leaking a local secrets file through hidden instructions (13 October 2026)",
    "reason": "Security research demonstration, not an incident in a live deployment.",
-   "url": "https://dstld.news/cybersecurity/2026-10-13/adversa-says-copilot-cli-leaked-developer-secrets-through-encrypted-instructions"
+   "url": "https://dstld.news/cybersecurity/2026-10-13/adversa-says-copilot-cli-leaked-developer-secrets-through-encrypted-instructions",
+   "tracker": false
   },
   {
    "name": "Noma Labs Claude Code Desktop preview pane exfiltration chain (14 October 2026)",
    "reason": "Vulnerability research with a proof of concept; no incident in a live deployment documented.",
-   "url": "https://noma.security/noma-labs/sneakpeek-how-the-preview-pane-in-claude-code-desktop-can-exfiltrate-your-data"
+   "url": "https://noma.security/noma-labs/sneakpeek-how-the-preview-pane-in-claude-code-desktop-can-exfiltrate-your-data",
+   "tracker": false
   },
   {
    "name": "Reflectiz AI agent bypasses an insurer's one time code login (14 October 2026)",
    "reason": "Action taken during an authorized security assessment.",
-   "url": "https://www.sepe.gr/en/it-technology/cybersecurity/22786346/an-ai-agent-found-a-critical-otp-bypass-in-production-the-attack-was-the-easy-part/"
+   "url": "https://www.sepe.gr/en/it-technology/cybersecurity/22786346/an-ai-agent-found-a-critical-otp-bypass-in-production-the-attack-was-the-easy-part/",
+   "tracker": false
   },
   {
    "name": "UK Home Office Asylum Case Summarisation tool fails accuracy checks (reported 13 to 15 October 2026)",
    "reason": "Internal decision support reviewed by caseworkers; no source documents a summary reaching an outside party or changing a decision.",
-   "url": "https://www.computerweekly.com/news/366652122/AI-tool-used-in-asylum-case-reviews-failing-accuracy-tests"
+   "url": "https://www.computerweekly.com/news/366652122/AI-tool-used-in-asylum-case-reviews-failing-accuracy-tests",
+   "tracker": true,
+   "reported_on": "2026-10-13"
   },
   {
    "name": "Arizona federal court dismisses a self represented plaintiff's suspected AI drafted complaint against USDA (October 2026)",
    "reason": "No fabricated citations, sanction or AI findings documented; dismissed as a shotgun pleading.",
-   "url": "https://thelawreporters.com/arizona-judge-dismisses-lawsuit-suspected-ai-filing"
+   "url": "https://thelawreporters.com/arizona-judge-dismisses-lawsuit-suspected-ai-filing",
+   "tracker": false
   },
   {
    "name": "Clinco v. Commissioner, apparent AI fabricated Tax Court citations (covered 14 October 2026)",
    "reason": "The court warned counsel but imposed no sanction.",
-   "url": "https://www.upi.com/Voices/2026/10/14/companies-liable-ai-mistakes/5191791987073/"
+   "url": "https://www.upi.com/Voices/2026/10/14/companies-liable-ai-mistakes/5191791987073/",
+   "tracker": true,
+   "reported_on": "2026-10-14",
+   "tracker_title": "US Tax Court finds apparent AI fabricated citations in a taxpayer brief and warns counsel (covered 14 October 2026)"
   },
   {
    "name": "Cologne Regional Court bars Snap from using My AI chatbot data for advertising (judgment 17 September 2026, published 15 October 2026)",
    "reason": "Concerns the company's data processing practices, not an action executed by the AI system.",
-   "url": "https://www.vzbv.de/urteile/urteil-snapchat-ki-nutzt-rechtswidrig-daten-von-minderjaehrigen-fuer-werbung"
+   "url": "https://www.vzbv.de/urteile/urteil-snapchat-ki-nutzt-rechtswidrig-daten-von-minderjaehrigen-fuer-werbung",
+   "tracker": false
   },
   {
    "name": "OpenAI model uses a funded Sepolia test wallet (disclosed 15 October 2026)",
    "reason": "Valueless test-network tokens from publicly known developer keys, with no real-money loss documented; excluded as low stakes.",
-   "url": "https://alignment.openai.com/misalignment-reports/using-a-funded-test-cryptocurrency-wallet-without-authorization/"
+   "url": "https://alignment.openai.com/misalignment-reports/using-a-funded-test-cryptocurrency-wallet-without-authorization/",
+   "tracker": true,
+   "reported_on": "2026-10-15"
   },
   {
    "name": "OpenAI model circumvents GET restrictions through an external browser (disclosed 15 October 2026)",
    "reason": "Public statistics retrieval from unnamed services, with no nonpublic access or consequential effect on those services documented.",
-   "url": "https://alignment.openai.com/misalignment-reports/circumventing-internet-restrictions-through-an-external-browser/"
+   "url": "https://alignment.openai.com/misalignment-reports/circumventing-internet-restrictions-through-an-external-browser/",
+   "tracker": true,
+   "reported_on": "2026-10-15"
   },
   {
    "name": "CERT-In aggregate disclosure of evaluation agents accessing Indian systems (15 October 2026)",
    "reason": "Official aggregate disclosure does not identify providers, models, dates or separate incidents sufficiently to distinguish new events from incidents already recorded; revisit when incident-level detail is public.",
-   "url": "https://www.cert-in.org.in/s2cMainServlet?VLCODE=CIAD-2026-0049&pageid=PUBVLNOTES02"
+   "url": "https://www.cert-in.org.in/s2cMainServlet?VLCODE=CIAD-2026-0049&pageid=PUBVLNOTES02",
+   "tracker": true,
+   "reported_on": "2026-10-15"
   },
   {
    "name": "New York City CarGurus AI chatbot pricing lawsuit (15 October 2026)",
    "reason": "The release alleges deceptive chatbot deal lists but supplies no specific chatbot exchange or adjudicated findings establishing an incident outcome.",
-   "url": "https://www.nyc.gov/site/dca/news/71-26/mamdani-administration-sues-cargurus-deceiving-new-yorkers-ai-chatbot-hidden-junk-fees"
+   "url": "https://www.nyc.gov/site/dca/news/71-26/mamdani-administration-sues-cargurus-deceiving-new-yorkers-ai-chatbot-hidden-junk-fees",
+   "tracker": true,
+   "reported_on": "2026-10-15"
   },
   {
    "name": "India Supreme Court fake-judgment compilation in GSTAAD Hotels appeals (15 October 2026)",
    "reason": "Reporting describes alleged AI use, while proposed costs were removed; no confirmed AI finding or sanction is established in the material reviewed.",
-   "url": "https://www.livelaw.in/supreme-court/supreme-court-flags-ai-generated-fake-judgments-in-compilation-filed-by-party-554926"
+   "url": "https://www.livelaw.in/supreme-court/supreme-court-flags-ai-generated-fake-judgments-in-compilation-filed-by-party-554926",
+   "tracker": false
   },
   {
    "name": "BC Court of Appeal AI warning in 1182573 B.C. Ltd. v. Gerber (covered 15 October 2026)",
    "reason": "The report documents AI use and general warnings, not a finding of fabricated authority or a sanction tied to it.",
-   "url": "https://www.carlaw.ca/bc-court-of-appeal-warns-of-risks-of-using-ai-in-court-materials/"
+   "url": "https://www.carlaw.ca/bc-court-of-appeal-warns-of-risks-of-using-ai-in-court-materials/",
+   "tracker": false
   },
   {
    "name": "Hidden prompt instructions in Connecticut and Brazilian court filings (covered 15 October 2026)",
    "reason": "Human-authored attempts to influence AI readers, with no consequential unauthorized AI action documented.",
-   "url": "https://worldbyflow.com/p/connecticut-courts-ai-prompt-injection-sanction-cites-brazil-67f8d507"
+   "url": "https://worldbyflow.com/p/connecticut-courts-ai-prompt-injection-sanction-cites-brazil-67f8d507",
+   "tracker": false
   },
   {
    "name": "Hidden prompt in Sao Paulo business-court defense (14 October 2026)",
    "reason": "Sanction concerns a human inserting hidden instructions; the source does not document an AI executing the requested action.",
-   "url": "https://jurinews.com.br/en/sp/judge-fine-attorney-client-who-inserted-hidden-command-with-request-for-compliments-to-the-lisura"
+   "url": "https://jurinews.com.br/en/sp/judge-fine-attorney-client-who-inserted-hidden-command-with-request-for-compliments-to-the-lisura",
+   "tracker": false
   },
   {
    "name": "LLMail-Inject revised unauthorized-email study (covered 15 October 2026)",
    "reason": "Controlled simulated mailboxes and generated tool calls, not a documented consequential send to an outside party.",
-   "url": "https://www.frontiermodels.com/news/ai-assistants-obeyed-malicious-instructions-hidden-in-emails-revised-study-finds/"
+   "url": "https://www.frontiermodels.com/news/ai-assistants-obeyed-malicious-instructions-hidden-in-emails-revised-study-finds/",
+   "tracker": false
   },
   {
    "name": "Morón Civil and Commercial Appeals Chamber declares an appeal deserted over an untraceable Supreme Court citation (decision 1 October 2026, covered 15 October 2026)",
    "reason": "The court said it could not state with certainty that AI produced the citation, only that it was very likely, and no counsel statement documents AI use.",
-   "url": "https://ninolegal.com/novedad/camara-moron-civil-declara-desierto-recurso-cita-inexistente-inteligencia-artificial"
+   "url": "https://ninolegal.com/novedad/camara-moron-civil-declara-desierto-recurso-cita-inexistente-inteligencia-artificial",
+   "tracker": false
   },
   {
    "name": "PaperCut server compromises by an operator using Codex and DeepSeek agents (GreyNoise and Hunt.io, reported 16 October 2026)",
    "reason": "Attacker operated agents with an unidentified operator; no authority layer sits in the attacker's path, so an enforcement point would be speculative.",
-   "url": "https://cybersecuritynews.com/breach-440-papercut-servers/"
+   "url": "https://cybersecuritynews.com/breach-440-papercut-servers/",
+   "tracker": false
   },
   {
    "name": "CyberXero use of Claude Code in a breach of Ukrainian government records (RuntimeAI weekly roundup, 16 October 2026)",
    "reason": "Attacker operated tooling reported only in a vendor roundup with no primary source located; no authority layer sits in the attacker's path.",
-   "url": "https://runtimeai.io/blog/2026-10-16-ai-security-incidents.html"
+   "url": "https://runtimeai.io/blog/2026-10-16-ai-security-incidents.html",
+   "tracker": false
   },
   {
    "name": "Anthropic Console credit overcharge and support bot refund denials (Hacker News, 16 October 2026)",
    "reason": "Single user post; the overcharge came from a payment form input bug rather than an AI action, and an Anthropic employee said support would contact the user directly.",
-   "url": "https://news.ycombinator.com/item?id=50121562"
+   "url": "https://news.ycombinator.com/item?id=50121562",
+   "tracker": false
   },
   {
    "name": "Sharp HealthCare ambient AI recording class action (complaint filed December 2025, surfaced by the AI Incident Database October 2026)",
    "reason": "Unadjudicated allegations in a proposed class action complaint, with no court finding or company account of the executed action.",
-   "url": "https://www.kpbs.org/news/health/2025/12/11/lawsuit-claims-sharp-healthcare-secretly-recorded-exam-room-conversations-without-patient-consent"
+   "url": "https://www.kpbs.org/news/health/2025/12/11/lawsuit-claims-sharp-healthcare-secretly-recorded-exam-room-conversations-without-patient-consent",
+   "tracker": true,
+   "reported_on": "2026-10"
   },
   {
    "name": "Eight state attorney general suits against OpenAI (filed 14 October 2026)",
    "reason": "Unadjudicated complaints; the agent conduct they cite traces to incidents already recorded or excluded, and no new executed action is documented.",
-   "url": "https://www.troutman.com/insights/eight-state-ags-sue-openai-over-chatgpt-safety-and-consumer-protection/"
+   "url": "https://www.troutman.com/insights/eight-state-ags-sue-openai-over-chatgpt-safety-and-consumer-protection/",
+   "tracker": false
   },
   {
    "name": "Vals AI refund experiment with six agents chasing a train ticket refund (published 18 October 2026)",
    "reason": "Research simulation in which all outgoing emails and form submissions were intercepted, so no outside party was reached.",
-   "url": "https://the-decoder.com/ai-agents-chasing-a-465-train-refund-invented-excuses-leaked-medical-data-and-spammed-an-mps-office/"
+   "url": "https://the-decoder.com/ai-agents-chasing-a-465-train-refund-invented-excuses-leaked-medical-data-and-spammed-an-mps-office/",
+   "tracker": false
   },
   {
    "name": "Doubao chatbot misstates an air ticket refund fee and promises compensation (user posts, May 2026)",
    "reason": "Single user account relayed by press, posts since deleted, no company account and no report that the court accepted the suit.",
-   "url": "https://nope.net/incidents/2026-china-doubao-air-ticket-refund-fee-advice-600-yuan-loss-user-sues"
+   "url": "https://nope.net/incidents/2026-china-doubao-air-ticket-refund-fee-advice-600-yuan-loss-user-sues",
+   "tracker": true,
+   "reported_on": "2026-05"
   },
   {
    "name": "LG Hamburg 324 O 404/25, Google AI Overview false claims about a company (order 29 September 2025, reported 13 October 2026)",
    "reason": "Only law firm summaries located, with no decision text or legal press report; reconsider if the order is published.",
-   "url": "https://www.ra-plutte.de/lg-hamburg-google-haftet-fuer-ki-fehler-nach-hinweis/amp/"
+   "url": "https://www.ra-plutte.de/lg-hamburg-google-haftet-fuer-ki-fehler-nach-hinweis/amp/",
+   "tracker": true,
+   "reported_on": "2026-10-13"
   },
   {
    "name": "LG Hamburg 324 O 461/25, Grok false funding claim about a nonprofit (order 23 September 2025)",
    "reason": "Only law firm summaries located, with no decision text or legal press report; reconsider if the order is published.",
-   "url": "https://www.anwalt-daum.de/ki-chatbot-haftung-bot-luegt-einsteht/"
+   "url": "https://www.anwalt-daum.de/ki-chatbot-haftung-bot-luegt-einsteht/",
+   "tracker": true,
+   "reported_on": "2025-09-23"
   },
   {
    "name": "LG Frankfurt 2-06 O 271/25, Google AI Overview (10 September 2025)",
    "reason": "The court found the challenged statement not untrue in context, so no defective output was established.",
-   "url": "https://www.lhr-law.de/magazin/medienrecht-und-persoenlichkeitsrecht/google-ki-falschbehauptung-lg-aachen/"
+   "url": "https://www.lhr-law.de/magazin/medienrecht-und-persoenlichkeitsrecht/google-ki-falschbehauptung-lg-aachen/",
+   "tracker": false
   },
   {
    "name": "OpenCode Console provider key exposure (17 October 2026)",
    "reason": "Unauthorized access by an outside party to a legacy vendor system; no AI system executed the action.",
-   "url": "https://thelatent.co/models/opencode-says-breach-tied-to-distillation-attack-exposed-users-ai-provider-keys"
+   "url": "https://thelatent.co/models/opencode-says-breach-tied-to-distillation-attack-exposed-users-ai-provider-keys",
+   "tracker": false
   },
   {
    "name": "Claude Code sends a user email address in a Wikipedia User-Agent header (GitHub issue, 15 October 2026)",
    "reason": "Single user report with no transcript or vendor response, and low documented stakes.",
-   "url": "https://nope.net/incidents/2026-claude-code-put-users-email-in-user-agent-of-four-wikipedia-search-requests-first-person-github-issue"
+   "url": "https://nope.net/incidents/2026-claude-code-put-users-email-in-user-agent-of-four-wikipedia-search-requests-first-person-github-issue",
+   "tracker": true,
+   "reported_on": "2026-10-15"
   },
   {
    "name": "Georgia federal court sanction for AI generated citations described in a law firm client note (2025)",
    "reason": "The source gives no case name, docket or primary order to verify.",
-   "url": "https://www.burkemoore.com/news/lawyers-ai-and-fake-citations/"
+   "url": "https://www.burkemoore.com/news/lawyers-ai-and-fake-citations/",
+   "tracker": false
   },
   {
    "name": "LASST v. OpenAI unfair competition complaint over the Hugging Face incident (filed 29 September 2026)",
    "reason": "Unadjudicated complaint about an incident already recorded as INC0022; it documents no new executed action.",
-   "url": "https://companyscope.io/register"
+   "url": "https://companyscope.io/register",
+   "tracker": false
   }
  ],
  "rows": [
@@ -6534,6 +6625,134 @@
     "why_it_mattered": "A generated answer branded a named physician a convicted sex offender to anyone searching his name.",
     "workflow": "Generative answers in Google Search AI Mode"
    }
+  },
+  {
+   "incident_id": "INC0048",
+   "last_updated": "2026-10-18",
+   "published_version": 1,
+   "report_ids": [
+    "R0082",
+    "R0083"
+   ],
+   "review_status": "published",
+   "schema_version": 1,
+   "snapshot_at": "2026-10-18T17:00:17Z",
+   "published": {
+    "actions": {
+     "attempted": [],
+     "completed": [
+      "Automatic temporary deactivation of driver accounts on suspected fraud or low customer ratings (regulator)",
+      "Automatic permanent deactivation of driver accounts on persistently low customer ratings (regulator)"
+     ]
+    },
+    "authority": {
+     "status": "missing",
+     "statement": "No human assessed the deactivations before they took effect, and the regulator held that such decisions require one.",
+     "basis": "Documented: the regulator states there was no human assessment and that the fully automated decisions violated the GDPR prohibition on automated decision making.",
+     "present": [
+      "Software monitoring of driving behaviour and customer ratings (regulator)"
+     ],
+     "absent": [
+      "Human assessment before deactivation (regulator)",
+      "Sufficient information to drivers about the automated decisions (regulator)"
+     ],
+     "unknown": [
+      "How many drivers were deactivated",
+      "Whether the software used machine learning; the regulator calls it software"
+     ]
+    },
+    "consequences": [
+     "Drivers lost their Uber income for the period of deactivation",
+     "Fine of 824,990,000 euros imposed by the Dutch data protection authority",
+     "Uber has ended the practice and appealed the fine; no final court decision"
+    ],
+    "controls": [
+     {
+      "basis": "documented",
+      "control": "Human review before an account is deactivated",
+      "failure": "The regulator found no human assessment took place."
+     }
+    ],
+    "defect_category": "human_review_absent",
+    "defect_label": "Decision affecting a person executed without human review",
+    "deployment": "deployed",
+    "disclosed_basis": "Fine announced by the Dutch data protection authority on 21 August 2026; summarized by the EDPB on 8 October 2026.",
+    "disclosed_on": "2026-08-21",
+    "enforcement": {
+     "enforcement_point": "Execution of each account deactivation triggered by a fraud or rating signal.",
+     "decision_state": "Hold",
+     "reason": "The decision ends a driver's income and has not been reviewed by a person.",
+     "authority_requirement": "A named reviewer with authority to overturn the system confirms the deactivation and records a reason.",
+     "condition": "Applies to temporary and permanent deactivations that cut off a person's ability to work.",
+     "required_response": "Keep the account active, or limit it under a documented interim rule, until review.",
+     "responder_action": "Review the signal and the driver's account, then confirm or reject the deactivation and tell the driver how to contest it.",
+     "next_event": "Deactivation executes only after a recorded human decision.",
+     "responsible_role": "Driver operations reviewer and trust and safety lead (proposed roles)"
+    },
+    "evidence_note": "Official regulator announcement and EDPB summary state the findings. The decision is under appeal, and the regulator does not describe the software as machine learning.",
+    "evidence_strength": "strong",
+    "facts": [
+     "Uber software tracked drivers' driving behaviour and customer ratings, and automatically deactivated accounts when it detected suspected fraud or ratings that were too low. [S77]",
+     "Deactivations were temporary, or permanent for persistently low ratings, and drivers lost their Uber income while deactivated. [S77, S78]",
+     "The regulator states there was no human assessment, and that this occurred between 2018 and 2022. [S77]",
+     "The regulator found Uber violated the GDPR prohibition on fully automated decision making and did not sufficiently inform drivers. [S77]",
+     "The investigation followed complaints by 171 French drivers through the Ligue des droits de l'Homme, handled by the Dutch authority because Uber's European headquarters is in the Netherlands. [S77]",
+     "The fine is 824,990,000 euros; Uber has appealed and there is no final judicial decision. [S77, S78]",
+     "The regulator says Uber has stopped the violations. [S77]"
+    ],
+    "incident_date": "2018 to 2022",
+    "incident_date_basis": "The regulator dates the automated deactivations to 2018 through 2022.",
+    "inferences": [
+     "The signals were fraud and rating thresholds, so a review step at execution would not have stopped detection, only the automatic cutoff of income."
+    ],
+    "location": {
+     "documented": true,
+     "status": "established",
+     "label": "The Hague, Netherlands (Autoriteit Persoonsgegevens)",
+     "lat": 52.0705,
+     "lon": 4.3007,
+     "kind": "jurisdiction",
+     "basis": "The Dutch data protection authority decided the case as lead authority. Pin placed at The Hague as its seat, not at Uber's Amsterdam office."
+    },
+    "organization": "Uber (Uber B.V. and Uber Technologies Inc.); affected: drivers, including 171 French complainants",
+    "rules": [
+     {
+      "applicability": "The regulator found the deactivations were prohibited fully automated decisions.",
+      "issuer": "European Union",
+      "level": "regional",
+      "name": "General Data Protection Regulation, Articles 22 and 13",
+      "scope": "Automated individual decisions and information to data subjects",
+      "uncertainty": "Fine under appeal; no final judicial decision.",
+      "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+     }
+    ],
+    "sources": [
+     {
+      "id": "S77",
+      "name": "Autoriteit Persoonsgegevens: Uber fined nearly 825 million euros for automated driver blocking",
+      "url": "https://autoriteitpersoonsgegevens.nl/en/current/uber-fined-nearly-825-million-euros-for-automated-driver-blocking",
+      "published": "2026-08-21",
+      "type": "primary (regulator decision announcement)",
+      "report_id": "R0082",
+      "retrieved": "2026-10-18"
+     },
+     {
+      "id": "S78",
+      "name": "EDPB: Dutch DPA fines Uber EUR 824 990 000 for unlawful automated decision-making and insufficient information on profiling",
+      "url": "https://www.edpb.europa.eu/news/dutch-dpa-fines-uber-eur-824-990-000-for-unlawful-automated-decision-making-and-insufficient_en",
+      "published": "2026-10-08",
+      "type": "primary (regulator summary)",
+      "report_id": "R0083",
+      "retrieved": "2026-10-18"
+     }
+    ],
+    "summary": "Uber software automatically deactivated drivers' accounts on suspected fraud or low ratings, sometimes permanently, with no human assessment. Drivers lost their income while blocked. The Dutch data protection authority fined Uber 824,990,000 euros for prohibited automated decision making; Uber has appealed.",
+    "system": "Uber fraud detection and rating based deactivation software (the regulator calls it software; no model is named)",
+    "title": "Platform software deactivates drivers' accounts with no human review; Dutch regulator fines Uber 825 million euros",
+    "why_it_mattered": "An automated signal cut off people's income with no person checking the decision first.",
+    "workflow": "Driver account management and fraud and rating enforcement"
+   },
+   "controls": null
   }
  ]
 }

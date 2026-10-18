@@ -384,6 +384,18 @@ section.block:last-of-type { padding-bottom: clamp(56px, 9vw, 104px); }
 .caveat { margin-top: 16px; font-size: 0.86rem; color: var(--text-dim); max-width: 72ch; }
 .scale-intro { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px 40px; margin-bottom: 26px; }
 .scale-intro p { color: var(--text-muted); font-size: 0.98rem; }
+/* Watchlist */
+.watch-count { font-size: 0.78rem; color: var(--text-dim); margin-bottom: 10px; }
+.watch { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--border-faint); }
+.witem { display: grid; grid-template-columns: 9.5rem minmax(0, 1fr); gap: 6px 24px; padding: 16px 0; border-bottom: 1px solid var(--border-faint); }
+.wdate { font-size: 0.76rem; color: var(--silver-faint); padding-top: 3px; }
+.wtitle { color: var(--text-body); font-size: 0.96rem; line-height: 1.45; margin: 0 0 6px; }
+.wwhy { color: var(--text-muted); font-size: 0.86rem; line-height: 1.45; margin: 0; }
+.wwhy .label { margin-right: 6px; }
+.wsrc { display: inline-block; margin-top: 6px; font-size: 0.8rem; color: var(--silver-faint); text-underline-offset: 3px; }
+.wsrc:hover { color: var(--orange-bright); }
+.watch-more { margin-top: 14px; }
+@media (max-width: 640px) { .witem { grid-template-columns: 1fr; } }
 
 /* Evidence key */
 .key { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
@@ -603,9 +615,23 @@ footer.site .wrap { display: flex; flex-wrap: wrap; gap: 10px 24px; justify-cont
     </div>
   </section>
 
+  <section class="block" id="watchlist" aria-labelledby="h-watch">
+    <div class="wrap">
+      <p class="label accent">06 / Still being reported</p>
+      <h2 class="section-title" id="h-watch">Watchlist: reported, not verified to dashboard standard</h2>
+      <div class="scale-intro">
+        <p>These reports describe an AI system acting in a real setting, but each fell short of the bar for a case file: a single unconfirmed account, an unnamed party, no primary record, or limited stakes.</p>
+        <p>They are listed so the pattern stays visible, newest first. None of them is a verified incident, and each one shows why it is not on the dashboard.</p>
+      </div>
+      <p class="watch-count mono" id="watchcount"></p>
+      <ul class="watch" id="watch"><li class="loading">Loading the watchlist.</li></ul>
+      <button class="linkbtn watch-more" type="button" id="watchmore" hidden></button>
+    </div>
+  </section>
+
   <section class="block" id="key" aria-labelledby="h-key">
     <div class="wrap">
-      <p class="label accent">06 / Evidence key</p>
+      <p class="label accent">07 / Evidence key</p>
       <h2 class="section-title" id="h-key">How to read each case file</h2>
       <div class="key" style="margin-top:20px">
         <div><span class="tag-doc">Documented</span><p>Stated by a cited source.</p></div>

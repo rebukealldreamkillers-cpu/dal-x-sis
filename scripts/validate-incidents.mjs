@@ -25,6 +25,7 @@ const DEFECTS = {
   unverified_release: 'Unverified change released through automation',
   requester_unverified: 'Account control changed without verifying the requester',
   unbounded_execution: 'Agent ran without a spend or iteration limit',
+  human_review_absent: 'Decision affecting a person executed without human review',
 };
 const AUTH = ['exceeded', 'unverified', 'missing'];
 const DEPLOY = ['deployed', 'evaluation_real_systems', 'research_simulation'];

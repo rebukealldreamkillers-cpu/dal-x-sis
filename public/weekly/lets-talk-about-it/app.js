@@ -15,7 +15,8 @@
     { key: 'irreversible_unverified', label: 'Irreversible action without a verified precondition', line: 'A destructive step ran before anyone confirmed it was safe to run.' },
     { key: 'unverified_release', label: 'Unverified change released through automation', line: 'An automated pipeline shipped a change nobody verified first.' },
     { key: 'requester_unverified', label: 'Account control changed without verifying the requester', line: 'Control of an account moved on request, with no check of who was asking.' },
-    { key: 'unbounded_execution', label: 'Agent ran without a spend or iteration limit', line: 'The agent kept running with no ceiling on cost or repetitions.' }
+    { key: 'unbounded_execution', label: 'Agent ran without a spend or iteration limit', line: 'The agent kept running with no ceiling on cost or repetitions.' },
+    { key: 'human_review_absent', label: 'Decision affecting a person executed without human review', line: 'An automated system took a decision with real consequences for a person, and no human looked first.' }
   ];
   var AUTH = { exceeded: 'Authority exceeded', unverified: 'Authority unverified', missing: 'Authority missing' };
   var DEPLOY = { deployed: 'Deployed system', evaluation_real_systems: 'Evaluation that reached real systems', research_simulation: 'Research simulation' };
@@ -28,6 +29,7 @@
     unverified_release: '<path d="M12 3 20 7.5v9L12 21 4 16.5v-9z"/><path d="M4 7.5 12 12l8-4.5M12 12v9"/><path d="M12 1v-0"/>',
     requester_unverified: '<circle cx="8" cy="12" r="4"/><path d="M12 12h9M18 12v3M21 12v2"/><path d="M15.5 4.2a2.6 2.6 0 1 1 3.4 2.5c-.6.2-.9.6-.9 1.2"/><circle cx="18" cy="9.6" r=".4" fill="currentColor"/>',
     unbounded_execution: '<path d="M7 8.5c-2 0-3.5 1.5-3.5 3.5S5 15.5 7 15.5c3.5 0 6.5-7 10-7 2 0 3.5 1.5 3.5 3.5s-1.5 3.5-3.5 3.5c-3.5 0-6.5-7-10-7z"/>',
+    human_review_absent: '<circle cx="9" cy="7.5" r="3"/><path d="M3.5 20c0-3.6 2.5-6 5.5-6s5.5 2.4 5.5 6"/><path d="M15.5 9.5h6M15.5 14.5h6" stroke-dasharray="2 2"/><path d="M18.5 6v11"/>',
     generic: '<path d="M12 3 20 7.5v9L12 21 4 16.5v-9z"/><circle cx="12" cy="12" r="2"/>',
     gate: '<path d="M5 3v18M19 3v18"/><path d="M5 9h14M5 15h14" stroke-dasharray="2 2"/><circle cx="12" cy="12" r="2.4" fill="currentColor"/>'
   };
@@ -75,7 +77,8 @@
   function plural(n, one, many) { return n === 1 ? one : many; }
 
   /* ---------- State ---------- */
-  var D = { rows: [], byId: {}, ctx: [], meta: {} };
+  var D = { rows: [], byId: {}, ctx: [], meta: {}, watch: [] };
+  var WATCH_SHOW = 12, watchAll = false;
   var F = { defect: '', auth: '', dep: '', newOnly: false, q: '' };
   var openId = null, lastTrigger = null, expandedCluster = null, mapFocus = null, pushedHash = false;
 
@@ -110,10 +113,14 @@
       return tb - ta || incNum(b.incident_id) - incNum(a.incident_id);
     });
     D.ctx = arr(ctx && ctx.rows).slice().sort(function (a, b) { return (a.order || 0) - (b.order || 0); });
+    D.watch = arr(inc && inc.excluded_candidates).filter(function (c) { return c && c.tracker === true && has(c.name); })
+      .map(function (c) { c._t = parseMonthOrDay(c.reported_on); return c; })
+      .sort(function (a, b) { return (isNaN(b._t) ? -Infinity : b._t) - (isNaN(a._t) ? -Infinity : a._t); });
 
     renderHero();
     buildFilterOptions();
     renderStats();
+    renderWatch();
     bindControls();
     loadMap();
     applyFilters();
@@ -328,6 +335,36 @@
         (has(c.published) ? '<br><span class="mono">' + esc(fmtDay(c.published)) + '</span>' : '') + '</p>' +
         '</article>';
     }).join('');
+  }
+
+  /* ---------- Watchlist ---------- */
+  function parseMonthOrDay(s) {
+    var m = /^(\d{4})-(\d{2})(?:-(\d{2}))?$/.exec(s || '');
+    return m ? Date.UTC(+m[1], +m[2] - 1, m[3] ? +m[3] : 1) : NaN;
+  }
+  function fmtMonthOrDay(s) {
+    if (/^\d{4}-\d{2}$/.test(s || '')) { var p = s.split('-'); return MONTHS_LONG[+p[1] - 1] + ' ' + p[0]; }
+    return fmtDay(s);
+  }
+  function renderWatch() {
+    var box = $('watch'); if (!box) return;
+    var list = D.watch;
+    $('watchcount').textContent = list.length ? list.length + ' ' + plural(list.length, 'report', 'reports') + ' on the watchlist' : '';
+    if (!list.length) { box.innerHTML = '<p class="empty">No reports on the watchlist yet.</p>'; $('watchmore').hidden = true; return; }
+    var shown = watchAll ? list : list.slice(0, WATCH_SHOW);
+    box.innerHTML = shown.map(function (c) {
+      var title = has(c.tracker_title) ? c.tracker_title : c.name;
+      return '<li class="witem">' +
+        '<span class="wdate mono">' + esc(has(c.reported_on) ? fmtMonthOrDay(c.reported_on) : 'Date not stated') + '</span>' +
+        '<div class="wbody"><p class="wtitle">' + esc(title) + '</p>' +
+        '<p class="wwhy"><span class="label">Why it is not on the dashboard</span> ' + esc(c.reason) + '</p>' +
+        (has(c.url) ? '<a class="wsrc" href="' + esc(c.url) + '" target="_blank" rel="noopener noreferrer">Source</a>' : '') +
+        '</div></li>';
+    }).join('');
+    var more = $('watchmore');
+    more.hidden = list.length <= WATCH_SHOW;
+    more.textContent = watchAll ? 'Show the latest ' + WATCH_SHOW : 'Show all ' + list.length;
+    more.onclick = function () { watchAll = !watchAll; renderWatch(); };
   }
 
   /* ---------- Map ---------- */
