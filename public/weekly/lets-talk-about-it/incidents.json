@@ -1,8 +1,8 @@
 {
- "updated": "2026-10-17",
- "last_check": "2026-10-17T12:05:45Z",
- "next_incident_number": 45,
- "next_report_number": 77,
+ "updated": "2026-10-18",
+ "last_check": "2026-10-18T12:07:16Z",
+ "next_incident_number": 48,
+ "next_report_number": 82,
  "excluded_candidates": [
   {
    "name": "Gemini CLI file loss report (July 2025)",
@@ -283,6 +283,51 @@
    "name": "Eight state attorney general suits against OpenAI (filed 14 October 2026)",
    "reason": "Unadjudicated complaints; the agent conduct they cite traces to incidents already recorded or excluded, and no new executed action is documented.",
    "url": "https://www.troutman.com/insights/eight-state-ags-sue-openai-over-chatgpt-safety-and-consumer-protection/"
+  },
+  {
+   "name": "Vals AI refund experiment with six agents chasing a train ticket refund (published 18 October 2026)",
+   "reason": "Research simulation in which all outgoing emails and form submissions were intercepted, so no outside party was reached.",
+   "url": "https://the-decoder.com/ai-agents-chasing-a-465-train-refund-invented-excuses-leaked-medical-data-and-spammed-an-mps-office/"
+  },
+  {
+   "name": "Doubao chatbot misstates an air ticket refund fee and promises compensation (user posts, May 2026)",
+   "reason": "Single user account relayed by press, posts since deleted, no company account and no report that the court accepted the suit.",
+   "url": "https://nope.net/incidents/2026-china-doubao-air-ticket-refund-fee-advice-600-yuan-loss-user-sues"
+  },
+  {
+   "name": "LG Hamburg 324 O 404/25, Google AI Overview false claims about a company (order 29 September 2025, reported 13 October 2026)",
+   "reason": "Only law firm summaries located, with no decision text or legal press report; reconsider if the order is published.",
+   "url": "https://www.ra-plutte.de/lg-hamburg-google-haftet-fuer-ki-fehler-nach-hinweis/amp/"
+  },
+  {
+   "name": "LG Hamburg 324 O 461/25, Grok false funding claim about a nonprofit (order 23 September 2025)",
+   "reason": "Only law firm summaries located, with no decision text or legal press report; reconsider if the order is published.",
+   "url": "https://www.anwalt-daum.de/ki-chatbot-haftung-bot-luegt-einsteht/"
+  },
+  {
+   "name": "LG Frankfurt 2-06 O 271/25, Google AI Overview (10 September 2025)",
+   "reason": "The court found the challenged statement not untrue in context, so no defective output was established.",
+   "url": "https://www.lhr-law.de/magazin/medienrecht-und-persoenlichkeitsrecht/google-ki-falschbehauptung-lg-aachen/"
+  },
+  {
+   "name": "OpenCode Console provider key exposure (17 October 2026)",
+   "reason": "Unauthorized access by an outside party to a legacy vendor system; no AI system executed the action.",
+   "url": "https://thelatent.co/models/opencode-says-breach-tied-to-distillation-attack-exposed-users-ai-provider-keys"
+  },
+  {
+   "name": "Claude Code sends a user email address in a Wikipedia User-Agent header (GitHub issue, 15 October 2026)",
+   "reason": "Single user report with no transcript or vendor response, and low documented stakes.",
+   "url": "https://nope.net/incidents/2026-claude-code-put-users-email-in-user-agent-of-four-wikipedia-search-requests-first-person-github-issue"
+  },
+  {
+   "name": "Georgia federal court sanction for AI generated citations described in a law firm client note (2025)",
+   "reason": "The source gives no case name, docket or primary order to verify.",
+   "url": "https://www.burkemoore.com/news/lawyers-ai-and-fake-citations/"
+  },
+  {
+   "name": "LASST v. OpenAI unfair competition complaint over the Hugging Face incident (filed 29 September 2026)",
+   "reason": "Unadjudicated complaint about an incident already recorded as INC0022; it documents no new executed action.",
+   "url": "https://companyscope.io/register"
   }
  ],
  "rows": [
@@ -428,7 +473,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-17T12:05:45Z"
+   "snapshot_at": "2026-10-18T12:07:16Z"
   },
   {
    "incident_id": "INC0002",
@@ -571,7 +616,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-17T12:05:45Z"
+   "snapshot_at": "2026-10-18T12:07:16Z"
   },
   {
    "incident_id": "INC0003",
@@ -693,7 +738,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-17T12:05:45Z"
+   "snapshot_at": "2026-10-18T12:07:16Z"
   },
   {
    "incident_id": "INC0004",
@@ -830,7 +875,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-17T12:05:45Z"
+   "snapshot_at": "2026-10-18T12:07:16Z"
   },
   {
    "incident_id": "INC0005",
@@ -974,7 +1019,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-17T12:05:45Z"
+   "snapshot_at": "2026-10-18T12:07:16Z"
   },
   {
    "incident_id": "INC0006",
@@ -1121,7 +1166,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-17T12:05:45Z"
+   "snapshot_at": "2026-10-18T12:07:16Z"
   },
   {
    "incident_id": "INC0007",
@@ -1226,7 +1271,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-17T12:05:45Z"
+   "snapshot_at": "2026-10-18T12:07:16Z"
   },
   {
    "incident_id": "INC0008",
@@ -1362,7 +1407,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-17T12:05:45Z"
+   "snapshot_at": "2026-10-18T12:07:16Z"
   },
   {
    "incident_id": "INC0009",
@@ -1474,7 +1519,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-17T12:05:45Z"
+   "snapshot_at": "2026-10-18T12:07:16Z"
   },
   {
    "incident_id": "INC0010",
@@ -1596,7 +1641,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-17T12:05:45Z"
+   "snapshot_at": "2026-10-18T12:07:16Z"
   },
   {
    "incident_id": "INC0011",
@@ -1738,7 +1783,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-17T12:05:45Z"
+   "snapshot_at": "2026-10-18T12:07:16Z"
   },
   {
    "incident_id": "INC0012",
@@ -1880,7 +1925,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-17T12:05:45Z"
+   "snapshot_at": "2026-10-18T12:07:16Z"
   },
   {
    "incident_id": "INC0013",
@@ -2012,7 +2057,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-17T12:05:45Z"
+   "snapshot_at": "2026-10-18T12:07:16Z"
   },
   {
    "incident_id": "INC0014",
@@ -2160,7 +2205,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-17T12:05:45Z"
+   "snapshot_at": "2026-10-18T12:07:16Z"
   },
   {
    "incident_id": "INC0015",
@@ -2297,7 +2342,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-17T12:05:45Z"
+   "snapshot_at": "2026-10-18T12:07:16Z"
   },
   {
    "incident_id": "INC0016",
@@ -2403,7 +2448,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-17T12:05:45Z"
+   "snapshot_at": "2026-10-18T12:07:16Z"
   },
   {
    "incident_id": "INC0017",
@@ -2533,7 +2578,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-17T12:05:45Z"
+   "snapshot_at": "2026-10-18T12:07:16Z"
   },
   {
    "incident_id": "INC0018",
@@ -2679,7 +2724,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-17T12:05:45Z"
+   "snapshot_at": "2026-10-18T12:07:16Z"
   },
   {
    "incident_id": "INC0019",
@@ -2813,7 +2858,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-17T12:05:45Z"
+   "snapshot_at": "2026-10-18T12:07:16Z"
   },
   {
    "incident_id": "INC0020",
@@ -2938,7 +2983,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-17T12:05:45Z"
+   "snapshot_at": "2026-10-18T12:07:16Z"
   },
   {
    "incident_id": "INC0021",
@@ -3063,7 +3108,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-17T12:05:45Z"
+   "snapshot_at": "2026-10-18T12:07:16Z"
   },
   {
    "incident_id": "INC0022",
@@ -3230,7 +3275,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-17T12:05:45Z"
+   "snapshot_at": "2026-10-18T12:07:16Z"
   },
   {
    "incident_id": "INC0023",
@@ -3354,7 +3399,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-17T12:05:45Z"
+   "snapshot_at": "2026-10-18T12:07:16Z"
   },
   {
    "incident_id": "INC0024",
@@ -3502,7 +3547,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-17T12:05:45Z"
+   "snapshot_at": "2026-10-18T12:07:16Z"
   },
   {
    "incident_id": "INC0025",
@@ -3656,7 +3701,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-17T12:05:45Z"
+   "snapshot_at": "2026-10-18T12:07:16Z"
   },
   {
    "incident_id": "INC0026",
@@ -3803,7 +3848,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-17T12:05:45Z"
+   "snapshot_at": "2026-10-18T12:07:16Z"
   },
   {
    "incident_id": "INC0027",
@@ -3939,7 +3984,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-17T12:05:45Z"
+   "snapshot_at": "2026-10-18T12:07:16Z"
   },
   {
    "incident_id": "INC0028",
@@ -4064,7 +4109,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-17T12:05:45Z"
+   "snapshot_at": "2026-10-18T12:07:16Z"
   },
   {
    "incident_id": "INC0029",
@@ -4186,7 +4231,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-17T12:05:45Z"
+   "snapshot_at": "2026-10-18T12:07:16Z"
   },
   {
    "incident_id": "INC0030",
@@ -4302,7 +4347,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-17T12:05:45Z"
+   "snapshot_at": "2026-10-18T12:07:16Z"
   },
   {
    "incident_id": "INC0031",
@@ -4419,7 +4464,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-17T12:05:45Z"
+   "snapshot_at": "2026-10-18T12:07:16Z"
   },
   {
    "incident_id": "INC0032",
@@ -4526,7 +4571,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-17T12:05:45Z"
+   "snapshot_at": "2026-10-18T12:07:16Z"
   },
   {
    "incident_id": "INC0033",
@@ -4537,7 +4582,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-17T12:05:45Z",
+   "snapshot_at": "2026-10-18T12:07:16Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -4673,7 +4718,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-17T12:05:45Z",
+   "snapshot_at": "2026-10-18T12:07:16Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -4817,7 +4862,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-17T12:05:45Z",
+   "snapshot_at": "2026-10-18T12:07:16Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -4954,7 +4999,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-17T12:05:45Z",
+   "snapshot_at": "2026-10-18T12:07:16Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5101,7 +5146,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-17T12:05:45Z",
+   "snapshot_at": "2026-10-18T12:07:16Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5231,7 +5276,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-17T12:05:45Z",
+   "snapshot_at": "2026-10-18T12:07:16Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5362,7 +5407,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-17T12:05:45Z",
+   "snapshot_at": "2026-10-18T12:07:16Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5495,7 +5540,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-17T12:05:45Z",
+   "snapshot_at": "2026-10-18T12:07:16Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5626,7 +5671,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-17T12:05:45Z",
+   "snapshot_at": "2026-10-18T12:07:16Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5758,7 +5803,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-17T12:05:45Z",
+   "snapshot_at": "2026-10-18T12:07:16Z",
    "published": {
     "actions": {
      "attempted": [
@@ -5889,7 +5934,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-17T12:05:45Z",
+   "snapshot_at": "2026-10-18T12:07:16Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6007,7 +6052,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-17T12:05:45Z",
+   "snapshot_at": "2026-10-18T12:07:16Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6115,6 +6160,379 @@
     "why_it_mattered": "Invented accounts of a judge's reasoning became grounds of an asylum appeal and consumed further hearing time.",
     "workflow": "Preparing and filing immigration appeal grounds and a skeleton argument",
     "cluster": "AI drafted court filings with fabricated citations (2026)"
+   }
+  },
+  {
+   "incident_id": "INC0045",
+   "last_updated": "2026-10-18",
+   "published_version": 1,
+   "report_ids": [
+    "R0077"
+   ],
+   "review_status": "published",
+   "schema_version": 1,
+   "snapshot_at": "2026-10-18T12:07:16Z",
+   "published": {
+    "actions": {
+     "attempted": [],
+     "completed": [
+      "Filing AI-drafted briefs opposing a motion for new trial with nonexistent and misattributed citations (opinion)",
+      "Submitting a proposed order that the trial court issued with the same defective citations (opinion)",
+      "Filing an appellate brief citing authorities that do not support the propositions asserted (opinion)"
+     ]
+    },
+    "authority": {
+     "status": "exceeded",
+     "statement": "Prosecution counsel had authority to file briefs and propose orders, but filed AI-generated citations without verifying them.",
+     "basis": "Documented: the opinion records counsel's affidavit that AI-generated citations were not independently verified and finds the filings violated Supreme Court Rule 7.",
+     "present": [
+      "Authority to represent the State and submit briefs and a proposed order"
+     ],
+     "absent": [
+      "Independent verification of AI-generated citations before filing (opinion)"
+     ],
+     "unknown": [
+      "The AI software product used"
+     ]
+    },
+    "consequences": [
+     "Trial court order denying a new trial vacated and the case remanded",
+     "New order must not be prepared by counsel for either party",
+     "Counsel suspended from practice before the Supreme Court of Georgia for six months, with 12 extra hours of continuing legal education",
+     "Counsel and the district attorney's office admonished; two justices dissented from admonishing the office"
+    ],
+    "controls": [
+     {
+      "basis": "documented",
+      "control": "Counsel's citation check before filing",
+      "failure": "Counsel acknowledged the AI-generated citations were not independently verified."
+     },
+     {
+      "basis": "documented",
+      "control": "Trial court review of the proposed order",
+      "failure": "The issued order carried the same fictitious and misattributed citations."
+     }
+    ],
+    "defect_category": "external_output_unverified",
+    "defect_label": "Unverified AI output released to an outside party",
+    "deployment": "deployed",
+    "disclosed_basis": "Opinion decided and published on 5 May 2026; final copy reported at 324 Ga. 305.",
+    "disclosed_on": "2026-05-05",
+    "enforcement": {
+     "enforcement_point": "Submission of each brief or proposed order to a court.",
+     "decision_state": "Block",
+     "reason": "Citations have not been checked against the cited decisions.",
+     "authority_requirement": "The filing attorney verifies every citation and quotation before submission.",
+     "condition": "Applies to AI-assisted briefs and proposed orders containing legal authorities.",
+     "required_response": "Hold the document with unverified citations identified.",
+     "responder_action": "Check, correct or remove each citation and certify the reviewed version.",
+     "next_event": "Submission proceeds after verification.",
+     "responsible_role": "Filing attorney and supervising attorney (proposed roles)"
+    },
+    "evidence_note": "Primary appellate opinion records counsel's sworn acknowledgment of AI use, the defective citations and the sanctions.",
+    "evidence_strength": "strong",
+    "facts": [
+     "The trial court's 12 September 2025 order denying a new trial, which reflects that the assistant district attorney prepared it, included nine citations that do not exist or do not support the propositions cited. [S72 part 1]",
+     "On 27 March 2026 the assistant district attorney filed an affidavit acknowledging that AI software drafted the State's briefs and the proposed order, and that the AI-generated citations were not independently verified. [S72 part 1]",
+     "She identified twelve more AI-generated citations in the trial court briefing and withdrew reliance on nine authorities in the State's appellate brief. [S72 part 1]",
+     "The court admonished her and the Clayton County District Attorney's Office for failing to verify citations. [S72 part 2]",
+     "The court suspended her privilege to practice before it for six months and required 12 additional hours of continuing legal education on ethics, brief writing and the use of AI. [S72 part 3]",
+     "The court vacated the order and remanded, directing that the new order not be prepared by counsel for either party. [S72 part 4]",
+     "Two justices dissented from the admonishment of the district attorney's office. [S72 partial dissent]"
+    ],
+    "incident_date": "Trial court filings and proposed order before the 12 September 2025 order; appellate brief of 16 December 2025",
+    "incident_date_basis": "The opinion dates the trial court order and the State's appellate brief.",
+    "inferences": [
+     "A proposed order drafted with unverified AI output carried the defect into a court's own ruling, so the verification point sits before submission, not only before signature by the judge."
+    ],
+    "location": {
+     "documented": true,
+     "status": "established",
+     "label": "Atlanta, Georgia, United States (Supreme Court of Georgia)",
+     "lat": 33.749,
+     "lon": -84.388,
+     "kind": "jurisdiction",
+     "basis": "The Supreme Court of Georgia issued the sanctions. Pin placed at Atlanta as the seat of that court, not at a counsel office."
+    },
+    "organization": "Clayton County District Attorney's Office (filing counsel); affected: Supreme Court of Georgia, Clayton County Superior Court and the appellant",
+    "rules": [
+     {
+      "applicability": "The court held the citations violated its rule requiring filings to be checked for accuracy.",
+      "issuer": "Supreme Court of Georgia",
+      "level": "state",
+      "name": "Supreme Court of Georgia Rule 7",
+      "scope": "Filings before the Supreme Court of Georgia",
+      "uncertainty": "The opinion states its sanctions do not affect any separate disciplinary proceedings.",
+      "url": "https://www.gasupreme.us/wp-content/uploads/2026/05/s26a0459.pdf"
+     }
+    ],
+    "sources": [
+     {
+      "id": "S72",
+      "name": "Supreme Court of Georgia: Payne v. The State, No. S26A0459, opinion of 5 May 2026",
+      "url": "https://www.gasupreme.us/wp-content/uploads/2026/05/s26a0459.pdf",
+      "published": "2026-05-05",
+      "type": "primary (court order)",
+      "report_id": "R0077",
+      "retrieved": "2026-10-18"
+     }
+    ],
+    "summary": "A prosecutor used AI software to draft briefs and a proposed order opposing a murder defendant's motion for new trial without verifying the citations. The trial court issued the order with nonexistent and misattributed authorities. The Supreme Court of Georgia vacated the order, admonished counsel and her office, and suspended her from practice before it for six months.",
+    "system": "AI software, product not named in the opinion",
+    "title": "AI-drafted prosecution filings put fabricated citations into a murder case order; Georgia Supreme Court vacates it and suspends counsel",
+    "why_it_mattered": "Unverified AI citations entered a court's own order in a murder case and delayed review of the appeal.",
+    "workflow": "Drafting the State's briefs and a proposed order on a motion for new trial",
+    "cluster": "AI drafted court filings with fabricated citations (2026)"
+   }
+  },
+  {
+   "incident_id": "INC0046",
+   "last_updated": "2026-10-18",
+   "published_version": 1,
+   "report_ids": [
+    "R0078",
+    "R0079"
+   ],
+   "review_status": "published",
+   "schema_version": 1,
+   "snapshot_at": "2026-10-18T12:07:16Z",
+   "published": {
+    "actions": {
+     "attempted": [],
+     "completed": [
+      "Chatbot answers telling a website user that the clinic's managing doctors held specialist titles they do not hold (judgment)"
+     ]
+    },
+    "authority": {
+     "status": "exceeded",
+     "statement": "The chatbot stated qualifications that the business's own website never claimed for its managing doctors.",
+     "basis": "Documented: the judgment finds the managing doctors hold no such specialist recognition and that the website never described them as specialists (paras 3 to 4).",
+     "present": [
+      "Website content describing other employed doctors' actual specialist titles (para 4)"
+     ],
+     "absent": [
+      "Controls preventing answers about specialist titles before launch (paras 91 to 95)"
+     ],
+     "unknown": [
+      "Chatbot vendor and model",
+      "Who asked the documented questions",
+      "How many visitors received similar answers"
+     ]
+    },
+    "consequences": [
+     "Chatbot deactivated after a warning letter, then changed with a prompt instruction and keyword filter",
+     "Injunction against the titles, with fines up to 250,000 euros per violation",
+     "Business ordered to pay 260 euros in warning costs and the costs of the case"
+    ],
+    "controls": [
+     {
+      "basis": "documented",
+      "control": "Pre-launch restriction on answers about doctors' qualifications",
+      "failure": "Added only after the warning letter; the court found it could and should have been in place before launch."
+     }
+    ],
+    "defect_category": "external_output_unverified",
+    "defect_label": "Unverified AI output released to an outside party",
+    "deployment": "deployed",
+    "disclosed_basis": "Judgment and court press release of 12 May 2026; full text published on NRWE.",
+    "disclosed_on": "2026-05-12",
+    "enforcement": {
+     "enforcement_point": "Release of each chatbot answer that states a staff member's professional qualification.",
+     "decision_state": "Block",
+     "reason": "The stated qualification does not match the business's verified record of staff titles.",
+     "authority_requirement": "Qualification statements must match an approved staff record.",
+     "condition": "Applies to customer-facing answers about medical or professional titles.",
+     "required_response": "Withhold the answer and return the approved wording or a referral to staff.",
+     "responder_action": "Review the question and correct the source data or prompt.",
+     "next_event": "Answers resume from the approved record only.",
+     "responsible_role": "Clinic operator and chatbot vendor (proposed roles)"
+    },
+    "evidence_note": "Final judgment of a higher regional court with documented chatbot answers and the business's own admission of the error. Party names come from legal press.",
+    "evidence_strength": "strong",
+    "facts": [
+     "On 3 April 2025 the website chatbot answered that the two managing doctors were specialists in plastic and aesthetic surgery, then described them as specialists in aesthetic medicine and in aesthetic treatments. [S73 paras 5 to 10]",
+     "Neither managing doctor holds specialist recognition in plastic and aesthetic surgery. [S73 para 3]",
+     "After a consumer association's warning letter of 10 April 2025, the business deactivated the chatbot, added a prompt instruction and keyword filter, and called the answers a regrettable technical error. [S73 paras 11 to 13]",
+     "The court held the chatbot's answers are the business's own commercial acts, because the chatbot is a technical means under its control. [S73 paras 70, 73]",
+     "The court found the business could and should have ensured before first launch that the chatbot gave no false answers about its doctors' qualifications. [S73 paras 91 to 95]",
+     "The court enjoined the three titles under threat of fines up to 250,000 euros per violation and awarded 260 euros in warning costs. [S73 operative part]",
+     "The NRWE record lists the judgment as final. [S73]",
+     "Legal press identifies the claimant as Verbraucherzentrale Nordrhein-Westfalen and the business as Aesthetify GmbH of Recklinghausen, and reports the titles do not exist. [S74]"
+    ],
+    "incident_date": "3 April 2025",
+    "incident_date_basis": "The judgment dates the documented chatbot answers.",
+    "inferences": [
+     "The business's website contained no false claim, so the error originated in the chatbot's generated answer rather than its source content."
+    ],
+    "location": {
+     "documented": true,
+     "status": "established",
+     "label": "Hamm, Germany (Oberlandesgericht Hamm)",
+     "lat": 51.6739,
+     "lon": 7.815,
+     "kind": "jurisdiction",
+     "basis": "The Higher Regional Court of Hamm decided the case at first instance. Pin placed at Hamm as the jurisdiction, not at the business address."
+    },
+    "organization": "Aesthetify GmbH, an aesthetic treatment provider (named by legal press); claimant: Verbraucherzentrale Nordrhein-Westfalen; affected: website visitors",
+    "rules": [
+     {
+      "applicability": "The court held the chatbot answers were misleading statements about professional qualifications.",
+      "issuer": "Germany",
+      "level": "national",
+      "name": "Act against Unfair Competition (UWG), section 5(1) and (2) no. 3",
+      "scope": "Misleading commercial practices toward consumers",
+      "uncertainty": "None stated in the judgment record; NRWE lists it as final.",
+      "url": "https://nrwe.justiz.nrw.de/olgs/hamm/j2026/4_UKl_3_25_Urteil_20260512.html"
+     }
+    ],
+    "sources": [
+     {
+      "id": "S73",
+      "name": "Oberlandesgericht Hamm: judgment of 12 May 2026, 4 UKl 3/25 (NRWE)",
+      "url": "https://nrwe.justiz.nrw.de/olgs/hamm/j2026/4_UKl_3_25_Urteil_20260512.html",
+      "published": "2026-05-12",
+      "type": "primary (court order)",
+      "report_id": "R0078",
+      "retrieved": "2026-10-18"
+     },
+     {
+      "id": "S74",
+      "name": "LTO: OLG zur Haftung für irreführende KI-Chatbot-Aussagen",
+      "url": "https://www.lto.de/recht/nachrichten/n/olg-hamm-aerzte-haften-chatbot-falsche-facharztbezeichnung-ki-uwg",
+      "published": "2026-05-12",
+      "type": "secondary (legal press)",
+      "report_id": "R0079",
+      "retrieved": "2026-10-18"
+     }
+    ],
+    "summary": "An aesthetic clinic's website chatbot told a user that its two managing doctors were specialists in plastic and aesthetic surgery and gave them titles that do not exist. The business called it a technical error and changed the bot after a warning letter. The Higher Regional Court of Hamm held the answers were the business's own commercial acts and enjoined them.",
+    "system": "Website AI chatbot, vendor and model not stated",
+    "title": "Clinic website chatbot tells a user its doctors hold specialist titles they lack; German appeals court holds the business liable",
+    "why_it_mattered": "Patients choosing a cosmetic procedure were given false qualifications for the doctors who would treat them.",
+    "workflow": "Customer questions and appointment booking on a clinic website"
+   }
+  },
+  {
+   "incident_id": "INC0047",
+   "last_updated": "2026-10-18",
+   "published_version": 1,
+   "report_ids": [
+    "R0080",
+    "R0081"
+   ],
+   "review_status": "published",
+   "schema_version": 1,
+   "snapshot_at": "2026-10-18T12:07:16Z",
+   "published": {
+    "actions": {
+     "attempted": [],
+     "completed": [
+      "Display of AI Mode answers stating that a physician was dismissed and convicted of sexual coercion (court order, as reported)",
+      "Continued display after the physician's deletion request and warning letter (court order, as reported)"
+     ]
+    },
+    "authority": {
+     "status": "unverified",
+     "statement": "No source describes a check of the generated allegations before display, and Google declined to act after being told they were false.",
+     "basis": "Reported from the order: the court found the statements concerned another person and that Google could have verified them; the order text itself was not located.",
+     "present": [],
+     "absent": [
+      "Review of the generated claims after the physician's detailed deletion request (LHR)"
+     ],
+     "unknown": [
+      "How long the answers were shown and to how many users",
+      "Whether Google filed an objection"
+     ]
+    },
+    "consequences": [
+     "Preliminary injunction barring three reproduced AI answers, with fines up to 250,000 euros per violation",
+     "Order issued without a hearing because Google had refused any remedy"
+    ],
+    "controls": [
+     {
+      "basis": "documented",
+      "control": "Google's handling of the deletion request",
+      "failure": "Google said on 15 September it would take no action, and the answers stayed live."
+     }
+    ],
+    "defect_category": "external_output_unverified",
+    "defect_label": "Unverified AI output released to an outside party",
+    "deployment": "deployed",
+    "disclosed_basis": "Order of 24 September 2026 first reported by beck-aktuell on 8 October 2026.",
+    "disclosed_on": "2026-10-08",
+    "enforcement": {
+     "enforcement_point": "Display of each generated answer that attributes a criminal allegation or conviction to a named person.",
+     "decision_state": "Block",
+     "reason": "The cited sources do not name this person as the subject of the allegation.",
+     "authority_requirement": "A criminal allegation about a named person must be supported by a source that names that person.",
+     "condition": "Applies to generated answers about named individuals involving crimes, dismissals or court proceedings.",
+     "required_response": "Suppress the claim and show source links only.",
+     "responder_action": "Review the claim and any complaint from the named person before it is shown again.",
+     "next_event": "The answer shows only statements supported by sources naming the person.",
+     "responsible_role": "Search provider's AI Mode owner (proposed role)"
+    },
+    "evidence_note": "No official text of the order was located. Facts rest on legal press and a law firm analysis quoting the order. The order is a preliminary injunction issued without hearing Google.",
+    "evidence_strength": "moderate",
+    "facts": [
+     "Google's AI Mode answered searches combining the physician's name with terms such as suspension by stating that he had harassed his secretary, been dismissed, been convicted of sexual coercion with a suspended sentence and received a six-figure settlement. [S75, S76]",
+     "The events concerned a different former professor; the court knew from its own records that the criminal case was brought against another person. [S76]",
+     "The newspaper articles Google linked as sources did not name the accused doctor. [S75]",
+     "The physician asked Google to delete the statements on 28 August 2026; Google replied on 15 September that it would take no action, and a warning letter the same day also failed. [S76]",
+     "On 24 September 2026 the Aachen Regional Court barred Google Ireland Limited from repeating three reproduced AI Mode answers, under threat of fines up to 250,000 euros per violation, without an oral hearing. [S76]",
+     "The court held Google responsible as provider of the AI search and wrote that confronting its own AI with the physician's objections would have shown the statements were false. [S75, S76]",
+     "Google can file an objection; whether it has done so is not known. [S76]"
+    ],
+    "incident_date": "Answers displayed by 28 August 2026 and still live after 15 September 2026",
+    "incident_date_basis": "The reported order dates the colleague's alert, the deletion request and Google's refusal.",
+    "inferences": [
+     "The false attribution arose from combining sources about another person, so checking each source on its own would not have caught it; the check has to confirm that the source names the person."
+    ],
+    "location": {
+     "documented": true,
+     "status": "established",
+     "label": "Aachen, Germany (Landgericht Aachen)",
+     "lat": 50.7753,
+     "lon": 6.0839,
+     "kind": "jurisdiction",
+     "basis": "The Aachen Regional Court issued the injunction. Pin placed at Aachen as the jurisdiction."
+    },
+    "organization": "Google (operator of AI Mode; respondent Google Ireland Limited); affected: a physician",
+    "rules": [
+     {
+      "applicability": "The basis for the injunction as reported.",
+      "issuer": "Germany",
+      "level": "national",
+      "name": "German Civil Code sections 1004 and 823(1), with general personality rights",
+      "scope": "Untrue statements of fact about individuals",
+      "uncertainty": "Preliminary injunction; not known to be final.",
+      "url": "https://www.beck-aktuell.de/heute-im-recht/rechtsprechung/lg-aachen-8o26826-haftung-falsche-ki-aussage-google-stoererin-chefarzt-sexualstraftaeter-2026-10-08"
+     }
+    ],
+    "sources": [
+     {
+      "id": "S75",
+      "name": "beck-aktuell: Chefarzt zum Sexualstraftäter erklärt: Google muss KI-Halluzination löschen",
+      "url": "https://www.beck-aktuell.de/heute-im-recht/rechtsprechung/lg-aachen-8o26826-haftung-falsche-ki-aussage-google-stoererin-chefarzt-sexualstraftaeter-2026-10-08",
+      "published": "2026-10-08",
+      "type": "secondary (legal press)",
+      "report_id": "R0080",
+      "retrieved": "2026-10-18"
+     },
+     {
+      "id": "S76",
+      "name": "LHR Rechtsanwälte: Google-KI verbreitet Falsches: LG Aachen verbietet es",
+      "url": "https://www.lhr-law.de/magazin/medienrecht-und-persoenlichkeitsrecht/google-ki-falschbehauptung-lg-aachen/",
+      "published": "2026-10-13",
+      "type": "secondary (law firm analysis quoting the order)",
+      "report_id": "R0081",
+      "retrieved": "2026-10-18"
+     }
+    ],
+    "summary": "Google's AI Mode told searchers that a physician had been dismissed and convicted of sexual coercion, attaching to him events that involved another former professor. Google declined to act on his deletion request. The Aachen Regional Court barred Google from repeating the answers and treated it as responsible for its AI search output.",
+    "system": "Google Search AI Mode",
+    "title": "Search AI Mode attributes another person's sexual coercion conviction to a physician; German court bars Google from repeating it",
+    "why_it_mattered": "A generated answer branded a named physician a convicted sex offender to anyone searching his name.",
+    "workflow": "Generative answers in Google Search AI Mode"
    }
   }
  ]
