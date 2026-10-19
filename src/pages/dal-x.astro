@@ -17,9 +17,13 @@ import Base from '../layouts/Base.astro';
           <h1 class="dalx-header-mark">DAL-X</h1>
           <p class="dalx-header-sub">Kevin Moore &nbsp;·&nbsp; Jochanni Labs</p>
           <p class="dalx-header-body">
-            Most enterprise AI deployments have a problem: AI produces output, someone
-            acts on it, and nothing in between confirms the execution was authorized.
-            DAL-X is the application being built to close that gap.
+            An enterprise AI deployment can leave a control gap: AI produces output, a
+            system or a person acts on it, and nothing in between confirms the execution
+            was authorized. DAL-X is the application being built to close that gap.
+          </p>
+          <p class="dalx-header-status">
+            DAL-X currently runs in a simulated enterprise environment. Production
+            enforcement controls are still being completed.
           </p>
         </div>
 
@@ -60,9 +64,9 @@ import Base from '../layouts/Base.astro';
               between AI output and consequential execution.
             </p>
             <p>
-              Kevin Moore and Jochanni Labs are building DAL-X to fill the gap most enterprises
-              do not have a structured answer for: what governs AI agent execution
-              before consequential actions proceed.
+              Kevin Moore and Jochanni Labs are building DAL-X to answer a specific
+              question: what governs AI agent execution before consequential actions
+              proceed.
             </p>
           </div>
 
@@ -628,17 +632,17 @@ import Base from '../layouts/Base.astro';
         <div class="dalx-body dalx-body--wide">
           <p>
             DAL-X applies to consequential AI agent executions: proposed actions where
-            the stakes require authority confirmation before proceeding. Whether AI acts
-            autonomously or shapes a human decision, authority must be confirmed before
-            execution moves forward.
+            the stakes require authority confirmation before proceeding. Enterprise
+            trigger logic identifies which actions require an authority decision. The
+            downstream system rejects execution without valid authority for the exact
+            action.
           </p>
           <p>
-            Two workflow types come up in practice. When AI is acting autonomously,
-            executing tasks directly, it needs a gate that stops it before any
-            consequential action without a confirmed authority structure in place. When
-            a human is in the lead but AI is shaping the inputs, the human reviewer
-            needs to hold the authority level that the AI's involvement creates, not
-            just the level required for the same decision made without AI.
+            Two workflow types come up in practice. When AI acts autonomously, DAL-X
+            holds the proposed action until valid authority is recorded and verified.
+            When a person acts on AI input, DAL-X applies only when the resulting action
+            is submitted through an integrated execution path. The reviewer must then
+            hold the authority level the action requires.
           </p>
         </div>
 
@@ -673,11 +677,11 @@ import Base from '../layouts/Base.astro';
 
           <div class="dalx-workflow-card">
             <p class="dalx-workflow-type">Human-Led AI-Assisted Workflow</p>
-            <p class="dalx-workflow-desc">AI shapes the inputs; a person acts on them</p>
+            <p class="dalx-workflow-desc">A person acts on AI input through an integrated execution path</p>
             <div class="dalx-workflow-steps">
               <div class="dalx-wf-step">
                 <span class="dalx-wf-num">1</span>
-                <span>AI produces recommendation, classification, or exception path</span>
+                <span>AI recommendation becomes a proposed action</span>
               </div>
               <div class="dalx-wf-step">
                 <span class="dalx-wf-num">2</span>
@@ -693,7 +697,7 @@ import Base from '../layouts/Base.astro';
               </div>
               <div class="dalx-wf-step dalx-wf-step--terminal">
                 <span class="dalx-wf-num dalx-wf-num--orange">5</span>
-                <span>Sign-off recorded, decision authorized before action is taken</span>
+                <span>Sign-off recorded; downstream system validates authority before execution</span>
               </div>
             </div>
           </div>

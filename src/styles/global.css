@@ -3762,6 +3762,16 @@ a.weekly-index-row:hover .weekly-index-title { color: var(--orange-bright); }
   margin: 0;
 }
 
+.dalx-header-status {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  line-height: 1.65;
+  color: var(--silver-mid);
+  border: 1px dashed var(--border-faint);
+  padding: 0.875rem 1rem;
+  margin: 1.25rem 0 0;
+}
+
 .dalx-id-card {
   flex-shrink: 0;
   width: 220px;
