@@ -65,7 +65,7 @@ export const BRIEFINGS: Briefing[] = [
     phase: 1,
     phaseName: 'Category Establishment',
     corePosition:
-      'The AI agent is only a participant in the control problem. The decision is the governed object because the decision carries consequence, authority, evidence, and institutional accountability.',
+      'The AI agent is only a participant in the control problem. The governed object is the decision to allow a consequential execution, because that decision carries consequence, authority, evidence, and institutional accountability.',
     estimatedReadTime: 4,
     approximateWordCount: 760,
     purpose: 'Consequence attaches to the decision path.',
