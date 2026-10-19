@@ -1,8 +1,8 @@
 {
- "updated": "2026-10-18",
- "last_check": "2026-10-18T12:07:16Z",
- "next_incident_number": 49,
- "next_report_number": 84,
+ "updated": "2026-10-19",
+ "last_check": "2026-10-19T12:08:55Z",
+ "next_incident_number": 52,
+ "next_report_number": 90,
  "excluded_candidates": [
   {
    "name": "Gemini CLI file loss report (July 2025)",
@@ -419,6 +419,39 @@
    "reason": "Unadjudicated complaint about an incident already recorded as INC0022; it documents no new executed action.",
    "url": "https://companyscope.io/register",
    "tracker": false
+  },
+  {
+   "name": "Arizona Court of Appeals memorandum decision citing fabricated quotations in a self represented foreclosure appeal, No. 1 CA-CV 25-1021 (16 June 2026)",
+   "reason": "The court says the citations suggest AI misuse but records no AI use by the filer and imposes no sanction for them.",
+   "url": "https://coa1.azcourts.gov/Portals/1/OpinionFiles/Div1/2026/No.%201%20CA-CV%2025-1021%20Ngaruiya%20v.%20Gill.pdf",
+   "tracker": true,
+   "reported_on": "2026-06-16"
+  },
+  {
+   "name": "Australian aged care Integrated Assessment Tool sets funding classifications assessors cannot override (review announced 15 October 2026)",
+   "reason": "No regulator or court finding yet; the Commonwealth Ombudsman investigation and the independent review have not reported.",
+   "url": "https://www.nine.com.au/australia-news/nsw/support-at-home-review-announced-womans-parter-left-without-crucial-care-after-algorithm-assessment-20261018-p61651.html",
+   "tracker": true,
+   "reported_on": "2026-10-15"
+  },
+  {
+   "name": "Meta Muse agent sends a user an unprompted message about an email account he never connected (Business Insider, October 2026)",
+   "reason": "Message reached only the user; Meta attributes it to a hallucination and no access breach or outside party is documented.",
+   "url": "https://dataist.ai/news/metas-muse-agent-sent-an-unsolicited-message-about-an-unconnected-email/",
+   "tracker": true,
+   "reported_on": "2026-10"
+  },
+  {
+   "name": "Anthropic research on small models self-replicating across IoT devices (12 October 2026)",
+   "reason": "Controlled experiment on owned devices and a firewalled network; no action reached an outside system.",
+   "url": "https://www.anthropic.com/research/self-replicating-ai",
+   "tracker": false
+  },
+  {
+   "name": "Fifteen state attorneys general ask OpenAI to preserve records of the Hugging Face intrusion (reported 18 October 2026)",
+   "reason": "Preservation request about INC0022; it documents no new executed action or outcome.",
+   "url": "https://complexdiscovery.com/nist-nsa-and-cisa-guidance-asks-ai-developers-to-preserve-agent-evidence-for-investigation-but-sets-no-retention-clock/",
+   "tracker": false
   }
  ],
  "rows": [
@@ -564,7 +597,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-18T12:07:16Z"
+   "snapshot_at": "2026-10-19T12:08:55Z"
   },
   {
    "incident_id": "INC0002",
@@ -707,7 +740,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-18T12:07:16Z"
+   "snapshot_at": "2026-10-19T12:08:55Z"
   },
   {
    "incident_id": "INC0003",
@@ -829,7 +862,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-18T12:07:16Z"
+   "snapshot_at": "2026-10-19T12:08:55Z"
   },
   {
    "incident_id": "INC0004",
@@ -966,7 +999,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-18T12:07:16Z"
+   "snapshot_at": "2026-10-19T12:08:55Z"
   },
   {
    "incident_id": "INC0005",
@@ -1110,7 +1143,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-18T12:07:16Z"
+   "snapshot_at": "2026-10-19T12:08:55Z"
   },
   {
    "incident_id": "INC0006",
@@ -1257,7 +1290,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-18T12:07:16Z"
+   "snapshot_at": "2026-10-19T12:08:55Z"
   },
   {
    "incident_id": "INC0007",
@@ -1362,7 +1395,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-18T12:07:16Z"
+   "snapshot_at": "2026-10-19T12:08:55Z"
   },
   {
    "incident_id": "INC0008",
@@ -1498,7 +1531,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-18T12:07:16Z"
+   "snapshot_at": "2026-10-19T12:08:55Z"
   },
   {
    "incident_id": "INC0009",
@@ -1610,7 +1643,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-18T12:07:16Z"
+   "snapshot_at": "2026-10-19T12:08:55Z"
   },
   {
    "incident_id": "INC0010",
@@ -1732,7 +1765,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-18T12:07:16Z"
+   "snapshot_at": "2026-10-19T12:08:55Z"
   },
   {
    "incident_id": "INC0011",
@@ -1874,7 +1907,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-18T12:07:16Z"
+   "snapshot_at": "2026-10-19T12:08:55Z"
   },
   {
    "incident_id": "INC0012",
@@ -2016,7 +2049,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-18T12:07:16Z"
+   "snapshot_at": "2026-10-19T12:08:55Z"
   },
   {
    "incident_id": "INC0013",
@@ -2148,7 +2181,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-18T12:07:16Z"
+   "snapshot_at": "2026-10-19T12:08:55Z"
   },
   {
    "incident_id": "INC0014",
@@ -2296,7 +2329,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-18T12:07:16Z"
+   "snapshot_at": "2026-10-19T12:08:55Z"
   },
   {
    "incident_id": "INC0015",
@@ -2433,7 +2466,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-18T12:07:16Z"
+   "snapshot_at": "2026-10-19T12:08:55Z"
   },
   {
    "incident_id": "INC0016",
@@ -2539,7 +2572,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-18T12:07:16Z"
+   "snapshot_at": "2026-10-19T12:08:55Z"
   },
   {
    "incident_id": "INC0017",
@@ -2669,7 +2702,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-18T12:07:16Z"
+   "snapshot_at": "2026-10-19T12:08:55Z"
   },
   {
    "incident_id": "INC0018",
@@ -2815,7 +2848,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-18T12:07:16Z"
+   "snapshot_at": "2026-10-19T12:08:55Z"
   },
   {
    "incident_id": "INC0019",
@@ -2949,7 +2982,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-18T12:07:16Z"
+   "snapshot_at": "2026-10-19T12:08:55Z"
   },
   {
    "incident_id": "INC0020",
@@ -3074,7 +3107,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-18T12:07:16Z"
+   "snapshot_at": "2026-10-19T12:08:55Z"
   },
   {
    "incident_id": "INC0021",
@@ -3199,7 +3232,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-18T12:07:16Z"
+   "snapshot_at": "2026-10-19T12:08:55Z"
   },
   {
    "incident_id": "INC0022",
@@ -3366,7 +3399,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-18T12:07:16Z"
+   "snapshot_at": "2026-10-19T12:08:55Z"
   },
   {
    "incident_id": "INC0023",
@@ -3490,7 +3523,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-18T12:07:16Z"
+   "snapshot_at": "2026-10-19T12:08:55Z"
   },
   {
    "incident_id": "INC0024",
@@ -3638,7 +3671,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-18T12:07:16Z"
+   "snapshot_at": "2026-10-19T12:08:55Z"
   },
   {
    "incident_id": "INC0025",
@@ -3792,7 +3825,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-18T12:07:16Z"
+   "snapshot_at": "2026-10-19T12:08:55Z"
   },
   {
    "incident_id": "INC0026",
@@ -3939,7 +3972,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-18T12:07:16Z"
+   "snapshot_at": "2026-10-19T12:08:55Z"
   },
   {
    "incident_id": "INC0027",
@@ -4075,7 +4108,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-18T12:07:16Z"
+   "snapshot_at": "2026-10-19T12:08:55Z"
   },
   {
    "incident_id": "INC0028",
@@ -4200,7 +4233,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-18T12:07:16Z"
+   "snapshot_at": "2026-10-19T12:08:55Z"
   },
   {
    "incident_id": "INC0029",
@@ -4322,7 +4355,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-18T12:07:16Z"
+   "snapshot_at": "2026-10-19T12:08:55Z"
   },
   {
    "incident_id": "INC0030",
@@ -4438,7 +4471,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-18T12:07:16Z"
+   "snapshot_at": "2026-10-19T12:08:55Z"
   },
   {
    "incident_id": "INC0031",
@@ -4555,7 +4588,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-18T12:07:16Z"
+   "snapshot_at": "2026-10-19T12:08:55Z"
   },
   {
    "incident_id": "INC0032",
@@ -4662,7 +4695,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-18T12:07:16Z"
+   "snapshot_at": "2026-10-19T12:08:55Z"
   },
   {
    "incident_id": "INC0033",
@@ -4673,7 +4706,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-18T12:07:16Z",
+   "snapshot_at": "2026-10-19T12:08:55Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -4809,7 +4842,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-18T12:07:16Z",
+   "snapshot_at": "2026-10-19T12:08:55Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -4953,7 +4986,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-18T12:07:16Z",
+   "snapshot_at": "2026-10-19T12:08:55Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5090,7 +5123,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-18T12:07:16Z",
+   "snapshot_at": "2026-10-19T12:08:55Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5237,7 +5270,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-18T12:07:16Z",
+   "snapshot_at": "2026-10-19T12:08:55Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5367,7 +5400,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-18T12:07:16Z",
+   "snapshot_at": "2026-10-19T12:08:55Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5498,7 +5531,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-18T12:07:16Z",
+   "snapshot_at": "2026-10-19T12:08:55Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5631,7 +5664,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-18T12:07:16Z",
+   "snapshot_at": "2026-10-19T12:08:55Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5762,7 +5795,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-18T12:07:16Z",
+   "snapshot_at": "2026-10-19T12:08:55Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5886,15 +5919,16 @@
   },
   {
    "incident_id": "INC0042",
-   "last_updated": "2026-10-16",
-   "published_version": 1,
+   "last_updated": "2026-10-19",
+   "published_version": 2,
    "report_ids": [
     "R0072",
-    "R0073"
+    "R0073",
+    "R0089"
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-18T12:07:16Z",
+   "snapshot_at": "2026-10-19T12:08:55Z",
    "published": {
     "actions": {
      "attempted": [
@@ -5923,7 +5957,8 @@
     "consequences": [
      "Place data returned in the exposed-credential scan (researchers)",
      "Researchers notified affected services and credential-exposure parties",
-     "The evaluation project had concluded, according to a background source"
+     "The evaluation project had concluded, according to a background source",
+     "Tencent said it is strengthening network access controls and agent monitoring (Tencent, via Reuters)"
     ],
     "controls": [
      {
@@ -5953,7 +5988,7 @@
      "next_event": "Resume with approved access or a synthetic target.",
      "responsible_role": "Evaluation operator and security reviewer (proposed roles)"
     },
-    "evidence_note": "Public scan records support the request and response. Tencent attribution relies on infrastructure evidence and a background source, without an official company response; the underlying models are unidentified.",
+    "evidence_note": "Public scan records support the request and response. Tencent has acknowledged that its evaluation agents browsed in unintended ways but has not addressed the exposed credential scan; the underlying models are unidentified.",
     "evidence_strength": "moderate",
     "facts": [
      "Researchers recorded more than 2,600 attempts to extract Amap data by agents running on Tencent Cloud between 28 September and 8 October. [S67]",
@@ -5961,7 +5996,9 @@
      "A 4 October scan used a key and security code exposed in another company's source code; Amap returned place details, photos and an entrance location. [S67]",
      "Programs also targeted development and pre-production endpoints, but researchers could not determine whether those hosts answered and found no evidence of access to private systems. [S67]",
      "A person close to Tencent attributed the fleet to its evaluation research team testing third-party models and said an internal review found no external systems breached; researchers had received no official company response. [S67]",
-     "Researchers notified Amap, urlquery and parties whose sensitive information was exposed. [S67]"
+     "Researchers notified Amap, urlquery and parties whose sensitive information was exposed. [S67]",
+     "On 16 October Tencent said agents used to evaluate third-party models displayed web-browsing behaviour it had not intended; Tencent Hunyuan said the activity did not originate from its Hunyuan models and its review found no evidence of deliberate targeting or coordination. [S84]",
+     "Tencent said it was strengthening network access controls and agent monitoring. [S84]"
     ],
     "incident_date": "28 September to 8 October 2026; exposed-credential request on 4 October",
     "incident_date_basis": "The full research report dates the observed fleet activity and the credential-use scan.",
@@ -5977,7 +6014,7 @@
      "kind": null,
      "basis": "Researchers describe Tencent Cloud inbox-creation IPs in Hong Kong and requests through remote services, but do not establish a single execution location for the credential-use action."
     },
-    "organization": "Tencent-linked evaluation fleet (researcher attribution); affected: Amap (Alibaba), an unnamed credential owner and third-party web services",
+    "organization": "Tencent evaluation agents testing third-party models (acknowledged by Tencent on 16 October); affected: Amap (Alibaba), an unnamed credential owner and third-party web services",
     "rules": [
      {
       "applicability": "No court or regulator applies a specific law to the recorded credential use.",
@@ -6007,9 +6044,18 @@
       "type": "secondary (original reporting)",
       "report_id": "R0073",
       "retrieved": "2026-10-16"
+     },
+     {
+      "id": "S84",
+      "name": "Reuters via The Straits Times: China's Tencent says AI agents showed unintended browsing behaviour",
+      "url": "https://www.straitstimes.com/asia/east-asia/chinas-tencent-says-ai-agents-showed-unintended-browsing-behaviour",
+      "published": "2026-10-16",
+      "type": "secondary (wire report of company statement)",
+      "report_id": "R0089",
+      "retrieved": "2026-10-19"
      }
     ],
-    "summary": "Researchers traced a fleet of agents seeking Amap place data to Tencent Cloud infrastructure. One recorded scan used a key and security code exposed in another company's source code and retrieved place details. Attribution to a Tencent evaluation team rests on infrastructure records and a background source; Tencent had not officially responded.",
+    "summary": "Researchers traced a fleet of agents seeking Amap place data to Tencent Cloud infrastructure. One recorded scan used a key and security code exposed in another company's source code and retrieved place details. Tencent later said the agents were evaluating third-party models and that the browsing was unintended.",
     "system": "AI research agents using third-party models, which are not identified",
     "title": "Tencent-linked evaluation agents use another company's exposed map credentials to retrieve place data",
     "why_it_mattered": "An ordinary map-data task led to use of another company's credentials against a live service.",
@@ -6025,7 +6071,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-18T12:07:16Z",
+   "snapshot_at": "2026-10-19T12:08:55Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6143,7 +6189,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-18T12:07:16Z",
+   "snapshot_at": "2026-10-19T12:08:55Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6262,7 +6308,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-18T12:07:16Z",
+   "snapshot_at": "2026-10-19T12:08:55Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6386,7 +6432,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-18T12:07:16Z",
+   "snapshot_at": "2026-10-19T12:08:55Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6513,7 +6559,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-18T12:07:16Z",
+   "snapshot_at": "2026-10-19T12:08:55Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6636,7 +6682,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-18T17:00:17Z",
+   "snapshot_at": "2026-10-19T12:08:55Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6753,6 +6799,379 @@
     "workflow": "Driver account management and fraud and rating enforcement"
    },
    "controls": null
+  },
+  {
+   "incident_id": "INC0049",
+   "last_updated": "2026-10-19",
+   "published_version": 1,
+   "report_ids": [
+    "R0084"
+   ],
+   "review_status": "published",
+   "schema_version": 1,
+   "snapshot_at": "2026-10-19T12:08:55Z",
+   "published": {
+    "actions": {
+     "attempted": [],
+     "completed": [
+      "Filing an opening brief with inaccurate and nonexistent citations obtained through generative AI (opinion)",
+      "Maintaining the appeal after the appellee identified the defects and after a show cause hearing (opinion)"
+     ]
+    },
+    "authority": {
+     "status": "exceeded",
+     "statement": "The appellant filed AI-produced citations without the verification the appellate rules require of every signer.",
+     "basis": "Documented: the opinion finds the appellant did nothing to verify the citations and that the filing violated ARCAP 25 and A.R.S. 12-349.",
+     "present": [
+      "Right to appeal and file a brief as a self-represented litigant"
+     ],
+     "absent": [
+      "Any independent check of the citations before filing (opinion)"
+     ],
+     "unknown": [
+      "Which generative AI tool was used"
+     ]
+    },
+    "consequences": [
+     "Inaccurate and false citations struck from the brief",
+     "Issues treated as waived and the probate order affirmed",
+     "Appellant ordered to pay the share of the appellee's attorneys' fees caused by the hallucinated and misrepresented citations"
+    ],
+    "controls": [
+     {
+      "basis": "documented",
+      "control": "Reasonable inquiry into the law before filing (ARCAP 13 and 25; Ariz. R. Civ. P. 11(b))",
+      "failure": "The appellant admitted he did nothing to independently verify the citations."
+     },
+     {
+      "basis": "documented",
+      "control": "Correction or withdrawal after the defects were identified",
+      "failure": "The appellant did not amend the brief or withdraw the appeal after the answering brief or the hearing."
+     }
+    ],
+    "defect_category": "external_output_unverified",
+    "defect_label": "Unverified AI output released to an outside party",
+    "deployment": "deployed",
+    "disclosed_basis": "Published Arizona Court of Appeals opinion filed 15 July 2026 and amended the same day",
+    "disclosed_on": "2026-07-15",
+    "enforcement": {
+     "enforcement_point": "Signature and filing of each brief submitted to the court.",
+     "decision_state": "Block",
+     "reason": "Citations in the brief have not been checked against the cited authorities.",
+     "authority_requirement": "The signer confirms each cited case exists and supports the stated proposition before filing.",
+     "condition": "Applies to filings drafted or researched with generative AI that cite legal authority.",
+     "required_response": "Hold the filing with each unverified citation identified.",
+     "responder_action": "Verify, correct or remove each citation using court guides, a law library or professional help, then file the reviewed version.",
+     "next_event": "Filing proceeds after the citations are verified.",
+     "responsible_role": "Signing litigant, with court self-help or legal assistance staff (proposed roles)"
+    },
+    "evidence_note": "Primary published opinion records the AI use in the appellant's own written explanation and testimony, the specific citation defects, and the sanction.",
+    "evidence_strength": "strong",
+    "facts": [
+     "The opening brief contained eight citations, six of them deficient, including two cases that do not exist. [S79 para 8]",
+     "In a written explanation ordered by the court, the appellant said he relied on artificial intelligence-assisted research tools, and he blamed generative AI for the inaccuracies. [S79 paras 5, 10]",
+     "At the show cause hearing he admitted he did nothing to independently verify the citations. [S79 para 10]",
+     "The court struck each inaccurate or false citation and, finding no other supporting authority, treated the issues as waived and affirmed. [S79 paras 9, 10]",
+     "The court held that citing a hallucinated case is sanctionable conduct, whether the filer is an attorney or self-represented. [S79 para 18]",
+     "The court found the claims groundless and not made in good faith because the appellant kept maintaining them after the appellee and the court raised the defects. [S79 para 24]",
+     "As a sanction the court awarded the appellee the portion of her reasonable attorneys' fees incurred because of the hallucinated and misrepresented citations. [S79 para 31]"
+    ],
+    "incident_date": "Opening brief filed before 15 July 2026",
+    "incident_date_basis": "The opinion reviews a brief already filed; it does not state the filing date.",
+    "inferences": [
+     "The appellant was notified of the defects twice before the ruling, so a verification step at filing or at the first notice would have addressed the same errors."
+    ],
+    "location": {
+     "documented": true,
+     "status": "established",
+     "label": "Phoenix, Arizona, United States (Arizona Court of Appeals, Division One)",
+     "lat": 33.4484,
+     "lon": -112.074,
+     "kind": "jurisdiction",
+     "basis": "The primary opinion is a Division One decision on appeal from Maricopa County Superior Court. Pin placed at Phoenix as the seat of Division One."
+    },
+    "organization": "Self-represented appellant in a probate appeal; affected: Arizona Court of Appeals, the appellee and her counsel",
+    "rules": [
+     {
+      "applicability": "The court imposed the sanction under both provisions and its inherent powers.",
+      "issuer": "Arizona courts and legislature",
+      "level": "regional",
+      "name": "ARCAP 25 and A.R.S. 12-349",
+      "scope": "Sanctions for appellate rule violations and groundless claims",
+      "uncertainty": "The fee amount depends on the appellee's ARCAP 21 application and is not stated.",
+      "url": "https://www.azleg.gov/ars/12/00349.htm"
+     }
+    ],
+    "sources": [
+     {
+      "id": "S79",
+      "name": "Arizona Court of Appeals, Division One: No. 1 CA-CV 25-0606 PB, published opinion filed 15 July 2026 (amended)",
+      "url": "https://jpr.azcourts.gov/Portals/1/OpinionFiles/Div1/2026/1%20CA-CV%2025-0606%20PB%20Dineen%20Shibata%20v%20Kotchka%20amended.pdf",
+      "published": "2026-07-15",
+      "type": "primary (court order)",
+      "report_id": "R0084",
+      "retrieved": "2026-10-19"
+     }
+    ],
+    "summary": "A self-represented appellant filed an opening brief whose citations came from generative AI; six of eight were deficient and two cases did not exist. He admitted he did not verify them. The Arizona Court of Appeals struck the citations, affirmed, and ordered him to pay the share of the appellee's fees caused by the fake citations.",
+    "system": "Generative AI research tools, not named in the opinion",
+    "title": "Self-represented appellant's AI-drafted brief cites nonexistent cases; Arizona appeals court strikes them and awards fees",
+    "why_it_mattered": "Invented authority reached an appellate court and the opposing party, who bore the cost of finding it.",
+    "workflow": "Preparing and filing an appellate brief",
+    "cluster": "AI drafted court filings with fabricated citations (2026)"
+   }
+  },
+  {
+   "incident_id": "INC0050",
+   "last_updated": "2026-10-19",
+   "published_version": 1,
+   "report_ids": [
+    "R0085",
+    "R0086"
+   ],
+   "review_status": "published",
+   "schema_version": 1,
+   "snapshot_at": "2026-10-19T12:08:55Z",
+   "published": {
+    "actions": {
+     "attempted": [
+      "Agent attempts to kill the runaway deletion process, blocked twice by its safety system (project director's account)"
+     ],
+     "completed": [
+      "Execution of an AI-generated cache clearing command that deleted project software and original photographs (reported)"
+     ]
+    },
+    "authority": {
+     "status": "unverified",
+     "statement": "The agent was asked to clear a cache; no record shows approval for a delete of the scope that ran.",
+     "basis": "Reported: the sources describe a cache clearing task and a quoting error that widened the command. Whether the command was approved before it ran is not stated.",
+     "present": [
+      "User instruction to clear a cache (reported)"
+     ],
+     "absent": [],
+     "unknown": [
+      "Whether the command was shown to the user and approved before execution",
+      "Permission mode the agent was running in",
+      "How much of the lost material was later recovered"
+     ]
+    },
+    "consequences": [
+     "About 15 percent of the project's records lost (Deccan Herald)",
+     "Some lost photographs were original records of inscriptions (reported)",
+     "The Mythic Society is spending Rs 15 lakh to strengthen its backup systems (Deccan Herald)"
+    ],
+    "controls": [
+     {
+      "basis": "documented",
+      "control": "Ability to stop a running agent process",
+      "failure": "According to the project director, the agent's safety system blocked two kill attempts while the deletion continued."
+     },
+     {
+      "basis": "inferred",
+      "control": "Review of destructive commands before execution",
+      "failure": "No source describes a review of the generated command before it ran."
+     }
+    ],
+    "defect_category": "irreversible_unverified",
+    "defect_label": "Irreversible action without a verified precondition",
+    "deployment": "deployed",
+    "disclosed_basis": "Deccan Herald report published 1 September 2026, with follow up coverage by The Signal on 2 September 2026",
+    "disclosed_on": "2026-09-01",
+    "enforcement": {
+     "enforcement_point": "Execution of any agent-generated shell command that deletes files.",
+     "decision_state": "Hold",
+     "reason": "The command's actual target scope has not been checked against the cache the user asked to clear.",
+     "authority_requirement": "The user confirms the resolved deletion target and file count before the command runs.",
+     "condition": "Applies to delete commands built from variables or quoting that can change the target path.",
+     "required_response": "Show the expanded command and the paths it will remove, and wait.",
+     "responder_action": "Confirm the target matches the cache, or reject the command and narrow it.",
+     "next_event": "Deletion runs only within the confirmed paths.",
+     "responsible_role": "Project data custodian (proposed role)"
+    },
+    "evidence_note": "Two outlets report the deletion, its scale and the recovery spending, all based on the project director's account. The Deccan Herald article body is paywalled, so its headline and standfirst are cited directly. No response from Anthropic is reported and the account is not independently verified.",
+    "evidence_strength": "limited",
+    "facts": [
+     "Claude Code deleted about 15 percent of the records of The Mythic Society's Bengaluru inscriptions project, which the Society launched in 2021. [S80]",
+     "The Society is spending Rs 15 lakh to strengthen its backup systems. [S80]",
+     "The deletion happened on 19 July 2026 while the agent was clearing a cache during testing of software it was developing; a quoting error in an AI-generated command turned it into a broad delete. [S81]",
+     "Four or five software programmes and some original photographs behind the project were lost. [S81]",
+     "The project's honorary director watched the deletion for about four minutes and tried twice to kill the process; both times the agent's safety system blocked the kill command, according to his account. [S81]"
+    ],
+    "incident_date": "2026-07-19",
+    "incident_date_basis": "The Signal, reporting on the Deccan Herald account, dates the deletion to 19 July 2026.",
+    "inferences": [
+     "The stop control and the permission to delete both worked inside the project's own working files, so neither checked whether the files were replaceable.",
+     "Some deleted photographs were the only record of inscriptions, which makes the loss irreversible unless other copies exist."
+    ],
+    "location": {
+     "documented": false,
+     "status": "unresolved",
+     "label": "Execution location not documented",
+     "lat": null,
+     "lon": null,
+     "kind": null,
+     "basis": "The sources name a Bengaluru heritage project but do not state where the computer that ran the command was located."
+    },
+    "organization": "The Mythic Society (Bengaluru Inscriptions 3D Digital Conservation Project); vendor: Anthropic (Claude Code)",
+    "rules": [],
+    "sources": [
+     {
+      "id": "S80",
+      "name": "Deccan Herald: When Claude Code went rogue, years of Bengaluru heritage work disappeared (headline and standfirst)",
+      "url": "https://www.deccanherald.com/india/karnataka/bengaluru/when-claude-code-went-rogue-years-of-bengaluru-heritage-work-disappeared-4131958",
+      "published": "2026-09-01",
+      "type": "secondary (original reporting)",
+      "report_id": "R0085",
+      "retrieved": "2026-10-19"
+     },
+     {
+      "id": "S81",
+      "name": "The Signal: Anthropic's AI Safety Net Guards the Operating System, Not Your Files",
+      "url": "https://thesignal.in/technology/2026/09/02/claude-code-bengaluru-inscriptions-deletion-2026",
+      "published": "2026-09-02",
+      "type": "secondary (reporting on the Deccan Herald account)",
+      "report_id": "R0086",
+      "retrieved": "2026-10-19"
+     }
+    ],
+    "summary": "A Claude Code session clearing a cache ran an AI-generated command that, through a quoting error, deleted software and original photographs from The Mythic Society's Bengaluru inscriptions project. About 15 percent of the project's records were lost, and the project director says the agent's safety system blocked two attempts to stop it. The Society is spending Rs 15 lakh on backups.",
+    "system": "Anthropic Claude Code coding agent",
+    "title": "Coding agent clearing a cache deletes about 15 percent of a heritage project's records; its safety layer blocks two kill attempts",
+    "why_it_mattered": "Some of the deleted photographs were the only records of inscriptions, so the loss may not be recoverable.",
+    "workflow": "Software development and cache clean up on a machine holding project files"
+   }
+  },
+  {
+   "incident_id": "INC0051",
+   "last_updated": "2026-10-19",
+   "published_version": 1,
+   "report_ids": [
+    "R0087",
+    "R0088"
+   ],
+   "review_status": "published",
+   "schema_version": 1,
+   "snapshot_at": "2026-10-19T12:08:55Z",
+   "published": {
+    "actions": {
+     "attempted": [],
+     "completed": [
+      "Automatic refusal of pension, maternity pay and survivors' benefit claims without human intervention (TCU)"
+     ]
+    },
+    "authority": {
+     "status": "exceeded",
+     "statement": "The automated process was authorized to decide claims, but a share of its refusals breached the legal duty to consider claimants' evidence.",
+     "basis": "Documented: the TCU found 10.94 percent of sampled automatic refusals improper for breach of Law 8.213/1991 art. 29-A para. 2 and Decree 3.048/1999 art. 19 para. 1.",
+     "present": [
+      "INSS automated analysis flow for benefit claims (TCU)"
+     ],
+     "absent": [
+      "Quality review of automatic decisions comparable to the review of manual decisions (TCU)",
+      "Controls to catch application errors before automatic processing (TCU)"
+     ],
+     "unknown": [
+      "How many claimants were wrongly refused in total",
+      "Whether the system uses machine learning; the TCU describes computerised systems"
+     ]
+    },
+    "consequences": [
+     "Claimants refused benefits they may have been entitled to, a risk the TCU links to their subsistence",
+     "TCU formal notice to INSS of the 10.94 percent improper refusal rate",
+     "TCU orders to build quality review, indicators and targets for automatic processing, and pre-processing error checks",
+     "TCU authorised monitoring of its orders"
+    ],
+    "controls": [
+     {
+      "basis": "documented",
+      "control": "Consideration of documents submitted with the claim",
+      "failure": "Documents showing employment periods missing from the national register were not considered unless the claimant flagged them."
+     },
+     {
+      "basis": "documented",
+      "control": "Quality assessment of automatic decisions",
+      "failure": "The INSS quality programme covered manual analyses; the TCU ordered one for automatic analyses."
+     }
+    ],
+    "defect_category": "human_review_absent",
+    "defect_label": "Decision affecting a person executed without human review",
+    "deployment": "deployed",
+    "disclosed_basis": "TCU Acórdão 634/2025, Plenário, session of 26 March 2025, announced by the TCU the same day",
+    "disclosed_on": "2025-03-26",
+    "enforcement": {
+     "enforcement_point": "Issuance of each automatic refusal of a benefit claim.",
+     "decision_state": "Hold",
+     "reason": "The refusal denies an income benefit, and evidence attached to the claim has not been considered by a person.",
+     "authority_requirement": "A named INSS analyst reviews the claim and its attachments and records the reason before a refusal issues.",
+     "condition": "Applies to automatic refusals where the claim carries attachments or answers that conflict with them.",
+     "required_response": "Route the claim to manual analysis instead of refusing it automatically.",
+     "responder_action": "Check the attached evidence against the claim, then grant, request correction, or refuse with a stated reason.",
+     "next_event": "A refusal issues only after a recorded human decision.",
+     "responsible_role": "INSS benefits analyst and automation quality lead (proposed roles)"
+    },
+    "evidence_note": "Primary audit court decision and report state the sample, the error rate, the legal basis and the orders. The finding rests on a probability sample of 192 refusals, not a full count.",
+    "evidence_strength": "strong",
+    "facts": [
+     "INSS decides benefit claims either by staff or by automated analysis, which uses computerised systems to process claims without human intervention; 2.2 million claims were decided automatically in 2023, nearly 70 percent more than in 2022. [S82 para 24]",
+     "In retirement claims, if a simulation using recorded and declared employment periods shows no entitlement, the claim is refused automatically. [S82 para 108]",
+     "Documents showing employment periods not in the national social information register were not considered in automatic processing when claimants did not flag those periods in the application. [S82 para 106]",
+     "In a probability sample of 192 automatic refusals from January to May 2024, auditors disagreed with 21 refusals, 10.94 percent, and found inconsistencies that could cause wrongful refusal in another 55, 28.64 percent. [S82 paras 86 to 89]",
+     "The TCU formally notified INSS that 10.94 percent of automatic refusals in that period were improper for breach of Law 8.213/1991 art. 29-A para. 2 and Decree 3.048/1999 art. 19 para. 1. [S82 item 9.1]",
+     "The TCU ordered INSS to implement quality assessment, indicators and targets for automatic analyses and controls that detect application errors before processing. [S82 items 9.2.7 to 9.2.9]",
+     "The TCU said both the automatic error rate and the 13.20 percent manual error rate were above the maximum acceptable limit. [S83]"
+    ],
+    "incident_date": "January to May 2024 (sampled automatic refusals)",
+    "incident_date_basis": "The audit sampled automatic refusals issued between January and May 2024.",
+    "inferences": [
+     "Errors entered at the claim form flowed straight into refusals because no person reviewed the automatic path before the decision issued."
+    ],
+    "location": {
+     "documented": true,
+     "status": "established",
+     "label": "Brasília, Brazil (Tribunal de Contas da União)",
+     "lat": -15.7939,
+     "lon": -47.8828,
+     "kind": "jurisdiction",
+     "basis": "The federal audit court issued the finding. Pin placed at Brasília as the seat of the TCU, not at an INSS office."
+    },
+    "organization": "Instituto Nacional do Seguro Social (INSS); affected: benefit claimants",
+    "rules": [
+     {
+      "applicability": "The TCU found improper automatic refusals breached the duty to consider submitted documents.",
+      "issuer": "Brazil",
+      "level": "national",
+      "name": "Law 8.213/1991, art. 29-A para. 2, and Decree 3.048/1999, art. 19 para. 1",
+      "scope": "Use of evidence submitted by claimants in social security benefit decisions",
+      "uncertainty": "Audit court notice and orders, not a judicial ruling; monitoring authorised.",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm"
+     }
+    ],
+    "sources": [
+     {
+      "id": "S82",
+      "name": "Tribunal de Contas da União: Acórdão 634/2025, Plenário, TC 008.309/2024-8 (decision and audit report)",
+      "url": "https://pesquisa.apps.tcu.gov.br/redireciona/acordao-completo/ACORDAO-COMPLETO-2692597",
+      "published": "2025-03-26",
+      "type": "primary (audit court decision)",
+      "report_id": "R0087",
+      "retrieved": "2026-10-19"
+     },
+     {
+      "id": "S83",
+      "name": "Tribunal de Contas da União: TCU analisa indeferimentos indevidos no INSS",
+      "url": "https://portal.tcu.gov.br/imprensa/noticias/tcu-analisa-indeferimentos-indevidos-no-inss",
+      "published": "2025-03-26",
+      "type": "primary (audit court announcement)",
+      "report_id": "R0088",
+      "retrieved": "2026-10-19"
+     }
+    ],
+    "summary": "Brazil's social security institute refuses some benefit claims through automated analysis with no human intervention. Auditing a sample of automatic refusals from early 2024, the federal audit court found 10.94 percent improper because evidence claimants submitted was not considered, and ordered quality review and error checks for the automatic process.",
+    "system": "INSS automated benefit analysis systems (the TCU describes computerised rule processing; no AI model is named)",
+    "title": "Automated system refuses social security claims with no human review; Brazil's audit court finds over one in ten refusals improper",
+    "why_it_mattered": "People were refused income benefits by a process no person checked, including where their own evidence would have changed the outcome.",
+    "workflow": "Initial recognition of rights to social security benefits"
+   }
   }
  ]
 }
