@@ -39,7 +39,7 @@ export const BRIEFINGS: Briefing[] = [
     phase: 1,
     phaseName: 'Category Establishment',
     corePosition:
-      'Decision Governance is the missing enterprise category because AI is no longer only a system to be managed. It is becoming a participant in consequential decision paths that require authority, traceability, escalation, and evidence before action moves forward.',
+      'Decision Governance is the missing enterprise category because AI agents no longer only produce output. They propose consequential executions that require authority, traceability, escalation, and evidence before the downstream system is affected.',
     estimatedReadTime: 4,
     approximateWordCount: 640,
     purpose: 'AI participation is outpacing named authority controls.',
