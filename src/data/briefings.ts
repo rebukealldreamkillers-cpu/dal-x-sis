@@ -26,7 +26,7 @@ export const BRIEFINGS: Briefing[] = [
     phase: 1,
     phaseName: 'Category Establishment',
     corePosition:
-      'The authority problem is the gap between knowing AI was used and proving the AI shaped decision path was permitted to move forward.',
+      'The authority problem is the gap between knowing AI was used and proving a consequential AI agent execution was authorized before it ran.',
     estimatedReadTime: 4,
     approximateWordCount: 680,
     purpose: 'Authority must exist before consequential AI agent executions proceed.',
