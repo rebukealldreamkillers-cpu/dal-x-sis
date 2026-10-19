@@ -2116,6 +2116,16 @@ a.briefing-row:hover .briefing-row-title { color: var(--orange-bright); }
 .weekly-flow-step--blocked { border-color: var(--orange); }
 .weekly-flow-step--blocked b { color: var(--orange-bright); }
 
+.weekly-flow--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.weekly-flow-step--outcome { border-top: 2px solid var(--orange); }
+
+.weekly-flow-step .weekly-flow-num {
+  margin: 0 0 0.5rem;
+  font-size: 0.6875rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
 /* ─── Evidence limit ────────────────────────────────────────────── */
 
 .weekly-limit {
@@ -2439,6 +2449,7 @@ a.weekly-index-row:hover .weekly-index-title { color: var(--orange-bright); }
   .weekly-index-aside { display: none; }
   .weekly-question { font-size: 1.0625rem; }
   .weekly-flow { grid-template-columns: 1fr 1fr; }
+  .weekly-flow--3 { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 480px) {

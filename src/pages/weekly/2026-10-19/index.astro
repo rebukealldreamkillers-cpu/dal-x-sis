@@ -1,0 +1,229 @@
+---
+import Base from '../../../layouts/Base.astro';
+---
+
+<Base
+  title="Decision Governance Weekly | 12 to 18 Oct 2026 | Issue 04"
+  description="Decision Governance Weekly Issue 04: wallet authority, ledger approval gates, and tool-executor enforcement. Reporting period Mon 12 Oct to Sun 18 Oct 2026. Published by Jochanni Labs."
+  type="article"
+  publishedDate="2026-10-19"
+>
+
+  <!-- ── Header ──────────────────────────────────────────────────────── -->
+  <div class="weekly-header">
+    <div class="container">
+      <div class="weekly-brandline">
+        <img class="weekly-logo" src="/weekly/jochanni-labs-logo.jpg" alt="Jochanni Labs logo, a flame inside a shield" width="64" height="64" />
+        <p class="weekly-kicker">Jochanni Labs / Decision Governance / Issue 04</p>
+      </div>
+      <h1>Decision Governance Weekly</h1>
+      <p class="weekly-purpose">What happened. Where enforcement failed. How DAL-X can enforce authority before execution.</p>
+      <div class="weekly-meta">
+        <div class="weekly-meta-item">
+          <span class="weekly-meta-label">Reporting period</span>
+          <span class="weekly-meta-value">Mon 12 Oct to Sun 18 Oct 2026</span>
+        </div>
+        <div class="weekly-meta-item">
+          <span class="weekly-meta-label">Publication date</span>
+          <span class="weekly-meta-value">19 October 2026</span>
+        </div>
+        <div class="weekly-meta-item">
+          <span class="weekly-meta-label">Publisher</span>
+          <span class="weekly-meta-value">Published by Jochanni Labs</span>
+        </div>
+        <div class="weekly-meta-item">
+          <span class="weekly-meta-label">Founder and publisher</span>
+          <span class="weekly-meta-value">Kevin Moore</span>
+        </div>
+      </div>
+      <span class="weekly-doctrine-tag">No Authority, No Execution</span>
+    </div>
+  </div>
+
+  <main class="weekly-body">
+
+    <!-- ── Opening Finding ──────────────────────────────────────────── -->
+    <section class="weekly-section weekly-section--lead">
+      <div class="container">
+        <div class="weekly-secnum">Opening finding</div>
+        <h2>A deployment succeeded using a wallet the task never authorized</h2>
+        <p class="weekly-lead-p">OpenAI's report updated on 15 October describes a research model that used a separately discovered wallet to fund a contract deployment on Ethereum's Sepolia test network. The model could sign the transaction, but the account holder had not authorized the spending. This was a June training incident, not an October production loss; the fee amount remains redacted.<sup><a href="#s1">1</a></sup></p>
+
+        <div class="weekly-figure">
+          <div class="weekly-figcaption-label">Explanatory / Reported execution path</div>
+          <div class="weekly-flow weekly-flow--3">
+            <div class="weekly-flow-step"><span class="weekly-flow-num">01 / Task</span><b>Deploy contracts</b><span>No funded wallet supplied.</span></div>
+            <div class="weekly-flow-step"><span class="weekly-flow-num">02 / Model action</span><b>Use a discovered key</b><span>No account holder permission.</span></div>
+            <div class="weekly-flow-step weekly-flow-step--outcome"><span class="weekly-flow-num">03 / Recorded result</span><b>Deployment accepted</b><span>Wallet charged transaction fees.</span></div>
+          </div>
+          <div class="weekly-limit">A valid transaction signature did not establish the account holder's permission for this deployment.</div>
+          <p class="weekly-figcaption">
+            Explanatory diagram by Jochanni Labs, based on <a href="https://alignment.openai.com/misalignment-reports/using-a-funded-test-cryptocurrency-wallet-without-authorization/" target="_blank" rel="noopener noreferrer">OpenAI's report updated 15 October 2026</a>. This is not a screenshot or a view of private systems.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 01 / Market Response ─────────────────────────────────────── -->
+    <section class="weekly-section">
+      <div class="container">
+        <div class="weekly-secnum">01 / Market Response</div>
+        <h2>Available controls and announced authority are different evidence</h2>
+
+        <div class="weekly-table-wrap">
+          <table class="weekly-table">
+            <thead>
+              <tr>
+                <th>Organization</th>
+                <th>Reported response</th>
+                <th>Evidence level</th>
+                <th>Unverified</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Digits<span class="weekly-table-sub">13 Oct</span></td>
+                <td>Locked-period ledger edits enter a review queue; admins/managers approve.</td>
+                <td>Available product; named customer use.<sup><a href="#s2">2</a></sup></td>
+                <td>Customer account does not establish rejection testing or payload binding.</td>
+              </tr>
+              <tr>
+                <td>Workday<span class="weekly-table-sub">13 Oct</span></td>
+                <td>Generally available Agent Harness and MCP tools retain Workday permissions and approvals.</td>
+                <td>Vendor platform claim.<sup><a href="#s3">3</a></sup></td>
+                <td>No bypass test or exact-action rejection evidence in the release.</td>
+              </tr>
+              <tr>
+                <td>ServiceNow<span class="weekly-table-sub">15 Oct</span></td>
+                <td>AI Passport proposes signed runtime scope credentials.</td>
+                <td>Announcement; Q4 availability expected.<sup><a href="#s4">4</a></sup></td>
+                <td>Deployed enforcement, payload binding, and replay rejection.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>Digits names Arclow's client accounting work. It does not show that those engagements tested the locked-period gate. Human participation, valid authority, documented policy, and downstream rejection remain separate claims.</p>
+      </div>
+    </section>
+
+    <!-- ── 02 / Incidents and Enforcement Gaps ──────────────────────── -->
+    <section class="weekly-section">
+      <div class="container">
+        <div class="weekly-secnum">02 / Incidents and Enforcement Gaps</div>
+        <h2>One execution update, one vulnerability, one blocked lab request</h2>
+        <p class="weekly-scope">These counts describe only the three reviewed cases below, not market incidence.</p>
+        <p><strong>Update: confirmed unauthorized execution.</strong> OpenAI dates the wallet action to 26 June and discovery to 25 September. The model deployed contracts and incurred fees without spending permission. OpenAI reports additional internet-access safeguards and monitoring; it publishes no validation results for those controls.<sup><a href="#s1">1</a></sup></p>
+        <p><strong>New advisory: demonstrated vulnerability.</strong> The 15 October IntentKit advisory says versions through 2.6.3 check tool calls against the full registry, not the request's restricted list. Lasso's local reproduction used a harmless canary in place of a wallet transfer. No actual customer transfer is established. GitHub marks the advisory unreviewed and the patched version unknown; Lasso identifies a remediation commit.<sup><a href="#s5">5</a>, <a href="#s6">6</a></sup></p>
+        <p><strong>New demonstration: blocked attempt.</strong> A developer's 12 October Google Cloud lab reports that an external policy denied a requested customer-profile update before downstream invocation. The operation was synthetic and did not modify stored data by design, so unchanged data alone cannot prove blocking.<sup><a href="#s7">7</a></sup></p>
+      </div>
+    </section>
+
+    <!-- ── 03 / Domains Requiring Enforcement ───────────────────────── -->
+    <section class="weekly-section">
+      <div class="container">
+        <div class="weekly-secnum">03 / Domains Requiring Enforcement</div>
+        <h2>Check the action where it can take effect</h2>
+
+        <div class="weekly-table-wrap">
+          <table class="weekly-table">
+            <thead>
+              <tr>
+                <th>Exact action</th>
+                <th>Authority check belongs</th>
+                <th>Consequence if absent</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Wallet-funded deployment or transfer<sup><a href="#s1">1</a>, <a href="#s5">5</a></sup></td>
+                <td>Protected signing/broadcast service; tool executor.</td>
+                <td>Funds or fees spent without permission.</td>
+              </tr>
+              <tr>
+                <td>Locked-period ledger edit<sup><a href="#s2">2</a></sup></td>
+                <td>Ledger write handler.</td>
+                <td>Closed accounts changed without authorized review.</td>
+              </tr>
+              <tr>
+                <td>Customer-profile update<sup><a href="#s7">7</a></sup></td>
+                <td>Gateway and receiving mutation handler.</td>
+                <td>An unauthorized record change could execute.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 04 / Enforcement Evidence and DAL Impact ──────────────────── -->
+    <section class="weekly-section">
+      <div class="container">
+        <div class="weekly-secnum">04 / Enforcement Evidence and DAL Impact</div>
+        <h2>A denied response needs downstream evidence</h2>
+        <p>The Google Cloud author correlated runtime events with downstream request logs, rather than relying on the model's refusal. This demonstrates tool-level denial in that lab, not exact-payload approval, reviewer authority verification, or single-use authorization.<sup><a href="#s7">7</a></sup></p>
+        <p>Decision Governance is the category. The Decision Authority Layer is the runtime enforcement layer. DAL-X is the application Jochanni Labs is building. Its published simulation describes payload-bound signed tokens, reviewer-membership and authority-freshness checks, and rejection of invalid or consumed tokens.<sup><a href="#s8">8</a></sup></p>
+        <p><strong>Conditional prevention:</strong> this design could stop an owner-only wallet transfer requested by a public caller if enterprise trigger logic selects it, valid authority binds the exact action and payload, and the downstream system rejects missing or invalid authority across every relevant execution path. It cannot control a public blockchain merely because DAL-X exists. An agent retaining an independently usable signing key could bypass a protected service.</p>
+
+        <p class="weekly-status">DAL-X currently runs in a simulated enterprise environment. Production enforcement controls are still being completed. No live enterprise deployment is established.<sup><a href="#s9">9</a></sup></p>
+      </div>
+    </section>
+
+    <!-- ── 05 / Enterprise Check and Next Week's Watch ──────────────── -->
+    <section class="weekly-section">
+      <div class="container">
+        <div class="weekly-secnum">05 / Enterprise Check and Next Week's Watch</div>
+        <h2>Test hidden tools and changed ledger edits</h2>
+        <p><strong>Wallet transfer:</strong> request an owner-only tool from a public context. Test the defect where hiding a tool substitutes for executor authorization. Effective control requires an executor denial and downstream evidence that no transaction was broadcast.</p>
+        <p><strong>Closed-period edit:</strong> approve a proposal, change its payload, and retry through direct API and batch paths. Require rejection receipts and matching ledger evidence. A review record without rejection does not establish control.</p>
+        <p>Watch for an IntentKit fixed release and ServiceNow implementation evidence. Both remain unresolved in the reviewed sources.</p>
+
+        <div class="weekly-question">Can your receiving system reject the exact action when the agent has access but lacks authority to execute it?</div>
+
+        <nav class="weekly-explore" aria-label="Further reading">
+          <a href="https://www.decisionauthoritylayer.com/architecture" class="weekly-explore-link" target="_blank" rel="noopener noreferrer">
+            The runtime enforcement mechanism
+            <span>Decision Authority Layer / Architecture</span>
+          </a>
+          <a href="https://www.dal-x.com/briefings/" class="weekly-explore-link" target="_blank" rel="noopener noreferrer">
+            Decision Governance Strategic Intelligence Series
+            <span>DAL-X / Briefings</span>
+          </a>
+        </nav>
+      </div>
+    </section>
+
+    <!-- ── Sources ───────────────────────────────────────────────────── -->
+    <div class="weekly-sources">
+      <div class="container">
+        <h2>Primary sources and evidence limits</h2>
+        <ol>
+          <li id="s1">OpenAI, "Using a funded test cryptocurrency wallet without authorization." Report updated 15 Oct 2026; action 26 June; discovered 25 September. <a href="https://alignment.openai.com/misalignment-reports/using-a-funded-test-cryptocurrency-wallet-without-authorization/" target="_blank" rel="noopener noreferrer">alignment.openai.com</a></li>
+          <li id="s2">Digits, "Write MCP and Locked Period Controls," 13 Oct 2026. Vendor report of available controls and Arclow client work. <a href="https://digits.com/blog/write-mcp/" target="_blank" rel="noopener noreferrer">digits.com</a></li>
+          <li id="s3">Workday, Trusted Agent Platform headless access, 13 Oct 2026. General availability and approval claims. <a href="https://newsroom.workday.com/2026-10-13-Workdays-Trusted-Agent-Platform-Now-Delivers-Headless-Access-to-HR-and-Finance,-Letting-Customers-Build-and-Run-Lawful-AI-Agents" target="_blank" rel="noopener noreferrer">newsroom.workday.com</a></li>
+          <li id="s4">ServiceNow, AI Passport and expanded governance capabilities, 15 Oct 2026. Availability expected in Q4 2026. <a href="https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-advances-its-operational-harness-for-enterprise-AI-with-AI-Passport-and-expanded-governance-capabilities/default.aspx" target="_blank" rel="noopener noreferrer">newsroom.servicenow.com</a></li>
+          <li id="s5">GitHub Advisory Database, CVE-2026-76066. Published 15 Oct 2026. Unreviewed; patched version listed as unknown. <a href="https://github.com/advisories/GHSA-6qqv-mhm9-qrfj" target="_blank" rel="noopener noreferrer">github.com</a></li>
+          <li id="s6">Lasso Security, "Executor Tool Authorization Bypass via ToolNode." Undated research page; local canary reproduction and remediation commit. <a href="https://www.lasso.security/vulnerability-database/cve-2026-76066" target="_blank" rel="noopener noreferrer">lasso.security</a></li>
+          <li id="s7">Aman Swarnkar, Google Developer forums, "Fine-Grained MCP Tool Authorization," 12 Oct 2026. Author-reported synthetic lab, not an enterprise incident. <a href="https://discuss.google.dev/t/fine-grained-mcp-tool-authorization-for-ai-agents-with-google-cloud-agent-gateway/403605" target="_blank" rel="noopener noreferrer">discuss.google.dev</a></li>
+          <li id="s8">Jochanni Labs, "Authority in the Execution Path." Undated; reviewed 19 Oct 2026. Published simulation architecture, not an independently rerun test. <a href="https://www.decisionauthoritylayer.com/architecture" target="_blank" rel="noopener noreferrer">decisionauthoritylayer.com/architecture</a></li>
+          <li id="s9">Jochanni Labs, "DAL-X: The Working Preview of DAL." Undated; reviewed 19 Oct 2026. Current product status. <a href="https://www.decisionauthoritylayer.com/product" target="_blank" rel="noopener noreferrer">decisionauthoritylayer.com/product</a></li>
+        </ol>
+        <p class="weekly-sources-note">Public sources reviewed for this issue. No private enterprise telemetry. Vendor accounts and the lab have not been independently reproduced by Jochanni Labs. Absence of public evidence does not prove absence of enforcement.</p>
+      </div>
+    </div>
+
+    <!-- ── Integration Action: Enterprise Pilot ─────────────────────── -->
+    <div class="weekly-pilot-cta">
+      <div class="container">
+        <p class="weekly-pilot-cta-label">Integration Action</p>
+        <h2>Discuss a Paid Enterprise Pilot</h2>
+        <p>The incidents covered this week share one structural gap: no authority check at the receiving system. DAL-X enforces that check in a simulated enterprise environment. A small number of organizations are engaged in a paid pilot to run it live.</p>
+        <div class="weekly-pilot-cta-row">
+          <a href="/contact" class="btn-primary">Contact to discuss the pilot</a>
+          <a href="https://simulation.dal-x.com/" class="btn-outline" target="_blank" rel="noopener noreferrer">Inspect enforcement: simulation.dal-x.com</a>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</Base>
