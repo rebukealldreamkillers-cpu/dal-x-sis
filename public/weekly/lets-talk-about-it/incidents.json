@@ -1,8 +1,8 @@
 {
- "updated": "2026-10-19",
- "last_check": "2026-10-19T12:08:55Z",
- "next_incident_number": 52,
- "next_report_number": 90,
+ "updated": "2026-10-20",
+ "last_check": "2026-10-20T12:08:00Z",
+ "next_incident_number": 54,
+ "next_report_number": 93,
  "excluded_candidates": [
   {
    "name": "Gemini CLI file loss report (July 2025)",
@@ -452,6 +452,48 @@
    "reason": "Preservation request about INC0022; it documents no new executed action or outcome.",
    "url": "https://complexdiscovery.com/nist-nsa-and-cisa-guidance-asks-ai-developers-to-preserve-agent-evidence-for-investigation-but-sets-no-retention-clock/",
    "tracker": false
+  },
+  {
+   "name": "Korean Patent Court and Suwon District Court rulings on AI fabricated precedents (Asia Today, 19 October 2026)",
+   "reason": "Primary rulings not located; reported only in a news summary without case numbers.",
+   "url": "https://en.asiatoday.co.kr/view.php?key=20261019000909034",
+   "tracker": false
+  },
+  {
+   "name": "Brazil STJ Fourth Panel fine for fictitious precedents (June 2026, covered 18 to 19 October 2026)",
+   "reason": "Case is under seal with no primary order available, and the public account does not establish AI use.",
+   "url": "https://www.coad.com.br/home/noticias-detalhe/140300/quando-a-inteligencia-artificial-vira-questao-de-justica-as-primeiras-decisoes-do-stj-sobre-o-uso-de-ia",
+   "tracker": false
+  },
+  {
+   "name": "5dive.ai shared task board wiped overnight (DEV Community, 19 October 2026)",
+   "reason": "The company's own account says its logs do not show an AI agent caused the deletion; root cause was test isolation.",
+   "url": "https://dev.to/lodar/at-420am-our-ai-company-deleted-its-own-to-do-list-6p2",
+   "tracker": false
+  },
+  {
+   "name": "GoMo (Salt) chatbot misstates roaming allowance, leading to a 44 franc bill (Beobachter, 20 October 2026)",
+   "reason": "Low stakes billing error that was refunded; single consumer account.",
+   "url": "https://www.beobachter.ch/gesetze-recht/justiz/der-bot-wars-das-gilt-wenn-die-ki-sich-irrt-974285",
+   "tracker": false
+  },
+  {
+   "name": "PG&E and PolyAI AI call answering class action (filed 16 October 2026)",
+   "reason": "Unproven complaint allegations about disclosure and consent; no executed action established by a court or regulator.",
+   "url": "https://www.courthousenews.com/californians-accuse-pge-of-violating-privacy-by-routing-calls-through-ai/",
+   "tracker": false
+  },
+  {
+   "name": "Cyera study of 188 incidents caused by companies' own AI agents (reported 19 October 2026)",
+   "reason": "Aggregate study of public reports rather than a single incident; the named cases it cites are already rows or excluded.",
+   "url": "https://www.gazeta.press/social/news/2026/10/16/29542435.shtml",
+   "tracker": false
+  },
+  {
+   "name": "Bloomberg Law commentary on judges issuing orders with AI fabricated citations (20 October 2026)",
+   "reason": "Commentary on mostly known cases; the Oklahoma judge's order is mentioned without a primary order or case details.",
+   "url": "https://news.bloomberglaw.com/pharma-and-life-sciences/judges-citing-fake-ai-generated-law-have-faced-few-consequences",
+   "tracker": false
   }
  ],
  "rows": [
@@ -597,7 +639,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-19T12:08:55Z"
+   "snapshot_at": "2026-10-20T12:08:00Z"
   },
   {
    "incident_id": "INC0002",
@@ -740,7 +782,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-19T12:08:55Z"
+   "snapshot_at": "2026-10-20T12:08:00Z"
   },
   {
    "incident_id": "INC0003",
@@ -862,7 +904,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-19T12:08:55Z"
+   "snapshot_at": "2026-10-20T12:08:00Z"
   },
   {
    "incident_id": "INC0004",
@@ -999,7 +1041,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-19T12:08:55Z"
+   "snapshot_at": "2026-10-20T12:08:00Z"
   },
   {
    "incident_id": "INC0005",
@@ -1143,7 +1185,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-19T12:08:55Z"
+   "snapshot_at": "2026-10-20T12:08:00Z"
   },
   {
    "incident_id": "INC0006",
@@ -1290,7 +1332,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-19T12:08:55Z"
+   "snapshot_at": "2026-10-20T12:08:00Z"
   },
   {
    "incident_id": "INC0007",
@@ -1395,7 +1437,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-19T12:08:55Z"
+   "snapshot_at": "2026-10-20T12:08:00Z"
   },
   {
    "incident_id": "INC0008",
@@ -1531,7 +1573,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-19T12:08:55Z"
+   "snapshot_at": "2026-10-20T12:08:00Z"
   },
   {
    "incident_id": "INC0009",
@@ -1643,7 +1685,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-19T12:08:55Z"
+   "snapshot_at": "2026-10-20T12:08:00Z"
   },
   {
    "incident_id": "INC0010",
@@ -1765,7 +1807,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-19T12:08:55Z"
+   "snapshot_at": "2026-10-20T12:08:00Z"
   },
   {
    "incident_id": "INC0011",
@@ -1907,7 +1949,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-19T12:08:55Z"
+   "snapshot_at": "2026-10-20T12:08:00Z"
   },
   {
    "incident_id": "INC0012",
@@ -2049,7 +2091,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-19T12:08:55Z"
+   "snapshot_at": "2026-10-20T12:08:00Z"
   },
   {
    "incident_id": "INC0013",
@@ -2181,7 +2223,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-19T12:08:55Z"
+   "snapshot_at": "2026-10-20T12:08:00Z"
   },
   {
    "incident_id": "INC0014",
@@ -2329,7 +2371,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-19T12:08:55Z"
+   "snapshot_at": "2026-10-20T12:08:00Z"
   },
   {
    "incident_id": "INC0015",
@@ -2466,7 +2508,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-19T12:08:55Z"
+   "snapshot_at": "2026-10-20T12:08:00Z"
   },
   {
    "incident_id": "INC0016",
@@ -2572,7 +2614,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-19T12:08:55Z"
+   "snapshot_at": "2026-10-20T12:08:00Z"
   },
   {
    "incident_id": "INC0017",
@@ -2702,7 +2744,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-19T12:08:55Z"
+   "snapshot_at": "2026-10-20T12:08:00Z"
   },
   {
    "incident_id": "INC0018",
@@ -2848,7 +2890,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-19T12:08:55Z"
+   "snapshot_at": "2026-10-20T12:08:00Z"
   },
   {
    "incident_id": "INC0019",
@@ -2982,7 +3024,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-19T12:08:55Z"
+   "snapshot_at": "2026-10-20T12:08:00Z"
   },
   {
    "incident_id": "INC0020",
@@ -3107,7 +3149,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-19T12:08:55Z"
+   "snapshot_at": "2026-10-20T12:08:00Z"
   },
   {
    "incident_id": "INC0021",
@@ -3232,7 +3274,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-19T12:08:55Z"
+   "snapshot_at": "2026-10-20T12:08:00Z"
   },
   {
    "incident_id": "INC0022",
@@ -3399,7 +3441,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-19T12:08:55Z"
+   "snapshot_at": "2026-10-20T12:08:00Z"
   },
   {
    "incident_id": "INC0023",
@@ -3523,7 +3565,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-19T12:08:55Z"
+   "snapshot_at": "2026-10-20T12:08:00Z"
   },
   {
    "incident_id": "INC0024",
@@ -3671,7 +3713,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-19T12:08:55Z"
+   "snapshot_at": "2026-10-20T12:08:00Z"
   },
   {
    "incident_id": "INC0025",
@@ -3825,7 +3867,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-19T12:08:55Z"
+   "snapshot_at": "2026-10-20T12:08:00Z"
   },
   {
    "incident_id": "INC0026",
@@ -3972,7 +4014,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-19T12:08:55Z"
+   "snapshot_at": "2026-10-20T12:08:00Z"
   },
   {
    "incident_id": "INC0027",
@@ -4108,7 +4150,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-19T12:08:55Z"
+   "snapshot_at": "2026-10-20T12:08:00Z"
   },
   {
    "incident_id": "INC0028",
@@ -4233,7 +4275,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-19T12:08:55Z"
+   "snapshot_at": "2026-10-20T12:08:00Z"
   },
   {
    "incident_id": "INC0029",
@@ -4355,7 +4397,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-19T12:08:55Z"
+   "snapshot_at": "2026-10-20T12:08:00Z"
   },
   {
    "incident_id": "INC0030",
@@ -4471,7 +4513,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-19T12:08:55Z"
+   "snapshot_at": "2026-10-20T12:08:00Z"
   },
   {
    "incident_id": "INC0031",
@@ -4588,7 +4630,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-19T12:08:55Z"
+   "snapshot_at": "2026-10-20T12:08:00Z"
   },
   {
    "incident_id": "INC0032",
@@ -4695,7 +4737,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-19T12:08:55Z"
+   "snapshot_at": "2026-10-20T12:08:00Z"
   },
   {
    "incident_id": "INC0033",
@@ -4706,7 +4748,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-19T12:08:55Z",
+   "snapshot_at": "2026-10-20T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -4842,7 +4884,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-19T12:08:55Z",
+   "snapshot_at": "2026-10-20T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -4986,7 +5028,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-19T12:08:55Z",
+   "snapshot_at": "2026-10-20T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5123,7 +5165,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-19T12:08:55Z",
+   "snapshot_at": "2026-10-20T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5270,7 +5312,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-19T12:08:55Z",
+   "snapshot_at": "2026-10-20T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5400,7 +5442,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-19T12:08:55Z",
+   "snapshot_at": "2026-10-20T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5531,7 +5573,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-19T12:08:55Z",
+   "snapshot_at": "2026-10-20T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5664,7 +5706,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-19T12:08:55Z",
+   "snapshot_at": "2026-10-20T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5795,7 +5837,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-19T12:08:55Z",
+   "snapshot_at": "2026-10-20T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5928,7 +5970,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-19T12:08:55Z",
+   "snapshot_at": "2026-10-20T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [
@@ -6071,7 +6113,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-19T12:08:55Z",
+   "snapshot_at": "2026-10-20T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6189,7 +6231,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-19T12:08:55Z",
+   "snapshot_at": "2026-10-20T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6308,7 +6350,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-19T12:08:55Z",
+   "snapshot_at": "2026-10-20T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6432,7 +6474,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-19T12:08:55Z",
+   "snapshot_at": "2026-10-20T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6559,7 +6601,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-19T12:08:55Z",
+   "snapshot_at": "2026-10-20T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6682,7 +6724,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-19T12:08:55Z",
+   "snapshot_at": "2026-10-20T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6809,7 +6851,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-19T12:08:55Z",
+   "snapshot_at": "2026-10-20T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6931,7 +6973,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-19T12:08:55Z",
+   "snapshot_at": "2026-10-20T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [
@@ -7051,7 +7093,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-19T12:08:55Z",
+   "snapshot_at": "2026-10-20T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7171,6 +7213,257 @@
     "title": "Automated system refuses social security claims with no human review; Brazil's audit court finds over one in ten refusals improper",
     "why_it_mattered": "People were refused income benefits by a process no person checked, including where their own evidence would have changed the outcome.",
     "workflow": "Initial recognition of rights to social security benefits"
+   }
+  },
+  {
+   "incident_id": "INC0052",
+   "last_updated": "2026-10-20",
+   "published_version": 1,
+   "report_ids": [
+    "R0090"
+   ],
+   "review_status": "published",
+   "schema_version": 1,
+   "snapshot_at": "2026-10-20T12:08:00Z",
+   "published": {
+    "actions": {
+     "attempted": [],
+     "completed": [
+      "Filing a verified petition for removal containing quotations that do not exist and misstated holdings (decision)"
+     ]
+    },
+    "authority": {
+     "status": "exceeded",
+     "statement": "The petition was verified under penalty of perjury without the attorney review that the Board's rules and supervision duties require.",
+     "basis": "Documented: the Board found that a lack of supervision of office staff let fabricated quotations into a verified pleading, citing WCAB Rule 10940(c) and Rule 5.3 of the California Rules of Professional Conduct.",
+     "present": [
+      "Counsel's authority to file a petition for removal on behalf of the employer and insurer"
+     ],
+     "absent": [
+      "Attorney review of the quotations before the verified petition was filed (decision)"
+     ],
+     "unknown": [
+      "Which generative AI tool the staff used",
+      "Date the petition was filed"
+     ]
+    },
+    "consequences": [
+     "Sanctions of 1,000 US dollars against defense counsel and the law firm, jointly and severally, payable to the General Fund",
+     "Matter returned to the trial level for further proceedings"
+    ],
+    "controls": [
+     {
+      "basis": "documented",
+      "control": "Verification of petitions under oath (WCAB Rule 10940(c))",
+      "failure": "The Board found it appeared the petition was not reviewed before filing, although it was signed under penalty of perjury."
+     },
+     {
+      "basis": "documented",
+      "control": "Attorney supervision of non-attorney staff (Rule 5.3)",
+      "failure": "Quotations generated by support staff with AI stayed in the filed petition while the supervising attorney dealt with a family emergency."
+     }
+    ],
+    "defect_category": "external_output_unverified",
+    "defect_label": "Unverified AI output released to an outside party",
+    "deployment": "deployed",
+    "disclosed_basis": "Board opinion and decision after removal dated and filed 24 September 2026, which records counsel's AI explanation; the Board first flagged the quotations in a notice of intent issued 13 October 2025",
+    "disclosed_on": "2026-09-24",
+    "enforcement": {
+     "enforcement_point": "Signature and filing of each verified petition submitted to the Board.",
+     "decision_state": "Block",
+     "reason": "Quotations and holdings in the petition have not been checked against the cited decisions by the signing attorney.",
+     "authority_requirement": "The signing attorney confirms each quotation appears in the cited decision and each holding is stated accurately before verifying the petition.",
+     "condition": "Applies to petitions drafted with generative AI or by non-attorney staff that quote or characterize legal authority.",
+     "required_response": "Hold the filing with each unverified quotation and holding identified.",
+     "responder_action": "Check each citation against the source, correct or remove it, then verify and file the reviewed version, or assign another attorney if the supervising attorney is unavailable.",
+     "next_event": "Filing proceeds after an attorney has verified the citations.",
+     "responsible_role": "Supervising attorney and firm filing staff (proposed roles)"
+    },
+    "evidence_note": "Primary Board decision records the fabricated quotations, counsel's own statement that they appear to have been generated with AI by support staff, the legal basis and the sanction.",
+    "evidence_strength": "strong",
+    "facts": [
+     "The petition for removal cited two Board panel decisions for propositions they did not support, and the Board could not find the quoted language in any published panel decision. [S85 p. 3]",
+     "One of the cited panel decisions held the opposite of what the petition represented. [S85 p. 3]",
+     "Responding to the Board's notice, defense counsel said the quotations appear to have been fabricated using AI by office support staff and remained in the filed petition through inadvertence while the supervising attorney faced a family emergency. [S85 p. 3]",
+     "The Board said the use of generative AI in Board filings is not specifically prohibited, but every petition must be verified under oath under WCAB Rule 10940(c). [S85 pp. 5 to 6]",
+     "The Board held that the attorney is responsible for supervising staff at all times and that no emergency permits filing documents with misrepresentations or fabricated quotations. [S85 pp. 6 to 7]",
+     "Crediting the candid responses of the attorney and the firm, the Board reduced the sanction from 2,500 US dollars to 1,000 US dollars, payable jointly and severally to the General Fund under Labor Code section 5813 and WCAB Rule 10421. [S85 p. 7]"
+    ],
+    "incident_date": "Petition for removal filed before 13 October 2025",
+    "incident_date_basis": "The Board addressed the petition in its 13 October 2025 notice; the decision does not state the filing date.",
+    "inferences": [
+     "The quotations moved from a staff draft into a sworn filing with no recorded attorney check, so the verification under oath did not work as a review step."
+    ],
+    "location": {
+     "documented": true,
+     "status": "established",
+     "label": "San Francisco, California, United States (Workers' Compensation Appeals Board)",
+     "lat": 37.7813,
+     "lon": -122.4177,
+     "kind": "jurisdiction",
+     "basis": "The decision is dated and filed at San Francisco by the Board's commissioners; the case arose in the Van Nuys District Office. Pin placed at San Francisco as the place of decision."
+    },
+    "organization": "Defense counsel for the employer and insurer in a workers' compensation case; affected: California Workers' Compensation Appeals Board and the applicant",
+    "rules": [
+     {
+      "applicability": "The Board imposed the sanction under this section and WCAB Rule 10421.",
+      "issuer": "California legislature",
+      "level": "regional",
+      "name": "California Labor Code section 5813",
+      "scope": "Sanctions for bad faith actions or tactics that are frivolous in workers' compensation proceedings",
+      "uncertainty": "Nonprecedential panel decision binding only on the parties.",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=LAB&sectionNum=5813"
+     }
+    ],
+    "sources": [
+     {
+      "id": "S85",
+      "name": "California Workers' Compensation Appeals Board: Tovar v. United Pacific, ADJ17817958 and ADJ17817957, opinion and decision after removal; order imposing sanctions",
+      "url": "https://www.dir.ca.gov/wcab/Panel-Decisions-2026/Stephanie-TOVAR-ADJ17817958-ADJ17817957.pdf",
+      "published": "2026-09-24",
+      "type": "primary (tribunal decision)",
+      "report_id": "R0090",
+      "retrieved": "2026-10-20"
+     }
+    ],
+    "summary": "Defense counsel in a California workers' compensation case filed a verified petition for removal with quotations that do not exist and misstated holdings. Counsel told the Board the quotations appear to have been generated with AI by office support staff. The Board held the attorney responsible for supervising staff and sanctioned the attorney and firm 1,000 US dollars.",
+    "system": "Generative AI tool used by law office support staff, not named in the decision",
+    "title": "Staff-generated AI quotations reach a sworn petition; California workers' compensation board sanctions defense counsel",
+    "why_it_mattered": "A filing signed under penalty of perjury put invented authority before a tribunal deciding an injured worker's claim.",
+    "workflow": "Preparing and filing a verified petition for removal",
+    "cluster": "AI drafted court filings with fabricated citations (2026)"
+   }
+  },
+  {
+   "incident_id": "INC0053",
+   "last_updated": "2026-10-20",
+   "published_version": 1,
+   "report_ids": [
+    "R0091",
+    "R0092"
+   ],
+   "review_status": "published",
+   "schema_version": 1,
+   "snapshot_at": "2026-10-20T12:08:00Z",
+   "published": {
+    "actions": {
+     "attempted": [],
+     "completed": [
+      "Automatic cancellation of income support as soon as a failure without reasonable excuse was recorded, with no discretionary decision (Ombudsman)",
+      "Automated cancellations for 45 job seekers after the relevant cancellations had been paused (Ombudsman)"
+     ]
+    },
+    "authority": {
+     "status": "exceeded",
+     "statement": "The system cancelled payments where the law required a decision-maker first to decide whether cancellation was appropriate, and it kept cancelling after a pause.",
+     "basis": "Documented: the Ombudsman found the s 42AF(2) cancellations were not lawful and formed the opinion that the actions of DEWR and Services Australia were contrary to law.",
+     "present": [
+      "Statutory power to cancel participation payments, with decisions made by computer programs deemed decisions of the DEWR Secretary under s 6A (Ombudsman)",
+      "A Services Australia decision on whether the job seeker had a reasonable excuse (Ombudsman)"
+     ],
+     "absent": [
+      "A decision on whether cancellation was the appropriate response in the job seeker's circumstances (Ombudsman)",
+      "The Digital Protections Framework the 2022 amendments required (Ombudsman)",
+      "Quality assurance that identified the unlawful cancellations (Ombudsman)"
+     ],
+     "unknown": [
+      "Total financial loss to the people affected",
+      "Whether any part of the system uses machine learning; the Ombudsman describes computer based automated decision making"
+     ]
+    },
+    "consequences": [
+     "964 job seekers had income support cancelled unlawfully between April 2022 and July 2024 (Ombudsman)",
+     "Cancellations under s 42AF(2) paused from 4 July 2024 and still paused in October 2026 (DEWR)",
+     "DEWR began inviting people who may be eligible to claim compensation for incorrect cancellations (DEWR, 19 October 2026)",
+     "Two paused provisions resume on 26 October 2026 after system testing and new guidance for decision-makers (DEWR)"
+    ],
+    "controls": [
+     {
+      "basis": "documented",
+      "control": "Discretionary decision before cancellation, required since the April 2022 amendment",
+      "failure": "The system cancelled the payment as soon as the failure was recorded, and decision-makers did not make the discretionary decision."
+     },
+     {
+      "basis": "documented",
+      "control": "Pause of cancellation decisions",
+      "failure": "A further 45 job seekers received automated cancellations after the pause, when they should not have."
+     },
+     {
+      "basis": "documented",
+      "control": "Detection and correction of systemic errors",
+      "failure": "The error went undetected from April 2022 until September 2023, and the pause came almost 10 months later."
+     }
+    ],
+    "defect_category": "human_review_absent",
+    "defect_label": "Decision affecting a person executed without human review",
+    "deployment": "deployed",
+    "disclosed_basis": "Commonwealth Ombudsman investigation report released August 2025 and covered by ABC News on 6 August 2025 (AEST); DEWR Secretary's statement of 19 October 2026 reports compensation and resumption",
+    "disclosed_on": "2025-08-06",
+    "enforcement": {
+     "enforcement_point": "Issuance of each automated cancellation of an income support payment.",
+     "decision_state": "Hold",
+     "reason": "Cancellation stops a person's income support, and the statutory discretion to cancel has not been exercised by a delegate.",
+     "authority_requirement": "A named Services Australia delegate records a decision that cancellation is appropriate in the person's circumstances.",
+     "condition": "Applies to every cancellation under a provision that confers a discretion, and to any cancellation under a provision that has been paused.",
+     "required_response": "Hold the cancellation and route the case to a delegate; reject it outright while the provision is paused.",
+     "responder_action": "Consider the person's circumstances and record cancellation, a lesser response, or no action, with reasons.",
+     "next_event": "A cancellation issues only after a recorded delegate decision and only while the provision is active.",
+     "responsible_role": "Services Australia delegate and DEWR compliance system owner (proposed roles)"
+    },
+    "evidence_note": "Primary Ombudsman investigation report states the mechanism, the counts, the legal finding and the delays; DEWR's own statement confirms the continuing pause, the compensation process and the resumption dates. The counts were supplied by DEWR to the Ombudsman.",
+    "evidence_strength": "strong",
+    "facts": [
+     "Under the Targeted Compliance Framework, when a Services Australia decision-maker is not satisfied a job seeker has a reasonable excuse and records the failure, the computer system automatically cancels the income support payment. [S86 p. 15]",
+     "An April 2022 amendment to s 42AF(2) of the Social Security (Administration) Act 1999 required decision-makers to decide whether to cancel a payment even where there was no reasonable excuse. [S86 p. 15]",
+     "After the amendment the system kept cancelling payments without reflecting the need for that discretionary decision, and decision-makers did not make it. [S86 p. 16]",
+     "The DEWR Secretary told the Ombudsman that cancellations had occurred automatically without consideration of job seekers' circumstances, affecting 964 job seekers; a further 45 received automated cancellations after the decision to pause cancellations, when they should not have. [S86 p. 3]",
+     "The Ombudsman found the s 42AF(2) cancellations were not lawful and formed the opinion that the agencies' actions were contrary to law. [S86 pp. 5, 15]",
+     "An independent review completed in June 2025 found that assurance could not be provided on the integrity, effectiveness or appropriateness of decisions produced by the TCF IT system in its current form. [S86 pp. 16 to 17]",
+     "The error went undetected from April 2022 until September 2023, and DEWR took almost 10 months after that to pause the cancellations in July 2024. [S86 p. 31]",
+     "On 19 October 2026 DEWR said it had begun inviting people who may be eligible for compensation for incorrect cancellations, that two paused provisions would resume on 26 October 2026, and that s 42AF(2) cancellations stay paused until further safeguards are in place, expected in the first quarter of 2027. [S87]"
+    ],
+    "incident_date": "April 2022 to July 2024, with 45 further automated cancellations after the pause",
+    "incident_date_basis": "The Ombudsman dates the unlawful s 42AF(2) cancellations from April 2022 to the 4 July 2024 pause; the 45 later cancellations followed the Secretary's pause decision.",
+    "inferences": [
+     "Recording a failure and cancelling the payment were joined into one system step, so the decision the law required had no point at which a person could make it.",
+     "The cancellations after the pause show the system kept acting after the authority to cancel had been withdrawn."
+    ],
+    "location": {
+     "documented": true,
+     "status": "established",
+     "label": "Canberra, Australia (Commonwealth Ombudsman)",
+     "lat": -35.2809,
+     "lon": 149.13,
+     "kind": "jurisdiction",
+     "basis": "The Commonwealth Ombudsman made the finding. Pin placed at Canberra as the seat of the Commonwealth Ombudsman, not at a Services Australia office."
+    },
+    "organization": "Department of Employment and Workplace Relations (DEWR) and Services Australia; affected: job seekers with mutual obligation requirements",
+    "rules": [],
+    "sources": [
+     {
+      "id": "S86",
+      "name": "Commonwealth Ombudsman: Automation in the Targeted Compliance Framework: when the law is changed but the system isn't (investigation report)",
+      "url": "https://www.ombudsman.gov.au/__data/assets/pdf_file/0017/320750/Automation-in-the-Targeted-Compliance-Framework.pdf",
+      "published": "2025-08-06",
+      "type": "primary (ombudsman investigation report)",
+      "report_id": "R0091",
+      "retrieved": "2026-10-20"
+     },
+     {
+      "id": "S87",
+      "name": "Department of Employment and Workplace Relations: Decision to resume some paused elements of the Targeted Compliance Framework (Secretary's statement)",
+      "url": "https://www.dewr.gov.au/assuring-integrity-targeted-compliance-framework/announcements/decision-resume-some-paused-elements-targeted-compliance-framework",
+      "published": "2026-10-19",
+      "type": "primary (agency statement)",
+      "report_id": "R0092",
+      "retrieved": "2026-10-20"
+     }
+    ],
+    "summary": "Australia's Targeted Compliance Framework system automatically cancelled jobseekers' income support once a failure was recorded, although a 2022 amendment required a decision-maker first to decide whether cancellation was appropriate. The Commonwealth Ombudsman found 964 cancellations unlawful and 45 more made after a pause. DEWR is now inviting compensation claims and resumes two paused provisions on 26 October 2026.",
+    "system": "Targeted Compliance Framework IT system, a predominantly automated rules system run by DEWR and Services Australia (the Ombudsman describes computer based automated decision making; no AI model is named)",
+    "title": "Compliance system cancels jobseekers' income support with no discretionary decision; Australia's Ombudsman finds 964 cancellations unlawful",
+    "why_it_mattered": "People lost the payments they live on through a system step that skipped the decision Parliament required a person to make.",
+    "workflow": "Cancelling income support for persistent mutual obligation failures"
    }
   }
  ]
