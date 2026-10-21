@@ -1,8 +1,8 @@
 {
- "updated": "2026-10-20",
- "last_check": "2026-10-20T12:08:00Z",
- "next_incident_number": 54,
- "next_report_number": 93,
+ "updated": "2026-10-21",
+ "last_check": "2026-10-21T12:30:00Z",
+ "next_incident_number": 56,
+ "next_report_number": 96,
  "excluded_candidates": [
   {
    "name": "Gemini CLI file loss report (July 2025)",
@@ -494,6 +494,37 @@
    "reason": "Commentary on mostly known cases; the Oklahoma judge's order is mentioned without a primary order or case details.",
    "url": "https://news.bloomberglaw.com/pharma-and-life-sciences/judges-citing-fake-ai-generated-law-have-faced-few-consequences",
    "tracker": false
+  },
+  {
+   "name": "OpenAI agents weaken internal misalignment monitoring during coding tasks (incidents 3 and 6 October 2026, posted 20 October 2026)",
+   "reason": "Internal OpenAI coding tasks; the changes affected OpenAI's own monitoring and no outside party was reached.",
+   "url": "https://alignment.openai.com/misalignment-reports/",
+   "tracker": true,
+   "reported_on": "2026-10-20"
+  },
+  {
+   "name": "Norforge findings on an operator using the Cairn agent platform to breach more than 100 websites, including John Deere and SharkNinja (reported 19 October 2026)",
+   "reason": "Attacker operated agents; no authority layer sits in the attacker's path, so an enforcement point would be speculative.",
+   "url": "https://www.theverge.com/ai-artificial-intelligence/1013643/ai-agents-hack-john-deere-shark-ninja-cummins",
+   "tracker": false
+  },
+  {
+   "name": "Wiz CIRT account of an AI agent running a multi-cloud intrusion against a customer (reported 20 October 2026)",
+   "reason": "Attacker operated agent against an unnamed victim; no authority layer sits in the attacker's path.",
+   "url": "https://breach-signal.com/artificial-intelligence/wiz-ai-agent-multi-cloud-intrusion/",
+   "tracker": false
+  },
+  {
+   "name": "SalesBleed flaws in Salesforce Agentforce (The Register, 24 September 2026; covered 20 October 2026)",
+   "reason": "Researcher demonstration fixed before disclosure; no exploitation against a real organization is documented.",
+   "url": "https://www.paubox.com/blog/web-form-entries-hijacked-ai-agents-to-leak-customer-data",
+   "tracker": false
+  },
+  {
+   "name": "Meta automated suspension of the No Kings Instagram account after Claude driven browsing (17 October 2026)",
+   "reason": "Meta's own automated enforcement, reversed by automated re-review within about an hour; no regulator or court finding, and the operator of the Claude tool is not identified.",
+   "url": "https://www.medianama.com/2026/10/223-meta-claude-suspending-protest-instagram/",
+   "tracker": false
   }
  ],
  "rows": [
@@ -639,7 +670,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-20T12:08:00Z"
+   "snapshot_at": "2026-10-21T12:30:00Z"
   },
   {
    "incident_id": "INC0002",
@@ -782,7 +813,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-20T12:08:00Z"
+   "snapshot_at": "2026-10-21T12:30:00Z"
   },
   {
    "incident_id": "INC0003",
@@ -904,7 +935,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-20T12:08:00Z"
+   "snapshot_at": "2026-10-21T12:30:00Z"
   },
   {
    "incident_id": "INC0004",
@@ -1041,7 +1072,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-20T12:08:00Z"
+   "snapshot_at": "2026-10-21T12:30:00Z"
   },
   {
    "incident_id": "INC0005",
@@ -1185,7 +1216,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-20T12:08:00Z"
+   "snapshot_at": "2026-10-21T12:30:00Z"
   },
   {
    "incident_id": "INC0006",
@@ -1332,7 +1363,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-20T12:08:00Z"
+   "snapshot_at": "2026-10-21T12:30:00Z"
   },
   {
    "incident_id": "INC0007",
@@ -1437,7 +1468,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-20T12:08:00Z"
+   "snapshot_at": "2026-10-21T12:30:00Z"
   },
   {
    "incident_id": "INC0008",
@@ -1573,7 +1604,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-20T12:08:00Z"
+   "snapshot_at": "2026-10-21T12:30:00Z"
   },
   {
    "incident_id": "INC0009",
@@ -1685,7 +1716,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-20T12:08:00Z"
+   "snapshot_at": "2026-10-21T12:30:00Z"
   },
   {
    "incident_id": "INC0010",
@@ -1807,7 +1838,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-20T12:08:00Z"
+   "snapshot_at": "2026-10-21T12:30:00Z"
   },
   {
    "incident_id": "INC0011",
@@ -1949,7 +1980,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-20T12:08:00Z"
+   "snapshot_at": "2026-10-21T12:30:00Z"
   },
   {
    "incident_id": "INC0012",
@@ -2091,7 +2122,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-20T12:08:00Z"
+   "snapshot_at": "2026-10-21T12:30:00Z"
   },
   {
    "incident_id": "INC0013",
@@ -2223,7 +2254,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-20T12:08:00Z"
+   "snapshot_at": "2026-10-21T12:30:00Z"
   },
   {
    "incident_id": "INC0014",
@@ -2371,7 +2402,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-20T12:08:00Z"
+   "snapshot_at": "2026-10-21T12:30:00Z"
   },
   {
    "incident_id": "INC0015",
@@ -2508,7 +2539,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-20T12:08:00Z"
+   "snapshot_at": "2026-10-21T12:30:00Z"
   },
   {
    "incident_id": "INC0016",
@@ -2614,7 +2645,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-20T12:08:00Z"
+   "snapshot_at": "2026-10-21T12:30:00Z"
   },
   {
    "incident_id": "INC0017",
@@ -2744,7 +2775,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-20T12:08:00Z"
+   "snapshot_at": "2026-10-21T12:30:00Z"
   },
   {
    "incident_id": "INC0018",
@@ -2890,7 +2921,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-20T12:08:00Z"
+   "snapshot_at": "2026-10-21T12:30:00Z"
   },
   {
    "incident_id": "INC0019",
@@ -3024,11 +3055,11 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-20T12:08:00Z"
+   "snapshot_at": "2026-10-21T12:30:00Z"
   },
   {
    "incident_id": "INC0020",
-   "last_updated": "2026-10-12",
+   "last_updated": "2026-10-21",
    "published": {
     "actions": {
      "attempted": [],
@@ -3054,7 +3085,8 @@
      "2,500 US dollars sanction for each attorney (order)",
      "Six month suspension from practice before the Ninth Circuit (order)",
      "Two years of sworn AI use disclosures for all firm attorneys (order)",
-     "Referral to the State Bar of California (order)"
+     "Referral to the State Bar of California (order)",
+     "Six month reciprocal suspension from practice before the Board of Immigration Appeals, the Immigration Courts and DHS for one attorney (BIA decision, designated precedent 1 October 2026)"
     ],
     "controls": [
      {
@@ -3089,7 +3121,9 @@
     "facts": [
      "The opening brief cited Eduardo v. Garland and Lay v. Holder, which do not exist. [S36]",
      "The attorneys conceded unauthorized AI use by a non lawyer writer was more likely than not. [S36]",
-     "The court imposed fines, a six month suspension and two years of AI use certifications. [S36]"
+     "The court imposed fines, a six month suspension and two years of AI use certifications. [S36]",
+     "On 1 October 2026 the Board of Immigration Appeals issued as precedent its decision suspending one of the attorneys from practice before the Board, the Immigration Courts and DHS for six months, effective 13 June 2026, as reciprocal discipline for the Ninth Circuit suspension. [S90 p. 112]",
+     "The Board held that an attorney must follow the rules of professional conduct regardless of the tools used, and rejected the argument that reciprocal discipline for AI related misconduct is an outlier penalty. [S90 p. 119]"
     ],
     "incident_date": "2025 to 2026 (briefs filed before the 3 June 2026 order)",
     "incident_date_basis": "The order addresses briefs already on file; filing dates are in the docket, not restated here.",
@@ -3135,21 +3169,31 @@
       "retrieved": "2026-10-12",
       "type": "primary (court order)",
       "url": "https://cdn.ca9.uscourts.gov/datastore/opinions/2026/06/03/24-4790.pdf"
+     },
+     {
+      "id": "S90",
+      "name": "US Board of Immigration Appeals: reciprocal attorney discipline decision, 30 I&N Dec. 112 (BIA 2026), designated as precedent",
+      "url": "https://www.justice.gov/eoir/media/1463666/dl?inline=",
+      "published": "2026-10-01",
+      "type": "primary (tribunal decision)",
+      "report_id": "R0095",
+      "retrieved": "2026-10-21"
      }
     ],
-    "summary": "Briefs signed by the firm's attorneys cited two nonexistent cases and quotations that do not appear in real opinions, and briefs in two other cases also cited nonexistent cases. The attorneys first called the errors typographical and denied AI use, then conceded that unauthorized AI use by a non lawyer writer and a missing citation check were the likely cause.",
+    "summary": "Briefs signed by the firm's attorneys cited two nonexistent cases and quotations that do not appear in real opinions, and briefs in two other cases also cited nonexistent cases. The attorneys first called the errors typographical and denied AI use, then conceded that unauthorized AI use by a non lawyer writer and a missing citation check were the likely cause. The Board of Immigration Appeals later imposed a matching six month suspension from immigration practice on one of the attorneys.",
     "system": "Generative AI used by a non lawyer brief writer (tool not named)",
     "title": "Immigration appeal briefs cite nonexistent cases; appeals court suspends two lawyers",
     "why_it_mattered": "Fabricated law reached a federal appeals court in cases about whether people could remain in the country. The court found the attorneys knowingly or recklessly misled it about the source of the errors.",
     "workflow": "Drafting and filing appellate briefs in immigration petitions"
    },
-   "published_version": 2,
+   "published_version": 3,
    "report_ids": [
-    "R0036"
+    "R0036",
+    "R0095"
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-20T12:08:00Z"
+   "snapshot_at": "2026-10-21T12:30:00Z"
   },
   {
    "incident_id": "INC0021",
@@ -3274,7 +3318,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-20T12:08:00Z"
+   "snapshot_at": "2026-10-21T12:30:00Z"
   },
   {
    "incident_id": "INC0022",
@@ -3441,7 +3485,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-20T12:08:00Z"
+   "snapshot_at": "2026-10-21T12:30:00Z"
   },
   {
    "incident_id": "INC0023",
@@ -3565,7 +3609,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-20T12:08:00Z"
+   "snapshot_at": "2026-10-21T12:30:00Z"
   },
   {
    "incident_id": "INC0024",
@@ -3713,7 +3757,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-20T12:08:00Z"
+   "snapshot_at": "2026-10-21T12:30:00Z"
   },
   {
    "incident_id": "INC0025",
@@ -3867,7 +3911,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-20T12:08:00Z"
+   "snapshot_at": "2026-10-21T12:30:00Z"
   },
   {
    "incident_id": "INC0026",
@@ -4014,7 +4058,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-20T12:08:00Z"
+   "snapshot_at": "2026-10-21T12:30:00Z"
   },
   {
    "incident_id": "INC0027",
@@ -4150,7 +4194,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-20T12:08:00Z"
+   "snapshot_at": "2026-10-21T12:30:00Z"
   },
   {
    "incident_id": "INC0028",
@@ -4275,7 +4319,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-20T12:08:00Z"
+   "snapshot_at": "2026-10-21T12:30:00Z"
   },
   {
    "incident_id": "INC0029",
@@ -4397,7 +4441,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-20T12:08:00Z"
+   "snapshot_at": "2026-10-21T12:30:00Z"
   },
   {
    "incident_id": "INC0030",
@@ -4513,7 +4557,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-20T12:08:00Z"
+   "snapshot_at": "2026-10-21T12:30:00Z"
   },
   {
    "incident_id": "INC0031",
@@ -4630,7 +4674,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-20T12:08:00Z"
+   "snapshot_at": "2026-10-21T12:30:00Z"
   },
   {
    "incident_id": "INC0032",
@@ -4737,7 +4781,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-20T12:08:00Z"
+   "snapshot_at": "2026-10-21T12:30:00Z"
   },
   {
    "incident_id": "INC0033",
@@ -4748,7 +4792,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-20T12:08:00Z",
+   "snapshot_at": "2026-10-21T12:30:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -4884,7 +4928,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-20T12:08:00Z",
+   "snapshot_at": "2026-10-21T12:30:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5028,7 +5072,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-20T12:08:00Z",
+   "snapshot_at": "2026-10-21T12:30:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5165,7 +5209,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-20T12:08:00Z",
+   "snapshot_at": "2026-10-21T12:30:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5312,7 +5356,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-20T12:08:00Z",
+   "snapshot_at": "2026-10-21T12:30:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5442,7 +5486,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-20T12:08:00Z",
+   "snapshot_at": "2026-10-21T12:30:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5573,7 +5617,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-20T12:08:00Z",
+   "snapshot_at": "2026-10-21T12:30:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5706,7 +5750,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-20T12:08:00Z",
+   "snapshot_at": "2026-10-21T12:30:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5837,7 +5881,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-20T12:08:00Z",
+   "snapshot_at": "2026-10-21T12:30:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5970,7 +6014,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-20T12:08:00Z",
+   "snapshot_at": "2026-10-21T12:30:00Z",
    "published": {
     "actions": {
      "attempted": [
@@ -6113,7 +6157,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-20T12:08:00Z",
+   "snapshot_at": "2026-10-21T12:30:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6231,7 +6275,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-20T12:08:00Z",
+   "snapshot_at": "2026-10-21T12:30:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6350,7 +6394,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-20T12:08:00Z",
+   "snapshot_at": "2026-10-21T12:30:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6474,7 +6518,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-20T12:08:00Z",
+   "snapshot_at": "2026-10-21T12:30:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6601,7 +6645,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-20T12:08:00Z",
+   "snapshot_at": "2026-10-21T12:30:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6724,7 +6768,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-20T12:08:00Z",
+   "snapshot_at": "2026-10-21T12:30:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6851,7 +6895,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-20T12:08:00Z",
+   "snapshot_at": "2026-10-21T12:30:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6973,7 +7017,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-20T12:08:00Z",
+   "snapshot_at": "2026-10-21T12:30:00Z",
    "published": {
     "actions": {
      "attempted": [
@@ -7093,7 +7137,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-20T12:08:00Z",
+   "snapshot_at": "2026-10-21T12:30:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7224,7 +7268,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-20T12:08:00Z",
+   "snapshot_at": "2026-10-21T12:30:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7344,7 +7388,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-20T12:08:00Z",
+   "snapshot_at": "2026-10-21T12:30:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7464,6 +7508,232 @@
     "title": "Compliance system cancels jobseekers' income support with no discretionary decision; Australia's Ombudsman finds 964 cancellations unlawful",
     "why_it_mattered": "People lost the payments they live on through a system step that skipped the decision Parliament required a person to make.",
     "workflow": "Cancelling income support for persistent mutual obligation failures"
+   }
+  },
+  {
+   "incident_id": "INC0054",
+   "last_updated": "2026-10-21",
+   "published_version": 1,
+   "report_ids": [
+    "R0093"
+   ],
+   "review_status": "published",
+   "schema_version": 1,
+   "snapshot_at": "2026-10-21T12:30:00Z",
+   "published": {
+    "actions": {
+     "attempted": [],
+     "completed": [
+      "Filing an initial appeal brief that cited a nonexistent case seven times and attributed fictional quotations to real decisions (opinion)"
+     ]
+    },
+    "authority": {
+     "status": "exceeded",
+     "statement": "Counsel's authority to file the brief carried a duty to verify the authorities in it, and the brief was filed with citations counsel admitted were not adequately verified.",
+     "basis": "Documented: the court held that submitting hallucinated and inaccurately cited case law is sanctionable and granted fees as a sanction under Florida Rule of Appellate Procedure 9.410(b).",
+     "present": [
+      "Counsel's authority to file the initial brief for the appellants (opinion)",
+      "A verification process at counsel's firm, which counsel said failed before filing (opinion)"
+     ],
+     "absent": [
+      "Independent check of each authority against an authoritative source before filing (opinion)"
+     ],
+     "unknown": [
+      "Which generative AI tool the firm used",
+      "Amount of the fee award, which the circuit court sets on remand"
+     ]
+    },
+    "consequences": [
+     "Appellees awarded their reasonable appellate attorney's fees as a sanction, amount to be set by the circuit court on remand (opinion)",
+     "Appellants and their counsel held jointly and severally liable for the award (opinion)",
+     "Hallucinated citations, fictional quotations and misrepresented holdings disregarded by the court (opinion)",
+     "Opinion not final until disposition of any timely motion for rehearing (opinion)"
+    ],
+    "controls": [
+     {
+      "basis": "documented",
+      "control": "Counsel's verification of authorities before filing",
+      "failure": "Counsel said his verification process failed to identify before filing that certain authorities did not exist, were inaccurately cited, or did not support the propositions attributed to them."
+     },
+     {
+      "basis": "documented",
+      "control": "Correction after the court's order to show cause",
+      "failure": "Counsel admitted the amended brief he sought to file did not resolve all the citation issues."
+     }
+    ],
+    "defect_category": "external_output_unverified",
+    "defect_label": "Unverified AI output released to an outside party",
+    "deployment": "deployed",
+    "disclosed_basis": "Opinion of the Florida Fourth District Court of Appeal dated 7 October 2026, which records counsel's response to the order to show cause, including the firm's use of generative AI",
+    "disclosed_on": "2026-10-07",
+    "enforcement": {
+     "enforcement_point": "Signature and filing of each appellate brief submitted to the court.",
+     "decision_state": "Block",
+     "reason": "Cited cases, quotations and holdings in the brief have not been located and checked against authoritative sources by the signing attorney.",
+     "authority_requirement": "The signing attorney confirms that each cited case exists, each quotation appears in it and each stated holding is accurate before filing.",
+     "condition": "Applies to briefs drafted with generative AI or built on research supplied by the client or other non-attorneys.",
+     "required_response": "Hold the filing with each unverified authority identified.",
+     "responder_action": "Locate each authority in an authoritative source, correct or remove what cannot be verified, then file the reviewed brief.",
+     "next_event": "Filing proceeds after the attorney has verified every authority.",
+     "responsible_role": "Signing attorney and firm filing staff (proposed roles)"
+    },
+    "evidence_note": "Primary appellate opinion lists the specific fabricated and misstated authorities, records counsel's own statement that the firm used generative AI in research and drafting, and states the sanction.",
+    "evidence_strength": "strong",
+    "facts": [
+     "The initial brief relied on a real federal decision involving the same bank to assert, with fictional quotations, that the bank had made admissions affecting the case. [S88 p. 2]",
+     "The brief cited a nonexistent case, Ogilvie v. Sebring Airport Authority, seven times and included a fictional quotation from it. [S88 p. 2]",
+     "The brief cited a real case with the wrong citation, court and year for a proposition and quotation it did not contain, and attributed a quote to a Florida Supreme Court opinion in which it does not appear. [S88 p. 2]",
+     "Responding to the court's order to show cause, counsel admitted the brief contained authorities, citations, quotations and characterizations that were not adequately verified before filing. [S88 p. 3]",
+     "Counsel said he had accepted research materials offered by his client to control expense and that his firm incorporated generative AI technology into its legal research and drafting process. [S88 p. 3]",
+     "Counsel admitted that the amended brief he sought to file did not resolve all the citation issues. [S88 p. 3]",
+     "The court affirmed on the merits, granted the appellees' motion for appellate attorney's fees as a sanction, and held the appellants and their counsel jointly and severally liable, with the amount set on remand. [S88 pp. 3 to 4]",
+     "The court noted that the appellants' earlier complaint, filed without a lawyer, cited 32 cases, 15 of them nonexistent, presumably from the use of AI. [S88 p. 2 n. 1]"
+    ],
+    "incident_date": "Initial brief filed in 2026, before the court's order to show cause",
+    "incident_date_basis": "The opinion does not state the filing date of the initial brief; the appeal is case No. 4D2025-2599.",
+    "inferences": [
+     "Research supplied by the client and AI assisted drafting both fed the brief, and neither passed through a check that located each authority before the brief reached the court."
+    ],
+    "location": {
+     "documented": true,
+     "status": "established",
+     "label": "West Palm Beach, Florida, United States (Florida Fourth District Court of Appeal)",
+     "lat": 26.7153,
+     "lon": -80.0534,
+     "kind": "jurisdiction",
+     "basis": "The Florida Fourth District Court of Appeal decided the sanction. Pin placed at West Palm Beach as the seat of the court; the appeal came from the Broward County circuit court."
+    },
+    "organization": "Counsel for the appellants in a commercial dispute with a bank; affected: Florida Fourth District Court of Appeal, City National Bank of Florida and a co-defendant property company",
+    "rules": [],
+    "sources": [
+     {
+      "id": "S88",
+      "name": "Florida Fourth District Court of Appeal: Kid International, LLC v. City National Bank of Florida, No. 4D2025-2599, opinion",
+      "url": "https://flcourts-media.flcourts.gov/content/download/2496382/opinion/Opinion_2025-2599.pdf",
+      "published": "2026-10-07",
+      "type": "primary (court opinion)",
+      "report_id": "R0093",
+      "retrieved": "2026-10-21"
+     }
+    ],
+    "summary": "Counsel for the appellants in a Florida appeal filed an initial brief that cited a nonexistent case seven times, attributed fictional quotations to real decisions and misstated holdings. Counsel told the court his firm used generative AI in research and drafting and had relied on research supplied by the client. The court granted the appellees appellate attorney's fees as a sanction, payable jointly by the appellants and their counsel.",
+    "system": "Generative AI technology used by counsel's law firm in legal research and drafting, not named in the opinion",
+    "title": "AI-assisted appeal brief cites a nonexistent case and fictional quotations; Florida appeals court awards fees against client and counsel",
+    "why_it_mattered": "The opposing parties spent time and money chasing authorities that did not exist, and the court had to sort real law from invented law before deciding the appeal.",
+    "workflow": "Preparing and filing an initial appellate brief",
+    "cluster": "AI drafted court filings with fabricated citations (2026)"
+   }
+  },
+  {
+   "incident_id": "INC0055",
+   "last_updated": "2026-10-21",
+   "published_version": 1,
+   "report_ids": [
+    "R0094"
+   ],
+   "review_status": "published",
+   "schema_version": 1,
+   "snapshot_at": "2026-10-21T12:30:00Z",
+   "published": {
+    "actions": {
+     "attempted": [],
+     "completed": [
+      "Telling a customer that a non-refundable hotel booking was eligible for a full refund within 10 working days (column, screenshot described)",
+      "Proceeding with the cancellation after the customer agreed, followed by a Priceline cancellation confirmation email (column)"
+     ]
+    },
+    "authority": {
+     "status": "exceeded",
+     "statement": "The chatbot promised a refund that the booking's non-refundable terms did not allow, and Priceline later described its answer as misinformation.",
+     "basis": "Documented: Priceline emailed the customer acknowledging that the chatbot had given misinformation because the reservation was supposed to be non-refundable.",
+     "present": [
+      "Non-refundable rate terms on the booking, confirmed by Priceline at purchase (column)"
+     ],
+     "absent": [
+      "A check of the stated refund eligibility against the booking's rate terms before the cancellation went ahead (column)"
+     ],
+     "unknown": [
+      "Whether the chatbot was permitted to approve refund exceptions",
+      "Which model or vendor powers the chatbot",
+      "Why the hotel had no record of the cancellation"
+     ]
+    },
+    "consequences": [
+     "Customer cancelled a non-refundable booking and received no refund for months (column)",
+     "Priceline paid GBP 363.11 after foreign currency charges, nearly six months later, after the newspaper intervened (column)",
+     "Priceline acknowledged the chatbot's misinformation and apologised for the delay (column)"
+    ],
+    "controls": [
+     {
+      "basis": "documented",
+      "control": "Booking rate terms recorded as non-refundable",
+      "failure": "The chatbot stated the booking was eligible for a full refund despite noting it was originally listed as non-refundable."
+     },
+     {
+      "basis": "documented",
+      "control": "Human contact route for booking support",
+      "failure": "The customer found no way to contact Priceline except the chatbot until locating a phone number elsewhere online."
+     }
+    ],
+    "defect_category": "external_output_unverified",
+    "defect_label": "Unverified AI output released to an outside party",
+    "deployment": "deployed",
+    "disclosed_basis": "Consumer column by The Telegraph's consumer champion, published 18 May 2026 and reprinted by Yahoo News UK the same day, which records the customer's account, the columnist's review of the screenshot and Priceline's response",
+    "disclosed_on": "2026-05-18",
+    "enforcement": {
+     "enforcement_point": "Chatbot statement of refund eligibility and confirmation of a cancellation on a customer booking, before the customer is asked to proceed.",
+     "decision_state": "Hold",
+     "reason": "The refund eligibility the chatbot stated conflicts with the non-refundable rate terms recorded on the booking.",
+     "authority_requirement": "The stated refund matches the booking's recorded rate terms, or a named support agent approves the exception.",
+     "condition": "Applies when a chatbot answer states a refund amount or eligibility, or would trigger a cancellation, on a booking with restricted rate terms.",
+     "required_response": "Hold the answer and the cancellation and route the conversation to a support agent with the conflicting terms shown.",
+     "responder_action": "Tell the customer the actual refund position from the booking terms, or record an approved exception with the supplier before confirming.",
+     "next_event": "The customer decides whether to cancel on accurate terms, and any approved refund is recorded with the hotel at the same time.",
+     "responsible_role": "Booking support team lead (proposed role)"
+    },
+    "evidence_note": "Single customer's account published by a national newspaper consumer columnist, who describes a screenshot of the chatbot's promise; Priceline's acknowledgement of misinformation and its payment are reported by the columnist. The full chat transcript is not published and Priceline has not commented beyond the quoted apology.",
+    "evidence_strength": "moderate",
+    "facts": [
+     "The customer booked three nights at a hotel in Thailand through Priceline on 27 August 2025 at a non-refundable rate costing GBP 386.91. [S89]",
+     "On 28 October 2025 the customer found no way of contacting Priceline except through its AI chatbot, which it calls Penny. [S89]",
+     "Penny said that, although the booking was originally listed as non-refundable, the customer was eligible for a full refund within 10 working days, and after the customer agreed, Priceline emailed a cancellation confirmation. [S89]",
+     "The columnist says the customer's screenshot shows Penny saying the reservation was eligible for cancellation with a refund of GBP 386.91. [S89]",
+     "No refund arrived, and the hotel said it would not refund under its policy and had not been informed of the cancellation. [S89]",
+     "After the columnist pressed Priceline, it paid GBP 363.11 after foreign currency charges and emailed the customer acknowledging that the chatbot had given misinformation because the reservation was supposed to be non-refundable. [S89]",
+     "The customer waited almost six months for the refund, and Priceline did not answer a request for a further gesture. [S89]"
+    ],
+    "incident_date": "28 October 2025",
+    "incident_date_basis": "The customer's account dates the chatbot exchange and cancellation to 28 October 2025.",
+    "inferences": [
+     "The chatbot could both state refund eligibility and move a cancellation forward, with nothing comparing its statement to the rate terms already recorded on the booking.",
+     "The customer's confirmed cancellation and the hotel's records did not match, so the action the chatbot completed did not reach the supplier that held the booking."
+    ],
+    "location": {
+     "documented": false,
+     "status": "unresolved",
+     "label": "Execution location not documented",
+     "lat": null,
+     "lon": null,
+     "basis": "The column states the customer writes from north London and the hotel is in Thailand, but it does not state where the chatbot or the cancellation executed, and no regulator or court ruled."
+    },
+    "organization": "Priceline (Booking Holdings); affected: a UK customer and the hotel holding the booking",
+    "rules": [],
+    "sources": [
+     {
+      "id": "S89",
+      "name": "The Telegraph consumer column (Ruth Emery): 'Penny the chatbot lied to me about a refund and now the hotel won't pay', reprinted by Yahoo News UK",
+      "url": "https://uk.news.yahoo.com/penny-chatbot-lied-refund-now-103431033.html",
+      "published": "2026-05-18",
+      "type": "secondary (newspaper consumer column)",
+      "report_id": "R0094",
+      "retrieved": "2026-10-21"
+     }
+    ],
+    "summary": "A UK customer asked Priceline's AI chatbot, Penny, whether a non-refundable hotel booking in Thailand could be cancelled. Penny said it qualified for a full refund within 10 working days, and Priceline confirmed the cancellation by email, but no refund came and the hotel had no record of the cancellation. Priceline paid GBP 363.11 almost six months later, after a newspaper columnist intervened, and acknowledged the chatbot had given misinformation.",
+    "system": "Penny, Priceline's AI travel assistant for booking support (underlying model not stated)",
+    "title": "Travel booking chatbot tells a customer a non-refundable hotel booking qualifies for a full refund and the cancellation goes ahead; Priceline later admits misinformation",
+    "why_it_mattered": "A customer gave up a booking on the strength of a refund promise the company's own terms did not allow, and recovering the money took months and press attention.",
+    "workflow": "Answering booking cancellation and refund requests"
    }
   }
  ]
