@@ -1,8 +1,8 @@
 {
- "updated": "2026-10-21",
- "last_check": "2026-10-21T12:08:00Z",
- "next_incident_number": 56,
- "next_report_number": 96,
+ "updated": "2026-10-22",
+ "last_check": "2026-10-22T12:08:00Z",
+ "next_incident_number": 59,
+ "next_report_number": 102,
  "excluded_candidates": [
   {
    "name": "Gemini CLI file loss report (July 2025)",
@@ -525,6 +525,54 @@
    "reason": "Meta's own automated enforcement, reversed by automated re-review within about an hour; no regulator or court finding, and the operator of the Claude tool is not identified.",
    "url": "https://www.medianama.com/2026/10/223-meta-claude-suspending-protest-instagram/",
    "tracker": false
+  },
+  {
+   "name": "Lisandrillo v. Palozzi, Florida Fourth DCA referral of counsel to the Florida Bar (opinion 21 October 2026)",
+   "reason": "The court only suspects AI use and counsel calls the false quotation human error, so there is no court finding or admission of AI use as the court sanction policy requires.",
+   "url": "https://flcourts-media.flcourts.gov/content/download/2497061/opinion/Opinion_2026-2262.pdf",
+   "tracker": false
+  },
+  {
+   "name": "Grok Bot personal finance agent posts its owner's bank balances to a company Slack channel (Business Insider, October 2026)",
+   "reason": "Single self-reported account, disputed by an X Community Note and not confirmed by SpaceXAI.",
+   "url": "https://www.businessinsider.com/personal-ai-agent-grok-bot-posted-bank-details-company-slack-2026-10",
+   "tracker": false
+  },
+  {
+   "name": "Claroc enumeration of exposed Meta Muse share links (Ars Technica and WIRED, 20 to 21 October 2026)",
+   "reason": "Exposure came from the design of user-created share links, not from an action the AI executed.",
+   "url": "https://www.wired.com/story/a-design-flaw-in-share-links-exposes-users-personal-conversations-with-meta-muse/",
+   "tracker": false
+  },
+  {
+   "name": "Just Eat AI-generated menu images showing the wrong dishes (BBC, 21 October 2026)",
+   "reason": "Labelled AI images with mistaken dishes; low stakes, with no consequential effect on money, data or access documented.",
+   "url": "https://www.bbc.com/news/articles/crz981p0klvgo",
+   "tracker": false
+  },
+  {
+   "name": "Whitfield v. Prime Agency, E.D. Pa. order to show cause over inaccurate citations (18 September 2026)",
+   "reason": "No sanction yet, and AI use is not documented; counsel attributed the errors to filing the wrong draft.",
+   "url": "https://www.jdsupra.com/legalnews/busted-tcpa-defense-lawyer-caught-using-5167989/",
+   "tracker": false
+  },
+  {
+   "name": "Assemblies of God Gospel Church v. Registrar of Societies, High Court of Tanzania advocate suspension (ruling 3 September 2026)",
+   "reason": "The court called the fake cases potentially AI-generated but made no finding of AI use, and the advocate did not admit it.",
+   "url": "https://www.theexpertrecord.com/ai-in-court/assemblies-of-god-v-registrar-tanzania-advocate-suspended/",
+   "tracker": false
+  },
+  {
+   "name": "Claude Code subagents wipe a developer's home directory overnight (usecases.sh, October 2026)",
+   "reason": "Single self-report about the user's own machine, and the user says the cause is not certain.",
+   "url": "https://usecases.sh/use-case/develop-an-ios-app-overnight-with-claude-code-subagents-in-auto-mode",
+   "tracker": false
+  },
+  {
+   "name": "Korean consumer forum analysis of AI service complaints, including a chatbot that cancelled a reservation (22 October 2026)",
+   "reason": "Anonymized aggregate complaint data with no identifiable operator or verifiable case details.",
+   "url": "https://news.sbs.co.kr/english/article.do?news_id=N1008810169",
+   "tracker": false
   }
  ],
  "rows": [
@@ -670,7 +718,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-21T12:08:00Z"
+   "snapshot_at": "2026-10-22T12:08:00Z"
   },
   {
    "incident_id": "INC0002",
@@ -813,7 +861,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-21T12:08:00Z"
+   "snapshot_at": "2026-10-22T12:08:00Z"
   },
   {
    "incident_id": "INC0003",
@@ -935,7 +983,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-21T12:08:00Z"
+   "snapshot_at": "2026-10-22T12:08:00Z"
   },
   {
    "incident_id": "INC0004",
@@ -1072,7 +1120,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-21T12:08:00Z"
+   "snapshot_at": "2026-10-22T12:08:00Z"
   },
   {
    "incident_id": "INC0005",
@@ -1216,7 +1264,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-21T12:08:00Z"
+   "snapshot_at": "2026-10-22T12:08:00Z"
   },
   {
    "incident_id": "INC0006",
@@ -1363,7 +1411,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-21T12:08:00Z"
+   "snapshot_at": "2026-10-22T12:08:00Z"
   },
   {
    "incident_id": "INC0007",
@@ -1468,7 +1516,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-21T12:08:00Z"
+   "snapshot_at": "2026-10-22T12:08:00Z"
   },
   {
    "incident_id": "INC0008",
@@ -1604,7 +1652,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-21T12:08:00Z"
+   "snapshot_at": "2026-10-22T12:08:00Z"
   },
   {
    "incident_id": "INC0009",
@@ -1716,7 +1764,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-21T12:08:00Z"
+   "snapshot_at": "2026-10-22T12:08:00Z"
   },
   {
    "incident_id": "INC0010",
@@ -1838,7 +1886,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-21T12:08:00Z"
+   "snapshot_at": "2026-10-22T12:08:00Z"
   },
   {
    "incident_id": "INC0011",
@@ -1980,7 +2028,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-21T12:08:00Z"
+   "snapshot_at": "2026-10-22T12:08:00Z"
   },
   {
    "incident_id": "INC0012",
@@ -2122,7 +2170,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-21T12:08:00Z"
+   "snapshot_at": "2026-10-22T12:08:00Z"
   },
   {
    "incident_id": "INC0013",
@@ -2254,7 +2302,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-21T12:08:00Z"
+   "snapshot_at": "2026-10-22T12:08:00Z"
   },
   {
    "incident_id": "INC0014",
@@ -2402,7 +2450,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-21T12:08:00Z"
+   "snapshot_at": "2026-10-22T12:08:00Z"
   },
   {
    "incident_id": "INC0015",
@@ -2539,7 +2587,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-21T12:08:00Z"
+   "snapshot_at": "2026-10-22T12:08:00Z"
   },
   {
    "incident_id": "INC0016",
@@ -2645,7 +2693,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-21T12:08:00Z"
+   "snapshot_at": "2026-10-22T12:08:00Z"
   },
   {
    "incident_id": "INC0017",
@@ -2775,7 +2823,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-21T12:08:00Z"
+   "snapshot_at": "2026-10-22T12:08:00Z"
   },
   {
    "incident_id": "INC0018",
@@ -2921,7 +2969,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-21T12:08:00Z"
+   "snapshot_at": "2026-10-22T12:08:00Z"
   },
   {
    "incident_id": "INC0019",
@@ -3055,7 +3103,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-21T12:08:00Z"
+   "snapshot_at": "2026-10-22T12:08:00Z"
   },
   {
    "incident_id": "INC0020",
@@ -3193,7 +3241,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-21T12:08:00Z"
+   "snapshot_at": "2026-10-22T12:08:00Z"
   },
   {
    "incident_id": "INC0021",
@@ -3318,7 +3366,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-21T12:08:00Z"
+   "snapshot_at": "2026-10-22T12:08:00Z"
   },
   {
    "incident_id": "INC0022",
@@ -3485,7 +3533,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-21T12:08:00Z"
+   "snapshot_at": "2026-10-22T12:08:00Z"
   },
   {
    "incident_id": "INC0023",
@@ -3609,7 +3657,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-21T12:08:00Z"
+   "snapshot_at": "2026-10-22T12:08:00Z"
   },
   {
    "incident_id": "INC0024",
@@ -3757,7 +3805,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-21T12:08:00Z"
+   "snapshot_at": "2026-10-22T12:08:00Z"
   },
   {
    "incident_id": "INC0025",
@@ -3911,7 +3959,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-21T12:08:00Z"
+   "snapshot_at": "2026-10-22T12:08:00Z"
   },
   {
    "incident_id": "INC0026",
@@ -4058,7 +4106,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-21T12:08:00Z"
+   "snapshot_at": "2026-10-22T12:08:00Z"
   },
   {
    "incident_id": "INC0027",
@@ -4194,7 +4242,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-21T12:08:00Z"
+   "snapshot_at": "2026-10-22T12:08:00Z"
   },
   {
    "incident_id": "INC0028",
@@ -4319,7 +4367,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-21T12:08:00Z"
+   "snapshot_at": "2026-10-22T12:08:00Z"
   },
   {
    "incident_id": "INC0029",
@@ -4441,7 +4489,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-21T12:08:00Z"
+   "snapshot_at": "2026-10-22T12:08:00Z"
   },
   {
    "incident_id": "INC0030",
@@ -4557,7 +4605,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-21T12:08:00Z"
+   "snapshot_at": "2026-10-22T12:08:00Z"
   },
   {
    "incident_id": "INC0031",
@@ -4674,7 +4722,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-21T12:08:00Z"
+   "snapshot_at": "2026-10-22T12:08:00Z"
   },
   {
    "incident_id": "INC0032",
@@ -4781,7 +4829,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-21T12:08:00Z"
+   "snapshot_at": "2026-10-22T12:08:00Z"
   },
   {
    "incident_id": "INC0033",
@@ -4792,7 +4840,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-21T12:08:00Z",
+   "snapshot_at": "2026-10-22T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -4928,7 +4976,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-21T12:08:00Z",
+   "snapshot_at": "2026-10-22T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5072,7 +5120,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-21T12:08:00Z",
+   "snapshot_at": "2026-10-22T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5209,7 +5257,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-21T12:08:00Z",
+   "snapshot_at": "2026-10-22T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5356,7 +5404,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-21T12:08:00Z",
+   "snapshot_at": "2026-10-22T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5486,7 +5534,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-21T12:08:00Z",
+   "snapshot_at": "2026-10-22T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5617,7 +5665,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-21T12:08:00Z",
+   "snapshot_at": "2026-10-22T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5750,7 +5798,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-21T12:08:00Z",
+   "snapshot_at": "2026-10-22T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5881,7 +5929,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-21T12:08:00Z",
+   "snapshot_at": "2026-10-22T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6014,7 +6062,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-21T12:08:00Z",
+   "snapshot_at": "2026-10-22T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [
@@ -6157,7 +6205,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-21T12:08:00Z",
+   "snapshot_at": "2026-10-22T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6275,7 +6323,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-21T12:08:00Z",
+   "snapshot_at": "2026-10-22T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6394,7 +6442,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-21T12:08:00Z",
+   "snapshot_at": "2026-10-22T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6518,7 +6566,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-21T12:08:00Z",
+   "snapshot_at": "2026-10-22T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6645,7 +6693,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-21T12:08:00Z",
+   "snapshot_at": "2026-10-22T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6768,7 +6816,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-21T12:08:00Z",
+   "snapshot_at": "2026-10-22T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6895,7 +6943,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-21T12:08:00Z",
+   "snapshot_at": "2026-10-22T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7017,7 +7065,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-21T12:08:00Z",
+   "snapshot_at": "2026-10-22T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [
@@ -7137,7 +7185,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-21T12:08:00Z",
+   "snapshot_at": "2026-10-22T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7268,7 +7316,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-21T12:08:00Z",
+   "snapshot_at": "2026-10-22T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7380,15 +7428,16 @@
   },
   {
    "incident_id": "INC0053",
-   "last_updated": "2026-10-20",
-   "published_version": 1,
+   "last_updated": "2026-10-22",
+   "published_version": 2,
    "report_ids": [
     "R0091",
-    "R0092"
+    "R0092",
+    "R0101"
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-21T12:08:00Z",
+   "snapshot_at": "2026-10-22T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7419,7 +7468,8 @@
      "964 job seekers had income support cancelled unlawfully between April 2022 and July 2024 (Ombudsman)",
      "Cancellations under s 42AF(2) paused from 4 July 2024 and still paused in October 2026 (DEWR)",
      "DEWR began inviting people who may be eligible to claim compensation for incorrect cancellations (DEWR, 19 October 2026)",
-     "Two paused provisions resume on 26 October 2026 after system testing and new guidance for decision-makers (DEWR)"
+     "Two paused provisions resume on 26 October 2026 after system testing and new guidance for decision-makers (DEWR)",
+     "Number of claimants affected put \"in the vicinity\" of 30,000 at a June 2026 Senate estimates hearing (Government News)"
     ],
     "controls": [
      {
@@ -7454,7 +7504,7 @@
      "next_event": "A cancellation issues only after a recorded delegate decision and only while the provision is active.",
      "responsible_role": "Services Australia delegate and DEWR compliance system owner (proposed roles)"
     },
-    "evidence_note": "Primary Ombudsman investigation report states the mechanism, the counts, the legal finding and the delays; DEWR's own statement confirms the continuing pause, the compensation process and the resumption dates. The counts were supplied by DEWR to the Ombudsman.",
+    "evidence_note": "Primary Ombudsman investigation report states the mechanism, the counts, the legal finding and the delays; DEWR's own statement confirms the continuing pause, the compensation process and the resumption dates. The counts were supplied by DEWR to the Ombudsman. Later scale estimates come from secondary reporting of DEWR figures and Senate estimates evidence, not from a primary transcript.",
     "evidence_strength": "strong",
     "facts": [
      "Under the Targeted Compliance Framework, when a Services Australia decision-maker is not satisfied a job seeker has a reasonable excuse and records the failure, the computer system automatically cancels the income support payment. [S86 p. 15]",
@@ -7464,13 +7514,15 @@
      "The Ombudsman found the s 42AF(2) cancellations were not lawful and formed the opinion that the agencies' actions were contrary to law. [S86 pp. 5, 15]",
      "An independent review completed in June 2025 found that assurance could not be provided on the integrity, effectiveness or appropriateness of decisions produced by the TCF IT system in its current form. [S86 pp. 16 to 17]",
      "The error went undetected from April 2022 until September 2023, and DEWR took almost 10 months after that to pause the cancellations in July 2024. [S86 p. 31]",
-     "On 19 October 2026 DEWR said it had begun inviting people who may be eligible for compensation for incorrect cancellations, that two paused provisions would resume on 26 October 2026, and that s 42AF(2) cancellations stay paused until further safeguards are in place, expected in the first quarter of 2027. [S87]"
+     "On 19 October 2026 DEWR said it had begun inviting people who may be eligible for compensation for incorrect cancellations, that two paused provisions would resume on 26 October 2026, and that s 42AF(2) cancellations stay paused until further safeguards are in place, expected in the first quarter of 2027. [S87]",
+     "Government News reported that DEWR estimated in March 2025 that 10,000 jobseeker payments were unlawfully or wrongfully reduced or cancelled, and that a Senate estimates hearing in June 2026 heard the number of claimants affected was \"in the vicinity\" of 30,000. [S96]"
     ],
     "incident_date": "April 2022 to July 2024, with 45 further automated cancellations after the pause",
     "incident_date_basis": "The Ombudsman dates the unlawful s 42AF(2) cancellations from April 2022 to the 4 July 2024 pause; the 45 later cancellations followed the Secretary's pause decision.",
     "inferences": [
      "Recording a failure and cancelling the payment were joined into one system step, so the decision the law required had no point at which a person could make it.",
-     "The cancellations after the pause show the system kept acting after the authority to cancel had been withdrawn."
+     "The cancellations after the pause show the system kept acting after the authority to cancel had been withdrawn.",
+     "The later estimates of 10,000 and about 30,000 cover payments unlawfully or wrongfully reduced or cancelled, a wider measure than the 964 s 42AF(2) cancellations the Ombudsman counted, so the two figures are not directly comparable."
     ],
     "location": {
      "documented": true,
@@ -7501,6 +7553,15 @@
       "type": "primary (agency statement)",
       "report_id": "R0092",
       "retrieved": "2026-10-20"
+     },
+     {
+      "id": "S96",
+      "name": "Government News: Welfare system reboot",
+      "url": "https://www.governmentnews.com.au/welfare-system-reboot/",
+      "published": "2026-10-21",
+      "type": "secondary (trade press report)",
+      "report_id": "R0101",
+      "retrieved": "2026-10-22"
      }
     ],
     "summary": "Australia's Targeted Compliance Framework system automatically cancelled jobseekers' income support once a failure was recorded, although a 2022 amendment required a decision-maker first to decide whether cancellation was appropriate. The Commonwealth Ombudsman found 964 cancellations unlawful and 45 more made after a pause. DEWR is now inviting compensation claims and resumes two paused provisions on 26 October 2026.",
@@ -7519,7 +7580,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-21T12:08:00Z",
+   "snapshot_at": "2026-10-22T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7633,7 +7694,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-21T12:08:00Z",
+   "snapshot_at": "2026-10-22T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7734,6 +7795,375 @@
     "title": "Travel booking chatbot tells a customer a non-refundable hotel booking qualifies for a full refund and the cancellation goes ahead; Priceline later admits misinformation",
     "why_it_mattered": "A customer gave up a booking on the strength of a refund promise the company's own terms did not allow, and recovering the money took months and press attention.",
     "workflow": "Answering booking cancellation and refund requests"
+   }
+  },
+  {
+   "incident_id": "INC0056",
+   "last_updated": "2026-10-22",
+   "published_version": 1,
+   "report_ids": [
+    "R0096"
+   ],
+   "review_status": "published",
+   "schema_version": 1,
+   "snapshot_at": "2026-10-22T12:08:00Z",
+   "published": {
+    "actions": {
+     "attempted": [],
+     "completed": [
+      "Citing two nonexistent cases in a letter, a client declaration and appellate oppositions (opinion)",
+      "Supplying further fictitious reporter citations and a decision date for one of the cases after it was identified as invented (opinion)"
+     ]
+    },
+    "authority": {
+     "status": "exceeded",
+     "statement": "Counsel's authority to file papers carried a duty to verify the authorities cited, and counsel filed fictitious authority she admitted she had not verified.",
+     "basis": "Documented: the court held that citing and relying on fictional cases without verifying them is an unreasonable violation of the Rules of Court and imposed sanctions under California Rules of Court, rule 8.276(a)(4).",
+     "present": [
+      "Counsel's authority to represent the respondent and file papers (opinion)",
+      "The appellant's counsel's role in drafting the proposed order submitted for the court's signature (opinion)"
+     ],
+     "absent": [
+      "Verification of the cited cases by the respondent's counsel before citing them (opinion)",
+      "Verification of the citations in the proposed order before it was submitted and signed (opinion)"
+     ],
+     "unknown": [
+      "Which AI tools counsel used",
+      "Which fictitious details came from AI rather than the Reddit article, beyond the court's description of the Teegarden citation",
+      "Whether the sanction has been paid or the State Bar has acted"
+     ]
+    },
+    "consequences": [
+     "USD 5,000 sanction against the respondent's counsel, payable within 30 days after the remittitur (opinion)",
+     "Opinion forwarded to the State Bar of California, and counsel ordered to report the sanction herself (opinion)",
+     "Family court order resting in part on fictional authority left in place because the appellant forfeited the claim (opinion)",
+     "Opinion certified for publication (opinion)"
+    ],
+    "controls": [
+     {
+      "basis": "documented",
+      "control": "Attorney verification of cited authority before filing",
+      "failure": "The respondent's counsel admitted she did not verify Twigg and said she assumed citations in the superior court record had already been vetted."
+     },
+     {
+      "basis": "documented",
+      "control": "Review of a proposed order before it is submitted for the court's signature",
+      "failure": "The appellant's counsel drafted an order citing both fictitious cases without alerting the court, and the commissioner signed it."
+     },
+     {
+      "basis": "documented",
+      "control": "Correction after the fictitious cases were identified",
+      "failure": "Counsel insisted Twigg was a valid published precedent and added further fictitious citation details."
+     }
+    ],
+    "defect_category": "external_output_unverified",
+    "defect_label": "Unverified AI output released to an outside party",
+    "deployment": "deployed",
+    "disclosed_basis": "Published opinion of the California Court of Appeal, Fourth Appellate District, Division One, filed 5 March 2026, which records counsel's statements about her use of AI tools",
+    "disclosed_on": "2026-03-05",
+    "enforcement": {
+     "enforcement_point": "Filing of any paper that cites legal authority, and submission of a proposed order for a judicial officer's signature.",
+     "decision_state": "Block",
+     "reason": "Cited cases have not been located in an authoritative source by the attorney submitting the paper or the proposed order.",
+     "authority_requirement": "The submitting attorney confirms that each cited case exists at the stated citation and supports the stated proposition.",
+     "condition": "Applies to papers and proposed orders drafted with AI tools, online articles or citations carried over from earlier filings in the record.",
+     "required_response": "Hold the paper or proposed order with each unverified citation identified.",
+     "responder_action": "Locate and read each cited case, correct or remove anything that cannot be verified, then submit the reviewed version.",
+     "next_event": "Filing or submission for signature proceeds after every citation is verified.",
+     "responsible_role": "Submitting attorney for each party (proposed roles)"
+    },
+    "evidence_note": "Primary published opinion documents the fictitious citations, the signed order, counsel's statements and the sanction. AI involvement rests on the court's description of one citation as apparently generated by AI and counsel's concession that she may have used AI tools; the Twigg case itself came from a Reddit article.",
+    "evidence_strength": "moderate",
+    "facts": [
+     "The respondent's counsel wrote to the appellant's counsel relying on Marriage of Twigg (1984) 34 Cal.3d 926 and Marriage of Teegarden (1995) 33 Cal.App.4th 1572; neither case exists as cited. [S91 p. 3]",
+     "A court commissioner sitting as temporary judge approved and signed a proposed order, drafted by the appellant's counsel, that cited both fictitious cases and denied pet custody. [S91 pp. 4 to 5]",
+     "In the Court of Appeal, the respondent's counsel cited the same cases in opposing reinstatement of the appeal, and after the appellant said they were invented, insisted Twigg was a valid published precedent and supplied reporter citations and a decision date the court found were also fictitious. [S91 pp. 5, 18 to 19]",
+     "Twigg came from a Reddit article by a non-attorney blogger, and the court described the fictional Teegarden case as apparently generated by AI. [S91 pp. 8, 18]",
+     "At oral argument counsel said she had no paid legal research subscription and was using other online resources including AI, and conceded she may have obtained fictitious information about Twigg and Teegarden using AI tools. [S91 p. 9]",
+     "The court held it is an abuse of discretion for a court to rely in material part on fictional case authorities, but found the appellant forfeited the claim because his own counsel drafted and submitted the order without objecting. [S91 pp. 10 to 11]",
+     "The court stated that it is particularly important for an attorney to verify the citations in any proposed order submitted for signature by the court. [S91 p. 13]",
+     "The court ordered the respondent's counsel to pay USD 5,000 in sanctions, directed the clerk to forward the opinion to the State Bar of California, and ordered counsel to report the sanction herself. [S91 p. 20]"
+    ],
+    "incident_date": "From before the 19 September 2024 family court hearing through the 2025 appellate oppositions",
+    "incident_date_basis": "The opinion places counsel's letter and the client declaration before the 19 September 2024 hearing and the appellate oppositions after the August 2025 dismissal; exact filing dates of the oppositions are not stated.",
+    "inferences": [
+     "Citations already in the superior court record were treated as verified by both sides, so a fictitious case passed from a letter into a client declaration, a signed order and appellate filings without anyone checking it.",
+     "The proposed order was the point where a check by the drafting attorney or the court would have kept fictional authority out of a judicial decision."
+    ],
+    "location": {
+     "documented": true,
+     "status": "established",
+     "label": "San Diego, California, United States (California Court of Appeal, Fourth Appellate District, Division One)",
+     "lat": 32.7157,
+     "lon": -117.1611,
+     "kind": "jurisdiction",
+     "basis": "The Fourth Appellate District, Division One decided the sanction; the appeal came from the San Diego County Superior Court. Pin placed at San Diego as the seat of the division."
+    },
+    "organization": "Counsel for the respondent in a family law pet custody dispute; affected: San Diego County Superior Court, the California Court of Appeal and the appellant",
+    "rules": [],
+    "sources": [
+     {
+      "id": "S91",
+      "name": "California Court of Appeal, Fourth Appellate District, Division One: In re Domestic Partnership of Torres Campos and Munoz, No. D085584, published opinion",
+      "url": "https://www.courts.ca.gov/opinions/archive/D085584.PDF",
+      "published": "2026-03-05",
+      "type": "primary (court opinion)",
+      "report_id": "R0096",
+      "retrieved": "2026-10-22"
+     }
+    ],
+    "summary": "In a family law dispute over custody of a dog, the respondent's counsel cited two cases that do not exist, and a temporary judge signed an order, drafted by the appellant's counsel, that relied on them. On appeal counsel repeated the cases, defended one as valid with further invented citation details, and conceded she may have obtained the information using AI tools. The California Court of Appeal held that relying on fictional cases is an abuse of discretion, found the claim forfeited, and sanctioned counsel USD 5,000 with notice to the State Bar.",
+    "system": "AI tools used by counsel alongside other online resources for legal research, not named in the opinion",
+    "title": "Fictitious cases, one apparently AI-generated, reach a signed family court order; California appeals court sanctions counsel and notifies the State Bar",
+    "why_it_mattered": "A judicial order rested in part on law that does not exist, and it stood because neither side checked the citations before the order was signed.",
+    "workflow": "Citing legal authority in letters, declarations and appellate oppositions, and drafting a proposed order for the court's signature",
+    "cluster": "AI drafted court filings with fabricated citations (2026)"
+   }
+  },
+  {
+   "incident_id": "INC0057",
+   "last_updated": "2026-10-22",
+   "published_version": 1,
+   "report_ids": [
+    "R0097",
+    "R0098"
+   ],
+   "review_status": "published",
+   "schema_version": 1,
+   "snapshot_at": "2026-10-22T12:08:00Z",
+   "published": {
+    "actions": {
+     "attempted": [],
+     "completed": [
+      "Filing a written Answer to disciplinary allegations containing AI-generated citations and propositions that were wrong or did not exist (judgment)",
+      "Sending the regulator an AI-drafted email meant to correct the errors, which contained further false material (judgment)"
+     ]
+    },
+    "authority": {
+     "status": "exceeded",
+     "statement": "As a regulated lawyer he was bound not to mislead the Tribunal, and he submitted AI-generated authorities he had not verified, a second time after the errors were pointed out.",
+     "basis": "Documented: on his admissions the Tribunal found breaches of SRA Principles 1, 2 and 5 and paragraph 1.4 of the Code of Conduct, and part of paragraph 2.4.",
+     "present": [
+      "The respondent's right to answer the allegations himself before the Tribunal (judgment)",
+      "The SRA's notice of the errors on 8 April 2026, with a reference to Ayinde v Haringey LBC (judgment)"
+     ],
+     "absent": [
+      "Steps to ensure the AI output was accurate or that the tools were reliable before submission (judgment)"
+     ],
+     "unknown": [
+      "Which AI tools were used",
+      "Outcome of the appeal to the High Court"
+     ]
+    },
+    "consequences": [
+     "Struck off the Register of Foreign Lawyers (judgment)",
+     "No order as to costs, because the SRA accepted he was impecunious (judgment)",
+     "Order under appeal to the High Court and in force pending that decision (SRA)"
+    ],
+    "controls": [
+     {
+      "basis": "documented",
+      "control": "Lawyer's check of authorities against authoritative sources before submission",
+      "failure": "The Tribunal found he used AI without proper thought to the consequences and failed to take proper steps to ensure his output was accurate."
+     },
+     {
+      "basis": "documented",
+      "control": "Correction after the regulator identified the errors",
+      "failure": "He used AI again to draft the correction, and it contained further false material."
+     }
+    ],
+    "defect_category": "external_output_unverified",
+    "defect_label": "Unverified AI output released to an outside party",
+    "deployment": "deployed",
+    "disclosed_basis": "Solicitors Disciplinary Tribunal judgment dated 25 August 2026, following a hearing on 29 July 2026; the SRA's register entry records the outcome and the pending appeal",
+    "disclosed_on": "2026-08-25",
+    "enforcement": {
+     "enforcement_point": "Submission of any document citing legal authority to a court, tribunal or regulator.",
+     "decision_state": "Block",
+     "reason": "Cited authorities and quotations have not been checked against authoritative sources.",
+     "authority_requirement": "The submitting lawyer confirms that each authority exists at the stated citation and supports the stated proposition.",
+     "condition": "Applies to AI-drafted submissions and to any correction of errors already identified.",
+     "required_response": "Hold the submission with each unverified authority identified.",
+     "responder_action": "Check each authority in an authoritative database, correct or remove it, and submit the reviewed version.",
+     "next_event": "Submission proceeds after verification, and a correction goes out only after the same check.",
+     "responsible_role": "Submitting lawyer (proposed role)"
+    },
+    "evidence_note": "Primary tribunal judgment records the defective authorities, the respondent's own admissions of AI use and the sanction; the SRA's register entry confirms the outcome and the pending appeal.",
+    "evidence_strength": "strong",
+    "facts": [
+     "The respondent filed his Answer to the SRA's disciplinary allegations on 12 March 2026, and on 8 April 2026 the SRA's counsel identified incorrect citations and citations that did not reflect the stated legal propositions. [S92 para 19.2]",
+     "The SRA drew the errors to his attention on 8 April 2026 and directed him to Ayinde v Haringey LBC, the leading judgment on unchecked AI-generated legal arguments. [S92 para 19.3]",
+     "His reply of 9 April 2026, which purported to correct the errors, was itself drafted using generative AI and contained further false material. [S92 para 19.4]",
+     "On 13 April 2026 he accepted that the 9 April email had been produced with AI and contained inaccuracies, and said he could not provide copies of the authorities he relied on. [S92 para 19.5]",
+     "The Answer gave a 2015 case a 2020 citation it does not bear, gave another case a citation belonging to an unrelated intellectual property case, and cited two real cases for propositions they do not support. [S92 para 19.40]",
+     "He accepted that the Answer was prepared by AI software involving large language models, apologised, and said he had no intention to mislead. [S92 para 19.42]",
+     "The Tribunal found the allegations proved in respect of citing non-existent cases and incorrect legal propositions, assessed his culpability as very high because the conduct was repeated after the errors were explained, and said it would have imposed the same sanction had this allegation stood alone. [S92 paras 8.2, 19.50, 28.12, 28.16]",
+     "The Tribunal ordered that he be struck off the Register of Foreign Lawyers, with no order as to costs, and recorded that this was the first time a lawyer's use of AI in legal proceedings had been litigated before it. [S92 paras 8.3, 30]",
+     "The order is subject to an appeal to the High Court by the respondent and remains in force pending the High Court's decision. [S93]"
+    ],
+    "incident_date": "12 March 2026 and 9 April 2026",
+    "incident_date_basis": "The judgment dates the Answer to 12 March 2026 and the follow-up email to 9 April 2026.",
+    "inferences": [
+     "The correction came from the same unverified process that produced the original errors, so notice of the problem did not lead to a check against authoritative sources."
+    ],
+    "location": {
+     "documented": true,
+     "status": "established",
+     "label": "London, United Kingdom (Solicitors Disciplinary Tribunal)",
+     "lat": 51.5074,
+     "lon": -0.1278,
+     "kind": "jurisdiction",
+     "basis": "The Solicitors Disciplinary Tribunal, a statutory tribunal for England and Wales, made the finding. The judgment does not state the hearing venue; pin placed at London as the reference point for that jurisdiction."
+    },
+    "organization": "A registered foreign lawyer representing himself in disciplinary proceedings; affected: Solicitors Disciplinary Tribunal and the Solicitors Regulation Authority",
+    "rules": [],
+    "sources": [
+     {
+      "id": "S92",
+      "name": "Solicitors Disciplinary Tribunal: Solicitors Regulation Authority Ltd v Kumar, Case No. 12884-2026, judgment",
+      "url": "https://solicitorstribunal.org.uk/wp-content/uploads/2026/03/12884-2026-Kumar-.pdf",
+      "published": "2026-08-25",
+      "type": "primary (tribunal judgment)",
+      "report_id": "R0097",
+      "retrieved": "2026-10-22"
+     },
+     {
+      "id": "S93",
+      "name": "Solicitors Regulation Authority: Solicitor Check register entry 655594, outcome of SDT hearing",
+      "url": "https://www.sra.org.uk/consumers/solicitor-check/655594/",
+      "published": "2026-04-01",
+      "type": "primary (regulator register entry)",
+      "report_id": "R0098",
+      "retrieved": "2026-10-22"
+     }
+    ],
+    "summary": "A registered foreign lawyer defending himself before the Solicitors Disciplinary Tribunal filed an Answer containing AI-generated citations and legal propositions that were wrong or did not exist. When the SRA pointed out the errors, he used AI to draft his correction, which contained further false material. The Tribunal found the allegations proved and struck him off the Register of Foreign Lawyers, saying it would have done so on this ground alone; he has appealed to the High Court.",
+    "system": "Generative AI tools based on large language models, not named in the judgment",
+    "title": "Lawyer files AI-generated false authorities in his own disciplinary defence, then repeats them in the correction; UK tribunal strikes him off",
+    "why_it_mattered": "False authorities reached a disciplinary tribunal and its regulator twice, the second time in the correction meant to fix the first.",
+    "workflow": "Preparing a written answer to disciplinary allegations and correspondence with the regulator",
+    "cluster": "AI drafted court filings with fabricated citations (2026)"
+   }
+  },
+  {
+   "incident_id": "INC0058",
+   "last_updated": "2026-10-22",
+   "published_version": 1,
+   "report_ids": [
+    "R0099",
+    "R0100"
+   ],
+   "review_status": "published",
+   "schema_version": 1,
+   "snapshot_at": "2026-10-22T12:08:00Z",
+   "published": {
+    "actions": {
+     "attempted": [],
+     "completed": [
+      "Telling a customer who asked whether a host's bank transfer demand was legitimate that the property required full payment by bank transfer before arrival (customer account)"
+     ]
+    },
+    "authority": {
+     "status": "unverified",
+     "statement": "The chatbot endorsed a payment method that, according to Booking.com, the booking confirmation did not allow, and the record shows no check of its answer against the booking's terms.",
+     "basis": "Not established: Booking.com says the confirmation specified card payment, but its statement does not address the chatbot's answer and no transcript is published.",
+     "present": [
+      "Booking confirmation stating that payment would be taken by card rather than by bank transfer (Booking.com statement)"
+     ],
+     "absent": [],
+     "unknown": [
+      "Whether the chatbot consulted the booking's payment terms before answering",
+      "Whether Booking.com has reviewed the chatbot's reply",
+      "Date of the chatbot exchange and the exact amount transferred",
+      "Whether the refund has been paid",
+      "Which model or vendor powers the chatbot"
+     ]
+    },
+    "consequences": [
+     "Customer paid the balance to a fraudulent host for a villa that did not appear to exist (customer account)",
+     "Booking.com processing a full refund and the property no longer listed (Booking.com statement)",
+     "Booking.com agreed to pay for alternative accommodation (customer account)"
+    ],
+    "controls": [
+     {
+      "basis": "documented",
+      "control": "Booking confirmation specifying card payment",
+      "failure": "The chatbot told the customer the property required bank transfer, contrary to the confirmation terms Booking.com describes."
+     },
+     {
+      "basis": "documented",
+      "control": "Customer's own fraud check through the platform's support channel",
+      "failure": "The support channel's answer confirmed the fraudulent request instead of flagging it."
+     }
+    ],
+    "defect_category": "external_output_unverified",
+    "defect_label": "Unverified AI output released to an outside party",
+    "deployment": "deployed",
+    "disclosed_basis": "Customer's account published by the Express on 13 October 2026 and the Daily Mail on 19 October 2026, with a Booking.com statement quoted by the Express",
+    "disclosed_on": "2026-10-13",
+    "enforcement": {
+     "enforcement_point": "Chatbot answer to a customer asking whether a payment request on a booking is legitimate.",
+     "decision_state": "Hold",
+     "reason": "The answer would endorse a payment method that differs from the payment terms recorded on the booking.",
+     "authority_requirement": "The answer matches the booking's recorded payment terms, or a support agent reviews it before it is sent.",
+     "condition": "Applies to any chatbot answer about payment method, off-platform payment or a host's payment request.",
+     "required_response": "Hold the answer, state the recorded payment terms, and route the conversation to a support agent with the host's message attached.",
+     "responder_action": "Confirm the recorded payment terms with the customer and send the host's request and listing for fraud review.",
+     "next_event": "The customer receives the recorded payment terms, and any suspect listing is reviewed before further payment.",
+     "responsible_role": "Customer support team lead and trust and safety reviewer (proposed roles)"
+    },
+    "evidence_note": "Rests on the customer's account in two national newspapers, which quote the chatbot's reply; no transcript is published. Booking.com's statement confirms the refund and the delisting and says the confirmation specified card payment, but it neither confirms nor disputes the chatbot exchange.",
+    "evidence_strength": "limited",
+    "facts": [
+     "The customer booked a five-day villa stay in Positano, Italy, through Booking.com, and before the trip received a message from the host saying he needed to pay the full balance by bank transfer. [S94, S95]",
+     "Suspecting a scam, he asked Booking.com's AI Trip Support chat, Dot, whether this was correct, and Dot, which introduced itself as still learning, replied: \"Yes, the property requires full payment via bank transfer before your arrival.\" [S94, S95]",
+     "Reassured, he transferred the money, and on the morning of the trip the host said the property had flooded from a burst pipe and could not host the couple. [S94, S95]",
+     "The couple could not find the villa in Positano, and a restaurant owner opposite its listed location told them someone had come a month earlier with the same photos. [S94, S95]",
+     "The customer says Booking.com agreed to pay for alternative accommodation. [S94, S95]",
+     "The Express describes a GBP 1,500 villa, and the customer says he is still thousands of pounds out of pocket. [S94]",
+     "Booking.com said the booking confirmation explained that payment would be taken by card rather than by bank transfer, that it was processing a full refund, and that the property was no longer listed. [S94]"
+    ],
+    "incident_date": "September 2026, before the trip began",
+    "incident_date_basis": "The Express dates the trip to 3 September 2026 and places the chatbot exchange before the trip; the exact date of the exchange is not stated.",
+    "inferences": [
+     "The chatbot's answer conflicted with the payment terms Booking.com says were on the booking, which indicates the answer was not checked against those terms before it was sent.",
+     "A customer who already suspected fraud and checked through the platform's own channel was moved to pay by that channel's answer."
+    ],
+    "location": {
+     "documented": false,
+     "status": "unresolved",
+     "label": "Execution location not documented",
+     "lat": null,
+     "lon": null,
+     "basis": "The articles state the customer is from London and the villa was listed in Positano, Italy, but they do not state where the chatbot executed, and no regulator or court ruled."
+    },
+    "organization": "Booking.com; affected: a UK customer",
+    "rules": [],
+    "sources": [
+     {
+      "id": "S94",
+      "name": "Express: 'I was scammed £1,500 through a popular travel website, it could happen to anyone'",
+      "url": "https://www.express.co.uk/news/uk/2256861/booking-scammed-holiday-italy",
+      "published": "2026-10-13",
+      "type": "secondary (newspaper report)",
+      "report_id": "R0099",
+      "retrieved": "2026-10-22"
+     },
+     {
+      "id": "S95",
+      "name": "Daily Mail: Husband-to-be loses thousands after Booking.com AI chatbot tells him to pay holiday scammer",
+      "url": "https://www.dailymail.com/travel/article-16219917/booking-com-scam-holiday-British-couple-engagement.html",
+      "published": "2026-10-19",
+      "type": "secondary (newspaper report)",
+      "report_id": "R0100",
+      "retrieved": "2026-10-22"
+     }
+    ],
+    "summary": "A UK customer whose Booking.com villa host demanded full payment by bank transfer asked the platform's AI Trip Support chat, Dot, whether the request was legitimate. According to his account, Dot replied that the property required full payment by bank transfer, so he paid; the host cancelled on the morning of the trip and the villa did not appear to exist. Booking.com said the booking confirmation specified card payment, removed the listing and is processing a full refund.",
+    "system": "Dot, Booking.com's AI Trip Support chat (underlying model not stated)",
+    "title": "Travel platform's AI support chat tells a customer a host's bank transfer demand is genuine; the villa turns out to be a scam",
+    "why_it_mattered": "A customer used the platform's own support channel to check for fraud, and by his account its answer told him to pay the fraudster.",
+    "workflow": "Answering customer questions about payment requests on bookings"
    }
   }
  ]
