@@ -1,8 +1,8 @@
 {
- "updated": "2026-10-22",
- "last_check": "2026-10-22T12:08:00Z",
- "next_incident_number": 59,
- "next_report_number": 102,
+ "updated": "2026-10-23",
+ "last_check": "2026-10-23T12:09:00Z",
+ "next_incident_number": 63,
+ "next_report_number": 106,
  "excluded_candidates": [
   {
    "name": "Gemini CLI file loss report (July 2025)",
@@ -573,6 +573,66 @@
    "reason": "Anonymized aggregate complaint data with no identifiable operator or verifiable case details.",
    "url": "https://news.sbs.co.kr/english/article.do?news_id=N1008810169",
    "tracker": false
+  },
+  {
+   "name": "IwaiCosmo Securities unauthorized trades after an apparent AI attack on its trading system provider (NHK, 22 October 2026)",
+   "reason": "Attacker operated AI with an unknown operator; no authority layer sits in the attacker's path, so an enforcement point would be speculative.",
+   "url": "https://www3.nhk.or.jp/nhkworld/news/20261022de63797/",
+   "tracker": false
+  },
+  {
+   "name": "Storm-0940 use of the ARTEX agent framework in the ConnectWise Cloud Backup supply chain attack (Microsoft, 21 October 2026)",
+   "reason": "State aligned attacker operating its own agents; no authority layer sits in the attacker's path.",
+   "url": "https://www.tomshardware.com/tech-industry/cyber-security/microsoft-says-china-aligned-hackers-used-ai-agents-in-connectwise-supply-chain-attack-agents-attempted-sign-ins-at-more-than-2-250-microsoft-365-tenants-with-some-of-the-groups-attacks-reaching-privileged-access-in-under-three-hours",
+   "tracker": false
+  },
+  {
+   "name": "Indian Express account of OpenAI and Anthropic agents reaching two Indian firms' systems (22 October 2026)",
+   "reason": "Rests on an anonymous official; the affected firms and the provider in each case are not identified, so neither case can be matched to a provider disclosure. Revisit if CERT-In or a provider names them.",
+   "url": "https://indianexpress.com/article/business/ai-agents-india-cybersecurity-risks-cert-in-advisory-10932810/",
+   "tracker": false
+  },
+  {
+   "name": "METR and Redwood Research review of OpenAI's internal misalignment monitoring (22 October 2026)",
+   "reason": "Vulnerability assessment of a monitoring system; no executed agent action affecting an outside party is documented.",
+   "url": "https://metr.org/blog/2026-10-22-red-teaming-openai-agent-monitoring/",
+   "tracker": false
+  },
+  {
+   "name": "LiteLLM poisoned release using GitHub tokens it says Claude Code wrote into logged responses (reported 22 to 23 October 2026)",
+   "reason": "The compromise was carried out by an attacker, and LiteLLM has not confirmed how the attacker reached the logs. Revisit if LiteLLM or Anthropic confirms the chain.",
+   "url": "https://thenextweb.com/news/litellm-hack-github-tokens-logs-claude-code",
+   "tracker": false
+  },
+  {
+   "name": "Claude Code read-only watcher session takes a local news site offline for about 41 minutes (GitHub issue, 22 October 2026)",
+   "reason": "Single first-person issue on the operator's own host with no vendor response; uncorroborated.",
+   "url": "https://nope.net/incidents/2026-claude-code-read-only-watcher-session-disk-walk-starved-host-news-site-offline-41-minutes-first-person-github-issue",
+   "tracker": false
+  },
+  {
+   "name": "Arc Raiders support reply containing other players' ChatGPT prompts and messages (22 October 2026)",
+   "reason": "Single Reddit post with no company confirmation; low stakes.",
+   "url": "https://tech.yahoo.com/ai/chatgpt/articles/arc-raiders-player-says-embark-153648445.html",
+   "tracker": false
+  },
+  {
+   "name": "Meta Muse offers a health savings account card during a journalist's lunch order test (Business Insider, 22 October 2026)",
+   "reason": "No order was submitted, so no action executed.",
+   "url": "https://www.techtimes.co.uk/meta-muse-hsa-card-ai-shopping-test-1809348",
+   "tracker": false
+  },
+  {
+   "name": "Amazon account restriction of an Ontario customer after a cancelled order (CTV, covered 22 October 2026)",
+   "reason": "No regulator or court finding; the system type and the absence of human review are not documented, and Amazon restored the account.",
+   "url": "https://money.ca/news/amazon-account-banned-canada-consumer-rights",
+   "tracker": false
+  },
+  {
+   "name": "Anthropic customers' billing disputes routed through an AI support agent (San Francisco Standard, covered 22 October 2026)",
+   "reason": "Accounts of an AI helpdesk declining to escalate; no single executed consequential action is documented and the company has not confirmed the cases.",
+   "url": "https://www.yahoo.com/news/us/articles/california-anthropic-customers-billing-glitches-165300394.html",
+   "tracker": false
   }
  ],
  "rows": [
@@ -718,7 +778,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-22T12:08:00Z"
+   "snapshot_at": "2026-10-23T12:09:00Z"
   },
   {
    "incident_id": "INC0002",
@@ -861,7 +921,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-22T12:08:00Z"
+   "snapshot_at": "2026-10-23T12:09:00Z"
   },
   {
    "incident_id": "INC0003",
@@ -983,7 +1043,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-22T12:08:00Z"
+   "snapshot_at": "2026-10-23T12:09:00Z"
   },
   {
    "incident_id": "INC0004",
@@ -1120,7 +1180,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-22T12:08:00Z"
+   "snapshot_at": "2026-10-23T12:09:00Z"
   },
   {
    "incident_id": "INC0005",
@@ -1264,7 +1324,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-22T12:08:00Z"
+   "snapshot_at": "2026-10-23T12:09:00Z"
   },
   {
    "incident_id": "INC0006",
@@ -1411,7 +1471,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-22T12:08:00Z"
+   "snapshot_at": "2026-10-23T12:09:00Z"
   },
   {
    "incident_id": "INC0007",
@@ -1516,7 +1576,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-22T12:08:00Z"
+   "snapshot_at": "2026-10-23T12:09:00Z"
   },
   {
    "incident_id": "INC0008",
@@ -1652,7 +1712,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-22T12:08:00Z"
+   "snapshot_at": "2026-10-23T12:09:00Z"
   },
   {
    "incident_id": "INC0009",
@@ -1764,7 +1824,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-22T12:08:00Z"
+   "snapshot_at": "2026-10-23T12:09:00Z"
   },
   {
    "incident_id": "INC0010",
@@ -1886,7 +1946,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-22T12:08:00Z"
+   "snapshot_at": "2026-10-23T12:09:00Z"
   },
   {
    "incident_id": "INC0011",
@@ -2028,7 +2088,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-22T12:08:00Z"
+   "snapshot_at": "2026-10-23T12:09:00Z"
   },
   {
    "incident_id": "INC0012",
@@ -2170,7 +2230,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-22T12:08:00Z"
+   "snapshot_at": "2026-10-23T12:09:00Z"
   },
   {
    "incident_id": "INC0013",
@@ -2302,7 +2362,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-22T12:08:00Z"
+   "snapshot_at": "2026-10-23T12:09:00Z"
   },
   {
    "incident_id": "INC0014",
@@ -2450,7 +2510,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-22T12:08:00Z"
+   "snapshot_at": "2026-10-23T12:09:00Z"
   },
   {
    "incident_id": "INC0015",
@@ -2587,7 +2647,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-22T12:08:00Z"
+   "snapshot_at": "2026-10-23T12:09:00Z"
   },
   {
    "incident_id": "INC0016",
@@ -2693,7 +2753,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-22T12:08:00Z"
+   "snapshot_at": "2026-10-23T12:09:00Z"
   },
   {
    "incident_id": "INC0017",
@@ -2823,7 +2883,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-22T12:08:00Z"
+   "snapshot_at": "2026-10-23T12:09:00Z"
   },
   {
    "incident_id": "INC0018",
@@ -2969,7 +3029,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-22T12:08:00Z"
+   "snapshot_at": "2026-10-23T12:09:00Z"
   },
   {
    "incident_id": "INC0019",
@@ -3103,7 +3163,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-22T12:08:00Z"
+   "snapshot_at": "2026-10-23T12:09:00Z"
   },
   {
    "incident_id": "INC0020",
@@ -3241,7 +3301,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-22T12:08:00Z"
+   "snapshot_at": "2026-10-23T12:09:00Z"
   },
   {
    "incident_id": "INC0021",
@@ -3366,7 +3426,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-22T12:08:00Z"
+   "snapshot_at": "2026-10-23T12:09:00Z"
   },
   {
    "incident_id": "INC0022",
@@ -3533,7 +3593,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-22T12:08:00Z"
+   "snapshot_at": "2026-10-23T12:09:00Z"
   },
   {
    "incident_id": "INC0023",
@@ -3657,7 +3717,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-22T12:08:00Z"
+   "snapshot_at": "2026-10-23T12:09:00Z"
   },
   {
    "incident_id": "INC0024",
@@ -3805,7 +3865,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-22T12:08:00Z"
+   "snapshot_at": "2026-10-23T12:09:00Z"
   },
   {
    "incident_id": "INC0025",
@@ -3959,7 +4019,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-22T12:08:00Z"
+   "snapshot_at": "2026-10-23T12:09:00Z"
   },
   {
    "incident_id": "INC0026",
@@ -4106,7 +4166,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-22T12:08:00Z"
+   "snapshot_at": "2026-10-23T12:09:00Z"
   },
   {
    "incident_id": "INC0027",
@@ -4242,7 +4302,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-22T12:08:00Z"
+   "snapshot_at": "2026-10-23T12:09:00Z"
   },
   {
    "incident_id": "INC0028",
@@ -4367,7 +4427,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-22T12:08:00Z"
+   "snapshot_at": "2026-10-23T12:09:00Z"
   },
   {
    "incident_id": "INC0029",
@@ -4489,7 +4549,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-22T12:08:00Z"
+   "snapshot_at": "2026-10-23T12:09:00Z"
   },
   {
    "incident_id": "INC0030",
@@ -4605,7 +4665,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-22T12:08:00Z"
+   "snapshot_at": "2026-10-23T12:09:00Z"
   },
   {
    "incident_id": "INC0031",
@@ -4722,7 +4782,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-22T12:08:00Z"
+   "snapshot_at": "2026-10-23T12:09:00Z"
   },
   {
    "incident_id": "INC0032",
@@ -4829,7 +4889,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-22T12:08:00Z"
+   "snapshot_at": "2026-10-23T12:09:00Z"
   },
   {
    "incident_id": "INC0033",
@@ -4840,7 +4900,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-22T12:08:00Z",
+   "snapshot_at": "2026-10-23T12:09:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -4976,7 +5036,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-22T12:08:00Z",
+   "snapshot_at": "2026-10-23T12:09:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5120,7 +5180,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-22T12:08:00Z",
+   "snapshot_at": "2026-10-23T12:09:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5257,7 +5317,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-22T12:08:00Z",
+   "snapshot_at": "2026-10-23T12:09:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5404,7 +5464,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-22T12:08:00Z",
+   "snapshot_at": "2026-10-23T12:09:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5534,7 +5594,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-22T12:08:00Z",
+   "snapshot_at": "2026-10-23T12:09:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5665,7 +5725,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-22T12:08:00Z",
+   "snapshot_at": "2026-10-23T12:09:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5798,7 +5858,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-22T12:08:00Z",
+   "snapshot_at": "2026-10-23T12:09:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5929,7 +5989,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-22T12:08:00Z",
+   "snapshot_at": "2026-10-23T12:09:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6062,7 +6122,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-22T12:08:00Z",
+   "snapshot_at": "2026-10-23T12:09:00Z",
    "published": {
     "actions": {
      "attempted": [
@@ -6205,7 +6265,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-22T12:08:00Z",
+   "snapshot_at": "2026-10-23T12:09:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6323,7 +6383,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-22T12:08:00Z",
+   "snapshot_at": "2026-10-23T12:09:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6442,7 +6502,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-22T12:08:00Z",
+   "snapshot_at": "2026-10-23T12:09:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6566,7 +6626,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-22T12:08:00Z",
+   "snapshot_at": "2026-10-23T12:09:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6693,7 +6753,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-22T12:08:00Z",
+   "snapshot_at": "2026-10-23T12:09:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6816,7 +6876,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-22T12:08:00Z",
+   "snapshot_at": "2026-10-23T12:09:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6943,7 +7003,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-22T12:08:00Z",
+   "snapshot_at": "2026-10-23T12:09:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7065,7 +7125,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-22T12:08:00Z",
+   "snapshot_at": "2026-10-23T12:09:00Z",
    "published": {
     "actions": {
      "attempted": [
@@ -7185,7 +7245,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-22T12:08:00Z",
+   "snapshot_at": "2026-10-23T12:09:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7316,7 +7376,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-22T12:08:00Z",
+   "snapshot_at": "2026-10-23T12:09:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7437,7 +7497,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-22T12:08:00Z",
+   "snapshot_at": "2026-10-23T12:09:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7580,7 +7640,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-22T12:08:00Z",
+   "snapshot_at": "2026-10-23T12:09:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7694,7 +7754,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-22T12:08:00Z",
+   "snapshot_at": "2026-10-23T12:09:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7806,7 +7866,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-22T12:08:00Z",
+   "snapshot_at": "2026-10-23T12:09:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7930,7 +7990,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-22T12:08:00Z",
+   "snapshot_at": "2026-10-23T12:09:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8055,7 +8115,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-22T12:08:00Z",
+   "snapshot_at": "2026-10-23T12:09:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8164,6 +8224,464 @@
     "title": "Travel platform's AI support chat tells a customer a host's bank transfer demand is genuine; the villa turns out to be a scam",
     "why_it_mattered": "A customer used the platform's own support channel to check for fraud, and by his account its answer told him to pay the fraudster.",
     "workflow": "Answering customer questions about payment requests on bookings"
+   }
+  },
+  {
+   "incident_id": "INC0059",
+   "last_updated": "2026-10-23",
+   "published_version": 1,
+   "report_ids": [
+    "R0102"
+   ],
+   "review_status": "published",
+   "schema_version": 1,
+   "snapshot_at": "2026-10-23T12:09:00Z",
+   "published": {
+    "actions": {
+     "attempted": [],
+     "completed": [
+      "Entering a temporary restraining order that named parties not in the case, cited declarations not in the record and misquoted the statute (opinion)",
+      "Replacing the order on the docket with a corrected version backdated to the original date, without explanation (opinion)",
+      "Entering a preliminary injunction that incorporated the corrected order, which still cited a nonexistent case (opinion)"
+     ]
+    },
+    "authority": {
+     "status": "exceeded",
+     "statement": "A court's power to enjoin a statute rests on the record before it, and the order asserted parties, declarations, statutory text and events that were not in the record.",
+     "basis": "Documented: the Fifth Circuit held that the district judge carelessly exercised his Article III power by issuing orders based on falsehoods and fabrications, and records the judge's letter attributing the errors to a law clerk's use of AI and a failure to confirm the accuracy of certain information.",
+     "present": [
+      "The district judge's authority to rule on the plaintiffs' motions for a restraining order and a preliminary injunction (opinion)"
+     ],
+     "absent": [
+      "Verification of the parties, declarations, statutory quotations and citations in the original order before it was entered (opinion)",
+      "An explanation on the record when the original order was replaced with a corrected version (opinion)"
+     ],
+     "unknown": [
+      "Which AI tool the law clerk used; the opinion does not name it",
+      "Whether chambers had any written procedure for checking AI-assisted drafts",
+      "Whether any judicial conduct body has acted"
+     ]
+    },
+    "consequences": [
+     "Preliminary injunction against the state law vacated (opinion)",
+     "Case reassigned to a different district judge on the Fifth Circuit's direction (opinion)",
+     "The original order was kept off the public docket and survives in the record only as an exhibit to the state defendants' motion (opinion)"
+    ],
+    "controls": [
+     {
+      "basis": "documented",
+      "control": "Review of a draft order against the record and the cited authorities before entry",
+      "failure": "The original order named eleven parties who were never in the case and cited declarations from four people who do not appear in the record."
+     },
+     {
+      "basis": "documented",
+      "control": "Docketing a correction as a superseding order",
+      "failure": "The original order was removed from the docket and replaced with a backdated version, and a request to restore it was denied."
+     },
+     {
+      "basis": "documented",
+      "control": "Re-checking the corrected order",
+      "failure": "The corrected order still cited a Fourth Circuit case that does not exist, and the preliminary injunction incorporated it by reference."
+     }
+    ],
+    "defect_category": "external_output_unverified",
+    "defect_label": "Unverified AI output released to an outside party",
+    "deployment": "deployed",
+    "disclosed_basis": "Published opinion of the US Court of Appeals for the Fifth Circuit filed 22 October 2026, which records the original order's errors, the district judge's October 2025 letter acknowledging AI use and the reassignment. The errors and the letter were first reported publicly in 2025.",
+    "disclosed_on": "2026-10-22",
+    "enforcement": {
+     "enforcement_point": "Entry on the docket of a draft order prepared with AI assistance, and any replacement of an order already entered.",
+     "decision_state": "Block",
+     "reason": "Parties, record facts, statutory quotations or citations in the draft have not been matched to the record or to the cited source.",
+     "authority_requirement": "The judge or a designated chambers clerk confirms that every party, record fact, quotation and citation in the draft appears in the record or the cited source.",
+     "condition": "Applies to draft orders prepared with AI tools and to corrected versions that would replace an entered order.",
+     "required_response": "Hold the draft with each unmatched item identified, and record any correction as a superseding order with the original kept in the record.",
+     "responder_action": "Check each flagged item against the record and the cited authority, correct or remove it, and docket the verified order.",
+     "next_event": "The order is entered once every item is matched, and any correction is docketed openly as a superseding order.",
+     "responsible_role": "Presiding judge and chambers law clerk (proposed roles)"
+    },
+    "evidence_note": "Published appellate opinion documents the errors in both versions of the order, the backdated replacement and the reassignment. AI involvement rests on the district judge's own letter, as recorded in the opinion, attributing the original order to a law clerk's use of AI; the tool is not named in the opinion.",
+    "evidence_strength": "strong",
+    "facts": [
+     "In June 2025 teachers, professors, students, parents and organizations filed a pre-enforcement challenge to Mississippi House Bill 1193, a law restricting diversity, equity and inclusion programs in public education. [S97 pp. 2 to 3, 5]",
+     "The temporary restraining order entered on 20 July 2025 named as plaintiffs eleven individuals and organizations who had never been party to the case, named two officials who were not sued, and referenced declarations of four individuals who do not appear in the record and may not exist. [S97 pp. 5 to 7]",
+     "The order misquoted the statute as applying to terms including \"critical race theory\" and \"institutional bias\", which do not appear in its text, and claimed without evidence that institutions had already cancelled programs because of the law. [S97 pp. 6 to 7]",
+     "After the state defendants pointed out the errors on 22 July 2025, the court replaced the order with a corrected version backdated to 20 July, denied a request to restore the original to the docket, and called the inaccuracies clerical. [S97 pp. 5, 7]",
+     "In a letter, the district judge acknowledged the errors and said a law clerk had used AI to assist in drafting an earlier version of the order that was docketed by mistake. [S97 p. 7]",
+     "At oral argument in the Fifth Circuit it was discovered that the corrected order cited \"Cousins v. School Bd. of City of Norfolk\", a Fourth Circuit case that does not exist and that the court called an apparent AI hallucination. [S97 p. 8]",
+     "The preliminary injunction entered on 18 August 2025 generally incorporated the corrected order's discussion and analysis by reference. [S97 pp. 5, 8]",
+     "On 22 October 2026 the Fifth Circuit vacated the preliminary injunction and directed the Chief Judge of the Southern District of Mississippi to assign the case to a different district judge. [S97 pp. 3 to 4, 27]"
+    ],
+    "incident_date": "20 July 2025 (original order); the corrected order and the 18 August 2025 preliminary injunction carried a further fictitious citation",
+    "incident_date_basis": "The opinion dates the original order to 20 July 2025, its replacement to 22 July 2025 and the preliminary injunction to 18 August 2025.",
+    "inferences": [
+     "The AI-drafted text reached a signed court order with no check against the record, and the correction that followed was itself not checked against the cited authorities.",
+     "Removing the original order from the docket, rather than superseding it openly, left the record of what the court had first entered dependent on a party's exhibit."
+    ],
+    "location": {
+     "documented": true,
+     "status": "established",
+     "label": "Jackson, Mississippi, United States (US District Court, Southern District of Mississippi)",
+     "lat": 32.2988,
+     "lon": -90.1848,
+     "kind": "jurisdiction",
+     "basis": "The orders were entered by the US District Court for the Southern District of Mississippi. Pin placed at Jackson as the reference point for that court; the Fifth Circuit, which vacated the injunction, sits in New Orleans."
+    },
+    "organization": "US District Court for the Southern District of Mississippi (chambers of the presiding district judge); affected: the Mississippi state defendants, the plaintiffs and the US Court of Appeals for the Fifth Circuit",
+    "rules": [],
+    "sources": [
+     {
+      "id": "S97",
+      "name": "US Court of Appeals for the Fifth Circuit: Jackson Federation of Teachers v. Fitch, No. 25-60496, published opinion",
+      "url": "https://www.ca5.uscourts.gov/opinions/pub/25/25-60496-CV0.pdf",
+      "published": "2026-10-22",
+      "type": "primary (court opinion)",
+      "report_id": "R0102",
+      "retrieved": "2026-10-23"
+     }
+    ],
+    "summary": "In a challenge to a Mississippi law restricting diversity, equity and inclusion programs in public education, a federal district judge entered a temporary restraining order that named parties never in the case, cited declarations from people absent from the record and misquoted the statute. The judge replaced it with a backdated corrected version and later said a law clerk had used AI to draft it, but the corrected order still cited a nonexistent case and was incorporated into a preliminary injunction. The Fifth Circuit vacated the injunction and ordered the case reassigned to a different judge.",
+    "system": "AI tool used by a law clerk to draft an earlier version of the order (tool not named in the opinion)",
+    "title": "AI-drafted restraining order invents parties, declarations and statutory text; Fifth Circuit vacates the injunction and reassigns the case",
+    "why_it_mattered": "Unverified AI text became a signed federal court order blocking a state law, and the correction that followed still carried a case that does not exist.",
+    "workflow": "Drafting and docketing a temporary restraining order and a preliminary injunction order",
+    "cluster": "AI drafted court filings with fabricated citations (2026)"
+   }
+  },
+  {
+   "incident_id": "INC0060",
+   "last_updated": "2026-10-23",
+   "published_version": 1,
+   "report_ids": [
+    "R0103"
+   ],
+   "review_status": "published",
+   "schema_version": 1,
+   "snapshot_at": "2026-10-23T12:09:00Z",
+   "published": {
+    "actions": {
+     "attempted": [],
+     "completed": [
+      "Filing an appellate reply brief with 16 fabricated quotations and 5 further serious misrepresentations of law or fact (opinion)"
+     ]
+    },
+    "authority": {
+     "status": "exceeded",
+     "statement": "Counsel's authority to file a brief carried a duty to verify its contents, and the court found she took no steps to verify a brief largely drafted by AI.",
+     "basis": "Documented: the court found counsel used AI to draft a substantial portion, if not all, of the reply brief, failed to verify it and was not forthcoming, and sanctioned her under Federal Rule of Appellate Procedure 46(c) and its inherent power.",
+     "present": [
+      "Counsel's role as the only attorney to sign the reply brief (opinion)"
+     ],
+     "absent": [
+      "Steps to verify the quotations, citations and record facts in the brief before filing (opinion)"
+     ],
+     "unknown": [
+      "Which AI tool generated the text; the court did not identify one",
+      "Exact filing date of the reply brief",
+      "Whether the sanction has been paid or any bar authority has acted"
+     ]
+    },
+    "consequences": [
+     "USD 2,500 sanction against appellant's counsel, payable to the clerk within 30 days (opinion)",
+     "Published opinion describing counsel's responses as evasive, misleading and sanctionable (opinion)"
+    ],
+    "controls": [
+     {
+      "basis": "documented",
+      "control": "Attorney verification of quotations and citations before filing",
+      "failure": "The court concluded counsel took no steps to verify the factual assertions in her brief."
+     },
+     {
+      "basis": "documented",
+      "control": "Candor in response to the court's show-cause order",
+      "failure": "Counsel's first response attributed the errors to publicly available case summaries and did not mention AI."
+     }
+    ],
+    "defect_category": "external_output_unverified",
+    "defect_label": "Unverified AI output released to an outside party",
+    "deployment": "deployed",
+    "disclosed_basis": "Published opinion of the US Court of Appeals for the Fifth Circuit filed 18 February 2026, which records the show-cause order, counsel's responses and the court's findings on AI use",
+    "disclosed_on": "2026-02-18",
+    "enforcement": {
+     "enforcement_point": "Attorney signature and electronic filing of an appellate brief.",
+     "decision_state": "Block",
+     "reason": "Quotations, citations or record facts in the brief have not been matched to the cited decision or the record.",
+     "authority_requirement": "The signing attorney confirms that each quotation appears in the cited decision and each record fact appears in the record.",
+     "condition": "Applies to briefs drafted with AI tools or case summaries rather than the decisions themselves.",
+     "required_response": "Return the brief with each unmatched quotation, citation and record statement listed.",
+     "responder_action": "Check each item against the decision or the record, correct or remove it, and certify the reviewed brief.",
+     "next_event": "Filing proceeds after every listed item is verified.",
+     "responsible_role": "Signing attorney (proposed role)"
+    },
+    "evidence_note": "Primary published opinion documents the fabricated quotations, counsel's responses and the court's finding that she used AI to draft the brief; counsel admitted AI use only when asked directly, and the court did not identify the tool.",
+    "evidence_strength": "strong",
+    "facts": [
+     "On 18 December 2025 the court ordered appellant's counsel to show cause why she should not be sanctioned for quotations, citations and assertions in a reply brief that the cited case law did not support. [S98 p. 1]",
+     "The show-cause order listed 16 fabricated quotations and 5 additional serious misrepresentations of law or fact, including two misstatements of record facts. [S98 pp. 6, 9, 12]",
+     "Counsel first said she relied on publicly available versions of the cases; the court found it not credible that the databases she named produced the quotations, and noted that two sources she listed, Casetext and vLex, are generative AI products. [S98 pp. 10 to 11]",
+     "Asked directly, counsel admitted using AI, which she had not mentioned in her first response; the court did not find credible that she used it only to organize her arguments, and concluded she took no steps to verify the brief's factual assertions. [S98 p. 12]",
+     "The court found that counsel used AI to draft a substantial portion, if not all, of the reply brief, failed to check it for accuracy and was not forthcoming in her responses. [S98 pp. 1 to 2, 13]",
+     "The court ordered counsel to pay a USD 2,500 sanction within 30 days under Federal Rule of Appellate Procedure 46(c) and its inherent power. [S98 pp. 14 to 15]"
+    ],
+    "incident_date": "Reply brief filed about three months before the 18 December 2025 show-cause order",
+    "incident_date_basis": "The opinion refers to the three months between the brief's submission and the show-cause order; the exact filing date is not stated.",
+    "inferences": [
+     "Quotations generated by AI were attributed to real decisions, which a check for nonexistent cases alone would not have caught.",
+     "The court weighed counsel's lack of candour about AI use alongside the errors themselves in setting the sanction."
+    ],
+    "location": {
+     "documented": true,
+     "status": "established",
+     "label": "New Orleans, Louisiana, United States (seat of the US Court of Appeals for the Fifth Circuit)",
+     "lat": 29.9511,
+     "lon": -90.0715,
+     "kind": "jurisdiction",
+     "basis": "The brief was delivered to the Fifth Circuit, which imposed the sanction. Pin placed at the court's seat in New Orleans as the reference point for the court."
+    },
+    "organization": "Appellant's counsel in a Fair Credit Reporting Act appeal; affected: US Court of Appeals for the Fifth Circuit and the appellees",
+    "rules": [],
+    "sources": [
+     {
+      "id": "S98",
+      "name": "US Court of Appeals for the Fifth Circuit: Fletcher v. Experian Information Solutions, No. 25-20086, published opinion on sanctions",
+      "url": "https://www.ca5.uscourts.gov/opinions/pub/25/25-20086-CV0.pdf",
+      "published": "2026-02-18",
+      "type": "primary (court opinion)",
+      "report_id": "R0103",
+      "retrieved": "2026-10-23"
+     }
+    ],
+    "summary": "In a Fair Credit Reporting Act appeal, the appellant's counsel filed a reply brief that the Fifth Circuit found contained 16 fabricated quotations and five further serious misrepresentations of law or fact. Counsel first blamed publicly available case summaries and admitted using AI only when asked directly. The court found she used AI to draft most or all of the brief without verifying it and was not forthcoming, and sanctioned her USD 2,500.",
+    "system": "Generative AI; counsel's listed sources included two generative AI products, Casetext (now CoCounsel) and vLex, but the court did not find which tool produced the text",
+    "title": "AI-drafted reply brief carries 16 fabricated quotations; Fifth Circuit sanctions counsel for failing to verify and for evasive answers",
+    "why_it_mattered": "Invented quotations attributed to real decisions reached a federal appeals court, and the court found counsel took no steps to check them.",
+    "workflow": "Drafting and filing an appellate reply brief",
+    "cluster": "AI drafted court filings with fabricated citations (2026)"
+   }
+  },
+  {
+   "incident_id": "INC0061",
+   "last_updated": "2026-10-23",
+   "published_version": 1,
+   "report_ids": [
+    "R0104"
+   ],
+   "review_status": "published",
+   "schema_version": 1,
+   "snapshot_at": "2026-10-23T12:09:00Z",
+   "published": {
+    "actions": {
+     "attempted": [],
+     "completed": [
+      "Filing papers citing fake authorities and misrepresenting real ones, drafted after consulting AI tools (order)",
+      "Telling the court at a hearing that no AI had been used to prepare the briefs (order)"
+     ]
+    },
+    "authority": {
+     "status": "exceeded",
+     "statement": "Counsel's authority to sign and file papers carried a duty under Rule 11 to verify the authorities cited, and the court found he cited fake and misleading authorities and lied about his AI use.",
+     "basis": "Documented: the court found counsel repeatedly violated Rule 11 and lied to the court, and fined him under Rule 11.",
+     "present": [
+      "Counsel's authority to represent the plaintiff and file papers (order)",
+      "The judge's standing order stating that the party and lawyers who file a paper are responsible for its errors whatever AI tools they use (order)"
+     ],
+     "absent": [
+      "Verification of the cited authorities before filing (order)"
+     ],
+     "unknown": [
+      "Which AI tools counsel consulted",
+      "Exact filing dates of the papers containing the fake authorities",
+      "Whether further sanctions followed the training documentation the court ordered"
+     ]
+    },
+    "consequences": [
+     "USD 8,000 fine against plaintiff's counsel, payable to the court registry within 30 days (order)",
+     "Counsel ordered to file documentation of the ethics and technology training he said he had completed, with further sanctions reserved (order)"
+    ],
+    "controls": [
+     {
+      "basis": "documented",
+      "control": "Attorney verification of cited authorities before filing",
+      "failure": "Counsel's filings included fake authorities and misrepresented the content of real ones."
+     },
+     {
+      "basis": "documented",
+      "control": "Judge's standing order on AI use",
+      "failure": "The standing order placed responsibility on filing counsel, but counsel denied using AI when asked at the hearing."
+     }
+    ],
+    "defect_category": "external_output_unverified",
+    "defect_label": "Unverified AI output released to an outside party",
+    "deployment": "deployed",
+    "disclosed_basis": "Opinion and order of sanctions of the US District Court for the Northern District of Georgia, Atlanta Division, filed 28 August 2026, which quotes the hearing exchange and records counsel's later acknowledgement of AI use",
+    "disclosed_on": "2026-08-28",
+    "enforcement": {
+     "enforcement_point": "Signature and electronic filing of each paper that cites legal authority.",
+     "decision_state": "Block",
+     "reason": "Cited authorities have not been confirmed to exist and to say what the paper attributes to them.",
+     "authority_requirement": "The signing attorney confirms each cited authority against its source and records whether AI tools were used in drafting.",
+     "condition": "Applies to papers drafted with AI tools or with authorities supplied by others in the attorney's office.",
+     "required_response": "Return the paper with each unconfirmed authority listed and the AI use disclosure left blank until completed.",
+     "responder_action": "Confirm, correct or remove each listed authority, complete the AI use record, and refile.",
+     "next_event": "Filing proceeds after each authority is confirmed and the AI use record is complete.",
+     "responsible_role": "Signing attorney (proposed role)"
+    },
+    "evidence_note": "Primary court order documents the fake and misleading authorities, quotes counsel's denial of AI use at the hearing, records his later acknowledgement that he consulted AI tools, and imposes the fine. The order does not name the tools or list every flagged citation.",
+    "evidence_strength": "strong",
+    "facts": [
+     "Defendant's counsel first raised concerns that plaintiff's counsel had relied on AI tools in a manner that violated his duties under Rule 11. [S99 p. 1]",
+     "At a hearing, asked whether he used any AI tools to prepare his briefs, plaintiff's counsel answered: \"I did not use artificial intelligence.\" [S99 pp. 2 to 3]",
+     "In his response to the order to show cause, counsel acknowledged that he \"consulted\" AI tools in drafting filings he submitted to the court, while referring to the drafting as done by \"this office\". [S99 p. 3]",
+     "The court found that counsel lied when he misrepresented legal propositions based on nonexistent citations, when he denied using AI, and when he later said he had not understood the court's questions. [S99 pp. 3 to 4]",
+     "The order to show cause identified four purported cases as the most egregious examples of fake, false and misleading authorities; the court fined counsel USD 1,000 for each and doubled the fine because of his lies, for a total of USD 8,000. [S99 p. 4]",
+     "The court ordered counsel to file documentation of the ethics and technology training he said he had completed, and said it would then decide whether further sanctions are warranted. [S99 pp. 5 to 6]"
+    ],
+    "incident_date": "Filings made before the 26 June 2026 hearing",
+    "incident_date_basis": "The order places the hearing on 26 June 2026 and the show-cause response on 11 August 2026; it does not state the filing dates of the papers containing the fake authorities.",
+    "inferences": [
+     "A standing order assigning responsibility for AI errors to filing counsel did not by itself produce verification before filing.",
+     "The fine was doubled for the false denial, so the court treated candour about AI use as part of the same duty as verification."
+    ],
+    "location": {
+     "documented": true,
+     "status": "established",
+     "label": "Atlanta, Georgia, United States (US District Court, Northern District of Georgia, Atlanta Division)",
+     "lat": 33.749,
+     "lon": -84.388,
+     "kind": "jurisdiction",
+     "basis": "The Atlanta Division of the Northern District of Georgia issued the sanction. Pin placed at Atlanta as the seat of that division."
+    },
+    "organization": "Plaintiff's counsel in a civil suit against The Kroger Co.; affected: US District Court for the Northern District of Georgia and the defendant",
+    "rules": [],
+    "sources": [
+     {
+      "id": "S99",
+      "name": "US District Court, N.D. Georgia: Booker v. The Kroger Co., No. 1:26-cv-02006-SDG, opinion and order of sanctions (CourtListener RECAP copy)",
+      "url": "https://storage.courtlistener.com/recap/gov.uscourts.gand.358237/gov.uscourts.gand.358237.66.0.pdf",
+      "published": "2026-08-28",
+      "type": "primary (court order)",
+      "report_id": "R0104",
+      "retrieved": "2026-10-23"
+     }
+    ],
+    "summary": "In a civil suit removed to federal court in Atlanta, plaintiff's counsel filed papers citing fake authorities and misrepresenting real ones. Asked at a hearing whether he had used AI, he said he had not, then acknowledged in his show-cause response that he had consulted AI tools in drafting. The court found he had repeatedly lied, fined him USD 1,000 for each of four flagged authorities, doubled the total to USD 8,000 for his lies, and ordered proof of the training he claimed to have taken.",
+    "system": "AI tools counsel says he consulted in drafting filings (not named in the order)",
+    "title": "Counsel denies using AI in court, then admits consulting it; Georgia federal court fines him USD 8,000 for fake and misstated authorities",
+    "why_it_mattered": "Fake authorities reached a federal court, and the attorney who filed them denied the AI use until a written response forced the admission.",
+    "workflow": "Drafting and filing motions and briefs in a civil case",
+    "cluster": "AI drafted court filings with fabricated citations (2026)"
+   }
+  },
+  {
+   "incident_id": "INC0062",
+   "last_updated": "2026-10-23",
+   "published_version": 1,
+   "report_ids": [
+    "R0105"
+   ],
+   "review_status": "published",
+   "schema_version": 1,
+   "snapshot_at": "2026-10-23T12:09:00Z",
+   "published": {
+    "actions": {
+     "attempted": [],
+     "completed": [
+      "Making a firm buyback offer of CAD 27,162.79 to a customer by text without disclosing it was AI (CBC)",
+      "Telling the customer his CAD 28,500 counter-offer sounded reasonable and setting a meeting to lock in the deal (CBC)"
+     ]
+    },
+    "authority": {
+     "status": "exceeded",
+     "statement": "The chatbot made a firm price offer although, according to the dealership, its role was only to relay offers generated by staff.",
+     "basis": "Documented: the dealership's sales manager told CBC that Quinn was never programmed to independently negotiate contracts, only to relay human-generated buyback offers.",
+     "present": [
+      "Dealership practice that buyback offers are generated by staff (dealership statement)"
+     ],
+     "absent": [
+      "A staff-approved offer matching the figure the chatbot sent (dealership statement)"
+     ],
+     "unknown": [
+      "Which vendor or model powers the chatbot",
+      "Date of the text exchange",
+      "Whether the chatbot could send prices without any staff action"
+     ]
+    },
+    "consequences": [
+     "Offer revoked by phone and replaced with a figure of at most CAD 20,000, more than CAD 7,000 lower (CBC)",
+     "Dealership reinstated the original CAD 27,162.79 offer after CBC contacted it, and the customer accepted (CBC)",
+     "Dealership said only staff will present buyback offers and that it is changing how customers are told they are dealing with AI (dealership statement)"
+    ],
+    "controls": [
+     {
+      "basis": "documented",
+      "control": "Chatbot role limited to relaying offers set by staff",
+      "failure": "The chatbot presented the customer's loan balance as a firm buyback price."
+     },
+     {
+      "basis": "documented",
+      "control": "Disclosure that the customer was dealing with AI",
+      "failure": "Quinn never revealed it was an AI chatbot in the text exchange CBC examined."
+     }
+    ],
+    "defect_category": "external_output_unverified",
+    "defect_label": "Unverified AI output released to an outside party",
+    "deployment": "deployed",
+    "disclosed_basis": "CBC News report published 11 June 2026, based on text exchanges CBC examined and an interview with the dealership's sales manager; surfaced in this run through the AI Incident Database entry added 21 October 2026",
+    "disclosed_on": "2026-06-11",
+    "enforcement": {
+     "enforcement_point": "Chatbot message to a customer that states a price, buyback value or other financial offer.",
+     "decision_state": "Block",
+     "reason": "The figure in the message has no matching staff-approved offer on the customer's file, and the chatbot's role is to relay offers set by staff.",
+     "authority_requirement": "A named staff member has approved the exact figure for this customer before it is sent.",
+     "condition": "Applies to any outbound chatbot message containing a price, valuation, payoff amount or an appointment to finalise a sale.",
+     "required_response": "Block the message, tell the customer a staff member will follow up, and route the conversation with the proposed figure to the sales manager.",
+     "responder_action": "Set the offer from an appraisal, record the approval on the file, and send it as an identified staff member.",
+     "next_event": "The customer receives a staff-approved offer, and the chatbot resumes the conversation only after the approval is recorded.",
+     "responsible_role": "Pre-owned sales manager (proposed role)"
+    },
+    "evidence_note": "Single national broadcaster report based on text exchanges CBC examined and an interview with the dealership's sales manager, who confirmed the chatbot made the offer and explained the cause. No regulator or court was involved.",
+    "evidence_strength": "moderate",
+    "facts": [
+     "After submitting an online inquiry about selling his 2021 BMW back to BMW Toronto, the customer received texts from \"Quinn\", which asked about the vehicle and then made a firm buyback offer of CAD 27,162.79, the amount he still owed on the car. [S100]",
+     "Quinn never revealed that it was an AI chatbot, according to text exchanges examined by CBC News. [S100]",
+     "The customer countered at CAD 28,500; Quinn texted that the team would consider it and that CAD 28,500 sounded reasonable, and later set up a meeting at the dealership with the message \"Let's lock in today at 3:30.\" [S100]",
+     "A sales consultant then called to say Quinn was an AI chatbot that had made the offer in error, that the offer was not valid, and that the actual offer would be at best CAD 20,000. [S100]",
+     "After CBC News contacted the dealership, it reinstated the CAD 27,162.79 offer and the customer accepted. [S100]",
+     "The dealership's sales manager said that, because of miscommunication from a human employee, Quinn misinterpreted the amount owed on the car as the buyback price, and that Quinn was never programmed to independently negotiate contracts, only to relay human-generated buyback offers. [S100]",
+     "The sales manager said only human employees will present buyback offers in future and that the dealership is making changes so customers know when they are interacting with AI. [S100]"
+    ],
+    "incident_date": "Before 11 June 2026",
+    "incident_date_basis": "CBC says the customer decided in May 2026 to sell the car back; the date of the text exchange is not stated.",
+    "inferences": [
+     "Nothing between the chatbot and the customer compared the figure it sent with an offer approved by staff, so a loan payoff amount reached the customer as a firm price.",
+     "The dealership's own description of the chatbot's role, relaying staff offers only, was not enforced at the point where the chatbot sent a price."
+    ],
+    "location": {
+     "documented": false,
+     "status": "unresolved",
+     "label": "Execution location not documented",
+     "lat": null,
+     "lon": null,
+     "basis": "CBC states the dealership is in Toronto, but it does not state where the chatbot executed, and no regulator or court ruled."
+    },
+    "organization": "BMW Toronto (dealership); affected: a customer selling his car back to the dealership",
+    "rules": [],
+    "sources": [
+     {
+      "id": "S100",
+      "name": "CBC News: Dealership revoked offer to buy back customer's BMW, blaming wayward AI chatbot",
+      "url": "https://www.cbc.ca/news/business/ai-chatbot-bmw-dealership-9.7230226",
+      "published": "2026-06-11",
+      "type": "secondary (broadcaster report)",
+      "report_id": "R0105",
+      "retrieved": "2026-10-23"
+     }
+    ],
+    "summary": "A customer who asked BMW Toronto about selling back his car texted with \"Quinn\", which did not disclose it was AI and made a firm buyback offer equal to his remaining loan balance, then set a meeting to lock in the deal. A sales consultant called to revoke the offer as a chatbot error and quoted at most CAD 20,000. After CBC News contacted the dealership, it reinstated the original offer, and its sales manager said the chatbot was only meant to relay offers set by staff.",
+    "system": "Quinn, BMW Toronto's AI text chatbot (vendor and model not stated)",
+    "title": "Dealership's AI text agent makes a firm buyback offer it was only meant to relay; the dealer revokes it, then honours it after a news inquiry",
+    "why_it_mattered": "A chatbot meant to pass on staff offers set its own price with a customer, and the dealership honoured it only after a broadcaster asked.",
+    "workflow": "Responding by text to online inquiries about selling a vehicle back to the dealership"
    }
   }
  ]
