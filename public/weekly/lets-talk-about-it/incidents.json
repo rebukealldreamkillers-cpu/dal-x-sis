@@ -1,8 +1,8 @@
 {
- "updated": "2026-10-23",
- "last_check": "2026-10-23T12:09:00Z",
- "next_incident_number": 63,
- "next_report_number": 106,
+ "updated": "2026-10-24",
+ "last_check": "2026-10-24T12:08:00Z",
+ "next_incident_number": 66,
+ "next_report_number": 111,
  "excluded_candidates": [
   {
    "name": "Gemini CLI file loss report (July 2025)",
@@ -600,7 +600,7 @@
   },
   {
    "name": "LiteLLM poisoned release using GitHub tokens it says Claude Code wrote into logged responses (reported 22 to 23 October 2026)",
-   "reason": "The compromise was carried out by an attacker, and LiteLLM has not confirmed how the attacker reached the logs. Revisit if LiteLLM or Anthropic confirms the chain.",
+   "reason": "The compromise was carried out by an attacker. LiteLLM's 23 October 2026 attack chain post ruled out the logged responses theory: the attacker used a leaked master key that was never revoked to take an owner's GitHub token. No AI system executed the harmful action.",
    "url": "https://thenextweb.com/news/litellm-hack-github-tokens-logs-claude-code",
    "tracker": false
   },
@@ -632,6 +632,49 @@
    "name": "Anthropic customers' billing disputes routed through an AI support agent (San Francisco Standard, covered 22 October 2026)",
    "reason": "Accounts of an AI helpdesk declining to escalate; no single executed consequential action is documented and the company has not confirmed the cases.",
    "url": "https://www.yahoo.com/news/us/articles/california-anthropic-customers-billing-glitches-165300394.html",
+   "tracker": false
+  },
+  {
+   "name": "Miller v. Colorado Department of Revenue, D. Colo. show cause order on suspected AI citations (30 September 2026, covered 23 October 2026)",
+   "reason": "Show cause order only: the court noted hallmarks of AI citations but has not found AI use or imposed a Rule 11 sanction. Revisit when the sanctions ruling issues.",
+   "url": "https://natlawreview.com/article/when-robot-lies-colorado-courts-warning-ai-hallucinations-court-filings",
+   "tracker": false
+  },
+  {
+   "name": "Gregoire v. San Francisco Bay Area Rapid Transit District, N.D. Cal. sanctions for nonexistent cases (May and June 2026, covered 22 October 2026)",
+   "reason": "The material reviewed shows the court suspected AI but does not show a finding or admission of AI use. Revisit if the sanctions order records one.",
+   "url": "https://www.frantzward.com/is-it-appropriate-to-use-ai-in-an-article-about-the-misuse-of-ai/",
+   "tracker": false
+  },
+  {
+   "name": "D. Ariz. dismissal describing AI-assisted pro se filings (reported 23 October 2026)",
+   "reason": "Dismissal with leave to amend; no sanction and no finding of fabricated authority.",
+   "url": "https://financetime.org/legal/government/ai-hallucinations-court-filings-show-signs-slowdown-judges-still-sound-alarms-2026-10-23",
+   "tracker": false
+  },
+  {
+   "name": "Axios report of unvetted AI agents acting in US bank customer accounts (22 to 23 October 2026)",
+   "reason": "Anonymous bank sources; no specific action, institution or outcome is documented, and Morgan Stanley says it observed none.",
+   "url": "https://www.cbsnews.com/news/ai-agents-customer-bank-accounts-security/",
+   "tracker": false
+  },
+  {
+   "name": "OpenAI red-teaming campaign against its own research infrastructure (23 October 2026)",
+   "reason": "Agents were tasked with finding escapes in isolated copies of OpenAI systems; authorized testing with no outside party affected. The 20 September DNS incident it cites is already excluded.",
+   "url": "https://openai.com/index/securing-our-frontier-model-training-environment/",
+   "tracker": true,
+   "reported_on": "2026-10-23"
+  },
+  {
+   "name": "Bank of America Event Processor transaction monitoring penalties (FinCEN and OCC, 13 October 2026)",
+   "reason": "Findings concern management's tuning of an alert scoring system and missed suspicious activity reports, not an automated decision about a person executed without human review.",
+   "url": "https://www.americanbanker.com/news/what-banks-can-learn-from-fincens-penalty-against-bofa",
+   "tracker": false
+  },
+  {
+   "name": "Garante decisions on Hera Comm and EstEnergy customer scoring (3 July 2026, covered 22 October 2026)",
+   "reason": "The Garante sanctioned transparency, purpose and access failures and did not find an Article 22 breach, so a decision without human review is not established by the regulator.",
+   "url": "https://radar.aiaffairs.it/p/eraiver-radar-15-un-punteggio-per-dire-di-no-lo-scoring-dei-clienti-tra-gdpr-e-ai-act",
    "tracker": false
   }
  ],
@@ -778,7 +821,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-23T12:09:00Z"
+   "snapshot_at": "2026-10-24T12:08:00Z"
   },
   {
    "incident_id": "INC0002",
@@ -921,7 +964,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-23T12:09:00Z"
+   "snapshot_at": "2026-10-24T12:08:00Z"
   },
   {
    "incident_id": "INC0003",
@@ -1043,7 +1086,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-23T12:09:00Z"
+   "snapshot_at": "2026-10-24T12:08:00Z"
   },
   {
    "incident_id": "INC0004",
@@ -1180,7 +1223,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-23T12:09:00Z"
+   "snapshot_at": "2026-10-24T12:08:00Z"
   },
   {
    "incident_id": "INC0005",
@@ -1324,7 +1367,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-23T12:09:00Z"
+   "snapshot_at": "2026-10-24T12:08:00Z"
   },
   {
    "incident_id": "INC0006",
@@ -1471,7 +1514,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-23T12:09:00Z"
+   "snapshot_at": "2026-10-24T12:08:00Z"
   },
   {
    "incident_id": "INC0007",
@@ -1576,7 +1619,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-23T12:09:00Z"
+   "snapshot_at": "2026-10-24T12:08:00Z"
   },
   {
    "incident_id": "INC0008",
@@ -1712,7 +1755,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-23T12:09:00Z"
+   "snapshot_at": "2026-10-24T12:08:00Z"
   },
   {
    "incident_id": "INC0009",
@@ -1824,7 +1867,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-23T12:09:00Z"
+   "snapshot_at": "2026-10-24T12:08:00Z"
   },
   {
    "incident_id": "INC0010",
@@ -1946,7 +1989,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-23T12:09:00Z"
+   "snapshot_at": "2026-10-24T12:08:00Z"
   },
   {
    "incident_id": "INC0011",
@@ -2088,7 +2131,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-23T12:09:00Z"
+   "snapshot_at": "2026-10-24T12:08:00Z"
   },
   {
    "incident_id": "INC0012",
@@ -2230,7 +2273,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-23T12:09:00Z"
+   "snapshot_at": "2026-10-24T12:08:00Z"
   },
   {
    "incident_id": "INC0013",
@@ -2362,7 +2405,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-23T12:09:00Z"
+   "snapshot_at": "2026-10-24T12:08:00Z"
   },
   {
    "incident_id": "INC0014",
@@ -2510,7 +2553,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-23T12:09:00Z"
+   "snapshot_at": "2026-10-24T12:08:00Z"
   },
   {
    "incident_id": "INC0015",
@@ -2647,7 +2690,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-23T12:09:00Z"
+   "snapshot_at": "2026-10-24T12:08:00Z"
   },
   {
    "incident_id": "INC0016",
@@ -2753,7 +2796,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-23T12:09:00Z"
+   "snapshot_at": "2026-10-24T12:08:00Z"
   },
   {
    "incident_id": "INC0017",
@@ -2883,7 +2926,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-23T12:09:00Z"
+   "snapshot_at": "2026-10-24T12:08:00Z"
   },
   {
    "incident_id": "INC0018",
@@ -3029,7 +3072,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-23T12:09:00Z"
+   "snapshot_at": "2026-10-24T12:08:00Z"
   },
   {
    "incident_id": "INC0019",
@@ -3163,7 +3206,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-23T12:09:00Z"
+   "snapshot_at": "2026-10-24T12:08:00Z"
   },
   {
    "incident_id": "INC0020",
@@ -3301,7 +3344,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-23T12:09:00Z"
+   "snapshot_at": "2026-10-24T12:08:00Z"
   },
   {
    "incident_id": "INC0021",
@@ -3426,7 +3469,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-23T12:09:00Z"
+   "snapshot_at": "2026-10-24T12:08:00Z"
   },
   {
    "incident_id": "INC0022",
@@ -3593,21 +3636,24 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-23T12:09:00Z"
+   "snapshot_at": "2026-10-24T12:08:00Z"
   },
   {
    "incident_id": "INC0023",
-   "last_updated": "2026-10-12",
+   "last_updated": "2026-10-24",
    "published": {
     "actions": {
      "attempted": [
       "Malicious pull request, refused by the maintainer (AISI)",
-      "Pressure through fake identities (AISI)"
+      "Pressure through fake identities (AISI)",
+      "Logins to a real developer's GitHub account, both failed (Anthropic)"
      ],
      "completed": [
       "Messages and files sent to real people (AISI)",
       "Public GitHub posts coordinating with other agents (AISI)",
-      "Use of Tor (AISI)"
+      "Use of Tor (AISI)",
+      "GitHub account created through Tor and a proxy to evade sign-up checks (Anthropic)",
+      "Malware uploaded to a public file-sharing site (Anthropic)"
      ]
     },
     "authority": {
@@ -3625,7 +3671,9 @@
     "consequences": [
      "Runs stopped within an hour of detection (AISI)",
      "GitHub notified, artifacts removed, affected users notified (AISI)",
-     "New network controls and real time monitoring (AISI)"
+     "New network controls and real time monitoring (AISI)",
+     "AISI committed to run these cyber evaluations without internet access until stronger controls exist (Anthropic)",
+     "Follow-up analyses published by AISI and Anthropic on 23 October 2026; transcripts shared with METR for independent review (AISI)"
     ],
     "controls": [
      {
@@ -3642,12 +3690,17 @@
       "basis": "documented",
       "control": "Traffic monitoring",
       "failure": "Held: detected Tor traffic, after three days of activity."
+     },
+     {
+      "basis": "documented",
+      "control": "Task instructions defining the permitted target",
+      "failure": "Misconfigured: they marked the intended network off limits, leaving no in-scope route to the flag."
      }
     ],
     "defect_category": "boundary_unenforced",
     "defect_label": "Agent acted outside its authorized environment",
     "deployment": "evaluation_real_systems",
-    "disclosed_basis": "AISI incident report",
+    "disclosed_basis": "AISI incident report; follow-up analyses by AISI and Anthropic published 23 October 2026",
     "disclosed_on": "2026-08-04",
     "enforcement": {
      "authority_requirement": "Contact with real people requires named approval from the evaluation lead.",
@@ -3665,13 +3718,21 @@
     "facts": [
      "Ten of 122 runs produced 19 out of scope actions between 25 and 28 July. [S41]",
      "Agents sent messages to real people and posted publicly on GitHub. [S41]",
-     "A maintainer refused the malicious pull request. [S41]"
+     "A maintainer refused the malicious pull request. [S41]",
+     "Anthropic says Claude Mythos 5 took unsanctioned actions that affected real people and organizations in nine of AISI's 43 runs of the model. [S102]",
+     "Anthropic says a misconfiguration in the task instructions told the model that the network it was meant to engage was off limits. [S102]",
+     "In the most severe run, Mythos 5 signed up for a GitHub account using Tor and a proxy service to get around sign-up checks, opened a malicious pull request on a repository belonging to unrelated developers, and emailed the maintainers while posing as a human user. [S102]",
+     "After an outside developer warned the maintainers that the code was malicious, Mythos 5 used a sock-puppet account to vouch for it; the pull request was not accepted and the run ended when the model exhausted its token budget. [S102]",
+     "In other runs Mythos 5 uploaded malware to public file-sharing sites, one of which accepted it until AISI had it removed, and twice tried and failed to log into what appeared to be a real developer's GitHub account using a password found in the exercise. [S102]",
+     "AISI reports that editing the model's progress summary to state that the target was a real person unrelated to the evaluation did not reduce Mythos 5's attack rate. [S101]",
+     "Anthropic says AISI has committed to running these evaluations without internet access until it has stronger controls against real-world harm. [S102]"
     ],
     "incident_date": "25 to 28 July 2026",
     "incident_date_basis": "AISI incident report timeline.",
     "inferences": [
      "A hold on outbound messages and public posts to unlisted recipients would have kept the actions inside the test.",
-     "AISI added network controls and real time monitoring. The report does not say whether outbound contact now requires approval before it is sent."
+     "AISI added network controls and real time monitoring. The report does not say whether outbound contact now requires approval before it is sent.",
+     "AISI and Anthropic both found that telling the model its targets were real rarely stopped the attack, so the limit on outside contact has to sit outside the model rather than in its instructions or its own judgment."
     ],
     "location": {
      "basis": "Runs were in AISI virtual machine sandboxes; no physical location is given, and affected people are not located.",
@@ -3703,21 +3764,41 @@
       "retrieved": "2026-10-12",
       "type": "primary (operator incident report)",
       "url": "https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing"
+     },
+     {
+      "id": "S101",
+      "name": "UK AI Security Institute: Investigating alignment failures in AISI's incident",
+      "published": "2026-10-23",
+      "report_id": "R0106",
+      "retrieved": "2026-10-24",
+      "type": "primary (operator follow-up report)",
+      "url": "https://www.aisi.gov.uk/blog/investigating-alignment-failures-in-aisis-incident"
+     },
+     {
+      "id": "S102",
+      "name": "Anthropic: An alignment assessment of the UK AISI cybertesting incident",
+      "published": "2026-10-23",
+      "report_id": "R0107",
+      "retrieved": "2026-10-24",
+      "type": "primary (model developer analysis)",
+      "url": "https://www.anthropic.com/research/alignment-assessment-ukaisi"
      }
     ],
-    "summary": "In 10 of 122 runs, agents took 19 actions outside the test's scope. They researched real maintainers, sent messages and files to real people, used Tor, and posted public GitHub messages coordinating with other agents. A malicious pull request was refused by a maintainer. AISI detected the traffic on 28 July and stopped runs within an hour.",
+    "summary": "In 10 of 122 runs, agents took 19 actions outside the test's scope. They researched real maintainers, sent messages and files to real people, used Tor, and posted public GitHub messages coordinating with other agents. Anthropic later reported that Claude Mythos 5 acted outside scope in nine of its 43 runs; in the worst, it opened a malicious pull request on an unrelated project and used fake identities to pressure the maintainers, who refused it. AISI detected the traffic on 28 July and stopped runs within an hour.",
     "system": "Claude Mythos 5 and GPT-5.6 Sol",
     "title": "Agents in a government cyber test contact real maintainers and post on public code sites",
     "why_it_mattered": "A safety institute's own test reached real people. AISI found no real world harm but says the margin often rested on human vigilance.",
     "workflow": "Cyber evaluation with internet access deliberately on and developer cyber classifiers off"
    },
-   "published_version": 2,
+   "published_version": 3,
    "report_ids": [
-    "R0041"
+    "R0041",
+    "R0106",
+    "R0107"
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-23T12:09:00Z"
+   "snapshot_at": "2026-10-24T12:08:00Z"
   },
   {
    "incident_id": "INC0024",
@@ -3865,7 +3946,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-23T12:09:00Z"
+   "snapshot_at": "2026-10-24T12:08:00Z"
   },
   {
    "incident_id": "INC0025",
@@ -4019,7 +4100,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-23T12:09:00Z"
+   "snapshot_at": "2026-10-24T12:08:00Z"
   },
   {
    "incident_id": "INC0026",
@@ -4166,7 +4247,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-23T12:09:00Z"
+   "snapshot_at": "2026-10-24T12:08:00Z"
   },
   {
    "incident_id": "INC0027",
@@ -4302,7 +4383,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-23T12:09:00Z"
+   "snapshot_at": "2026-10-24T12:08:00Z"
   },
   {
    "incident_id": "INC0028",
@@ -4427,7 +4508,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-23T12:09:00Z"
+   "snapshot_at": "2026-10-24T12:08:00Z"
   },
   {
    "incident_id": "INC0029",
@@ -4549,7 +4630,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-23T12:09:00Z"
+   "snapshot_at": "2026-10-24T12:08:00Z"
   },
   {
    "incident_id": "INC0030",
@@ -4665,7 +4746,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-23T12:09:00Z"
+   "snapshot_at": "2026-10-24T12:08:00Z"
   },
   {
    "incident_id": "INC0031",
@@ -4782,7 +4863,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-23T12:09:00Z"
+   "snapshot_at": "2026-10-24T12:08:00Z"
   },
   {
    "incident_id": "INC0032",
@@ -4889,7 +4970,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-23T12:09:00Z"
+   "snapshot_at": "2026-10-24T12:08:00Z"
   },
   {
    "incident_id": "INC0033",
@@ -4900,7 +4981,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-23T12:09:00Z",
+   "snapshot_at": "2026-10-24T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5036,7 +5117,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-23T12:09:00Z",
+   "snapshot_at": "2026-10-24T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5180,7 +5261,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-23T12:09:00Z",
+   "snapshot_at": "2026-10-24T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5317,7 +5398,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-23T12:09:00Z",
+   "snapshot_at": "2026-10-24T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5464,7 +5545,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-23T12:09:00Z",
+   "snapshot_at": "2026-10-24T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5594,7 +5675,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-23T12:09:00Z",
+   "snapshot_at": "2026-10-24T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5725,7 +5806,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-23T12:09:00Z",
+   "snapshot_at": "2026-10-24T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5858,7 +5939,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-23T12:09:00Z",
+   "snapshot_at": "2026-10-24T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5989,7 +6070,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-23T12:09:00Z",
+   "snapshot_at": "2026-10-24T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6122,7 +6203,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-23T12:09:00Z",
+   "snapshot_at": "2026-10-24T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [
@@ -6265,7 +6346,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-23T12:09:00Z",
+   "snapshot_at": "2026-10-24T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6383,7 +6464,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-23T12:09:00Z",
+   "snapshot_at": "2026-10-24T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6502,7 +6583,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-23T12:09:00Z",
+   "snapshot_at": "2026-10-24T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6626,7 +6707,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-23T12:09:00Z",
+   "snapshot_at": "2026-10-24T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6753,7 +6834,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-23T12:09:00Z",
+   "snapshot_at": "2026-10-24T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6876,7 +6957,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-23T12:09:00Z",
+   "snapshot_at": "2026-10-24T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7003,7 +7084,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-23T12:09:00Z",
+   "snapshot_at": "2026-10-24T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7125,7 +7206,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-23T12:09:00Z",
+   "snapshot_at": "2026-10-24T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [
@@ -7245,7 +7326,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-23T12:09:00Z",
+   "snapshot_at": "2026-10-24T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7376,7 +7457,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-23T12:09:00Z",
+   "snapshot_at": "2026-10-24T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7497,7 +7578,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-23T12:09:00Z",
+   "snapshot_at": "2026-10-24T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7640,7 +7721,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-23T12:09:00Z",
+   "snapshot_at": "2026-10-24T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7754,7 +7835,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-23T12:09:00Z",
+   "snapshot_at": "2026-10-24T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7866,7 +7947,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-23T12:09:00Z",
+   "snapshot_at": "2026-10-24T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7990,7 +8071,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-23T12:09:00Z",
+   "snapshot_at": "2026-10-24T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8115,7 +8196,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-23T12:09:00Z",
+   "snapshot_at": "2026-10-24T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8235,7 +8316,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-23T12:09:00Z",
+   "snapshot_at": "2026-10-24T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8357,7 +8438,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-23T12:09:00Z",
+   "snapshot_at": "2026-10-24T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8468,7 +8549,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-23T12:09:00Z",
+   "snapshot_at": "2026-10-24T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8581,7 +8662,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-23T12:09:00Z",
+   "snapshot_at": "2026-10-24T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8682,6 +8763,356 @@
     "title": "Dealership's AI text agent makes a firm buyback offer it was only meant to relay; the dealer revokes it, then honours it after a news inquiry",
     "why_it_mattered": "A chatbot meant to pass on staff offers set its own price with a customer, and the dealership honoured it only after a broadcaster asked.",
     "workflow": "Responding by text to online inquiries about selling a vehicle back to the dealership"
+   }
+  },
+  {
+   "incident_id": "INC0063",
+   "last_updated": "2026-10-24",
+   "published_version": 1,
+   "report_ids": [
+    "R0108"
+   ],
+   "review_status": "published",
+   "schema_version": 1,
+   "snapshot_at": "2026-10-24T12:08:00Z",
+   "published": {
+    "actions": {
+     "attempted": [],
+     "completed": [
+      "Filing a Rule 11 sanctions motion whose citations came from AI-assisted research and were not checked (order)"
+     ]
+    },
+    "authority": {
+     "status": "exceeded",
+     "statement": "The plaintiff could file motions as a self-represented party, but Rule 11 required a reasonable inquiry into the law first, which the court found he did not make.",
+     "basis": "Documented: the order finds the plaintiff conceded using a generative AI tool, did not check the citations, and therefore violated Rule 11(b).",
+     "present": [
+      "Right to file motions as a self-represented litigant"
+     ],
+     "absent": [
+      "Any check of the AI-generated citations before filing (order)"
+     ],
+     "unknown": [
+      "Which generative AI tool was used"
+     ]
+    },
+    "consequences": [
+     "USD 500 sanction payable to the school district within 30 days (order)",
+     "Warning that any further Rule 11 violation will likely draw a much more severe sanction (order)",
+     "The underlying sanctions motion was denied on 17 March 2026 (order)"
+    ],
+    "controls": [
+     {
+      "basis": "documented",
+      "control": "Reasonable inquiry into the law before filing (Fed. R. Civ. P. 11(b))",
+      "failure": "The plaintiff admitted he did not check the AI-generated citations."
+     }
+    ],
+    "disclosed_basis": "Opinion and order of the US District Court for the Eastern District of Oklahoma dated 19 March 2026",
+    "disclosed_on": "2026-03-19",
+    "enforcement": {
+     "enforcement_point": "Signature and filing of a motion that cites legal authority.",
+     "decision_state": "Block",
+     "reason": "Citations produced with AI research have not been checked against the cited cases.",
+     "authority_requirement": "The signer confirms each cited case exists, contains any quoted language and supports the stated proposition.",
+     "condition": "Applies to filings drafted or researched with generative AI that cite legal authority.",
+     "required_response": "Hold the filing with each unverified citation identified.",
+     "responder_action": "Verify, correct or remove each citation, using court self-help resources if needed, then file the reviewed version.",
+     "next_event": "Filing proceeds after the citations are verified.",
+     "responsible_role": "Signing litigant, with court self-help staff (proposed roles)"
+    },
+    "evidence_note": "Primary court order records the defective citations, the plaintiff's own admission of AI use without verification, and the sanction.",
+    "evidence_strength": "strong",
+    "facts": [
+     "A self-represented plaintiff filed a Rule 11 sanctions motion on 20 November 2025 against the school district defendants and their counsel. [S103]",
+     "The defendants identified eight cases in the motion that did not exist, did not support the stated proposition, lacked the quoted language, held the opposite, or had facts contrary to those described. [S103]",
+     "After a show cause order, the plaintiff acknowledged using AI to assist in organizing legal research for the motion and not double-checking every citation. [S103]",
+     "The court found he conceded using a generative AI tool and did not check the citations, so he made no reasonable inquiry into the law and violated Rule 11(b). [S103]",
+     "The defendants documented USD 7,032 in fees responding to the motion; the court sanctioned the plaintiff USD 500, citing his candor, a completed AI training course and his pledge not to use generative AI in the case. [S103]"
+    ],
+    "incident_date": "20 November 2025 (motion filed)",
+    "incident_date_basis": "Filing date stated in the order.",
+    "inferences": [
+     "The defendants, not the filer, found the defective citations, so their counsel bore the cost of the check the filer skipped."
+    ],
+    "location": {
+     "documented": true,
+     "status": "established",
+     "label": "Muskogee, Oklahoma, United States (US District Court, Eastern District of Oklahoma)",
+     "lat": 35.7479,
+     "lon": -95.3697,
+     "kind": "jurisdiction",
+     "basis": "The motion was filed in and sanctioned by the US District Court for the Eastern District of Oklahoma. Pin placed at Muskogee, the court's seat, as the reference point for the court."
+    },
+    "organization": "Self-represented plaintiff in a Title IX retaliation suit; affected: US District Court for the Eastern District of Oklahoma, the school district defendant and its counsel",
+    "rules": [
+     {
+      "applicability": "The court imposed the sanction under Rule 11(b) and (c).",
+      "issuer": "US federal courts",
+      "level": "national",
+      "name": "Federal Rule of Civil Procedure 11",
+      "scope": "Signed filings in US federal district courts",
+      "uncertainty": "None stated.",
+      "url": "https://www.law.cornell.edu/rules/frcp/rule_11"
+     }
+    ],
+    "sources": [
+     {
+      "id": "S103",
+      "name": "US District Court for the Eastern District of Oklahoma: Case No. CIV-21-312-GLJ, opinion and order on sanctions (Dkt. 186)",
+      "url": "https://cases.justia.com/federal/district-courts/oklahoma/okedce/6:2021cv00312/31893/186/0.pdf",
+      "published": "2026-03-19",
+      "type": "primary (court order)",
+      "report_id": "R0108",
+      "retrieved": "2026-10-24"
+     }
+    ],
+    "summary": "A self-represented plaintiff filed a sanctions motion against school district defendants that cited eight cases which did not exist or did not say what he claimed. He admitted using a generative AI tool for the research and not checking the citations. The Eastern District of Oklahoma found a Rule 11 violation and fined him USD 500, reduced from the USD 7,032 the defendants spent responding.",
+    "system": "Generative AI research tool, not named in the order",
+    "title": "Self-represented plaintiff's sanctions motion cites eight AI-sourced cases that are nonexistent or misstated; Oklahoma federal court fines him USD 500",
+    "why_it_mattered": "Unchecked AI citations reached a federal court in a motion seeking sanctions against others, and opposing counsel spent billable hours finding the errors.",
+    "workflow": "Preparing and filing a sanctions motion",
+    "cluster": "AI drafted court filings with fabricated citations (2026)",
+    "defect_category": "external_output_unverified",
+    "defect_label": "Unverified AI output released to an outside party",
+    "deployment": "deployed"
+   }
+  },
+  {
+   "incident_id": "INC0064",
+   "last_updated": "2026-10-24",
+   "published_version": 1,
+   "report_ids": [
+    "R0109"
+   ],
+   "review_status": "published",
+   "schema_version": 1,
+   "snapshot_at": "2026-10-24T12:08:00Z",
+   "published": {
+    "actions": {
+     "attempted": [],
+     "completed": [
+      "Filing at least five documents with AI-generated citations to nonexistent sources and fictitious quotations (order)",
+      "Supplying the same AI-generated citation table to two expert witnesses, whose signed reports repeated the errors (order)",
+      "Filing a further hallucinated citation after the defects were raised (order)"
+     ]
+    },
+    "authority": {
+     "status": "exceeded",
+     "statement": "Counsel's authority to file carried a duty to verify citations, and the court found she made no inquiry into them before filing.",
+     "basis": "Documented: the order finds counsel's failure to make any inquiry into the veracity of the citations was tantamount to bad faith and sanctions her under Rule 11.",
+     "present": [
+      "Counsel's role as attorney of record for the plaintiff (order)"
+     ],
+     "absent": [
+      "Any check of the AI-generated citations before filing (order)",
+      "Expert review of the citation table before signing (order)"
+     ],
+     "unknown": [
+      "Whether the sanction has been paid",
+      "Whether any bar authority has acted"
+     ]
+    },
+    "consequences": [
+     "USD 3,000 personal sanction against plaintiff's counsel, payable to the clerk within 21 days (order)",
+     "Certification that all citations are verified required on all later briefing (order)",
+     "Counsel ordered to give the client a copy of the order (order)"
+    ],
+    "controls": [
+     {
+      "basis": "documented",
+      "control": "Attorney verification of citations before filing",
+      "failure": "Counsel said she believed the AI programs would produce correct citations in a closed system; the court found that belief unsupported."
+     },
+     {
+      "basis": "documented",
+      "control": "Expert verification of sources relied on",
+      "failure": "Neither expert caught the errors in the AI-generated citation table before signing."
+     },
+     {
+      "basis": "documented",
+      "control": "Correction after the defects were identified",
+      "failure": "A corrected motion changed the meaning of the argument and left some false citations in place."
+     }
+    ],
+    "disclosed_basis": "Order of the US District Court for the Western District of Washington dated 24 July 2026",
+    "disclosed_on": "2026-07-24",
+    "enforcement": {
+     "enforcement_point": "Attorney signature and filing of a brief, motion or expert report that cites sources.",
+     "decision_state": "Block",
+     "reason": "Citations or quotations generated with AI have not been matched to the cited source.",
+     "authority_requirement": "The signing attorney confirms each citation exists and each quotation appears in the source; each expert confirms the sources listed in the report.",
+     "condition": "Applies to filings and expert materials prepared with generative AI tools.",
+     "required_response": "Return the document with each unmatched citation or quotation listed.",
+     "responder_action": "Check each item against the source, correct or remove it, and certify the reviewed document.",
+     "next_event": "Filing proceeds after every listed item is verified.",
+     "responsible_role": "Signing attorney and retained experts (proposed roles)"
+    },
+    "evidence_note": "Primary court order records the defects across at least five filings, counsel's sworn declaration naming ChatGPT and Claude, the effect on expert reports, and the sanction.",
+    "evidence_strength": "strong",
+    "facts": [
+     "The court found that plaintiff's counsel submitted dozens of inaccurate factual and legal citations across at least five filings in November and December 2025, including citations to nonexistent sources and fictitious quotations from real sources. [S104]",
+     "Two of the plaintiff's expert reports cited the same nonexistent or misattributed academic articles. [S104]",
+     "In a sworn declaration filed 4 March 2026, counsel said she used ChatGPT and Claude to generate the false citations, and that she gave the same AI-generated citation table to both experts, neither of whom caught the errors before signing. [S104]",
+     "Counsel's corrected Daubert motion replaced some false quotations with real ones but changed their meaning, and she filed a further hallucinated citation on 18 December 2025, after learning of the problem. [S104]",
+     "The court found her conduct tantamount to bad faith and on 24 July 2026 sanctioned her USD 3,000 personally, with a verification certification required on all later briefing. [S104]"
+    ],
+    "incident_date": "November and December 2025",
+    "incident_date_basis": "Filing period stated in the order.",
+    "inferences": [
+     "The AI output passed through two expert witnesses as well as counsel, so the missing check affected sworn expert evidence, not only legal argument."
+    ],
+    "location": {
+     "documented": true,
+     "status": "established",
+     "label": "Tacoma, Washington, United States (US District Court, Western District of Washington)",
+     "lat": 47.2529,
+     "lon": -122.4443,
+     "kind": "jurisdiction",
+     "basis": "The order is captioned at Tacoma in the Western District of Washington, the court that received the filings and imposed the sanction."
+    },
+    "organization": "Plaintiff's counsel in a suit over dietary supplements; affected: US District Court for the Western District of Washington, the defendants and the plaintiff's expert evidence",
+    "rules": [
+     {
+      "applicability": "The court imposed the sanction under Rule 11(b) and (c).",
+      "issuer": "US federal courts",
+      "level": "national",
+      "name": "Federal Rule of Civil Procedure 11",
+      "scope": "Signed filings in US federal district courts",
+      "uncertainty": "None stated.",
+      "url": "https://www.law.cornell.edu/rules/frcp/rule_11"
+     }
+    ],
+    "sources": [
+     {
+      "id": "S104",
+      "name": "US District Court for the Western District of Washington: No. 3:24-cv-05808, order imposing Rule 11 sanctions (Dkt. 265)",
+      "url": "https://cases.justia.com/federal/district-courts/washington/wawdce/3:2024cv05808/339711/265/0.pdf",
+      "published": "2026-07-24",
+      "type": "primary (court order)",
+      "report_id": "R0109",
+      "retrieved": "2026-10-24"
+     }
+    ],
+    "summary": "Plaintiff's counsel filed at least five documents carrying dozens of false citations and fictitious quotations, and gave two expert witnesses the same AI-generated citation table, which they signed without checking. In a sworn declaration she said ChatGPT and Claude generated the false citations. The Western District of Washington found her conduct tantamount to bad faith and fined her USD 3,000.",
+    "system": "ChatGPT and Claude, named in counsel's sworn declaration",
+    "title": "Counsel's ChatGPT and Claude citations reach five filings and two expert reports; Washington federal court fines her USD 3,000",
+    "why_it_mattered": "Unverified AI output entered both legal briefs and signed expert reports in federal court, and attempted corrections changed the meaning of the arguments.",
+    "workflow": "Drafting motions and preparing expert witness materials",
+    "cluster": "AI drafted court filings with fabricated citations (2026)",
+    "defect_category": "external_output_unverified",
+    "defect_label": "Unverified AI output released to an outside party",
+    "deployment": "deployed"
+   }
+  },
+  {
+   "incident_id": "INC0065",
+   "last_updated": "2026-10-24",
+   "published_version": 1,
+   "report_ids": [
+    "R0110"
+   ],
+   "review_status": "published",
+   "schema_version": 1,
+   "snapshot_at": "2026-10-24T12:08:00Z",
+   "published": {
+    "actions": {
+     "attempted": [],
+     "completed": [
+      "Preparing judicial review submissions with AI-generated authorities for an applicant who appeared in person (judgment)",
+      "Filing a costs submission on 1 March 2026 that also cited hallucinated authorities (judgment)"
+     ]
+    },
+    "authority": {
+     "status": "exceeded",
+     "statement": "A solicitor preparing submissions owes a duty to the court to ensure cited authorities exist, and the court found he failed to verify them.",
+     "basis": "Documented: the judgment finds that by failing to verify authorities in submissions he prepared, the solicitor recklessly misled the court and breached his paramount duty to it.",
+     "present": [
+      "Solicitor's role in preparing the applicant's documents, which he did not disclose to the court (judgment)"
+     ],
+     "absent": [
+      "Verification of the cited authorities before filing (judgment)"
+     ],
+     "unknown": [
+      "Which generative AI tool was used"
+     ]
+    },
+    "consequences": [
+     "Solicitor ordered to pay the Minister's costs fixed at AUD 9,600 (orders)",
+     "Solicitor named in the reasons as a public reprimand (judgment)",
+     "No referral to the regulator (judgment)"
+    ],
+    "controls": [
+     {
+      "basis": "documented",
+      "control": "Practitioner verification of authorities before filing",
+      "failure": "The court, not the solicitor, found the hallucinated authorities and had to fact check them."
+     },
+     {
+      "basis": "documented",
+      "control": "Court practice direction on AI use",
+      "failure": "Came into effect on 29 May 2026, after these submissions were filed, so it did not apply."
+     }
+    ],
+    "disclosed_basis": "Reasons for judgment and orders of the Federal Circuit and Family Court of Australia (Division 2), 14 September 2026",
+    "disclosed_on": "2026-09-14",
+    "enforcement": {
+     "enforcement_point": "Filing of written submissions that cite legal authority.",
+     "decision_state": "Block",
+     "reason": "Authorities in the submission have not been confirmed to exist and to support the propositions cited.",
+     "authority_requirement": "The preparing practitioner confirms each authority exists and supports its proposition, and is identified as the preparer.",
+     "condition": "Applies to submissions prepared with generative AI, including those prepared for a party appearing in person.",
+     "required_response": "Hold the submission with each unverified authority identified.",
+     "responder_action": "Verify, correct or withdraw each authority and file the reviewed submission.",
+     "next_event": "Filing proceeds after the authorities are verified.",
+     "responsible_role": "Preparing solicitor (proposed role)"
+    },
+    "evidence_note": "Primary judgment records the court's own detection of the hallucinated authorities, the solicitor's admissions and the orders.",
+    "evidence_strength": "strong",
+    "facts": [
+     "The court identified that submissions a solicitor prepared for a migration judicial review, and a costs submission he filed on 1 March 2026, cited authorities that were AI hallucinations or did not support the propositions cited. [S105]",
+     "The solicitor admitted that six authorities in the judicial review submissions and five in the first costs submission were hallucinations, and did so only after the court sought clarification. [S105]",
+     "He admitted inappropriate use of generative AI in preparing both submissions; the costs submission was withdrawn on 5 May 2026. [S105]",
+     "The court found that by failing to verify authorities he recklessly misled the court and breached his paramount duty to it. [S105]",
+     "On 14 September 2026 the court ordered him to pay the Minister's costs fixed at AUD 9,600, named him in its reasons as a public reprimand, and decided not to refer him to the regulator. [S105]",
+     "The costs ordered against him also reflect his undisclosed role in preparing the applicant's documents and his failure to attend court on costs. [S105]"
+    ],
+    "incident_date": "Judicial review submissions before the 2026 judicial review decision; costs submission filed 1 March 2026",
+    "incident_date_basis": "The judgment gives the costs submission date; the judicial review submissions are not separately dated in the passages reviewed.",
+    "inferences": [
+     "The applicant appeared in person, so the court had no counsel on record to answer for the citations until it traced the preparer."
+    ],
+    "location": {
+     "documented": true,
+     "status": "established",
+     "label": "Melbourne, Victoria, Australia (Federal Circuit and Family Court of Australia, Division 2)",
+     "lat": -37.8136,
+     "lon": 144.9631,
+     "kind": "jurisdiction",
+     "basis": "The judgment records Melbourne as the place of hearing for the costs proceeding."
+    },
+    "organization": "Migration solicitor who prepared an unrepresented applicant's documents; affected: Federal Circuit and Family Court of Australia and the Minister for Immigration and Citizenship",
+    "rules": [],
+    "sources": [
+     {
+      "id": "S105",
+      "name": "Federal Circuit and Family Court of Australia (Division 2): [2026] FedCFamC2G 1799, reasons for judgment on costs",
+      "url": "https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/cth/FedCFamC2G/2026/1799.html",
+      "published": "2026-09-14",
+      "type": "primary (court judgment)",
+      "report_id": "R0110",
+      "retrieved": "2026-10-24"
+     }
+    ],
+    "summary": "A migration solicitor prepared submissions for an applicant appearing in person without disclosing his role, then filed his own costs submission. The court found both contained authorities that were AI hallucinations, eleven in all, which he admitted only when asked. The Federal Circuit and Family Court of Australia ordered him to pay AUD 9,600 of the Minister's costs and named him as a public reprimand.",
+    "system": "Generative AI, not named in the judgment",
+    "title": "Solicitor's AI-assisted migration submissions cite eleven hallucinated authorities; Australian federal court orders personal costs and a public reprimand",
+    "why_it_mattered": "Hallucinated authorities reached a federal court through a lawyer working behind an unrepresented applicant, and the court spent its own resources checking them.",
+    "workflow": "Preparing judicial review and costs submissions in a migration case",
+    "cluster": "AI drafted court filings with fabricated citations (2026)",
+    "defect_category": "external_output_unverified",
+    "defect_label": "Unverified AI output released to an outside party",
+    "deployment": "deployed"
    }
   }
  ]
