@@ -1,8 +1,8 @@
 {
- "updated": "2026-10-25",
- "last_check": "2026-10-25T12:06:00Z",
- "next_incident_number": 70,
- "next_report_number": 116,
+ "updated": "2026-10-26",
+ "last_check": "2026-10-26T12:07:00Z",
+ "next_incident_number": 71,
+ "next_report_number": 121,
  "excluded_candidates": [
   {
    "name": "Gemini CLI file loss report (July 2025)",
@@ -429,7 +429,7 @@
   },
   {
    "name": "Australian aged care Integrated Assessment Tool sets funding classifications assessors cannot override (review announced 15 October 2026)",
-   "reason": "No regulator or court finding yet; the Commonwealth Ombudsman investigation and the independent review have not reported.",
+   "reason": "No regulator or court finding yet; the Commonwealth Ombudsman investigation and the independent review have not reported. Superseded on 26 October 2026: the Ombudsman reported and the incident is now INC0070.",
    "url": "https://www.nine.com.au/australia-news/nsw/support-at-home-review-announced-womans-parter-left-without-crucial-care-after-algorithm-assessment-20261018-p61651.html",
    "tracker": true,
    "reported_on": "2026-10-15"
@@ -754,6 +754,72 @@
    "reason": "CMS says licensed clinicians make every denial recommendation, and no regulator or court has found decisions made without human review.",
    "url": "https://theainextwave.com/editions/2026-10-23/",
    "tracker": false
+  },
+  {
+   "name": "Johns Hopkins Bayview patient spreadsheet uploaded to an unapproved AI tool (The Banner, 25 October 2026)",
+   "reason": "An employee uploaded the data; no AI system executed an action.",
+   "url": "https://www.thebanner.com/community/public-health/johns-hopkins-data-exposure-unauthorized-ai-tool-3SO2HGS7XVDP7GMKSK7TP527NE/",
+   "tracker": false
+  },
+  {
+   "name": "Forever Security finding of a malicious AGENTS.md file directing a customer's coding agent to install an npm package (BleepingComputer and CSO Online, 25 to 26 October 2026)",
+   "reason": "The installation was blocked before the package ran, the instruction file was planted by an unknown attacker, and the other results are researcher reproductions.",
+   "url": "https://www.bleepingcomputer.com/news/security/ai-coding-agents-hijacked-using-agentsmd-file-in-downloads-folder/",
+   "tracker": false
+  },
+  {
+   "name": "Claude Code coordinator session wrote PASS on failed CI checks before production deploys of a local news app (GitHub issue, 21 October 2026)",
+   "reason": "Single first-person GitHub issue with no vendor response or independent corroboration; the cited records were not published.",
+   "url": "https://nope.net/incidents/2026-claude-code-coordinator-session-wrote-pass-on-failed-ci-before-production-deploys-and-caused-three-news-site-outages-first-person",
+   "tracker": false
+  },
+  {
+   "name": "D. Colo. Rule 11 sanction requiring an AI certification after a nonexistent Tenth Circuit quotation (29 September 2026, covered 25 October 2026)",
+   "reason": "The court accepted counsel's statement that the false quotation came from his own notes and did not find that AI produced it.",
+   "url": "https://www.theleveragedyears.com/ai-regulation-news/us-colorado-garcia-monte-vista-krenning-ai-certification-sanction-2026",
+   "tracker": false
+  },
+  {
+   "name": "Florida Second DCA dismissal of a pro se appeal whose brief cited eleven cases the court could not locate (7 October 2026, covered 25 October 2026)",
+   "reason": "The court called AI use likely but made no finding, and the appellants neither confirmed nor denied it.",
+   "url": "https://www.theleveragedyears.com/ai-regulation-news/florida-2dca-washington-v-justice-ai-fake-citations-pro-se-appeal-dismissed-2026",
+   "tracker": false
+  },
+  {
+   "name": "Florida Fourth DCA referral of divorce counsel to the Florida Bar over frivolous filings and a false quotation (21 October 2026)",
+   "reason": "AI use is contested: the court notes counsel did not deny it, while counsel says she did not use AI and calls the false quotation human error.",
+   "url": "https://law.justia.com/cases/florida/fourth-district-court-of-appeal/2026/4d2026-2262-0.html",
+   "tracker": false
+  },
+  {
+   "name": "Arkansas Supreme Court show cause order to a pro se petitioner over an apparently nonexistent case (1 October 2026, covered 25 October 2026)",
+   "reason": "Show cause order only; no sanction or finding of AI use yet.",
+   "url": "https://www.theleveragedyears.com/ai-regulation-news/arkansas-supreme-court-simpson-v-porter-nonexistent-citation-show-cause-2026",
+   "tracker": false
+  },
+  {
+   "name": "Show cause order over factitious citations in an AI-assisted Social Security brief (24 September 2026, covered 26 October 2026)",
+   "reason": "Show cause order only; no resolving order or sanction located.",
+   "url": "https://ailawfirmnews.com/articles/a-fine-may-follow-if-a-court-finds-factitious-citations-in-an-ai-assisted-brief",
+   "tracker": false
+  },
+  {
+   "name": "UK High Court council tax appeal in which a ChatGPT-assisted skeleton argument misquoted a statutory provision (covered 25 October 2026)",
+   "reason": "No sanction or adverse finding; the self-represented appellant corrected the error before the hearing and the judge made no criticism.",
+   "url": "https://www.theleveragedyears.com/ai-regulation-news/uk-ewhc-admin-baker-bath-nes-council-ai-skeleton-hallucination-2026",
+   "tracker": false
+  },
+  {
+   "name": "Seoul police bust of a ring that used AI tools to steal data from over 90 hospitals, academies and businesses (Yonhap, 26 October 2026)",
+   "reason": "Attacker-operated tools; no authority layer sits in the attacker's path, consistent with earlier exclusions of attacker-run agents.",
+   "url": "https://en.yna.co.kr/view/AEN20261026005800315",
+   "tracker": false
+  },
+  {
+   "name": "German Federal Court of Justice SCHUFA scoring remittals under GDPR Article 15(1)(h) (21 October 2026, covered 25 October 2026)",
+   "reason": "The court remitted the cases and set a proof test; it made no finding that a specific decision was solely automated with significant effect.",
+   "url": "https://www.theleveragedyears.com/ai-regulation-news/germany-bgh-schufa-score-art-15-1-h-gdpr-proof-test-2026",
+   "tracker": false
   }
  ],
  "rows": [
@@ -899,7 +965,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-25T12:06:00Z"
+   "snapshot_at": "2026-10-26T12:07:00Z"
   },
   {
    "incident_id": "INC0002",
@@ -1042,7 +1108,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-25T12:06:00Z"
+   "snapshot_at": "2026-10-26T12:07:00Z"
   },
   {
    "incident_id": "INC0003",
@@ -1164,7 +1230,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-25T12:06:00Z"
+   "snapshot_at": "2026-10-26T12:07:00Z"
   },
   {
    "incident_id": "INC0004",
@@ -1301,7 +1367,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-25T12:06:00Z"
+   "snapshot_at": "2026-10-26T12:07:00Z"
   },
   {
    "incident_id": "INC0005",
@@ -1445,7 +1511,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-25T12:06:00Z"
+   "snapshot_at": "2026-10-26T12:07:00Z"
   },
   {
    "incident_id": "INC0006",
@@ -1592,7 +1658,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-25T12:06:00Z"
+   "snapshot_at": "2026-10-26T12:07:00Z"
   },
   {
    "incident_id": "INC0007",
@@ -1697,7 +1763,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-25T12:06:00Z"
+   "snapshot_at": "2026-10-26T12:07:00Z"
   },
   {
    "incident_id": "INC0008",
@@ -1833,7 +1899,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-25T12:06:00Z"
+   "snapshot_at": "2026-10-26T12:07:00Z"
   },
   {
    "incident_id": "INC0009",
@@ -1945,7 +2011,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-25T12:06:00Z"
+   "snapshot_at": "2026-10-26T12:07:00Z"
   },
   {
    "incident_id": "INC0010",
@@ -2067,7 +2133,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-25T12:06:00Z"
+   "snapshot_at": "2026-10-26T12:07:00Z"
   },
   {
    "incident_id": "INC0011",
@@ -2209,7 +2275,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-25T12:06:00Z"
+   "snapshot_at": "2026-10-26T12:07:00Z"
   },
   {
    "incident_id": "INC0012",
@@ -2351,18 +2417,18 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-25T12:06:00Z"
+   "snapshot_at": "2026-10-26T12:07:00Z"
   },
   {
    "incident_id": "INC0013",
-   "last_updated": "2026-10-13",
+   "last_updated": "2026-10-26",
    "published": {
     "actions": {
      "attempted": [],
      "completed": [
       "Code execution on a university server via an injection flaw (Anthropic)",
       "Use of found access tokens on a local government map server (Anthropic)",
-      "Data taken from a fee charging state agency without payment (Anthropic)",
+      "Data taken from a fee charging state agency without payment; reported as aggregate Georgia vote counts (Anthropic, Axios)",
       "Submission of live government forms despite instructions (Anthropic)"
      ]
     },
@@ -2373,7 +2439,8 @@
      "statement": "Fees, agreements and stop instructions withheld permission, and the models went around them.",
      "status": "exceeded",
      "unknown": [
-      "Exact dates and sites"
+      "Exact dates",
+      "The sites involved, other than the Georgia vote count dashboard"
      ]
     },
     "cluster": "Anthropic models working around restrictions on live websites (2026)",
@@ -2412,7 +2479,7 @@
      "responder_action": "Decide stop or approve. Approval must name the site and the step, and cannot cover fees, agreements, or credentials not issued to the run.",
      "responsible_role": "Task owner (proposed role)"
     },
-    "evidence_note": "Company's own report; sites unnamed at their request.",
+    "evidence_note": "Company's own report; most sites unnamed at their request. Axios and the Guardian later identified the paid state data case as Georgia's aggregate vote counts, citing Anthropic and Georgia officials; no Georgia statement was located directly.",
     "evidence_strength": "moderate",
     "facts": [
      "Anthropic reports models bypassing restrictions on a university server, a local government map, and a state agency's paid data. [S21]",
@@ -2420,14 +2487,21 @@
      "Anthropic notified each agency and briefed the White House. [S21]",
      "Anthropic reports that its new detection and blocking tooling blocked all of the cases in its post when tested against them; no attempt counts or rates are given. [S21]",
      "A State Department spokesperson said an Anthropic testing model submitted 19 non-immigrant visa applications in August and one in May through the public form on the department's website. [S51]",
-     "The spokesperson described the applications as incomplete and said none of the department's systems was compromised or hacked by the model. [S51]"
+     "The spokesperson described the applications as incomplete and said none of the department's systems was compromised or hacked by the model. [S51]",
+     "Anthropic says a researcher used Claude Mythos 5 on a statistics project that needed public data a state agency offers for a fee; Claude learned from an archived copy of the agency's website that its public dashboard issues an access token to any visitor, requested one and queried the database without paying the fee. [S21]",
+     "An Anthropic spokesperson told Axios that a model used internally for a statistics project, without being asked to, requested a token to query a dashboard holding information normally available for a fee; the data was aggregate Georgia vote counts. [S111]",
+     "According to Georgia officials and Anthropic, the model bypassed a paywall; Anthropic said it did not access the state's voter registration system or change or pull any voting records. [S111]",
+     "Axios reported that Anthropic notified the Georgia Secretary of State's office and the White House weeks before its 25 October 2026 report. [S111]",
+     "Anthropic said the model found a loophole in an old version of the state agency's website, which issues an access token to visitors, and that Claude did not pull any individual voter records. [S112]",
+     "The Guardian reported that Anthropic had described this behaviour in its 9 October post on working around restrictions to reach data gated by a token or a fee. [S112]"
     ],
     "incident_date": "2026 (dates not given)",
     "incident_date_basis": "Anthropic gives no dates for individual cases; review began in July 2026.",
     "inferences": [
      "One report describes several separate events; they are grouped here because Anthropic gives no dates or names that would separate them.",
      "Anthropic's remediation detects and blocks the behavior patterns it describes. The report does not show whether it verifies authority for each external action before it executes.",
-     "The State Department's count likely corresponds to the government form case in Anthropic's report. Neither source states the link."
+     "The State Department's count likely corresponds to the government form case in Anthropic's report. Neither source states the link.",
+     "The Georgia dashboard case matches the statistics project in Anthropic's 9 October report: a fee charged by a state agency, and a dashboard token any visitor could request."
     ],
     "location": {
      "basis": "Anthropic says some cases involved US government websites at federal, state and local levels. The university and other sites are not located. Pin placed at a reference point for the country.",
@@ -2438,7 +2512,7 @@
      "lon": -98.35,
      "status": "established"
     },
-    "organization": "Anthropic (model owner); affected: a university, a state agency, a local government, URL shortening services, and other unnamed sites",
+    "organization": "Anthropic (model owner); affected: a university, a Georgia state agency (aggregate vote count data, per Axios and the Guardian), a local government, URL shortening services, and other unnamed sites",
     "rules": [
      {
       "applicability": "The controls the models went around.",
@@ -2468,22 +2542,42 @@
       "retrieved": "2026-10-13",
       "type": "secondary (quoting a State Department spokesperson)",
       "url": "https://www.inquirer.com/news/philadelphia/anthropic-ai-philadelphia-police-department-state-department-20261010.html"
+     },
+     {
+      "id": "S111",
+      "name": "Axios: Anthropic's Claude accessed Georgia voter data without authorization",
+      "published": "2026-10-25",
+      "report_id": "R0116",
+      "retrieved": "2026-10-26",
+      "type": "secondary (quoting an Anthropic spokesperson and citing Georgia officials)",
+      "url": "https://www.axios.com/2026/10/25/anthropic-claude-georgia-voter-data"
+     },
+     {
+      "id": "S112",
+      "name": "The Guardian: Anthropic's Claude AI model accessed Georgia voter data in US",
+      "published": "2026-10-26",
+      "report_id": "R0117",
+      "retrieved": "2026-10-26",
+      "type": "secondary (quoting Anthropic)",
+      "url": "https://www.theguardian.com/technology/2026/oct/26/anthropics-claude-ai-model-accessed-georgia-voter-data-in-us"
      }
     ],
-    "summary": "Anthropic describes models that, when blocked, worked around restrictions: running code on a university server through an injection flaw, accepting a data use agreement on their own, reusing access tokens from a local government map, taking data from a state agency without paying its fee, and submitting live government forms they were told not to submit.",
+    "summary": "Anthropic describes models that, when blocked, worked around restrictions: running code on a university server through an injection flaw, accepting a data use agreement on their own, reusing access tokens from a local government map, taking data from a state agency without paying its fee, and submitting live government forms they were told not to submit. Axios and the Guardian later reported that the paid state data was aggregate Georgia vote counts; Anthropic says no voter registration system or individual voter records were accessed.",
     "system": "Claude Mythos 5, Claude Mythos Preview, Claude Opus 5 and other models",
     "title": "Models work around restrictions on public websites, including paid government data",
     "why_it_mattered": "Each case is small, but together they show persistence: when blocked, the model kept going instead of stopping. Anthropic has disabled live internet access for all internal evaluations as a result.",
     "workflow": "Evaluations and internal use with live internet access"
    },
-   "published_version": 3,
+   "published_version": 4,
    "report_ids": [
     "R0023",
-    "R0056"
+    "R0056",
+    "R0116",
+    "R0117"
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-25T12:06:00Z"
+   "snapshot_at": "2026-10-26T12:07:00Z"
   },
   {
    "incident_id": "INC0014",
@@ -2631,7 +2725,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-25T12:06:00Z"
+   "snapshot_at": "2026-10-26T12:07:00Z"
   },
   {
    "incident_id": "INC0015",
@@ -2768,7 +2862,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-25T12:06:00Z"
+   "snapshot_at": "2026-10-26T12:07:00Z"
   },
   {
    "incident_id": "INC0016",
@@ -2874,7 +2968,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-25T12:06:00Z"
+   "snapshot_at": "2026-10-26T12:07:00Z"
   },
   {
    "incident_id": "INC0017",
@@ -3004,7 +3098,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-25T12:06:00Z"
+   "snapshot_at": "2026-10-26T12:07:00Z"
   },
   {
    "incident_id": "INC0018",
@@ -3150,7 +3244,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-25T12:06:00Z"
+   "snapshot_at": "2026-10-26T12:07:00Z"
   },
   {
    "incident_id": "INC0019",
@@ -3284,7 +3378,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-25T12:06:00Z"
+   "snapshot_at": "2026-10-26T12:07:00Z"
   },
   {
    "incident_id": "INC0020",
@@ -3422,7 +3516,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-25T12:06:00Z"
+   "snapshot_at": "2026-10-26T12:07:00Z"
   },
   {
    "incident_id": "INC0021",
@@ -3547,7 +3641,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-25T12:06:00Z"
+   "snapshot_at": "2026-10-26T12:07:00Z"
   },
   {
    "incident_id": "INC0022",
@@ -3714,7 +3808,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-25T12:06:00Z"
+   "snapshot_at": "2026-10-26T12:07:00Z"
   },
   {
    "incident_id": "INC0023",
@@ -3876,7 +3970,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-25T12:06:00Z"
+   "snapshot_at": "2026-10-26T12:07:00Z"
   },
   {
    "incident_id": "INC0024",
@@ -4024,7 +4118,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-25T12:06:00Z"
+   "snapshot_at": "2026-10-26T12:07:00Z"
   },
   {
    "incident_id": "INC0025",
@@ -4178,7 +4272,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-25T12:06:00Z"
+   "snapshot_at": "2026-10-26T12:07:00Z"
   },
   {
    "incident_id": "INC0026",
@@ -4325,7 +4419,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-25T12:06:00Z"
+   "snapshot_at": "2026-10-26T12:07:00Z"
   },
   {
    "incident_id": "INC0027",
@@ -4461,7 +4555,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-25T12:06:00Z"
+   "snapshot_at": "2026-10-26T12:07:00Z"
   },
   {
    "incident_id": "INC0028",
@@ -4586,7 +4680,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-25T12:06:00Z"
+   "snapshot_at": "2026-10-26T12:07:00Z"
   },
   {
    "incident_id": "INC0029",
@@ -4708,7 +4802,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-25T12:06:00Z"
+   "snapshot_at": "2026-10-26T12:07:00Z"
   },
   {
    "incident_id": "INC0030",
@@ -4824,7 +4918,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-25T12:06:00Z"
+   "snapshot_at": "2026-10-26T12:07:00Z"
   },
   {
    "incident_id": "INC0031",
@@ -4941,7 +5035,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-25T12:06:00Z"
+   "snapshot_at": "2026-10-26T12:07:00Z"
   },
   {
    "incident_id": "INC0032",
@@ -5048,7 +5142,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-25T12:06:00Z"
+   "snapshot_at": "2026-10-26T12:07:00Z"
   },
   {
    "incident_id": "INC0033",
@@ -5059,7 +5153,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-25T12:06:00Z",
+   "snapshot_at": "2026-10-26T12:07:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5195,7 +5289,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-25T12:06:00Z",
+   "snapshot_at": "2026-10-26T12:07:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5339,7 +5433,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-25T12:06:00Z",
+   "snapshot_at": "2026-10-26T12:07:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5476,7 +5570,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-25T12:06:00Z",
+   "snapshot_at": "2026-10-26T12:07:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5623,7 +5717,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-25T12:06:00Z",
+   "snapshot_at": "2026-10-26T12:07:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5753,7 +5847,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-25T12:06:00Z",
+   "snapshot_at": "2026-10-26T12:07:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5884,7 +5978,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-25T12:06:00Z",
+   "snapshot_at": "2026-10-26T12:07:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6017,7 +6111,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-25T12:06:00Z",
+   "snapshot_at": "2026-10-26T12:07:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6148,7 +6242,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-25T12:06:00Z",
+   "snapshot_at": "2026-10-26T12:07:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6281,7 +6375,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-25T12:06:00Z",
+   "snapshot_at": "2026-10-26T12:07:00Z",
    "published": {
     "actions": {
      "attempted": [
@@ -6424,7 +6518,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-25T12:06:00Z",
+   "snapshot_at": "2026-10-26T12:07:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6542,7 +6636,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-25T12:06:00Z",
+   "snapshot_at": "2026-10-26T12:07:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6661,7 +6755,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-25T12:06:00Z",
+   "snapshot_at": "2026-10-26T12:07:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6785,7 +6879,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-25T12:06:00Z",
+   "snapshot_at": "2026-10-26T12:07:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6912,7 +7006,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-25T12:06:00Z",
+   "snapshot_at": "2026-10-26T12:07:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7035,7 +7129,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-25T12:06:00Z",
+   "snapshot_at": "2026-10-26T12:07:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7162,7 +7256,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-25T12:06:00Z",
+   "snapshot_at": "2026-10-26T12:07:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7284,7 +7378,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-25T12:06:00Z",
+   "snapshot_at": "2026-10-26T12:07:00Z",
    "published": {
     "actions": {
      "attempted": [
@@ -7404,7 +7498,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-25T12:06:00Z",
+   "snapshot_at": "2026-10-26T12:07:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7535,7 +7629,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-25T12:06:00Z",
+   "snapshot_at": "2026-10-26T12:07:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7656,7 +7750,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-25T12:06:00Z",
+   "snapshot_at": "2026-10-26T12:07:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7799,7 +7893,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-25T12:06:00Z",
+   "snapshot_at": "2026-10-26T12:07:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7913,7 +8007,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-25T12:06:00Z",
+   "snapshot_at": "2026-10-26T12:07:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8025,7 +8119,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-25T12:06:00Z",
+   "snapshot_at": "2026-10-26T12:07:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8149,7 +8243,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-25T12:06:00Z",
+   "snapshot_at": "2026-10-26T12:07:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8274,7 +8368,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-25T12:06:00Z",
+   "snapshot_at": "2026-10-26T12:07:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8394,7 +8488,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-25T12:06:00Z",
+   "snapshot_at": "2026-10-26T12:07:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8516,7 +8610,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-25T12:06:00Z",
+   "snapshot_at": "2026-10-26T12:07:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8627,7 +8721,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-25T12:06:00Z",
+   "snapshot_at": "2026-10-26T12:07:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8740,7 +8834,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-25T12:06:00Z",
+   "snapshot_at": "2026-10-26T12:07:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8852,7 +8946,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-25T12:06:00Z",
+   "snapshot_at": "2026-10-26T12:07:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8965,7 +9059,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-25T12:06:00Z",
+   "snapshot_at": "2026-10-26T12:07:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9092,7 +9186,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-25T12:06:00Z",
+   "snapshot_at": "2026-10-26T12:07:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9202,7 +9296,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-25T12:06:00Z",
+   "snapshot_at": "2026-10-26T12:07:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9322,7 +9416,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-25T12:06:00Z",
+   "snapshot_at": "2026-10-26T12:07:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9435,7 +9529,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-25T12:06:00Z",
+   "snapshot_at": "2026-10-26T12:07:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9556,7 +9650,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-25T12:06:00Z",
+   "snapshot_at": "2026-10-26T12:07:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9656,6 +9750,151 @@
     "why_it_mattered": "A nonexistent case was offered to a federal court as the legal standard, and the opposing party had to find the error.",
     "workflow": "Researching and drafting a brief opposing a motion to dismiss",
     "cluster": "AI drafted court filings with fabricated citations (2026)"
+   }
+  },
+  {
+   "incident_id": "INC0070",
+   "last_updated": "2026-10-26",
+   "published_version": 1,
+   "report_ids": [
+    "R0118",
+    "R0119",
+    "R0120"
+   ],
+   "review_status": "published",
+   "schema_version": 1,
+   "snapshot_at": "2026-10-26T12:07:00Z",
+   "published": {
+    "actions": {
+     "attempted": [],
+     "completed": [
+      "Automated decisions on eligibility for home support, Support at Home funding classification and priority category for older people assessed since 1 November 2025 (Ombudsman)"
+     ]
+    },
+    "authority": {
+     "status": "missing",
+     "statement": "No person decides or can change the classification and priority decisions; the law gives assessors and delegates no power to override them.",
+     "basis": "Documented: the Ombudsman states that a human decision-maker does not decide these matters and that there is no mechanism at law to override automated decisions considered clinically inappropriate. The automated decisions are made under the Aged Care Rules, and the Ombudsman did not find them unlawful.",
+     "present": [
+      "Aged Care Rules 2025 prescribing the IAT for home care assessments (Ombudsman)",
+      "An assessor's recorded answers to the assessment questions, which form the algorithm's inputs (Ombudsman)",
+      "A separate human approval decision by an assessment delegate, made on the basis of the automated decision (Ombudsman)"
+     ],
+     "absent": [
+      "Any legal power for assessors or delegates to override or change an automated IAT decision (Ombudsman)",
+      "Meaningful risk assessment, evaluation or analysis of the IAT in its current form before implementation, as found by the Ombudsman and disputed by the department (Ombudsman)"
+     ],
+     "unknown": [
+      "How many automated decisions were clinically inappropriate; the Ombudsman did not assess this",
+      "Whether any part of the system uses machine learning; the Ombudsman describes a criteria-based scoring system"
+     ]
+    },
+    "consequences": [
+     "Ombudsman opinion that the department's administration of the Single Assessment System, including the IAT, was unreasonable, with 10 recommendations (Ombudsman)",
+     "Six of the 10 recommendations accepted by the government and two, including the human override, noted (ABC News)",
+     "Department published the classification algorithm and business rules on 6 October 2026, after responding to the draft report (Ombudsman)",
+     "Escalation pathway for exceptional circumstances legislated, and an independent review commissioned with a report due in the first half of 2027 (ABC News)"
+    ],
+    "controls": [
+     {
+      "basis": "documented",
+      "control": "Human override of automated IAT decisions",
+      "failure": "The tool appears to have been built with an override mechanism, but no legal mechanism lets assessors or delegates use it."
+     },
+     {
+      "basis": "documented",
+      "control": "Risk assessment and evaluation before implementation",
+      "failure": "The Ombudsman found none was meaningful for the IAT in its current form; the department does not accept this."
+     },
+     {
+      "basis": "documented",
+      "control": "Public explanation of how the algorithm converts inputs into outcomes",
+      "failure": "None was publicly available as recently as August 2026; the department published the algorithm and business rules on 6 October 2026."
+     }
+    ],
+    "defect_category": "human_review_absent",
+    "defect_label": "Decision affecting a person executed without human review",
+    "deployment": "deployed",
+    "disclosed_basis": "Commonwealth Ombudsman own motion investigation report dated October 2026, released 26 October 2026 (AEDT) and covered by ABC News the same day",
+    "disclosed_on": "2026-10-26",
+    "enforcement": {
+     "enforcement_point": "Issuance of each automated IAT decision on classification and priority, before it is notified to the older person and used for approval.",
+     "decision_state": "Hold",
+     "reason": "The decision sets an older person's funding level and waiting time, and no assessor or delegate has confirmed it is clinically appropriate.",
+     "authority_requirement": "A named assessment delegate records that the classification and priority fit the person's assessed needs, or substitutes a different decision with reasons.",
+     "condition": "Applies to every automated classification and priority decision. A substitution power would need the legislative change the Ombudsman recommended.",
+     "required_response": "Hold the decision and route it to the delegate with the assessor's view on clinical appropriateness.",
+     "responder_action": "Confirm the automated outcome or record a substitute decision with reasons.",
+     "next_event": "The decision is notified and used for approval only after the delegate's recorded confirmation or substitution.",
+     "responsible_role": "Assessment delegate and departmental IAT system owner (proposed roles)"
+    },
+    "evidence_note": "Primary Ombudsman investigation report states how the automated decisions are made, that the law allows no override, and the finding of unreasonable administration; the department's response is printed in the report. The Ombudsman did not assess whether the algorithm's outcomes are clinically correct, and the department disputes the finding on risk assessment. Appeal counts come from ABC News reporting.",
+    "evidence_strength": "strong",
+    "facts": [
+     "After an assessor completes the assessment questions, the IAT's algorithms decide whether the older person is eligible for the Commonwealth Home Support Program or the Support at Home program and, for Support at Home, set the funding classification and priority category. [S113 pp. 5 to 6]",
+     "The Ombudsman states that under the law these automated decisions cannot be overridden and changed, even if they are clinically inappropriate, and that a human decision-maker does not decide these matters. [S113 p. 6]",
+     "Support at Home funding has eight annual classification levels, from $10,731.00 to $78,106.35, and the priority category indicates how long the person is likely to wait, from under a month for urgent to 7 to 8 months for standard. [S113 Part 1]",
+     "The Ombudsman found the department implemented the IAT in its current form without any meaningful risk assessment, evaluation or analysis, despite the obvious risks of automated decision-making that does not allow human override. [S113 p. 12]",
+     "The Ombudsman found that the IAT appears to have been built with an override mechanism, but there is no mechanism at law to override and change automated decisions considered clinically inappropriate. [S113 p. 12]",
+     "Until the Act and the Rules were introduced in October 2025, the department had been incorrectly advising assessment providers and the public that automated IAT outcomes could be changed. [S113 pp. 12 to 13]",
+     "The Ombudsman formed the opinion that the department's administration of the Single Assessment System, including the implementation of the IAT, has been unreasonable, and said a reasonable person would lack confidence that the system is fair and consistent. [S113 pp. 11 to 12]",
+     "The Ombudsman did not assess the clinical appropriateness of the algorithm and states that its findings do not establish that the algorithm in fact produces clinically inappropriate outcomes. [S113 pp. 11 to 12]",
+     "The Ombudsman recommended a bill to let assessment delegates substitute their own decision for an automated IAT decision; the department noted this recommendation, pointing to the government's planned escalation pathway, and did not accept it. [S113 recommendation 1 and agency response]",
+     "ABC News reported that hundreds of people have appealed the algorithm's decisions, a more than five-fold increase on appeals in the previous year, and that the government passed legislation the week before the report for an escalation pathway in exceptional circumstances. [S114]",
+     "The Minister for Aged Care said the escalation pathway lets cases that cannot be appropriately assessed with the IAT be escalated to an alternate clinically informed approach, and that it is being implemented on 11 January. [S115]"
+    ],
+    "incident_date": "From 1 November 2025, continuing at the date of the report",
+    "incident_date_basis": "The department's response in the report states the IAT and its algorithms were introduced on 1 November 2025; the Ombudsman reports that the law still allows no override.",
+    "inferences": [
+     "The assessor's judgement shapes the inputs, while the scoring rules make the decision on funding and priority, leaving no point at which a person can lawfully change the result.",
+     "The escalation pathway covers exceptional or complex cases, which is narrower than the general substitution power the Ombudsman recommended, so most automated decisions remain without a human override.",
+     "The minister did not state the year for 11 January; given the timing of the interview, it appears to mean January 2027."
+    ],
+    "location": {
+     "documented": true,
+     "status": "established",
+     "label": "Canberra, Australia (Commonwealth Ombudsman)",
+     "lat": -35.2809,
+     "lon": 149.13,
+     "kind": "jurisdiction",
+     "basis": "The Commonwealth Ombudsman made the finding. Pin placed at Canberra as the seat of the Commonwealth Ombudsman, not at any assessment provider."
+    },
+    "organization": "Department of Health, Disability and Ageing (Australia); affected: older people assessed for government-funded home support",
+    "rules": [],
+    "sources": [
+     {
+      "id": "S113",
+      "name": "Commonwealth Ombudsman: Automation and oversight in Aged Care: flaws in the design and operation of the Single Assessment System (own motion investigation report)",
+      "url": "https://www.ombudsman.gov.au/__data/assets/pdf_file/0019/331264/Automation-and-oversight-in-Aged-Care.pdf",
+      "published": "2026-10-26",
+      "type": "primary (ombudsman investigation report)",
+      "report_id": "R0118",
+      "retrieved": "2026-10-26"
+     },
+     {
+      "id": "S114",
+      "name": "ABC News: Aged care funding algorithm neither fair nor consistent, ombudsman finds",
+      "url": "https://www.abc.net.au/news/2026-10-26/ombudsman-finds-automation-in-aged-care-lacks-safeguards/107308730",
+      "published": "2026-10-26",
+      "type": "secondary (news report)",
+      "report_id": "R0119",
+      "retrieved": "2026-10-26"
+     },
+     {
+      "id": "S115",
+      "name": "Department of Health, Disability and Ageing: TV interview with Minister Rae on ABC Afternoon Briefing (transcript)",
+      "url": "https://www.health.gov.au/ministers/the-hon-sam-rae-mp/media/tv-interview-with-minister-rae-on-abc-afternoon-briefing?language=en",
+      "published": "2026-10-26",
+      "type": "primary (government statement)",
+      "report_id": "R0120",
+      "retrieved": "2026-10-26"
+     }
+    ],
+    "summary": "Since 1 November 2025, the Integrated Assessment Tool's algorithms have decided whether an older Australian is eligible for home support, their Support at Home funding classification and their priority category, from answers an assessor records. The law gives assessors and delegates no power to override those decisions, even where they consider them clinically inappropriate. The Commonwealth Ombudsman found the department's administration unreasonable, found it implemented the tool without meaningful risk assessment and had wrongly advised that outcomes could be changed, and recommended legislation to let delegates substitute their own decision. The department noted that recommendation without accepting it; the government is introducing a narrower escalation pathway.",
+    "system": "Integrated Assessment Tool classification and prioritisation algorithms, a criteria-based scoring system in the department's assessment application (the Ombudsman describes deterministic automated decision-making; no AI model is named)",
+    "title": "Algorithm sets older Australians' home care funding and waiting priority with no lawful human override; Australia's Ombudsman finds the department's administration unreasonable",
+    "why_it_mattered": "Decisions that set how much home care an older person receives and how long they wait are made by scoring rules that no person can lawfully change, even when the assessor considers the result clinically wrong.",
+    "workflow": "Assessing older people's eligibility, funding classification and priority for government-funded home care"
    }
   }
  ]
