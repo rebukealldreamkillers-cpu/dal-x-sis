@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-26",
- "last_check": "2026-10-26T12:07:00Z",
+ "updated": "2026-10-27",
+ "last_check": "2026-10-27T12:08:00Z",
  "next_incident_number": 71,
  "next_report_number": 121,
  "excluded_candidates": [
@@ -820,6 +820,108 @@
    "reason": "The court remitted the cases and set a proof test; it made no finding that a specific decision was solely automated with significant effect.",
    "url": "https://www.theleveragedyears.com/ai-regulation-news/germany-bgh-schufa-score-art-15-1-h-gdpr-proof-test-2026",
    "tracker": false
+  },
+  {
+   "name": "Storm-3168 (JADEPUFFER) deletion of storage accounts in an Azure tenant (Microsoft, 25 September 2026; covered 26 October 2026)",
+   "reason": "Attacker operated intrusion; Microsoft assesses the activity as likely automated or scripted and does not describe an agent reasoning through the Azure steps, and no authority layer sits in the attacker's path.",
+   "url": "https://www.orcarouter.ai/blog/2026-09-25-jadepuffer-storm3168-azure-destruction",
+   "tracker": false
+  },
+  {
+   "name": "Cathedral researchers' AI agents reach internal Anthropic data through third party business software (Washington Post, 26 October 2026)",
+   "reason": "Testing was done under an Anthropic program that invites outside researchers, so the access was sanctioned security research rather than an unauthorized action.",
+   "url": "https://www.washingtonpost.com/technology/2026/10/26/researchers-cybersecurity-start-up-cathedral-got-inside-anthropic/",
+   "tracker": false
+  },
+  {
+   "name": "Cloudflare Workers AI GLM-5.3 responses carrying other customers' request data (Cloudflare post incident report, 26 October 2026)",
+   "reason": "A serving configuration error and an inference engine bug returned stale cache data; no AI system decided or executed an action, so this is an infrastructure fault outside the inclusion bar.",
+   "url": "https://www.datastudios.org/post/cloudflare-workers-ai-glm-5-3-kv-cache-exposure-155-responses-sglang",
+   "tracker": false
+  },
+  {
+   "name": "Symantec honeypot capture of the \"Skynet\" autonomous LLMjacking agent (26 October 2026)",
+   "reason": "Attacker built agent with unknown operators and no counted victims; no authority layer sits in the attacker's path, matching the DIVD exclusion.",
+   "url": "https://www.techradar.com/pro/security/rogue-ai-agent-engages-skynet-mode-to-search-the-internet-for-exposed-llms-to-hijack-and-run-malware-attacks",
+   "tracker": false
+  },
+  {
+   "name": "Xint compaction smuggling bypass of OpenAI's reasoning trace protections (27 October 2026)",
+   "reason": "Vulnerability research disclosed through a bug bounty; no executed action reached an outside party.",
+   "url": "https://www.csoonline.com/article/4240662/openais-august-fix-for-theft-of-reasoning-traces-was-quickly-bypassed.html",
+   "tracker": false
+  },
+  {
+   "name": "Hark AI agent charges a user 27.70 dollars for a pizza order it said would wait for a promotional credit (X post relayed by Axios, 20 October 2026)",
+   "reason": "Single social media post by a relative with screenshots; the charge was not independently checked and the stakes are low.",
+   "url": "https://nope.net/incidents/2026-user-says-hark-ai-agent-placed-charged-pizza-order-after-saying-it-would-wait-for-promotional-credit-first-person",
+   "tracker": false
+  },
+  {
+   "name": "Grok Bot connects itself to users' X Money accounts after an update (user posts, 24 October 2026)",
+   "reason": "User posts only; xAI describes the linking as designed behavior of an update, no transfer or purchase is reported, and no independent reporting was found.",
+   "url": "https://www.aipokolypse.com/incidents/2026-grok-bot-connects-itself-to-users-x-money-accounts-without-being-asked-reco",
+   "tracker": false
+  },
+  {
+   "name": "Pakistan NidaaOne AI helpline filtering out 214,603 valid complaints (Plausible Post, 24 October 2026)",
+   "reason": "Single outlet with no corroborating official record or mainstream report found; the account cannot be verified.",
+   "url": "https://plausiblepost.com/news/pakistan-inquiry-finds-ai-helpline-buried-214603-citizen-complaints",
+   "tracker": false
+  },
+  {
+   "name": "Claude Code agent removes a container and loses the only copy of a crash log (PulseAugur, 25 October 2026)",
+   "reason": "Single developer account with low stakes and no outside party affected.",
+   "url": "https://pulseaugur.com/cluster/320622-ai-agent-deletes-critical-crash-log-due-to-broad-restart-permission",
+   "tracker": false
+  },
+  {
+   "name": "South African Labour Court stay of a CCMA arbitration whose ruling relied on a nonexistent Constitutional Court judgment (23 October 2026)",
+   "reason": "The court says the commissioner appears to have relied on AI but makes no finding of AI use and records no admission, so the court sanction policy is not met.",
+   "url": "https://groundup.org.za/media/uploads/documents/sa_post_office_in_business_rescue_v_fakude_no_2026_249228_lc.pdf",
+   "tracker": false
+  },
+  {
+   "name": "C.D. Cal. 5,000 dollar sanction over a ChatGPT drafted opposition brief citing a nonexistent case in the Los Angeles Film School qui tam case (23 October 2026, covered 26 October 2026)",
+   "reason": "The primary sanctions order is not yet available on CourtListener RECAP; revisit when the order is posted, since press reports describe a relator's admission of ChatGPT use and a sanction.",
+   "url": "https://variety.com/2026/film/news/l-a-film-school-fraud-suit-ai-use-fine-1236931323/",
+   "tracker": false
+  },
+  {
+   "name": "Delaware Court of Chancery magistrate's final report on apparently hallucinated citations in a Section 220 brief (30 September 2026, covered 25 October 2026)",
+   "reason": "No sanction was imposed, and the plaintiff did not deny AI use rather than admitting it, so the court sanction policy is not met.",
+   "url": "https://www.theleveragedyears.com/ai-regulation-news/delaware-chancery-magistrate-liu-lynk-section-220-genai-certification-2026",
+   "tracker": false
+  },
+  {
+   "name": "Cagliari Court of Appeal upholds an Oristano civil ruling containing a generative AI phrase (26 October 2026)",
+   "reason": "The appeals court found no delegation of the decision to the AI tool and no resulting harm is documented.",
+   "url": "https://www.unionesarda.it/en/sardinia/ai-wears-the-toga-the-verdict-written-with-the-algorithm-is-confirmed-wtooilmx",
+   "tracker": false
+  },
+  {
+   "name": "Korean government AI services give outdated tax answers to a newspaper's test questions (Seoul Economic Daily, 26 October 2026)",
+   "reason": "Journalist test queries; no executed action or affected outside party is documented.",
+   "url": "https://en.sedaily.com/technology/2026/10/26/government-ai-services-give-wrong-answers-to-simple",
+   "tracker": false
+  },
+  {
+   "name": "Anthropic redacted Risk Report examples of Mythos 5 working around sandbox restrictions (published 27 October 2026)",
+   "reason": "Internal training and evaluation examples with no outside party affected; the AISI case it mentions is already INC0023.",
+   "url": "https://assets.claude.com/f61d49fa5596956a5dec75fea0e973bf6a6a8378.pdf",
+   "tracker": false
+  },
+  {
+   "name": "Texas Attorney General lawsuit against OpenAI over ChatGPT safety claims (filed 23 October 2026)",
+   "reason": "Complaint allegations about product safety and marketing, not a documented executed action with a finding.",
+   "url": "https://therecord.media/texas-sues-openai-deceiving-customers",
+   "tracker": false
+  },
+  {
+   "name": "Huntress follow-up on the ConnectWise Cloud Backup credential abuse attributed to Storm-0940 (26 October 2026)",
+   "reason": "New reporting on an already excluded attacker operated campaign; Huntress puts its own confidence that an LLM was involved at low to medium.",
+   "url": "https://www.huntress.com/blog/connectwise-attack-ai",
+   "tracker": false
   }
  ],
  "rows": [
@@ -965,7 +1067,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-26T12:07:00Z"
+   "snapshot_at": "2026-10-27T12:08:00Z"
   },
   {
    "incident_id": "INC0002",
@@ -1108,7 +1210,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-26T12:07:00Z"
+   "snapshot_at": "2026-10-27T12:08:00Z"
   },
   {
    "incident_id": "INC0003",
@@ -1230,7 +1332,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-26T12:07:00Z"
+   "snapshot_at": "2026-10-27T12:08:00Z"
   },
   {
    "incident_id": "INC0004",
@@ -1367,7 +1469,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-26T12:07:00Z"
+   "snapshot_at": "2026-10-27T12:08:00Z"
   },
   {
    "incident_id": "INC0005",
@@ -1511,7 +1613,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-26T12:07:00Z"
+   "snapshot_at": "2026-10-27T12:08:00Z"
   },
   {
    "incident_id": "INC0006",
@@ -1658,7 +1760,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-26T12:07:00Z"
+   "snapshot_at": "2026-10-27T12:08:00Z"
   },
   {
    "incident_id": "INC0007",
@@ -1763,7 +1865,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-26T12:07:00Z"
+   "snapshot_at": "2026-10-27T12:08:00Z"
   },
   {
    "incident_id": "INC0008",
@@ -1899,7 +2001,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-26T12:07:00Z"
+   "snapshot_at": "2026-10-27T12:08:00Z"
   },
   {
    "incident_id": "INC0009",
@@ -2011,7 +2113,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-26T12:07:00Z"
+   "snapshot_at": "2026-10-27T12:08:00Z"
   },
   {
    "incident_id": "INC0010",
@@ -2133,7 +2235,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-26T12:07:00Z"
+   "snapshot_at": "2026-10-27T12:08:00Z"
   },
   {
    "incident_id": "INC0011",
@@ -2275,7 +2377,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-26T12:07:00Z"
+   "snapshot_at": "2026-10-27T12:08:00Z"
   },
   {
    "incident_id": "INC0012",
@@ -2417,7 +2519,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-26T12:07:00Z"
+   "snapshot_at": "2026-10-27T12:08:00Z"
   },
   {
    "incident_id": "INC0013",
@@ -2577,7 +2679,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-26T12:07:00Z"
+   "snapshot_at": "2026-10-27T12:08:00Z"
   },
   {
    "incident_id": "INC0014",
@@ -2725,7 +2827,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-26T12:07:00Z"
+   "snapshot_at": "2026-10-27T12:08:00Z"
   },
   {
    "incident_id": "INC0015",
@@ -2862,7 +2964,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-26T12:07:00Z"
+   "snapshot_at": "2026-10-27T12:08:00Z"
   },
   {
    "incident_id": "INC0016",
@@ -2968,7 +3070,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-26T12:07:00Z"
+   "snapshot_at": "2026-10-27T12:08:00Z"
   },
   {
    "incident_id": "INC0017",
@@ -3098,7 +3200,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-26T12:07:00Z"
+   "snapshot_at": "2026-10-27T12:08:00Z"
   },
   {
    "incident_id": "INC0018",
@@ -3244,7 +3346,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-26T12:07:00Z"
+   "snapshot_at": "2026-10-27T12:08:00Z"
   },
   {
    "incident_id": "INC0019",
@@ -3378,7 +3480,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-26T12:07:00Z"
+   "snapshot_at": "2026-10-27T12:08:00Z"
   },
   {
    "incident_id": "INC0020",
@@ -3516,7 +3618,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-26T12:07:00Z"
+   "snapshot_at": "2026-10-27T12:08:00Z"
   },
   {
    "incident_id": "INC0021",
@@ -3641,7 +3743,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-26T12:07:00Z"
+   "snapshot_at": "2026-10-27T12:08:00Z"
   },
   {
    "incident_id": "INC0022",
@@ -3808,7 +3910,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-26T12:07:00Z"
+   "snapshot_at": "2026-10-27T12:08:00Z"
   },
   {
    "incident_id": "INC0023",
@@ -3970,7 +4072,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-26T12:07:00Z"
+   "snapshot_at": "2026-10-27T12:08:00Z"
   },
   {
    "incident_id": "INC0024",
@@ -4118,7 +4220,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-26T12:07:00Z"
+   "snapshot_at": "2026-10-27T12:08:00Z"
   },
   {
    "incident_id": "INC0025",
@@ -4272,7 +4374,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-26T12:07:00Z"
+   "snapshot_at": "2026-10-27T12:08:00Z"
   },
   {
    "incident_id": "INC0026",
@@ -4419,7 +4521,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-26T12:07:00Z"
+   "snapshot_at": "2026-10-27T12:08:00Z"
   },
   {
    "incident_id": "INC0027",
@@ -4555,7 +4657,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-26T12:07:00Z"
+   "snapshot_at": "2026-10-27T12:08:00Z"
   },
   {
    "incident_id": "INC0028",
@@ -4680,7 +4782,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-26T12:07:00Z"
+   "snapshot_at": "2026-10-27T12:08:00Z"
   },
   {
    "incident_id": "INC0029",
@@ -4802,7 +4904,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-26T12:07:00Z"
+   "snapshot_at": "2026-10-27T12:08:00Z"
   },
   {
    "incident_id": "INC0030",
@@ -4918,7 +5020,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-26T12:07:00Z"
+   "snapshot_at": "2026-10-27T12:08:00Z"
   },
   {
    "incident_id": "INC0031",
@@ -5035,7 +5137,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-26T12:07:00Z"
+   "snapshot_at": "2026-10-27T12:08:00Z"
   },
   {
    "incident_id": "INC0032",
@@ -5142,7 +5244,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-26T12:07:00Z"
+   "snapshot_at": "2026-10-27T12:08:00Z"
   },
   {
    "incident_id": "INC0033",
@@ -5153,7 +5255,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-26T12:07:00Z",
+   "snapshot_at": "2026-10-27T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5289,7 +5391,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-26T12:07:00Z",
+   "snapshot_at": "2026-10-27T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5433,7 +5535,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-26T12:07:00Z",
+   "snapshot_at": "2026-10-27T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5570,7 +5672,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-26T12:07:00Z",
+   "snapshot_at": "2026-10-27T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5717,7 +5819,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-26T12:07:00Z",
+   "snapshot_at": "2026-10-27T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5847,7 +5949,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-26T12:07:00Z",
+   "snapshot_at": "2026-10-27T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5978,7 +6080,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-26T12:07:00Z",
+   "snapshot_at": "2026-10-27T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6111,7 +6213,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-26T12:07:00Z",
+   "snapshot_at": "2026-10-27T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6242,7 +6344,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-26T12:07:00Z",
+   "snapshot_at": "2026-10-27T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6375,7 +6477,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-26T12:07:00Z",
+   "snapshot_at": "2026-10-27T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [
@@ -6518,7 +6620,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-26T12:07:00Z",
+   "snapshot_at": "2026-10-27T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6636,7 +6738,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-26T12:07:00Z",
+   "snapshot_at": "2026-10-27T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6755,7 +6857,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-26T12:07:00Z",
+   "snapshot_at": "2026-10-27T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6879,7 +6981,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-26T12:07:00Z",
+   "snapshot_at": "2026-10-27T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7006,7 +7108,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-26T12:07:00Z",
+   "snapshot_at": "2026-10-27T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7129,7 +7231,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-26T12:07:00Z",
+   "snapshot_at": "2026-10-27T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7256,7 +7358,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-26T12:07:00Z",
+   "snapshot_at": "2026-10-27T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7378,7 +7480,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-26T12:07:00Z",
+   "snapshot_at": "2026-10-27T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [
@@ -7498,7 +7600,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-26T12:07:00Z",
+   "snapshot_at": "2026-10-27T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7629,7 +7731,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-26T12:07:00Z",
+   "snapshot_at": "2026-10-27T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7750,7 +7852,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-26T12:07:00Z",
+   "snapshot_at": "2026-10-27T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7893,7 +7995,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-26T12:07:00Z",
+   "snapshot_at": "2026-10-27T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8007,7 +8109,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-26T12:07:00Z",
+   "snapshot_at": "2026-10-27T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8119,7 +8221,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-26T12:07:00Z",
+   "snapshot_at": "2026-10-27T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8243,7 +8345,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-26T12:07:00Z",
+   "snapshot_at": "2026-10-27T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8368,7 +8470,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-26T12:07:00Z",
+   "snapshot_at": "2026-10-27T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8488,7 +8590,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-26T12:07:00Z",
+   "snapshot_at": "2026-10-27T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8610,7 +8712,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-26T12:07:00Z",
+   "snapshot_at": "2026-10-27T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8721,7 +8823,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-26T12:07:00Z",
+   "snapshot_at": "2026-10-27T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8834,7 +8936,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-26T12:07:00Z",
+   "snapshot_at": "2026-10-27T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8946,7 +9048,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-26T12:07:00Z",
+   "snapshot_at": "2026-10-27T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9059,7 +9161,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-26T12:07:00Z",
+   "snapshot_at": "2026-10-27T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9186,7 +9288,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-26T12:07:00Z",
+   "snapshot_at": "2026-10-27T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9296,7 +9398,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-26T12:07:00Z",
+   "snapshot_at": "2026-10-27T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9416,7 +9518,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-26T12:07:00Z",
+   "snapshot_at": "2026-10-27T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9529,7 +9631,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-26T12:07:00Z",
+   "snapshot_at": "2026-10-27T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9650,7 +9752,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-26T12:07:00Z",
+   "snapshot_at": "2026-10-27T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9763,7 +9865,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-26T12:07:00Z",
+   "snapshot_at": "2026-10-27T12:08:00Z",
    "published": {
     "actions": {
      "attempted": [],
