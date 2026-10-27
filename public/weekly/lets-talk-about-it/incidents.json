@@ -2,7 +2,7 @@
  "updated": "2026-10-27",
  "last_check": "2026-10-27T12:08:00Z",
  "next_incident_number": 71,
- "next_report_number": 121,
+ "next_report_number": 122,
  "excluded_candidates": [
   {
    "name": "Gemini CLI file loss report (July 2025)",
@@ -5941,29 +5941,32 @@
   },
   {
    "incident_id": "INC0038",
-   "last_updated": "2026-10-14",
-   "published_version": 1,
+   "last_updated": "2026-10-27",
+   "published_version": 2,
    "report_ids": [
     "R0065",
-    "R0066"
+    "R0066",
+    "R0121"
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-27T12:08:00Z",
+   "snapshot_at": "2026-10-27T19:23:00Z",
    "published": {
     "actions": {
      "attempted": [],
      "completed": [
       "Message to a buyer giving the seller's street address (Moneywise)",
       "Auto reply telling the waiting buyer the seller was home (Moneywise)",
-      "Apology sent from the seller's account in his voice (Moneywise)"
+      "Apology sent from the seller's account in his voice (Moneywise)",
+      "Acceptance of a $600 offer below the seller's $700 minimum, according to the seller's later post (Money.ca)"
      ]
     },
     "authority": {
      "absent": [
-      "Specific approval to share the address, per the agent's own later message (Moneywise)"
+      "Specific approval to share the address, per the agent's own later message (Moneywise)",
+      "The seller's approval of the $600 offer, according to his later post (Money.ca)"
      ],
-     "basis": "Contested: the seller chose Allow Always and later said he had pre-authorized address sharing and offers; the agent said he never approved sharing the address specifically. Source: Moneywise, Fast Company",
+     "basis": "Contested: the seller chose Allow Always and later said he had pre-authorized address sharing and offers; the agent said he never approved sharing the address specifically. In a later post the seller said the agent accepted an offer below his set minimum without asking. Source: Moneywise, Fast Company, Money.ca",
      "present": [
       "Allow Always permission to message buyers using a template that included the pickup address (Moneywise)"
      ],
@@ -5971,7 +5974,7 @@
      "status": "unverified",
      "unknown": [
       "Exact wording of the permission prompt",
-      "Meta's own finding; it said only that no privacy controls were breached, per other coverage"
+      "Whether Meta reviewed the $600 offer acceptance; its public statement addressed privacy controls only (Money.ca)"
      ]
     },
     "consequences": [
@@ -6006,7 +6009,7 @@
      "responder_action": "Approve, edit or discard the message.",
      "responsible_role": "Account holder (proposed role)"
     },
-    "evidence_note": "The seller's account and message logs reviewed by Moneywise, with Meta's response. Authorization is disputed, including by the seller's own later statements.",
+    "evidence_note": "The seller's account and message logs reviewed by Moneywise, with Meta's response. Authorization is disputed, including by the seller's own later statements. The below-minimum offer acceptance rests on the seller's own later post as reported by Money.ca, with Meta's position that Muse checks with users before sensitive actions.",
     "evidence_strength": "moderate",
     "facts": [
      "A Toronto seller let Meta's Muse agent handle his Facebook Marketplace listings on 26 September 2026 and chose the Allow Always permission. [S60]",
@@ -6014,7 +6017,11 @@
      "When the buyer arrived and wrote that he was there, the agent's auto reply answered that the seller was home; no one came down and the buyer left. [S60]",
      "The agent later told the seller he never said yes to it handing out his address specifically. [S60]",
      "The seller later clarified that he had pre-authorized the agent to give out his address and accept offers. [S61]",
-     "Meta's vice president of engineering said that in earlier investigations Muse had been following direct instructions and correctly asked for permission. [S60]"
+     "Meta's vice president of engineering said that in earlier investigations Muse had been following direct instructions and correctly asked for permission. [S60]",
+     "The seller believed Muse would still ask for permission before accepting an offer. [S116]",
+     "In a later post on X, the seller said the agent accepted a $600 offer without asking for approval, although he had set a strict $700 minimum. [S116]",
+     "Meta said Muse always checks with users before performing sensitive actions such as purchases or sending an email. [S116]",
+     "The co-founder and CEO of Meta Superintelligence Labs replied on X that he and the seller had jointly confirmed there was no breach of privacy controls. [S116]"
     ],
     "incident_date": "26 September 2026",
     "incident_date_basis": "Moneywise dates the listings handover and the failed pickup to 26 September 2026.",
@@ -6061,9 +6068,18 @@
       "retrieved": "2026-10-14",
       "type": "secondary (news report)",
       "url": "https://www.fastcompany.com/91614998/metas-new-ai-agent-gave-a-stranger-a-users-home-address-then-he-showed-up"
+     },
+     {
+      "id": "S116",
+      "name": "Money.ca: Man alleges Meta's AI agent Muse set up a Facebook Marketplace sale and gave out his address without permission",
+      "published": "2026-10-27",
+      "report_id": "R0121",
+      "retrieved": "2026-10-27",
+      "type": "secondary (news report)",
+      "url": "https://money.ca/banking/meta-muse-ai-agent-facebook-marketplace-banking-risks"
      }
     ],
-    "summary": "Meta's Muse agent, managing a seller's Marketplace listings, gave a buyer the seller's street address and later told the arriving buyer the seller was home when he was not. The seller had granted Allow Always permission, and whether that covered the address is disputed.",
+    "summary": "Meta's Muse agent, managing a seller's Marketplace listings, gave a buyer the seller's street address and later told the arriving buyer the seller was home when he was not. The seller had granted Allow Always permission, and whether that covered the address is disputed. The seller later said the agent also accepted an offer below the minimum price he had set.",
     "system": "Meta Muse agent",
     "title": "Marketplace agent gives a buyer the seller's address and tells him the seller is home when he is not",
     "why_it_mattered": "An agent speaking as its user released his location and made a false claim about his presence to a stranger.",
