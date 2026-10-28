@@ -1,8 +1,8 @@
 {
- "updated": "2026-10-27",
- "last_check": "2026-10-27T12:08:00Z",
+ "updated": "2026-10-28",
+ "last_check": "2026-10-28T12:07:00Z",
  "next_incident_number": 71,
- "next_report_number": 122,
+ "next_report_number": 125,
  "excluded_candidates": [
   {
    "name": "Gemini CLI file loss report (July 2025)",
@@ -922,6 +922,48 @@
    "reason": "New reporting on an already excluded attacker operated campaign; Huntress puts its own confidence that an LLM was involved at low to medium.",
    "url": "https://www.huntress.com/blog/connectwise-attack-ai",
    "tracker": false
+  },
+  {
+   "name": "Warp breach of agent decision logs and telemetry through a third-party vendor, attributed to an agent swarm (BleepingComputer, 27 October 2026)",
+   "reason": "Attacker operated intrusion; Warp has not documented which system ran it, what it executed, or whose AI it was, and the investigation is ongoing.",
+   "url": "https://www.bleepingcomputer.com/news/security/warp-discloses-breach-exposing-ai-agent-logs-user-telemetry-data/",
+   "tracker": false
+  },
+  {
+   "name": "TrendAI analysis of CyberStrikeAI and two other AI-assisted attack operations against Japanese organizations (27 October 2026)",
+   "reason": "Attacker operated campaigns reconstructed from exposed servers, consistent with earlier excluded threat actor cases; no deployer authority to check.",
+   "url": "https://thehackernews.com/2026/10/cyberstrikeai-uses-44-ai-agents-to.html",
+   "tracker": false
+  },
+  {
+   "name": "Codex agent sends 13 messages to a public open-source mailing list for one unchanged patch series (GitHub issue, 24 October 2026)",
+   "reason": "Single first-person GitHub issue with no corroboration or vendor response; session records not inspected.",
+   "url": "https://nope.net/incidents/2026-codex-agent-sent-13-messages-to-public-open-source-mailing-list-for-one-unchanged-patch-series-first-person-github-issue",
+   "tracker": false
+  },
+  {
+   "name": "HVAC company AI agent issues five capped refunds in one conversation (DEV Community, 27 October 2026)",
+   "reason": "Anonymous practitioner post with no named company, date or corroborating record.",
+   "url": "https://dev.to/chenwengui23/your-ai-had-a-500-refund-cap-it-issued-five-of-them-in-one-conversation-48m5",
+   "tracker": false
+  },
+  {
+   "name": "AI support agent refunds 212 customers twice after a timeout retry (DEV Community, summarized by TeckDeck, 26 October 2026)",
+   "reason": "Anonymous first-person post with no named company or corroborating record.",
+   "url": "https://teckdeck.io/posts/our-ai-agent-passed-its-eval-then-it-refunded-212-customers-twice",
+   "tracker": false
+  },
+  {
+   "name": "Manifold Security Agent Incident Ledger launch and aggregate counts (27 October 2026)",
+   "reason": "Aggregate tracker launch, not a new incident; its entries are screened individually where they surface.",
+   "url": "https://www.manifold.security/blog/introducing-agent-incident-ledger",
+   "tracker": false
+  },
+  {
+   "name": "UK Financial Ombudsman Service reports AI-written consumer complaints with invented references (FT, 26 October 2026)",
+   "reason": "Consumers drafting complaints with chatbots; no AI system executed an action on behalf of an organization.",
+   "url": "https://www.ft.com/content/5f56b300-f8a6-4834-a2e6-75902880ef87",
+   "tracker": false
   }
  ],
  "rows": [
@@ -1067,7 +1109,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-27T12:08:00Z"
+   "snapshot_at": "2026-10-28T12:07:00Z"
   },
   {
    "incident_id": "INC0002",
@@ -1210,7 +1252,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-27T12:08:00Z"
+   "snapshot_at": "2026-10-28T12:07:00Z"
   },
   {
    "incident_id": "INC0003",
@@ -1332,7 +1374,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-27T12:08:00Z"
+   "snapshot_at": "2026-10-28T12:07:00Z"
   },
   {
    "incident_id": "INC0004",
@@ -1469,7 +1511,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-27T12:08:00Z"
+   "snapshot_at": "2026-10-28T12:07:00Z"
   },
   {
    "incident_id": "INC0005",
@@ -1613,7 +1655,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-27T12:08:00Z"
+   "snapshot_at": "2026-10-28T12:07:00Z"
   },
   {
    "incident_id": "INC0006",
@@ -1760,7 +1802,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-27T12:08:00Z"
+   "snapshot_at": "2026-10-28T12:07:00Z"
   },
   {
    "incident_id": "INC0007",
@@ -1865,7 +1907,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-27T12:08:00Z"
+   "snapshot_at": "2026-10-28T12:07:00Z"
   },
   {
    "incident_id": "INC0008",
@@ -2001,7 +2043,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-27T12:08:00Z"
+   "snapshot_at": "2026-10-28T12:07:00Z"
   },
   {
    "incident_id": "INC0009",
@@ -2113,7 +2155,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-27T12:08:00Z"
+   "snapshot_at": "2026-10-28T12:07:00Z"
   },
   {
    "incident_id": "INC0010",
@@ -2235,11 +2277,11 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-27T12:08:00Z"
+   "snapshot_at": "2026-10-28T12:07:00Z"
   },
   {
    "incident_id": "INC0011",
-   "last_updated": "2026-10-12",
+   "last_updated": "2026-10-28",
    "published": {
     "actions": {
      "attempted": [
@@ -2266,7 +2308,8 @@
     "cluster": "Third party cyber evaluations with internet access left open (2026)",
     "consequences": [
      "Affected party notified after discovery (Anthropic)",
-     "Included in METR's independent investigation (Anthropic)"
+     "Included in METR's independent investigation (Anthropic)",
+     "Disclosed to investors as a risk factor in Anthropic's IPO registration statement, 26 October 2026 (Anthropic S-1)"
     ],
     "controls": [
      {
@@ -2288,7 +2331,7 @@
     "defect_category": "boundary_unenforced",
     "defect_label": "Agent acted outside its authorized environment",
     "deployment": "evaluation_real_systems",
-    "disclosed_basis": "Anthropic alignment assessment",
+    "disclosed_basis": "Anthropic alignment assessment; restated in Anthropic's Form S-1 registration statement of 26 October 2026",
     "disclosed_on": "2026-09-09",
     "enforcement": {
      "authority_requirement": "Abort needs no approval. Authentication outside the range needs a named target authorization, which this evaluation never grants.",
@@ -2301,18 +2344,21 @@
      "responder_action": "Confirm the run ended, check egress logs, and fix the configuration before the next run.",
      "responsible_role": "Evaluation environment owner at the partner, with the model owner's security contact (proposed roles)"
     },
-    "evidence_note": "Detailed company disclosure; affected party unnamed.",
+    "evidence_note": "Detailed company disclosure, restated in a securities filing; affected party unnamed.",
     "evidence_strength": "strong",
     "facts": [
      "An early Claude Opus 4.6 checkpoint gained admin access to a third party machine in January 2026. [S19]",
      "It tried to abort eight times and was blocked by a harness misconfiguration. [S19]",
-     "Anthropic found the incident in August 2026 and notified the affected party. [S19]"
+     "Anthropic found the incident in August 2026 and notified the affected party. [S19]",
+     "Anthropic's IPO registration statement says that, after being unable to abort an impossible task, an early version of a model used a password it found to gain administrator access to a third party's system, harvested additional credentials, changed system settings and read one individual's personal information, and that the affected parties were notified. [S117 p. 48]",
+     "The filing says four of Anthropic's models gained unauthorized access to real third-party systems during these evaluations, in sessions lasting roughly 10 to 34 hours of active work, and that its investigation found no evidence any model coordinated with other agents, pursued goals beyond its assigned task, or attempted to evade oversight. [S117 p. 48]"
     ],
     "incident_date": "January 2026",
     "incident_date_basis": "Per Anthropic; found in August 2026 while assembling transcripts for METR.",
     "inferences": [
      "A working abort path is itself an authority control: when the model tried to stop, the system should have let it.",
-     "The simulated scope is documented; that access to a real machine exceeded it is inferred from that scope."
+     "The simulated scope is documented; that access to a real machine exceeded it is inferred from that scope.",
+     "The filing gives a range of 10 to 34 hours across the four incidents; the duration of this run is not stated separately."
     ],
     "location": {
      "basis": "Neither the affected party nor any location is named. Headquarters are not used as a substitute.",
@@ -2362,6 +2408,15 @@
       "retrieved": "2026-10-10",
       "type": "secondary",
       "url": "https://www.itsecurityguru.org/2026/09/11/anthropic-discloses-fourth-incident-of-claude-breaching-real-systems-during-security-tests/"
+     },
+     {
+      "id": "S117",
+      "name": "Anthropic, PBC: Form S-1 registration statement filed with the US Securities and Exchange Commission, Risk Factors",
+      "published": "2026-10-26",
+      "report_id": "R0122",
+      "retrieved": "2026-10-28",
+      "type": "primary (securities filing)",
+      "url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm"
      }
     ],
     "summary": "The model made its own target unreachable, tried eight times to abort, and could not because of a harness misconfiguration. It then left through an open internet path, reached a third party's machine it believed was part of the exercise, used a password from a file to get admin access, harvested credentials, changed settings, and read one person's personal information.",
@@ -2370,14 +2425,15 @@
     "why_it_mattered": "A failed abort turned into real intrusion. Anthropic says it would not have happened had the environment been isolated as intended, and it went unnoticed for about seven months.",
     "workflow": "Capture the flag cyber evaluation in a partner's environment that was meant to be offline"
    },
-   "published_version": 2,
+   "published_version": 3,
    "report_ids": [
     "R0019",
-    "R0020"
+    "R0020",
+    "R0122"
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-27T12:08:00Z"
+   "snapshot_at": "2026-10-28T12:07:00Z"
   },
   {
    "incident_id": "INC0012",
@@ -2519,7 +2575,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-27T12:08:00Z"
+   "snapshot_at": "2026-10-28T12:07:00Z"
   },
   {
    "incident_id": "INC0013",
@@ -2679,7 +2735,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-27T12:08:00Z"
+   "snapshot_at": "2026-10-28T12:07:00Z"
   },
   {
    "incident_id": "INC0014",
@@ -2827,7 +2883,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-27T12:08:00Z"
+   "snapshot_at": "2026-10-28T12:07:00Z"
   },
   {
    "incident_id": "INC0015",
@@ -2964,11 +3020,11 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-27T12:08:00Z"
+   "snapshot_at": "2026-10-28T12:07:00Z"
   },
   {
    "incident_id": "INC0016",
-   "last_updated": "2026-10-12",
+   "last_updated": "2026-10-28",
    "published": {
     "actions": {
      "attempted": [],
@@ -2978,18 +3034,20 @@
     },
     "authority": {
      "absent": [],
-     "basis": "Minister's statement",
+     "basis": "Minister's statements (SAnews, April 2026; TechCabal interview, October 2026)",
      "present": [],
-     "statement": "AI use is the Minister's most plausible explanation, not a confirmed finding. Who approved publication is not stated.",
+     "statement": "The Minister first called AI the most plausible explanation and later said officials failed to disclose AI use that contributed to the fabricated references. Who approved publication is not stated.",
      "status": "unverified",
      "unknown": [
-      "Whether AI generated the citations",
+      "Which AI tool was used and how much of the reference list it produced",
       "Who approved publication"
      ]
     },
     "consequences": [
      "Draft policy withdrawn (SAnews)",
-     "Consequence management for officials responsible for drafting and quality assurance (SAnews)"
+     "Consequence management for officials responsible for drafting and quality assurance (SAnews)",
+     "Two officials suspended over undisclosed AI use; one resigned and disciplinary proceedings continue against the other (TechCabal)",
+     "Replacement policy expected before Cabinet by the end of March 2027, with public consultation from April (TechCabal)"
     ],
     "controls": [
      {
@@ -3014,17 +3072,19 @@
      "responder_action": "Verify or remove each listed reference and certify before release.",
      "responsible_role": "Departmental quality assurance official (proposed role)"
     },
-    "evidence_note": "Government statement confirms fictitious sources; AI involvement is the Minister's most plausible explanation, not a finding.",
+    "evidence_note": "Government statement confirms fictitious sources. The Minister's later account, reported by TechCabal, attributes them to undisclosed AI use; no investigation report is published.",
     "evidence_strength": "moderate",
     "facts": [
      "The draft was published for comment on 10 April 2026 with comments due by 10 June. [S28]",
      "Internal questions confirmed the draft contained fictitious sources. [S28]",
-     "The Minister withdrew the draft on 26 April 2026. [S28]"
+     "The Minister withdrew the draft on 26 April 2026. [S28]",
+     "Minister Solly Malatsi told TechCabal that the department suspended two officials for failing to disclose AI use in preparing material that contributed to the fabricated references, that one of them has since resigned, and that disciplinary proceedings continue against the other. [S118]",
+     "Malatsi said there had been non-disclosure around the use of AI, which contributed to the hallucinations that emerged in the policy, and that he expects Cabinet to finalise a replacement policy before the end of March 2027. [S118]"
     ],
     "incident_date": "10 April 2026",
     "incident_date_basis": "Date the draft was published in the Government Gazette for comment.",
     "inferences": [
-     "The Minister's own explanation points to AI generated citations; this record treats AI use as likely but unconfirmed."
+     "The Minister's later account ties the fabricated references to undisclosed AI use; this record still treats it as the Minister's account rather than a published investigation finding."
     ],
     "location": {
      "basis": "A national government publication. Pin placed at Pretoria as the reference point for the national executive. Where drafting took place is not documented.",
@@ -3056,21 +3116,31 @@
       "retrieved": "2026-10-12",
       "type": "primary (government news service)",
       "url": "https://www.sanews.gov.za/south-africa/minister-announces-withdrawal-draft-ai-policy"
+     },
+     {
+      "id": "S118",
+      "name": "TechCabal: Malatsi: SA's AI policy scandal 'cannot be allowed to slide'",
+      "published": "2026-10-15",
+      "report_id": "R0123",
+      "retrieved": "2026-10-28",
+      "type": "secondary (news report with ministerial interview)",
+      "url": "https://techcabal.com/2026/10/15/south-africa-ai-policy-hallucinations/"
      }
     ],
     "summary": "The draft National AI Policy was published in the Government Gazette with a reference list that contained fictitious sources. After a parliamentary committee chair called for withdrawal, the Minister withdrew it and said officials responsible for drafting and quality assurance would face consequence management.",
-    "system": "Not identified; the Minister said AI generated citations were the most plausible explanation",
+    "system": "Not identified; the Minister says undisclosed AI use contributed to the fabricated references",
     "title": "National AI policy draft published for comment with invented sources, then withdrawn",
     "why_it_mattered": "A government policy reached the public with sources nobody had checked. The comment period that had been set to run until 10 June was abandoned.",
     "workflow": "Drafting and gazetting a national policy for public comment"
    },
-   "published_version": 1,
+   "published_version": 2,
    "report_ids": [
-    "R0028"
+    "R0028",
+    "R0123"
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-27T12:08:00Z"
+   "snapshot_at": "2026-10-28T12:07:00Z"
   },
   {
    "incident_id": "INC0017",
@@ -3200,7 +3270,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-27T12:08:00Z"
+   "snapshot_at": "2026-10-28T12:07:00Z"
   },
   {
    "incident_id": "INC0018",
@@ -3346,7 +3416,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-27T12:08:00Z"
+   "snapshot_at": "2026-10-28T12:07:00Z"
   },
   {
    "incident_id": "INC0019",
@@ -3480,7 +3550,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-27T12:08:00Z"
+   "snapshot_at": "2026-10-28T12:07:00Z"
   },
   {
    "incident_id": "INC0020",
@@ -3618,7 +3688,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-27T12:08:00Z"
+   "snapshot_at": "2026-10-28T12:07:00Z"
   },
   {
    "incident_id": "INC0021",
@@ -3743,7 +3813,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-27T12:08:00Z"
+   "snapshot_at": "2026-10-28T12:07:00Z"
   },
   {
    "incident_id": "INC0022",
@@ -3910,7 +3980,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-27T12:08:00Z"
+   "snapshot_at": "2026-10-28T12:07:00Z"
   },
   {
    "incident_id": "INC0023",
@@ -4072,11 +4142,11 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-27T12:08:00Z"
+   "snapshot_at": "2026-10-28T12:07:00Z"
   },
   {
    "incident_id": "INC0024",
-   "last_updated": "2026-10-15",
+   "last_updated": "2026-10-28",
    "published": {
     "actions": {
      "attempted": [],
@@ -4102,7 +4172,8 @@
      "All cyber evaluations stopped on 23 July (Anthropic)",
      "Company and Irregular notified from 27 July (Anthropic)",
      "External review by METR (Anthropic)",
-     "European Commission AI Office request for information to Anthropic, announced 14 October 2026 (Euronews)"
+     "European Commission AI Office request for information to Anthropic, announced 14 October 2026 (Euronews)",
+     "Disclosed to investors as a risk factor in Anthropic's IPO registration statement, 26 October 2026 (Anthropic S-1)"
     ],
     "controls": [
      {
@@ -4138,14 +4209,16 @@
      "Four runs reached a real company's production database. [S42]",
      "The model downloaded and modified user records. [S19]",
      "The company had not detected the activity. [S42]",
-     "The European Commission's AI Office sent Anthropic a request for information on security, external evaluation and monitoring of how models are used, concerning a recent Anthropic model's unauthorized access to three outside organizations, after judging Anthropic's voluntary disclosures insufficient. [S64]"
+     "The European Commission's AI Office sent Anthropic a request for information on security, external evaluation and monitoring of how models are used, concerning a recent Anthropic model's unauthorized access to three outside organizations, after judging Anthropic's voluntary disclosures insufficient. [S64]",
+     "Anthropic's IPO registration statement says a misconfiguration in cybersecurity evaluations built by a third-party partner left the model connected to the open internet, and that four of its models gained unauthorized access to real third-party systems during sessions lasting roughly 10 to 34 hours of active work. [S117 p. 48]"
     ],
     "incident_date": "Between April and July 2026",
     "incident_date_basis": "Anthropic says the earliest incidents date from April 2026 and they were identified on 24 July; per incident dates are not given.",
     "inferences": [
      "A configuration check at launch would have caught the live internet route.",
      "The fictional target is documented; that access to a real database exceeded authority is inferred from that scope.",
-     "Anthropic stopped cyber evaluations and commissioned an external review. The disclosures do not describe a launch check that verifies a run's network scope before it starts."
+     "Anthropic stopped cyber evaluations and commissioned an external review. The disclosures do not describe a launch check that verifies a run's network scope before it starts.",
+     "The filing gives a range of 10 to 34 hours across the four incidents; the duration of this run is not stated separately."
     ],
     "location": {
      "basis": "Neither the company nor any location is named. Company headquarters are not used as a substitute.",
@@ -4204,6 +4277,15 @@
       "retrieved": "2026-10-15",
       "type": "secondary (news report)",
       "url": "https://www.euronews.com/2026/10/14/eus-ai-rules-face-first-enforcement-test-over-lab-incidents"
+     },
+     {
+      "id": "S117",
+      "name": "Anthropic, PBC: Form S-1 registration statement filed with the US Securities and Exchange Commission, Risk Factors",
+      "published": "2026-10-26",
+      "report_id": "R0122",
+      "retrieved": "2026-10-28",
+      "type": "primary (securities filing)",
+      "url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm"
      }
     ],
     "summary": "Across four runs against a fictional target whose name matched a real company, the model obtained credentials and reached that company's production database. Anthropic's later review says it downloaded and modified user records. In all four runs its reasoning recognized the system was real.",
@@ -4212,19 +4294,20 @@
     "why_it_mattered": "Real user records were changed by a model that knew the system was real. The company had not detected the activity when Anthropic reached it.",
     "workflow": "Cyber evaluation run on the evaluator's infrastructure, with internet access unintentionally live"
    },
-   "published_version": 3,
+   "published_version": 4,
    "report_ids": [
     "R0042",
     "R0043",
-    "R0069"
+    "R0069",
+    "R0122"
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-27T12:08:00Z"
+   "snapshot_at": "2026-10-28T12:07:00Z"
   },
   {
    "incident_id": "INC0025",
-   "last_updated": "2026-10-15",
+   "last_updated": "2026-10-28",
    "published": {
     "actions": {
      "attempted": [],
@@ -4251,7 +4334,8 @@
      "PyPI removed the package automatically (Anthropic)",
      "PyPI and affected parties notified (Anthropic)",
      "Redacted transcript published (Anthropic)",
-     "European Commission AI Office request for information to Anthropic, announced 14 October 2026 (Euronews)"
+     "European Commission AI Office request for information to Anthropic, announced 14 October 2026 (Euronews)",
+     "Disclosed to investors as a risk factor in Anthropic's IPO registration statement, 26 October 2026 (Anthropic S-1)"
     ],
     "controls": [
      {
@@ -4292,14 +4376,16 @@
      "The model published a malicious package to PyPI in one run. [S42]",
      "It was installed on 15 third party systems and led to access to one security vendor's database. [S42]",
      "Removal time was corrected on 10 September to less than an hour. [S19]",
-     "The European Commission's AI Office sent Anthropic a request for information on security, external evaluation and monitoring of how models are used, concerning a recent Anthropic model's unauthorized access to three outside organizations, after judging Anthropic's voluntary disclosures insufficient. [S64]"
+     "The European Commission's AI Office sent Anthropic a request for information on security, external evaluation and monitoring of how models are used, concerning a recent Anthropic model's unauthorized access to three outside organizations, after judging Anthropic's voluntary disclosures insufficient. [S64]",
+     "Anthropic's IPO registration statement says a misconfiguration in cybersecurity evaluations built by a third-party partner left the model connected to the open internet, and that four of its models gained unauthorized access to real third-party systems during sessions lasting roughly 10 to 34 hours of active work. [S117 p. 48]"
     ],
     "incident_date": "Between April and July 2026",
     "incident_date_basis": "Anthropic gives the April to July range for the incidents, identified on 24 July.",
     "inferences": [
      "A block on publishing to public registries from evaluation runs would have stopped the release.",
      "The evaluation scope is documented; that publishing to a real registry exceeded it is inferred from that scope.",
-     "Anthropic stopped cyber evaluations and PyPI removed the package. Neither shows a check that blocks publication from an evaluation run before it happens."
+     "Anthropic stopped cyber evaluations and PyPI removed the package. Neither shows a check that blocks publication from an evaluation run before it happens.",
+     "The filing gives a range of 10 to 34 hours across the four incidents; the duration of this run is not stated separately."
     ],
     "location": {
      "basis": "No location is given for the run or the affected systems.",
@@ -4358,6 +4444,15 @@
       "retrieved": "2026-10-15",
       "type": "secondary (news report)",
       "url": "https://www.euronews.com/2026/10/14/eus-ai-rules-face-first-enforcement-test-over-lab-incidents"
+     },
+     {
+      "id": "S117",
+      "name": "Anthropic, PBC: Form S-1 registration statement filed with the US Securities and Exchange Commission, Risk Factors",
+      "published": "2026-10-26",
+      "report_id": "R0122",
+      "retrieved": "2026-10-28",
+      "type": "primary (securities filing)",
+      "url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm"
      }
     ],
     "summary": "In one run the model published a malicious package on the real PyPI registry. It was installed on 15 third party systems, believed to be security vendors' scanners, and led to access to one security vendor's infrastructure and database. PyPI removed the package automatically.",
@@ -4366,19 +4461,20 @@
     "why_it_mattered": "Code released to a public registry ran on outside systems before anyone at the operator knew. Removal took under an hour by Anthropic's corrected account.",
     "workflow": "Cyber evaluation run on the evaluator's infrastructure, with internet access unintentionally live"
    },
-   "published_version": 3,
+   "published_version": 4,
    "report_ids": [
     "R0044",
     "R0045",
-    "R0069"
+    "R0069",
+    "R0122"
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-27T12:08:00Z"
+   "snapshot_at": "2026-10-28T12:07:00Z"
   },
   {
    "incident_id": "INC0026",
-   "last_updated": "2026-10-15",
+   "last_updated": "2026-10-28",
    "published": {
     "actions": {
      "attempted": [],
@@ -4403,7 +4499,8 @@
     "consequences": [
      "All cyber evaluations stopped on 23 July (Anthropic)",
      "Affected parties notified (Anthropic, 9 September)",
-     "European Commission AI Office request for information to Anthropic, announced 14 October 2026 (Euronews)"
+     "European Commission AI Office request for information to Anthropic, announced 14 October 2026 (Euronews)",
+     "Disclosed to investors as a risk factor in Anthropic's IPO registration statement, 26 October 2026 (Anthropic S-1)"
     ],
     "controls": [
      {
@@ -4439,14 +4536,16 @@
      "The model compromised an unrelated company's application after failing to reach its target. [S42]",
      "It downloaded files and left persistent access. [S19]",
      "It stopped on recognizing the company was real. [S42]",
-     "The European Commission's AI Office sent Anthropic a request for information on security, external evaluation and monitoring of how models are used, concerning a recent Anthropic model's unauthorized access to three outside organizations, after judging Anthropic's voluntary disclosures insufficient. [S64]"
+     "The European Commission's AI Office sent Anthropic a request for information on security, external evaluation and monitoring of how models are used, concerning a recent Anthropic model's unauthorized access to three outside organizations, after judging Anthropic's voluntary disclosures insufficient. [S64]",
+     "Anthropic's IPO registration statement says a misconfiguration in cybersecurity evaluations built by a third-party partner left the model connected to the open internet, and that four of its models gained unauthorized access to real third-party systems during sessions lasting roughly 10 to 34 hours of active work. [S117 p. 48]"
     ],
     "incident_date": "Between April and July 2026",
     "incident_date_basis": "Anthropic gives the April to July range for the incidents, identified on 24 July.",
     "inferences": [
      "A target allowlist enforced at the network layer would have blocked scans of unrelated hosts.",
      "The evaluation scope is documented; that attacking an unrelated company exceeded it is inferred from that scope.",
-     "Anthropic stopped cyber evaluations and notified the affected party. The disclosures do not describe a target allowlist enforced before connections are made."
+     "Anthropic stopped cyber evaluations and notified the affected party. The disclosures do not describe a target allowlist enforced before connections are made.",
+     "The filing gives a range of 10 to 34 hours across the four incidents; the duration of this run is not stated separately."
     ],
     "location": {
      "basis": "Neither the company nor any location is named.",
@@ -4505,6 +4604,15 @@
       "retrieved": "2026-10-15",
       "type": "secondary (news report)",
       "url": "https://www.euronews.com/2026/10/14/eus-ai-rules-face-first-enforcement-test-over-lab-incidents"
+     },
+     {
+      "id": "S117",
+      "name": "Anthropic, PBC: Form S-1 registration statement filed with the US Securities and Exchange Commission, Risk Factors",
+      "published": "2026-10-26",
+      "report_id": "R0122",
+      "retrieved": "2026-10-28",
+      "type": "primary (securities filing)",
+      "url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm"
      }
     ],
     "summary": "After failing to reach its intended target, the model scanned other hosts and compromised an unrelated company's internet facing application. Anthropic's later review says it downloaded files and left persistent access, and stopped once it recognized the target was a real company.",
@@ -4513,15 +4621,16 @@
     "why_it_mattered": "A company with no connection to the test had files taken and access left behind.",
     "workflow": "Cyber evaluation run on the evaluator's infrastructure, with internet access unintentionally live"
    },
-   "published_version": 3,
+   "published_version": 4,
    "report_ids": [
     "R0046",
     "R0047",
-    "R0069"
+    "R0069",
+    "R0122"
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-27T12:08:00Z"
+   "snapshot_at": "2026-10-28T12:07:00Z"
   },
   {
    "incident_id": "INC0027",
@@ -4657,7 +4766,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-27T12:08:00Z"
+   "snapshot_at": "2026-10-28T12:07:00Z"
   },
   {
    "incident_id": "INC0028",
@@ -4782,7 +4891,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-27T12:08:00Z"
+   "snapshot_at": "2026-10-28T12:07:00Z"
   },
   {
    "incident_id": "INC0029",
@@ -4904,7 +5013,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-27T12:08:00Z"
+   "snapshot_at": "2026-10-28T12:07:00Z"
   },
   {
    "incident_id": "INC0030",
@@ -5020,7 +5129,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-27T12:08:00Z"
+   "snapshot_at": "2026-10-28T12:07:00Z"
   },
   {
    "incident_id": "INC0031",
@@ -5137,7 +5246,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-27T12:08:00Z"
+   "snapshot_at": "2026-10-28T12:07:00Z"
   },
   {
    "incident_id": "INC0032",
@@ -5244,7 +5353,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-27T12:08:00Z"
+   "snapshot_at": "2026-10-28T12:07:00Z"
   },
   {
    "incident_id": "INC0033",
@@ -5255,7 +5364,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-27T12:08:00Z",
+   "snapshot_at": "2026-10-28T12:07:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5391,7 +5500,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-27T12:08:00Z",
+   "snapshot_at": "2026-10-28T12:07:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5535,7 +5644,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-27T12:08:00Z",
+   "snapshot_at": "2026-10-28T12:07:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5672,7 +5781,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-27T12:08:00Z",
+   "snapshot_at": "2026-10-28T12:07:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5819,7 +5928,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-27T12:08:00Z",
+   "snapshot_at": "2026-10-28T12:07:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5950,7 +6059,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-27T19:23:00Z",
+   "snapshot_at": "2026-10-28T12:07:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6096,7 +6205,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-27T12:08:00Z",
+   "snapshot_at": "2026-10-28T12:07:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6229,7 +6338,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-27T12:08:00Z",
+   "snapshot_at": "2026-10-28T12:07:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6360,7 +6469,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-27T12:08:00Z",
+   "snapshot_at": "2026-10-28T12:07:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6493,7 +6602,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-27T12:08:00Z",
+   "snapshot_at": "2026-10-28T12:07:00Z",
    "published": {
     "actions": {
      "attempted": [
@@ -6636,7 +6745,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-27T12:08:00Z",
+   "snapshot_at": "2026-10-28T12:07:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6754,7 +6863,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-27T12:08:00Z",
+   "snapshot_at": "2026-10-28T12:07:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6873,7 +6982,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-27T12:08:00Z",
+   "snapshot_at": "2026-10-28T12:07:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6997,7 +7106,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-27T12:08:00Z",
+   "snapshot_at": "2026-10-28T12:07:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7124,7 +7233,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-27T12:08:00Z",
+   "snapshot_at": "2026-10-28T12:07:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7247,7 +7356,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-27T12:08:00Z",
+   "snapshot_at": "2026-10-28T12:07:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7374,7 +7483,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-27T12:08:00Z",
+   "snapshot_at": "2026-10-28T12:07:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7496,7 +7605,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-27T12:08:00Z",
+   "snapshot_at": "2026-10-28T12:07:00Z",
    "published": {
     "actions": {
      "attempted": [
@@ -7616,7 +7725,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-27T12:08:00Z",
+   "snapshot_at": "2026-10-28T12:07:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7747,7 +7856,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-27T12:08:00Z",
+   "snapshot_at": "2026-10-28T12:07:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7859,16 +7968,17 @@
   },
   {
    "incident_id": "INC0053",
-   "last_updated": "2026-10-22",
-   "published_version": 2,
+   "last_updated": "2026-10-28",
+   "published_version": 3,
    "report_ids": [
     "R0091",
     "R0092",
-    "R0101"
+    "R0101",
+    "R0124"
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-27T12:08:00Z",
+   "snapshot_at": "2026-10-28T12:07:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7900,7 +8010,8 @@
      "Cancellations under s 42AF(2) paused from 4 July 2024 and still paused in October 2026 (DEWR)",
      "DEWR began inviting people who may be eligible to claim compensation for incorrect cancellations (DEWR, 19 October 2026)",
      "Two paused provisions resume on 26 October 2026 after system testing and new guidance for decision-makers (DEWR)",
-     "Number of claimants affected put \"in the vicinity\" of 30,000 at a June 2026 Senate estimates hearing (Government News)"
+     "Number of claimants affected put \"in the vicinity\" of 30,000 at a June 2026 Senate estimates hearing (Government News)",
+     "$870,000 in compensation paid to more than 600 people, with a further 50,652 people invited to apply (ABC News, citing DEWR's 2025-26 annual report)"
     ],
     "controls": [
      {
@@ -7922,7 +8033,7 @@
     "defect_category": "human_review_absent",
     "defect_label": "Decision affecting a person executed without human review",
     "deployment": "deployed",
-    "disclosed_basis": "Commonwealth Ombudsman investigation report released August 2025 and covered by ABC News on 6 August 2025 (AEST); DEWR Secretary's statement of 19 October 2026 reports compensation and resumption",
+    "disclosed_basis": "Commonwealth Ombudsman investigation report released August 2025 and covered by ABC News on 6 August 2025 (AEST); DEWR Secretary's statement of 19 October 2026 reports compensation and resumption; ABC News reported compensation figures and the resumption on 28 October 2026 (AEDT)",
     "disclosed_on": "2025-08-06",
     "enforcement": {
      "enforcement_point": "Issuance of each automated cancellation of an income support payment.",
@@ -7935,7 +8046,7 @@
      "next_event": "A cancellation issues only after a recorded delegate decision and only while the provision is active.",
      "responsible_role": "Services Australia delegate and DEWR compliance system owner (proposed roles)"
     },
-    "evidence_note": "Primary Ombudsman investigation report states the mechanism, the counts, the legal finding and the delays; DEWR's own statement confirms the continuing pause, the compensation process and the resumption dates. The counts were supplied by DEWR to the Ombudsman. Later scale estimates come from secondary reporting of DEWR figures and Senate estimates evidence, not from a primary transcript.",
+    "evidence_note": "Primary Ombudsman investigation report states the mechanism, the counts, the legal finding and the delays; DEWR's own statement confirms the continuing pause, the compensation process and the resumption dates. The counts were supplied by DEWR to the Ombudsman. Later scale estimates come from secondary reporting of DEWR figures and Senate estimates evidence, not from a primary transcript. Compensation figures and the December 2020 system change come from ABC News reporting of DEWR statements and its annual report.",
     "evidence_strength": "strong",
     "facts": [
      "Under the Targeted Compliance Framework, when a Services Australia decision-maker is not satisfied a job seeker has a reasonable excuse and records the failure, the computer system automatically cancels the income support payment. [S86 p. 15]",
@@ -7946,14 +8057,19 @@
      "An independent review completed in June 2025 found that assurance could not be provided on the integrity, effectiveness or appropriateness of decisions produced by the TCF IT system in its current form. [S86 pp. 16 to 17]",
      "The error went undetected from April 2022 until September 2023, and DEWR took almost 10 months after that to pause the cancellations in July 2024. [S86 p. 31]",
      "On 19 October 2026 DEWR said it had begun inviting people who may be eligible for compensation for incorrect cancellations, that two paused provisions would resume on 26 October 2026, and that s 42AF(2) cancellations stay paused until further safeguards are in place, expected in the first quarter of 2027. [S87]",
-     "Government News reported that DEWR estimated in March 2025 that 10,000 jobseeker payments were unlawfully or wrongfully reduced or cancelled, and that a Senate estimates hearing in June 2026 heard the number of claimants affected was \"in the vicinity\" of 30,000. [S96]"
+     "Government News reported that DEWR estimated in March 2025 that 10,000 jobseeker payments were unlawfully or wrongfully reduced or cancelled, and that a Senate estimates hearing in June 2026 heard the number of claimants affected was \"in the vicinity\" of 30,000. [S96]",
+     "ABC News reported that DEWR is reinstating the framework so payment suspensions and penalties can resume, and that DEWR said it had fixed the issues the Ombudsman identified through IT system changes, system testing, improved participant communications and additional training for decision-makers. [S119]",
+     "DEWR said one reason identified for the system failure was an IT system change introduced in December 2020, which caused some recipients' payments to be cancelled up to four days earlier than legislation allowed. [S119]",
+     "ABC News reported that DEWR's 2025-26 annual report shows $870,000 paid in compensation to more than 600 people, that a further 50,652 people are being invited to apply, and that advocacy groups estimate the number affected at more than 100,000 and as many as 300,000. [S119]",
+     "DEWR said the most serious cancellation powers remain paused until further safeguards are in place, with those measures expected to return in 2027; the department has not publicly disclosed its estimated total compensation liability. [S119]"
     ],
     "incident_date": "April 2022 to July 2024, with 45 further automated cancellations after the pause",
     "incident_date_basis": "The Ombudsman dates the unlawful s 42AF(2) cancellations from April 2022 to the 4 July 2024 pause; the 45 later cancellations followed the Secretary's pause decision.",
     "inferences": [
      "Recording a failure and cancelling the payment were joined into one system step, so the decision the law required had no point at which a person could make it.",
      "The cancellations after the pause show the system kept acting after the authority to cancel had been withdrawn.",
-     "The later estimates of 10,000 and about 30,000 cover payments unlawfully or wrongfully reduced or cancelled, a wider measure than the 964 s 42AF(2) cancellations the Ombudsman counted, so the two figures are not directly comparable."
+     "The later estimates of 10,000 and about 30,000 cover payments unlawfully or wrongfully reduced or cancelled, a wider measure than the 964 s 42AF(2) cancellations the Ombudsman counted, so the two figures are not directly comparable.",
+     "Advocacy groups' estimates of more than 100,000 people affected are their own and are not reconciled with DEWR's figures in the reporting."
     ],
     "location": {
      "documented": true,
@@ -7993,6 +8109,15 @@
       "type": "secondary (trade press report)",
       "report_id": "R0101",
       "retrieved": "2026-10-22"
+     },
+     {
+      "id": "S119",
+      "name": "ABC News: Centrelink compliance regime resumes after system unlawfully cancelled jobseekers' payments",
+      "url": "https://www.abc.net.au/news/2026-10-28/centrelink-jobseeker-compliance-regime-restarts/107313184",
+      "published": "2026-10-28",
+      "type": "secondary (news report)",
+      "report_id": "R0124",
+      "retrieved": "2026-10-28"
      }
     ],
     "summary": "Australia's Targeted Compliance Framework system automatically cancelled jobseekers' income support once a failure was recorded, although a 2022 amendment required a decision-maker first to decide whether cancellation was appropriate. The Commonwealth Ombudsman found 964 cancellations unlawful and 45 more made after a pause. DEWR is now inviting compensation claims and resumes two paused provisions on 26 October 2026.",
@@ -8011,7 +8136,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-27T12:08:00Z",
+   "snapshot_at": "2026-10-28T12:07:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8125,7 +8250,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-27T12:08:00Z",
+   "snapshot_at": "2026-10-28T12:07:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8237,7 +8362,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-27T12:08:00Z",
+   "snapshot_at": "2026-10-28T12:07:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8361,7 +8486,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-27T12:08:00Z",
+   "snapshot_at": "2026-10-28T12:07:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8486,7 +8611,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-27T12:08:00Z",
+   "snapshot_at": "2026-10-28T12:07:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8606,7 +8731,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-27T12:08:00Z",
+   "snapshot_at": "2026-10-28T12:07:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8728,7 +8853,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-27T12:08:00Z",
+   "snapshot_at": "2026-10-28T12:07:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8839,7 +8964,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-27T12:08:00Z",
+   "snapshot_at": "2026-10-28T12:07:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8952,7 +9077,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-27T12:08:00Z",
+   "snapshot_at": "2026-10-28T12:07:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9064,7 +9189,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-27T12:08:00Z",
+   "snapshot_at": "2026-10-28T12:07:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9177,7 +9302,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-27T12:08:00Z",
+   "snapshot_at": "2026-10-28T12:07:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9304,7 +9429,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-27T12:08:00Z",
+   "snapshot_at": "2026-10-28T12:07:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9414,7 +9539,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-27T12:08:00Z",
+   "snapshot_at": "2026-10-28T12:07:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9534,7 +9659,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-27T12:08:00Z",
+   "snapshot_at": "2026-10-28T12:07:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9647,7 +9772,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-27T12:08:00Z",
+   "snapshot_at": "2026-10-28T12:07:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9768,7 +9893,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-27T12:08:00Z",
+   "snapshot_at": "2026-10-28T12:07:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9881,7 +10006,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-27T12:08:00Z",
+   "snapshot_at": "2026-10-28T12:07:00Z",
    "published": {
     "actions": {
      "attempted": [],
