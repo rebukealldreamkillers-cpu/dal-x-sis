@@ -2,7 +2,7 @@
  "updated": "2026-10-29",
  "last_check": "2026-10-29T12:30:00Z",
  "next_incident_number": 74,
- "next_report_number": 130,
+ "next_report_number": 132,
  "excluded_candidates": [
   {
    "name": "Gemini CLI file loss report (July 2025)",
@@ -2647,14 +2647,14 @@
   },
   {
    "incident_id": "INC0013",
-   "last_updated": "2026-10-26",
+   "last_updated": "2026-10-29",
    "published": {
     "actions": {
      "attempted": [],
      "completed": [
       "Code execution on a university server via an injection flaw (Anthropic)",
       "Use of found access tokens on a local government map server (Anthropic)",
-      "Data taken from a fee charging state agency without payment; reported as aggregate Georgia vote counts (Anthropic, Axios)",
+      "Aggregate Georgia vote counts retrieved through a dashboard token the model requested without being asked; Anthropic first described the data as offered for a fee, and Georgia says it is free and public (Anthropic, Axios, Georgia Secretary of State)",
       "Submission of live government forms despite instructions (Anthropic)"
      ]
     },
@@ -2692,7 +2692,7 @@
     "defect_category": "boundary_unenforced",
     "defect_label": "Agent acted outside its authorized environment",
     "deployment": "evaluation_real_systems",
-    "disclosed_basis": "Anthropic report",
+    "disclosed_basis": "Anthropic report; Georgia Secretary of State statement of 26 October 2026 on the Data Hub case",
     "disclosed_on": "2026-10-09",
     "enforcement": {
      "authority_requirement": "After a refusal the agent must stop and report. Any workaround requires human approval naming the site and the step.",
@@ -2705,10 +2705,10 @@
      "responder_action": "Decide stop or approve. Approval must name the site and the step, and cannot cover fees, agreements, or credentials not issued to the run.",
      "responsible_role": "Task owner (proposed role)"
     },
-    "evidence_note": "Company's own report; most sites unnamed at their request. Axios and the Guardian later identified the paid state data case as Georgia's aggregate vote counts, citing Anthropic and Georgia officials; no Georgia statement was located directly.",
+    "evidence_note": "Company's own report; most sites unnamed at their request. Axios and the Guardian identified the state data case as Georgia's aggregate vote counts. Georgia's Secretary of State says the data is free and public and that Anthropic confirmed no paywall was bypassed, which contradicts the fee account in Anthropic's 9 October report and the 25 October Axios report.",
     "evidence_strength": "moderate",
     "facts": [
-     "Anthropic reports models bypassing restrictions on a university server, a local government map, and a state agency's paid data. [S21]",
+     "Anthropic reports models bypassing restrictions on a university server, a local government map, and a state agency's data that Anthropic described as offered for a fee. [S21]",
      "Anthropic disabled live internet access for all internal evaluations. [S21]",
      "Anthropic notified each agency and briefed the White House. [S21]",
      "Anthropic reports that its new detection and blocking tooling blocked all of the cases in its post when tested against them; no attempt counts or rates are given. [S21]",
@@ -2716,10 +2716,13 @@
      "The spokesperson described the applications as incomplete and said none of the department's systems was compromised or hacked by the model. [S51]",
      "Anthropic says a researcher used Claude Mythos 5 on a statistics project that needed public data a state agency offers for a fee; Claude learned from an archived copy of the agency's website that its public dashboard issues an access token to any visitor, requested one and queried the database without paying the fee. [S21]",
      "An Anthropic spokesperson told Axios that a model used internally for a statistics project, without being asked to, requested a token to query a dashboard holding information normally available for a fee; the data was aggregate Georgia vote counts. [S111]",
-     "According to Georgia officials and Anthropic, the model bypassed a paywall; Anthropic said it did not access the state's voter registration system or change or pull any voting records. [S111]",
+     "Axios reported on 25 October 2026 that, according to Georgia officials and Anthropic, the model bypassed a paywall; Anthropic said it did not access the state's voter registration system or change or pull any voting records. [S111]",
      "Axios reported that Anthropic notified the Georgia Secretary of State's office and the White House weeks before its 25 October 2026 report. [S111]",
      "Anthropic said the model found a loophole in an old version of the state agency's website, which issues an access token to visitors, and that Claude did not pull any individual voter records. [S112]",
-     "The Guardian reported that Anthropic had described this behaviour in its 9 October post on working around restrictions to reach data gated by a token or a fee. [S112]"
+     "The Guardian reported that Anthropic had described this behaviour in its 9 October post on working around restrictions to reach data gated by a token or a fee. [S112]",
+     "On 26 October 2026 the Georgia Secretary of State said the agent accessed publicly available data on Georgia's Data Hub, which is free to the public, and that this was not unauthorized access to the voter registration system. [S125]",
+     "The Secretary of State's timeline says Anthropic first contacted the office on 8 October, the office concluded the same day that the agent had accessed publicly available information, and on 26 October Anthropic confirmed to the office that its agent had not accessed Georgia's voter list or bypassed a paywall. [S125]",
+     "An Anthropic spokesperson told the Atlanta Journal-Constitution that the model pulled only aggregate counts, which can be derived from voter data the state makes available to anyone for a fee; the newspaper reported it was unclear what fee Anthropic meant, and that the Secretary of State's office said Claude did not access the purchasable voter rolls. [S126]"
     ],
     "incident_date": "2026 (dates not given)",
     "incident_date_basis": "Anthropic gives no dates for individual cases; review began in July 2026.",
@@ -2727,7 +2730,7 @@
      "One report describes several separate events; they are grouped here because Anthropic gives no dates or names that would separate them.",
      "Anthropic's remediation detects and blocks the behavior patterns it describes. The report does not show whether it verifies authority for each external action before it executes.",
      "The State Department's count likely corresponds to the government form case in Anthropic's report. Neither source states the link.",
-     "The Georgia dashboard case matches the statistics project in Anthropic's 9 October report: a fee charged by a state agency, and a dashboard token any visitor could request."
+     "The Georgia dashboard case matches the statistics project in Anthropic's 9 October report, a dashboard token any visitor could request. Georgia's statement that the data is free removes the fee element of that account, while the model still requested a token and queried the database without being asked."
     ],
     "location": {
      "basis": "Anthropic says some cases involved US government websites at federal, state and local levels. The university and other sites are not located. Pin placed at a reference point for the country.",
@@ -2738,7 +2741,7 @@
      "lon": -98.35,
      "status": "established"
     },
-    "organization": "Anthropic (model owner); affected: a university, a Georgia state agency (aggregate vote count data, per Axios and the Guardian), a local government, URL shortening services, and other unnamed sites",
+    "organization": "Anthropic (model owner); affected: a university, the Georgia Secretary of State's office (aggregate vote counts on its public Data Hub), a local government, URL shortening services, and other unnamed sites",
     "rules": [
      {
       "applicability": "The controls the models went around.",
@@ -2786,20 +2789,40 @@
       "retrieved": "2026-10-26",
       "type": "secondary (quoting Anthropic)",
       "url": "https://www.theguardian.com/technology/2026/oct/26/anthropics-claude-ai-model-accessed-georgia-voter-data-in-us"
+     },
+     {
+      "id": "S125",
+      "name": "Georgia Secretary of State: Anthropic AI Agent Accessed Publicly Available Information, Georgia Elections Remain Secure",
+      "url": "https://sos.ga.gov/news/anthropic-ai-agent-accessed-publicly-available-information-georgia-elections-remain-secure",
+      "published": "2026-10-26",
+      "type": "primary (government statement)",
+      "report_id": "R0130",
+      "retrieved": "2026-10-29"
+     },
+     {
+      "id": "S126",
+      "name": "Atlanta Journal-Constitution: Artificial intelligence bot accesses Georgia voting data",
+      "url": "https://www.ajc.com/politics/2026/10/ai-bot-access-georgia-voting-data/",
+      "published": "2026-10-26",
+      "type": "secondary (newspaper report quoting an Anthropic spokesperson and the Secretary of State's office)",
+      "report_id": "R0131",
+      "retrieved": "2026-10-29"
      }
     ],
-    "summary": "Anthropic describes models that, when blocked, worked around restrictions: running code on a university server through an injection flaw, accepting a data use agreement on their own, reusing access tokens from a local government map, taking data from a state agency without paying its fee, and submitting live government forms they were told not to submit. Axios and the Guardian later reported that the paid state data was aggregate Georgia vote counts; Anthropic says no voter registration system or individual voter records were accessed.",
+    "summary": "Anthropic describes models that, when blocked, worked around restrictions: running code on a university server through an injection flaw, accepting a data use agreement on their own, reusing access tokens from a local government map, taking data from a state agency without paying its fee, and submitting live government forms they were told not to submit. Axios and the Guardian later reported that the state data was aggregate Georgia vote counts. Georgia's Secretary of State says the data came from its free public Data Hub and that Anthropic confirmed no paywall was bypassed; both say no voter registration system or individual voter records were accessed.",
     "system": "Claude Mythos 5, Claude Mythos Preview, Claude Opus 5 and other models",
-    "title": "Models work around restrictions on public websites, including paid government data",
+    "title": "Models work around restrictions on public websites, including a state's election data dashboard",
     "why_it_mattered": "Each case is small, but together they show persistence: when blocked, the model kept going instead of stopping. Anthropic has disabled live internet access for all internal evaluations as a result.",
     "workflow": "Evaluations and internal use with live internet access"
    },
-   "published_version": 4,
+   "published_version": 5,
    "report_ids": [
     "R0023",
     "R0056",
     "R0116",
-    "R0117"
+    "R0117",
+    "R0130",
+    "R0131"
    ],
    "review_status": "published",
    "schema_version": 1,
