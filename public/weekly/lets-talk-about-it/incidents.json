@@ -1,8 +1,8 @@
 {
- "updated": "2026-10-28",
- "last_check": "2026-10-28T12:07:00Z",
- "next_incident_number": 71,
- "next_report_number": 125,
+ "updated": "2026-10-29",
+ "last_check": "2026-10-29T12:30:00Z",
+ "next_incident_number": 74,
+ "next_report_number": 130,
  "excluded_candidates": [
   {
    "name": "Gemini CLI file loss report (July 2025)",
@@ -964,6 +964,74 @@
    "reason": "Consumers drafting complaints with chatbots; no AI system executed an action on behalf of an organization.",
    "url": "https://www.ft.com/content/5f56b300-f8a6-4834-a2e6-75902880ef87",
    "tracker": false
+  },
+  {
+   "name": "Whiting v. City of Athens, Sixth Circuit Rule 38 sanctions for fake citations (March 2026, covered by Legal 500 on 27 October 2026)",
+   "reason": "Fake citations and sanctions are documented, but the court did not find AI use and counsel did not admit it, so the inclusion bar for court cases is not met.",
+   "url": "https://www.legal500.com/intelligence/united-states/technology/sixth-circuit-sanctions-attorneys-for-fake-citations-%E2%80%93-what-does-this-mean-for-use-of-ai",
+   "tracker": false
+  },
+  {
+   "name": "Delta customer relations email sent with an AI drafting prompt still attached (One Mile at a Time, 28 October 2026)",
+   "reason": "An employee pasted an AI draft without removing its header; low stakes, and no consequential action by an AI system is documented.",
+   "url": "https://onemileatatime.com/news/delta-emails-diamond-medallion-forgets-delete-ai-prompt-warm-empathetic/",
+   "tracker": false
+  },
+  {
+   "name": "Instinct assistant sends an email from a tester's account without asking (TechCrunch, 24 August 2026)",
+   "reason": "Single outlet; the user described the message as innocuous, so the documented stakes are low.",
+   "url": "https://www.orcarouter.ai/blog/2026-08-24-instinct-zhu-li-xian-di",
+   "tracker": true,
+   "reported_on": "2026-08"
+  },
+  {
+   "name": "Cohere report of Qwen3.8-Flash-Next trying to upload a test file to an outside server during a security task (26 and 28 October 2026)",
+   "reason": "Closed test sandbox blocked the upload; no outside party was reached and Cohere does not say the commands ran on real systems.",
+   "url": "https://misalignmentwatch.com/reports-and-research.html",
+   "tracker": true,
+   "reported_on": "2026-10"
+  },
+  {
+   "name": "GMO Internet Onamae.com Desktop Cloud breach and extortion (21 to 27 October 2026)",
+   "reason": "Attacker operated intrusion; GMO has not established a link to the ARTEX AI tool for this breach, and no authority layer sits in the attacker's path.",
+   "url": "https://techcrunch.com/2026/10/27/japan-internet-giant-gmo-says-hackers-posted-stolen-customer-data/",
+   "tracker": false
+  },
+  {
+   "name": "Comet Opik security incident exposing 29 internal AI provider keys (27 October 2026)",
+   "reason": "Human attacker exploited a settings flaw with a stolen user key; no AI system executed an action.",
+   "url": "https://www.comet.com/site/blog/security-incident-october-2026/",
+   "tracker": false
+  },
+  {
+   "name": "Kimi K3.1 Pro sub-agent calls drain subscribers' quotas (Moonshot AI apology, 26 October 2026)",
+   "reason": "Vendor metering and configuration complaint compensated by the vendor; no single consequential action against an outside party is documented.",
+   "url": "https://www.eeo.news/2026/1028/1077185.shtml",
+   "tracker": false
+  },
+  {
+   "name": "noyb GDPR complaints against Scale AI over Outlier worker data and possible automated decisions (28 October 2026)",
+   "reason": "Complaints filed with regulators; no regulator finding of an automated decision taken without human review yet.",
+   "url": "https://ppc.land/scale-ai-faces-5-gdpr-complaints-over-tracking-of-outlier-ai-trainers/",
+   "tracker": false
+  },
+  {
+   "name": "Russian court reportedly holds an airline ticket site liable for its chatbot's fee-free change promise (ai.zaurisakov.com, undated)",
+   "reason": "Single blog post with no court, case number or primary decision to verify.",
+   "url": "https://ai.zaurisakov.com/articles/bot-poobeshal-skidku-sud-zastavil-kompaniyu-platit/",
+   "tracker": false
+  },
+  {
+   "name": "Kerala Water Authority billing software errors; consumer commission awards INR 25,000 (Indian Express, 27 October 2026)",
+   "reason": "Software billing errors, not an automated decision about a person taken without human review, and no AI system is involved.",
+   "url": "https://indianexpress.com/article/legal-news/software-glitch-billing-chaos-man-rs-25000-kerala-water-authority-10938919/",
+   "tracker": false
+  },
+  {
+   "name": "ChatGPT credit auto-reload refund dispute handled by support bots (Reddit post, 28 October 2026)",
+   "reason": "Single anonymous post about the user's own purchase; low stakes.",
+   "url": "https://agihunt.info/en/p/1a182a90e1c24a870c1f167e389",
+   "tracker": false
   }
  ],
  "rows": [
@@ -1109,7 +1177,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-28T12:07:00Z"
+   "snapshot_at": "2026-10-29T12:30:00Z"
   },
   {
    "incident_id": "INC0002",
@@ -1252,7 +1320,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-28T12:07:00Z"
+   "snapshot_at": "2026-10-29T12:30:00Z"
   },
   {
    "incident_id": "INC0003",
@@ -1374,7 +1442,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-28T12:07:00Z"
+   "snapshot_at": "2026-10-29T12:30:00Z"
   },
   {
    "incident_id": "INC0004",
@@ -1511,7 +1579,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-28T12:07:00Z"
+   "snapshot_at": "2026-10-29T12:30:00Z"
   },
   {
    "incident_id": "INC0005",
@@ -1655,7 +1723,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-28T12:07:00Z"
+   "snapshot_at": "2026-10-29T12:30:00Z"
   },
   {
    "incident_id": "INC0006",
@@ -1802,7 +1870,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-28T12:07:00Z"
+   "snapshot_at": "2026-10-29T12:30:00Z"
   },
   {
    "incident_id": "INC0007",
@@ -1907,7 +1975,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-28T12:07:00Z"
+   "snapshot_at": "2026-10-29T12:30:00Z"
   },
   {
    "incident_id": "INC0008",
@@ -2043,7 +2111,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-28T12:07:00Z"
+   "snapshot_at": "2026-10-29T12:30:00Z"
   },
   {
    "incident_id": "INC0009",
@@ -2155,7 +2223,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-28T12:07:00Z"
+   "snapshot_at": "2026-10-29T12:30:00Z"
   },
   {
    "incident_id": "INC0010",
@@ -2277,7 +2345,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-28T12:07:00Z"
+   "snapshot_at": "2026-10-29T12:30:00Z"
   },
   {
    "incident_id": "INC0011",
@@ -2433,7 +2501,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-28T12:07:00Z"
+   "snapshot_at": "2026-10-29T12:30:00Z"
   },
   {
    "incident_id": "INC0012",
@@ -2575,7 +2643,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-28T12:07:00Z"
+   "snapshot_at": "2026-10-29T12:30:00Z"
   },
   {
    "incident_id": "INC0013",
@@ -2735,7 +2803,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-28T12:07:00Z"
+   "snapshot_at": "2026-10-29T12:30:00Z"
   },
   {
    "incident_id": "INC0014",
@@ -2883,7 +2951,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-28T12:07:00Z"
+   "snapshot_at": "2026-10-29T12:30:00Z"
   },
   {
    "incident_id": "INC0015",
@@ -3020,7 +3088,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-28T12:07:00Z"
+   "snapshot_at": "2026-10-29T12:30:00Z"
   },
   {
    "incident_id": "INC0016",
@@ -3140,7 +3208,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-28T12:07:00Z"
+   "snapshot_at": "2026-10-29T12:30:00Z"
   },
   {
    "incident_id": "INC0017",
@@ -3270,7 +3338,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-28T12:07:00Z"
+   "snapshot_at": "2026-10-29T12:30:00Z"
   },
   {
    "incident_id": "INC0018",
@@ -3416,7 +3484,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-28T12:07:00Z"
+   "snapshot_at": "2026-10-29T12:30:00Z"
   },
   {
    "incident_id": "INC0019",
@@ -3550,7 +3618,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-28T12:07:00Z"
+   "snapshot_at": "2026-10-29T12:30:00Z"
   },
   {
    "incident_id": "INC0020",
@@ -3688,7 +3756,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-28T12:07:00Z"
+   "snapshot_at": "2026-10-29T12:30:00Z"
   },
   {
    "incident_id": "INC0021",
@@ -3813,7 +3881,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-28T12:07:00Z"
+   "snapshot_at": "2026-10-29T12:30:00Z"
   },
   {
    "incident_id": "INC0022",
@@ -3980,7 +4048,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-28T12:07:00Z"
+   "snapshot_at": "2026-10-29T12:30:00Z"
   },
   {
    "incident_id": "INC0023",
@@ -4142,7 +4210,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-28T12:07:00Z"
+   "snapshot_at": "2026-10-29T12:30:00Z"
   },
   {
    "incident_id": "INC0024",
@@ -4303,7 +4371,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-28T12:07:00Z"
+   "snapshot_at": "2026-10-29T12:30:00Z"
   },
   {
    "incident_id": "INC0025",
@@ -4470,7 +4538,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-28T12:07:00Z"
+   "snapshot_at": "2026-10-29T12:30:00Z"
   },
   {
    "incident_id": "INC0026",
@@ -4630,7 +4698,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-28T12:07:00Z"
+   "snapshot_at": "2026-10-29T12:30:00Z"
   },
   {
    "incident_id": "INC0027",
@@ -4766,7 +4834,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-28T12:07:00Z"
+   "snapshot_at": "2026-10-29T12:30:00Z"
   },
   {
    "incident_id": "INC0028",
@@ -4891,7 +4959,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-28T12:07:00Z"
+   "snapshot_at": "2026-10-29T12:30:00Z"
   },
   {
    "incident_id": "INC0029",
@@ -5013,7 +5081,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-28T12:07:00Z"
+   "snapshot_at": "2026-10-29T12:30:00Z"
   },
   {
    "incident_id": "INC0030",
@@ -5129,7 +5197,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-28T12:07:00Z"
+   "snapshot_at": "2026-10-29T12:30:00Z"
   },
   {
    "incident_id": "INC0031",
@@ -5246,7 +5314,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-28T12:07:00Z"
+   "snapshot_at": "2026-10-29T12:30:00Z"
   },
   {
    "incident_id": "INC0032",
@@ -5353,7 +5421,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-28T12:07:00Z"
+   "snapshot_at": "2026-10-29T12:30:00Z"
   },
   {
    "incident_id": "INC0033",
@@ -5364,7 +5432,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-28T12:07:00Z",
+   "snapshot_at": "2026-10-29T12:30:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5500,7 +5568,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-28T12:07:00Z",
+   "snapshot_at": "2026-10-29T12:30:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5644,7 +5712,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-28T12:07:00Z",
+   "snapshot_at": "2026-10-29T12:30:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5781,7 +5849,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-28T12:07:00Z",
+   "snapshot_at": "2026-10-29T12:30:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5928,7 +5996,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-28T12:07:00Z",
+   "snapshot_at": "2026-10-29T12:30:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6059,7 +6127,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-28T12:07:00Z",
+   "snapshot_at": "2026-10-29T12:30:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6205,7 +6273,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-28T12:07:00Z",
+   "snapshot_at": "2026-10-29T12:30:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6338,7 +6406,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-28T12:07:00Z",
+   "snapshot_at": "2026-10-29T12:30:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6469,7 +6537,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-28T12:07:00Z",
+   "snapshot_at": "2026-10-29T12:30:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6602,7 +6670,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-28T12:07:00Z",
+   "snapshot_at": "2026-10-29T12:30:00Z",
    "published": {
     "actions": {
      "attempted": [
@@ -6745,7 +6813,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-28T12:07:00Z",
+   "snapshot_at": "2026-10-29T12:30:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6863,7 +6931,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-28T12:07:00Z",
+   "snapshot_at": "2026-10-29T12:30:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6982,7 +7050,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-28T12:07:00Z",
+   "snapshot_at": "2026-10-29T12:30:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7106,7 +7174,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-28T12:07:00Z",
+   "snapshot_at": "2026-10-29T12:30:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7233,7 +7301,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-28T12:07:00Z",
+   "snapshot_at": "2026-10-29T12:30:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7356,7 +7424,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-28T12:07:00Z",
+   "snapshot_at": "2026-10-29T12:30:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7483,7 +7551,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-28T12:07:00Z",
+   "snapshot_at": "2026-10-29T12:30:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7605,7 +7673,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-28T12:07:00Z",
+   "snapshot_at": "2026-10-29T12:30:00Z",
    "published": {
     "actions": {
      "attempted": [
@@ -7725,7 +7793,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-28T12:07:00Z",
+   "snapshot_at": "2026-10-29T12:30:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7856,7 +7924,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-28T12:07:00Z",
+   "snapshot_at": "2026-10-29T12:30:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7978,7 +8046,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-28T12:07:00Z",
+   "snapshot_at": "2026-10-29T12:30:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8136,7 +8204,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-28T12:07:00Z",
+   "snapshot_at": "2026-10-29T12:30:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8250,7 +8318,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-28T12:07:00Z",
+   "snapshot_at": "2026-10-29T12:30:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8362,7 +8430,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-28T12:07:00Z",
+   "snapshot_at": "2026-10-29T12:30:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8486,7 +8554,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-28T12:07:00Z",
+   "snapshot_at": "2026-10-29T12:30:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8611,7 +8679,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-28T12:07:00Z",
+   "snapshot_at": "2026-10-29T12:30:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8731,7 +8799,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-28T12:07:00Z",
+   "snapshot_at": "2026-10-29T12:30:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8853,7 +8921,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-28T12:07:00Z",
+   "snapshot_at": "2026-10-29T12:30:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8964,7 +9032,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-28T12:07:00Z",
+   "snapshot_at": "2026-10-29T12:30:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9077,7 +9145,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-28T12:07:00Z",
+   "snapshot_at": "2026-10-29T12:30:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9189,7 +9257,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-28T12:07:00Z",
+   "snapshot_at": "2026-10-29T12:30:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9302,7 +9370,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-28T12:07:00Z",
+   "snapshot_at": "2026-10-29T12:30:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9429,7 +9497,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-28T12:07:00Z",
+   "snapshot_at": "2026-10-29T12:30:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9539,7 +9607,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-28T12:07:00Z",
+   "snapshot_at": "2026-10-29T12:30:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9659,7 +9727,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-28T12:07:00Z",
+   "snapshot_at": "2026-10-29T12:30:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9772,7 +9840,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-28T12:07:00Z",
+   "snapshot_at": "2026-10-29T12:30:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9893,7 +9961,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-28T12:07:00Z",
+   "snapshot_at": "2026-10-29T12:30:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -10006,7 +10074,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-28T12:07:00Z",
+   "snapshot_at": "2026-10-29T12:30:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -10138,6 +10206,387 @@
     "title": "Algorithm sets older Australians' home care funding and waiting priority with no lawful human override; Australia's Ombudsman finds the department's administration unreasonable",
     "why_it_mattered": "Decisions that set how much home care an older person receives and how long they wait are made by scoring rules that no person can lawfully change, even when the assessor considers the result clinically wrong.",
     "workflow": "Assessing older people's eligibility, funding classification and priority for government-funded home care"
+   }
+  },
+  {
+   "incident_id": "INC0071",
+   "last_updated": "2026-10-29",
+   "published_version": 1,
+   "report_ids": [
+    "R0125",
+    "R0126"
+   ],
+   "review_status": "published",
+   "schema_version": 1,
+   "snapshot_at": "2026-10-29T12:30:00Z",
+   "published": {
+    "actions": {
+     "attempted": [],
+     "completed": [
+      "Filing a principal brief in a criminal appeal containing fictitious authorities and misrepresented quotations after using ChatGPT (orders of 1 May and 21 October 2026)",
+      "Filing a reply brief whose \"corrections\" again cited cases for propositions and quotations they do not contain (order of 1 May 2026)"
+     ]
+    },
+    "authority": {
+     "status": "exceeded",
+     "statement": "Counsel's signature on each brief certified that he had read it and that good grounds supported it, and the court found that by filing without verifying the research he submitted nonexistent cases and propositions the cited opinions did not support.",
+     "basis": "Documented: the 21 October 2026 order quotes the certification duty under MRCP 11(a) and Rule 3.1, records counsel's statement that he used ChatGPT, and finds he conceded the briefs contained fictitious authorities.",
+     "present": [
+      "Counsel's authority to represent the appellant and file briefs (orders)",
+      "Certification duty attached to an attorney's signature under MRCP 11(a) (orders)"
+     ],
+     "absent": [
+      "Verification of the cited opinions, quotations and propositions against the actual sources before filing (order of 21 October 2026)"
+     ],
+     "unknown": [
+      "The filing dates of the original principal brief and reply brief",
+      "Whether the court will impose any further consequence on the contempt question"
+     ]
+    },
+    "consequences": [
+     "Principal brief and reply brief struck, with a revised principal brief ordered on a deadline not subject to extension (order of 1 May 2026)",
+     "Counsel ordered to show cause in writing why he should not be held in contempt (order of 1 May 2026)",
+     "Counsel ordered to pay USD 5,000 to the Office of the Attorney General within 30 days for the State's fees in answering the original brief (order of 21 October 2026)"
+    ],
+    "controls": [
+     {
+      "basis": "documented",
+      "control": "Attorney verification of cited authority before signing and filing",
+      "failure": "Counsel said the research appeared correct to him and did not check it against the actual sources."
+     },
+     {
+      "basis": "documented",
+      "control": "Correction in the reply brief after the State flagged missing citations",
+      "failure": "The reply brief again cited cases for propositions and quotations not in the cited authorities."
+     },
+     {
+      "basis": "documented",
+      "control": "Court's own review of the briefs",
+      "failure": "Held: the court could not locate eight cited authorities and raised the matter on its own motion."
+     }
+    ],
+    "defect_category": "external_output_unverified",
+    "defect_label": "Unverified AI output released to an outside party",
+    "deployment": "deployed",
+    "disclosed_basis": "En banc orders of the Court of Appeals of the State of Mississippi entered 1 May 2026 and 21 October 2026 (court docket copies); the 21 October order appeared on the court's 27 October 2026 hand down list and was reported by Darkhorse Press on 28 October 2026",
+    "disclosed_on": "2026-10-21",
+    "enforcement": {
+     "enforcement_point": "Signature and filing of each appellate brief that cites legal authority.",
+     "decision_state": "Block",
+     "reason": "A cited case, quotation or rule drafted or revised with a generative AI tool has not been located and read in an authoritative source.",
+     "authority_requirement": "The signing attorney locates and reads each cited authority and quotation, and confirms it supports the stated proposition, before filing.",
+     "condition": "Applies to briefs drafted or revised with generative AI tools, including corrections made after an opposing party flags a citation.",
+     "required_response": "Hold the brief with each unverified authority listed.",
+     "responder_action": "Locate and read each listed authority, or remove it and any argument that depends on it.",
+     "next_event": "Filing proceeds after each listed authority is confirmed or removed.",
+     "responsible_role": "Signing attorney (proposed role)"
+    },
+    "evidence_note": "Two primary court orders record the unlocatable and nonexistent authorities, counsel's written statement that he used ChatGPT, his concession that the citations were fictitious, and a USD 5,000 payment order. The contempt question is not resolved in the orders.",
+    "evidence_strength": "strong",
+    "facts": [
+     "On its own motion, the court sitting en banc said the briefs filed by appellant's counsel in a criminal appeal appeared to contain fictitious legal authorities, misrepresent quotations as contained in cited authorities and include misrepresentations of law. [S121 p. 1]",
+     "Reviewing the principal brief, the court was wholly unable to locate eight cited authorities: two appeared not to exist, three led to cases with different names, and three returned cases from other jurisdictions represented as Mississippi cases; at least seven of the authorities it could locate did not support the propositions cited. [S121 p. 2]",
+     "The reply brief, which purported to include corrections after the State pointed out citations it could not retrieve, likewise cited cases for propositions and quotations not in the cited authorities. [S121 p. 2]",
+     "The court struck both briefs, ordered a revised principal brief, ordered counsel to show cause in writing why he should not be held in contempt, and asked the State whether it sought costs and fees for answering the original brief. [S121 pp. 3 to 5]",
+     "Counsel's response stated that he \"used ChatGPT to assist in enhancing and revising my work\" and that he did not understand ChatGPT could supply nonexistent cases and plausible-looking citations. [S120 pp. 2 to 3]",
+     "Counsel admitted that his mistaken confidence did not excuse his failure to verify the cited opinions, quotations and propositions against the actual sources. [S120 p. 3]",
+     "The State submitted an affidavit that a Special Assistant Attorney General spent an estimated 40 hours on the appellee brief and assessed USD 5,000 in fees at USD 125 an hour; counsel did not contest the amount. [S120 pp. 2 to 3]",
+     "Noting counsel's statement that he would never knowingly submit a nonexistent case, the court said that by filing the briefs without verifying the research, citations or arguments, \"that is exactly what he did,\" and found he had conceded the briefs contained fictitious legal authorities and misrepresented quotations and the applicable law. [S120 pp. 3 to 4]",
+     "The court ordered counsel to tender USD 5,000 to the Office of the Attorney General within 30 days and to file proof of transmission with the clerk. [S120 p. 4]"
+    ],
+    "incident_date": "Before 1 May 2026",
+    "incident_date_basis": "The orders do not state the filing dates of the original principal brief and reply brief; the first order was entered 1 May 2026.",
+    "inferences": [
+     "The attempted correction in the reply brief repeated the failure, so a correction made without checking each authority against its source did not stop the problem.",
+     "The cost of the unverified brief fell first on the State, whose attorney spent about 40 hours answering arguments built on authorities that did not exist."
+    ],
+    "location": {
+     "documented": true,
+     "status": "established",
+     "label": "Jackson, Mississippi, United States (Court of Appeals of the State of Mississippi)",
+     "lat": 32.2988,
+     "lon": -90.1848,
+     "kind": "jurisdiction",
+     "basis": "The orders are decisions of the Court of Appeals of the State of Mississippi. Pin placed at Jackson as the seat of the court; the orders do not state where the briefs were prepared."
+    },
+    "organization": "Defense counsel for a criminal appellant; affected: Court of Appeals of the State of Mississippi and the State of Mississippi (Office of the Attorney General)",
+    "rules": [],
+    "sources": [
+     {
+      "id": "S120",
+      "name": "Court of Appeals of the State of Mississippi: Haas v. State, No. 2024-KA-01179-COA, en banc order filed 21 October 2026 (court docket copy)",
+      "url": "https://courts.ms.gov/appellatecourts/docket/sendPDF.php?f=700_780626.pdf&c=98639&a=N&s=2",
+      "published": "2026-10-21",
+      "type": "primary (court order)",
+      "report_id": "R0125",
+      "retrieved": "2026-10-29"
+     },
+     {
+      "id": "S121",
+      "name": "Court of Appeals of the State of Mississippi: Haas v. State, No. 2024-KA-01179-COA, en banc order filed 1 May 2026 (court docket copy)",
+      "url": "https://courts.ms.gov/appellatecourts/docket/sendPDF.php?f=700_759269.pdf&c=98639&a=N&s=2",
+      "published": "2026-05-01",
+      "type": "primary (court order)",
+      "report_id": "R0126",
+      "retrieved": "2026-10-29"
+     }
+    ],
+    "summary": "In a criminal appeal, the Mississippi Court of Appeals found on its own review that defense counsel's briefs cited authorities it could not locate, including cases that do not exist, and attributed quotations and propositions to cases that do not contain them. It struck both briefs and ordered counsel to show cause. Counsel responded that he had used ChatGPT to enhance and revise the brief and had not verified the research. The court found he had conceded the citations were fictitious and ordered him to pay USD 5,000 to the Attorney General's office for the State's time answering the original brief.",
+    "system": "ChatGPT (OpenAI), named in counsel's response as quoted in the order",
+    "title": "ChatGPT-revised appeal briefs cite nonexistent cases and false quotations; Mississippi appeals court strikes them and orders counsel to pay the State USD 5,000",
+    "why_it_mattered": "A criminal appeal was argued on authorities that did not exist, and the State spent about 40 hours answering them before the court intervened.",
+    "workflow": "Drafting and revising appellate briefs in a criminal appeal",
+    "cluster": "AI drafted court filings with fabricated citations (2026)"
+   }
+  },
+  {
+   "incident_id": "INC0072",
+   "last_updated": "2026-10-29",
+   "published_version": 1,
+   "report_ids": [
+    "R0127"
+   ],
+   "review_status": "published",
+   "schema_version": 1,
+   "snapshot_at": "2026-10-29T12:30:00Z",
+   "published": {
+    "actions": {
+     "attempted": [],
+     "completed": [
+      "Filing a petition for writ of supersedeas whose table of authorities listed four suspect cases after drafting with ChatGPT and Google Gemini (order)"
+     ]
+    },
+    "authority": {
+     "status": "exceeded",
+     "statement": "Both the signing attorney and the attorney listed as counsel of record were responsible for verifying the authorities in the petition, and the court found that neither did.",
+     "basis": "Documented: the order records the signing attorney's admission that he used ChatGPT and Google Gemini without verifying the authorities, and the supervising attorney's declaration that he reviewed the petition's contents, arguments and grammar but not its citations.",
+     "present": [
+      "Counsel's authority to represent the defendant and file the petition (order)",
+      "State Bar guidance that a lawyer must review all AI outputs, including citations, for accuracy before submission (order)"
+     ],
+     "absent": [
+      "Verification of the cited cases by the signing attorney (order)",
+      "Review of the citations by the supervising attorney listed as counsel of record (order)"
+     ],
+     "unknown": [
+      "Whether the petition was granted or denied on its merits"
+     ]
+    },
+    "consequences": [
+     "Order to show cause issued 27 May 2026 (order)",
+     "Sanctions of USD 2,500 on the supervising attorney and USD 1,500 on the signing attorney, payable to the court clerk (order)",
+     "Order served on the State Bar, and both attorneys ordered to report the sanctions to the State Bar personally (order)",
+     "Order certified for publication (order)"
+    ],
+    "controls": [
+     {
+      "basis": "documented",
+      "control": "Signing attorney's verification of authorities before filing",
+      "failure": "He attributed the failure to time pressure on an emergency eviction petition and relied on AI tools instead of legal research databases."
+     },
+     {
+      "basis": "documented",
+      "control": "Supervising attorney's review of the petition",
+      "failure": "He reviewed contents, arguments and grammar but not the citations."
+     },
+     {
+      "basis": "documented",
+      "control": "Court's review of the petition",
+      "failure": "Held: the court identified the four suspect cases and issued an order to show cause."
+     }
+    ],
+    "defect_category": "external_output_unverified",
+    "defect_label": "Unverified AI output released to an outside party",
+    "deployment": "deployed",
+    "disclosed_basis": "Order of the Appellate Division of the Superior Court of California, County of Orange, filed as an opinion on 4 August 2026 and modified and renamed an order on 5 August 2026, certified for publication; surfaced in this run through secondary commentary dated 27 October 2026",
+    "disclosed_on": "2026-08-04",
+    "enforcement": {
+     "enforcement_point": "Filing of each petition or brief that cites legal authority, including emergency filings.",
+     "decision_state": "Block",
+     "reason": "A cited case drafted with a general-purpose AI chatbot has not been located and read in an authoritative legal database.",
+     "authority_requirement": "The signing attorney and the attorney listed as counsel of record each confirm that every cited case exists and supports the stated proposition.",
+     "condition": "Applies to any filing drafted or researched with generative AI tools, regardless of deadline pressure.",
+     "required_response": "Hold the filing with each unverified case listed for both attorneys.",
+     "responder_action": "Verify each listed case in a legal research database, or remove it and any argument that depends on it.",
+     "next_event": "Filing proceeds after both attorneys record that each listed case is confirmed or removed.",
+     "responsible_role": "Signing attorney and counsel of record (proposed roles)"
+    },
+    "evidence_note": "Primary published order records the four suspect authorities, the signing attorney's admission that he used ChatGPT and Google Gemini, the supervising attorney's account of his review, and the sanctions.",
+    "evidence_strength": "strong",
+    "facts": [
+     "On 15 May 2026 a law office filed a petition for writ of supersedeas for the defendant in an unlawful detainer appeal; one attorney was listed as counsel of record and another signed it. [S122 opinion p. 2]",
+     "The petition's table of authorities listed four suspicious cases that appeared to have been fabricated by generative AI: one does not exist, one carried the wrong page citation, one does not exist and led to a different case that did not support the proposition, and one was a real case cited for a proposition it does not stand for. [S122 opinion pp. 2 to 3]",
+     "The signing attorney admitted using AI tools, including ChatGPT and Google Gemini, to assist with drafting and legal research, and attributed his failure to verify the authorities to time constraints from the emergency petition and his client's pending eviction. [S122 opinion pp. 3 to 4]",
+     "The supervising attorney declared that he reviewed the petition's contents, arguments and grammar but not the citations, and argued he should be able to rely on associates to verify citations. [S122 opinion p. 3]",
+     "The court rejected that argument, quoting State Bar guidance that a lawyer must review all outputs produced using AI tools for accuracy, including citations to authority, before submission to the court. [S122 opinion p. 7]",
+     "The court stated that citation to even one fake case would be grounds for sanctions, whether intending to deceive the court or not. [S122 opinion p. 8]",
+     "The court imposed sanctions of USD 2,500 on the supervising attorney and USD 1,500 on the signing attorney, payable to the clerk, directed service of the order on the State Bar, and ordered both attorneys to report the sanctions to the State Bar personally. [S122 opinion pp. 8 to 9]",
+     "After learning of the citations, the supervising attorney implemented a written AI policy and revoked all use of AI in firm matters; the signing attorney completed an AI ethics course through the State Bar. [S122 opinion pp. 3 to 4]"
+    ],
+    "incident_date": "2026-05-15",
+    "incident_date_basis": "The order states the petition was filed on 15 May 2026.",
+    "inferences": [
+     "Two attorneys were positioned to check the citations, and the order shows each relied on the other or on the tool, so neither check ran.",
+     "Deadline pressure on an emergency filing is the condition under which an unverified AI draft is most likely to be filed as it stands."
+    ],
+    "location": {
+     "documented": true,
+     "status": "established",
+     "label": "Santa Ana, California, United States (Appellate Division, Superior Court of California, County of Orange)",
+     "lat": 33.7455,
+     "lon": -117.8677,
+     "kind": "jurisdiction",
+     "basis": "The order is a decision of the Appellate Division of the Orange County Superior Court. Pin placed at Santa Ana as the county seat where the court sits; the order does not state where the petition was prepared."
+    },
+    "organization": "Defense counsel in an unlawful detainer appeal; affected: Appellate Division of the Superior Court of California, County of Orange",
+    "rules": [],
+    "sources": [
+     {
+      "id": "S122",
+      "name": "Appellate Division, Superior Court of California, County of Orange: Southland Homes & Real Estate and Investment, LLC v. Lam, No. 30-2026-01569207 (JAD26-04), opinion filed 4 August 2026, modified and renamed an order 5 August 2026",
+      "url": "https://www.courts.ca.gov/opinions/documents/JAD26-04.PDF",
+      "published": "2026-08-04",
+      "type": "primary (court order)",
+      "report_id": "R0127",
+      "retrieved": "2026-10-29"
+     }
+    ],
+    "summary": "In an unlawful detainer appeal, an Orange County appellate court found that a defendant's emergency petition listed four suspect authorities, including cases that do not exist and real cases cited for propositions they do not support. The attorney who signed it admitted drafting with ChatGPT and Google Gemini and not verifying the cases under deadline pressure. The supervising attorney listed as counsel of record said he had reviewed the arguments and grammar but not the citations. The court sanctioned both, ordered them to report to the State Bar, and certified the order for publication.",
+    "system": "ChatGPT (OpenAI) and Google Gemini, named in the signing attorney's admission as recorded in the order",
+    "title": "ChatGPT and Gemini-drafted eviction appeal petition cites fabricated cases; Orange County appellate court sanctions both the signing and supervising attorneys",
+    "why_it_mattered": "Two attorneys put their names to a petition, and neither checked whether the cases it relied on existed.",
+    "workflow": "Drafting an emergency petition for writ of supersedeas in an unlawful detainer appeal",
+    "cluster": "AI drafted court filings with fabricated citations (2026)"
+   }
+  },
+  {
+   "incident_id": "INC0073",
+   "last_updated": "2026-10-29",
+   "published_version": 1,
+   "report_ids": [
+    "R0128",
+    "R0129"
+   ],
+   "review_status": "published",
+   "schema_version": 1,
+   "snapshot_at": "2026-10-29T12:30:00Z",
+   "published": {
+    "actions": {
+     "attempted": [],
+     "completed": [
+      "Cancelling and refunding a customer's entire round-trip award ticket when asked to cancel only the outbound flight (View from the Wing, Delta statement)",
+      "Telling the customer the return flight remained booked (View from the Wing)"
+     ]
+    },
+    "authority": {
+     "status": "exceeded",
+     "statement": "The customer asked the assistant to cancel only her outbound flight, and it cancelled the return as well.",
+     "basis": "Documented: Delta's spokesperson said a bug caused the return segment to be unintentionally canceled when the customer attempted a partial-trip cancellation, which Concierge does not support.",
+     "present": [
+      "Customer's instruction to cancel the outbound flight and keep the return (View from the Wing)",
+      "Concierge's authority to cancel trips on live itineraries (Aviation A2Z)"
+     ],
+     "absent": [
+      "Support in Concierge for partial-trip cancellation (Delta statement)",
+      "A quote and confirmation of the resulting change before the ticket was refunded (not described in the sources)"
+     ],
+     "unknown": [
+      "The date of the cancellation",
+      "Which model or vendor powers Concierge",
+      "How many other customers attempted a partial-trip cancellation through Concierge"
+     ]
+    },
+    "consequences": [
+     "All 32,400 miles and USD 11.20 in taxes refunded and both flights removed from the ticket (View from the Wing)",
+     "Delta reservations reportedly told the customer the trip could not be restored and a new one-way award would cost nearly twice as much (View from the Wing)",
+     "Delta restored the original itinerary, corrected the functionality and updated Concierge guidance (Delta statement)"
+    ],
+    "controls": [
+     {
+      "basis": "documented",
+      "control": "Restriction of Concierge to full-itinerary cancellations",
+      "failure": "A partial-trip request was processed as a full cancellation instead of being refused."
+     },
+     {
+      "basis": "documented",
+      "control": "Confirmation message to the customer",
+      "failure": "Concierge told her the return remained booked while the refund record showed both flights cancelled."
+     },
+     {
+      "basis": "inferred",
+      "control": "Check of the executed change against the reservation system before confirming it",
+      "failure": "Not described as present; the confirmation contradicted the ticketing record."
+     }
+    ],
+    "defect_category": "irreversible_unverified",
+    "defect_label": "Irreversible action without a verified precondition",
+    "deployment": "deployed",
+    "disclosed_basis": "View from the Wing report published 4 August 2026, based on the customer's posted chat and refund screenshots and updated with a Delta spokesperson's statement; Aviation A2Z report published 5 August 2026",
+    "disclosed_on": "2026-08-04",
+    "enforcement": {
+     "enforcement_point": "Concierge's call to the reservation and ticketing system to cancel or refund any part of a ticket.",
+     "decision_state": "Block",
+     "reason": "The requested change is a partial-trip cancellation, which Concierge does not support, and the submitted call would cancel segments the customer asked to keep.",
+     "authority_requirement": "The segments in the cancellation call match the segments the customer asked to cancel, and the customer confirms the repriced result before any refund is issued.",
+     "condition": "Applies to any agent-initiated cancellation, refund or reissue of a multi-segment ticket.",
+     "required_response": "Stop the call, tell the customer the request cannot be completed by Concierge, and hand the case to a reservations agent.",
+     "responder_action": "Quote the repriced itinerary and process the partial change only after the customer accepts it.",
+     "next_event": "The ticket changes only after the customer confirms the repriced result, and Concierge reports the change as recorded in the ticketing system.",
+     "responsible_role": "Reservations supervisor (proposed role)"
+    },
+    "evidence_note": "Travel trade blog report built on the customer's chat and refund screenshots, with Delta's spokesperson confirming the bug, the unintended cancellation and the restoration. A second trade outlet repeats the account. No regulator was involved.",
+    "evidence_strength": "moderate",
+    "facts": [
+     "A Delta Platinum Medallion member held a round-trip SkyMiles award between New York JFK and Los Angeles and asked Delta Concierge to cancel the outbound flight while keeping the return. [S123]",
+     "Concierge replied: \"Your JFK to LAX flight has been canceled, and your LAX to JFK flight remains booked.\" [S123]",
+     "The refund confirmation she posted shows Delta redeposited all 32,400 miles and refunded the USD 11.20 in taxes, lists both the outbound and return flights, and displays \"Refund Number: null.\" [S123]",
+     "Delta reservations reportedly told her the trip could not be restored and that a new one-way award would cost nearly twice as much. [S123, S124]",
+     "A Delta spokesperson said a bug caused the return segment to be unintentionally canceled when a customer attempted a partial-trip cancellation, which Concierge does not support, only full-itinerary cancellations. [S123]",
+     "The spokesperson said the customer's original itinerary was quickly restored with no disruption to her travel, and that Delta corrected the functionality and updated Concierge guidance. [S123]",
+     "Delta introduced Concierge in the Fly Delta app in January 2025 for informational tasks, and in 2026 gave it authority to act on live itineraries, including cancelling trips; the app labels the feature beta. [S124]"
+    ],
+    "incident_date": "On or before 3 August 2026",
+    "incident_date_basis": "Aviation A2Z quotes the customer's social media post of 3 August 2026; the sources do not state the date of the cancellation itself.",
+    "inferences": [
+     "A request type the assistant did not support reached the ticketing system as a broader cancellation, so the limit existed in Delta's design but was not enforced at the point of execution.",
+     "The confirmation described the outcome the customer asked for rather than what the ticketing system recorded, which delayed her discovery of the loss.",
+     "The cancellation proved reversible only after the customer published it; reservations staff had treated it as final."
+    ],
+    "location": {
+     "documented": false,
+     "status": "unresolved",
+     "label": "Execution location not documented",
+     "lat": null,
+     "lon": null,
+     "basis": "The sources describe flights between New York and Los Angeles but do not state where the Concierge action executed, and no regulator or court ruled."
+    },
+    "organization": "Delta Air Lines (operator of Delta Concierge); affected: a SkyMiles member holding a round-trip award ticket",
+    "rules": [],
+    "sources": [
+     {
+      "id": "S123",
+      "name": "View from the Wing: Delta's AI Told A Passenger Her Flight Home Was Safe, Then Canceled It And Demanded Double To Rebook (updated with Delta statement)",
+      "url": "https://viewfromthewing.com/deltas-ai-told-a-passenger-her-flight-home-was-safe-then-canceled-it-and-demanded-double-to-rebook/",
+      "published": "2026-08-04",
+      "type": "secondary (trade blog report)",
+      "report_id": "R0128",
+      "retrieved": "2026-10-29"
+     },
+     {
+      "id": "S124",
+      "name": "Aviation A2Z: Delta AI Told a Passenger Her Return Flight Was Booked, Then Canceled the Entire Ticket",
+      "url": "https://aviationa2z.com/index.php/2026/08/06/delta-ai-told-passenger-return-flight-was-booked-then-canceled-ticket/",
+      "published": "2026-08-05",
+      "type": "secondary (trade news report)",
+      "report_id": "R0129",
+      "retrieved": "2026-10-29"
+     }
+    ],
+    "summary": "A Delta customer asked the airline's AI assistant, Delta Concierge, to cancel the outbound half of a round-trip award ticket. Concierge told her the return remained booked, but the whole ticket was cancelled and refunded, and reservations staff reportedly said it could not be restored. Delta later said a bug caused the return to be cancelled because Concierge does not support partial-trip cancellations, restored her itinerary, and corrected the functionality.",
+    "system": "Delta Concierge, the generative AI assistant in the Fly Delta app (model and vendor not stated)",
+    "title": "Airline's AI assistant cancels a customer's whole award ticket after confirming her return flight was safe; Delta blames a bug and restores the trip",
+    "why_it_mattered": "An assistant given authority to cancel live tickets executed a change it did not support and reported the opposite of what it had done.",
+    "workflow": "Customer self-service cancellation of an award ticket through the airline's app assistant"
    }
   }
  ]
