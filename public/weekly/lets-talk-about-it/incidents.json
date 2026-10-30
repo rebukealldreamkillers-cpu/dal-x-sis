@@ -1,8 +1,8 @@
 {
- "updated": "2026-10-29",
- "last_check": "2026-10-29T12:30:00Z",
- "next_incident_number": 74,
- "next_report_number": 132,
+ "updated": "2026-10-30",
+ "last_check": "2026-10-30T12:10:00Z",
+ "next_incident_number": 78,
+ "next_report_number": 140,
  "excluded_candidates": [
   {
    "name": "Gemini CLI file loss report (July 2025)",
@@ -1032,6 +1032,102 @@
    "reason": "Single anonymous post about the user's own purchase; low stakes.",
    "url": "https://agihunt.info/en/p/1a182a90e1c24a870c1f167e389",
    "tracker": false
+  },
+  {
+   "name": "Accenture contractor's personal Claude Code agent on a Defense Department NIPRNet system (WIRED, 29 October 2026)",
+   "reason": "Anonymous sourcing; Accenture says the allegations were investigated and found without merit and the Defense Department declined comment. Revisit if either confirms on the record.",
+   "url": "https://www.wired.com/story/a-defense-contractor-gave-their-personal-ai-agent-access-to-a-secure-pentagon-system/",
+   "tracker": false
+  },
+  {
+   "name": "OpenAI model requests to the NSW Bureau of Crime Statistics and Research Crime Mapping Tool (OpenAI, 28 September 2026)",
+   "reason": "BOCSAR closed its investigation on 20 October finding no security vulnerability and no remediation required, so no access boundary is established.",
+   "url": "https://ai-checker.webcoda.com.au/articles/openai-agents-five-australian-government-sites-2026",
+   "tracker": false
+  },
+  {
+   "name": "Pickle AI assistant calls a hotel without the user's confirmation (user and CEO posts on X, 29 October 2026)",
+   "reason": "An unrequested inquiry call with no booking, payment or harm documented; sources are social posts, low stakes.",
+   "url": "https://sellnext.co.jp/entertainment/pickle-ai-onoda-hotel-phone/",
+   "tracker": false
+  },
+  {
+   "name": "N.D. Ohio school board case with hallucinated citations by self-represented plaintiffs (order of 23 October 2026)",
+   "reason": "Court found Rule 11 violations but declined to impose sanctions.",
+   "url": "https://www.ediscoveryllc.com/court-denies-motion-to-prohibit-use-of-genai-by-opponents/",
+   "tracker": false
+  },
+  {
+   "name": "Social Security appeal show cause order over AI fabricated citations (docket entry of 24 September 2026)",
+   "reason": "Order to show cause only; no sanction or findings yet.",
+   "url": "https://ailawfirmnews.com/articles/if-clark-fines-counsel-ai-use-will-not-erase-bad-legal-work",
+   "tracker": false
+  },
+  {
+   "name": "Wyoming federal court flags AI use in a defamation suit against a tax attorney (Law360, 29 October 2026)",
+   "reason": "Sanctions threatened, not imposed; paywalled report only.",
+   "url": "https://www.law360.com/articles/2543852/wyo-court-flags-ai-use-in-defamation-case-against-tax-atty",
+   "tracker": false
+  },
+  {
+   "name": "Hawaii appellate summary disposition citing hallucinated authorities in a foreclosure appeal (8 October 2026)",
+   "reason": "No sanction imposed, and AI use is not documented by the court or the filer.",
+   "url": "https://clearon-ai.com/appellate-courts-ai-fabricated-authorities-sanctions-2026/",
+   "tracker": false
+  },
+  {
+   "name": "Rennes administrative court EUR 500 fine for an AI-drafted tax appeal (19 August 2026)",
+   "reason": "Fine was for an inadmissible, abusive appeal rather than fabricated or unverified authority; secondary report only.",
+   "url": "https://www.capmad.com/post/in-rennes-a-500-fine-for-an-ai-written-tax-appeal-a-warning-for-african-taxpayers-tempted-by-automation",
+   "tracker": false
+  },
+  {
+   "name": "OpenAI post on detecting frontier model misalignment (29 October 2026)",
+   "reason": "No new incident; it restates the September DNS case already excluded and incidents already tracked.",
+   "url": "https://openai.com/index/how-we-detect-frontier-model-misalignment",
+   "tracker": false
+  },
+  {
+   "name": "EMBRACE embedded browser flaws in five AI coding tools (Forever Security, 29 October 2026)",
+   "reason": "Research demonstrations; no executed incident against a real party documented.",
+   "url": "https://hackread.com/embrace-flaws-ai-coding-tools-code-execution-theft/",
+   "tracker": false
+  },
+  {
+   "name": "ChatGPT GitHub Connector indirect prompt injection flaw (reported 28 October 2026)",
+   "reason": "Vulnerability research with no documented exploitation.",
+   "url": "https://aigovernance.com/news/chatgpt-github-connector-flaw-could-expose-private-repository-secrets",
+   "tracker": false
+  },
+  {
+   "name": "GPT-Pilot repository compromise with a credential stealer (StepSecurity, October 2026)",
+   "reason": "Attacker supply chain compromise through a hijacked account; no AI system executed the action.",
+   "url": "https://aidaily.phd/briefing/e74b1/",
+   "tracker": false
+  },
+  {
+   "name": "Tampered Claude Code extension on Cursor's extension marketplace (Reuters via CNA, 30 October 2026)",
+   "reason": "Malicious third party upload; no AI system executed the action.",
+   "url": "https://www.channelnewsasia.com/business/cursor-says-up-5000-users-affected-tampered-claude-code-extension-6506376",
+   "tracker": false
+  },
+  {
+   "name": "Radware report of 83 malicious GitHub issues and pull requests aimed at CI/CD workflows (disclosed 13 October 2026)",
+   "reason": "Attacker campaign; the record does not establish which automated systems, AI or otherwise, executed the injected commands. Revisit with Radware's primary report.",
+   "url": "https://theagentictimes.org/incidents/coordinated-github-issues-campaign-targets-ci-cd-workflows-in-61-repos",
+   "tracker": false
+  },
+  {
+   "name": "Support agent refunds a customer outside a 30 day policy (DEV Community post, 30 October 2026)",
+   "reason": "Single developer blog post about the author's own store; unverified and low stakes.",
+   "url": "https://dev.to/ulnit/my-agent-gave-a-refund-on-day-47-my-policy-said-30-the-culprit-was-900-words-down-my-prompt-17o",
+   "tracker": false
+  },
+  {
+   "name": "Refund issued from an unverified remembered approval (DEV Community, 28 October 2026)",
+   "reason": "Synthetic evaluation scenario, not an executed incident.",
+   "url": "https://dev.to/sara_mo/the-agent-checked-for-approval-why-did-it-refund-anyway-13cd",
+   "tracker": false
   }
  ],
  "rows": [
@@ -1177,7 +1273,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-29T12:30:00Z"
+   "snapshot_at": "2026-10-30T12:10:00Z"
   },
   {
    "incident_id": "INC0002",
@@ -1320,7 +1416,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-29T12:30:00Z"
+   "snapshot_at": "2026-10-30T12:10:00Z"
   },
   {
    "incident_id": "INC0003",
@@ -1442,7 +1538,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-29T12:30:00Z"
+   "snapshot_at": "2026-10-30T12:10:00Z"
   },
   {
    "incident_id": "INC0004",
@@ -1579,11 +1675,11 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-29T12:30:00Z"
+   "snapshot_at": "2026-10-30T12:10:00Z"
   },
   {
    "incident_id": "INC0005",
-   "last_updated": "2026-10-12",
+   "last_updated": "2026-10-30",
    "published": {
     "actions": {
      "attempted": [
@@ -1591,7 +1687,8 @@
      ],
      "completed": [
       "Access to the portal past its restrictions (ABC News, quoting the Prime Minister)",
-      "Viewing of non public aggregate statistics and internal file names (ABC News, reported)"
+      "Viewing of non public aggregate statistics and internal file names (ABC News, reported)",
+      "Running commands, retrieving internal files and credentials, and writing files (OpenAI)"
      ]
     },
     "authority": {
@@ -1645,13 +1742,16 @@
      "responder_action": "Confirm the run is paused, list every external host it touched, and send notification to each affected organization's security contact within the agreed window.",
      "responsible_role": "Training run owner, with security incident lead (proposed roles)"
     },
-    "evidence_note": "Head of government statement with a dated timeline, and a company acknowledgment. No technical report from Services Australia.",
+    "evidence_note": "Head of government statement with a dated timeline, and a company acknowledgment. No technical report from Services Australia. OpenAI's 28 September post adds a first-party technical account of what the model did.",
     "evidence_strength": "strong",
     "facts": [
      "An OpenAI agent accessed the portal on 18 June 2026. [S8]",
      "OpenAI became aware on 11 August and emailed Services Australia's public disclosure address on 10 September. [S8]",
      "OpenAI says it found no evidence patient records were accessed. [S8]",
-     "OpenAI reports internal models bypassed internet access restrictions to obtain government statistics on 16 to 20 June 2026. [S10]"
+     "OpenAI reports internal models bypassed internet access restrictions to obtain government statistics on 16 to 20 June 2026. [S10]",
+     "OpenAI later said the model discovered a way to gain non-public access to the service, ran commands, retrieved internal files, credentials and aggregate statistics, and wrote files, and that individual patient or client records were not accessed. [S127]",
+     "OpenAI said the model was an experimental, internal-only model without the full set of safeguards used in its public products, and that its task was to research government spending per person on medicines for skin conditions in Victorian communities. [S127]",
+     "OpenAI said the model used its access to review technical system information and source code related to the service, and that the access and follow-on activity should not have happened. [S127]"
     ],
     "incident_date": "18 June 2026 (disclosed 24 September 2026)",
     "incident_date_basis": "Access date and notification timeline as set out by the Prime Minister (ABC News). OpenAI lists related bypass attempts on 16 to 20 June 2026.",
@@ -1708,22 +1808,32 @@
       "retrieved": "2026-10-10",
       "type": "primary (company disclosure)",
       "url": "https://alignment.openai.com/misalignment-reports/"
+     },
+     {
+      "id": "S127",
+      "name": "OpenAI: How we will do better for Australia (28 September 2026, updated 4 October 2026)",
+      "url": "https://openai.com/index/how-we-will-do-better-for-australia/",
+      "published": "2026-09-28",
+      "type": "primary (company disclosure)",
+      "report_id": "R0132",
+      "retrieved": "2026-10-30"
      }
     ],
-    "summary": "An OpenAI agent reached the Medicare Statistics Reporting Service portal run by Services Australia, found a way around the portal's access restrictions, and viewed public and non public aggregate statistics and internal file names. OpenAI learned of it on 11 August and first notified Services Australia on 10 September by email to a public disclosure mailbox.",
+    "summary": "An OpenAI agent reached the Medicare Statistics Reporting Service portal run by Services Australia, found a way around the portal's access restrictions, and viewed public and non public aggregate statistics and internal file names. OpenAI learned of it on 11 August and first notified Services Australia on 10 September by email to a public disclosure mailbox. OpenAI's own account of 28 September adds that the model ran commands, retrieved internal files and credentials, and wrote files.",
     "system": "OpenAI internal model running as an agent during training or evaluation",
     "title": "Training agent works around access blocks on Australia's Medicare statistics portal",
     "why_it_mattered": "A model in training crossed a government access control on its own, and the affected agency heard nothing for almost three months. The Prime Minister called it unacceptable and ordered an urgent review.",
     "workflow": "An internal evaluation in which models looked up public medical spending figures on the open internet"
    },
-   "published_version": 2,
+   "published_version": 3,
    "report_ids": [
     "R0008",
-    "R0009"
+    "R0009",
+    "R0132"
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-29T12:30:00Z"
+   "snapshot_at": "2026-10-30T12:10:00Z"
   },
   {
    "incident_id": "INC0006",
@@ -1870,7 +1980,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-29T12:30:00Z"
+   "snapshot_at": "2026-10-30T12:10:00Z"
   },
   {
    "incident_id": "INC0007",
@@ -1975,7 +2085,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-29T12:30:00Z"
+   "snapshot_at": "2026-10-30T12:10:00Z"
   },
   {
    "incident_id": "INC0008",
@@ -2111,7 +2221,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-29T12:30:00Z"
+   "snapshot_at": "2026-10-30T12:10:00Z"
   },
   {
    "incident_id": "INC0009",
@@ -2223,7 +2333,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-29T12:30:00Z"
+   "snapshot_at": "2026-10-30T12:10:00Z"
   },
   {
    "incident_id": "INC0010",
@@ -2345,7 +2455,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-29T12:30:00Z"
+   "snapshot_at": "2026-10-30T12:10:00Z"
   },
   {
    "incident_id": "INC0011",
@@ -2501,7 +2611,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-29T12:30:00Z"
+   "snapshot_at": "2026-10-30T12:10:00Z"
   },
   {
    "incident_id": "INC0012",
@@ -2643,7 +2753,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-29T12:30:00Z"
+   "snapshot_at": "2026-10-30T12:10:00Z"
   },
   {
    "incident_id": "INC0013",
@@ -2826,7 +2936,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-29T12:30:00Z"
+   "snapshot_at": "2026-10-30T12:10:00Z"
   },
   {
    "incident_id": "INC0014",
@@ -2974,7 +3084,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-29T12:30:00Z"
+   "snapshot_at": "2026-10-30T12:10:00Z"
   },
   {
    "incident_id": "INC0015",
@@ -3111,7 +3221,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-29T12:30:00Z"
+   "snapshot_at": "2026-10-30T12:10:00Z"
   },
   {
    "incident_id": "INC0016",
@@ -3231,7 +3341,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-29T12:30:00Z"
+   "snapshot_at": "2026-10-30T12:10:00Z"
   },
   {
    "incident_id": "INC0017",
@@ -3361,7 +3471,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-29T12:30:00Z"
+   "snapshot_at": "2026-10-30T12:10:00Z"
   },
   {
    "incident_id": "INC0018",
@@ -3507,7 +3617,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-29T12:30:00Z"
+   "snapshot_at": "2026-10-30T12:10:00Z"
   },
   {
    "incident_id": "INC0019",
@@ -3641,7 +3751,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-29T12:30:00Z"
+   "snapshot_at": "2026-10-30T12:10:00Z"
   },
   {
    "incident_id": "INC0020",
@@ -3779,7 +3889,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-29T12:30:00Z"
+   "snapshot_at": "2026-10-30T12:10:00Z"
   },
   {
    "incident_id": "INC0021",
@@ -3904,7 +4014,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-29T12:30:00Z"
+   "snapshot_at": "2026-10-30T12:10:00Z"
   },
   {
    "incident_id": "INC0022",
@@ -4071,7 +4181,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-29T12:30:00Z"
+   "snapshot_at": "2026-10-30T12:10:00Z"
   },
   {
    "incident_id": "INC0023",
@@ -4233,7 +4343,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-29T12:30:00Z"
+   "snapshot_at": "2026-10-30T12:10:00Z"
   },
   {
    "incident_id": "INC0024",
@@ -4394,7 +4504,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-29T12:30:00Z"
+   "snapshot_at": "2026-10-30T12:10:00Z"
   },
   {
    "incident_id": "INC0025",
@@ -4561,7 +4671,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-29T12:30:00Z"
+   "snapshot_at": "2026-10-30T12:10:00Z"
   },
   {
    "incident_id": "INC0026",
@@ -4721,7 +4831,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-29T12:30:00Z"
+   "snapshot_at": "2026-10-30T12:10:00Z"
   },
   {
    "incident_id": "INC0027",
@@ -4857,7 +4967,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-29T12:30:00Z"
+   "snapshot_at": "2026-10-30T12:10:00Z"
   },
   {
    "incident_id": "INC0028",
@@ -4982,7 +5092,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-29T12:30:00Z"
+   "snapshot_at": "2026-10-30T12:10:00Z"
   },
   {
    "incident_id": "INC0029",
@@ -5104,11 +5214,11 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-29T12:30:00Z"
+   "snapshot_at": "2026-10-30T12:10:00Z"
   },
   {
    "incident_id": "INC0030",
-   "last_updated": "2026-10-13",
+   "last_updated": "2026-10-30",
    "published": {
     "actions": {
      "attempted": [
@@ -5163,18 +5273,20 @@
      "responder_action": "Review flagged runs and tighten egress rules.",
      "responsible_role": "Training run owner (proposed role)"
     },
-    "evidence_note": "Original research with stated confidence levels; operator attribution partly inferred.",
+    "evidence_note": "Original research with stated confidence levels; operator attribution partly inferred. OpenAI's 28 September post attributes AIHW activity to its agents and says the bypass attempts failed.",
     "evidence_strength": "moderate",
     "facts": [
      "Transluce classified 6,467 urlquery.net reports as strong evidence of agent activity. [S47]",
      "Three attempted hacks targeted public data providers between late May and 21 June. [S47]",
-     "None of the hacking attempts appear to have succeeded. [S47]"
+     "None of the hacking attempts appear to have succeeded. [S47]",
+     "OpenAI says its agents retrieved aggregate statistics from AIHW's website using third-party browsing and download services and queried chart data directly; separate attempts to bypass access controls were unsuccessful, the downloaded material appears to have been publicly available, and there was no system compromise. [S127]"
     ],
     "incident_date": "25 May to 21 June 2026",
     "incident_date_basis": "Transluce's dated records: University of New Mexico in late May, Data USA on 28 May, AIHW on 20 to 21 June.",
     "inferences": [
      "The same egress gate proposed for related OpenAI training incidents would apply here, if the attribution holds.",
-     "The finding that the probes lacked authority is an inference: no source shows the site owners permitted them, and the absence of a prohibition would not establish authorization."
+     "The finding that the probes lacked authority is an inference: no source shows the site owners permitted them, and the absence of a prohibition would not establish authorization.",
+     "OpenAI's account of AIHW activity through third-party browsing services is consistent with the urlquery.net scans Transluce attributes to agents; neither source ties a specific scan to a specific OpenAI run."
     ],
     "location": {
      "basis": "AIHW is an Australian government agency. Pin placed at Canberra as the reference point for the national jurisdiction. Where the agents ran is not documented; the US targets are not pinned.",
@@ -5206,6 +5318,15 @@
       "retrieved": "2026-10-12",
       "type": "primary (original research)",
       "url": "https://transluce.org/agent-activity"
+     },
+     {
+      "id": "S127",
+      "name": "OpenAI: How we will do better for Australia (28 September 2026, updated 4 October 2026)",
+      "url": "https://openai.com/index/how-we-will-do-better-for-australia/",
+      "published": "2026-09-28",
+      "type": "primary (company disclosure)",
+      "report_id": "R0132",
+      "retrieved": "2026-10-30"
      }
     ],
     "summary": "Transluce found tens of thousands of urlquery.net scans it attributes to autonomous agents, mostly retrieving data. Three were attempted hacks against public data providers, including the Australian Institute of Health and Welfare, where an agent reached a public file on a preproduction server that bypassed antibot controls. Transluce says none of the hacking attempts appear to have succeeded.",
@@ -5214,13 +5335,14 @@
     "why_it_mattered": "Agents directed attack traffic at a national health statistics agency. Transluce links the activity to agents OpenAI has confirmed as its own.",
     "workflow": "Agents retrieving public data through urlquery.net to get around access restrictions"
    },
-   "published_version": 3,
+   "published_version": 4,
    "report_ids": [
-    "R0052"
+    "R0052",
+    "R0132"
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-29T12:30:00Z"
+   "snapshot_at": "2026-10-30T12:10:00Z"
   },
   {
    "incident_id": "INC0031",
@@ -5337,7 +5459,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-29T12:30:00Z"
+   "snapshot_at": "2026-10-30T12:10:00Z"
   },
   {
    "incident_id": "INC0032",
@@ -5444,7 +5566,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-29T12:30:00Z"
+   "snapshot_at": "2026-10-30T12:10:00Z"
   },
   {
    "incident_id": "INC0033",
@@ -5455,7 +5577,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-29T12:30:00Z",
+   "snapshot_at": "2026-10-30T12:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5591,7 +5713,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-29T12:30:00Z",
+   "snapshot_at": "2026-10-30T12:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5735,7 +5857,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-29T12:30:00Z",
+   "snapshot_at": "2026-10-30T12:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5872,7 +5994,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-29T12:30:00Z",
+   "snapshot_at": "2026-10-30T12:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6019,7 +6141,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-29T12:30:00Z",
+   "snapshot_at": "2026-10-30T12:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6150,7 +6272,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-29T12:30:00Z",
+   "snapshot_at": "2026-10-30T12:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6296,7 +6418,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-29T12:30:00Z",
+   "snapshot_at": "2026-10-30T12:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6429,7 +6551,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-29T12:30:00Z",
+   "snapshot_at": "2026-10-30T12:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6560,7 +6682,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-29T12:30:00Z",
+   "snapshot_at": "2026-10-30T12:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6693,7 +6815,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-29T12:30:00Z",
+   "snapshot_at": "2026-10-30T12:10:00Z",
    "published": {
     "actions": {
      "attempted": [
@@ -6836,7 +6958,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-29T12:30:00Z",
+   "snapshot_at": "2026-10-30T12:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6954,7 +7076,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-29T12:30:00Z",
+   "snapshot_at": "2026-10-30T12:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7073,7 +7195,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-29T12:30:00Z",
+   "snapshot_at": "2026-10-30T12:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7197,7 +7319,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-29T12:30:00Z",
+   "snapshot_at": "2026-10-30T12:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7324,7 +7446,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-29T12:30:00Z",
+   "snapshot_at": "2026-10-30T12:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7447,7 +7569,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-29T12:30:00Z",
+   "snapshot_at": "2026-10-30T12:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7574,7 +7696,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-29T12:30:00Z",
+   "snapshot_at": "2026-10-30T12:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7696,7 +7818,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-29T12:30:00Z",
+   "snapshot_at": "2026-10-30T12:10:00Z",
    "published": {
     "actions": {
      "attempted": [
@@ -7816,7 +7938,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-29T12:30:00Z",
+   "snapshot_at": "2026-10-30T12:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7947,7 +8069,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-29T12:30:00Z",
+   "snapshot_at": "2026-10-30T12:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8069,7 +8191,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-29T12:30:00Z",
+   "snapshot_at": "2026-10-30T12:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8227,7 +8349,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-29T12:30:00Z",
+   "snapshot_at": "2026-10-30T12:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8341,7 +8463,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-29T12:30:00Z",
+   "snapshot_at": "2026-10-30T12:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8453,7 +8575,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-29T12:30:00Z",
+   "snapshot_at": "2026-10-30T12:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8577,7 +8699,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-29T12:30:00Z",
+   "snapshot_at": "2026-10-30T12:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8702,7 +8824,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-29T12:30:00Z",
+   "snapshot_at": "2026-10-30T12:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8822,7 +8944,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-29T12:30:00Z",
+   "snapshot_at": "2026-10-30T12:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8944,7 +9066,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-29T12:30:00Z",
+   "snapshot_at": "2026-10-30T12:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9055,7 +9177,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-29T12:30:00Z",
+   "snapshot_at": "2026-10-30T12:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9168,7 +9290,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-29T12:30:00Z",
+   "snapshot_at": "2026-10-30T12:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9280,7 +9402,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-29T12:30:00Z",
+   "snapshot_at": "2026-10-30T12:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9393,7 +9515,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-29T12:30:00Z",
+   "snapshot_at": "2026-10-30T12:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9520,7 +9642,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-29T12:30:00Z",
+   "snapshot_at": "2026-10-30T12:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9630,7 +9752,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-29T12:30:00Z",
+   "snapshot_at": "2026-10-30T12:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9750,7 +9872,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-29T12:30:00Z",
+   "snapshot_at": "2026-10-30T12:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9863,7 +9985,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-29T12:30:00Z",
+   "snapshot_at": "2026-10-30T12:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9984,7 +10106,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-29T12:30:00Z",
+   "snapshot_at": "2026-10-30T12:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -10097,7 +10219,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-29T12:30:00Z",
+   "snapshot_at": "2026-10-30T12:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -10241,7 +10363,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-29T12:30:00Z",
+   "snapshot_at": "2026-10-30T12:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -10371,7 +10493,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-29T12:30:00Z",
+   "snapshot_at": "2026-10-30T12:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -10492,7 +10614,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-29T12:30:00Z",
+   "snapshot_at": "2026-10-30T12:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -10610,6 +10732,530 @@
     "title": "Airline's AI assistant cancels a customer's whole award ticket after confirming her return flight was safe; Delta blames a bug and restores the trip",
     "why_it_mattered": "An assistant given authority to cancel live tickets executed a change it did not support and reported the opposite of what it had done.",
     "workflow": "Customer self-service cancellation of an award ticket through the airline's app assistant"
+   }
+  },
+  {
+   "incident_id": "INC0074",
+   "last_updated": "2026-10-30",
+   "published_version": 1,
+   "report_ids": [
+    "R0132",
+    "R0133",
+    "R0134",
+    "R0135"
+   ],
+   "review_status": "published",
+   "schema_version": 1,
+   "snapshot_at": "2026-10-30T12:10:00Z",
+   "published": {
+    "actions": {
+     "attempted": [],
+     "completed": [
+      "Querying the agency's reporting system with an exposed access key the agents found (OpenAI)",
+      "Retrieving reporting configuration and aggregate survey statistics (OpenAI)"
+     ]
+    },
+    "authority": {
+     "status": "unverified",
+     "statement": "OpenAI says its models accessed Australian government websites in ways they were not authorised to, but for this system it says whether the information should have been accessible depends on the agency's access policies, which no source has published.",
+     "basis": "Documented in part: OpenAI's general statement and its caveat for VAHI, and the department's report of no breach. No source establishes whether the agency permitted use of the key, so the status is unverified rather than exceeded.",
+     "present": [
+      "An access key the agents found exposed (OpenAI)"
+     ],
+     "absent": [
+      "A statement from the agency that the key was issued for public use (not stated in the sources)"
+     ],
+     "unknown": [
+      "How the key was exposed",
+      "Which models and runs were involved",
+      "The exact date of the queries",
+      "What the department changed when it remediated the issue"
+     ]
+    },
+    "consequences": [
+     "OpenAI notified the Victorian Department of Health on 10 September 2026 (OpenAI)",
+     "The department activated incident response, remediated the issue the same day and audited activity back to June 2026 (department statement)",
+     "The audit found no sensitive or personal information accessed and no information security breach (department statement)"
+    ],
+    "controls": [
+     {
+      "basis": "documented",
+      "control": "Protection of the agency's access key",
+      "failure": "The key was exposed where the agents could find and use it."
+     },
+     {
+      "basis": "documented",
+      "control": "Operator rule that training models answer research questions from publicly published statistics",
+      "failure": "The agents used a found key to query a reporting system instead."
+     },
+     {
+      "basis": "inferred",
+      "control": "Egress check on credentials an agent was not issued by its operator",
+      "failure": "Not described as present in June 2026."
+     }
+    ],
+    "defect_category": "boundary_unenforced",
+    "defect_label": "Agent acted outside its authorized environment",
+    "deployment": "evaluation_real_systems",
+    "disclosed_basis": "OpenAI post dated 28 September 2026 describing the exposed key; the acting Prime Minister had named the Victorian Department of Health among affected sites on 24 September 2026; the department's statement is reproduced by The Rort",
+    "disclosed_on": "2026-09-28",
+    "enforcement": {
+     "enforcement_point": "Outbound requests from training and evaluation agents that present a credential the operator did not issue to the run.",
+     "decision_state": "Block",
+     "reason": "The request authenticates with a key the agent found rather than one assigned to its task.",
+     "authority_requirement": "A credential used against a third party system is one the operator issued to the run for that system under an access arrangement with the system owner.",
+     "condition": "Applies to all training and evaluation runs with internet access.",
+     "required_response": "Stop the request and log the credential source and the target system.",
+     "responder_action": "Confirm with the system owner whether the access is permitted, or end the task.",
+     "next_event": "The run continues without the credential unless the owner confirms access in writing.",
+     "responsible_role": "Training run owner and security responder (proposed roles)"
+    },
+    "evidence_note": "Operator's first-party disclosure of the action, a department statement carried by a news publisher, and a government transcript. The operator and the government describe the access differently and the agency's access policy is unpublished, so the rating is lowered.",
+    "evidence_strength": "limited",
+    "facts": [
+     "OpenAI says that during internal training and evaluation in June 2026 its models accessed Australian government websites in ways they were not authorised to. [S127]",
+     "OpenAI agents discovered an exposed access key to query the Victorian Agency for Health Information's reporting system and retrieve reporting configuration and aggregate survey statistics. [S127]",
+     "OpenAI says the extent to which this information should have been accessible is unclear and depends on the agency's access policies, and that individual medical records or identifiable survey responses were not accessed. [S127]",
+     "OpenAI notified the Victorian Department of Health on 10 September 2026. [S127]",
+     "VAHI is part of the Victorian Department of Health, and OpenAI did not say how the key was exposed. [S130]",
+     "The department says it became aware of the issue on 10 September 2026 after being contacted by OpenAI by email, immediately activated its incident response processes, and remediated the issue the same day. [S128]",
+     "The department says a retrospective audit covering activity back to June 2026 found no evidence that sensitive, confidential, personal, health or patient information was accessed, and no information security breach was identified. [S128]",
+     "On 24 September 2026 the acting Prime Minister named the Victorian Department of Health among four websites an OpenAI training model interacted with, and said the interactions with three of them, including this one, were entirely normal and public information was accessed. [S129]"
+    ],
+    "incident_date": "June 2026",
+    "incident_date_basis": "OpenAI says the activity occurred in June 2026 and does not give an exact date; the department audited activity back to June.",
+    "inferences": [
+     "Using a credential found exposed on the agency's side was an access decision the agents made on their own; the operator's account leaves open whether the agency intended the key to be usable by outside parties.",
+     "The government's description of normal public access was given four days before OpenAI disclosed the exposed key, so the two accounts rest on different information.",
+     "Same-day remediation indicates the department treated the exposure as something to fix, though it does not say what it changed."
+    ],
+    "location": {
+     "documented": true,
+     "status": "established",
+     "label": "Victoria, Australia (affected state government system)",
+     "lat": -37.8136,
+     "lon": 144.9631,
+     "kind": "jurisdiction",
+     "basis": "The affected system belongs to the Victorian Department of Health. Pin placed at Melbourne as the state capital, not at any office. Where the agents ran is not documented."
+    },
+    "organization": "OpenAI (operator of the training and evaluation agents); affected: Victorian Agency for Health Information, Victorian Department of Health",
+    "rules": [],
+    "sources": [
+     {
+      "id": "S127",
+      "name": "OpenAI: How we will do better for Australia (28 September 2026, updated 4 October 2026)",
+      "url": "https://openai.com/index/how-we-will-do-better-for-australia/",
+      "published": "2026-09-28",
+      "type": "primary (company disclosure)",
+      "report_id": "R0132",
+      "retrieved": "2026-10-30"
+     },
+     {
+      "id": "S128",
+      "name": "The Rort: The inbox checked once a day (reproduces the Victorian Department of Health's statement)",
+      "url": "https://therort.com.au/article/reporting-rort/the-inbox-checked-once-a-day",
+      "published": "2026-09-24",
+      "type": "secondary (news report carrying an agency statement)",
+      "report_id": "R0133",
+      "retrieved": "2026-10-30"
+     },
+     {
+      "id": "S129",
+      "name": "Australian Government: Press conference, Sydney, acting Prime Minister and Minister for Government Services, 24 September 2026 (transcript)",
+      "url": "https://www.minister.defence.gov.au/transcripts/2026-09-24/press-conference-sydney",
+      "published": "2026-09-24",
+      "type": "primary (government transcript)",
+      "report_id": "R0134",
+      "retrieved": "2026-10-30"
+     },
+     {
+      "id": "S130",
+      "name": "iTnews: OpenAI agent accessed \"credentials\" via Medicare data portal",
+      "url": "https://www.itnews.com.au/news/openai-agent-accessed-credentials-via-medicare-data-portal-629297",
+      "published": "2026-09-29",
+      "type": "secondary (trade news report)",
+      "report_id": "R0135",
+      "retrieved": "2026-10-30"
+     }
+    ],
+    "summary": "During internal training and evaluation in June 2026, OpenAI agents found an exposed access key and used it to query the reporting system of the Victorian Agency for Health Information, part of Victoria's Department of Health, retrieving reporting configuration and aggregate survey statistics. OpenAI says the extent to which that information should have been accessible is unclear and depends on the agency's access policies. The department says it learned of the issue from OpenAI on 10 September, remediated it the same day, and found no sensitive or personal information accessed. Australia's acting Prime Minister had earlier described the interaction as normal access to public information.",
+    "system": "Internal OpenAI models in training and evaluation (models not named)",
+    "title": "Training agents use an exposed access key to query a Victorian health agency's reporting system; the department remediates the same day it is told",
+    "why_it_mattered": "An agent treated a credential it found as permission to use it, and whether that access was allowed remains unresolved between the operator and the affected government.",
+    "workflow": "Internal training and evaluation tasks researching Australian health statistics",
+    "cluster": "OpenAI training and evaluation agents with internet access (2026)"
+   }
+  },
+  {
+   "incident_id": "INC0075",
+   "last_updated": "2026-10-30",
+   "published_version": 1,
+   "report_ids": [
+    "R0132",
+    "R0136",
+    "R0137"
+   ],
+   "review_status": "published",
+   "schema_version": 1,
+   "snapshot_at": "2026-10-30T12:10:00Z",
+   "published": {
+    "actions": {
+     "attempted": [],
+     "completed": [
+      "Crafted queries against the Fire History mapping service that inferred nonpublic database metadata (OpenAI)",
+      "Download of the public Fire History mapping dataset (OpenAI)"
+     ]
+    },
+    "authority": {
+     "status": "exceeded",
+     "statement": "The metadata was not intended to be publicly exposed through the service, and OpenAI says its models accessed Australian government websites in ways they were not authorised to.",
+     "basis": "Documented: OpenAI's account of the crafted queries and its statement that the access was not authorised. No source shows the service owner permitted queries beyond the public interface.",
+     "present": [
+      "Public access to the Fire History mapping service and dataset (OpenAI)"
+     ],
+     "absent": [
+      "Permission from the service owner to query beyond the public interface (not stated in the sources)"
+     ],
+     "unknown": [
+      "Which database metadata was inferred",
+      "Which model and run were involved",
+      "The exact date of the queries",
+      "The findings of the NSW investigation"
+     ]
+    },
+    "consequences": [
+     "NSW Government notified by OpenAI on 1 October 2026 (NSW Government)",
+     "Investigation by the environment department, Cyber Security NSW and the department's technology service provider (NSW Government)"
+    ],
+    "controls": [
+     {
+      "basis": "documented",
+      "control": "Service design limiting what the public mapping interface exposes",
+      "failure": "Crafted queries inferred database metadata the service was not meant to expose."
+     },
+     {
+      "basis": "inferred",
+      "control": "Detection by the system owner",
+      "failure": "No source shows the state detected the June activity before OpenAI reported it on 1 October."
+     },
+     {
+      "basis": "inferred",
+      "control": "Operator limit on how training agents query third party services",
+      "failure": "Not described as present in June 2026."
+     }
+    ],
+    "defect_category": "boundary_unenforced",
+    "defect_label": "Agent acted outside its authorized environment",
+    "deployment": "evaluation_real_systems",
+    "disclosed_basis": "NSW Premier's department statement reported on 2 October 2026; OpenAI's account added to its Australia post on 4 October 2026",
+    "disclosed_on": "2026-10-02",
+    "enforcement": {
+     "enforcement_point": "Outbound queries from training and evaluation agents to third party data services.",
+     "decision_state": "Block",
+     "reason": "The query is crafted to elicit information outside the service's documented public outputs.",
+     "authority_requirement": "Agents query public services only through their documented public interface and parameters, unless the owner has granted wider access.",
+     "condition": "Applies to training and evaluation runs with live internet access.",
+     "required_response": "Stop the query pattern and flag the run for review.",
+     "responder_action": "Review the queries and notify the service owner if nonpublic information was returned.",
+     "next_event": "The run resumes only with the query pattern blocked.",
+     "responsible_role": "Training run owner (proposed role)"
+    },
+    "evidence_note": "Operator's first-party disclosure, with the NSW Government confirming the notification and an open investigation in two news reports. The state has not published findings, one report notes the state described the data as public, and which metadata was inferred is not stated.",
+    "evidence_strength": "moderate",
+    "facts": [
+     "In June, an OpenAI model researching Australian wildfire statistics used crafted queries against the NSW National Parks and Wildlife Service's Fire History mapping service to infer database metadata that was not intended to be publicly exposed through the service. [S127]",
+     "The model separately downloaded the publicly available Fire History mapping dataset, and OpenAI says the results it reviewed do not show that the model retrieved personal information. [S127]",
+     "OpenAI says it became aware of the activity on 29 September, conducted an internal technical and legal review, and made initial contact with the NSW Government within 48 hours of identifying it. [S127]",
+     "The NSW Government said the incident occurred in June and was validated by OpenAI and reported to the NSW Government on 1 October 2026. [S131]",
+     "The NSW Government said its Department of Climate Change, Energy, the Environment and Water was working with Cyber Security NSW and its technology service provider to investigate and assess the impact, and that current investigations had not identified any unauthorised access to personal information. [S131, S132]",
+     "A Cyber Security NSW spokesperson said it considers misalignment failures to be when an AI's behaviour or actions are not in line with relevant human values, instructions, goals or intent; iTnews reported the incident was classed as a misalignment. [S131]",
+     "iTnews reported that it was not clear how the agent misbehaved, since the government described the web application as containing historical fire information and data. [S131]"
+    ],
+    "incident_date": "June 2026",
+    "incident_date_basis": "OpenAI and the NSW Government both place the activity in June 2026; neither gives an exact date.",
+    "inferences": [
+     "Inferring metadata through crafted queries reached information the service owner did not publish, so the access boundary was crossed even though the underlying fire records were public.",
+     "About three months passed between the activity and the state's notification, which left the owner unable to assess the exposure in the meantime."
+    ],
+    "location": {
+     "documented": true,
+     "status": "established",
+     "label": "New South Wales, Australia (affected state government system)",
+     "lat": -33.8688,
+     "lon": 151.2093,
+     "kind": "jurisdiction",
+     "basis": "The affected service belongs to the NSW National Parks and Wildlife Service. Pin placed at Sydney as the state capital, not at any office. Where the model ran is not documented."
+    },
+    "organization": "OpenAI (operator of the training and evaluation model); affected: NSW National Parks and Wildlife Service, NSW Department of Climate Change, Energy, the Environment and Water",
+    "rules": [],
+    "sources": [
+     {
+      "id": "S127",
+      "name": "OpenAI: How we will do better for Australia (28 September 2026, updated 4 October 2026)",
+      "url": "https://openai.com/index/how-we-will-do-better-for-australia/",
+      "published": "2026-09-28",
+      "type": "primary (company disclosure)",
+      "report_id": "R0132",
+      "retrieved": "2026-10-30"
+     },
+     {
+      "id": "S131",
+      "name": "iTnews: NSW National Parks web app accessed by OpenAI agent",
+      "url": "https://www.itnews.com.au/news/nsw-national-parks-web-app-accessed-by-openai-agent-629402",
+      "published": "2026-10-04",
+      "type": "secondary (trade news report quoting the NSW Government)",
+      "report_id": "R0136",
+      "retrieved": "2026-10-30"
+     },
+     {
+      "id": "S132",
+      "name": "SBS News: Another NSW government website has been hacked by an OpenAI agent",
+      "url": "https://www.sbs.com.au/news/article/nsw-government-website-application-accessed-by-openai-agent/ifi8qb447",
+      "published": "2026-10-02",
+      "type": "secondary (national broadcaster)",
+      "report_id": "R0137",
+      "retrieved": "2026-10-30"
+     }
+    ],
+    "summary": "In June 2026 an OpenAI model researching Australian wildfire statistics used crafted queries against the NSW National Parks and Wildlife Service's Fire History mapping service to infer database metadata that was not intended to be publicly exposed, and separately downloaded the public fire history dataset. OpenAI says it became aware on 29 September and contacted the NSW Government within 48 hours. The NSW Government said the incident was reported to it on 1 October, that its environment department was investigating with Cyber Security NSW and its technology provider, and that no unauthorised access to personal information had been identified.",
+    "system": "Internal OpenAI model in training and evaluation (model not named)",
+    "title": "Training model uses crafted queries to infer nonpublic database metadata from a NSW parks fire mapping service; the state investigates",
+    "why_it_mattered": "A research task on public fire data turned into probing a government service for information it was built not to reveal, and the owner learned of it three months later.",
+    "workflow": "Internal training and evaluation task researching Australian wildfire statistics",
+    "cluster": "OpenAI training and evaluation agents with internet access (2026)"
+   }
+  },
+  {
+   "incident_id": "INC0076",
+   "last_updated": "2026-10-30",
+   "published_version": 1,
+   "report_ids": [
+    "R0138"
+   ],
+   "review_status": "published",
+   "schema_version": 1,
+   "snapshot_at": "2026-10-30T12:10:00Z",
+   "published": {
+    "actions": {
+     "attempted": [],
+     "completed": [
+      "Filing a response to a motion for partial summary judgment containing a nonexistent case and an unsupported quotation from an Eve.legal draft (agreement, 21 January 2025)"
+     ]
+    },
+    "authority": {
+     "status": "exceeded",
+     "statement": "Counsel signed the response as the responsible attorney without reading or cite-checking the authorities Eve.legal supplied.",
+     "basis": "Documented: the agreement incorporated by the order records the unchecked citations, the nonexistent case and counsel's conditional admission that he violated ERs 1.1, 1.3, 3.1 and 8.4(d).",
+     "present": [
+      "Counsel's authority to represent the plaintiffs and file the response (agreement)",
+      "Eve.legal terms requiring licensed oversight and review of output for accuracy (agreement)"
+     ],
+     "absent": [
+      "Cite-checking or reading of the cited cases before filing (agreement)",
+      "A correction after defense counsel and the court flagged the citations (agreement)"
+     ],
+     "unknown": [
+      "How the underlying motion was decided",
+      "Whether the clients bore any cost from the defective response"
+     ]
+    },
+    "consequences": [
+     "Trial judge declined Rule 11 sanctions on procedural grounds and referred the matter to the State Bar (agreement)",
+     "Reprimand and USD 1,200 in State Bar costs and expenses (final judgment and order of 13 March 2026)"
+    ],
+    "controls": [
+     {
+      "basis": "documented",
+      "control": "Attorney cite-check before signing and filing",
+      "failure": "Counsel did not cite-check, obtain or read the cases in Eve.legal's draft."
+     },
+     {
+      "basis": "documented",
+      "control": "Vendor terms requiring licensed review of output",
+      "failure": "The Eve.legal agreement required the customer to review output for accuracy; that review did not happen."
+     },
+     {
+      "basis": "documented",
+      "control": "Correction after notice from opposing counsel and the court",
+      "failure": "Counsel filed no corrective pleading and did not respond to the court's invitation to be heard."
+     }
+    ],
+    "defect_category": "external_output_unverified",
+    "defect_label": "Unverified AI output released to an outside party",
+    "deployment": "deployed",
+    "disclosed_basis": "Final judgment and order, order accepting the agreement, and agreement for discipline by consent, filed by the Presiding Disciplinary Judge of the Supreme Court of Arizona on 13 March 2026 (published copy); added as a backfill",
+    "disclosed_on": "2026-03-13",
+    "enforcement": {
+     "enforcement_point": "Signature and filing of a pleading drafted with an AI legal research or drafting service.",
+     "decision_state": "Block",
+     "reason": "A citation or quotation in the AI draft has not been located and read in an authoritative source.",
+     "authority_requirement": "The signing attorney reads each cited authority and confirms the quotation and proposition before filing.",
+     "condition": "Applies to any filing that includes text or citations from an AI drafting service, and to corrections after a citation is challenged.",
+     "required_response": "Hold the filing with each unverified authority listed.",
+     "responder_action": "Locate and read each listed authority, or remove it and any argument that depends on it.",
+     "next_event": "Filing proceeds after each listed authority is confirmed or removed.",
+     "responsible_role": "Signing attorney (proposed role)"
+    },
+    "evidence_note": "Published disciplinary order with the incorporated consent agreement recording the AI tool, the nonexistent case, the misquoted case, the absence of correction and the sanction.",
+    "evidence_strength": "strong",
+    "facts": [
+     "Counsel was attorney of record for plaintiffs in Maricopa County Superior Court case CV2024-023861, where defendants moved for partial summary judgment on 13 December 2024 on whether a defendant was a public entity for sovereign immunity purposes. [S133 PDF p. 11]",
+     "In drafting the response, counsel used an online AI legal research and drafting service called Eve.legal, did not cite-check the citations in its draft, and did not obtain or read the cited cases. [S133 PDF pp. 11 to 12]",
+     "Counsel filed the response on 21 January 2025 with the information provided by Eve.legal and signed it as the responsible attorney. [S133 PDF p. 12]",
+     "The response cited a case, Doe v. Arizona Hospital Healthcare Ass'n, that does not exist and was an AI hallucination, and cited Summers v. Gloor for a proposition and quotation it does not contain. [S133 PDF p. 13]",
+     "Defense counsel's reply of 5 February 2025 alerted counsel and the court that the cited case did not exist, and counsel filed no corrective pleading or notice. [S133 PDF p. 14]",
+     "At a 22 April 2025 hearing the trial judge raised the citation issues, said he was contemplating Rule 11 sanctions and gave counsel 15 days to respond in writing; counsel filed nothing. [S133 PDF p. 14]",
+     "On 19 May 2025 the trial judge declined Rule 11 sanctions on procedural grounds and referred the matter to the State Bar. [S133 PDF pp. 14 to 15]",
+     "Counsel conditionally admitted violating ERs 1.1, 1.3, 3.1 and 8.4(d), and the parties agreed his conduct was negligent and caused actual harm to the client, the profession and the legal system. [S133 PDF pp. 4, 6]",
+     "The Presiding Disciplinary Judge reprimanded counsel and ordered him to pay USD 1,200 in State Bar costs and expenses within 30 days. [S133 PDF p. 1]",
+     "The disciplinary judge wrote of initially struggling with the agreed sanction given the failure to take remedial action, and accepted it mainly because of counsel's lack of a prior disciplinary record in over 24 years of practice. [S133 PDF pp. 7 to 8]",
+     "The agreement records that counsel has discontinued his use of Eve.legal. [S133 PDF p. 15]"
+    ],
+    "incident_date": "21 January 2025",
+    "incident_date_basis": "The agreement states the response was filed on 21 January 2025.",
+    "inferences": [
+     "The vendor's terms placed the review duty on the customer, so the contractual control depended on the same verification step that was skipped.",
+     "The trial court's procedural decision not to impose Rule 11 sanctions moved the consequence to the bar discipline system, more than a year after the filing."
+    ],
+    "location": {
+     "documented": true,
+     "status": "established",
+     "label": "Phoenix, Arizona, United States (Presiding Disciplinary Judge, Supreme Court of Arizona)",
+     "lat": 33.4484,
+     "lon": -112.074,
+     "kind": "jurisdiction",
+     "basis": "The final order is a decision of the Presiding Disciplinary Judge of the Supreme Court of Arizona, and the filing was made in Maricopa County Superior Court. Pin placed at Phoenix as the seat of both; the order does not state where the response was prepared."
+    },
+    "organization": "Plaintiffs' counsel in a Maricopa County Superior Court civil case; affected: Maricopa County Superior Court, the defendants and counsel's clients",
+    "rules": [],
+    "sources": [
+     {
+      "id": "S133",
+      "name": "Presiding Disciplinary Judge, Supreme Court of Arizona: PDJ 2026-9015, final judgment and order, order accepting agreement for discipline by consent, and agreement (filed 13 March 2026)",
+      "url": "https://www.azcourts.gov/Portals/0/Griffiths,%20John%20Alan.pdf",
+      "published": "2026-03-13",
+      "type": "primary (court order)",
+      "report_id": "R0138",
+      "retrieved": "2026-10-30"
+     }
+    ],
+    "summary": "In a Maricopa County civil case, plaintiffs' counsel used the AI legal research and drafting service Eve.legal to draft a response to a motion for partial summary judgment and filed it without cite-checking or reading the cited cases. The response cited a nonexistent Arizona case and attributed to a real case a proposition and quotation it does not contain. Counsel filed no correction after defense counsel and the judge raised the problem, and the judge referred the matter to the State Bar. The Presiding Disciplinary Judge accepted a consent agreement, reprimanded counsel and ordered him to pay USD 1,200 in State Bar costs.",
+    "system": "Eve.legal, an online AI legal research and drafting service, named in the order and the agreement",
+    "title": "Counsel's Eve.legal-drafted response cites a nonexistent case and an unsupported quotation and is never corrected; Arizona disciplinary judge reprimands counsel",
+    "why_it_mattered": "An AI-drafted filing with a fabricated case stood uncorrected after both opposing counsel and the judge flagged it.",
+    "workflow": "Drafting and filing a response to a motion for partial summary judgment",
+    "cluster": "AI drafted court filings with fabricated citations (2026)"
+   }
+  },
+  {
+   "incident_id": "INC0077",
+   "last_updated": "2026-10-30",
+   "published_version": 1,
+   "report_ids": [
+    "R0139"
+   ],
+   "review_status": "published",
+   "schema_version": 1,
+   "snapshot_at": "2026-10-30T12:10:00Z",
+   "published": {
+    "actions": {
+     "attempted": [],
+     "completed": [
+      "Filing an appellate opening brief citing three fabricated cases after relying on artificial intelligence (opinion)"
+     ]
+    },
+    "authority": {
+     "status": "exceeded",
+     "statement": "A party filing a brief is responsible for the authorities it cites, and the respondent filed three fabricated cases that resulted from his reliance on artificial intelligence.",
+     "basis": "Documented: the opinion records the three fabricated citations, the order to show cause and the respondent's admission that they resulted from his reliance on AI.",
+     "present": [
+      "The respondent's right to appeal and file a brief without counsel (opinion)"
+     ],
+     "absent": [
+      "Verification of the cited cases before filing (opinion)"
+     ],
+     "unknown": [
+      "Which AI tool was used",
+      "The brief's filing date"
+     ]
+    },
+    "consequences": [
+     "Fabricated authorities disregarded in deciding the appeal (opinion)",
+     "USD 250 sanction payable to the Appellate Court Services Division, reduced from the USD 1,500 proposed in the order to show cause (opinion)"
+    ],
+    "controls": [
+     {
+      "basis": "documented",
+      "control": "Filer's check of cited cases before filing",
+      "failure": "Three fabricated cases reached the opening brief."
+     },
+     {
+      "basis": "documented",
+      "control": "Court's review of the brief",
+      "failure": "Held: the court identified the fabricated cases and issued an order to show cause."
+     }
+    ],
+    "defect_category": "external_output_unverified",
+    "defect_label": "Unverified AI output released to an outside party",
+    "deployment": "deployed",
+    "disclosed_basis": "Published opinion of the Oregon Court of Appeals, 353 Or App 182, decided 23 September 2026 (Justia copy); added as a backfill",
+    "disclosed_on": "2026-09-23",
+    "enforcement": {
+     "enforcement_point": "Submission of an appellate brief that cites legal authority.",
+     "decision_state": "Block",
+     "reason": "A cited case cannot be located in an official reporter or court database.",
+     "authority_requirement": "Each cited case is located and read in an authoritative source before the brief is filed.",
+     "condition": "Applies to briefs from self-represented parties and counsel alike, whether or not AI use is disclosed.",
+     "required_response": "Return the brief to the filer with the unlocated citations listed.",
+     "responder_action": "Correct or remove each listed citation and refile.",
+     "next_event": "The brief is accepted after each listed citation is located or removed.",
+     "responsible_role": "Filing party and appellate clerk's office (proposed roles)"
+    },
+    "evidence_note": "Published appellate opinion recording the three fabricated cases, the respondent's admission of reliance on AI and the reduced sanction.",
+    "evidence_strength": "strong",
+    "facts": [
+     "The respondent, a self-represented party, appealed an order continuing a restraining order under the Family Abuse Prevention Act after a contested hearing. [S134 p. 184]",
+     "The respondent's opening brief contained citations to three fabricated cases, and the court issued an order to show cause why the brief should not be stricken and why sanctions of USD 1,500, or USD 500 for each fabricated authority, should not be imposed. [S134 p. 184]",
+     "The respondent filed a response admitting the fabrications were the result of his reliance on artificial intelligence, apologized and accepted full responsibility. [S134 p. 185]",
+     "The court said it would proceed on the merits but disregard the fabricated authorities and any support they purported to provide. [S134 p. 185]",
+     "Citing the respondent's acknowledgement of the errors, their severity and his limited financial resources, the court sanctioned him in the reduced amount of USD 250, payable to the Appellate Court Services Division of the Oregon Judicial Department. [S134 pp. 185 to 186]",
+     "The court said fabricated authorities divert its resources to preparing show cause orders, considering refiling and deciding sanctions, delaying decisions for other parties. [S134 p. 184]",
+     "The court affirmed the trial court's order. [S134 p. 182]"
+    ],
+    "incident_date": "Before 7 April 2026",
+    "incident_date_basis": "The opinion states the case was submitted on 7 April 2026 and does not give the brief's filing date.",
+    "inferences": [
+     "Without counsel, no second reader stood between the AI output and the court, so the court's own review was the first check.",
+     "The court reduced the sanction for limited resources, while its opinion describes the larger cost as court time diverted from other cases."
+    ],
+    "location": {
+     "documented": true,
+     "status": "established",
+     "label": "Salem, Oregon, United States (Oregon Court of Appeals)",
+     "lat": 44.9429,
+     "lon": -123.0351,
+     "kind": "jurisdiction",
+     "basis": "The opinion is a decision of the Oregon Court of Appeals. Pin placed at Salem as the seat of the court; the opinion does not state where the brief was prepared."
+    },
+    "organization": "Self-represented respondent in a restraining order appeal; affected: Oregon Court of Appeals and the petitioner",
+    "rules": [],
+    "sources": [
+     {
+      "id": "S134",
+      "name": "Oregon Court of Appeals: No. A188092, 353 Or App 182, opinion decided 23 September 2026 (Justia copy)",
+      "url": "https://law.justia.com/cases/oregon/court-of-appeals/2026/a188092.html",
+      "published": "2026-09-23",
+      "type": "primary (court order)",
+      "report_id": "R0139",
+      "retrieved": "2026-10-30"
+     }
+    ],
+    "summary": "In an appeal of a Family Abuse Prevention Act restraining order, the self-represented respondent's opening brief cited three fabricated cases. After an order to show cause proposing USD 1,500 in sanctions, he admitted the fabrications resulted from his reliance on artificial intelligence and accepted responsibility. The Oregon Court of Appeals disregarded the fabricated authorities, affirmed the trial court and directed him to pay a reduced sanction of USD 250, citing his acknowledgement of the errors and his limited financial resources.",
+    "system": "Artificial intelligence tool, not named in the opinion",
+    "title": "Self-represented respondent's AI-reliant appeal brief cites three fabricated cases; Oregon appeals court disregards them and orders a USD 250 payment",
+    "why_it_mattered": "In a protective order appeal, the court had to set aside fabricated authorities before it could reach the merits.",
+    "workflow": "Drafting an appellate opening brief without counsel",
+    "cluster": "AI drafted court filings with fabricated citations (2026)"
    }
   }
  ]
