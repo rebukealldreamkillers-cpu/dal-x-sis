@@ -1,8 +1,8 @@
 {
  "updated": "2026-11-01",
- "last_check": "2026-11-01T13:10:00Z",
- "next_incident_number": 83,
- "next_report_number": 146,
+ "last_check": "2026-11-01T21:25:00Z",
+ "next_incident_number": 90,
+ "next_report_number": 155,
  "excluded_candidates": [
   {
    "name": "Gemini CLI file loss report (July 2025)",
@@ -1242,6 +1242,78 @@
    "reason": "Anonymous first person post; company, system and outcome not identified.",
    "url": "https://aifeed24.com/articles/your-ai-agent-said-done-heres-how-i-found-out-it-actually-failed-three-hours-later",
    "tracker": false
+  },
+  {
+   "name": "Cline unauthorized npm publish after a prompt injectable AI issue triage workflow (post-mortem, 24 February 2026)",
+   "reason": "Post-mortem documents a vulnerable AI workflow but not that the agent executed attacker instructions; the release used a token published by a third party.",
+   "url": "https://cline.bot/blog/post-mortem-unauthorized-cline-cli-npm",
+   "tracker": false
+  },
+  {
+   "name": "Meta AI false statements about a political activist, lawsuit and settlement (April to August 2025)",
+   "reason": "The outputs are documented only as complaint allegations in the source reviewed; the settlement makes no finding.",
+   "url": "https://www.cnn.com/2025/08/14/tech/robby-starbuck-meta-ai-advisor",
+   "tracker": false
+  },
+  {
+   "name": "Woolworths Olive assistant cancels a customer's refund request (Yahoo News Australia, 20 July 2026)",
+   "reason": "Single outlet account of a 70 dollar refund; whether the cancellation took effect is not established and stakes are low.",
+   "url": "https://au.news.yahoo.com/woolworths-messages-to-shopper-highlight-worrying-trend-helpless-014332309.html",
+   "tracker": false
+  },
+  {
+   "name": "NYC MyCity business chatbot advises businesses to break the law (The Markup, 29 March 2024)",
+   "reason": "Answers documented through journalists' tests; no business is shown acting on the advice.",
+   "url": "https://themarkup.org/artificial-intelligence/2024/03/29/nycs-ai-chatbot-tells-businesses-to-break-the-law",
+   "tracker": false
+  },
+  {
+   "name": "Hangzhou Internet Court ruling on an AI promise of 100,000 yuan compensation (reported 28 January 2026)",
+   "reason": "Company and system not named, and the court found no harm or provider fault.",
+   "url": "https://www.sixthtone.com/news/1018138",
+   "tracker": false
+  },
+  {
+   "name": "AIXBT agent transfers 55.5 ETH after its dashboard was compromised (18 March 2025)",
+   "reason": "Maintainer attributes the transfer to a dashboard breach, not to the AI system's decision.",
+   "url": "https://cointelegraph.com/news/hacker-breaches-ai-crypto-bot-aixbt-steals-55-eth",
+   "tracker": false
+  },
+  {
+   "name": "Microsoft 365 Copilot Chat summarizes confidential labelled emails despite DLP policies (reported 18 February 2026)",
+   "reason": "Microsoft says no one gained access to information they were not authorized to see; no consequential action documented.",
+   "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-says-bug-causes-copilot-to-summarize-confidential-emails/",
+   "tracker": false
+  },
+  {
+   "name": "Dutch DPA fine on the Tax Administration over the childcare benefits fraud list (25 November 2021)",
+   "reason": "The decision states flagged cases were reviewed by staff rather than decided automatically.",
+   "url": "https://www.autoriteitpersoonsgegevens.nl/uploads/imported/boetebesluit_belastingdienst.pdf",
+   "tracker": false
+  },
+  {
+   "name": "DUO student grant fraud risk profile, Dutch DPA investigation (2024)",
+   "reason": "Selections were followed by manual staff review before any action, so the decision was not solely automated.",
+   "url": "https://www.autoriteitpersoonsgegevens.nl/system/files?file=2024-11%2FOnderzoeksrapport+DUO+fraudeaanpak.pdf",
+   "tracker": false
+  },
+  {
+   "name": "US Senate PSI report on Medicare Advantage insurers' predictive tools in post-acute care denials (17 October 2024)",
+   "reason": "Insurers state humans made final denials and the primary report could not be retrieved to verify the findings.",
+   "url": "",
+   "tracker": false
+  },
+  {
+   "name": "Michigan MiDAS unemployment fraud determinations (2013 to 2015)",
+   "reason": "No verified primary finding on the automated determinations located; the error figure comes from news coverage of the agency's own review.",
+   "url": "",
+   "tracker": false
+  },
+  {
+   "name": "Amazon Kiro agent and an AWS Cost Explorer outage (December 2025)",
+   "reason": "Disputed: Amazon attributes the outage to user error, not the AI agent.",
+   "url": "https://www.aboutamazon.com/news/aws/aws-service-outage-ai-bot-kiro",
+   "tracker": false
   }
  ],
  "rows": [
@@ -1387,7 +1459,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z"
+   "snapshot_at": "2026-11-01T21:25:00Z"
   },
   {
    "incident_id": "INC0002",
@@ -1530,7 +1602,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z"
+   "snapshot_at": "2026-11-01T21:25:00Z"
   },
   {
    "incident_id": "INC0003",
@@ -1652,7 +1724,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z"
+   "snapshot_at": "2026-11-01T21:25:00Z"
   },
   {
    "incident_id": "INC0004",
@@ -1789,7 +1861,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z"
+   "snapshot_at": "2026-11-01T21:25:00Z"
   },
   {
    "incident_id": "INC0005",
@@ -1947,7 +2019,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z"
+   "snapshot_at": "2026-11-01T21:25:00Z"
   },
   {
    "incident_id": "INC0006",
@@ -2094,7 +2166,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z"
+   "snapshot_at": "2026-11-01T21:25:00Z"
   },
   {
    "incident_id": "INC0007",
@@ -2199,7 +2271,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z"
+   "snapshot_at": "2026-11-01T21:25:00Z"
   },
   {
    "incident_id": "INC0008",
@@ -2335,7 +2407,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z"
+   "snapshot_at": "2026-11-01T21:25:00Z"
   },
   {
    "incident_id": "INC0009",
@@ -2447,7 +2519,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z"
+   "snapshot_at": "2026-11-01T21:25:00Z"
   },
   {
    "incident_id": "INC0010",
@@ -2569,7 +2641,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z"
+   "snapshot_at": "2026-11-01T21:25:00Z"
   },
   {
    "incident_id": "INC0011",
@@ -2725,7 +2797,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z"
+   "snapshot_at": "2026-11-01T21:25:00Z"
   },
   {
    "incident_id": "INC0012",
@@ -2867,7 +2939,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z"
+   "snapshot_at": "2026-11-01T21:25:00Z"
   },
   {
    "incident_id": "INC0013",
@@ -3050,7 +3122,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z"
+   "snapshot_at": "2026-11-01T21:25:00Z"
   },
   {
    "incident_id": "INC0014",
@@ -3198,7 +3270,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z"
+   "snapshot_at": "2026-11-01T21:25:00Z"
   },
   {
    "incident_id": "INC0015",
@@ -3335,7 +3407,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z"
+   "snapshot_at": "2026-11-01T21:25:00Z"
   },
   {
    "incident_id": "INC0016",
@@ -3455,7 +3527,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z"
+   "snapshot_at": "2026-11-01T21:25:00Z"
   },
   {
    "incident_id": "INC0017",
@@ -3585,7 +3657,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z"
+   "snapshot_at": "2026-11-01T21:25:00Z"
   },
   {
    "incident_id": "INC0018",
@@ -3731,7 +3803,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z"
+   "snapshot_at": "2026-11-01T21:25:00Z"
   },
   {
    "incident_id": "INC0019",
@@ -3865,7 +3937,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z"
+   "snapshot_at": "2026-11-01T21:25:00Z"
   },
   {
    "incident_id": "INC0020",
@@ -4003,7 +4075,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z"
+   "snapshot_at": "2026-11-01T21:25:00Z"
   },
   {
    "incident_id": "INC0021",
@@ -4128,7 +4200,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z"
+   "snapshot_at": "2026-11-01T21:25:00Z"
   },
   {
    "incident_id": "INC0022",
@@ -4295,7 +4367,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z"
+   "snapshot_at": "2026-11-01T21:25:00Z"
   },
   {
    "incident_id": "INC0023",
@@ -4457,7 +4529,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z"
+   "snapshot_at": "2026-11-01T21:25:00Z"
   },
   {
    "incident_id": "INC0024",
@@ -4618,7 +4690,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z"
+   "snapshot_at": "2026-11-01T21:25:00Z"
   },
   {
    "incident_id": "INC0025",
@@ -4785,7 +4857,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z"
+   "snapshot_at": "2026-11-01T21:25:00Z"
   },
   {
    "incident_id": "INC0026",
@@ -4945,7 +5017,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z"
+   "snapshot_at": "2026-11-01T21:25:00Z"
   },
   {
    "incident_id": "INC0027",
@@ -5081,7 +5153,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z"
+   "snapshot_at": "2026-11-01T21:25:00Z"
   },
   {
    "incident_id": "INC0028",
@@ -5206,7 +5278,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z"
+   "snapshot_at": "2026-11-01T21:25:00Z"
   },
   {
    "incident_id": "INC0029",
@@ -5328,7 +5400,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z"
+   "snapshot_at": "2026-11-01T21:25:00Z"
   },
   {
    "incident_id": "INC0030",
@@ -5456,7 +5528,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z"
+   "snapshot_at": "2026-11-01T21:25:00Z"
   },
   {
    "incident_id": "INC0031",
@@ -5573,7 +5645,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z"
+   "snapshot_at": "2026-11-01T21:25:00Z"
   },
   {
    "incident_id": "INC0032",
@@ -5680,7 +5752,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z"
+   "snapshot_at": "2026-11-01T21:25:00Z"
   },
   {
    "incident_id": "INC0033",
@@ -5691,7 +5763,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z",
+   "snapshot_at": "2026-11-01T21:25:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5827,7 +5899,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z",
+   "snapshot_at": "2026-11-01T21:25:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5971,7 +6043,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z",
+   "snapshot_at": "2026-11-01T21:25:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6108,7 +6180,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z",
+   "snapshot_at": "2026-11-01T21:25:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6255,7 +6327,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z",
+   "snapshot_at": "2026-11-01T21:25:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6386,7 +6458,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z",
+   "snapshot_at": "2026-11-01T21:25:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6532,7 +6604,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z",
+   "snapshot_at": "2026-11-01T21:25:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6665,7 +6737,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z",
+   "snapshot_at": "2026-11-01T21:25:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6796,7 +6868,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z",
+   "snapshot_at": "2026-11-01T21:25:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6929,7 +7001,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z",
+   "snapshot_at": "2026-11-01T21:25:00Z",
    "published": {
     "actions": {
      "attempted": [
@@ -7072,7 +7144,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z",
+   "snapshot_at": "2026-11-01T21:25:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7190,7 +7262,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z",
+   "snapshot_at": "2026-11-01T21:25:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7309,7 +7381,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z",
+   "snapshot_at": "2026-11-01T21:25:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7433,7 +7505,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z",
+   "snapshot_at": "2026-11-01T21:25:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7560,7 +7632,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z",
+   "snapshot_at": "2026-11-01T21:25:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7683,7 +7755,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z",
+   "snapshot_at": "2026-11-01T21:25:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7810,7 +7882,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z",
+   "snapshot_at": "2026-11-01T21:25:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7932,7 +8004,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z",
+   "snapshot_at": "2026-11-01T21:25:00Z",
    "published": {
     "actions": {
      "attempted": [
@@ -8052,7 +8124,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z",
+   "snapshot_at": "2026-11-01T21:25:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8183,7 +8255,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z",
+   "snapshot_at": "2026-11-01T21:25:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8305,7 +8377,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z",
+   "snapshot_at": "2026-11-01T21:25:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8463,7 +8535,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z",
+   "snapshot_at": "2026-11-01T21:25:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8577,7 +8649,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z",
+   "snapshot_at": "2026-11-01T21:25:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8689,7 +8761,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z",
+   "snapshot_at": "2026-11-01T21:25:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8813,7 +8885,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z",
+   "snapshot_at": "2026-11-01T21:25:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8938,7 +9010,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z",
+   "snapshot_at": "2026-11-01T21:25:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9058,7 +9130,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z",
+   "snapshot_at": "2026-11-01T21:25:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9180,7 +9252,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z",
+   "snapshot_at": "2026-11-01T21:25:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9291,7 +9363,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z",
+   "snapshot_at": "2026-11-01T21:25:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9404,7 +9476,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z",
+   "snapshot_at": "2026-11-01T21:25:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9516,7 +9588,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z",
+   "snapshot_at": "2026-11-01T21:25:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9629,7 +9701,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z",
+   "snapshot_at": "2026-11-01T21:25:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9756,7 +9828,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z",
+   "snapshot_at": "2026-11-01T21:25:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9866,7 +9938,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z",
+   "snapshot_at": "2026-11-01T21:25:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9986,7 +10058,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z",
+   "snapshot_at": "2026-11-01T21:25:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -10099,7 +10171,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z",
+   "snapshot_at": "2026-11-01T21:25:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -10220,7 +10292,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z",
+   "snapshot_at": "2026-11-01T21:25:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -10333,7 +10405,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z",
+   "snapshot_at": "2026-11-01T21:25:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -10477,7 +10549,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z",
+   "snapshot_at": "2026-11-01T21:25:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -10607,7 +10679,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z",
+   "snapshot_at": "2026-11-01T21:25:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -10728,7 +10800,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z",
+   "snapshot_at": "2026-11-01T21:25:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -10860,7 +10932,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z",
+   "snapshot_at": "2026-11-01T21:25:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -11011,7 +11083,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z",
+   "snapshot_at": "2026-11-01T21:25:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -11148,7 +11220,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z",
+   "snapshot_at": "2026-11-01T21:25:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -11270,7 +11342,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z",
+   "snapshot_at": "2026-11-01T21:25:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -11381,7 +11453,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z",
+   "snapshot_at": "2026-11-01T21:25:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -11501,7 +11573,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z",
+   "snapshot_at": "2026-11-01T21:25:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -11631,7 +11703,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z",
+   "snapshot_at": "2026-11-01T21:25:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -11762,7 +11834,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z",
+   "snapshot_at": "2026-11-01T21:25:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -11901,7 +11973,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T13:10:00Z",
+   "snapshot_at": "2026-11-01T21:25:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -12018,6 +12090,817 @@
     "why_it_mattered": "A tool sold as a drafting aid changed quoted case law after the last check, and the court refused to let an amendment cure a pleading built on it.",
     "workflow": "Drafting an Article 78 petition and memorandum of law in state court",
     "cluster": "AI drafted court filings with fabricated citations (2026)"
+   }
+  },
+  {
+   "incident_id": "INC0083",
+   "last_updated": "2026-11-01",
+   "published_version": 1,
+   "report_ids": [
+    "R0146"
+   ],
+   "review_status": "published",
+   "schema_version": 1,
+   "snapshot_at": "2026-11-01T21:25:00Z",
+   "published": {
+    "actions": {
+     "attempted": [],
+     "completed": [
+      "Automated matching of tax office income data against income declared by benefit recipients (report)",
+      "Automatic application of averaged income to raise debts where recipients did not provide other information (report)"
+     ]
+    },
+    "authority": {
+     "status": "exceeded",
+     "statement": "The scheme raised debts by a method the Royal Commission found did not comply with the income calculation provisions of the Social Security Act.",
+     "basis": "Documented: the report finds that income averaging, as used, neither produced accurate results nor complied with the Social Security Act 1991, and calls the scheme neither fair nor legal.",
+     "present": [
+      "Statutory power to raise and recover social security debts (report)"
+     ],
+     "absent": [
+      "A lawful basis for treating averaged income as actual income (report)",
+      "Human involvement at the department's end, which the scheme aimed to reduce and preferably remove (report)"
+     ],
+     "unknown": [
+      "The total number of debts raised, in the passages cited",
+      "The contents of the sealed chapter recommending referrals"
+     ]
+    },
+    "consequences": [
+     "Reimbursement of 746 million Australian dollars to some 381,000 people and write off of debts totalling 1.751 billion Australian dollars (report)",
+     "57 recommendations, including a consistent legal framework for automated decision making in government services (report)",
+     "A sealed chapter recommending referrals of individuals for civil and criminal prosecution (Commission media release, as summarized on the report page)"
+    ],
+    "controls": [
+     {
+      "basis": "documented",
+      "control": "Human review of each debt before it was raised",
+      "failure": "The process was designed to run online with human involvement reduced and preferably removed."
+     },
+     {
+      "basis": "documented",
+      "control": "Legal basis for the calculation method",
+      "failure": "Averaged income was applied automatically although entitlement had to be calculated under the Act."
+     }
+    ],
+    "defect_category": "human_review_absent",
+    "defect_label": "Decision affecting a person executed without human review",
+    "deployment": "deployed",
+    "disclosed_basis": "Report of the Royal Commission into the Robodebt Scheme presented and tabled on 7 July 2023; added as a backfill",
+    "disclosed_on": "2023-07-07",
+    "enforcement": {
+     "enforcement_point": "Issuance of each debt notice generated from data matching and income averaging.",
+     "decision_state": "Hold",
+     "reason": "The debt rests on averaged income that has not been checked against the person's actual earnings by an officer.",
+     "authority_requirement": "A named delegate confirms the debt is calculated under the Act from the person's actual income and records the evidence used.",
+     "condition": "Applies to every debt raised from data matching where the person has not supplied actual income records.",
+     "required_response": "Hold the notice and route the case to a compliance officer.",
+     "responder_action": "Obtain or estimate actual fortnightly income lawfully, then confirm, adjust or cancel the debt with reasons.",
+     "next_event": "A debt notice issues only after a recorded delegate decision.",
+     "responsible_role": "Services Australia compliance delegate and scheme owner (proposed roles)"
+    },
+    "evidence_note": "Primary Royal Commission report sets out the automated mechanism, the legal finding and the refunds and write offs. Page numbers are not given here because the published PDF uses separate numbering for its introductory sections.",
+    "evidence_strength": "strong",
+    "facts": [
+     "The report describes the scheme as taking employer reported income data from the tax office and comparing it through an automated system with what recipients had declared to the department. [S141 Vol. 1, overview]",
+     "Where recipients did not provide and have accepted alternative information, PAYG data averaged on a fortnightly basis for the declared period was applied automatically. [S141 Vol. 1, overview]",
+     "The report states the aim was for the entire process in most instances to be conducted online, reducing and preferably removing human involvement at the department's end. [S141 Vol. 1, overview]",
+     "The report finds that income averaging, as used, neither produced accurate results nor complied with the income calculation provisions of the Social Security Act 1991, and that debts were raised back to the 2010-11 financial year. [S141 Vol. 1, preface]",
+     "The government's response involved reimbursing 746 million Australian dollars to some 381,000 affected people and writing off debts totalling 1.751 billion Australian dollars. [S141 Vol. 1]",
+     "The Royal Commissioner described the scheme as a crude and cruel mechanism, neither fair nor legal, and made 57 recommendations. [S141]"
+    ],
+    "incident_date": "Debts raised for periods back to the 2010-11 financial year; the scheme's operating period is set out in the report",
+    "incident_date_basis": "The report states debts were raised back to the 2010-11 financial year; this row does not restate the scheme's start and end dates.",
+    "inferences": [
+     "A hold before each debt notice would have put an officer between the averaged figure and the person, which the scheme was designed to avoid.",
+     "The refunds and write offs show the automated figures were not a reliable basis for executed debts at scale."
+    ],
+    "location": {
+     "documented": true,
+     "status": "established",
+     "label": "Canberra, Australia (Royal Commission report to the Governor-General)",
+     "lat": -35.2809,
+     "lon": 149.13,
+     "kind": "jurisdiction",
+     "basis": "The scheme was a Commonwealth program and the Royal Commission's report was presented to the Governor-General and tabled on 7 July 2023. Pin placed at Canberra as the seat of the Commonwealth, not at any Services Australia office."
+    },
+    "organization": "Department of Human Services, now Services Australia; affected: income support recipients",
+    "rules": [],
+    "sources": [
+     {
+      "id": "S141",
+      "name": "Royal Commission into the Robodebt Scheme: Report, Volume 1 (presented 7 July 2023, corrected edition 11 July 2023)",
+      "url": "https://robodebt.royalcommission.gov.au/publications/report",
+      "published": "2023-07-07",
+      "type": "primary (royal commission report)",
+      "report_id": "R0146",
+      "retrieved": "2026-11-01"
+     }
+    ],
+    "summary": "Australia's Robodebt scheme matched tax office income data against what benefit recipients had declared and, where recipients did not supply other records, automatically applied averaged income to raise debts, with human involvement designed out. The Royal Commission found the method neither accurate nor lawful. The government reimbursed 746 million Australian dollars to about 381,000 people and wrote off 1.751 billion Australian dollars of debts.",
+    "system": "Automated data matching and income averaging rules in the Online Compliance Intervention and its successors (no AI model is named)",
+    "title": "Automated income averaging raises unlawful welfare debts with human review designed out; Australia's Royal Commission finds the scheme neither fair nor legal",
+    "why_it_mattered": "Debts reached hundreds of thousands of people from a calculation no officer checked, and the government had to refund or write off billions.",
+    "workflow": "Raising and recovering social security overpayment debts"
+   }
+  },
+  {
+   "incident_id": "INC0084",
+   "last_updated": "2026-11-01",
+   "published_version": 1,
+   "report_ids": [
+    "R0147",
+    "R0148"
+   ],
+   "review_status": "published",
+   "schema_version": 1,
+   "snapshot_at": "2026-11-01T21:25:00Z",
+   "published": {
+    "actions": {
+     "attempted": [],
+     "completed": [
+      "Automated scoring of riders that sets their priority for booking work shifts (2021 decision)",
+      "Automatic blocking of rider accounts when predetermined conditions are met (2024 decision)"
+     ]
+    },
+    "authority": {
+     "status": "missing",
+     "statement": "The regulator found the platform made automated decisions affecting riders without the safeguards Article 22 requires, including meaningful human intervention.",
+     "basis": "Documented: both decisions find violations of Article 22(3) GDPR; the 2024 decision finds account blocking is performed automatically and that the company did not show the human operator had meaningful autonomy over deactivations.",
+     "present": [
+      "A claimed manual check on deactivations (2024 decision)"
+     ],
+     "absent": [
+      "Evidence that the manual check was meaningful (2024 decision)",
+      "Measures allowing riders to obtain human intervention, express their view and contest decisions (2021 decision)"
+     ],
+     "unknown": [
+      "How many riders were blocked or deactivated automatically",
+      "Whether any part of the system uses machine learning; the decisions describe automated processing and a scoring formula"
+     ]
+    },
+    "consequences": [
+     "Fine of 2.6 million euros in 2021 (2021 decision)",
+     "Fine of 5 million euros in 2024, with orders including that operators be able to disregard the algorithm's output where appropriate (2024 decision)"
+    ],
+    "controls": [
+     {
+      "basis": "documented",
+      "control": "Human intervention before blocking or deactivating a rider",
+      "failure": "Blocking ran automatically on preset conditions, and the company gave no evidence that its claimed manual check was meaningful."
+     },
+     {
+      "basis": "documented",
+      "control": "Right to contest automated decisions",
+      "failure": "The 2021 decision found no evidence that measures for human intervention and contestation had been adopted."
+     }
+    ],
+    "defect_category": "human_review_absent",
+    "defect_label": "Decision affecting a person executed without human review",
+    "deployment": "deployed",
+    "disclosed_basis": "Decisions of the Italian data protection authority of 10 June 2021 and 13 November 2024 (announced 22 November 2024); added as a backfill",
+    "disclosed_on": "2024-11-22",
+    "enforcement": {
+     "enforcement_point": "Execution of each automated block or deactivation of a rider account, and each automated change to shift booking priority.",
+     "decision_state": "Hold",
+     "reason": "The action cuts a rider off from work and has not been reviewed by a person with authority to overturn it.",
+     "authority_requirement": "A trained operator with authority to disregard the system's output confirms the block or deactivation and records a reason.",
+     "condition": "Applies to blocks and deactivations triggered by system conditions and to scoring changes that remove access to shifts.",
+     "required_response": "Keep the account active, or restrict it under a documented interim rule, until review.",
+     "responder_action": "Review the triggering data with the rider's account, confirm or reverse the action, and tell the rider how to contest it.",
+     "next_event": "The block or deactivation executes only after a recorded human decision.",
+     "responsible_role": "Rider operations reviewer and data protection officer (proposed roles)"
+    },
+    "evidence_note": "Two primary regulator decisions document the automated scoring and blocking, the missing safeguards and the fines.",
+    "evidence_strength": "strong",
+    "facts": [
+     "The company told the 2021 inspection that rider score assignment is generally automated once it has set the parameters, and the regulator found the automated processing, including profiling, excluded some riders from work opportunities. [S142]",
+     "The 2021 decision found no evidence that the company had adopted measures for human intervention, expressing a view and contesting decisions, and fined it 2.6 million euros; 18,684 riders were registered on the app at the time of the inspection. [S142]",
+     "In 2024 the regulator found that account blocking is performed automatically by the system when predetermined conditions arise. [S143 para 4.5.3]",
+     "The 2024 decision found the company had not shown that the human operator's margin of autonomy over deactivations was meaningful, and that it claimed a manual check without evidence that the check was meaningful. [S143 para 4.5.3]",
+     "The regulator fined the company 5 million euros and ordered that operators be able to disregard the algorithmic output where appropriate; the company reported 36,545 active riders in Italy since January 2022. [S143]"
+    ],
+    "incident_date": "Investigated periods to 2021 and to 2023",
+    "incident_date_basis": "The decisions cover processing examined in inspections leading to the 2021 decision and processing through 2023 for the 2024 decision; exact start dates are not restated here.",
+    "inferences": [
+     "A second fine three years after the first suggests the earlier order did not result in effective human review of deactivations.",
+     "A manual check that cannot be shown to change outcomes does not take the decision out of solely automated processing."
+    ],
+    "location": {
+     "documented": true,
+     "status": "established",
+     "label": "Rome, Italy (Garante per la protezione dei dati personali)",
+     "lat": 41.9028,
+     "lon": 12.4964,
+     "kind": "jurisdiction",
+     "basis": "The Italian data protection authority made both decisions. Pin placed at Rome as its seat, not at the company's offices."
+    },
+    "organization": "Foodinho s.r.l., part of the Glovo group; affected: delivery riders in Italy",
+    "rules": [
+     {
+      "applicability": "The regulator found violations of Article 22(3) in both decisions.",
+      "issuer": "European Union",
+      "level": "regional",
+      "name": "General Data Protection Regulation, Article 22",
+      "scope": "Decisions based solely on automated processing that produce legal or similarly significant effects",
+      "uncertainty": "Whether the 2024 fine was challenged is not stated in the decision.",
+      "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+     }
+    ],
+    "sources": [
+     {
+      "id": "S142",
+      "name": "Garante per la protezione dei dati personali: decision of 10 June 2021 against Foodinho s.r.l. [9675440]",
+      "url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/9675440",
+      "published": "2021-06-10",
+      "type": "primary (regulator decision)",
+      "report_id": "R0147",
+      "retrieved": "2026-11-01"
+     },
+     {
+      "id": "S143",
+      "name": "Garante per la protezione dei dati personali: decision of 13 November 2024 against Foodinho s.r.l. [10074601]",
+      "url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10074601",
+      "published": "2024-11-22",
+      "type": "primary (regulator decision)",
+      "report_id": "R0148",
+      "retrieved": "2026-11-01"
+     }
+    ],
+    "summary": "Italy's data protection authority found that Glovo's Italian subsidiary scored riders automatically to set their access to shifts and blocked accounts automatically on preset conditions, without safeguards for human intervention or contestation. It fined the company 2.6 million euros in 2021 and 5 million euros in 2024, when it also found the claimed manual check on deactivations was not shown to be meaningful.",
+    "system": "Platform scoring formula and automated account blocking rules (the regulator describes automated processing; no AI model is named)",
+    "title": "Delivery platform scores riders and blocks accounts automatically with no meaningful human check; Italy's regulator fines Glovo's subsidiary twice",
+    "why_it_mattered": "Riders lost access to work through automated decisions, and a first fine did not produce a human check the regulator could accept.",
+    "workflow": "Allocating shifts to and deactivating gig delivery workers"
+   }
+  },
+  {
+   "incident_id": "INC0085",
+   "last_updated": "2026-11-01",
+   "published_version": 1,
+   "report_ids": [
+    "R0149"
+   ],
+   "review_status": "published",
+   "schema_version": 1,
+   "snapshot_at": "2026-11-01T21:25:00Z",
+   "published": {
+    "actions": {
+     "attempted": [],
+     "completed": [
+      "Automated profiling of riders that set their priority for booking work sessions (decision)",
+      "Algorithmic assignment of orders through a system called Frank (decision)"
+     ]
+    },
+    "authority": {
+     "status": "missing",
+     "statement": "The regulator found the company made automated decisions with significant effects on riders without the safeguards Article 22 requires.",
+     "basis": "Documented: the decision finds the processing significantly affects riders by allowing or denying access to work and that the company had not adopted measures for human intervention or contestation.",
+     "present": [],
+     "absent": [
+      "Measures to obtain human intervention, express a view and contest decisions (decision)"
+     ],
+     "unknown": [
+      "How many riders lost booking priority or work",
+      "Whether the system uses machine learning"
+     ]
+    },
+    "consequences": [
+     "Fine of 2.5 million euros (decision)",
+     "Orders to change the processing (decision)"
+    ],
+    "controls": [
+     {
+      "basis": "documented",
+      "control": "Right to human intervention and contestation",
+      "failure": "The regulator found no evidence the company had adopted these measures."
+     }
+    ],
+    "defect_category": "human_review_absent",
+    "defect_label": "Decision affecting a person executed without human review",
+    "deployment": "deployed",
+    "disclosed_basis": "Decision of the Italian data protection authority dated 22 July 2021; added as a backfill",
+    "disclosed_on": "2021-07-22",
+    "enforcement": {
+     "enforcement_point": "Each automated change to a rider's booking priority or access to work sessions.",
+     "decision_state": "Hold",
+     "reason": "The change limits a rider's access to work and has not been reviewed by a person.",
+     "authority_requirement": "A reviewer with authority to override the profile confirms any change that removes access to work and records a reason.",
+     "condition": "Applies when profiling lowers a rider's priority enough to deny booking of work sessions.",
+     "required_response": "Keep the rider's existing access until review.",
+     "responder_action": "Review the profile inputs, confirm or reverse the change, and tell the rider how to contest it.",
+     "next_event": "The change takes effect only after a recorded human decision.",
+     "responsible_role": "Rider operations reviewer (proposed role)"
+    },
+    "evidence_note": "Primary regulator decision documents the automated profiling, its effect on access to work, the missing safeguards and the fine.",
+    "evidence_strength": "strong",
+    "facts": [
+     "At the time of inspection about 8,000 riders were under contract with the company in Italy. [S144]",
+     "The regulator identified an algorithmic system called Frank used in the platform's processing of rider data. [S144 para 3.3.5]",
+     "The regulator found that the automated processing produces a significant effect on riders by allowing or denying access to work opportunities. [S144 para 3.3.5]",
+     "The regulator found that the company had not adopted measures to guarantee riders the right to human intervention, to express their view and to contest decisions. [S144 para 3.3.5]",
+     "The regulator fined the company 2.5 million euros. [S144]"
+    ],
+    "incident_date": "Processing examined from the June 2019 inspection",
+    "incident_date_basis": "The decision cites an inspection record of 19 June 2019; the full operating period is not restated here.",
+    "inferences": [
+     "Booking priority set by profiling decides who can work, so a hold on changes that remove access is the point where review can matter."
+    ],
+    "location": {
+     "documented": true,
+     "status": "established",
+     "label": "Rome, Italy (Garante per la protezione dei dati personali)",
+     "lat": 41.9028,
+     "lon": 12.4964,
+     "kind": "jurisdiction",
+     "basis": "The Italian data protection authority made the decision. Pin placed at Rome as its seat."
+    },
+    "organization": "Deliveroo Italy s.r.l.; affected: delivery riders in Italy",
+    "rules": [
+     {
+      "applicability": "The regulator found a violation of Article 22(3).",
+      "issuer": "European Union",
+      "level": "regional",
+      "name": "General Data Protection Regulation, Article 22",
+      "scope": "Decisions based solely on automated processing that produce legal or similarly significant effects",
+      "uncertainty": "Whether the decision was challenged is not stated.",
+      "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+     }
+    ],
+    "sources": [
+     {
+      "id": "S144",
+      "name": "Garante per la protezione dei dati personali: decision of 22 July 2021 against Deliveroo Italy s.r.l. [9685994]",
+      "url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/9685994",
+      "published": "2021-07-22",
+      "type": "primary (regulator decision)",
+      "report_id": "R0149",
+      "retrieved": "2026-11-01"
+     }
+    ],
+    "summary": "Italy's data protection authority found that Deliveroo's Italian business used automated profiling to set riders' priority for booking work and an algorithmic system called Frank in its processing, producing significant effects on access to work without safeguards for human intervention or contestation. It fined the company 2.5 million euros.",
+    "system": "Rider profiling and order assignment software, including a system called Frank (no AI model is named)",
+    "title": "Delivery platform profiles riders to decide who can book work, with no route to a human; Italy's regulator fines Deliveroo 2.5 million euros",
+    "why_it_mattered": "Access to paid work for about 8,000 riders depended on automated profiling they could not contest with a person.",
+    "workflow": "Allocating work sessions to gig delivery workers"
+   }
+  },
+  {
+   "incident_id": "INC0086",
+   "last_updated": "2026-11-01",
+   "published_version": 1,
+   "report_ids": [
+    "R0150"
+   ],
+   "review_status": "published",
+   "schema_version": 1,
+   "snapshot_at": "2026-11-01T21:25:00Z",
+   "published": {
+    "actions": {
+     "attempted": [],
+     "completed": [
+      "Permanent deactivation of drivers' accounts after signals from rule based fraud detection software, without contact with the drivers (judgment)"
+     ]
+    },
+    "authority": {
+     "status": "missing",
+     "statement": "The court found Uber had not shown actual human intervention in the deactivation decisions for three of the drivers.",
+     "basis": "Documented: the court holds that Uber did not sufficiently establish actual human intervention for three appellants, notes there was no personal contact and they were not heard, and orders Uber to provide information on the automated decisions.",
+     "present": [
+      "A Risk team using the software's signals (judgment)",
+      "Genuine human involvement for one other appellant who had an interview (judgment)"
+     ],
+     "absent": [
+      "Personal contact with, or a hearing of, the three drivers before deactivation (judgment)"
+     ],
+     "unknown": [
+      "How many drivers Uber deactivates through this process",
+      "Whether the software uses machine learning; Uber described it as rules based"
+     ]
+    },
+    "consequences": [
+     "Uber ordered within one month to grant the three drivers' requests for information on the automated decisions, subject to a penalty of 4,000 euros per day (judgment)",
+     "Uber ordered to pay the costs of the principal appeal (judgment)"
+    ],
+    "controls": [
+     {
+      "basis": "documented",
+      "control": "Human review before deactivation",
+      "failure": "Uber did not show actual human intervention, and the drivers were not contacted or heard."
+     },
+     {
+      "basis": "documented",
+      "control": "Explanation of the decision to the driver",
+      "failure": "Uber's messages were abstract and named no concrete conduct."
+     }
+    ],
+    "defect_category": "human_review_absent",
+    "defect_label": "Decision affecting a person executed without human review",
+    "deployment": "deployed",
+    "disclosed_basis": "Decision of the Amsterdam Court of Appeal of 4 April 2023, published on rechtspraak.nl; added as a backfill",
+    "disclosed_on": "2023-04-04",
+    "enforcement": {
+     "enforcement_point": "Execution of each account deactivation triggered by a fraud detection signal.",
+     "decision_state": "Hold",
+     "reason": "The deactivation ends a driver's access to work and rests on an automated signal no reviewer has examined with the driver.",
+     "authority_requirement": "A named reviewer examines the signal, gives the driver a chance to respond, and records the decision and its grounds.",
+     "condition": "Applies to permanent deactivations based on fraud signals.",
+     "required_response": "Keep the account active or suspended under a documented interim rule until review.",
+     "responder_action": "Contact the driver, review the evidence, and confirm or reverse the deactivation with specific reasons.",
+     "next_event": "Permanent deactivation executes only after a recorded human decision.",
+     "responsible_role": "Driver trust and safety reviewer (proposed role)"
+    },
+    "evidence_note": "Primary appellate judgment records Uber's own description of the software, the absence of contact and the court's finding on human intervention. The case concerns access to information, not compensation.",
+    "evidence_strength": "strong",
+    "facts": [
+     "Uber explained that its Risk team uses so called ERAF software that can flag several fraudulent activities on the basis of dozens of rules and automatically gives a signal. [S145 para 3.21]",
+     "The court found there had been no personal contact with three of the drivers before the deactivation decisions and that the drivers were not heard in any way. [S145 para 3.21]",
+     "The court held that Uber had not sufficiently established actual human intervention in the decisions concerning those three drivers. [S145 para 3.24]",
+     "The court found genuine human involvement for a fourth driver who had a personal interview. [S145 para 3.25]",
+     "The court ordered Uber within one month to grant the three drivers' information requests under Article 15(1)(h) GDPR, subject to a penalty of 4,000 euros per day of non compliance. [S145 section 4]"
+    ],
+    "incident_date": "Deactivations before 2021; dates not restated",
+    "incident_date_basis": "The judgment concerns deactivations that preceded the first instance proceedings; this row does not restate their dates.",
+    "inferences": [
+     "A rule based signal followed by deactivation with no contact left the driver no chance to correct an error before losing work.",
+     "The court distinguished the driver who had an interview, which shows what meaningful review looked like in the same process."
+    ],
+    "location": {
+     "documented": true,
+     "status": "established",
+     "label": "Amsterdam, Netherlands (Gerechtshof Amsterdam)",
+     "lat": 52.3676,
+     "lon": 4.9041,
+     "kind": "jurisdiction",
+     "basis": "The Amsterdam Court of Appeal decided the case. Pin placed at Amsterdam as the court's seat, not at Uber's office; the drivers lived in the United Kingdom and Portugal."
+    },
+    "organization": "Uber B.V.; affected: drivers in the United Kingdom and Portugal",
+    "rules": [
+     {
+      "applicability": "The court applied Articles 15(1)(h) and 22 to the deactivation decisions.",
+      "issuer": "European Union",
+      "level": "regional",
+      "name": "General Data Protection Regulation, Article 22",
+      "scope": "Decisions based solely on automated processing that produce legal or similarly significant effects",
+      "uncertainty": "The judgment addresses information rights; it does not award damages.",
+      "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+     }
+    ],
+    "sources": [
+     {
+      "id": "S145",
+      "name": "Gerechtshof Amsterdam: ECLI:NL:GHAMS:2023:793, decision of 4 April 2023",
+      "url": "https://uitspraken.rechtspraak.nl/details?id=ECLI:NL:GHAMS:2023:793",
+      "published": "2023-04-04",
+      "type": "primary (court judgment)",
+      "report_id": "R0150",
+      "retrieved": "2026-11-01"
+     }
+    ],
+    "summary": "Drivers whose Uber accounts were permanently deactivated after signals from rule based fraud detection software asked for information on the automated decisions. The Amsterdam Court of Appeal found Uber had not shown actual human intervention for three drivers, who were never contacted or heard, and ordered Uber to provide the information within a month on a penalty of 4,000 euros per day.",
+    "system": "Uber's ERAF fraud detection software, described by Uber as flagging activity on the basis of dozens of rules (no AI model is named)",
+    "title": "Fraud detection software triggers permanent driver deactivations with no contact or hearing; Amsterdam appeals court finds no real human intervention",
+    "why_it_mattered": "Drivers lost their work on an automated signal and were not told what conduct was alleged.",
+    "workflow": "Deactivating ride hail driver accounts for suspected fraud"
+   }
+  },
+  {
+   "incident_id": "INC0087",
+   "last_updated": "2026-11-01",
+   "published_version": 1,
+   "report_ids": [
+    "R0151"
+   ],
+   "review_status": "published",
+   "schema_version": 1,
+   "snapshot_at": "2026-11-01T21:25:00Z",
+   "published": {
+    "actions": {
+     "attempted": [],
+     "completed": [
+      "Rejection of credit card applications by automated decisions made by algorithm without human intervention (regulator)"
+     ]
+    },
+    "authority": {
+     "status": "unverified",
+     "statement": "The applications were rejected by machine without human involvement, and the company did not give affected customers the explanation the law requires.",
+     "basis": "Documented: the regulator states the rejections were automated decisions made on the basis of algorithms without human intervention and that the company did not adequately meet its information and access obligations. The announcement does not state that the automation itself was unlawful.",
+     "present": [],
+     "absent": [
+      "Human intervention in the rejections (regulator)",
+      "An adequate explanation to customers who asked for one (regulator)"
+     ],
+     "unknown": [
+      "The company's name",
+      "How many applicants were rejected",
+      "The model or rules used"
+     ]
+    },
+    "consequences": [
+     "Fine of 492,000 euros, which the company accepted (regulator)"
+    ],
+    "controls": [
+     {
+      "basis": "documented",
+      "control": "Explanation of automated decisions on request",
+      "failure": "Customers who asked why they were rejected did not receive the information the law requires."
+     }
+    ],
+    "defect_category": "human_review_absent",
+    "defect_label": "Decision affecting a person executed without human review",
+    "deployment": "deployed",
+    "disclosed_basis": "Press release of the Hamburg data protection commissioner dated 30 September 2025; added as a backfill",
+    "disclosed_on": "2025-09-30",
+    "enforcement": {
+     "enforcement_point": "Issuance of each automated rejection of a credit application.",
+     "decision_state": "Hold",
+     "reason": "The rejection has a significant effect on the applicant and has not been reviewed by a person who can explain it.",
+     "authority_requirement": "A named credit officer confirms the rejection and records the main reasons in a form that can be given to the applicant.",
+     "condition": "Applies to rejections where the applicant's credit standing does not obviously support the outcome, and to any applicant who asks for an explanation.",
+     "required_response": "Hold the rejection and route it to a credit officer.",
+     "responder_action": "Review the decision factors, confirm or reverse the rejection, and send the applicant a meaningful explanation.",
+     "next_event": "The rejection is sent only with a recorded human decision and an explanation available on request.",
+     "responsible_role": "Credit decision officer and data protection officer (proposed roles)"
+    },
+    "evidence_note": "Primary regulator announcement states the finding, the fine and the company's acceptance. The fine notice itself and the company's name are not published.",
+    "evidence_strength": "moderate",
+    "facts": [
+     "The Hamburg data protection commissioner fined a financial services company 492,000 euros for violating customers' rights in automated individual decisions. [S146]",
+     "Despite good credit standing, several customers' credit card applications were rejected by automated decisions made on the basis of algorithms and without human intervention. [S146]",
+     "When the affected customers asked for reasons, the company did not adequately meet its statutory information and access obligations. [S146]",
+     "The company accepted the fine. [S146]"
+    ],
+    "incident_date": "Not stated",
+    "incident_date_basis": "The announcement gives no dates for the rejections or the fine notice.",
+    "inferences": [
+     "An automated rejection that no one can explain afterwards was never checked by anyone able to explain it before it was sent."
+    ],
+    "location": {
+     "documented": true,
+     "status": "established",
+     "label": "Hamburg, Germany (Hamburg data protection commissioner)",
+     "lat": 53.5511,
+     "lon": 9.9937,
+     "kind": "jurisdiction",
+     "basis": "The Hamburg data protection commissioner imposed the fine. Pin placed at Hamburg as its seat; the company is not named."
+    },
+    "organization": "A financial services company not named by the regulator; affected: credit card applicants",
+    "rules": [
+     {
+      "applicability": "The regulator found violations of data subjects' rights in automated individual decisions.",
+      "issuer": "European Union",
+      "level": "regional",
+      "name": "General Data Protection Regulation, Article 22",
+      "scope": "Decisions based solely on automated processing that produce legal or similarly significant effects",
+      "uncertainty": "The fine notice is not published; the specific articles found violated are not listed in the announcement.",
+      "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+     }
+    ],
+    "sources": [
+     {
+      "id": "S146",
+      "name": "Hamburgische Beauftragte für Datenschutz und Informationsfreiheit: press release, interim review 2025, fines totalling 775,000 euros",
+      "url": "https://datenschutz-hamburg.de/news/zwischenbilanz-2025-hmbbfdi-verhaengt-bussgelder-von-insgesamt-775000-euro",
+      "published": "2025-09-30",
+      "type": "primary (regulator decision announcement)",
+      "report_id": "R0151",
+      "retrieved": "2026-11-01"
+     }
+    ],
+    "summary": "Hamburg's data protection commissioner fined an unnamed financial services company 492,000 euros after several customers with good credit standing had credit card applications rejected by algorithm with no human intervention, and the company failed to explain the decisions when asked. The company accepted the fine.",
+    "system": "Automated credit card application decision system (the regulator describes algorithmic decisions; no model is named)",
+    "title": "Credit card applications rejected by algorithm with no human intervention; Hamburg regulator fines a financial firm 492,000 euros",
+    "why_it_mattered": "Customers with good credit were turned down by machine and could not get the reasons they were entitled to.",
+    "workflow": "Deciding credit card applications"
+   }
+  },
+  {
+   "incident_id": "INC0088",
+   "last_updated": "2026-11-01",
+   "published_version": 1,
+   "report_ids": [
+    "R0152",
+    "R0153"
+   ],
+   "review_status": "published",
+   "schema_version": 1,
+   "snapshot_at": "2026-11-01T21:25:00Z",
+   "published": {
+    "actions": {
+     "attempted": [],
+     "completed": [
+      "Email reply from an AI support agent telling a customer that a nonexistent one device per subscription policy was a core security feature (Ars Technica)"
+     ]
+    },
+    "authority": {
+     "status": "unverified",
+     "statement": "The support agent stated a company policy that did not exist, and nothing in the record shows its replies were checked against actual policy before sending.",
+     "basis": "Documented: the company said it had no such policy and that the reply was an incorrect response from a front line AI support bot. Whether any review step existed is not stated.",
+     "present": [
+      "AI assisted responses used as the first filter for email support (company)"
+     ],
+     "absent": [
+      "A check of policy statements against actual company policy before sending (inferred from the company's statement)"
+     ],
+     "unknown": [
+      "How many customers received similar replies",
+      "The refund amount",
+      "The model behind the support agent"
+     ]
+    },
+    "consequences": [
+     "Cancellation threats and complaints documented on Hacker News and Reddit (Ars Technica)",
+     "The affected user was refunded (company)",
+     "AI responses in email support labelled as such (company)"
+    ],
+    "controls": [
+     {
+      "basis": "documented",
+      "control": "Disclosure that support replies were AI generated",
+      "failure": "The reply came from an agent named Sam, and the user did not suspect it was not human; labels were added afterwards."
+     },
+     {
+      "basis": "inferred",
+      "control": "Policy grounding for support answers",
+      "failure": "The agent described a policy the company says did not exist."
+     }
+    ],
+    "defect_category": "external_output_unverified",
+    "defect_label": "Unverified AI output released to an outside party",
+    "deployment": "deployed",
+    "disclosed_basis": "Comment by a Cursor co-founder on Hacker News on 16 April 2025, reported by Ars Technica on 17 April 2025; added as a backfill",
+    "disclosed_on": "2025-04-16",
+    "enforcement": {
+     "enforcement_point": "Sending of an AI drafted support reply that states a company policy or explains account behaviour.",
+     "decision_state": "Hold",
+     "reason": "The reply asserts a policy that cannot be matched to the published policy set.",
+     "authority_requirement": "The reply's policy statement matches a published policy, or a named support lead approves it.",
+     "condition": "Applies to replies that describe policies, entitlements or restrictions on the customer's account.",
+     "required_response": "Hold the reply and route the ticket to a support agent with the unmatched statement highlighted.",
+     "responder_action": "Confirm the actual policy and the technical cause, then send a corrected reply.",
+     "next_event": "The reply is sent after the policy statement is matched or approved.",
+     "responsible_role": "Support lead (proposed role)"
+    },
+    "evidence_note": "Company co-founder's public statement confirms the bot's role, the refund and the root cause; Ars Technica quotes the bot's email and documents the reaction. No count of affected customers.",
+    "evidence_strength": "moderate",
+    "facts": [
+     "A customer who was logged out when switching machines emailed Cursor support and received a reply from an agent named Sam stating that Cursor is designed to work with one device per subscription as a core security feature. [S148]",
+     "No such policy existed, Sam was a bot, and the reply led to complaints and cancellation threats on Hacker News and Reddit. [S148]",
+     "A Cursor co-founder said the company uses AI assisted responses as the first filter for email support and that AI responses used for email support are now clearly labelled. [S147]",
+     "The co-founder said the user had been completely refunded and that the logout was caused by a race condition on very slow connections. [S147]"
+    ],
+    "incident_date": "April 2025",
+    "incident_date_basis": "Ars Technica reported the exchange on 17 April 2025 and the co-founder commented on 16 April 2025; the date of the email is not stated.",
+    "inferences": [
+     "The bot turned a software bug into a stated policy, so the error reached customers as a company commitment rather than a technical fault."
+    ],
+    "location": {
+     "documented": false,
+     "status": "unresolved",
+     "label": "Execution location not documented",
+     "lat": null,
+     "lon": null,
+     "kind": "unresolved",
+     "basis": "Neither source states where the support agent ran or where the customer was."
+    },
+    "organization": "Anysphere, maker of the Cursor code editor; affected: Cursor subscribers",
+    "rules": [],
+    "sources": [
+     {
+      "id": "S147",
+      "name": "Hacker News: Cursor co-founder's comment on the support bot's response, 16 April 2025",
+      "url": "https://news.ycombinator.com/item?id=43700931",
+      "published": "2025-04-16",
+      "type": "primary (company statement)",
+      "report_id": "R0152",
+      "retrieved": "2026-11-01"
+     },
+     {
+      "id": "S148",
+      "name": "Ars Technica: Company apologizes after AI support agent invents policy that causes user uproar",
+      "url": "https://arstechnica.com/ai/2025/04/cursor-ai-support-bot-invents-fake-policy-and-triggers-user-uproar/",
+      "published": "2025-04-17",
+      "type": "secondary (news report)",
+      "report_id": "R0153",
+      "retrieved": "2026-11-01"
+     }
+    ],
+    "summary": "Cursor's AI email support agent told a customer that being logged out on other machines reflected a one device per subscription security policy. The policy did not exist; the logouts came from a bug. Users complained and threatened to cancel. A co-founder apologised, said the user was refunded, and said AI support replies would be labelled.",
+    "system": "AI email support agent named Sam, used as the first filter for email support (model not named)",
+    "title": "AI support agent tells a customer a nonexistent one device policy is a core security feature; Cursor refunds the user and labels AI replies",
+    "why_it_mattered": "An AI reply invented a restriction in the company's name and set off public cancellation threats.",
+    "workflow": "Answering customer support email for a software subscription"
+   }
+  },
+  {
+   "incident_id": "INC0089",
+   "last_updated": "2026-11-01",
+   "published_version": 1,
+   "report_ids": [
+    "R0154"
+   ],
+   "review_status": "published",
+   "schema_version": 1,
+   "snapshot_at": "2026-11-01T21:25:00Z",
+   "published": {
+    "actions": {
+     "attempted": [],
+     "completed": [
+      "Unpacking an archived Terraform folder and replacing the current state file with an older one describing production (operator)",
+      "Running terraform destroy, which deleted the production database, network, cluster, load balancers and bastion host (operator)"
+     ]
+    },
+    "authority": {
+     "status": "unverified",
+     "statement": "The operator let the agent run the destroy command believing it would remove only duplicates; nothing confirmed which resources the state file pointed at before it ran.",
+     "basis": "Documented: the operator states he did not stop the agent from running terraform destroy, did not notice it had replaced the state file, and still believed only new duplicates would be removed.",
+     "present": [
+      "The operator's decision not to stop the destroy command (operator)"
+     ],
+     "absent": [
+      "A check of the resources in the destroy plan against production before execution (operator)",
+      "Deletion protection on the database, added afterwards (operator)"
+     ],
+     "unknown": [
+      "The Claude Code model version",
+      "How many platform users were affected"
+     ]
+    },
+    "consequences": [
+     "Course platform down with production infrastructure deleted, including the database and its visible snapshots (operator)",
+     "Database restored by AWS about 24 hours later (operator)",
+     "Operator upgraded to AWS Business Support at about 10 percent extra cost and added backups, deletion protection and remote state (operator)"
+    ],
+    "controls": [
+     {
+      "basis": "documented",
+      "control": "Review of destroy targets before execution",
+      "failure": "The command was allowed on the assumption it would remove only duplicates."
+     },
+     {
+      "basis": "documented",
+      "control": "Deletion protection and independent backups",
+      "failure": "Not enabled before the incident; snapshots were deleted with the database."
+     }
+    ],
+    "defect_category": "irreversible_unverified",
+    "defect_label": "Irreversible action without a verified precondition",
+    "deployment": "deployed",
+    "disclosed_basis": "Operator's post-mortem published 6 March 2026; added as a backfill",
+    "disclosed_on": "2026-03-06",
+    "enforcement": {
+     "enforcement_point": "Execution of an infrastructure destroy or delete command issued by a coding agent.",
+     "decision_state": "Block and escalate",
+     "reason": "The destroy plan includes production resources and the state file was changed during the session.",
+     "authority_requirement": "The infrastructure owner reviews the full list of resources in the plan and approves it against a production inventory.",
+     "condition": "Applies to any destroy, delete or auto approved apply that touches resources tagged or recorded as production.",
+     "required_response": "Stop the command and show the resource list with production items marked.",
+     "responder_action": "Confirm the intended targets, restore the correct state file if needed, and approve or cancel.",
+     "next_event": "The command runs only after recorded approval of the listed resources.",
+     "responsible_role": "Infrastructure owner (proposed role)"
+    },
+    "evidence_note": "First party post-mortem by the platform's operator, with a timeline and screenshots of AWS support messages. No statement from AWS or Anthropic.",
+    "evidence_strength": "moderate",
+    "facts": [
+     "The operator says his Claude Code agent accidentally wiped all production infrastructure for the DataTalks.Club course management platform, which stored 2.5 years of submissions. [S149]",
+     "After running terraform apply on a new computer without the state file, the agent was asked to delete duplicate resources, then said it would do a terraform destroy, and the operator did not stop it. [S149]",
+     "The operator says he did not notice the agent unpacking his Terraform archive, which replaced the current state file with an older one describing the production platform. [S149]",
+     "The database, VPC, ECS cluster, load balancers and bastion host were deleted, and the operator later found all snapshots were also gone. [S149]",
+     "AWS restored the database snapshot about 24 hours after deletion, with 1,943,200 rows in one table, and the operator added deletion protection, backups and remote Terraform state. [S149]"
+    ],
+    "incident_date": "26 February 2026",
+    "incident_date_basis": "The operator's timeline places the destroy at about 11 PM on Thursday 26 February and the restore on 27 February.",
+    "inferences": [
+     "The agent changed the input that decided what destroy would delete, so approving the command without seeing its targets was approving an unknown action.",
+     "Restoration depended on a snapshot held on the provider's side, which the operator could not see."
+    ],
+    "location": {
+     "documented": false,
+     "status": "unresolved",
+     "label": "Execution location not documented",
+     "lat": null,
+     "lon": null,
+     "kind": "unresolved",
+     "basis": "The post-mortem names AWS but not the region where the infrastructure ran."
+    },
+    "organization": "DataTalks.Club, an online education community; affected: course platform users",
+    "rules": [],
+    "sources": [
+     {
+      "id": "S149",
+      "name": "Operator's post-mortem: How I Dropped Our Production Database and Now Pay 10% More for AWS",
+      "url": "https://alexeyondata.substack.com/p/how-i-dropped-our-production-database",
+      "published": "2026-03-06",
+      "type": "primary (operator disclosure)",
+      "report_id": "R0154",
+      "retrieved": "2026-11-01"
+     }
+    ],
+    "summary": "While cleaning up duplicate cloud resources, a Claude Code agent unpacked an old Terraform archive that replaced the state file, then ran terraform destroy, which the operator allowed believing it would remove only duplicates. The command deleted the DataTalks.Club course platform's production database and infrastructure, including snapshots. AWS restored the database about a day later.",
+    "system": "Claude Code coding agent running Terraform and AWS CLI commands (model version not stated)",
+    "title": "Coding agent swaps in an old Terraform state file and destroys a course platform's production infrastructure; AWS restores the database a day later",
+    "why_it_mattered": "The agent altered what the destroy command targeted, and the person approving it could not see that production was in scope.",
+    "workflow": "Migrating and cleaning up cloud infrastructure with Terraform"
    }
   }
  ]
