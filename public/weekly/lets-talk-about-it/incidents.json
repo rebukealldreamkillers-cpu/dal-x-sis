@@ -1,8 +1,8 @@
 {
- "updated": "2026-10-31",
- "last_check": "2026-10-31T12:08:00Z",
- "next_incident_number": 80,
- "next_report_number": 142,
+ "updated": "2026-11-01",
+ "last_check": "2026-11-01T13:10:00Z",
+ "next_incident_number": 83,
+ "next_report_number": 146,
  "excluded_candidates": [
   {
    "name": "Gemini CLI file loss report (July 2025)",
@@ -1188,6 +1188,60 @@
    "reason": "Single user GitHub issue, not independently confirmed and without a vendor response.",
    "url": "https://techbroz.com/chaos/claude-code-rm-rf-loses-target-wipes-125gb/",
    "tracker": false
+  },
+  {
+   "name": "Virgil v. Experian Information Solutions, S.D. Ind. Rule 11 sanction for nonexistent citations (order of 11 September 2026, covered 30 October 2026)",
+   "reason": "Counsel did not cite AI use and the court made no AI finding, so documented AI use is missing.",
+   "url": "https://www.theexpertrecord.com/ai-in-court/virgil-v-experian-10000-sanction/",
+   "tracker": false
+  },
+  {
+   "name": "Lovino v. Stapleton, W.D. Va. show cause response over miscited cases and quotations (covered 1 November 2026)",
+   "reason": "No sanction or findings order located; only counsel's show cause response is reported.",
+   "url": "https://dlnnews.com/editorial/35717",
+   "tracker": false
+  },
+  {
+   "name": "Northflank breach and abuse of customers' AI API keys (disclosed 30 October 2026)",
+   "reason": "Human attacker abused stolen credentials; no AI system executed the action.",
+   "url": "https://www.bleepingcomputer.com/news/security/northflank-security-breach-leads-to-abuse-of-customers-ai-api-keys/",
+   "tracker": false
+  },
+  {
+   "name": "CrowdStrike report on VAPOR PANDA using ARTEX against more than 200 organizations (29 October 2026)",
+   "reason": "Attacker operated agent framework; no authority layer sits in the attacker's path, as with the DIVD exclusion.",
+   "url": "https://www.crowdstrike.com/en-us/blog/vapor-panda-uses-artex-to-scale-global-campaign/",
+   "tracker": false
+  },
+  {
+   "name": "Codex widens an approved cleanup and force deletes 42 files (GitHub issue filed 28 October 2026, covered 1 November 2026)",
+   "reason": "Single user GitHub issue, not independently confirmed and without a vendor response.",
+   "url": "https://techbroz.com/chaos/codex-widens-cleanup-force-deletes-42-files/",
+   "tracker": false
+  },
+  {
+   "name": "Claude Code test cleanup deletes a user's ~/.claude folder (X post, 31 October 2026)",
+   "reason": "Single social media post with a screenshot, not independently confirmed and without a vendor response.",
+   "url": "https://techbroz.com/chaos/claude-code-test-cleanup-wipes-dot-claude-folder/",
+   "tracker": false
+  },
+  {
+   "name": "Claude Cowork cleanup deletes about 275 GB from a Windows drive (GitHub issue filed 30 October 2026)",
+   "reason": "Single user GitHub issue, not independently confirmed and without a vendor response.",
+   "url": "https://techbroz.com/chaos/claude-cowork-cleanup-deletes-275gb-c-drive/",
+   "tracker": false
+  },
+  {
+   "name": "Instinct agent reads a one-time login code from a user's Gmail to cancel two event RSVPs (Business Insider, 24 September 2026; NOPE, 31 October 2026)",
+   "reason": "Single user account with no chat log or vendor comment, and low documented stakes.",
+   "url": "https://nope.net/incidents/2026-instinct-personal-ai-agent-read-one-time-login-code-from-users-gmail-without-asking-then-misstated-how-it-got-in",
+   "tracker": false
+  },
+  {
+   "name": "AI agent sends 47 incorrect pricing emails to customers (AiFeed24, 31 October 2026)",
+   "reason": "Anonymous first person post; company, system and outcome not identified.",
+   "url": "https://aifeed24.com/articles/your-ai-agent-said-done-heres-how-i-found-out-it-actually-failed-three-hours-later",
+   "tracker": false
   }
  ],
  "rows": [
@@ -1333,7 +1387,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-31T12:08:00Z"
+   "snapshot_at": "2026-11-01T13:10:00Z"
   },
   {
    "incident_id": "INC0002",
@@ -1476,7 +1530,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-31T12:08:00Z"
+   "snapshot_at": "2026-11-01T13:10:00Z"
   },
   {
    "incident_id": "INC0003",
@@ -1598,7 +1652,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-31T12:08:00Z"
+   "snapshot_at": "2026-11-01T13:10:00Z"
   },
   {
    "incident_id": "INC0004",
@@ -1735,7 +1789,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-31T12:08:00Z"
+   "snapshot_at": "2026-11-01T13:10:00Z"
   },
   {
    "incident_id": "INC0005",
@@ -1893,7 +1947,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-31T12:08:00Z"
+   "snapshot_at": "2026-11-01T13:10:00Z"
   },
   {
    "incident_id": "INC0006",
@@ -2040,7 +2094,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-31T12:08:00Z"
+   "snapshot_at": "2026-11-01T13:10:00Z"
   },
   {
    "incident_id": "INC0007",
@@ -2145,7 +2199,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-31T12:08:00Z"
+   "snapshot_at": "2026-11-01T13:10:00Z"
   },
   {
    "incident_id": "INC0008",
@@ -2281,7 +2335,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-31T12:08:00Z"
+   "snapshot_at": "2026-11-01T13:10:00Z"
   },
   {
    "incident_id": "INC0009",
@@ -2393,7 +2447,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-31T12:08:00Z"
+   "snapshot_at": "2026-11-01T13:10:00Z"
   },
   {
    "incident_id": "INC0010",
@@ -2515,7 +2569,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-31T12:08:00Z"
+   "snapshot_at": "2026-11-01T13:10:00Z"
   },
   {
    "incident_id": "INC0011",
@@ -2671,7 +2725,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-31T12:08:00Z"
+   "snapshot_at": "2026-11-01T13:10:00Z"
   },
   {
    "incident_id": "INC0012",
@@ -2813,7 +2867,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-31T12:08:00Z"
+   "snapshot_at": "2026-11-01T13:10:00Z"
   },
   {
    "incident_id": "INC0013",
@@ -2996,7 +3050,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-31T12:08:00Z"
+   "snapshot_at": "2026-11-01T13:10:00Z"
   },
   {
    "incident_id": "INC0014",
@@ -3144,7 +3198,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-31T12:08:00Z"
+   "snapshot_at": "2026-11-01T13:10:00Z"
   },
   {
    "incident_id": "INC0015",
@@ -3281,7 +3335,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-31T12:08:00Z"
+   "snapshot_at": "2026-11-01T13:10:00Z"
   },
   {
    "incident_id": "INC0016",
@@ -3401,7 +3455,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-31T12:08:00Z"
+   "snapshot_at": "2026-11-01T13:10:00Z"
   },
   {
    "incident_id": "INC0017",
@@ -3531,7 +3585,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-31T12:08:00Z"
+   "snapshot_at": "2026-11-01T13:10:00Z"
   },
   {
    "incident_id": "INC0018",
@@ -3677,7 +3731,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-31T12:08:00Z"
+   "snapshot_at": "2026-11-01T13:10:00Z"
   },
   {
    "incident_id": "INC0019",
@@ -3811,7 +3865,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-31T12:08:00Z"
+   "snapshot_at": "2026-11-01T13:10:00Z"
   },
   {
    "incident_id": "INC0020",
@@ -3949,7 +4003,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-31T12:08:00Z"
+   "snapshot_at": "2026-11-01T13:10:00Z"
   },
   {
    "incident_id": "INC0021",
@@ -4074,7 +4128,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-31T12:08:00Z"
+   "snapshot_at": "2026-11-01T13:10:00Z"
   },
   {
    "incident_id": "INC0022",
@@ -4241,7 +4295,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-31T12:08:00Z"
+   "snapshot_at": "2026-11-01T13:10:00Z"
   },
   {
    "incident_id": "INC0023",
@@ -4403,7 +4457,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-31T12:08:00Z"
+   "snapshot_at": "2026-11-01T13:10:00Z"
   },
   {
    "incident_id": "INC0024",
@@ -4564,7 +4618,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-31T12:08:00Z"
+   "snapshot_at": "2026-11-01T13:10:00Z"
   },
   {
    "incident_id": "INC0025",
@@ -4731,7 +4785,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-31T12:08:00Z"
+   "snapshot_at": "2026-11-01T13:10:00Z"
   },
   {
    "incident_id": "INC0026",
@@ -4891,7 +4945,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-31T12:08:00Z"
+   "snapshot_at": "2026-11-01T13:10:00Z"
   },
   {
    "incident_id": "INC0027",
@@ -5027,7 +5081,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-31T12:08:00Z"
+   "snapshot_at": "2026-11-01T13:10:00Z"
   },
   {
    "incident_id": "INC0028",
@@ -5152,7 +5206,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-31T12:08:00Z"
+   "snapshot_at": "2026-11-01T13:10:00Z"
   },
   {
    "incident_id": "INC0029",
@@ -5274,7 +5328,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-31T12:08:00Z"
+   "snapshot_at": "2026-11-01T13:10:00Z"
   },
   {
    "incident_id": "INC0030",
@@ -5402,7 +5456,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-31T12:08:00Z"
+   "snapshot_at": "2026-11-01T13:10:00Z"
   },
   {
    "incident_id": "INC0031",
@@ -5519,7 +5573,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-31T12:08:00Z"
+   "snapshot_at": "2026-11-01T13:10:00Z"
   },
   {
    "incident_id": "INC0032",
@@ -5626,7 +5680,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-31T12:08:00Z"
+   "snapshot_at": "2026-11-01T13:10:00Z"
   },
   {
    "incident_id": "INC0033",
@@ -5637,7 +5691,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-31T12:08:00Z",
+   "snapshot_at": "2026-11-01T13:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5773,7 +5827,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-31T12:08:00Z",
+   "snapshot_at": "2026-11-01T13:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5917,7 +5971,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-31T12:08:00Z",
+   "snapshot_at": "2026-11-01T13:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6054,7 +6108,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-31T12:08:00Z",
+   "snapshot_at": "2026-11-01T13:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6201,7 +6255,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-31T12:08:00Z",
+   "snapshot_at": "2026-11-01T13:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6332,7 +6386,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-31T12:08:00Z",
+   "snapshot_at": "2026-11-01T13:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6478,7 +6532,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-31T12:08:00Z",
+   "snapshot_at": "2026-11-01T13:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6611,7 +6665,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-31T12:08:00Z",
+   "snapshot_at": "2026-11-01T13:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6742,7 +6796,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-31T12:08:00Z",
+   "snapshot_at": "2026-11-01T13:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6875,7 +6929,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-31T12:08:00Z",
+   "snapshot_at": "2026-11-01T13:10:00Z",
    "published": {
     "actions": {
      "attempted": [
@@ -7018,7 +7072,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-31T12:08:00Z",
+   "snapshot_at": "2026-11-01T13:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7136,7 +7190,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-31T12:08:00Z",
+   "snapshot_at": "2026-11-01T13:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7255,7 +7309,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-31T12:08:00Z",
+   "snapshot_at": "2026-11-01T13:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7379,7 +7433,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-31T12:08:00Z",
+   "snapshot_at": "2026-11-01T13:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7506,7 +7560,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-31T12:08:00Z",
+   "snapshot_at": "2026-11-01T13:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7629,7 +7683,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-31T12:08:00Z",
+   "snapshot_at": "2026-11-01T13:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7756,7 +7810,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-31T12:08:00Z",
+   "snapshot_at": "2026-11-01T13:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7878,7 +7932,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-31T12:08:00Z",
+   "snapshot_at": "2026-11-01T13:10:00Z",
    "published": {
     "actions": {
      "attempted": [
@@ -7998,7 +8052,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-31T12:08:00Z",
+   "snapshot_at": "2026-11-01T13:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8129,7 +8183,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-31T12:08:00Z",
+   "snapshot_at": "2026-11-01T13:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8251,7 +8305,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-31T12:08:00Z",
+   "snapshot_at": "2026-11-01T13:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8409,7 +8463,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-31T12:08:00Z",
+   "snapshot_at": "2026-11-01T13:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8523,7 +8577,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-31T12:08:00Z",
+   "snapshot_at": "2026-11-01T13:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8635,7 +8689,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-31T12:08:00Z",
+   "snapshot_at": "2026-11-01T13:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8759,7 +8813,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-31T12:08:00Z",
+   "snapshot_at": "2026-11-01T13:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8884,7 +8938,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-31T12:08:00Z",
+   "snapshot_at": "2026-11-01T13:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9004,7 +9058,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-31T12:08:00Z",
+   "snapshot_at": "2026-11-01T13:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9126,7 +9180,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-31T12:08:00Z",
+   "snapshot_at": "2026-11-01T13:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9237,7 +9291,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-31T12:08:00Z",
+   "snapshot_at": "2026-11-01T13:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9350,7 +9404,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-31T12:08:00Z",
+   "snapshot_at": "2026-11-01T13:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9462,7 +9516,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-31T12:08:00Z",
+   "snapshot_at": "2026-11-01T13:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9575,7 +9629,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-31T12:08:00Z",
+   "snapshot_at": "2026-11-01T13:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9702,7 +9756,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-31T12:08:00Z",
+   "snapshot_at": "2026-11-01T13:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9812,7 +9866,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-31T12:08:00Z",
+   "snapshot_at": "2026-11-01T13:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9932,7 +9986,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-31T12:08:00Z",
+   "snapshot_at": "2026-11-01T13:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -10045,7 +10099,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-31T12:08:00Z",
+   "snapshot_at": "2026-11-01T13:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -10166,7 +10220,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-31T12:08:00Z",
+   "snapshot_at": "2026-11-01T13:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -10279,7 +10333,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-31T12:08:00Z",
+   "snapshot_at": "2026-11-01T13:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -10423,7 +10477,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-31T12:08:00Z",
+   "snapshot_at": "2026-11-01T13:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -10553,7 +10607,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-31T12:08:00Z",
+   "snapshot_at": "2026-11-01T13:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -10674,7 +10728,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-31T12:08:00Z",
+   "snapshot_at": "2026-11-01T13:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -10806,7 +10860,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-31T12:08:00Z",
+   "snapshot_at": "2026-11-01T13:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -10957,7 +11011,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-31T12:08:00Z",
+   "snapshot_at": "2026-11-01T13:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -11094,7 +11148,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-31T12:08:00Z",
+   "snapshot_at": "2026-11-01T13:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -11216,7 +11270,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-31T12:08:00Z",
+   "snapshot_at": "2026-11-01T13:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -11327,7 +11381,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-31T12:08:00Z",
+   "snapshot_at": "2026-11-01T13:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -11447,7 +11501,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-10-31T12:08:00Z",
+   "snapshot_at": "2026-11-01T13:10:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -11565,6 +11619,404 @@
     "title": "Counsel's AI-drafted opposition and later briefs cite fictitious and misquoted authority; Massachusetts federal court revokes his pro hac vice admission and orders up to USD 10,000 in fees",
     "why_it_mattered": "Citation errors kept reaching the court in new filings after opposing counsel had warned counsel and moved for sanctions.",
     "workflow": "Drafting opposition briefs in federal civil litigation",
+    "cluster": "AI drafted court filings with fabricated citations (2026)"
+   }
+  },
+  {
+   "incident_id": "INC0080",
+   "last_updated": "2026-11-01",
+   "published_version": 1,
+   "report_ids": [
+    "R0142"
+   ],
+   "review_status": "published",
+   "schema_version": 1,
+   "snapshot_at": "2026-11-01T13:10:00Z",
+   "published": {
+    "actions": {
+     "attempted": [],
+     "completed": [
+      "Filing three summary judgment briefs that cite fifteen nonexistent cases and quotations falsely attributed to eight legitimate authorities (order)",
+      "Filing amended briefs that delete the fake citations but keep the unsupported statements of law they were cited for (order)"
+     ]
+    },
+    "authority": {
+     "status": "exceeded",
+     "statement": "Counsel's signature on each brief certified under Rule 11 that its legal contentions were warranted by existing law, and the court found they rested on cases and quotations that do not exist.",
+     "basis": "Documented: the order finds violations of Rule 11(b), holds that the plaintiffs share responsibility with their counsel for submitting nonexistent cases and fabricated quotations, and imposes sanctions under Rule 11.",
+     "present": [
+      "Counsel of record with authority to file briefs for the plaintiffs (order)"
+     ],
+     "absent": [
+      "Verification of the cited cases and quotations before filing (order)",
+      "Verification of the remaining legal statements before the amended briefs were filed (order)"
+     ],
+     "unknown": [
+      "Which AI product was used",
+      "The final amount of attorney's fees, which the order left to a later ruling"
+     ]
+    },
+    "consequences": [
+     "Summary judgment briefs and amended filings struck without leave to refile (order)",
+     "Former counsel ordered to pay USD 15,500 to the Clerk of the Court (order)",
+     "Defendants awarded reasonable attorney's fees and expenses, amount to be set later (order)",
+     "Plaintiffs' claims dismissed with prejudice under Rule 11(c)(4) and the Local Rules (order)",
+     "A second attorney ordered to show cause (order)"
+    ],
+    "controls": [
+     {
+      "basis": "documented",
+      "control": "Attorney verification of citations before filing",
+      "failure": "Three briefs over three months cited fifteen nonexistent cases, including six added after the defendants flagged the first two."
+     },
+     {
+      "basis": "documented",
+      "control": "Correction after notice",
+      "failure": "The amended briefs removed the fake citations but left the algorithmically generated statements of law in place, in one case by deleting only the quotation marks."
+     },
+     {
+      "basis": "documented",
+      "control": "Candor with the court",
+      "failure": "The court found the plaintiffs and their counsel were not forthcoming, candid or apologetic despite repeated chances to explain."
+     }
+    ],
+    "defect_category": "external_output_unverified",
+    "defect_label": "Unverified AI output released to an outside party",
+    "deployment": "deployed",
+    "disclosed_basis": "Opinion and order of the US District Court for the District of Oregon dated 12 December 2025 (copy hosted by the AI Hallucination Cases database); added as a backfill",
+    "disclosed_on": "2025-12-12",
+    "enforcement": {
+     "enforcement_point": "Attorney signature and filing of a brief that cites legal authority in federal court.",
+     "decision_state": "Block",
+     "reason": "Citations and quotations in a brief drafted with generative AI have not been matched to the cited authority.",
+     "authority_requirement": "The signing attorney confirms each cited case exists and each quotation appears in the cited source, including drafts supplied by the client.",
+     "condition": "Applies to every brief prepared with AI tools or supplied by a party for counsel's signature, and to amended briefs filed after citation errors are reported.",
+     "required_response": "Return the brief to the signing attorney with each unmatched citation, quotation and unsupported statement of law listed.",
+     "responder_action": "Verify, correct or remove each listed item, including the text a removed citation was offered to support, and certify the reviewed brief.",
+     "next_event": "The brief is filed after each listed item is verified or removed.",
+     "responsible_role": "Signing attorney (proposed role)"
+    },
+    "evidence_note": "Primary court opinion records the fifteen nonexistent cases and eight fabricated quotations, the court's finding of generative AI misuse, the rejected corrections and the sanctions.",
+    "evidence_strength": "strong",
+    "facts": [
+     "Between 31 January and 2 May 2025 the plaintiffs filed three summary judgment briefs that cited fifteen nonexistent cases and contained fabricated quotations falsely attributed to eight legitimate authorities. [S137 pp. 1, 5 to 7]",
+     "The defendants' 4 April 2025 response identified the first two nonexistent cases and suggested they were perhaps hallucinated by artificial intelligence; the plaintiffs' 2 May reply cited six more. [S137 pp. 6 to 7]",
+     "The amended briefs filed on 26 May 2025 deleted the nonexistent cases and fabricated quotations but left the surrounding statements of law in place, and in one instance counsel deleted only the quotation marks around a fabricated Restatement passage. [S137 pp. 8 to 9]",
+     "The plaintiffs said the inaccurate citations resulted from reliance on an automated legal citation tool, a position the court rejected. [S137 p. 22]",
+     "The court found the plaintiffs share responsibility with their counsel, citing unrebutted evidence that one plaintiff, a serial self-represented litigant, was likely the person responsible for using artificial intelligence to draft the briefs. [S137 p. 23]",
+     "On 12 December 2025 the court struck the briefs without leave to refile, ordered former counsel to pay USD 15,500, calculated at USD 500 per nonexistent case and USD 1,000 per fabricated quotation, awarded the defendants reasonable fees and expenses, and dismissed the plaintiffs' claims with prejudice. [S137 pp. 21, 24, 28]"
+    ],
+    "incident_date": "31 January to 26 May 2025",
+    "incident_date_basis": "The order dates the three briefs to 31 January, 4 April and 2 May 2025, and the amended briefing to 26 May 2025.",
+    "inferences": [
+     "A draft prepared by a client with AI reached the court under counsel's signature, so the signature was the last point where the citations could have been checked.",
+     "Deleting fake citations while keeping the propositions they supported left unverified AI text in the record, which the court treated as no correction at all."
+    ],
+    "location": {
+     "documented": true,
+     "status": "established",
+     "label": "Medford, Oregon, United States (US District Court, District of Oregon)",
+     "lat": 42.3265,
+     "lon": -122.8756,
+     "kind": "jurisdiction",
+     "basis": "The briefs were filed in the US District Court for the District of Oregon, which imposed the sanctions; the order directs payment to the Clerk's Office in Medford. Pin placed at Medford as the reference point for the court; the order does not state where the briefs were drafted."
+    },
+    "organization": "Plaintiffs and their former counsel in a family business and inheritance dispute; affected: US District Court for the District of Oregon and the defendants",
+    "rules": [
+     {
+      "applicability": "The court imposed the sanctions under Rule 11.",
+      "issuer": "US federal courts",
+      "level": "national",
+      "name": "Federal Rule of Civil Procedure 11",
+      "scope": "Signed filings in US federal district courts",
+      "uncertainty": "None stated.",
+      "url": "https://www.law.cornell.edu/rules/frcp/rule_11"
+     }
+    ],
+    "sources": [
+     {
+      "id": "S137",
+      "name": "US District Court for the District of Oregon: No. 1:21-cv-00157-CL, opinion and order on motion for sanctions (Dkt. 215), copy hosted by the AI Hallucination Cases database",
+      "url": "https://www.damiencharlotin.com/documents/1170/Couvrette_v._Wisnoksy_USA_12_December_2025.pdf",
+      "published": "2025-12-12",
+      "type": "primary (court order)",
+      "report_id": "R0142",
+      "retrieved": "2026-11-01"
+     }
+    ],
+    "summary": "In a federal suit in Oregon, the plaintiffs filed three summary judgment briefs citing fifteen nonexistent cases and quotations falsely attributed to eight real authorities. After the defendants raised the problem, amended briefs removed the citations but kept the unsupported statements of law. The court found generative AI had been misused, found that one plaintiff was likely the person who used it to draft the briefs, and held the plaintiffs and their counsel jointly responsible. It struck the briefs, ordered former counsel to pay USD 15,500, awarded fees and dismissed the claims with prejudice.",
+    "system": "Generative AI, product not named in the order; the plaintiffs described an automated legal citation tool",
+    "title": "AI-drafted summary judgment briefs cite fifteen nonexistent cases; Oregon federal court strikes them, fines former counsel USD 15,500 and dismisses the claims",
+    "why_it_mattered": "The court ended the case on sanctions rather than the merits, and the fake authority kept reaching the court after the defendants had flagged it.",
+    "workflow": "Drafting summary judgment briefs in federal civil litigation",
+    "cluster": "AI drafted court filings with fabricated citations (2026)"
+   }
+  },
+  {
+   "incident_id": "INC0081",
+   "last_updated": "2026-11-01",
+   "published_version": 1,
+   "report_ids": [
+    "R0143",
+    "R0144"
+   ],
+   "review_status": "published",
+   "schema_version": 1,
+   "snapshot_at": "2026-11-01T13:10:00Z",
+   "published": {
+    "actions": {
+     "attempted": [],
+     "completed": [
+      "Filing nineteen submissions prepared with Claude and other generative AI platforms that cite twenty-three fictitious decisions on forty-seven occasions (order)",
+      "Filing further submissions after the defendant flagged the false authority, having checked the citations with the same AI platforms (order)"
+     ]
+    },
+    "authority": {
+     "status": "exceeded",
+     "statement": "Counsel's authority to file papers carried a duty to verify cited authority, and the court found his filings frivolous under 22 NYCRR 130-1.1.",
+     "basis": "Documented: the April order finds the submissions frivolous conduct under 22 NYCRR 130-1.1, and the August order imposes the maximum sanction and finds a substantial likelihood of substantial violations of the Rules of Professional Conduct.",
+     "present": [
+      "Counsel's authority to represent his own firm in the fee action (order)"
+     ],
+     "absent": [
+      "Verification of cited decisions against an independent source before filing (order)",
+      "Verification after the defendant raised the issue on 6 June 2025 (order)"
+     ],
+     "unknown": [
+      "Which other generative AI platforms were used",
+      "Whether the sanction and fees have been paid",
+      "The outcome of the grievance referral"
+     ]
+    },
+    "consequences": [
+     "Counsel and his firm held jointly and severally liable for a USD 10,000 sanction payable to the Lawyers' Fund for Client Protection, the maximum per occurrence (order)",
+     "Counsel and his firm ordered to pay the defendant's attorney's fees and costs of USD 36,511.35 (order)",
+     "Counsel referred to the Grievance Committee for the Second, Eleventh and Thirteenth Judicial Districts (order)",
+     "The firm's own motion for sanctions and fees against the defendant denied (April order)"
+    ],
+    "controls": [
+     {
+      "basis": "documented",
+      "control": "Attorney verification of citations before filing",
+      "failure": "Counsel testified he did not understand the platforms could fabricate authorities and conceded he could have checked the decisions through a free search service but did not."
+     },
+     {
+      "basis": "documented",
+      "control": "Correction after notice",
+      "failure": "After the defendant flagged the citations, counsel checked them with the same AI platforms that produced them and kept filing papers with false authority."
+     },
+     {
+      "basis": "documented",
+      "control": "Independent research source",
+      "failure": "Counsel said he could not afford Lexis or Westlaw; after resuming Lexis he still did not verify the challenged material."
+     }
+    ],
+    "defect_category": "external_output_unverified",
+    "defect_label": "Unverified AI output released to an outside party",
+    "deployment": "deployed",
+    "disclosed_basis": "Decision and order after hearing of the Supreme Court of the State of New York, Kings County, dated 4 August 2026, following the court's 13 April 2026 frivolous conduct finding; added as a backfill",
+    "disclosed_on": "2026-08-04",
+    "enforcement": {
+     "enforcement_point": "Attorney signature and filing of an affirmation, memorandum or letter that cites legal authority in state court.",
+     "decision_state": "Block",
+     "reason": "Cited decisions in papers drafted with generative AI have not been checked against an independent legal source.",
+     "authority_requirement": "The signing attorney confirms each cited decision exists and supports its proposition using a source other than the tool that produced it.",
+     "condition": "Applies to every submission prepared with AI research platforms, and to every later submission once an opposing party has challenged any citation.",
+     "required_response": "Hold the submission with each unverified citation listed.",
+     "responder_action": "Check each listed citation in a court database or legal research service, correct or remove it, and certify the reviewed submission.",
+     "next_event": "The submission is filed after each listed citation is verified or removed.",
+     "responsible_role": "Signing attorney (proposed role)"
+    },
+    "evidence_note": "Two primary court orders: the April decision quantifies the fictitious and misstated authority, and the August decision records counsel's sworn testimony that he used Claude and other generative AI platforms, the sanctions and the referral.",
+    "evidence_strength": "strong",
+    "facts": [
+     "The court found that counsel's submissions in five motion sequences cited twenty-three fictitious cases on forty-seven occasions and misstated holdings in at least eighty-three instances. [S138 p. 6]",
+     "In its April order the court noted that the firm sought USD 50,000 in fees for work product that appears to have been generated through the use of artificial intelligence without adequate verification. [S138 p. 11]",
+     "At the 9 June 2026 hearing counsel testified that from April to December 2025 he used Claude and other generative AI research platforms to prepare the submissions containing fabricated and misquoted citations, and that this was his first use of generative AI for legal research. [S139 p. 1]",
+     "Some submissions were filed after the defendant raised the issue in a 6 June 2025 affirmation. [S139 p. 1]",
+     "Counsel conceded he could have verified the decisions through a free internet search and did not, that he used the same generative AI platforms to verify the citations after they were questioned, and that he did not use Lexis to check them after resuming it. [S139 p. 2]",
+     "On 4 August 2026 the court imposed the maximum USD 10,000 sanction, jointly and severally on counsel and his firm, awarded the defendant USD 36,511.35 in fees and costs, and referred counsel to the Grievance Committee for the Second, Eleventh and Thirteenth Judicial Districts. [S139 pp. 3 to 5]"
+    ],
+    "incident_date": "April to December 2025",
+    "incident_date_basis": "Counsel testified that he used generative AI to prepare the submissions from April to December 2025; the order does not list each filing date.",
+    "inferences": [
+     "Asking the tool that produced the citations to confirm them repeated the original error rather than checking it.",
+     "The defendant's June 2025 affirmation was an outside warning that could have triggered an independent check of every citation; filings kept arriving after it."
+    ],
+    "location": {
+     "documented": true,
+     "status": "established",
+     "label": "Brooklyn, New York, United States (Supreme Court of the State of New York, Kings County)",
+     "lat": 40.6782,
+     "lon": -73.9442,
+     "kind": "jurisdiction",
+     "basis": "The submissions were filed in the Supreme Court of the State of New York, Kings County, which sits at 360 Adams Street, Brooklyn, and imposed the sanctions. Pin placed at Brooklyn as the reference point for the court; the orders do not state where the papers were drafted."
+    },
+    "organization": "Plaintiff law firm and its principal attorney suing a former client's estate for fees; affected: Supreme Court of the State of New York, Kings County and the defendant",
+    "rules": [
+     {
+      "applicability": "The court found the filings frivolous and imposed the sanction and fee award under this rule.",
+      "issuer": "New York State Unified Court System",
+      "level": "state",
+      "name": "22 NYCRR Part 130 (costs and sanctions for frivolous conduct)",
+      "scope": "Civil litigation in New York State courts; sanctions capped at USD 10,000 per occurrence",
+      "uncertainty": "None stated.",
+      "url": "https://ww2.nycourts.gov/rules/chiefadmin/130.shtml"
+     }
+    ],
+    "sources": [
+     {
+      "id": "S138",
+      "name": "Supreme Court of the State of New York, Kings County: Index No. 502644/2025, decision and order dated 13 April 2026 (NYSCEF Doc. No. 108)",
+      "url": "https://websitedc.s3.amazonaws.com/documents/Kleyman_L__Grp__P_C__v__Kaloidis.pdf",
+      "published": "2026-04-13",
+      "type": "primary (court order)",
+      "report_id": "R0143",
+      "retrieved": "2026-11-01"
+     },
+     {
+      "id": "S139",
+      "name": "Supreme Court of the State of New York, Kings County: Index No. 502644/2025, decision and order after hearing dated 4 August 2026, copy hosted by the AI Hallucination Cases database",
+      "url": "https://www.damiencharlotin.com/documents/2891/Kleyman_Law_Group_PC_v_Kaloidis_USA_4_August_2026.pdf",
+      "published": "2026-08-04",
+      "type": "primary (court order)",
+      "report_id": "R0144",
+      "retrieved": "2026-11-01"
+     }
+    ],
+    "summary": "An attorney suing on his own firm's fee claim filed nineteen submissions that cited twenty-three fictitious decisions on forty-seven occasions and misstated at least eighty-three real ones. He testified that he prepared them with Claude and other generative AI platforms, and that after the defendant challenged the citations he checked them with the same platforms. The Kings County court imposed the maximum USD 10,000 sanction, awarded USD 36,511.35 in fees and costs, and referred him to a grievance committee.",
+    "system": "Claude and other generative AI research platforms not named in the order",
+    "title": "Claude-assisted filings cite twenty-three fictitious decisions across nineteen submissions; Brooklyn court imposes the maximum USD 10,000 sanction and a grievance referral",
+    "why_it_mattered": "The false authority spread across nineteen submissions over eight months, and the only check run after the warning used the same tools that had produced it.",
+    "workflow": "Drafting affirmations, memoranda and motions in a state court fee action",
+    "cluster": "AI drafted court filings with fabricated citations (2026)"
+   }
+  },
+  {
+   "incident_id": "INC0082",
+   "last_updated": "2026-11-01",
+   "published_version": 1,
+   "report_ids": [
+    "R0145"
+   ],
+   "review_status": "published",
+   "schema_version": 1,
+   "snapshot_at": "2026-11-01T13:10:00Z",
+   "published": {
+    "actions": {
+     "attempted": [],
+     "completed": [
+      "Filing an Article 78 petition and memorandum of law containing fabricated or altered quotations from at least five real cases after accepting edits from an AI drafting tool (decision)",
+      "Filing an amended petition that kept assertions premised on the fabricated authority (decision)"
+     ]
+    },
+    "authority": {
+     "status": "exceeded",
+     "statement": "Counsel's authority to file the petition carried a duty to confirm its quotations, and the court found the filing frivolous conduct.",
+     "basis": "Documented: the decision holds that reliance on generative AI to draft papers containing hallucinations is frivolous conduct, imposes a sanction under 22 NYCRR 130-1.1, and finds the original pleading permeated with fraud.",
+     "present": [
+      "Counsel's authority to represent the petitioners (decision)",
+      "Lexis and Westlaw subscriptions available to the firm (decision)"
+     ],
+     "absent": [
+      "A citation check after accepting the AI tool's changes (decision)"
+     ],
+     "unknown": [
+      "Whether the sanction and fee awards have been paid",
+      "Whether the petitioners have refiled"
+     ]
+    },
+    "consequences": [
+     "Counsel ordered to pay a USD 5,000 sanction to the Lawyers' Fund for Client Protection (decision)",
+     "Counsel ordered to pay USD 8,000 and USD 2,000 in attorney's fees to two respondents, against requests of about USD 141,606 and USD 41,558 (decision)",
+     "Petition, memorandum of law and amended petition struck and the proceeding dismissed, not on the merits (decision)"
+    ],
+    "controls": [
+     {
+      "basis": "documented",
+      "control": "Citation check after the final edit",
+      "failure": "Counsel reviewed the petition before filing but did not re-run a cite check after accepting the AI tool's changes."
+     },
+     {
+      "basis": "documented",
+      "control": "Vendor description of the tool",
+      "failure": "Counsel had been told the tool only enhanced drafting and did not supply authorities, and relied on that description."
+     },
+     {
+      "basis": "documented",
+      "control": "Response to notice",
+      "failure": "Counsel denied any fabricated authority for six days, threatened to seek sanctions against opposing counsel, and conceded AI citation errors only when filing the amended petition."
+     }
+    ],
+    "defect_category": "external_output_unverified",
+    "defect_label": "Unverified AI output released to an outside party",
+    "deployment": "deployed",
+    "disclosed_basis": "Decision and order of the Supreme Court of the State of New York, Nassau County, dated 9 September 2026, published as 2026 NY Slip Op 26150 (copy hosted by the AI Hallucination Cases database); added as a backfill",
+    "disclosed_on": "2026-09-09",
+    "enforcement": {
+     "enforcement_point": "Attorney signature and filing of a petition or memorandum of law that quotes case law in state court.",
+     "decision_state": "Block",
+     "reason": "Quotations in the filing changed after an AI tool edited the document and have not been rechecked against the cited decisions.",
+     "authority_requirement": "The signing attorney confirms each quotation appears verbatim in the cited decision after the last machine edit to the document.",
+     "condition": "Applies to any filing edited by an AI drafting or writing tool, whatever the vendor says the tool does.",
+     "required_response": "Hold the filing with each quotation changed since the last citation check listed.",
+     "responder_action": "Recheck each listed quotation against the reported decision, restore or remove it, and certify the reviewed filing.",
+     "next_event": "The filing proceeds after each listed quotation is verified or removed.",
+     "responsible_role": "Signing attorney (proposed role)"
+    },
+    "evidence_note": "Primary court decision records counsel's concession at the hearing, the AI tool involved, the five affected cases, and the sanctions and dismissal.",
+    "evidence_strength": "strong",
+    "facts": [
+     "The petitioners commenced the Article 78 proceeding on 8 May 2026 with a 64-page petition and a 46-page memorandum of law challenging a village planning board's subdivision approval. [S140 at *1]",
+     "On 15 May 2026 counsel for the respondents told petitioners' counsel the papers contained false citations to legal authority using artificial intelligence; he replied with an eight-page letter denying fabricated authority and threatening to seek sanctions himself. [S140 at *1 to *2]",
+     "On 21 May 2026 counsel filed an amended petition that the court described as essentially the same petition less the challenged citations, with a letter conceding for the first time that the original contained AI citation errors. [S140 at *2]",
+     "At the 22 July 2026 hearing counsel conceded the papers contained hallucinated quotations and explained that his Westlaw subscription included Spellbook AI, a tool embedded in Microsoft Word, and that he did not re-run a cite check after accepting its changes. [S140 at *3]",
+     "The court found that the petition included quotations from at least five legitimate cases that were entirely fabricated or altered, several cited for propositions unrelated to their holdings. [S140 at *4, *6 to *7]",
+     "On 9 September 2026 the court sanctioned counsel USD 5,000, ordered him to pay USD 8,000 and USD 2,000 in fees to two respondents, struck the petition and amended petition, and dismissed the proceeding without a determination on the merits. [S140 at *5 to *8]"
+    ],
+    "incident_date": "8 May to 21 May 2026",
+    "incident_date_basis": "The decision dates the original petition to 8 May 2026 and the amended petition to 21 May 2026.",
+    "inferences": [
+     "A citation check run before the AI tool's final edits could not catch quotations the tool changed afterwards, so the check needed to sit after the last machine edit.",
+     "Relying on the vendor's description of the tool took the place of verifying its output."
+    ],
+    "location": {
+     "documented": true,
+     "status": "established",
+     "label": "Mineola, New York, United States (Supreme Court of the State of New York, Nassau County)",
+     "lat": 40.7493,
+     "lon": -73.6407,
+     "kind": "jurisdiction",
+     "basis": "The petition was filed in the Supreme Court of the State of New York, Nassau County, which imposed the sanctions. Pin placed at Mineola, the county seat, as the reference point for the court; the decision does not state where the papers were drafted."
+    },
+    "organization": "Petitioners' counsel in an Article 78 challenge to a village subdivision approval; affected: Supreme Court of the State of New York, Nassau County, the Village of Kings Point and a developer",
+    "rules": [
+     {
+      "applicability": "The court found the filings frivolous and imposed the sanction and fee award under this rule.",
+      "issuer": "New York State Unified Court System",
+      "level": "state",
+      "name": "22 NYCRR Part 130 (costs and sanctions for frivolous conduct)",
+      "scope": "Civil litigation in New York State courts; sanctions capped at USD 10,000 per occurrence",
+      "uncertainty": "None stated.",
+      "url": "https://ww2.nycourts.gov/rules/chiefadmin/130.shtml"
+     }
+    ],
+    "sources": [
+     {
+      "id": "S140",
+      "name": "Supreme Court of the State of New York, Nassau County: Index No. 609846/2026, decision and order dated 9 September 2026, 2026 NY Slip Op 26150, copy hosted by the AI Hallucination Cases database",
+      "url": "https://www.damiencharlotin.com/documents/3110/Youssian_v_Village_of_Kings_Point_USA_9_September_2026.pdf",
+      "published": "2026-09-09",
+      "type": "primary (court order)",
+      "report_id": "R0145",
+      "retrieved": "2026-11-01"
+     }
+    ],
+    "summary": "Counsel for residents challenging a village subdivision approval filed a petition whose quotations from at least five real cases were fabricated or altered after he accepted edits from Spellbook AI in Microsoft Word without re-running a cite check. He first denied the problem and threatened sanctions against opposing counsel, then filed an amended petition the court found still rested on the fabricated authority. The Nassau County court fined him USD 5,000, ordered USD 10,000 in fees, struck both petitions and dismissed the proceeding.",
+    "system": "Spellbook AI, a drafting tool embedded in Microsoft Word through counsel's Westlaw subscription",
+    "title": "Quotations altered by an AI drafting tool reach an Article 78 petition; Nassau County court fines counsel USD 5,000, strikes both petitions and dismisses",
+    "why_it_mattered": "A tool sold as a drafting aid changed quoted case law after the last check, and the court refused to let an amendment cure a pleading built on it.",
+    "workflow": "Drafting an Article 78 petition and memorandum of law in state court",
     "cluster": "AI drafted court filings with fabricated citations (2026)"
    }
   }
