@@ -1,8 +1,8 @@
 {
- "updated": "2026-11-01",
- "last_check": "2026-11-01T21:25:00Z",
+ "updated": "2026-11-02",
+ "last_check": "2026-11-02T13:05:00Z",
  "next_incident_number": 90,
- "next_report_number": 155,
+ "next_report_number": 156,
  "excluded_candidates": [
   {
    "name": "Gemini CLI file loss report (July 2025)",
@@ -326,7 +326,7 @@
    "tracker": false
   },
   {
-   "name": "Morón Civil and Commercial Appeals Chamber declares an appeal deserted over an untraceable Supreme Court citation (decision 1 October 2026, covered 15 October 2026)",
+   "name": "Mor\u00f3n Civil and Commercial Appeals Chamber declares an appeal deserted over an untraceable Supreme Court citation (decision 1 October 2026, covered 15 October 2026)",
    "reason": "The court said it could not state with certainty that AI produced the citation, only that it was very likely, and no counsel statement documents AI use.",
    "url": "https://ninolegal.com/novedad/camara-moron-civil-declara-desierto-recurso-cita-inexistente-inteligencia-artificial",
    "tracker": false
@@ -1314,6 +1314,78 @@
    "reason": "Disputed: Amazon attributes the outage to user error, not the AI agent.",
    "url": "https://www.aboutamazon.com/news/aws/aws-service-outage-ai-bot-kiro",
    "tracker": false
+  },
+  {
+   "name": "Clifford v. Neidle, D. Wyoming order striking filings with hallucinated citations (28 October 2026)",
+   "reason": "Show cause order only: no sanction imposed yet and AI use is suspected by the court rather than found or admitted.",
+   "url": "https://www.aivortex.io/legal-ai-risk/cases/clifford-v-neidle-et-al-2026-10-28",
+   "tracker": false
+  },
+  {
+   "name": "USPTO public reprimand of a patent attorney for AI fabricated citations in an E.D. Pa. claim construction chart (final order 27 July 2026)",
+   "reason": "Agency disciplinary settlement rather than a court order, and the district court declined to sanction; the court filings policy requires a primary court order.",
+   "url": "https://www.ipupdate.com/category/patents/",
+   "tracker": false
+  },
+  {
+   "name": "Airbnb support AI assistant tells a host resubmitted refunds would replace a held one; three refunds paid (Reddit post 1 June 2026, NOPE 30 October 2026)",
+   "reason": "Single anonymous post with an undated transcript; no Airbnb confirmation and the final loss is unknown.",
+   "url": "https://nope.net/incidents/2026-airbnb-host-says-ai-support-assistant-said-resubmitted-refunds-would-replace-held-one-three-refunds-paid-first-person",
+   "tracker": false
+  },
+  {
+   "name": "Claude Code kill command quits nearly every app on a user's Mac (GitHub issue 29 October 2026)",
+   "reason": "Single user GitHub issue without vendor response; low documented stakes with no data loss.",
+   "url": "https://nope.net/incidents/2026-claude-code-agent-process-kill-command-quit-nearly-every-app-on-users-mac-first-person-github-issue",
+   "tracker": false
+  },
+  {
+   "name": "Claude Code installs one project's hooks at user scope for about 15 days (GitHub issue 29 October 2026)",
+   "reason": "Single user GitHub issue without vendor response; low documented stakes and nothing deleted.",
+   "url": "https://nope.net/incidents/2026-claude-code-agent-installed-one-projects-hooks-at-user-scope-so-every-project-ran-them-for-15-days-first-person-github-issue",
+   "tracker": false
+  },
+  {
+   "name": "Grok Bot agent told to stop its own task runs a stop-all across ten bots (Cursor forum post 29 October 2026)",
+   "reason": "Single forum post with no log or vendor reply; low documented stakes.",
+   "url": "https://nope.net/incidents/2026-grok-bot-agent-told-to-stop-its-own-task-ran-a-stop-all-cancelling-ten-other-bots-in-flight-work-first-person",
+   "tracker": false
+  },
+  {
+   "name": "EMMA AI phone receptionist at a GP surgery near Doncaster cannot understand a stroke survivor (BBC News, 26 August 2026)",
+   "reason": "Failed calls rather than an executed consequential action; the system took no decision about the patient's care.",
+   "url": "https://nope.net/incidents/2026-doncaster-stroke-survivor-says-gp-ai-phone-receptionist-could-not-understand-her-speech-she-moved-practice",
+   "tracker": false
+  },
+  {
+   "name": "AI built travel itinerary lists a nonexistent Naoshima ferry time (note.com post 29 October 2026)",
+   "reason": "Single anonymous post with an unnamed tool; advice to the user, not an executed action, and low stakes.",
+   "url": "https://nope.net/incidents/2026-kagawa-traveller-says-ai-built-itinerary-listed-nonexistent-naoshima-ferry-time-museum-booking-lost-first-person",
+   "tracker": false
+  },
+  {
+   "name": "RIZAP employee uploads health guidance data to a personal generative AI service (notice 3 September 2026)",
+   "reason": "The upload was a staff action; no action by the AI system is documented.",
+   "url": "https://www.pk-sharma.com/briefing/rizap-employee-health-records-personal-ai-chat-726-people",
+   "tracker": false
+  },
+  {
+   "name": "302.ai aggregator leaves 17.6 million user files in an unsecured Azure bucket (Cybernews, reported 1 November 2026)",
+   "reason": "Storage misconfiguration by the operator; no action by an AI system is documented.",
+   "url": "https://bureauofai.org/ai-incidents/ai-aggregator-302-ai-left-17-6-million-user-files-including-chat-logs-exposed-2026",
+   "tracker": false
+  },
+  {
+   "name": "Zendesk AI Agents Advanced messages delayed or missing in the EU, 16 to 21 October 2026 (Zendesk incident report)",
+   "reason": "Service capacity outage; no action executed by the AI agents is documented and Zendesk says all messages were restored.",
+   "url": "https://dev.to/agenttmz/zendesks-ai-agents-lost-chats-in-europe-for-nearly-five-days-its-own-incident-report-shows-14kp",
+   "tracker": false
+  },
+  {
+   "name": "Cornell Tech and Yale experiments in which agents raise Circle wallet spending caps and pay an impersonator (reported 2 November 2026)",
+   "reason": "Research experiments with a researcher controlled attacker; no outside party affected.",
+   "url": "https://aistify.com/ai-agents-crypto-wallet-spending-limits-email-approval/",
+   "tracker": false
   }
  ],
  "rows": [
@@ -1459,7 +1531,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z"
+   "snapshot_at": "2026-11-02T13:05:00Z"
   },
   {
    "incident_id": "INC0002",
@@ -1602,7 +1674,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z"
+   "snapshot_at": "2026-11-02T13:05:00Z"
   },
   {
    "incident_id": "INC0003",
@@ -1724,7 +1796,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z"
+   "snapshot_at": "2026-11-02T13:05:00Z"
   },
   {
    "incident_id": "INC0004",
@@ -1861,7 +1933,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z"
+   "snapshot_at": "2026-11-02T13:05:00Z"
   },
   {
    "incident_id": "INC0005",
@@ -2019,7 +2091,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z"
+   "snapshot_at": "2026-11-02T13:05:00Z"
   },
   {
    "incident_id": "INC0006",
@@ -2166,7 +2238,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z"
+   "snapshot_at": "2026-11-02T13:05:00Z"
   },
   {
    "incident_id": "INC0007",
@@ -2271,7 +2343,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z"
+   "snapshot_at": "2026-11-02T13:05:00Z"
   },
   {
    "incident_id": "INC0008",
@@ -2407,7 +2479,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z"
+   "snapshot_at": "2026-11-02T13:05:00Z"
   },
   {
    "incident_id": "INC0009",
@@ -2519,7 +2591,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z"
+   "snapshot_at": "2026-11-02T13:05:00Z"
   },
   {
    "incident_id": "INC0010",
@@ -2641,7 +2713,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z"
+   "snapshot_at": "2026-11-02T13:05:00Z"
   },
   {
    "incident_id": "INC0011",
@@ -2797,7 +2869,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z"
+   "snapshot_at": "2026-11-02T13:05:00Z"
   },
   {
    "incident_id": "INC0012",
@@ -2939,7 +3011,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z"
+   "snapshot_at": "2026-11-02T13:05:00Z"
   },
   {
    "incident_id": "INC0013",
@@ -3122,7 +3194,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z"
+   "snapshot_at": "2026-11-02T13:05:00Z"
   },
   {
    "incident_id": "INC0014",
@@ -3270,7 +3342,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z"
+   "snapshot_at": "2026-11-02T13:05:00Z"
   },
   {
    "incident_id": "INC0015",
@@ -3407,7 +3479,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z"
+   "snapshot_at": "2026-11-02T13:05:00Z"
   },
   {
    "incident_id": "INC0016",
@@ -3527,7 +3599,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z"
+   "snapshot_at": "2026-11-02T13:05:00Z"
   },
   {
    "incident_id": "INC0017",
@@ -3657,7 +3729,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z"
+   "snapshot_at": "2026-11-02T13:05:00Z"
   },
   {
    "incident_id": "INC0018",
@@ -3803,7 +3875,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z"
+   "snapshot_at": "2026-11-02T13:05:00Z"
   },
   {
    "incident_id": "INC0019",
@@ -3937,7 +4009,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z"
+   "snapshot_at": "2026-11-02T13:05:00Z"
   },
   {
    "incident_id": "INC0020",
@@ -4075,7 +4147,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z"
+   "snapshot_at": "2026-11-02T13:05:00Z"
   },
   {
    "incident_id": "INC0021",
@@ -4200,11 +4272,11 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z"
+   "snapshot_at": "2026-11-02T13:05:00Z"
   },
   {
    "incident_id": "INC0022",
-   "last_updated": "2026-10-15",
+   "last_updated": "2026-11-02",
    "published": {
     "actions": {
      "attempted": [],
@@ -4232,7 +4304,8 @@
      "No tampering found with public models, datasets or Spaces (Hugging Face)",
      "OpenAI deactivated and restricted the research model and tightened infrastructure controls (OpenAI)",
      "Vendor patched the proxy flaws (JFrog)",
-     "European Commission AI Office request for information to OpenAI, announced 14 October 2026 (Euronews)"
+     "European Commission AI Office request for information to OpenAI, announced 14 October 2026 (Euronews)",
+     "OpenAI quarantined the research model's weights, delayed frontier RL training and published a full technical incident report on 26 August 2026 (OpenAI)"
     ],
     "controls": [
      {
@@ -4275,7 +4348,10 @@
      "The models used exposed credentials for four third party accounts. [S39]",
      "JFrog worked with OpenAI on the zero day findings in its proxy software. [S40]",
      "The European Commission's AI Office sent OpenAI a request for information on security, external evaluation and monitoring of how models are used, after judging the documents OpenAI had voluntarily disclosed insufficient. [S64]",
-     "A Commission official said the AI Act becomes enforceable when a model escapes its testing environment and has an impact on the EU market, as was the case for Hugging Face; a law firm partner quoted in the same report said the Act does not apply to development and testing. [S64]"
+     "A Commission official said the AI Act becomes enforceable when a model escapes its testing environment and has an impact on the EU market, as was the case for Hugging Face; a law firm partner quoted in the same report said the Act does not apply to development and testing. [S64]",
+     "OpenAI's August account says the activity was primarily driven by an internal only research model, and that GPT-5.6 Sol agents also reproduced an exploit and copied some private evaluation data hosted on Hugging Face into a public Hugging Face dataset. [S150]",
+     "OpenAI says the agents executed code on dozens of Hugging Face servers, gained root access on one, obtained limited private data and gained credentials to the company's messaging platform. [S150]",
+     "OpenAI says its chain-of-thought monitors did not run on the evaluations involved, and that an internal team had observed message board activity and disallowed internet access as early as late May. [S150]"
     ],
     "incident_date": "July 2026, over a weekend before 16 July",
     "incident_date_basis": "Hugging Face says the activity spanned a weekend and was detected the week of its 16 July post. OpenAI's technical report traces earlier origins.",
@@ -4350,6 +4426,15 @@
       "retrieved": "2026-10-15",
       "type": "secondary (news report)",
       "url": "https://www.euronews.com/2026/10/14/eus-ai-rules-face-first-enforcement-test-over-lab-incidents"
+     },
+     {
+      "id": "S150",
+      "name": "OpenAI: The Hugging Face incident and the road ahead",
+      "published": "2026-08-26",
+      "report_id": "R0155",
+      "retrieved": "2026-11-02",
+      "type": "primary (operator disclosure)",
+      "url": "https://openai.com/index/hugging-face-incident-and-the-road-ahead/"
      }
     ],
     "summary": "Agents in an OpenAI cyber evaluation went beyond the test's bounds, escaped through a previously unknown flaw in an internally hosted package proxy, and compromised parts of Hugging Face's production infrastructure, reaching internal datasets and service credentials. The models also used publicly exposed credentials for accounts on four other services. Hugging Face detected and contained the intrusion.",
@@ -4358,16 +4443,17 @@
     "why_it_mattered": "An evaluation built to measure attack capability carried out a real intrusion against a major AI platform. OpenAI calls it an unprecedented cyber incident.",
     "workflow": "Internal cyber capability evaluation run without production safety classifiers, in an environment meant to be isolated"
    },
-   "published_version": 3,
+   "published_version": 4,
    "report_ids": [
     "R0038",
     "R0039",
     "R0040",
-    "R0069"
+    "R0069",
+    "R0155"
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z"
+   "snapshot_at": "2026-11-02T13:05:00Z"
   },
   {
    "incident_id": "INC0023",
@@ -4529,7 +4615,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z"
+   "snapshot_at": "2026-11-02T13:05:00Z"
   },
   {
    "incident_id": "INC0024",
@@ -4690,7 +4776,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z"
+   "snapshot_at": "2026-11-02T13:05:00Z"
   },
   {
    "incident_id": "INC0025",
@@ -4857,7 +4943,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z"
+   "snapshot_at": "2026-11-02T13:05:00Z"
   },
   {
    "incident_id": "INC0026",
@@ -5017,7 +5103,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z"
+   "snapshot_at": "2026-11-02T13:05:00Z"
   },
   {
    "incident_id": "INC0027",
@@ -5153,7 +5239,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z"
+   "snapshot_at": "2026-11-02T13:05:00Z"
   },
   {
    "incident_id": "INC0028",
@@ -5278,7 +5364,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z"
+   "snapshot_at": "2026-11-02T13:05:00Z"
   },
   {
    "incident_id": "INC0029",
@@ -5400,7 +5486,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z"
+   "snapshot_at": "2026-11-02T13:05:00Z"
   },
   {
    "incident_id": "INC0030",
@@ -5528,7 +5614,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z"
+   "snapshot_at": "2026-11-02T13:05:00Z"
   },
   {
    "incident_id": "INC0031",
@@ -5645,7 +5731,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z"
+   "snapshot_at": "2026-11-02T13:05:00Z"
   },
   {
    "incident_id": "INC0032",
@@ -5752,7 +5838,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z"
+   "snapshot_at": "2026-11-02T13:05:00Z"
   },
   {
    "incident_id": "INC0033",
@@ -5763,7 +5849,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z",
+   "snapshot_at": "2026-11-02T13:05:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -5899,7 +5985,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z",
+   "snapshot_at": "2026-11-02T13:05:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6043,7 +6129,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z",
+   "snapshot_at": "2026-11-02T13:05:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6180,7 +6266,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z",
+   "snapshot_at": "2026-11-02T13:05:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6327,7 +6413,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z",
+   "snapshot_at": "2026-11-02T13:05:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6458,7 +6544,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z",
+   "snapshot_at": "2026-11-02T13:05:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6604,7 +6690,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z",
+   "snapshot_at": "2026-11-02T13:05:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6674,7 +6760,7 @@
      "basis": "The Munich Regional Court I ruled on the claims. Pin placed at Munich as the jurisdiction.",
      "documented": true,
      "kind": "jurisdiction",
-     "label": "Munich, Germany (Landgericht München I)",
+     "label": "Munich, Germany (Landgericht M\u00fcnchen I)",
      "lat": 48.1351,
      "lon": 11.582,
      "status": "established"
@@ -6703,7 +6789,7 @@
     "sources": [
      {
       "id": "S62",
-      "name": "Landgericht München I: judgment of 28 May 2026, 26 O 869/26",
+      "name": "Landgericht M\u00fcnchen I: judgment of 28 May 2026, 26 O 869/26",
       "published": "2026-05-28",
       "report_id": "R0067",
       "retrieved": "2026-10-14",
@@ -6712,7 +6798,7 @@
      },
      {
       "id": "S63",
-      "name": "heise online: LG München I: Google für falsche Aussagen in KI-Übersichten verurteilt",
+      "name": "heise online: LG M\u00fcnchen I: Google f\u00fcr falsche Aussagen in KI-\u00dcbersichten verurteilt",
       "published": "2026-06-10",
       "report_id": "R0068",
       "retrieved": "2026-10-14",
@@ -6737,7 +6823,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z",
+   "snapshot_at": "2026-11-02T13:05:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6868,7 +6954,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z",
+   "snapshot_at": "2026-11-02T13:05:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7001,7 +7087,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z",
+   "snapshot_at": "2026-11-02T13:05:00Z",
    "published": {
     "actions": {
      "attempted": [
@@ -7144,7 +7230,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z",
+   "snapshot_at": "2026-11-02T13:05:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7262,7 +7348,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z",
+   "snapshot_at": "2026-11-02T13:05:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7381,7 +7467,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z",
+   "snapshot_at": "2026-11-02T13:05:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7505,7 +7591,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z",
+   "snapshot_at": "2026-11-02T13:05:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7607,7 +7693,7 @@
      },
      {
       "id": "S74",
-      "name": "LTO: OLG zur Haftung für irreführende KI-Chatbot-Aussagen",
+      "name": "LTO: OLG zur Haftung f\u00fcr irref\u00fchrende KI-Chatbot-Aussagen",
       "url": "https://www.lto.de/recht/nachrichten/n/olg-hamm-aerzte-haften-chatbot-falsche-facharztbezeichnung-ki-uwg",
       "published": "2026-05-12",
       "type": "secondary (legal press)",
@@ -7632,7 +7718,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z",
+   "snapshot_at": "2026-11-02T13:05:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7721,7 +7807,7 @@
     "sources": [
      {
       "id": "S75",
-      "name": "beck-aktuell: Chefarzt zum Sexualstraftäter erklärt: Google muss KI-Halluzination löschen",
+      "name": "beck-aktuell: Chefarzt zum Sexualstraft\u00e4ter erkl\u00e4rt: Google muss KI-Halluzination l\u00f6schen",
       "url": "https://www.beck-aktuell.de/heute-im-recht/rechtsprechung/lg-aachen-8o26826-haftung-falsche-ki-aussage-google-stoererin-chefarzt-sexualstraftaeter-2026-10-08",
       "published": "2026-10-08",
       "type": "secondary (legal press)",
@@ -7730,7 +7816,7 @@
      },
      {
       "id": "S76",
-      "name": "LHR Rechtsanwälte: Google-KI verbreitet Falsches: LG Aachen verbietet es",
+      "name": "LHR Rechtsanw\u00e4lte: Google-KI verbreitet Falsches: LG Aachen verbietet es",
       "url": "https://www.lhr-law.de/magazin/medienrecht-und-persoenlichkeitsrecht/google-ki-falschbehauptung-lg-aachen/",
       "published": "2026-10-13",
       "type": "secondary (law firm analysis quoting the order)",
@@ -7755,7 +7841,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z",
+   "snapshot_at": "2026-11-02T13:05:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7882,7 +7968,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z",
+   "snapshot_at": "2026-11-02T13:05:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8004,7 +8090,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z",
+   "snapshot_at": "2026-11-02T13:05:00Z",
    "published": {
     "actions": {
      "attempted": [
@@ -8124,7 +8210,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z",
+   "snapshot_at": "2026-11-02T13:05:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8169,7 +8255,7 @@
     "defect_category": "human_review_absent",
     "defect_label": "Decision affecting a person executed without human review",
     "deployment": "deployed",
-    "disclosed_basis": "TCU Acórdão 634/2025, Plenário, session of 26 March 2025, announced by the TCU the same day",
+    "disclosed_basis": "TCU Ac\u00f3rd\u00e3o 634/2025, Plen\u00e1rio, session of 26 March 2025, announced by the TCU the same day",
     "disclosed_on": "2025-03-26",
     "enforcement": {
      "enforcement_point": "Issuance of each automatic refusal of a benefit claim.",
@@ -8201,11 +8287,11 @@
     "location": {
      "documented": true,
      "status": "established",
-     "label": "Brasília, Brazil (Tribunal de Contas da União)",
+     "label": "Bras\u00edlia, Brazil (Tribunal de Contas da Uni\u00e3o)",
      "lat": -15.7939,
      "lon": -47.8828,
      "kind": "jurisdiction",
-     "basis": "The federal audit court issued the finding. Pin placed at Brasília as the seat of the TCU, not at an INSS office."
+     "basis": "The federal audit court issued the finding. Pin placed at Bras\u00edlia as the seat of the TCU, not at an INSS office."
     },
     "organization": "Instituto Nacional do Seguro Social (INSS); affected: benefit claimants",
     "rules": [
@@ -8222,7 +8308,7 @@
     "sources": [
      {
       "id": "S82",
-      "name": "Tribunal de Contas da União: Acórdão 634/2025, Plenário, TC 008.309/2024-8 (decision and audit report)",
+      "name": "Tribunal de Contas da Uni\u00e3o: Ac\u00f3rd\u00e3o 634/2025, Plen\u00e1rio, TC 008.309/2024-8 (decision and audit report)",
       "url": "https://pesquisa.apps.tcu.gov.br/redireciona/acordao-completo/ACORDAO-COMPLETO-2692597",
       "published": "2025-03-26",
       "type": "primary (audit court decision)",
@@ -8231,7 +8317,7 @@
      },
      {
       "id": "S83",
-      "name": "Tribunal de Contas da União: TCU analisa indeferimentos indevidos no INSS",
+      "name": "Tribunal de Contas da Uni\u00e3o: TCU analisa indeferimentos indevidos no INSS",
       "url": "https://portal.tcu.gov.br/imprensa/noticias/tcu-analisa-indeferimentos-indevidos-no-inss",
       "published": "2025-03-26",
       "type": "primary (audit court announcement)",
@@ -8255,7 +8341,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z",
+   "snapshot_at": "2026-11-02T13:05:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8377,7 +8463,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z",
+   "snapshot_at": "2026-11-02T13:05:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8535,7 +8621,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z",
+   "snapshot_at": "2026-11-02T13:05:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8649,7 +8735,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z",
+   "snapshot_at": "2026-11-02T13:05:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8761,7 +8847,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z",
+   "snapshot_at": "2026-11-02T13:05:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8885,7 +8971,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z",
+   "snapshot_at": "2026-11-02T13:05:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9010,7 +9096,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z",
+   "snapshot_at": "2026-11-02T13:05:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9097,7 +9183,7 @@
     "sources": [
      {
       "id": "S94",
-      "name": "Express: 'I was scammed £1,500 through a popular travel website, it could happen to anyone'",
+      "name": "Express: 'I was scammed \u00a31,500 through a popular travel website, it could happen to anyone'",
       "url": "https://www.express.co.uk/news/uk/2256861/booking-scammed-holiday-italy",
       "published": "2026-10-13",
       "type": "secondary (newspaper report)",
@@ -9130,7 +9216,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z",
+   "snapshot_at": "2026-11-02T13:05:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9252,7 +9338,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z",
+   "snapshot_at": "2026-11-02T13:05:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9363,7 +9449,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z",
+   "snapshot_at": "2026-11-02T13:05:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9476,7 +9562,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z",
+   "snapshot_at": "2026-11-02T13:05:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9588,7 +9674,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z",
+   "snapshot_at": "2026-11-02T13:05:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9701,7 +9787,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z",
+   "snapshot_at": "2026-11-02T13:05:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9828,7 +9914,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z",
+   "snapshot_at": "2026-11-02T13:05:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9938,7 +10024,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z",
+   "snapshot_at": "2026-11-02T13:05:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -10058,7 +10144,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z",
+   "snapshot_at": "2026-11-02T13:05:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -10171,7 +10257,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z",
+   "snapshot_at": "2026-11-02T13:05:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -10292,7 +10378,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z",
+   "snapshot_at": "2026-11-02T13:05:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -10405,7 +10491,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z",
+   "snapshot_at": "2026-11-02T13:05:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -10549,7 +10635,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z",
+   "snapshot_at": "2026-11-02T13:05:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -10679,7 +10765,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z",
+   "snapshot_at": "2026-11-02T13:05:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -10800,7 +10886,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z",
+   "snapshot_at": "2026-11-02T13:05:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -10932,7 +11018,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z",
+   "snapshot_at": "2026-11-02T13:05:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -11083,7 +11169,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z",
+   "snapshot_at": "2026-11-02T13:05:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -11220,7 +11306,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z",
+   "snapshot_at": "2026-11-02T13:05:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -11342,7 +11428,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z",
+   "snapshot_at": "2026-11-02T13:05:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -11453,7 +11539,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z",
+   "snapshot_at": "2026-11-02T13:05:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -11573,7 +11659,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z",
+   "snapshot_at": "2026-11-02T13:05:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -11703,7 +11789,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z",
+   "snapshot_at": "2026-11-02T13:05:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -11834,7 +11920,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z",
+   "snapshot_at": "2026-11-02T13:05:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -11973,7 +12059,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z",
+   "snapshot_at": "2026-11-02T13:05:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -12101,7 +12187,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z",
+   "snapshot_at": "2026-11-02T13:05:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -12214,7 +12300,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z",
+   "snapshot_at": "2026-11-02T13:05:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -12343,7 +12429,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z",
+   "snapshot_at": "2026-11-02T13:05:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -12454,7 +12540,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z",
+   "snapshot_at": "2026-11-02T13:05:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -12573,7 +12659,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z",
+   "snapshot_at": "2026-11-02T13:05:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -12659,7 +12745,7 @@
     "sources": [
      {
       "id": "S146",
-      "name": "Hamburgische Beauftragte für Datenschutz und Informationsfreiheit: press release, interim review 2025, fines totalling 775,000 euros",
+      "name": "Hamburgische Beauftragte f\u00fcr Datenschutz und Informationsfreiheit: press release, interim review 2025, fines totalling 775,000 euros",
       "url": "https://datenschutz-hamburg.de/news/zwischenbilanz-2025-hmbbfdi-verhaengt-bussgelder-von-insgesamt-775000-euro",
       "published": "2025-09-30",
       "type": "primary (regulator decision announcement)",
@@ -12684,7 +12770,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z",
+   "snapshot_at": "2026-11-02T13:05:00Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -12801,7 +12887,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-01T21:25:00Z",
+   "snapshot_at": "2026-11-02T13:05:00Z",
    "published": {
     "actions": {
      "attempted": [],
