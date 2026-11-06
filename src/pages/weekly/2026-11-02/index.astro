@@ -1,0 +1,110 @@
+---
+import Base from '../../../layouts/Base.astro';
+---
+
+<Base
+  title="Decision Governance Weekly | 26 Oct to 1 Nov 2026 | Issue 06"
+  description="Decision Governance Weekly Issue 06: action-bound payment approval, exact-argument tool gates, and copied prompt injections. Reporting period Mon 26 Oct to Sun 1 Nov 2026. Published by Jochanni Labs."
+  type="article"
+  publishedDate="2026-11-02"
+>
+
+  <div class="weekly-header">
+    <div class="container">
+      <div class="weekly-brandline">
+        <img class="weekly-logo" src="/weekly/jochanni-labs-logo.jpg" alt="Jochanni Labs logo, a flame inside a shield" width="64" height="64" />
+        <p class="weekly-kicker">Jochanni Labs / Decision Governance / Issue 06</p>
+      </div>
+      <h1>Decision Governance Weekly</h1>
+      <p class="weekly-purpose">What happened. Where enforcement failed. How DAL-X can enforce authority before execution.</p>
+      <div class="weekly-meta">
+        <div class="weekly-meta-item"><span class="weekly-meta-label">Reporting period</span><span class="weekly-meta-value">Mon 26 Oct to Sun 1 Nov 2026</span></div>
+        <div class="weekly-meta-item"><span class="weekly-meta-label">Publication date</span><span class="weekly-meta-value">2 November 2026</span></div>
+        <div class="weekly-meta-item"><span class="weekly-meta-label">Publisher</span><span class="weekly-meta-value">Published by Jochanni Labs</span></div>
+        <div class="weekly-meta-item"><span class="weekly-meta-label">Founder and publisher</span><span class="weekly-meta-value">Kevin Moore</span></div>
+      </div>
+      <span class="weekly-doctrine-tag">No Authority, No Execution</span>
+    </div>
+  </div>
+
+  <main class="weekly-body">
+
+<section class="weekly-section weekly-section--lead">
+<div class="container">
+<div class="weekly-secnum">Opening finding</div>
+<h2>Cerbos describes human approval bound to one payment amount and destination</h2>
+<p class="weekly-lead-p">Cerbos's 29 October explanation of its iProov integration says high-risk actions are held for a named approver, with a signed, single-use credential tied to the action. Changing the payment amount or destination blocks the action, according to Cerbos.<sup><a aria-label="Source 1" href="#s1">1</a></sup></p>
+<p>This specifies more than human participation: approval must match what executes. It is vendor-described behavior, not an independently verified enterprise deployment; the underlying service launched on 22 October.</p>
+<div class="weekly-figure"><div class="weekly-figcaption-label">Explanatory diagram / Vendor-described control</div><div class="weekly-flow weekly-flow--3"><div class="weekly-flow-step"><span class="weekly-flow-num">01 / ENTERPRISE RULE</span><b>Hold the payment</b><span>Policy requires a named person's approval.</span></div><div class="weekly-flow-step"><span class="weekly-flow-num">02 / ACTION-BOUND APPROVAL</span><b>Amount + destination</b><span>Human presence check. Signed credential. One use.</span></div><div class="weekly-flow-step weekly-flow-step--outcome"><span class="weekly-flow-num">03 / MISMATCH</span><b>Changed payment blocked</b><span>A changed amount or destination no longer matches.</span></div></div><div class="weekly-limit">Not a customer system or a reproduced test. The final payment processor's rejection path remains unverified.</div><p class="weekly-figcaption"><span class="weekly-figcaption-label">Source and credit</span>Jochanni Labs explanatory visual, based on <a href="https://www.cerbos.dev/blog/human-in-the-loop-approval-for-ai-agents-cerbos-iproov" rel="noopener noreferrer" target="_blank">Cerbos, 29 October 2026</a>. It depicts the published mechanism, not production evidence.</p></div>
+</div>
+</section>
+<section class="weekly-section">
+<div class="container">
+<div class="weekly-secnum">01 / Market Response</div>
+<h2>Control descriptions are not deployment evidence</h2>
+<div class="weekly-table-wrap"><table class="weekly-table"><thead><tr><th>Organization</th><th>Reported response</th><th>Evidence level</th><th>Unverified</th></tr></thead><tbody><tr><td>Cerbos / iProov<sup><a aria-label="Source 1" href="#s1">1</a></sup></td><td>Hold high-risk actions; bind one approval to one action.</td><td>Partner explanation, 29 Oct</td><td>Customer deployment; final executor checks.</td></tr><tr><td>NodeFlare<sup><a aria-label="Source 2" href="#s2">2</a></sup></td><td>Publish a server-side confirmation gate with negative tests.</td><td>Code and author-reported tests, 28 Oct</td><td>Human presence; production deletion.</td></tr><tr><td>OpenRouter<sup><a aria-label="Source 3" href="#s3">3</a></sup></td><td>Remove disallowed email tool calls before application execution.</td><td>Vendor benchmark, 29 Oct</td><td>Deterministic authority; mail-system rejection.</td></tr><tr><td>NIST<sup><a aria-label="Source 5" href="#s5">5</a></sup></td><td>Propose per-call verification and risk-triggered human review.</td><td>Design-tenet blog, 27 Oct</td><td>Implementation results; not a binding standard.</td></tr></tbody></table></div>
+<p>These sources document market response, not enterprise adoption counts. NIST separates policy from agent reasoning and favors deterministic access decisions.</p>
+</div>
+</section>
+<section class="weekly-section">
+<div class="container">
+<div class="weekly-secnum">02 / Incidents and Enforcement Gaps</div>
+<h2>New test disclosures, not confirmed production incidents</h2>
+<p>In this reviewed case set: two demonstrated vulnerabilities and one blocked-attempt benchmark. No confirmed unauthorized production execution or qualifying incident update was established. These are source-set counts, not an incident rate.</p>
+<p><strong>Demonstrated vulnerability, Datadog email test:</strong> an agent copied injected instructions into an HTTP reply to a test collector. Blocking was disabled; no real inbox received it.<sup><a aria-label="Source 4" href="#s4">4</a></sup></p>
+<p><strong>Demonstrated vulnerability, Datadog CSV test:</strong> an agent copied a fake warning into a skill file and issued a customer-file deletion command. The shell was simulated, so no host files changed. AI Guard marked the skill write unsafe but the deletion command safe.<sup><a aria-label="Source 4" href="#s4">4</a></sup></p>
+<p><strong>Blocked attempt, OpenRouter benchmark:</strong> without Armor, the reported configurations produced 73 unauthorized email tool calls; the two Armor configurations produced zero across 1,440 attack trials. These are laboratory tool-call outcomes, not evidence of delivered mail.<sup><a aria-label="Source 3" href="#s3">3</a></sup></p>
+</div>
+</section>
+<section class="weekly-section">
+<div class="container">
+<div class="weekly-secnum">03 / Domains Requiring Enforcement</div>
+<h2>Check the action where it takes effect</h2>
+<div class="weekly-table-wrap"><table class="weekly-table"><thead><tr><th>Domain / source</th><th>Exact action</th><th>Authority check belongs</th><th>Consequence if absent</th></tr></thead><tbody><tr><td>Payments<sup><a aria-label="Source 1" href="#s1">1</a></sup></td><td>Send a payment</td><td>Payment execution boundary, binding amount and destination</td><td>Unapproved transfer.</td></tr><tr><td>Messaging<sup><a aria-label="Source 3" href="#s3">3</a></sup><sup><a aria-label="Source 4" href="#s4">4</a></sup></td><td>Send email or an HTTP reply</td><td>Send handler, binding recipient and body</td><td>Unauthorized disclosure or copied injection.</td></tr><tr><td>Agent workspace<sup><a aria-label="Source 2" href="#s2">2</a></sup><sup><a aria-label="Source 4" href="#s4">4</a></sup></td><td>Delete a project/file; write a skill</td><td>Deletion and file-write handlers, binding target and content</td><td>Data loss or persistent injected instructions.</td></tr></tbody></table></div>
+</div>
+</section>
+<section class="weekly-section">
+<div class="container">
+<div class="weekly-secnum">04 / Enforcement Evidence and DAL Impact</div>
+<h2>Exact arguments matter. Reviewer authority still needs proof.</h2>
+<p>NodeFlare's 28 October sample checks verified user identity, tool, exact-argument hash, expiry and a single-use nonce. Its author reports rejection of changed arguments, cross-user replay and reused approval. The sample returns deletion text rather than calling a deletion API; an auto-accepting client still passes. It does not prove a human approved or held the required organizational authority.<sup><a aria-label="Source 2" href="#s2">2</a></sup></p>
+<p>OpenRouter uses a decision model, not deterministic authorization. Its Chat Completions blocked-call markers exposed the synthetic secret in 19 of 73 blocked calls, a separate output-handling defect.<sup><a aria-label="Source 3" href="#s3">3</a></sup></p>
+<p>Decision Governance is the category. The Decision Authority Layer is the runtime enforcement layer; DAL-X is the application Jochanni Labs is building. System access does not establish authority to execute a specific action. Enterprise trigger logic identifies actions requiring an authority decision.</p>
+<p><strong>Conditional assessment:</strong> DAL-style enforcement could stop an injected customer-file deletion only if its trigger covers that deletion, the reviewer has valid authority, approval binds the exact payload, and the downstream handler rejects missing, changed, expired or reused authority across every relevant execution path, including direct shell access. It would not establish that an approved deletion was correct.<sup><a aria-label="Source 6" href="#s6">6</a></sup></p>
+<p class="weekly-status">DAL-X status: sandbox work, not a customer deployment. One public site reports end-to-end real-system sandbox execution; the other still describes simulation with production controls incomplete. No enterprise pilot or production enforcement is established by these pages.<sup><a aria-label="Source 7" href="#s7">7</a></sup><sup><a aria-label="Source 8" href="#s8">8</a></sup></p>
+</div>
+</section>
+<section class="weekly-section">
+<div class="container">
+<div class="weekly-secnum">05 / Enterprise Check and Next Week's Watch</div>
+<h2>Test changed actions and bypass paths</h2>
+<div class="weekly-check"><p><strong>Payment:</strong> change the destination after approval and replay the credential. Effective control requires rejection at the executor, no transfer, and matching authority and outcome records.</p>
+<p><strong>File deletion:</strong> attempt the same deletion through the tool and direct shell. Effective control requires both paths to reject absent authority and leave the file unchanged.</p></div>
+<p>Watch for Cerbos executor-level tests and customer evidence. Track NodeFlare's human-presence limitation and OpenRouter's blocked-output handling. These remain unresolved, not forecast outcomes.</p>
+<div class="weekly-question">Can your downstream system reject the exact action your reviewer did not authorize?</div>
+<nav class="weekly-explore" aria-label="Further reading"><a class="weekly-explore-link" href="https://www.decisionauthoritylayer.com/architecture" rel="noopener noreferrer" target="_blank">Decision Authority Layer architecture<span>Where downstream rejection belongs</span></a><a class="weekly-explore-link" href="/briefings/Strategic_Intelligence_Briefing_05/">Strategic Intelligence Series<span>Output, reliance and the execution boundary</span></a></nav>
+</div>
+</section>
+
+<div class="weekly-sources">
+<div class="container">
+<h2>Sources and evidence scope</h2>
+<ol><li id="s1"><a href="https://www.cerbos.dev/blog/human-in-the-loop-approval-for-ai-agents-cerbos-iproov" rel="noopener noreferrer" target="_blank">Cerbos: Human-in-the-loop approval for AI agents, 29 October 2026. Partner explanation; underlying launch 22 October.</a></li><li id="s2"><a href="https://nodeflare.tech/blog/mcp-tool-approval-human-in-the-loop" rel="noopener noreferrer" target="_blank">NodeFlare: MCP Tool Approval, Done Right, published and tested 28 October 2026. Sample gate, not production deletion.</a></li><li id="s3"><a href="https://openrouter.ai/blog/tutorials/prevent-prompt-injection/" rel="noopener noreferrer" target="_blank">OpenRouter: How to Prevent Prompt Injection: 13 Attacks, Tested, 29 October 2026. Vendor laboratory benchmark.</a></li><li id="s4"><a href="https://www.datadoghq.com/blog/detect-when-your-ai-agent-copies-a-self-replicating-prompt-injection/" rel="noopener noreferrer" target="_blank">Datadog: Detect when your AI agent copies a self-replicating prompt injection, 29 October 2026. Two simulated attacks, blocking disabled.</a></li><li id="s5"><a href="https://www.nist.gov/blogs/cybersecurity-insights/design-tenets-agent-identity-management-systems" rel="noopener noreferrer" target="_blank">NIST: Design Tenets for Agent Identity Management Systems, 27 October 2026. Initial design vision, not a binding standard.</a></li><li id="s6"><a href="https://www.decisionauthoritylayer.com/architecture" rel="noopener noreferrer" target="_blank">Jochanni Labs: DAL-X architecture. Undated, checked 2 November 2026.</a></li><li id="s7"><a href="https://www.decisionauthoritylayer.com/product" rel="noopener noreferrer" target="_blank">Jochanni Labs: DAL-X product. Undated, checked 2 November 2026.</a></li><li id="s8"><a href="/dal-x/">Jochanni Labs: DAL-X application page. Undated, checked 2 November 2026.</a></li><li id="s9"><a href="/briefings/Strategic_Intelligence_Briefing_05/">Kevin Moore: Strategic Intelligence Briefing 05. Undated, checked 2 November 2026.</a></li></ol>
+<p class="weekly-sources-note">Public primary sources only. No private enterprise telemetry. Experiment dates are unspecified unless stated above. An absence of public evidence does not establish an absence of enforcement.</p>
+</div>
+</div>
+
+    <div class="weekly-pilot-cta">
+      <div class="container">
+        <p class="weekly-pilot-cta-label">Integration Action</p>
+        <h2>Discuss a Paid Enterprise Pilot</h2>
+        <p>The incidents covered this week share one structural gap: no authority check at the receiving system. DAL-X enforces that check in a simulated enterprise environment. A paid enterprise pilot would test it against one agent, one consequential action, and one downstream system.</p>
+        <div class="weekly-pilot-cta-row">
+          <a href="/contact" class="btn-primary">Contact to discuss the pilot</a>
+          <a href="https://simulation.dal-x.com/" class="btn-outline" target="_blank" rel="noopener noreferrer">Inspect enforcement: simulation.dal-x.com</a>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</Base>

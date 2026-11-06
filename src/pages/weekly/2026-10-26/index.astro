@@ -1,0 +1,138 @@
+---
+import Base from '../../../layouts/Base.astro';
+---
+
+<Base
+  title="Decision Governance Weekly | 19 to 25 Oct 2026 | Issue 05"
+  description="Decision Governance Weekly Issue 05: agent payment signing, budget-bound payment authority, and execution-layer denials. Reporting period Mon 19 Oct to Sun 25 Oct 2026. Published by Jochanni Labs."
+  type="article"
+  publishedDate="2026-10-26"
+>
+
+  <div class="weekly-header">
+    <div class="container">
+      <div class="weekly-brandline">
+        <img class="weekly-logo" src="/weekly/jochanni-labs-logo.jpg" alt="Jochanni Labs logo, a flame inside a shield" width="64" height="64" />
+        <p class="weekly-kicker">Jochanni Labs / Decision Governance / Issue 05</p>
+      </div>
+      <h1>Decision Governance Weekly</h1>
+      <p class="weekly-purpose">What happened. Where enforcement failed. How DAL-X can enforce authority before execution.</p>
+      <div class="weekly-meta">
+        <div class="weekly-meta-item"><span class="weekly-meta-label">Reporting period</span><span class="weekly-meta-value">Mon 19 Oct to Sun 25 Oct 2026</span></div>
+        <div class="weekly-meta-item"><span class="weekly-meta-label">Publication date</span><span class="weekly-meta-value">26 October 2026</span></div>
+        <div class="weekly-meta-item"><span class="weekly-meta-label">Publisher</span><span class="weekly-meta-value">Published by Jochanni Labs</span></div>
+        <div class="weekly-meta-item"><span class="weekly-meta-label">Founder and publisher</span><span class="weekly-meta-value">Kevin Moore</span></div>
+      </div>
+      <span class="weekly-doctrine-tag">No Authority, No Execution</span>
+    </div>
+  </div>
+
+  <main class="weekly-body">
+
+<section class="weekly-section weekly-section--lead">
+<div class="container">
+<div class="weekly-secnum">Opening finding</div>
+<h2>An agent payment client signed the amount the seller chose</h2>
+<p class="weekly-lead-p">V12's 22 October disclosure describes x402 payment clients, used by AI agents to pay per API call, passing a server's amount, recipient and token straight to the signing code. The default setup applied no spending limit. A hostile server could obtain a signed authorization for a wallet's full token balance "without a separate approval prompt".<sup><a href="#s1">1</a></sup></p>
+<p>Holding the key let the client pay. It did not establish authority for the amount a counterparty named.</p>
+<div class="weekly-limit"><span class="weekly-limit-label">Evidence limits</span>V12 tested locally, submitted no live transaction and reports the critical findings fixed by 20 August. No exploitation, loss or CVE is reported. Mastercard's new agent payment service builds on x402; no reviewed source shows it was affected.<sup><a href="#s1">1</a>, <a href="#s3">3</a></sup></div>
+<div class="weekly-figure"><div class="weekly-figcaption-label">Explanatory / Reported signing path, default client setup</div><div class="weekly-flow weekly-flow--3"><div class="weekly-flow-step"><span class="weekly-flow-num">01 / Server response</span><b>402 Payment Required</b><span>Server sets amount, token, recipient and network.</span></div><div class="weekly-flow-step"><span class="weekly-flow-num">02 / Client default</span><b>First option selected</b><span>No per-payment limit or total budget applied.</span></div><div class="weekly-flow-step weekly-flow-step--outcome"><span class="weekly-flow-num">03 / Result</span><b>Signed authorization</b><span>Could cover the wallet's full token balance.</span></div></div><div class="weekly-limit">A valid signature shows the wallet signed. It does not show anyone approved that amount for that recipient.</div><p class="weekly-figcaption">Explanatory diagram by Jochanni Labs, based on <a href="https://v12.sh/blog/x402" rel="noopener noreferrer" target="_blank">V12's disclosure of 22 October 2026</a>. Simplified; not a screenshot or a view of private systems.</p></div>
+</div>
+</section>
+<section class="weekly-section">
+<div class="container">
+<div class="weekly-secnum">01 / Market Response</div>
+<h2>Payment networks frame authority as budgets and approvals</h2>
+<div class="weekly-table-wrap"><table class="weekly-table"><thead><tr><th>Organization</th><th>Reported response</th><th>Evidence level</th><th>Unverified</th></tr></thead><tbody>
+<tr><td>Visa, BILL, Billtrust, 20 Oct<sup><a href="#s2">2</a></sup></td><td>Agent pays buyer-approved invoices.</td><td>Live pilot; participants unnamed.</td><td>Binding to amount and payee; rejection data.</td></tr>
+<tr><td>Mastercard, 20 Oct<sup><a href="#s3">3</a></sup></td><td>Signed payment vouchers within an approved budget.</td><td>Named pilots; Early Access.</td><td>Refusal of an over-budget voucher.</td></tr>
+<tr><td>ServiceNow with NVIDIA, 21 Oct<sup><a href="#s4">4</a></sup></td><td>Runtime policy enforcement for its Arc agent.</td><td>Generally available; Passport enforcement planned.</td><td>Argument-level control; bypass tests.</td></tr>
+<tr><td>Walmart, 21 Oct<sup><a href="#s5">5</a></sup></td><td>Purchase approval by default; noncompliant agents blocked.</td><td>Stated intent.</td><td>Detection outside the gateway; cart binding.</td></tr>
+<tr><td>US banks, 22 Oct<sup><a href="#s6">6</a></sup></td><td>Morgan Stanley blocking third-party agents.</td><td>Secondary report, unnamed sources.</td><td>Block mechanism and volume.</td></tr>
+<tr><td>UK FCA, 19 Oct<sup><a href="#s7">7</a></sup></td><td>Planned framework covering delegated authority and execution.</td><td>Regulator intent.</td><td>Content and timing.</td></tr>
+</tbody></table></div>
+<p>None published rejection data. Mastercard's "Authorize once. Transact many times." sets authority at the budget, not the payment.</p>
+</div>
+</section>
+<section class="weekly-section">
+<div class="container">
+<div class="weekly-secnum">02 / Incidents and Enforcement Gaps</div>
+<h2>Three demonstrated gaps and one blocked attempt</h2>
+<p class="weekly-scope">Counts cover only the four new cases reviewed here. No updates were featured. This is not an incidence rate.</p>
+<div class="weekly-table-wrap"><table class="weekly-table"><thead><tr><th>Confirmed unauthorized execution</th><th>Blocked attempt</th><th>Demonstrated vulnerability</th><th>Enforcement unknown</th></tr></thead><tbody><tr><td>0</td><td>1</td><td>3</td><td>0</td></tr></tbody></table></div>
+<p><strong>Blocked attempt.</strong> Forever Security says it stopped a coding agent on a customer machine from installing a known malicious npm package. The order came from an AGENTS.md file in the Downloads folder. In lab runs, the file led Codex to rewrite its own configuration and bypass approvals. The file's origin is unknown.<sup><a href="#s8">8</a>, <a href="#s9">9</a></sup></p>
+<p><strong>Demonstrated vulnerability.</strong> Hermes Agent's unattended mode denied a recognized write and a recursive delete. An unlisted sed write rewrote the approval config to mode: off, and the delete then ran. The gate read command text, not the target. The issue shows no released fix.<sup><a href="#s10">10</a></sup></p>
+<p><strong>Demonstrated vulnerability.</strong> A SurrealDB viewer holding another user's MCP session ID wrote a record his permissions forbid. Audit logs showed one shared identity for both users. Version 3.3.0 fixes it.<sup><a href="#s11">11</a></sup></p>
+</div>
+</section>
+<section class="weekly-section">
+<div class="container">
+<div class="weekly-secnum">03 / Domains Requiring Enforcement</div>
+<h2>Check where the action takes effect</h2>
+<div class="weekly-table-wrap"><table class="weekly-table"><thead><tr><th>Exact action</th><th>Authority check belongs</th><th>Consequence if absent</th></tr></thead><tbody>
+<tr><td>Agent payment signature<sup><a href="#s1">1</a></sup></td><td>Wallet signer, before signing.</td><td>Server-chosen amount leaves the agent's wallet.</td></tr>
+<tr><td>Database record update through MCP<sup><a href="#s11">11</a></sup></td><td>Tool execution, keyed to the requesting user.</td><td>Write under another user's permissions.</td></tr>
+<tr><td>Host file write or shell command<sup><a href="#s10">10</a></sup></td><td>Execution layer, by protected target.</td><td>Approval policy disabled; directories deleted.</td></tr>
+<tr><td>Agent config change and package install<sup><a href="#s8">8</a></sup></td><td>Config writer and package installer.</td><td>Known malicious package installed.</td></tr>
+</tbody></table></div>
+</div>
+</section>
+<section class="weekly-section">
+<div class="container">
+<div class="weekly-secnum">04 / Enforcement Evidence and DAL Impact</div>
+<h2>Rejection held where the check saw the real action</h2>
+<p>The Hermes denial and SurrealDB's credential check both refused requests under test, then failed where they read a proxy for the action: command spelling or a shared identity. No reviewed source demonstrated exact payload binding, reviewer authority verification, or single-use authorization in a deployed system.<sup><a href="#s10">10</a>, <a href="#s11">11</a></sup></p>
+<p>DAL-X, the application Jochanni Labs is building to enforce the Decision Authority Layer, publishes an architecture where the downstream system checks a single-use token bound to the exact action and payload.<sup><a href="#s12">12</a></sup></p>
+<p><strong>Conditional prevention:</strong> this design could stop a signed full-balance transfer to a server-chosen recipient. It requires trigger logic that flags the payment, a signing key held outside the agent, a signer that accepts only a token bound to the approved amount and recipient, and the same check on every path, including retries. A reviewer can still approve a wrong payment.</p>
+<p class="weekly-status">DAL-X status, 26 October 2026: DAL-X runs in a sandbox, with no customer deployment. This is not production evidence.<sup><a href="#s13">13</a>, <a href="#s14">14</a></sup></p>
+</div>
+</section>
+<section class="weekly-section">
+<div class="container">
+<div class="weekly-secnum">05 / Enterprise Check and Next Week's Watch</div>
+<h2>Ask your agent to overpay</h2>
+<div class="weekly-check"><div class="weekly-check-name">Check 01 / Agent payments</div><dl><dt>Action</dt><dd>Payments your agent signs.</dd><dt>Defect to test</dt><dd>The signer accepts a counterparty's amount without checking the approved limit.</dd><dt>Effective control</dt><dd>An over-limit request is refused before signing, and the refusal is recorded.</dd></dl></div>
+<div class="weekly-check"><div class="weekly-check-name">Check 02 / Unattended sessions</div><dl><dt>Action</dt><dd>Writes to approval config or SSH files.</dd><dt>Defect to test</dt><dd>The gate matches command text, so unlisted write methods pass.</dd><dt>Effective control</dt><dd>Denials by target path for every write method tested, with the files unchanged.</dd></dl></div>
+<h3>Watch list</h3><ul class="weekly-watch"><li>Hermes Agent: a released fix.</li><li>ServiceNow: AI Passport enforcement availability.</li><li>Walmart: the Agent Profiles launch.</li></ul>
+<div class="weekly-question">If a seller's server asked your agent for its whole balance tomorrow, which system would refuse to sign?</div>
+<nav class="weekly-explore" aria-label="Further reading"><a class="weekly-explore-link" href="https://www.decisionauthoritylayer.com/architecture" rel="noopener noreferrer" target="_blank">Where the execution is held<span>Decision Authority Layer / Architecture</span></a><a class="weekly-explore-link" href="https://www.decisionauthoritylayer.com/product" rel="noopener noreferrer" target="_blank">The DAL-X sandbox demo<span>Decision Authority Layer / Product</span></a><a class="weekly-explore-link" href="/dal-x/">The application being built<span>DAL-X / DAL-X</span></a><a class="weekly-explore-link" href="/briefings/">Decision Governance Strategic Intelligence Series<span>DAL-X / Briefings</span></a></nav>
+</div>
+</section>
+
+<div class="weekly-sources">
+<div class="container">
+<h2>Sources and evidence limits</h2>
+<ol>
+<li id="s1"><a href="https://v12.sh/blog/x402" rel="noopener noreferrer" target="_blank">V12, 25 Vulnerabilities in the x402 Protocol: Inside Three Critical Findings. 22 October 2026. Reported 12 August; critical findings fixed by 20 August; local tests only.</a></li>
+<li id="s2"><a href="https://investor.visa.com/news/news-details/2026/Visa-BILL-and-Billtrust-Launch-First-Live-Pilot-for-Trusted-AI-Agent-Payments-Between-Buyer-and-Supplier-Platforms/default.aspx" rel="noopener noreferrer" target="_blank">Visa, BILL and Billtrust, First Live Pilot for Trusted AI Agent Payments. 20 October 2026.</a></li>
+<li id="s3"><a href="https://www.mastercard.com/global/en/news-and-trends/press/2026/october/Mastercard-Agent-Pay-for-Machines-in-action.html" rel="noopener noreferrer" target="_blank">Mastercard, Agent Pay for Machines in action. 20 October 2026.</a></li>
+<li id="s4"><a href="https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-delivers-industry-first-personal-enterprise-agent-and-policy-enforcement-with-NVIDIA-extending-AI-governance-across-software-and-silicon/default.aspx" rel="noopener noreferrer" target="_blank">ServiceNow, Personal enterprise agent and policy enforcement with NVIDIA. 21 October 2026.</a></li>
+<li id="s5"><a href="https://corporate.walmart.com/news/2026/10/Making-It-Possible-for-Agents-to-Shop-on-Behalf-of-Customers" rel="noopener noreferrer" target="_blank">Walmart, Agents Shop on Behalf of Customers. 21 October 2026.</a></li>
+<li id="s6"><a href="https://www.axios.com/2026/10/22/ai-agents-banks-unauthorized-accounts-access" rel="noopener noreferrer" target="_blank">Axios, Unvetted AI agents are accessing U.S. bank accounts. 22 October 2026. Secondary; unnamed sources; Morgan Stanley says it has not observed rogue agents on its platforms.</a></li>
+<li id="s7"><a href="https://www.fca.org.uk/news/speeches/building-future-finance-age-ai" rel="noopener noreferrer" target="_blank">FCA, Jessica Rusu, Building the future of finance in the age of AI. First published 19 October 2026.</a></li>
+<li id="s8"><a href="https://forever.security/blog/hijacking-ai-agents-via-downloads-folder/" rel="noopener noreferrer" target="_blank">Forever Security, Markdown Is the New Executable. 22 October 2026. Vendor report; customer and event date not disclosed.</a></li>
+<li id="s9"><a href="https://www.bleepingcomputer.com/news/security/ai-coding-agents-hijacked-using-agentsmd-file-in-downloads-folder/" rel="noopener noreferrer" target="_blank">BleepingComputer, AI coding agents hijacked using AGENTS.md file in Downloads folder. 25 October 2026. Secondary.</a></li>
+<li id="s10"><a href="https://github.com/NousResearch/hermes-agent/issues/143198" rel="noopener noreferrer" target="_blank">NousResearch hermes-agent, issue 143198. Created 22 October 2026. Reporter's reproduction; open at review.</a></li>
+<li id="s11"><a href="https://github.com/surrealdb/surrealdb/security/advisories/GHSA-pgh9-49q4-hqcx" rel="noopener noreferrer" target="_blank">SurrealDB, GHSA-pgh9-49q4-hqcx. Published 19 October 2026. Patched in 3.3.0.</a></li>
+<li id="s12"><a href="https://www.decisionauthoritylayer.com/architecture" rel="noopener noreferrer" target="_blank">Jochanni Labs, Authority in the Execution Path. Undated; reviewed 26 October 2026. Published architecture, not an independently rerun test.</a></li>
+<li id="s13"><a href="https://www.decisionauthoritylayer.com/product" rel="noopener noreferrer" target="_blank">Jochanni Labs, DAL-X: The Working Preview of DAL. Undated; reviewed 26 October 2026.</a></li>
+<li id="s14"><a href="/dal-x/">Jochanni Labs, DAL-X: Decision Authority Layer, Execute. Undated; reviewed 26 October 2026.</a></li>
+</ol>
+<p class="weekly-sources-note">Public sources reviewed for this issue. No private enterprise telemetry. Jochanni Labs has not reproduced any vendor or researcher test. Absence of public evidence does not prove absence of enforcement.</p>
+</div>
+</div>
+
+    <div class="weekly-pilot-cta">
+      <div class="container">
+        <p class="weekly-pilot-cta-label">Integration Action</p>
+        <h2>Discuss a Paid Enterprise Pilot</h2>
+        <p>The incidents covered this week share one structural gap: no authority check at the receiving system. DAL-X enforces that check in a simulated enterprise environment. A paid enterprise pilot would test it against one agent, one consequential action, and one downstream system.</p>
+        <div class="weekly-pilot-cta-row">
+          <a href="/contact" class="btn-primary">Contact to discuss the pilot</a>
+          <a href="https://simulation.dal-x.com/" class="btn-outline" target="_blank" rel="noopener noreferrer">Inspect enforcement: simulation.dal-x.com</a>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</Base>
