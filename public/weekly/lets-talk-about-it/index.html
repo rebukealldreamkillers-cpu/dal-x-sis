@@ -397,6 +397,16 @@ section.block:last-of-type { padding-bottom: clamp(56px, 9vw, 104px); }
 .watch-more { margin-top: 14px; }
 @media (max-width: 640px) { .witem { grid-template-columns: 1fr; } }
 
+/* Screened but not included */
+.screen-controls { display: flex; flex-wrap: wrap; align-items: end; gap: 10px 16px; margin-bottom: 14px; }
+.screen-controls .field { flex: 1 1 280px; }
+.screen-count { font-size: 0.78rem; color: var(--text-dim); }
+.screen-num { font-size: 0.76rem; color: var(--orange); padding-top: 3px; }
+.screen-list .witem { grid-template-columns: 4.5rem minmax(0, 1fr); }
+.screen-list .wsrc { overflow-wrap: anywhere; }
+.nosrc { display: inline-block; margin-top: 6px; font-size: 0.8rem; color: var(--text-dim); }
+@media (max-width: 640px) { .screen-list .witem { grid-template-columns: 1fr; gap: 4px; } }
+
 /* Evidence key */
 .key { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
 .key > div { border: 1px solid var(--border-faint); border-radius: 6px; padding: 18px; background: var(--charcoal-2); }
@@ -629,9 +639,29 @@ footer.site .wrap { display: flex; flex-wrap: wrap; gap: 10px 24px; justify-cont
     </div>
   </section>
 
+  <section class="block" id="screened" aria-labelledby="h-screened">
+    <div class="wrap">
+      <p class="label accent">07 / Screened but not included</p>
+      <h2 class="section-title" id="h-screened">Every candidate screened out</h2>
+      <div class="scale-intro">
+        <p>Each candidate below was reviewed against the dashboard's inclusion bar and left out. The list updates with every daily refresh, alongside the published incidents.</p>
+        <p>Exclusion is not a finding that a report is false. It records why the public evidence, the action, or the scope did not meet the standard for a case file.</p>
+      </div>
+      <div class="screen-controls">
+        <div class="field">
+          <label class="label" for="sq">Search screened candidates</label>
+          <input id="sq" type="search" placeholder="Name, reason, or source" autocomplete="off">
+        </div>
+        <button class="btn" type="button" id="sqclear" hidden>Clear search</button>
+      </div>
+      <p class="screen-count mono" id="screencount" aria-live="polite"></p>
+      <ol class="watch screen-list" id="screenlist"><li class="loading">Loading screened candidates.</li></ol>
+    </div>
+  </section>
+
   <section class="block" id="key" aria-labelledby="h-key">
     <div class="wrap">
-      <p class="label accent">07 / Evidence key</p>
+      <p class="label accent">08 / Evidence key</p>
       <h2 class="section-title" id="h-key">How to read each case file</h2>
       <div class="key" style="margin-top:20px">
         <div><span class="tag-doc">Documented</span><p>Stated by a cited source.</p></div>

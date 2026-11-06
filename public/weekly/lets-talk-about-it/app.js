@@ -77,7 +77,7 @@
   function plural(n, one, many) { return n === 1 ? one : many; }
 
   /* ---------- State ---------- */
-  var D = { rows: [], byId: {}, ctx: [], meta: {}, watch: [] };
+  var D = { rows: [], byId: {}, ctx: [], meta: {}, watch: [], screened: [] };
   var WATCH_SHOW = 12, watchAll = false;
   var F = { defect: '', auth: '', dep: '', newOnly: false, q: '' };
   var openId = null, lastTrigger = null, expandedCluster = null, mapFocus = null, pushedHash = false;
@@ -116,11 +116,15 @@
     D.watch = arr(inc && inc.excluded_candidates).filter(function (c) { return c && c.tracker === true && has(c.name); })
       .map(function (c) { c._t = parseMonthOrDay(c.reported_on); return c; })
       .sort(function (a, b) { return (isNaN(b._t) ? -Infinity : b._t) - (isNaN(a._t) ? -Infinity : a._t); });
+    D.screened = arr(inc && inc.excluded_candidates).filter(function (c) { return c && has(c.name); })
+      .map(function (c, i) { return { c: c, n: i + 1 }; }).reverse();
 
     renderHero();
     buildFilterOptions();
     renderStats();
     renderWatch();
+    renderScreened();
+    bindScreened();
     bindControls();
     loadMap();
     applyFilters();
@@ -365,6 +369,35 @@
     more.hidden = list.length <= WATCH_SHOW;
     more.textContent = watchAll ? 'Show the latest ' + WATCH_SHOW : 'Show all ' + list.length;
     more.onclick = function () { watchAll = !watchAll; renderWatch(); };
+  }
+
+  /* ---------- Screened but not included ---------- */
+  function screenedMatches(x, q) {
+    if (!q) return true;
+    var c = x.c, hay = [c.name, c.reason, c.url, c.tracker_title].join(' ').toLowerCase();
+    return q.toLowerCase().split(/\s+/).every(function (t) { return !t || hay.indexOf(t) >= 0; });
+  }
+  function renderScreened() {
+    var box = $('screenlist'); if (!box) return;
+    var q = ($('sq').value || '').trim();
+    var all = D.screened, list = all.filter(function (x) { return screenedMatches(x, q); });
+    $('screencount').textContent = q ? 'Showing ' + list.length + ' of ' + all.length + ' screened candidates' : all.length + ' screened ' + plural(all.length, 'candidate', 'candidates') + ', most recently added first';
+    $('sqclear').hidden = !q;
+    if (!all.length) { box.innerHTML = '<li class="empty">No screened candidates are recorded yet.</li>'; return; }
+    if (!list.length) { box.innerHTML = '<li class="empty">No screened candidates match this search.</li>'; return; }
+    box.innerHTML = list.map(function (x) {
+      var c = x.c;
+      return '<li class="witem">' +
+        '<span class="screen-num mono">' + String(x.n).padStart(3, '0') + '</span>' +
+        '<div class="wbody"><p class="wtitle">' + esc(c.name) + '</p>' +
+        '<p class="wwhy"><span class="label">Why it is not included</span> ' + esc(c.reason || 'Reason not stated') + '</p>' +
+        (has(c.url) ? '<a class="wsrc" href="' + esc(c.url) + '" target="_blank" rel="noopener noreferrer">Source</a>' : '<span class="nosrc">No source URL recorded</span>') +
+        '</div></li>';
+    }).join('');
+  }
+  function bindScreened() {
+    $('sq').addEventListener('input', debounce(renderScreened, 160));
+    $('sqclear').addEventListener('click', function () { $('sq').value = ''; renderScreened(); $('sq').focus(); });
   }
 
   /* ---------- Map ---------- */
