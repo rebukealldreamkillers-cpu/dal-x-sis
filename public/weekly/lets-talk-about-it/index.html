@@ -401,25 +401,14 @@ section.block:last-of-type { padding-bottom: clamp(56px, 9vw, 104px); }
 .screen-controls { display: flex; flex-wrap: wrap; align-items: end; gap: 10px 16px; margin-bottom: 12px; }
 .screen-controls .field { flex: 1 1 280px; }
 .screen-count { font-size: 0.78rem; color: var(--text-dim); margin-bottom: 10px; }
-.screen-list { list-style: none; border-top: 1px solid var(--border-faint); }
-.screen-list > li { border-bottom: 1px solid var(--border-faint); }
-.screen-list details > summary { list-style: none; display: grid; grid-template-columns: 3.2rem minmax(0, 1fr) auto; gap: 12px; align-items: center; padding: 12px 4px; cursor: pointer; min-height: 48px; }
-.screen-list details > summary::-webkit-details-marker { display: none; }
-.screen-list summary:hover .sname { color: var(--white); }
-.screen-num { font-family: var(--font-mono); font-size: 0.74rem; color: var(--orange); }
-.sname { color: var(--text-body); font-size: 0.95rem; line-height: 1.4; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.screen-list details[open] .sname { white-space: normal; color: var(--text-primary); }
 .schev { width: 10px; height: 10px; border-right: 1.5px solid var(--silver-light); border-bottom: 1.5px solid var(--silver-light); transform: rotate(45deg); margin: 0 6px 4px; transition: transform 0.2s; }
-.screen-list details[open] .schev { transform: rotate(-135deg); margin-bottom: -2px; }
-.sbody { padding: 0 4px 16px calc(3.2rem + 16px); }
-.sbody .wwhy { margin: 0; }
-.nosrc { display: inline-block; margin-top: 6px; font-size: 0.8rem; color: var(--text-dim); }
+.nosrc { font-size: 0.86rem; color: var(--text-dim); }
+.chip.excl-screen { border-color: var(--border-strong); color: var(--silver-faint); }
+.chip.excl-watch { border-style: dashed; border-color: var(--orange-border); color: var(--orange-bright); }
+.excl-note { margin-top: 12px; font-size: 0.86rem; color: var(--text-dim); border-left: 2px solid var(--orange-border); padding-left: 12px; }
 .pager { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; margin-top: 14px; }
 .pager .pos { font-family: var(--font-mono); font-size: 0.74rem; color: var(--text-dim); }
 .pager .btns { display: flex; gap: 8px; }
-.screen-list .sdate { font-family: var(--font-mono); font-size: 0.72rem; color: var(--silver-faint); }
-.watch-list details > summary { grid-template-columns: 6.6rem minmax(0, 1fr) auto; }
-.watch-list .sbody { padding-left: calc(6.6rem + 16px); }
 .legend-box { margin-top: 14px; border: 1px solid var(--border-faint); border-radius: 6px; background: var(--charcoal); }
 .legend-box > summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 16px; min-height: 48px; font-family: var(--font-mono); font-size: 0.74rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--silver-faint); }
 .legend-box > summary::-webkit-details-marker { display: none; }
@@ -428,13 +417,6 @@ section.block:last-of-type { padding-bottom: clamp(56px, 9vw, 104px); }
 .legend-inner { padding: 0 12px 12px; }
 .legend-inner .legend { margin-top: 0; }
 @media (max-width: 640px) {
-  .screen-list details > summary { grid-template-columns: 2.4rem minmax(0, 1fr) auto; gap: 8px; }
-  .sname { white-space: normal; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
-  .screen-list details[open] .sname { display: block; }
-  .sbody { padding-left: calc(2.4rem + 12px); }
-  .watch-list details > summary { grid-template-columns: minmax(0, 1fr) auto; }
-  .watch-list .sdate { grid-column: 1 / -1; }
-  .watch-list .sbody { padding-left: 4px; }
   .pager .btns { width: 100%; } .pager .btn { flex: 1; justify-content: center; }
 }
 
@@ -669,10 +651,10 @@ footer.site .wrap { display: flex; flex-wrap: wrap; gap: 10px 24px; justify-cont
       <h2 class="section-title" id="h-watch">Watchlist: reported, not verified to dashboard standard</h2>
       <div class="scale-intro">
         <p>These reports describe an AI system acting in a real setting, but each fell short of the bar for a case file: a single unconfirmed account, an unnamed party, no primary record, or limited stakes.</p>
-        <p>They are listed newest first, ten per page. None of them is a verified incident; open any entry to see why it is not on the dashboard.</p>
+        <p>They are listed newest first, a page at a time. None of them is a verified incident; select any card to see why it is not on the dashboard.</p>
       </div>
       <p class="watch-count mono" id="watchcount"></p>
-      <ol class="screen-list watch-list" id="watch"><li class="loading">Loading the watchlist.</li></ol>
+      <div class="tiles" id="watch"><p class="loading">Loading the watchlist.</p></div>
       <div class="pager" id="watchpager" hidden><span class="pos" id="watchpos"></span><span class="btns"><button class="btn" type="button" id="watchprev">Previous</button><button class="btn" type="button" id="watchnext">Next</button></span></div>
     </div>
   </section>
@@ -682,7 +664,7 @@ footer.site .wrap { display: flex; flex-wrap: wrap; gap: 10px 24px; justify-cont
       <p class="label accent">07 / Screened but not included</p>
       <h2 class="section-title" id="h-screened">Every candidate screened out</h2>
       <div class="scale-intro">
-        <p>Each candidate was reviewed against the dashboard's inclusion bar and left out. The list updates with every daily refresh. Search it, or page through ten at a time and open any entry for the reason and source.</p>
+        <p>Each candidate was reviewed against the dashboard's inclusion bar and left out. The list updates with every daily refresh. Search it, or page through it, and select any card for the reason and source.</p>
         <p>Exclusion is not a finding that a report is false. It records why the public evidence, the action, or the scope did not meet the standard for a case file.</p>
       </div>
       <div class="screen-controls">
@@ -693,7 +675,7 @@ footer.site .wrap { display: flex; flex-wrap: wrap; gap: 10px 24px; justify-cont
         <button class="btn" type="button" id="sqclear" hidden>Clear search</button>
       </div>
       <p class="screen-count mono" id="screencount" aria-live="polite"></p>
-      <ol class="screen-list" id="screenlist"><li class="loading">Loading screened candidates.</li></ol>
+      <div class="tiles" id="screenlist"><p class="loading">Loading screened candidates.</p></div>
       <div class="pager" id="screenpager" hidden>
         <span class="pos" id="screenpos"></span>
         <span class="btns"><button class="btn" type="button" id="screenprev">Previous</button><button class="btn" type="button" id="screennext">Next</button></span>

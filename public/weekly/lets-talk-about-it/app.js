@@ -30,6 +30,8 @@
     requester_unverified: '<circle cx="8" cy="12" r="4"/><path d="M12 12h9M18 12v3M21 12v2"/><path d="M15.5 4.2a2.6 2.6 0 1 1 3.4 2.5c-.6.2-.9.6-.9 1.2"/><circle cx="18" cy="9.6" r=".4" fill="currentColor"/>',
     unbounded_execution: '<path d="M7 8.5c-2 0-3.5 1.5-3.5 3.5S5 15.5 7 15.5c3.5 0 6.5-7 10-7 2 0 3.5 1.5 3.5 3.5s-1.5 3.5-3.5 3.5c-3.5 0-6.5-7-10-7z"/>',
     human_review_absent: '<circle cx="9" cy="7.5" r="3"/><path d="M3.5 20c0-3.6 2.5-6 5.5-6s5.5 2.4 5.5 6"/><path d="M15.5 9.5h6M15.5 14.5h6" stroke-dasharray="2 2"/><path d="M18.5 6v11"/>',
+    screen: '<path d="M4 5h16l-6 7.5V18l-4 2v-7.5z"/>',
+    watch: '<path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="2.6"/>',
     generic: '<path d="M12 3 20 7.5v9L12 21 4 16.5v-9z"/><circle cx="12" cy="12" r="2"/>',
     gate: '<path d="M5 3v18M19 3v18"/><path d="M5 9h14M5 15h14" stroke-dasharray="2 2"/><circle cx="12" cy="12" r="2.4" fill="currentColor"/>'
   };
@@ -103,8 +105,9 @@
 
   /* ---------- State ---------- */
   var D = { rows: [], byId: {}, ctx: [], meta: {}, watch: [], screened: [] };
-  var WATCH_PAGE = 10, watchPage = 0, tilePage = 0, LEGEND_PAGE = 12, legendPage = 0, legendList = [];
+  var watchPage = 0, tilePage = 0, LEGEND_PAGE = 12, legendPage = 0, legendList = [];
   var F = { defect: '', auth: '', dep: '', newOnly: false, q: '' };
+  var exclState = null;
   var openId = null, lastTrigger = null, expandedCluster = null, mapFocus = null, pushedHash = false;
 
   /* ---------- Load ---------- */
@@ -151,11 +154,12 @@
     renderScreened();
     bindScreened();
     bindPager('watch', function (d) { watchPage += d; renderWatch(); }, 'watchcount');
+    $('watch').addEventListener('click', function (e) { var t = e.target.closest('.tile'); if (t) openExcl('w', +t.dataset.i, { trigger: t }); });
     bindControls();
     loadMap();
     applyFilters();
     var lastTileSize = tileSize();
-    window.addEventListener('resize', debounce(function () { renderMap(); renderTimeline(); if (tileSize() !== lastTileSize) { lastTileSize = tileSize(); tilePage = 0; renderTiles(); } }, 150));
+    window.addEventListener('resize', debounce(function () { renderMap(); renderTimeline(); if (tileSize() !== lastTileSize) { lastTileSize = tileSize(); tilePage = 0; watchPage = 0; screenPage = 0; renderTiles(); renderWatch(); renderScreened(); } }, 150));
     window.addEventListener('hashchange', syncHash);
     window.addEventListener('popstate', syncHash);
     syncHash();
@@ -383,51 +387,93 @@
     if (/^\d{4}-\d{2}$/.test(s || '')) { var p = s.split('-'); return MONTHS_LONG[+p[1] - 1] + ' ' + p[0]; }
     return fmtDay(s);
   }
+  // Watchlist and screened candidates use the same index card, pager and case panel as incidents.
+  function exclTile(x, kind, i) {
+    var c = x.c, isW = kind === 'w';
+    var title = isW && has(c.tracker_title) ? c.tracker_title : c.name;
+    var sel = exclState && exclState.kind === kind && exclState.i === i;
+    return '<button type="button" class="tile' + (sel ? ' sel' : '') + '" data-k="' + kind + '" data-i="' + i + '" style="animation-delay:' + Math.min((i % 12) * 18, 360) + 'ms" aria-label="' + esc((isW ? 'Watchlist: ' : 'Screened candidate ' + x.n + ': ') + title) + '">' +
+      '<span class="top">' + icon(isW ? 'watch' : 'screen') + '<span class="id">' + (isW ? 'WATCH' : 'SCR-' + String(x.n).padStart(3, '0')) + '</span>' +
+      (isW && has(c.reported_on) ? '<span class="date">' + esc(fmtMonthOrDay(c.reported_on)) + '</span>' : '') + '</span>' +
+      '<span class="ttl">' + esc(title) + '</span>' +
+      '<span class="bot"><span class="chip ' + (isW ? 'excl-watch">Not verified' : 'excl-screen">Screened out') + '</span>' +
+      '<span class="chip">' + (has(c.url) ? 'Source linked' : 'No source URL') + '</span></span>' +
+      '</button>';
+  }
+  function watchList() { return D.watch.map(function (c) { return { c: c }; }); }
   function renderWatch() {
     var box = $('watch'); if (!box) return;
-    var list = D.watch;
+    var list = watchList();
     $('watchcount').textContent = list.length ? list.length + ' ' + plural(list.length, 'report', 'reports') + ' on the watchlist, newest first' : '';
-    var pg = pageSlice(list, watchPage, WATCH_PAGE); watchPage = pg.page;
+    var pg = pageSlice(list, watchPage, tileSize()); watchPage = pg.page;
     setPager('watch', pg, list.length, plural(list.length, 'report', 'reports'));
-    if (!list.length) { box.innerHTML = '<li class="empty">No reports on the watchlist yet.</li>'; return; }
-    box.innerHTML = pg.items.map(function (c) {
-      var title = has(c.tracker_title) ? c.tracker_title : c.name;
-      return '<li><details><summary><span class="sdate">' + esc(has(c.reported_on) ? fmtMonthOrDay(c.reported_on) : 'Date not stated') + '</span><span class="sname">' + esc(title) + '</span><span class="schev" aria-hidden="true"></span></summary>' +
-        '<div class="sbody"><p class="wwhy"><span class="label">Why it is not on the dashboard</span> ' + esc(c.reason) + '</p>' +
-        (has(c.url) ? '<a class="wsrc" href="' + esc(c.url) + '" target="_blank" rel="noopener noreferrer">Source</a>' : '<span class="nosrc">No source URL recorded</span>') +
-        '</div></details></li>';
-    }).join('');
+    if (!list.length) { box.innerHTML = '<p class="empty">No reports on the watchlist yet.</p>'; return; }
+    box.innerHTML = pg.items.map(function (x, j) { return exclTile(x, 'w', pg.start + j); }).join('');
   }
 
   /* ---------- Screened but not included ---------- */
-  var SCREEN_PAGE = 10, screenPage = 0;
+  var screenPage = 0;
   function screenedMatches(x, q) {
     if (!q) return true;
     var c = x.c, hay = [c.name, c.reason, c.url, c.tracker_title].join(' ').toLowerCase();
     return q.toLowerCase().split(/\s+/).every(function (t) { return !t || hay.indexOf(t) >= 0; });
   }
+  function screenedList() { var q = ($('sq').value || '').trim(); return D.screened.filter(function (x) { return screenedMatches(x, q); }); }
   function renderScreened() {
     var box = $('screenlist'); if (!box) return;
     var q = ($('sq').value || '').trim();
-    var all = D.screened, list = all.filter(function (x) { return screenedMatches(x, q); });
-    var pg = pageSlice(list, screenPage, SCREEN_PAGE); screenPage = pg.page;
+    var all = D.screened, list = screenedList();
+    var pg = pageSlice(list, screenPage, tileSize()); screenPage = pg.page;
     $('screencount').textContent = q ? list.length + ' of ' + all.length + ' screened candidates match' : all.length + ' screened ' + plural(all.length, 'candidate', 'candidates') + ', most recently added first';
     $('sqclear').hidden = !q;
     setPager('screen', pg, list.length, 'candidates');
-    if (!all.length) { box.innerHTML = '<li class="empty">No screened candidates are recorded yet.</li>'; return; }
-    if (!list.length) { box.innerHTML = '<li class="empty">No screened candidates match this search.</li>'; return; }
-    box.innerHTML = pg.items.map(function (x) {
-      var c = x.c;
-      return '<li><details><summary><span class="screen-num">' + String(x.n).padStart(3, '0') + '</span><span class="sname">' + esc(c.name) + '</span><span class="schev" aria-hidden="true"></span></summary>' +
-        '<div class="sbody"><p class="wwhy"><span class="label">Why it is not included</span> ' + esc(c.reason || 'Reason not stated') + '</p>' +
-        (has(c.url) ? '<a class="wsrc" href="' + esc(c.url) + '" target="_blank" rel="noopener noreferrer">Source</a>' : '<span class="nosrc">No source URL recorded</span>') +
-        '</div></details></li>';
-    }).join('');
+    if (!all.length) { box.innerHTML = '<p class="empty">No screened candidates are recorded yet.</p>'; return; }
+    if (!list.length) { box.innerHTML = '<p class="empty">No screened candidates match this search.</p>'; return; }
+    box.innerHTML = pg.items.map(function (x, j) { return exclTile(x, 's', pg.start + j); }).join('');
+  }
+  function exclListFor(kind) { return kind === 'w' ? watchList() : screenedList(); }
+  function openExcl(kind, i, opts) {
+    opts = opts || {};
+    var list = exclListFor(kind), x = list[i]; if (!x) return;
+    if (!openId) lastTrigger = opts.trigger || document.activeElement;
+    exclState = { kind: kind, i: i };
+    openId = '__excl';
+    var size = tileSize(), pageWanted = Math.floor(i / size);
+    if (kind === 'w' && pageWanted !== watchPage) { watchPage = pageWanted; }
+    if (kind === 's' && pageWanted !== screenPage) { screenPage = pageWanted; }
+    if (kind === 'w') renderWatch(); else renderScreened();
+    $('case-body').innerHTML = exclMarkup(x, kind);
+    $('case-body').scrollTop = 0;
+    $('case').classList.add('on'); $('case').setAttribute('aria-hidden', 'false');
+    $('scrim').classList.add('on');
+    document.body.classList.add('locked');
+    Array.prototype.forEach.call(document.querySelectorAll('#tiles .tile.sel, #timeline .mark.sel'), function (t) { t.classList.remove('sel'); });
+    updateCaseNav();
+    requestAnimationFrame(function () { setTimeout(function () { var h = $('case-title'); if (h && exclState) h.focus({ preventScroll: true }); }, 30); });
+  }
+  function exclMarkup(x, kind) {
+    var c = x.c, isW = kind === 'w';
+    var title = isW && has(c.tracker_title) ? c.tracker_title : c.name;
+    var h = [];
+    h.push('<header class="case-head"><div class="chips"><span class="chip">' + (isW ? 'WATCH' : 'SCR-' + String(x.n).padStart(3, '0')) + '</span>' +
+      '<span class="chip ' + (isW ? 'excl-watch">Watchlist, not verified' : 'excl-screen">Screened but not included') + '</span></div>' +
+      '<h2 id="case-title" tabindex="-1">' + esc(title) + '</h2>' +
+      '<div class="defect-line">' + icon(isW ? 'watch' : 'screen') + '<span>' + (isW ? 'Reported, not verified to dashboard standard' : 'Reviewed against the inclusion bar and left out') + '</span></div>');
+    if (isW && has(c.reported_on)) h.push('<dl class="facts-strip"><div class="wide"><dt>Reported</dt><dd>' + esc(fmtMonthOrDay(c.reported_on)) + '</dd></div></dl>');
+    h.push('</header>');
+    h.push('<section class="cf-sec"><h3><span class="step">01</span>' + (isW ? 'Why it is not on the dashboard' : 'Why it is not included') + '</h3><p class="why">' + esc(c.reason || 'Reason not stated') + '</p>' +
+      '<p class="excl-note">Exclusion is not a finding that the report is false. It records why the public evidence, the action, or the scope did not meet the standard for a case file.</p></section>');
+    h.push('<section class="cf-sec"><h3><span class="step">02</span>Source</h3>' + (has(c.url) ?
+      '<ol class="srcs"><li><span class="sid">S</span><div><div class="sn"><a href="' + esc(c.url) + '" target="_blank" rel="noopener noreferrer">' + esc(c.url) + '</a></div></div></li></ol>' :
+      '<p class="nosrc">No source URL recorded.</p>') + '</section>');
+    h.push('<div class="case-foot"><button class="btn" type="button" onclick="document.getElementById(\'case-prev\').click()">Previous</button><button class="btn primary" type="button" onclick="document.getElementById(\'case-next\').click()">Next</button></div>');
+    return h.join('');
   }
   function bindScreened() {
     $('sq').addEventListener('input', debounce(function () { screenPage = 0; renderScreened(); }, 160));
     $('sqclear').addEventListener('click', function () { $('sq').value = ''; screenPage = 0; renderScreened(); $('sq').focus(); });
     bindPager('screen', function (d) { screenPage += d; renderScreened(); }, 'screencount');
+    $('screenlist').addEventListener('click', function (e) { var t = e.target.closest('.tile'); if (t) openExcl('s', +t.dataset.i, { trigger: t }); });
   }
 
   /* ---------- Map ---------- */
@@ -712,6 +758,14 @@
     return list;
   }
   function updateCaseNav() {
+    if (exclState) {
+      var el = exclListFor(exclState.kind), n = el.length, k = exclState.i;
+      $('case-pos').textContent = (k + 1) + ' of ' + n + (exclState.kind === 'w' ? ' on the watchlist' : ' screened');
+      $('case-prev').disabled = k <= 0; $('case-next').disabled = k >= n - 1;
+      var eb = document.querySelectorAll('.case-foot .btn');
+      if (eb.length === 2) { eb[0].disabled = $('case-prev').disabled; eb[1].disabled = $('case-next').disabled; }
+      return;
+    }
     var list = navList();
     var i = list.findIndex(function (r) { return r.incident_id === openId; });
     $('case-pos').textContent = i >= 0 ? (i + 1) + ' of ' + list.length + (list.length !== D.rows.length ? ' filtered' : '') : '';
@@ -721,6 +775,7 @@
     if (fb.length === 2) { fb[0].disabled = $('case-prev').disabled; fb[1].disabled = $('case-next').disabled; }
   }
   function step(dir) {
+    if (exclState) { openExcl(exclState.kind, exclState.i + dir); return; }
     var list = navList();
     var i = list.findIndex(function (r) { return r.incident_id === openId; });
     var nx = list[i + dir];
@@ -730,7 +785,8 @@
   function openCase(id, opts) {
     opts = opts || {};
     var r = D.byId[id]; if (!r) return;
-    var wasOpen = !!openId;
+    if (exclState) { exclState = null; Array.prototype.forEach.call(document.querySelectorAll('#watch .tile.sel, #screenlist .tile.sel'), function (t) { t.classList.remove('sel'); }); }
+    var wasOpen = !!openId && openId !== '__excl';
     if (!wasOpen) lastTrigger = opts.trigger || document.activeElement;
     openId = id;
     $('case-body').innerHTML = caseMarkup(r);
@@ -753,11 +809,13 @@
   function closeCase(opts) {
     opts = opts || {};
     if (!openId) return;
-    openId = null;
+    var wasExcl = !!exclState;
+    openId = null; exclState = null;
+    Array.prototype.forEach.call(document.querySelectorAll('#watch .tile.sel, #screenlist .tile.sel'), function (t) { t.classList.remove('sel'); });
     $('case').classList.remove('on'); $('case').setAttribute('aria-hidden', 'true');
     $('scrim').classList.remove('on');
     document.body.classList.remove('locked');
-    if (!opts.fromHash) {
+    if (!opts.fromHash && !wasExcl) {
       if (pushedHash) { pushedHash = false; history.back(); }
       else history.replaceState(null, '', location.pathname + location.search);
     } else pushedHash = false;
