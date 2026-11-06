@@ -150,8 +150,8 @@
     renderHero();
     buildFilterOptions();
     renderStats();
-    renderScreened();
     bindScreened();
+    renderScreened();
     bindControls();
     loadMap();
     applyFilters();
@@ -385,14 +385,16 @@
     return fmtDay(s);
   }
   // Watchlist and screened candidates use the same index card, pager and case panel as incidents.
-  function exclTile(x, kind, i) {
+  function exclTile(x, kind, i, terms, scope) {
+    terms = terms || [];
     var c = x.c, isW = kind === 'w';
     var title = isW && has(c.tracker_title) ? c.tracker_title : c.name;
     var sel = exclState && exclState.kind === kind && exclState.i === i;
     return '<button type="button" class="tile' + (sel ? ' sel' : '') + '" data-k="' + kind + '" data-i="' + i + '" style="animation-delay:' + Math.min((i % 12) * 18, 360) + 'ms" aria-label="' + esc((isW ? 'Watchlist: ' : 'Screened candidate ' + x.n + ': ') + title) + '">' +
       '<span class="top">' + icon(isW ? 'watch' : 'screen') + '<span class="id">' + (isW ? 'WATCH' : 'SCR-' + String(x.n).padStart(3, '0')) + '</span>' +
       (isW && has(c.reported_on) ? '<span class="date">' + esc(fmtMonthOrDay(c.reported_on)) + '</span>' : '') + '</span>' +
-      '<span class="ttl">' + esc(title) + '</span>' +
+      '<span class="ttl">' + highlight(title, scope === 'reason' || scope === 'url' ? [] : terms) + '</span>' +
+      (terms.length && scope !== 'name' && scope !== 'url' && snippet(c.reason, terms) ? '<span class="snip">' + highlight(snippet(c.reason, terms), terms) + '</span>' : '') +
       '<span class="bot"><span class="chip ' + (isW ? 'excl-watch">Not verified' : 'excl-screen">Screened out') + '</span>' +
       '<span class="chip">' + (has(c.url) ? 'Source linked' : 'No source URL') + '</span></span>' +
       '</button>';
@@ -410,23 +412,77 @@
 
   /* ---------- Screened but not included ---------- */
   var screenPage = 0;
-  function screenedMatches(x, q) {
-    if (!q) return true;
-    var c = x.c, hay = [c.name, c.reason, c.url, c.tracker_title].join(' ').toLowerCase();
-    return q.toLowerCase().split(/\s+/).every(function (t) { return !t || hay.indexOf(t) >= 0; });
+  // Search terms: words, or "quoted phrases". Every term must match.
+  var SUGGEST = [
+    ['Attacker operated', 'attacker'], ['Single account', 'single'], ['Anonymous', 'anonymous'],
+    ['Research or test', 'research'], ['Sandbox', 'sandbox'], ['No outside party', '"outside party"'],
+    ['Low stakes', '"low stakes"'], ['Show cause only', '"show cause"'], ['No sanction', '"no sanction"'],
+    ['AI use', '"AI use"'], ['Primary record', 'primary'], ['GitHub issue', '"GitHub issue"'],
+    ['Courts', 'court'], ['Regulators', 'regulator'], ['Ombudsman', 'ombudsman']
+  ];
+  function parseTerms(q) {
+    var out = [], re = /"([^"]+)"|(\S+)/g, m;
+    while ((m = re.exec(q || ''))) { var t = (m[1] || m[2] || '').toLowerCase().trim(); if (t) out.push(t); }
+    return out;
   }
-  function screenedList() { var q = ($('sq').value || '').trim(); return D.screened.filter(function (x) { return screenedMatches(x, q); }); }
+  function screenHay(c, scope) {
+    var parts = scope === 'name' ? [c.name] : scope === 'reason' ? [c.reason] : scope === 'url' ? [c.url] : [c.name, c.reason, c.url];
+    return parts.join(' ').toLowerCase();
+  }
+  function screenedMatches(x, terms, scope, src) {
+    var c = x.c;
+    if (src === 'linked' && !has(c.url)) return false;
+    if (src === 'none' && has(c.url)) return false;
+    if (!terms.length) return true;
+    var hay = screenHay(c, scope);
+    return terms.every(function (t) { return hay.indexOf(t) >= 0; });
+  }
+  function screenState() {
+    return { q: ($('sq').value || '').trim(), scope: $('s-in').value, src: $('s-src').value, sort: $('s-sort').value };
+  }
+  function highlight(text, terms) {
+    var s = esc(text);
+    if (!terms.length) return s;
+    var pat = terms.map(function (t) { return esc(t).replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }).sort(function (x, y) { return y.length - x.length; }).join('|');
+    return s.replace(new RegExp('(' + pat + ')', 'gi'), '<mark>$1</mark>');
+  }
+  function snippet(text, terms) {
+    var t = String(text || ''), low = t.toLowerCase(), at = -1;
+    terms.forEach(function (w) { var i = low.indexOf(w); if (i >= 0 && (at < 0 || i < at)) at = i; });
+    if (at < 0) return '';
+    var from = Math.max(0, at - 50), cut = t.slice(from, from + 170);
+    return (from ? '\u2026' : '') + cut + (from + 170 < t.length ? '\u2026' : '');
+  }
+  function screenedList() {
+    var st = screenState(), terms = parseTerms(st.q);
+    var list = D.screened.filter(function (x) { return screenedMatches(x, terms, st.scope, st.src); });
+    if (st.sort === 'old') list = list.slice().reverse();
+    else if (st.sort === 'az') list = list.slice().sort(function (p, q) { return String(p.c.name).localeCompare(String(q.c.name)); });
+    return list;
+  }
+  function screenFiltersOn() { var st = screenState(); return !!(st.q || st.scope !== 'all' || st.src || st.sort !== 'new'); }
+  function renderSuggest() {
+    $('suggest').innerHTML = '<span class="label">Try</span>' + SUGGEST.map(function (s) {
+      var n = D.screened.filter(function (x) { return screenedMatches(x, parseTerms(s[1]), 'all', ''); }).length;
+      if (!n) return '';
+      return '<button type="button" class="chip" data-q="' + esc(s[1]) + '" aria-pressed="false">' + esc(s[0]) + '<b>' + n + '</b></button>';
+    }).join('');
+  }
   function renderScreened() {
     var box = $('screenlist'); if (!box) return;
-    var q = ($('sq').value || '').trim();
+    var st = screenState(), terms = parseTerms(st.q);
     var all = D.screened, list = screenedList();
     var pg = pageSlice(list, screenPage, tileSize()); screenPage = pg.page;
-    $('screencount').textContent = q ? list.length + ' of ' + all.length + ' screened candidates match' : all.length + ' screened ' + plural(all.length, 'candidate', 'candidates') + ', most recently added first';
-    $('sqclear').hidden = !q;
+    var on = screenFiltersOn();
+    $('screencount').innerHTML = (list.length !== all.length ? 'Showing <b>' + list.length + '</b> of ' + all.length : '<b>' + all.length + '</b>') + ' screened candidates' +
+      (st.q ? ' matching ' + esc(terms.map(function (t) { return '"' + t + '"'; }).join(' and ')) + (st.scope !== 'all' ? ' in ' + esc($('s-in').selectedOptions[0].text.toLowerCase()) : '') : '');
+    $('sqclear').hidden = !st.q;
+    $('sqreset').hidden = !on;
+    Array.prototype.forEach.call(document.querySelectorAll('#suggest button.chip'), function (b) { b.setAttribute('aria-pressed', String(st.q.toLowerCase() === b.dataset.q.toLowerCase())); });
     setPager('screen', pg, list.length, 'candidates');
     if (!all.length) { box.innerHTML = '<p class="empty">No screened candidates are recorded yet.</p>'; return; }
-    if (!list.length) { box.innerHTML = '<p class="empty">No screened candidates match this search.</p>'; return; }
-    box.innerHTML = pg.items.map(function (x, j) { return exclTile(x, 's', pg.start + j); }).join('');
+    if (!list.length) { box.innerHTML = '<p class="empty">No screened candidates match. Try fewer words, search name, reason and source, or <button class="linkbtn" type="button" onclick="document.getElementById(\'sqreset\').click()">clear all filters</button>.</p>'; return; }
+    box.innerHTML = pg.items.map(function (x, j) { return exclTile(x, 's', pg.start + j, terms, st.scope); }).join('');
   }
   function exclListFor(kind) { return kind === 'w' ? watchList() : screenedList(); }
   function openExcl(kind, i, opts) {
@@ -458,7 +514,7 @@
       '<div class="defect-line">' + icon(isW ? 'watch' : 'screen') + '<span>' + (isW ? 'Reported, not verified to dashboard standard' : 'Reviewed against the inclusion bar and left out') + '</span></div>');
     if (isW && has(c.reported_on)) h.push('<dl class="facts-strip"><div class="wide"><dt>Reported</dt><dd>' + esc(fmtMonthOrDay(c.reported_on)) + '</dd></div></dl>');
     h.push('</header>');
-    h.push('<section class="cf-sec"><h3><span class="step">01</span>' + (isW ? 'Why it is not on the dashboard' : 'Why it is not included') + '</h3><p class="why">' + esc(c.reason || 'Reason not stated') + '</p>' +
+    h.push('<section class="cf-sec"><h3><span class="step">01</span>' + (isW ? 'Why it is not on the dashboard' : 'Why it is not included') + '</h3><p class="why">' + highlight(c.reason || 'Reason not stated', kind === 's' ? parseTerms(screenState().q) : []) + '</p>' +
       '<p class="excl-note">Exclusion is not a finding that the report is false. It records why the public evidence, the action, or the scope did not meet the standard for a case file.</p></section>');
     h.push('<section class="cf-sec"><h3><span class="step">02</span>Source</h3>' + (has(c.url) ?
       '<ol class="srcs"><li><span class="sid">S</span><div><div class="sn"><a href="' + esc(c.url) + '" target="_blank" rel="noopener noreferrer">' + esc(c.url) + '</a></div></div></li></ol>' :
@@ -467,8 +523,19 @@
     return h.join('');
   }
   function bindScreened() {
-    $('sq').addEventListener('input', debounce(function () { screenPage = 0; renderScreened(); }, 160));
-    $('sqclear').addEventListener('click', function () { $('sq').value = ''; screenPage = 0; renderScreened(); $('sq').focus(); });
+    var n = D.screened.filter(function (x) { return has(x.c.url); }).length;
+    $('s-src').innerHTML = '<option value="">Any source status (' + D.screened.length + ')</option><option value="linked">Source linked (' + n + ')</option><option value="none">No source URL (' + (D.screened.length - n) + ')</option>';
+    renderSuggest();
+    var rerender = function () { screenPage = 0; renderScreened(); };
+    $('sq').addEventListener('input', debounce(rerender, 160));
+    ['s-in', 's-src', 's-sort'].forEach(function (id) { $(id).addEventListener('change', rerender); });
+    $('suggest').addEventListener('click', function (e) {
+      var b = e.target.closest('button.chip'); if (!b) return;
+      $('sq').value = $('sq').value.trim().toLowerCase() === b.dataset.q.toLowerCase() ? '' : b.dataset.q;
+      $('s-in').value = 'all'; rerender();
+    });
+    $('sqclear').addEventListener('click', function () { $('sq').value = ''; rerender(); $('sq').focus(); });
+    $('sqreset').addEventListener('click', function () { $('sq').value = ''; $('s-in').value = 'all'; $('s-src').value = ''; $('s-sort').value = 'new'; rerender(); });
     bindPager('screen', function (d) { screenPage += d; renderScreened(); }, 'screencount');
     $('screenlist').addEventListener('click', function (e) { var t = e.target.closest('.tile'); if (t) openExcl('s', +t.dataset.i, { trigger: t }); });
   }
