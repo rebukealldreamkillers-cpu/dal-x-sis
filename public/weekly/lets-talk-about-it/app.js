@@ -372,6 +372,7 @@
   }
 
   /* ---------- Screened but not included ---------- */
+  var SCREEN_PAGE = 10, screenPage = 0;
   function screenedMatches(x, q) {
     if (!q) return true;
     var c = x.c, hay = [c.name, c.reason, c.url, c.tracker_title].join(' ').toLowerCase();
@@ -381,23 +382,31 @@
     var box = $('screenlist'); if (!box) return;
     var q = ($('sq').value || '').trim();
     var all = D.screened, list = all.filter(function (x) { return screenedMatches(x, q); });
-    $('screencount').textContent = q ? 'Showing ' + list.length + ' of ' + all.length + ' screened candidates' : all.length + ' screened ' + plural(all.length, 'candidate', 'candidates') + ', most recently added first';
+    var pages = Math.max(1, Math.ceil(list.length / SCREEN_PAGE));
+    screenPage = Math.min(Math.max(screenPage, 0), pages - 1);
+    var start = screenPage * SCREEN_PAGE, shown = list.slice(start, start + SCREEN_PAGE);
+    $('screencount').textContent = q ? list.length + ' of ' + all.length + ' screened candidates match' : all.length + ' screened ' + plural(all.length, 'candidate', 'candidates') + ', most recently added first';
     $('sqclear').hidden = !q;
+    $('screenpager').hidden = list.length <= SCREEN_PAGE;
+    $('screenpos').textContent = list.length ? (start + 1) + ' to ' + (start + shown.length) + ' of ' + list.length + ' / page ' + (screenPage + 1) + ' of ' + pages : '';
+    $('screenprev').disabled = screenPage === 0;
+    $('screennext').disabled = screenPage >= pages - 1;
     if (!all.length) { box.innerHTML = '<li class="empty">No screened candidates are recorded yet.</li>'; return; }
     if (!list.length) { box.innerHTML = '<li class="empty">No screened candidates match this search.</li>'; return; }
-    box.innerHTML = list.map(function (x) {
+    box.innerHTML = shown.map(function (x) {
       var c = x.c;
-      return '<li class="witem">' +
-        '<span class="screen-num mono">' + String(x.n).padStart(3, '0') + '</span>' +
-        '<div class="wbody"><p class="wtitle">' + esc(c.name) + '</p>' +
-        '<p class="wwhy"><span class="label">Why it is not included</span> ' + esc(c.reason || 'Reason not stated') + '</p>' +
+      return '<li><details><summary><span class="screen-num">' + String(x.n).padStart(3, '0') + '</span><span class="sname">' + esc(c.name) + '</span><span class="schev" aria-hidden="true"></span></summary>' +
+        '<div class="sbody"><p class="wwhy"><span class="label">Why it is not included</span> ' + esc(c.reason || 'Reason not stated') + '</p>' +
         (has(c.url) ? '<a class="wsrc" href="' + esc(c.url) + '" target="_blank" rel="noopener noreferrer">Source</a>' : '<span class="nosrc">No source URL recorded</span>') +
-        '</div></li>';
+        '</div></details></li>';
     }).join('');
   }
   function bindScreened() {
-    $('sq').addEventListener('input', debounce(renderScreened, 160));
-    $('sqclear').addEventListener('click', function () { $('sq').value = ''; renderScreened(); $('sq').focus(); });
+    $('sq').addEventListener('input', debounce(function () { screenPage = 0; renderScreened(); }, 160));
+    $('sqclear').addEventListener('click', function () { $('sq').value = ''; screenPage = 0; renderScreened(); $('sq').focus(); });
+    function go(d) { screenPage += d; renderScreened(); var s = $('screened'); if (s && s.getBoundingClientRect().top < 0) $('screencount').scrollIntoView({ block: 'start', behavior: reduceMotion ? 'auto' : 'smooth' }); }
+    $('screenprev').addEventListener('click', function () { go(-1); });
+    $('screennext').addEventListener('click', function () { go(1); });
   }
 
   /* ---------- Map ---------- */
