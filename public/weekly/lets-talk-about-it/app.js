@@ -76,9 +76,34 @@
   function debounce(fn, ms) { var t; return function () { clearTimeout(t); t = setTimeout(fn, ms); }; }
   function plural(n, one, many) { return n === 1 ? one : many; }
 
+  /* ---------- Shared pager ---------- */
+  // One pattern for every long list: a fixed page size, a position line, Previous and Next.
+  function tileSize() { return window.innerWidth < 600 ? 6 : 12; }
+  function pageSlice(list, page, size) {
+    var pages = Math.max(1, Math.ceil(list.length / size));
+    page = Math.min(Math.max(page, 0), pages - 1);
+    return { page: page, pages: pages, start: page * size, items: list.slice(page * size, page * size + size) };
+  }
+  function setPager(prefix, pg, total, noun) {
+    var bar = $(prefix + 'pager'); if (!bar) return;
+    bar.hidden = pg.pages <= 1;
+    $(prefix + 'pos').textContent = total ? (pg.start + 1) + ' to ' + (pg.start + pg.items.length) + ' of ' + total + ' ' + noun + ' / page ' + (pg.page + 1) + ' of ' + pg.pages : '';
+    $(prefix + 'prev').disabled = pg.page === 0;
+    $(prefix + 'next').disabled = pg.page >= pg.pages - 1;
+  }
+  function bindPager(prefix, step, anchorId) {
+    function go(d) {
+      step(d);
+      var anc = $(anchorId);
+      if (anc && anc.getBoundingClientRect().top < 0) anc.scrollIntoView({ block: 'start', behavior: reduceMotion ? 'auto' : 'smooth' });
+    }
+    $(prefix + 'prev').addEventListener('click', function () { go(-1); });
+    $(prefix + 'next').addEventListener('click', function () { go(1); });
+  }
+
   /* ---------- State ---------- */
   var D = { rows: [], byId: {}, ctx: [], meta: {}, watch: [], screened: [] };
-  var WATCH_SHOW = 12, watchAll = false;
+  var WATCH_PAGE = 10, watchPage = 0, tilePage = 0, LEGEND_PAGE = 12, legendPage = 0, legendList = [];
   var F = { defect: '', auth: '', dep: '', newOnly: false, q: '' };
   var openId = null, lastTrigger = null, expandedCluster = null, mapFocus = null, pushedHash = false;
 
@@ -125,10 +150,12 @@
     renderWatch();
     renderScreened();
     bindScreened();
+    bindPager('watch', function (d) { watchPage += d; renderWatch(); }, 'watchcount');
     bindControls();
     loadMap();
     applyFilters();
-    window.addEventListener('resize', debounce(function () { renderMap(); renderTimeline(); }, 150));
+    var lastTileSize = tileSize();
+    window.addEventListener('resize', debounce(function () { renderMap(); renderTimeline(); if (tileSize() !== lastTileSize) { lastTileSize = tileSize(); tilePage = 0; renderTiles(); } }, 150));
     window.addEventListener('hashchange', syncHash);
     window.addEventListener('popstate', syncHash);
     syncHash();
@@ -228,6 +255,8 @@
     $('tiles').addEventListener('click', function (e) {
       var t = e.target.closest('.tile'); if (t) openCase(t.dataset.id, { trigger: t });
     });
+    bindPager('tile', function (d) { tilePage += d; renderTiles(); }, 'resultcount');
+    bindPager('legend', function (d) { legendPage += d; renderLegend(legendList); }, 'legendbox');
     $('legend').addEventListener('click', function (e) {
       var b = e.target.closest('button[data-id]'); if (b) openCase(b.dataset.id, { trigger: b });
     });
@@ -303,6 +332,7 @@
     $('filterwhat').innerHTML = on ? 'Showing <b>' + list.length + '</b> of ' + D.rows.length + ': ' + esc(describeFilters()) : '';
     $('resultcount').innerHTML = on ? 'Showing <b>' + list.length + '</b> of ' + D.rows.length + ' incidents' : '<b>' + D.rows.length + '</b> incidents';
     expandedCluster = null; mapFocus = null;
+    tilePage = 0; legendPage = 0;
     renderTiles(list);
     renderMap();
     renderTimeline();
@@ -311,11 +341,14 @@
 
   /* ---------- Tiles ---------- */
   function renderTiles(list) {
+    list = list || filtered();
+    var pg = pageSlice(list, tilePage, tileSize()); tilePage = pg.page;
+    setPager('tile', pg, list.length, plural(list.length, 'incident', 'incidents'));
     if (!list.length) {
       $('tiles').innerHTML = '<p class="empty">No incidents match these filters. <button class="linkbtn" type="button" onclick="document.getElementById(\'filterreset3\').click()">Clear all filters</button></p>';
       return;
     }
-    $('tiles').innerHTML = list.map(function (r, i) {
+    $('tiles').innerHTML = pg.items.map(function (r, i) {
       var p = r.published, st = p.authority.status;
       return '<button type="button" class="tile' + (r.incident_id === openId ? ' sel' : '') + '" data-id="' + esc(r.incident_id) + '" style="animation-delay:' + Math.min(i * 18, 360) + 'ms" aria-label="' + esc(r.incident_id + ': ' + (p.title || '')) + '">' +
         '<span class="top">' + icon(p.defect_category) + '<span class="id">' + esc(r.incident_id) + '</span>' + (r._new ? '<span class="chip new">New</span>' : '') +
@@ -353,22 +386,17 @@
   function renderWatch() {
     var box = $('watch'); if (!box) return;
     var list = D.watch;
-    $('watchcount').textContent = list.length ? list.length + ' ' + plural(list.length, 'report', 'reports') + ' on the watchlist' : '';
-    if (!list.length) { box.innerHTML = '<p class="empty">No reports on the watchlist yet.</p>'; $('watchmore').hidden = true; return; }
-    var shown = watchAll ? list : list.slice(0, WATCH_SHOW);
-    box.innerHTML = shown.map(function (c) {
+    $('watchcount').textContent = list.length ? list.length + ' ' + plural(list.length, 'report', 'reports') + ' on the watchlist, newest first' : '';
+    var pg = pageSlice(list, watchPage, WATCH_PAGE); watchPage = pg.page;
+    setPager('watch', pg, list.length, plural(list.length, 'report', 'reports'));
+    if (!list.length) { box.innerHTML = '<li class="empty">No reports on the watchlist yet.</li>'; return; }
+    box.innerHTML = pg.items.map(function (c) {
       var title = has(c.tracker_title) ? c.tracker_title : c.name;
-      return '<li class="witem">' +
-        '<span class="wdate mono">' + esc(has(c.reported_on) ? fmtMonthOrDay(c.reported_on) : 'Date not stated') + '</span>' +
-        '<div class="wbody"><p class="wtitle">' + esc(title) + '</p>' +
-        '<p class="wwhy"><span class="label">Why it is not on the dashboard</span> ' + esc(c.reason) + '</p>' +
-        (has(c.url) ? '<a class="wsrc" href="' + esc(c.url) + '" target="_blank" rel="noopener noreferrer">Source</a>' : '') +
-        '</div></li>';
+      return '<li><details><summary><span class="sdate">' + esc(has(c.reported_on) ? fmtMonthOrDay(c.reported_on) : 'Date not stated') + '</span><span class="sname">' + esc(title) + '</span><span class="schev" aria-hidden="true"></span></summary>' +
+        '<div class="sbody"><p class="wwhy"><span class="label">Why it is not on the dashboard</span> ' + esc(c.reason) + '</p>' +
+        (has(c.url) ? '<a class="wsrc" href="' + esc(c.url) + '" target="_blank" rel="noopener noreferrer">Source</a>' : '<span class="nosrc">No source URL recorded</span>') +
+        '</div></details></li>';
     }).join('');
-    var more = $('watchmore');
-    more.hidden = list.length <= WATCH_SHOW;
-    more.textContent = watchAll ? 'Show the latest ' + WATCH_SHOW : 'Show all ' + list.length;
-    more.onclick = function () { watchAll = !watchAll; renderWatch(); };
   }
 
   /* ---------- Screened but not included ---------- */
@@ -382,18 +410,13 @@
     var box = $('screenlist'); if (!box) return;
     var q = ($('sq').value || '').trim();
     var all = D.screened, list = all.filter(function (x) { return screenedMatches(x, q); });
-    var pages = Math.max(1, Math.ceil(list.length / SCREEN_PAGE));
-    screenPage = Math.min(Math.max(screenPage, 0), pages - 1);
-    var start = screenPage * SCREEN_PAGE, shown = list.slice(start, start + SCREEN_PAGE);
+    var pg = pageSlice(list, screenPage, SCREEN_PAGE); screenPage = pg.page;
     $('screencount').textContent = q ? list.length + ' of ' + all.length + ' screened candidates match' : all.length + ' screened ' + plural(all.length, 'candidate', 'candidates') + ', most recently added first';
     $('sqclear').hidden = !q;
-    $('screenpager').hidden = list.length <= SCREEN_PAGE;
-    $('screenpos').textContent = list.length ? (start + 1) + ' to ' + (start + shown.length) + ' of ' + list.length + ' / page ' + (screenPage + 1) + ' of ' + pages : '';
-    $('screenprev').disabled = screenPage === 0;
-    $('screennext').disabled = screenPage >= pages - 1;
+    setPager('screen', pg, list.length, 'candidates');
     if (!all.length) { box.innerHTML = '<li class="empty">No screened candidates are recorded yet.</li>'; return; }
     if (!list.length) { box.innerHTML = '<li class="empty">No screened candidates match this search.</li>'; return; }
-    box.innerHTML = shown.map(function (x) {
+    box.innerHTML = pg.items.map(function (x) {
       var c = x.c;
       return '<li><details><summary><span class="screen-num">' + String(x.n).padStart(3, '0') + '</span><span class="sname">' + esc(c.name) + '</span><span class="schev" aria-hidden="true"></span></summary>' +
         '<div class="sbody"><p class="wwhy"><span class="label">Why it is not included</span> ' + esc(c.reason || 'Reason not stated') + '</p>' +
@@ -404,9 +427,7 @@
   function bindScreened() {
     $('sq').addEventListener('input', debounce(function () { screenPage = 0; renderScreened(); }, 160));
     $('sqclear').addEventListener('click', function () { $('sq').value = ''; screenPage = 0; renderScreened(); $('sq').focus(); });
-    function go(d) { screenPage += d; renderScreened(); var s = $('screened'); if (s && s.getBoundingClientRect().top < 0) $('screencount').scrollIntoView({ block: 'start', behavior: reduceMotion ? 'auto' : 'smooth' }); }
-    $('screenprev').addEventListener('click', function () { go(-1); });
-    $('screennext').addEventListener('click', function () { go(1); });
+    bindPager('screen', function (d) { screenPage += d; renderScreened(); }, 'screencount');
   }
 
   /* ---------- Map ---------- */
@@ -578,8 +599,12 @@
     return groups;
   }
   function renderLegend(list) {
+    legendList = list;
+    var pg = pageSlice(list, legendPage, LEGEND_PAGE); legendPage = pg.page;
+    $('legendsum').textContent = 'List pinned incidents (' + list.length + ')';
+    setPager('legend', pg, list.length, 'pinned');
     if (!list.length) { $('legend').innerHTML = '<li class="empty" style="grid-column:1/-1">No pinned incidents match these filters.</li>'; return; }
-    $('legend').innerHTML = list.map(function (r) {
+    $('legend').innerHTML = pg.items.map(function (r) {
       var p = r.published;
       return '<li><button type="button" data-id="' + esc(r.incident_id) + '" title="' + esc(p.title || '') + '"><span class="num">' + incNum(r.incident_id) + '</span><span><span class="place">' + esc(placeName(p.location.label)) + '</span><span class="ttl">' + esc(p.title || r.incident_id) + '</span></span></button></li>';
     }).join('');
@@ -718,6 +743,8 @@
       if (wasOpen || opts.replace) history.replaceState(null, '', '#' + id);
       else { history.pushState(null, '', '#' + id); pushedHash = true; }
     }
+    var fl = filtered(), fi = fl.findIndex(function (x) { return x.incident_id === id; });
+    if (fi >= 0 && Math.floor(fi / tileSize()) !== tilePage) { tilePage = Math.floor(fi / tileSize()); renderTiles(fl); }
     Array.prototype.forEach.call(document.querySelectorAll('.tile'), function (t) { t.classList.toggle('sel', t.dataset.id === id); });
     Array.prototype.forEach.call(document.querySelectorAll('#timeline .mark'), function (g) { g.classList.toggle('sel', g.dataset.id === id); });
     markMapSelection(true);
