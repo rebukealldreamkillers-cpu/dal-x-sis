@@ -239,7 +239,22 @@
     }).join('');
   }
 
+  var ISUGGEST = ['court', 'fabricated', 'evaluation', 'government', 'OpenAI', 'Claude', 'database', 'customer', '"human review"', 'regulator'];
+  function renderISuggest() {
+    $('isuggest').innerHTML = '<span class="label">Try</span>' + ISUGGEST.map(function (q) {
+      var save = F.q; F.q = q;
+      var n = D.rows.filter(function (r) { var sv = [F.defect, F.auth, F.dep, F.newOnly]; F.defect = F.auth = F.dep = ''; F.newOnly = false; var m = matches(r); F.defect = sv[0]; F.auth = sv[1]; F.dep = sv[2]; F.newOnly = sv[3]; return m; }).length;
+      F.q = save;
+      return n ? '<button type="button" class="chip" data-q="' + esc(q) + '" aria-pressed="false" title="Search for ' + esc(q) + '">' + esc(q.replace(/"/g, '')) + '<b>' + n + '</b></button>' : '';
+    }).join('');
+  }
   function bindControls() {
+    renderISuggest();
+    $('isuggest').addEventListener('click', function (e) {
+      var b = e.target.closest('button.chip'); if (!b) return;
+      F.q = F.q.toLowerCase() === b.dataset.q.toLowerCase() ? '' : b.dataset.q;
+      $('q').value = F.q; applyFilters();
+    });
     $('defects').addEventListener('click', function (e) {
       var b = e.target.closest('.defect'); if (!b) return;
       F.defect = F.defect === b.dataset.defect ? '' : b.dataset.defect;
@@ -301,8 +316,8 @@
     if (F.newOnly && !r._new) return false;
     if (F.q) {
       var hay = [r.incident_id, p.title, p.summary, p.organization, p.system, p.workflow, p.location && p.location.label, p.cluster, p.defect_label].join(' ').toLowerCase();
-      var terms = F.q.toLowerCase().split(/\s+/);
-      for (var i = 0; i < terms.length; i++) if (terms[i] && hay.indexOf(terms[i]) < 0) return false;
+      var terms = parseTerms(F.q);
+      for (var i = 0; i < terms.length; i++) if (hay.indexOf(terms[i]) < 0) return false;
     }
     return true;
   }
@@ -314,7 +329,7 @@
     if (F.auth) parts.push(authLabel(F.auth));
     if (F.dep) parts.push(depLabel(F.dep));
     if (F.newOnly) parts.push('Disclosed in the last 3 days');
-    if (F.q) parts.push('Search: "' + F.q + '"');
+    if (F.q) parts.push('Search: ' + parseTerms(F.q).map(function (t) { return '"' + t + '"'; }).join(' and '));
     return parts.join(' / ');
   }
 
@@ -331,7 +346,10 @@
     $('filterreset3').hidden = !on;
     $('filterbar').classList.toggle('on', on);
     $('filterwhat').innerHTML = on ? 'Showing <b>' + list.length + '</b> of ' + D.rows.length + ': ' + esc(describeFilters()) : '';
-    $('resultcount').innerHTML = on ? 'Showing <b>' + list.length + '</b> of ' + D.rows.length + ' incidents' : '<b>' + D.rows.length + '</b> incidents';
+    var qt = parseTerms(F.q);
+    $('resultcount').innerHTML = (list.length !== D.rows.length ? 'Showing <b>' + list.length + '</b> of ' + D.rows.length : '<b>' + D.rows.length + '</b>') + ' incidents' +
+      (qt.length ? ' matching ' + esc(qt.map(function (t) { return '"' + t + '"'; }).join(' and ')) : '');
+    Array.prototype.forEach.call(document.querySelectorAll('#isuggest button.chip'), function (b) { b.setAttribute('aria-pressed', String(F.q.toLowerCase() === b.dataset.q.toLowerCase())); });
     expandedCluster = null; mapFocus = null;
     tilePage = 0; legendPage = 0;
     renderTiles(list);
@@ -346,15 +364,23 @@
     var pg = pageSlice(list, tilePage, tileSize()); tilePage = pg.page;
     setPager('tile', pg, list.length, plural(list.length, 'incident', 'incidents'));
     if (!list.length) {
-      $('tiles').innerHTML = '<p class="empty">No incidents match these filters. <button class="linkbtn" type="button" onclick="document.getElementById(\'filterreset3\').click()">Clear all filters</button></p>';
+      $('tiles').innerHTML = '<p class="empty">No matches. <button class="linkbtn" type="button" onclick="document.getElementById(\'filterreset3\').click()">Clear all filters</button></p>';
       return;
     }
+    var terms = parseTerms(F.q);
     $('tiles').innerHTML = pg.items.map(function (r, i) {
       var p = r.published, st = p.authority.status;
+      var ttlLow = String(p.title || '').toLowerCase();
+      var snip = '';
+      if (terms.length && terms.some(function (t) { return ttlLow.indexOf(t) < 0; })) {
+        var fields = [p.summary, p.organization, p.system, p.workflow, p.location && p.location.label, p.cluster, p.defect_label];
+        for (var fi = 0; fi < fields.length && !snip; fi++) snip = snippet(fields[fi], terms.filter(function (t) { return ttlLow.indexOf(t) < 0; }));
+      }
       return '<button type="button" class="tile' + (r.incident_id === openId ? ' sel' : '') + '" data-id="' + esc(r.incident_id) + '" style="animation-delay:' + Math.min(i * 18, 360) + 'ms" aria-label="' + esc(r.incident_id + ': ' + (p.title || '')) + '">' +
         '<span class="top">' + icon(p.defect_category) + '<span class="id">' + esc(r.incident_id) + '</span>' + (r._new ? '<span class="chip new">New</span>' : '') +
         (p.disclosed_on ? '<span class="date">' + esc(fmtDay(p.disclosed_on)) + '</span>' : '') + '</span>' +
-        '<span class="ttl">' + esc(p.title || r.incident_id) + '</span>' +
+        '<span class="ttl">' + highlight(p.title || r.incident_id, terms) + '</span>' +
+        (snip ? '<span class="snip">' + highlight(snip, terms) + '</span>' : '') +
         '<span class="bot">' + (st ? '<span class="chip auth-' + esc(st) + '">' + esc(authLabel(st)) + '</span>' : '') +
         (p.deployment ? '<span class="chip dep">' + esc(depShort(p.deployment)) + '</span>' : '') + '</span>' +
         '</button>';

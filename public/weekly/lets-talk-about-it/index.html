@@ -616,7 +616,7 @@ footer.site .wrap { display: flex; flex-wrap: wrap; gap: 10px 24px; justify-cont
       <div class="controls">
         <div class="field search">
           <label class="label" for="q">Search</label>
-          <input id="q" type="search" placeholder="Organization, system, or keyword" autocomplete="off">
+          <input id="q" type="search" placeholder="Title, organization, system or place" autocomplete="off">
         </div>
         <div class="field defect-f">
           <label class="label" for="f-defect">Defect</label>
@@ -634,6 +634,7 @@ footer.site .wrap { display: flex; flex-wrap: wrap; gap: 10px 24px; justify-cont
           <button class="toggle" type="button" id="f-new" aria-pressed="false"><span class="box" aria-hidden="true"></span>New only</button>
         </div>
       </div>
+      <div class="suggest" id="isuggest" aria-label="Suggested searches"></div>
       <div class="result-row"><span id="resultcount" aria-live="polite"></span><button class="linkbtn" type="button" id="filterreset3" hidden>Clear all filters</button></div>
       <div class="tiles" id="tiles"><p class="loading">Loading incidents.</p></div>
       <div class="pager" id="tilepager" hidden><span class="pos" id="tilepos"></span><span class="btns"><button class="btn" type="button" id="tileprev">Previous</button><button class="btn" type="button" id="tilenext">Next</button></span></div>
