@@ -462,10 +462,10 @@
   }
   function screenFiltersOn() { var st = screenState(); return !!(st.q || st.scope !== 'all' || st.src || st.sort !== 'new'); }
   function renderSuggest() {
-    $('suggest').innerHTML = '<span class="label">Try</span>' + SUGGEST.map(function (s) {
+    $('suggest').innerHTML = '<span class="label">Common words in reasons</span>' + SUGGEST.map(function (s) {
       var n = D.screened.filter(function (x) { return screenedMatches(x, parseTerms(s[1]), 'all', ''); }).length;
       if (!n) return '';
-      return '<button type="button" class="chip" data-q="' + esc(s[1]) + '" aria-pressed="false">' + esc(s[0]) + '<b>' + n + '</b></button>';
+      return '<button type="button" class="chip" data-q="' + esc(s[1]) + '" aria-pressed="false" title="Search for ' + esc(s[1]) + '">' + esc(s[1].replace(/"/g, '')) + '<b>' + n + '</b></button>';
     }).join('');
   }
   function renderScreened() {
