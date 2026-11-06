@@ -150,16 +150,13 @@
     renderHero();
     buildFilterOptions();
     renderStats();
-    renderWatch();
     renderScreened();
     bindScreened();
-    bindPager('watch', function (d) { watchPage += d; renderWatch(); }, 'watchcount');
-    $('watch').addEventListener('click', function (e) { var t = e.target.closest('.tile'); if (t) openExcl('w', +t.dataset.i, { trigger: t }); });
     bindControls();
     loadMap();
     applyFilters();
     var lastTileSize = tileSize();
-    window.addEventListener('resize', debounce(function () { renderMap(); renderTimeline(); if (tileSize() !== lastTileSize) { lastTileSize = tileSize(); tilePage = 0; watchPage = 0; screenPage = 0; renderTiles(); renderWatch(); renderScreened(); } }, 150));
+    window.addEventListener('resize', debounce(function () { renderMap(); renderTimeline(); if (tileSize() !== lastTileSize) { lastTileSize = tileSize(); tilePage = 0; screenPage = 0; renderTiles(); renderScreened(); } }, 150));
     window.addEventListener('hashchange', syncHash);
     window.addEventListener('popstate', syncHash);
     syncHash();
