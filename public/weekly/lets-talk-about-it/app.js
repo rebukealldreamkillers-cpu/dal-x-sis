@@ -414,11 +414,8 @@
   var screenPage = 0;
   // Search terms: words, or "quoted phrases". Every term must match.
   var SUGGEST = [
-    ['Attacker operated', 'attacker'], ['Single account', 'single'], ['Anonymous', 'anonymous'],
-    ['Research or test', 'research'], ['Sandbox', 'sandbox'], ['No outside party', '"outside party"'],
-    ['Low stakes', '"low stakes"'], ['Show cause only', '"show cause"'], ['No sanction', '"no sanction"'],
-    ['AI use', '"AI use"'], ['Primary record', 'primary'], ['GitHub issue', '"GitHub issue"'],
-    ['Courts', 'court'], ['Regulators', 'regulator'], ['Ombudsman', 'ombudsman']
+    ['', 'attacker'], ['', 'anonymous'], ['', '"GitHub issue"'], ['', 'sandbox'], ['', '"show cause"'],
+    ['', '"no sanction"'], ['', '"low stakes"'], ['', 'court'], ['', 'regulator'], ['', 'ombudsman']
   ];
   function parseTerms(q) {
     var out = [], re = /"([^"]+)"|(\S+)/g, m;
@@ -462,7 +459,7 @@
   }
   function screenFiltersOn() { var st = screenState(); return !!(st.q || st.scope !== 'all' || st.src || st.sort !== 'new'); }
   function renderSuggest() {
-    $('suggest').innerHTML = '<span class="label">Common words in reasons</span>' + SUGGEST.map(function (s) {
+    $('suggest').innerHTML = '<span class="label">Try</span>' + SUGGEST.map(function (s) {
       var n = D.screened.filter(function (x) { return screenedMatches(x, parseTerms(s[1]), 'all', ''); }).length;
       if (!n) return '';
       return '<button type="button" class="chip" data-q="' + esc(s[1]) + '" aria-pressed="false" title="Search for ' + esc(s[1]) + '">' + esc(s[1].replace(/"/g, '')) + '<b>' + n + '</b></button>';
@@ -481,7 +478,7 @@
     Array.prototype.forEach.call(document.querySelectorAll('#suggest button.chip'), function (b) { b.setAttribute('aria-pressed', String(st.q.toLowerCase() === b.dataset.q.toLowerCase())); });
     setPager('screen', pg, list.length, 'candidates');
     if (!all.length) { box.innerHTML = '<p class="empty">No screened candidates are recorded yet.</p>'; return; }
-    if (!list.length) { box.innerHTML = '<p class="empty">No screened candidates match. Try fewer words, search name, reason and source, or <button class="linkbtn" type="button" onclick="document.getElementById(\'sqreset\').click()">clear all filters</button>.</p>'; return; }
+    if (!list.length) { box.innerHTML = '<p class="empty">No matches. <button class="linkbtn" type="button" onclick="document.getElementById(\'sqreset\').click()">Clear all filters</button></p>'; return; }
     box.innerHTML = pg.items.map(function (x, j) { return exclTile(x, 's', pg.start + j, terms, st.scope); }).join('');
   }
   function exclListFor(kind) { return kind === 'w' ? watchList() : screenedList(); }
