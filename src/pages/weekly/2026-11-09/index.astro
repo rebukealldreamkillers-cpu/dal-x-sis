@@ -1,0 +1,123 @@
+---
+import Base from '../../../layouts/Base.astro';
+---
+
+<Base
+  title="Decision Governance Weekly | 2 to 8 Nov 2026 | Issue 07"
+  description="Decision Governance Weekly Issue 07: human approval bypass in agent harnesses, stale approval rejection, and reviewer authority. Reporting period Mon 2 Nov to Sun 8 Nov 2026. Published by Jochanni Labs."
+  type="article"
+  publishedDate="2026-11-09"
+>
+
+  <div class="weekly-header">
+    <div class="container">
+      <div class="weekly-brandline">
+        <img class="weekly-logo" src="/weekly/jochanni-labs-logo.jpg" alt="Jochanni Labs logo, a flame inside a shield" width="64" height="64" />
+        <p class="weekly-kicker">Jochanni Labs / Decision Governance / Issue 07</p>
+      </div>
+      <h1>Decision Governance Weekly</h1>
+      <p class="weekly-purpose">What happened. Where enforcement failed. How DAL-X can enforce authority before execution.</p>
+      <div class="weekly-meta">
+        <div class="weekly-meta-item"><span class="weekly-meta-label">Reporting period</span><span class="weekly-meta-value">Mon 2 Nov to Sun 8 Nov 2026</span></div>
+        <div class="weekly-meta-item"><span class="weekly-meta-label">Publication date</span><span class="weekly-meta-value">9 November 2026</span></div>
+        <div class="weekly-meta-item"><span class="weekly-meta-label">Publisher</span><span class="weekly-meta-value">Published by Jochanni Labs</span></div>
+        <div class="weekly-meta-item"><span class="weekly-meta-label">Founder and publisher</span><span class="weekly-meta-value">Kevin Moore</span></div>
+      </div>
+      <span class="weekly-doctrine-tag">No Authority, No Execution</span>
+    </div>
+  </div>
+
+  <main class="weekly-body">
+
+<section class="weekly-section weekly-section--lead">
+<div class="container">
+<div class="weekly-secnum">Opening finding</div>
+<h2>DeepSeek Harness advisory says local processes could answer human approval requests</h2>
+<p class="weekly-lead-p">VulnCheck's 4 November advisory reports that DeepSeek Harness exposed an unauthenticated control plane through which local processes could invoke agent shell tools and bypass human approval.<sup><a href="#s1">1</a></sup> Approval identifiers exposed in a session stream were sufficient to answer pending requests, so the presence of an approval step did not establish reviewer authority.</p>
+<p>The advisory establishes a vulnerability, not a confirmed enterprise breach. Exploitation dates and affected organizations are not established.</p>
+<div class="weekly-figure"><div class="weekly-figcaption-label">Explanatory diagram / Advisory-described failure</div><div class="weekly-flow weekly-flow--3"><div class="weekly-flow-step"><span class="weekly-flow-num">01 / LOCAL PROCESS</span><b>No authenticated reviewer</b><span>A local process reaches the agent control plane.</span></div><div class="weekly-flow-step"><span class="weekly-flow-num">02 / APPROVAL RESPONSE</span><b>Identifiers accepted</b><span>The exposed session identifiers can answer a pending request.</span></div><div class="weekly-flow-step weekly-flow-step--outcome"><span class="weekly-flow-num">03 / EXECUTION</span><b>Shell tools exposed</b><span>The advisory reports command execution as the victim user.</span></div></div><div class="weekly-limit">An approval response must prove current authority for the exact action, not merely reference a pending request.</div><p class="weekly-figcaption">Source and credit: Jochanni Labs explanatory visual based on <a href="https://www.vulncheck.com/advisories/deepseek-harness-unauthenticated-rpc-command-execution" rel="noopener noreferrer" target="_blank">VulnCheck, 4 November 2026</a>. Not a screenshot, reproduced exploit or customer system.</p></div>
+</div>
+</section>
+<section class="weekly-section">
+<div class="container">
+<div class="weekly-secnum">01 / Market Response</div>
+<h2>Runtime controls advance, with different evidence limits</h2>
+<div class="weekly-table-wrap"><table class="weekly-table"><thead><tr><th>Organization</th><th>Reported response</th><th>Evidence level</th><th>Unverified</th></tr></thead><tbody>
+<tr><td>Algen<sup><a href="#s3">3</a></sup></td><td>Require approval at the tool executor for CRM ownership changes.</td><td>3 Nov: code and mock example.</td><td>Production behavior; reviewer mandate.</td></tr>
+<tr><td>LangChain<sup><a href="#s4">4</a></sup></td><td>Release strict stale-answer rejection in LangGraph 1.2.20.</td><td>5 Nov: release and maintainer tests.</td><td>Exact tool-payload binding; reviewer authority.</td></tr>
+<tr><td>Sysdig<sup><a href="#s7">7</a></sup></td><td>Announce blocking or holding risky credential reads.</td><td>4 Nov: general availability announcement.</td><td>Executor rejection traces; approval replay controls.</td></tr>
+</tbody></table></div>
+<p>Sysdig says policies begin in alert mode. Availability does not establish that customers enabled enforcement.</p>
+</div>
+</section>
+<section class="weekly-section">
+<div class="container">
+<div class="weekly-secnum">02 / Incidents and Enforcement Gaps</div>
+<h2>One new advisory and one research update</h2>
+<p>New, demonstrated vulnerability: DeepSeek Harness, CVE-2026-82033. The reported consequence is arbitrary command execution as the victim user, including approval bypass. The advisory identifies versions before 0.1.2-alpha.2; its commit references need clarification.<sup><a href="#s1">1</a></sup></p>
+<p>Update, demonstrated vulnerabilities: Cymulate's 3 November synthesis connects earlier findings into two researcher-demonstrated chains reaching privileged Azure and GCP identities. Execution-sensitive configuration writes and workspace executable launches crossed trust boundaries without the required approval. These are demonstrations, not reported customer compromises; underlying test dates are unspecified.<sup><a href="#s2">2</a></sup></p>
+<p>In this reviewed case set: two vulnerability reports, one new and one update. No confirmed unauthorized production execution or blocked production attempt was established. These counts are not an incident rate.</p>
+</div>
+</section>
+<section class="weekly-section">
+<div class="container">
+<div class="weekly-secnum">03 / Domains Requiring Enforcement</div>
+<h2>Check the action where it changes the system</h2>
+<div class="weekly-table-wrap"><table class="weekly-table"><thead><tr><th>Domain / source</th><th>Exact action</th><th>Authority check belongs</th><th>If absent</th></tr></thead><tbody><tr><td>Agent host<sup><a href="#s1">1</a></sup></td><td>Execute a shell command.</td><td>Command executor, before process creation.</td><td>Commands run as the victim user.</td></tr><tr><td>Development / cloud<sup><a href="#s2">2</a></sup></td><td>Write execution configuration or change a setup script.</td><td>Configuration write and launch boundaries.</td><td>Attacker code runs and exposes cloud credentials.</td></tr><tr><td>CRM<sup><a href="#s3">3</a></sup></td><td>Change an account owner.</td><td>Record-update handler, binding account and new owner.</td><td>An unapproved ownership change can execute.</td></tr></tbody></table></div>
+</div>
+</section>
+<section class="weekly-section">
+<div class="container">
+<div class="weekly-secnum">04 / Enforcement Evidence and DAL Impact</div>
+<h2>A fresh approval question needs its own answer</h2>
+<p>LangGraph's released changes give successive interrupts distinct identifiers. Maintainer tests report rejection of a retried answer once the next question is pending. Strict rejection is opt-in, with documented checkpoint exceptions; this is not proof of single-use downstream execution or authorized human review.<sup><a href="#s5">5</a>, <a href="#s6">6</a></sup></p>
+<p>Algen describes an executor refusing calls without covering approval, storing exact parameters and recording idempotency keys. Interrupted writes remain indeterminate rather than automatically retried. Its example is synthetic, and the runtime is a single-node prerelease.<sup><a href="#s3">3</a></sup></p>
+<p>Decision Governance is the category. The Decision Authority Layer is the runtime enforcement layer; DAL-X is the application Jochanni Labs is building. System access does not establish authority to execute a specific action. Enterprise trigger logic identifies actions requiring an authority decision.</p>
+<p>Conditional assessment: DAL-style enforcement could stop an unauthorized shell command only if triggers cover it, reviewer authority is verified independently of exposed request identifiers, approval binds the exact payload, and every relevant execution path rejects missing, mismatched, expired or consumed authority before launch. This would not make an approved command correct.<sup><a href="#s8">8</a></sup></p>
+<p class="weekly-status">DAL-X status: the layer site reports real-system sandbox execution with no customer deployment. The application site still describes simulation with production controls incomplete. Neither establishes an enterprise pilot or production enforcement.<sup><a href="#s9">9</a>, <a href="#s10">10</a></sup></p>
+</div>
+</section>
+<section class="weekly-section">
+<div class="container">
+<div class="weekly-secnum">05 / Enterprise Check and Next Week's Watch</div>
+<h2>Test the reviewer and the reused response</h2>
+<p>Shell execution: submit approval from an identity lacking the required mandate, then retry an old response against a new command. Effective control requires executor rejection, no process launch, and matching authority and outcome records.</p>
+<p>Watch for clarified DeepSeek patch references and LangGraph tests binding approval to exact tool arguments. Seek executor-level evidence behind Sysdig's blocking claims.</p>
+<div class="weekly-question">Can your command executor distinguish a valid approver from a process holding an approval identifier?</div>
+<nav class="weekly-explore" aria-label="Further reading"><a class="weekly-explore-link" href="https://www.decisionauthoritylayer.com/architecture" rel="noopener noreferrer" target="_blank">Execution-path architecture<span>Downstream validation and bypass coverage</span></a><a class="weekly-explore-link" href="/briefings/Strategic_Intelligence_Briefing_05/">Strategic Intelligence Series<span>Output, authority and execution</span></a></nav>
+</div>
+</section>
+
+<div class="weekly-sources">
+<div class="container">
+<h2>Sources and evidence scope</h2>
+<ol>
+<li id="s1"><a href="https://www.vulncheck.com/advisories/deepseek-harness-unauthenticated-rpc-command-execution" rel="noopener noreferrer" target="_blank">VulnCheck: DeepSeek Harness Unauthenticated RPC Command Execution</a>, 4 November 2026. Primary CVE advisory; exploitation dates unspecified.</li>
+<li id="s2"><a href="https://cymulate.com/blog/ai-agent-security-kill-chains/" rel="noopener noreferrer" target="_blank">Cymulate: Across the Kill Chain</a>, 3 November 2026. Primary researcher synthesis of earlier findings; demonstration dates unspecified.</li>
+<li id="s3"><a href="https://algen.ai/blog/approvals-belong-in-the-runtime" rel="noopener noreferrer" target="_blank">Algen: Approvals Belong in the Runtime, Not the Prompt</a>, 3 November 2026. Author-described implementation and synthetic example.</li>
+<li id="s4"><a href="https://github.com/langchain-ai/langgraph/releases/tag/1.2.20" rel="noopener noreferrer" target="_blank">LangGraph 1.2.20 release</a>, 5 November 2026, 02:20 UTC.</li>
+<li id="s5"><a href="https://github.com/langchain-ai/langgraph/pull/9574" rel="noopener noreferrer" target="_blank">LangGraph PR 9574: strict resume mode</a>, merged 4 November 2026. Maintainer test report; not independently run.</li>
+<li id="s6"><a href="https://github.com/langchain-ai/langgraph/pull/9589" rel="noopener noreferrer" target="_blank">LangGraph PR 9589: distinct interrupt IDs</a>, merged 4 November 2026. Maintainer test report; not independently run.</li>
+<li id="s7"><a href="https://www.sysdig.com/press-releases/sysdig-launches-sysdig-ai-defense-bringing-runtime-security-to-every-action-ai-agents-take" rel="noopener noreferrer" target="_blank">Sysdig AI Defense announcement</a>, 4 November 2026. Vendor claims, not independent enforcement tests.</li>
+<li id="s8"><a href="https://www.decisionauthoritylayer.com/architecture" rel="noopener noreferrer" target="_blank">Jochanni Labs: DAL-X architecture</a>. Undated; checked 9 November 2026.</li>
+<li id="s9"><a href="https://www.decisionauthoritylayer.com/product" rel="noopener noreferrer" target="_blank">Jochanni Labs: DAL-X product</a>. Undated; checked 9 November 2026.</li>
+<li id="s10"><a href="/dal-x/">Jochanni Labs: DAL-X application</a>. Undated; checked 9 November 2026.</li>
+</ol>
+<p class="weekly-sources-note">Public primary sources only. No private enterprise telemetry or independently executed vendor tests. Absence of public evidence does not establish absence of enforcement.</p>
+</div>
+</div>
+
+    <div class="weekly-pilot-cta">
+      <div class="container">
+        <p class="weekly-pilot-cta-label">Integration Action</p>
+        <h2>Discuss a Paid Enterprise Pilot</h2>
+        <p>The incidents covered this week share one structural gap: no authority check at the receiving system. DAL-X enforces that check in a simulated enterprise environment. A paid enterprise pilot would test it against one agent, one consequential action, and one downstream system.</p>
+        <div class="weekly-pilot-cta-row">
+          <a href="/contact" class="btn-primary">Contact to discuss the pilot</a>
+          <a href="/weekly/" class="btn-outline">All issues</a>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</Base>
