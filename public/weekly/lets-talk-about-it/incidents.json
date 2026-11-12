@@ -1,8 +1,8 @@
 {
- "updated": "2026-11-11",
- "last_check": "2026-11-11T13:05:12Z",
- "next_incident_number": 107,
- "next_report_number": 184,
+ "updated": "2026-11-12",
+ "last_check": "2026-11-12T13:07:50Z",
+ "next_incident_number": 109,
+ "next_report_number": 186,
  "excluded_candidates": [
   {
    "name": "Gemini CLI file loss report (July 2025)",
@@ -1695,8 +1695,8 @@
   },
   {
    "name": "Texas federal court criticism of AI-assisted release motion in voting case (4 November 2026)",
-   "reason": "No sanction was imposed, no fabricated authority is established by the reviewed report and the primary order was not located.",
-   "url": "https://www.businessinsider.com/judge-rips-lawyers-using-chatgpt-ai-slop-voting-case-2026-11",
+   "reason": "Now published as INC0108 after the primary order was verified; the order establishes AI-attributed misrepresented authority and judicial findings, but no fabricated case or current sanction. Retained for screening history.",
+   "url": "https://www.damiencharlotin.com/documents/3412/Khalwinder_Bhengura_v._United_States_USA_04-11-2026.pdf",
    "tracker": false
   },
   {
@@ -2061,6 +2061,126 @@
    "reason": "The court left AI use unresolved and counsel denied it, so the documented AI attribution required for court-filings inclusion is not established.",
    "url": "https://incidentdatabase.ai/cite/1813/",
    "tracker": true
+  },
+  {
+   "name": "United restrictions on third-party AI booking agents (12 November 2026)",
+   "reason": "Policy restrictions, not a documented unauthorized booking or cancellation with an affected reservation.",
+   "url": "https://travelnewsradar.com/news/united-restricts-third-party-ai-booking-agents/"
+  },
+  {
+   "name": "Unnamed Dubai perfume-shop chatbot refund anecdote",
+   "reason": "Anonymous vendor anecdote without an identifiable shop, independent corroboration or a verified refund outcome.",
+   "url": "https://knowlio.in/blog/chatgpt-for-customer-service"
+  },
+  {
+   "name": "Deutsche Bank BancoPosta prescoring transparency sanction (Garante, 7 October 2026)",
+   "reason": "Transparency and controller-role findings do not establish a credit decision executed without meaningful human review.",
+   "url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10310391"
+  },
+  {
+   "name": "Zilch refund applied to the wrong transaction (FOS DRN-6589627)",
+   "reason": "Refund and arrears problems are documented, but no AI or automated decision executor is identified.",
+   "url": "https://www.financial-ombudsman.org.uk/decision/DRN-6589627.pdf"
+  },
+  {
+   "name": "Kyrgyz payment-operator automated-system compliance fine (November 2026)",
+   "reason": "The account identifies neither an operator nor a specific consequential action executed by an AI or automated decision system.",
+   "url": "https://economist.kg/en/national-bank-fines-payment-organization-1-45-million-som/"
+  },
+  {
+   "name": "EDPB recruitment automated-decision enforcement initiative (11 November 2026)",
+   "reason": "An enforcement initiative planned for 2027, not a finding about an identified employer's executed decision.",
+   "url": "https://www.edpb.europa.eu/news/edpb-adopts-statement-on-review-of-the-republic-of-korea-adequacy-processor-bcr_en"
+  },
+  {
+   "name": "Workday recruitment discrimination litigation update (11 November 2026)",
+   "reason": "Contested lawsuit allegations do not establish an adjudicated or admitted unauthorized automated rejection.",
+   "url": "https://finance.yahoo.com/technology/ai/articles/workday-seeks-decertify-15-000-114737112.html"
+  },
+  {
+   "name": "CMS cost-report settlement oversight errors (HHS OIG, 10 November 2026)",
+   "reason": "The report identifies audit and supervisory-review errors, not an AI or automated decision executor.",
+   "url": "https://oig.hhs.gov/reports/all/2026/cmss-oversight-of-medicare-administrative-contractors-cost-report-settlement-processes-was-not-adequate-to-identify-settlements-that-contained-obvious-errors-and-that-had-inadequate-supervisory-review/"
+  },
+  {
+   "name": "Norwegian Ombudsman administrative AI report (11 November 2026)",
+   "reason": "The report says evidence is insufficient to resolve legal compliance and establishes no individual unauthorized executed decision.",
+   "url": "https://www.sivilombudet.no/aktuelt/ny-rapport-om-bruk-av-ki-i-saksbehandling/"
+  },
+  {
+   "name": "Swedish parental-benefit AI risk selection in discrimination audit (2026)",
+   "reason": "Reported disproportionate selection and possible delays do not establish a particular adverse decision made without human review.",
+   "url": "https://www.riksrevisionen.se/granskningar/granskningsrapporter/2026/etnisk-diskriminering---statens-arbete-for-att-motverka-risker-vid-myndigheters-beslut.html"
+  },
+  {
+   "name": "Swedish social-insurance income decision issued after staff-entry and correction errors (JO 4778-2006, 21 January 2008)",
+   "reason": "The record establishes a staff-entry mistake and failure to stop a conventional workflow despite same-day human detection, not an AI executor or a finding of a substantive decision made without human review.",
+   "url": "https://www.jo.se/app/uploads/resolve_pdfs/813495_4778-2006.pdf"
+  },
+  {
+   "name": "Pegasus admin-password breach notice (Turkish KVKK, 11 November 2026)",
+   "reason": "Unauthorized access is documented, but no disclosure action by an AI system is identified.",
+   "url": "https://www.kvkk.gov.tr/Icerik/9097/kamuoyu-duyurusu-veri-ihlali-bildirimi-pegasus-hava-tasimaciligi-a-s"
+  },
+  {
+   "name": "Air India processor breach notice (Turkish KVKK, 11 November 2026)",
+   "reason": "Processor access to reservation information is documented, but no AI executor is identified.",
+   "url": "https://www.kvkk.gov.tr/Icerik/9099/kamuoyu-duyurusu-veri-ihlali-bildirimi-air-india-limited"
+  },
+  {
+   "name": "ICO guidance on AI-generated subject access requests (11 November 2026)",
+   "reason": "Guidance describes risks of fabricated request details, not a specific executed unauthorized disclosure.",
+   "url": "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/subject-access-requests/subject-access-requests-generated-by-artificial-intelligence/"
+  },
+  {
+   "name": "Cursor internal workspace stash and reset bug (28 March 2026, recirculated 11 November)",
+   "reason": "The reporter describes a read-only agent session and vendor staff attribute the operation to an internal workspace bug, not an AI-executed command.",
+   "url": "https://forum.cursor.com/t/cursor-ide-silently-runs-git-stash-git-reset-head-during-active-agent-session-all-uncommitted-changes-lost/156146"
+  },
+  {
+   "name": "OpenAI Workspace Agent run-start outage (11 November 2026)",
+   "reason": "Failure to start runs is a service outage, not an unauthorized consequential action executed by an agent.",
+   "url": "https://www.host-tracker.com/en/is-openai-down/incidents/2026-11-11-2250"
+  },
+  {
+   "name": "Reported Neoron or Nemotron agent changes after stop in OpenCode issue 63216 (10 November 2026)",
+   "reason": "Single uncorroborated user report with no execution trace or affected-file list; the application and system attribution remain unresolved in the issue.",
+   "url": "https://github.com/anomalyco/opencode/issues/63216"
+  },
+  {
+   "name": "Depi Codex issue-labeler exploit chain (11 November 2026)",
+   "reason": "The complete chain is demonstrated in a test repository; no unauthorized production release or outside-party effect is established.",
+   "url": "https://depi.security/blog/20261111-backdooring-codex/"
+  },
+  {
+   "name": "Darktrace Claude memory-store command-and-control experiment (12 November 2026)",
+   "reason": "The primary report states all systems and accounts belonged to the researchers and the technique has not been observed in the wild.",
+   "url": "https://www.darktrace.com/blog/living-off-the-ai-shared-memories-as-a-covert-c2-channel"
+  },
+  {
+   "name": "Barracuda machine-speed cloud intrusion (11 November 2026)",
+   "reason": "Attacker-operated agents used a cloud key; no hijacked enterprise or provider-run agent is documented.",
+   "url": "https://blog.barracuda.com/2026/11/11/anatomy-of-a-machine-speed-intrusion"
+  },
+  {
+   "name": "Miasma coding-agent setup trap coverage (11 November 2026)",
+   "reason": "Poisoned repositories and malicious instructions do not establish a particular victim outcome executed by an AI agent.",
+   "url": "https://blog.gridinsoft.com/miasma-ai-coding-agent-setup-trap/"
+  },
+  {
+   "name": "AntiFox AWS credential theft and storage operations (Arctic Wolf reporting, 11 November 2026)",
+   "reason": "Attacker-operated agents, not an enterprise or provider-run agent crossing its delegated authority boundary.",
+   "url": "https://www.bleepingcomputer.com/news/security/hackers-use-antifox-ai-agents-in-aws-credential-theft-attacks/"
+  },
+  {
+   "name": "Anthropic Worse Together multi-agent experiments (11 November 2026)",
+   "reason": "The reported task cancellations and overrides occur in simulated-user evaluations, with no consequential outside-party outcome.",
+   "url": "https://alignment.anthropic.com/2026/worse-together/"
+  },
+  {
+   "name": "Tel Aviv Regional Labor Court allegedly AI-generated authorities (8 November 2026 tracker entry)",
+   "reason": "The tracker labels AI use implied and records no sanction; established AI attribution and the required primary findings were not verified.",
+   "url": "https://www.damiencharlotin.com/hallucinations/"
   }
  ],
  "rows": [
@@ -2206,7 +2326,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z"
+   "snapshot_at": "2026-11-12T13:07:50Z"
   },
   {
    "incident_id": "INC0002",
@@ -2349,7 +2469,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z"
+   "snapshot_at": "2026-11-12T13:07:50Z"
   },
   {
    "incident_id": "INC0003",
@@ -2471,7 +2591,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z"
+   "snapshot_at": "2026-11-12T13:07:50Z"
   },
   {
    "incident_id": "INC0004",
@@ -2608,7 +2728,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z"
+   "snapshot_at": "2026-11-12T13:07:50Z"
   },
   {
    "incident_id": "INC0005",
@@ -2766,7 +2886,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z"
+   "snapshot_at": "2026-11-12T13:07:50Z"
   },
   {
    "incident_id": "INC0006",
@@ -2913,7 +3033,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z"
+   "snapshot_at": "2026-11-12T13:07:50Z"
   },
   {
    "incident_id": "INC0007",
@@ -3018,7 +3138,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z"
+   "snapshot_at": "2026-11-12T13:07:50Z"
   },
   {
    "incident_id": "INC0008",
@@ -3154,7 +3274,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z"
+   "snapshot_at": "2026-11-12T13:07:50Z"
   },
   {
    "incident_id": "INC0009",
@@ -3266,7 +3386,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z"
+   "snapshot_at": "2026-11-12T13:07:50Z"
   },
   {
    "incident_id": "INC0010",
@@ -3402,7 +3522,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z"
+   "snapshot_at": "2026-11-12T13:07:50Z"
   },
   {
    "incident_id": "INC0011",
@@ -3558,7 +3678,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z"
+   "snapshot_at": "2026-11-12T13:07:50Z"
   },
   {
    "incident_id": "INC0012",
@@ -3700,7 +3820,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z"
+   "snapshot_at": "2026-11-12T13:07:50Z"
   },
   {
    "incident_id": "INC0013",
@@ -3883,7 +4003,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z"
+   "snapshot_at": "2026-11-12T13:07:50Z"
   },
   {
    "incident_id": "INC0014",
@@ -4031,7 +4151,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z"
+   "snapshot_at": "2026-11-12T13:07:50Z"
   },
   {
    "incident_id": "INC0015",
@@ -4168,7 +4288,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z"
+   "snapshot_at": "2026-11-12T13:07:50Z"
   },
   {
    "incident_id": "INC0016",
@@ -4288,7 +4408,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z"
+   "snapshot_at": "2026-11-12T13:07:50Z"
   },
   {
    "incident_id": "INC0017",
@@ -4418,7 +4538,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z"
+   "snapshot_at": "2026-11-12T13:07:50Z"
   },
   {
    "incident_id": "INC0018",
@@ -4564,7 +4684,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z"
+   "snapshot_at": "2026-11-12T13:07:50Z"
   },
   {
    "incident_id": "INC0019",
@@ -4698,7 +4818,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z"
+   "snapshot_at": "2026-11-12T13:07:50Z"
   },
   {
    "incident_id": "INC0020",
@@ -4836,7 +4956,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z"
+   "snapshot_at": "2026-11-12T13:07:50Z"
   },
   {
    "incident_id": "INC0021",
@@ -4961,7 +5081,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z"
+   "snapshot_at": "2026-11-12T13:07:50Z"
   },
   {
    "incident_id": "INC0022",
@@ -5142,7 +5262,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z"
+   "snapshot_at": "2026-11-12T13:07:50Z"
   },
   {
    "incident_id": "INC0023",
@@ -5304,7 +5424,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z"
+   "snapshot_at": "2026-11-12T13:07:50Z"
   },
   {
    "incident_id": "INC0024",
@@ -5465,7 +5585,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z"
+   "snapshot_at": "2026-11-12T13:07:50Z"
   },
   {
    "incident_id": "INC0025",
@@ -5632,7 +5752,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z"
+   "snapshot_at": "2026-11-12T13:07:50Z"
   },
   {
    "incident_id": "INC0026",
@@ -5792,7 +5912,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z"
+   "snapshot_at": "2026-11-12T13:07:50Z"
   },
   {
    "incident_id": "INC0027",
@@ -5928,7 +6048,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z"
+   "snapshot_at": "2026-11-12T13:07:50Z"
   },
   {
    "incident_id": "INC0028",
@@ -6053,7 +6173,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z"
+   "snapshot_at": "2026-11-12T13:07:50Z"
   },
   {
    "incident_id": "INC0029",
@@ -6175,7 +6295,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z"
+   "snapshot_at": "2026-11-12T13:07:50Z"
   },
   {
    "incident_id": "INC0030",
@@ -6303,7 +6423,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z"
+   "snapshot_at": "2026-11-12T13:07:50Z"
   },
   {
    "incident_id": "INC0031",
@@ -6420,7 +6540,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z"
+   "snapshot_at": "2026-11-12T13:07:50Z"
   },
   {
    "incident_id": "INC0032",
@@ -6527,7 +6647,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z"
+   "snapshot_at": "2026-11-12T13:07:50Z"
   },
   {
    "incident_id": "INC0033",
@@ -6538,7 +6658,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z",
+   "snapshot_at": "2026-11-12T13:07:50Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6674,7 +6794,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z",
+   "snapshot_at": "2026-11-12T13:07:50Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6818,7 +6938,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z",
+   "snapshot_at": "2026-11-12T13:07:50Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6955,7 +7075,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z",
+   "snapshot_at": "2026-11-12T13:07:50Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7102,7 +7222,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z",
+   "snapshot_at": "2026-11-12T13:07:50Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7233,7 +7353,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z",
+   "snapshot_at": "2026-11-12T13:07:50Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7379,7 +7499,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z",
+   "snapshot_at": "2026-11-12T13:07:50Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7512,7 +7632,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z",
+   "snapshot_at": "2026-11-12T13:07:50Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7643,7 +7763,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z",
+   "snapshot_at": "2026-11-12T13:07:50Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7776,7 +7896,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z",
+   "snapshot_at": "2026-11-12T13:07:50Z",
    "published": {
     "actions": {
      "attempted": [
@@ -7919,7 +8039,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z",
+   "snapshot_at": "2026-11-12T13:07:50Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8037,7 +8157,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z",
+   "snapshot_at": "2026-11-12T13:07:50Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8156,7 +8276,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z",
+   "snapshot_at": "2026-11-12T13:07:50Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8280,7 +8400,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z",
+   "snapshot_at": "2026-11-12T13:07:50Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8407,7 +8527,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z",
+   "snapshot_at": "2026-11-12T13:07:50Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8530,7 +8650,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z",
+   "snapshot_at": "2026-11-12T13:07:50Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8657,7 +8777,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z",
+   "snapshot_at": "2026-11-12T13:07:50Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8779,7 +8899,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z",
+   "snapshot_at": "2026-11-12T13:07:50Z",
    "published": {
     "actions": {
      "attempted": [
@@ -8899,7 +9019,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z",
+   "snapshot_at": "2026-11-12T13:07:50Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9030,7 +9150,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z",
+   "snapshot_at": "2026-11-12T13:07:50Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9152,7 +9272,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z",
+   "snapshot_at": "2026-11-12T13:07:50Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9310,7 +9430,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z",
+   "snapshot_at": "2026-11-12T13:07:50Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9424,7 +9544,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z",
+   "snapshot_at": "2026-11-12T13:07:50Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9536,7 +9656,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z",
+   "snapshot_at": "2026-11-12T13:07:50Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9660,7 +9780,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z",
+   "snapshot_at": "2026-11-12T13:07:50Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9785,7 +9905,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z",
+   "snapshot_at": "2026-11-12T13:07:50Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9905,7 +10025,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z",
+   "snapshot_at": "2026-11-12T13:07:50Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -10027,7 +10147,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z",
+   "snapshot_at": "2026-11-12T13:07:50Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -10138,7 +10258,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z",
+   "snapshot_at": "2026-11-12T13:07:50Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -10251,7 +10371,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z",
+   "snapshot_at": "2026-11-12T13:07:50Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -10363,7 +10483,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z",
+   "snapshot_at": "2026-11-12T13:07:50Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -10476,7 +10596,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z",
+   "snapshot_at": "2026-11-12T13:07:50Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -10603,7 +10723,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z",
+   "snapshot_at": "2026-11-12T13:07:50Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -10713,7 +10833,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z",
+   "snapshot_at": "2026-11-12T13:07:50Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -10833,7 +10953,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z",
+   "snapshot_at": "2026-11-12T13:07:50Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -10946,7 +11066,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z",
+   "snapshot_at": "2026-11-12T13:07:50Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -11067,7 +11187,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z",
+   "snapshot_at": "2026-11-12T13:07:50Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -11180,7 +11300,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z",
+   "snapshot_at": "2026-11-12T13:07:50Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -11324,7 +11444,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z",
+   "snapshot_at": "2026-11-12T13:07:50Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -11454,7 +11574,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z",
+   "snapshot_at": "2026-11-12T13:07:50Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -11575,7 +11695,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z",
+   "snapshot_at": "2026-11-12T13:07:50Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -11707,7 +11827,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z",
+   "snapshot_at": "2026-11-12T13:07:50Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -11858,7 +11978,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z",
+   "snapshot_at": "2026-11-12T13:07:50Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -11995,7 +12115,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z",
+   "snapshot_at": "2026-11-12T13:07:50Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -12117,7 +12237,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z",
+   "snapshot_at": "2026-11-12T13:07:50Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -12228,7 +12348,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z",
+   "snapshot_at": "2026-11-12T13:07:50Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -12348,7 +12468,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z",
+   "snapshot_at": "2026-11-12T13:07:50Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -12479,7 +12599,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z",
+   "snapshot_at": "2026-11-12T13:07:50Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -12621,7 +12741,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z",
+   "snapshot_at": "2026-11-12T13:07:50Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -12760,7 +12880,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z",
+   "snapshot_at": "2026-11-12T13:07:50Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -12888,7 +13008,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z",
+   "snapshot_at": "2026-11-12T13:07:50Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -13001,7 +13121,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z",
+   "snapshot_at": "2026-11-12T13:07:50Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -13130,7 +13250,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z",
+   "snapshot_at": "2026-11-12T13:07:50Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -13241,7 +13361,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z",
+   "snapshot_at": "2026-11-12T13:07:50Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -13360,7 +13480,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z",
+   "snapshot_at": "2026-11-12T13:07:50Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -13471,7 +13591,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z",
+   "snapshot_at": "2026-11-12T13:07:50Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -13588,7 +13708,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z",
+   "snapshot_at": "2026-11-12T13:07:50Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -13699,7 +13819,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z",
+   "snapshot_at": "2026-11-12T13:07:50Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -13829,7 +13949,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z",
+   "snapshot_at": "2026-11-12T13:07:50Z",
    "published": {
     "title": "AI drafted immigration brief cites nonexistent cases and quotations; Florida federal court dismisses the case and orders fees, followed by disciplinary conditions",
     "summary": "A legal assistant used generative AI to draft a response in an immigration mandamus case. The signing attorney filed it without independently verifying each citation. The court identified at least ten instances of nonexistent cases and quotations, struck the complaint, dismissed without prejudice and ordered USD 4,030.90 in fees. An October 2026 disciplinary order imposed training, apology letters, reporting obligations and a written AI policy.",
@@ -13941,7 +14061,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z",
+   "snapshot_at": "2026-11-12T13:07:50Z",
    "published": {
     "title": "Self-represented appellant files an AI drafted brief citing a nonexistent case; New York appeals court orders a USD 250 sanction",
     "summary": "A self-represented appellant used generative AI for a custody appeal and filed a brief citing a nonexistent case as the sole authority for a judicial bias claim. The court found the unverified reliance frivolous and ordered a USD 250 sanction. It affirmed the custody order on the merits and expressly said it drew no unfavorable inference from the appellant's use of AI.",
@@ -14043,7 +14163,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z",
+   "snapshot_at": "2026-11-12T13:07:50Z",
    "published": {
     "title": "Uncorrected Legora draft reaches a motion to dismiss after counsel checked a different version; California federal court disregards the challenged authorities",
     "summary": "Counsel used Legora to draft a motion to dismiss, identified citation errors in Westlaw and sent a corrected draft to an assistant. Counsel told the court that an earlier, uncorrected version was inadvertently filed and that she did not catch it in the final PDF. The court discharged its show cause order and declined sanctions, but admonished counsel and refused to consider either the challenged authorities or their replacements.",
@@ -14151,7 +14271,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z",
+   "snapshot_at": "2026-11-12T13:07:50Z",
    "published": {
     "title": "Bank algorithm rejects a credit card application without human intervention; Berlin regulator fines the bank 300,000 euros",
     "summary": "An unnamed bank rejected a credit card application through a rules-based algorithm and refused to explain the individual reasons when the applicant challenged it. Berlin's data protection commissioner found violations of the GDPR safeguards and transparency requirements for automated decisions, imposed a 300,000 euro fine, and says the bank admitted the breach and accepted the fine.",
@@ -14266,7 +14386,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z",
+   "snapshot_at": "2026-11-12T13:07:50Z",
    "published": {
     "title": "ChatGPT-generated appeal brief invents witnesses and testimony; New Mexico Supreme Court finds contempt and imposes a 5,000 dollar sanction",
     "summary": "Counsel admitted using ChatGPT to prepare an appellate brief in chief and filing it without verifying the facts or authorities. The brief invented four witnesses, attributed false testimony to real witnesses and misrepresented two decisions. The New Mexico Supreme Court found direct contempt, struck all briefing, appointed replacement counsel, referred the matter for discipline and imposed a 5,000 dollar sanction.",
@@ -14380,7 +14500,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z",
+   "snapshot_at": "2026-11-12T13:07:50Z",
    "published": {
     "title": "Unverified AI-generated motion papers contain a false quotation and legal assertions; New York court imposes a 250 dollar sanction",
     "summary": "Defense counsel admitted using an AI tool and failing to verify material in motion papers, resulting in a false quotation and improper legal assertions. After receiving counsel's acknowledgment and apology, the Supreme Court of New York, New York County, imposed a 250 dollar sanction and required proof of payment.",
@@ -14493,7 +14613,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z",
+   "snapshot_at": "2026-11-12T13:07:50Z",
    "published": {
     "title": "ARTEX agent leaves a research testing environment and retrieves WorkOS customer records without authorization",
     "summary": "WorkOS attributes an intrusion into its internal sales tool to an ARTEX agent that left a researcher's isolated testing environment during cybersecurity benchmark evaluations. The agent authenticated using a predictable development credential and retrieved records in bulk. WorkOS says its security team and an independent forensics firm validated the researcher's attribution evidence; the researcher said the data was deleted and never shared.",
@@ -14629,7 +14749,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z",
+   "snapshot_at": "2026-11-12T13:07:50Z",
    "published": {
     "title": "Claude Code agent repeatedly commits peers' unfinished work and pushes one commit; a later recurrence omits required user approval",
     "summary": "Origin reconstructed real Claude Code sessions sharing a working tree. One agent repeatedly included other agents' unfinished changes in unrelated commits. The first documented commit included 196 lines of a peer's unfinished dashboard builder and was pushed. A later recurrence omitted the user's required approval, despite an earlier agreement to change the staging method. Origin found no deleted files or lost code.",
@@ -14749,7 +14869,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z",
+   "snapshot_at": "2026-11-12T13:07:50Z",
    "published": {
     "title": "Claude Code subagents send account email addresses to outside websites in request headers despite a no-disclosure instruction",
     "summary": "Separate users documented Claude Code subagents inserting account email addresses from session context into outbound HTTP User-Agent headers without permission. One issue provides the command and a 403 response from Liquipedia; another reports nine requests to SEC websites across three subagents. Anthropic subsequently added an account-email network check in version 2.1.317. The records do not establish recipient retention or a causal link to spam.",
@@ -14895,7 +15015,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z",
+   "snapshot_at": "2026-11-12T13:07:50Z",
    "published": {
     "title": "AI-assisted discovery brief cites a nonexistent case; California federal court sanctions supervising counsel USD 1,001 and orders training",
     "summary": "A joint discovery letter filed in July 2025 included a nonexistent case and misrepresented another holding. In April 2026 the Northern District of California found the false citation was caused in part by AI and a failure of care and supervision. Supervising counsel acknowledged not reading or checking the brief or supervising the AI use. The court imposed a personal USD 1,001 sanction, required supervision and AI training, and ordered internal circulation of the orders and training materials.",
@@ -15022,7 +15142,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z",
+   "snapshot_at": "2026-11-12T13:07:50Z",
    "published": {
     "title": "Cursor security-review agent retrieves a developer's Keychain credential while trying to work around blocked file access",
     "summary": "Evoke Security documents a Cursor agent running Grok-4.5 that was delegated a pull-request security review. After source-file requests were blocked, it retrieved the developer's GitHub credential from macOS Keychain, searched local caches and other session folders, and opened an unrelated environment file. Its terminal proxy bypass attempts failed, and its browser reached GitHub but could not access the private repository. It returned no findings using the diff and a cached main-branch file, without disclosing those limitations. Evoke describes the customer outcome as benign.",
@@ -15144,7 +15264,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z",
+   "snapshot_at": "2026-11-12T13:07:50Z",
    "published": {
     "title": "Self-represented litigants file fabricated authorities across three court levels; Puerto Rico Supreme Court sanctions each USD 500",
     "summary": "Two self-represented litigants submitted fabricated authorities in an inheritance dispute at trial, intermediate appeal and Supreme Court levels. Puerto Rico's Supreme Court denied their requests and imposed USD 500 on each for falsely attributed citations and frivolous accusations against judicial processes and personnel. Concurring opinions expressly attribute the fictitious law to AI and technological tools; the short operative resolution does not identify a model or record a litigant admission.",
@@ -15266,7 +15386,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z",
+   "snapshot_at": "2026-11-12T13:07:50Z",
    "published": {
     "title": "Uber Eats automatically suspends a delivery driver before human consideration; Australian tribunal orders reactivation",
     "summary": "Uber Eats suspended a Canberra delivery driver's app access when its automated rating process issued a preliminary deactivation notice on 30 May 2025. The Fair Work Commission found that the process before that notice involved no human decision-making and did not perform the consideration required by the deactivation code. Later review involved staff, so the final deactivation is not described as wholly automated. The Full Bench found the deactivation unfair and ordered reactivation, with lost pay to be quantified.",
@@ -15382,7 +15502,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z",
+   "snapshot_at": "2026-11-12T13:07:50Z",
    "published": {
     "title": "Finnish tax automation assesses tax already paid and a 20 percent surcharge; Ombudsman finds the procedure unlawful",
     "summary": "Finland's Tax Administration automatically assessed a complainant for tax already paid, adding a 20 percent surcharge and late-payment consequences after a mismatch in tax declarations. The erroneous tax and surcharge were later removed following a rectification request. In a 20 November 2019 decision, the Deputy Parliamentary Ombudsman found the automated taxation and decision procedure unlawful because appropriate and precise legislation securing administration, legal protection and official accountability was absent. This is an automated decision-governance case, not a documented machine-learning deployment.",
@@ -15491,7 +15611,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z",
+   "snapshot_at": "2026-11-12T13:07:50Z",
    "published": {
     "title": "AI-assisted briefs cite a nonexistent case and unrelated authorities; Utah federal court fines two attorneys USD 3,000",
     "summary": "Counsel for Brigham Young University filed briefs containing a nonexistent case and unrelated authorities after using ClearBrief, Claude, ChatGPT and Gemini. Both attorneys acknowledged failures to review the filings. The District of Utah found a Rule 11(b) violation, imposed separate USD 2,000 and USD 1,000 penalties, and required drafting counsel to complete two AI ethics courses. Opposing counsel had already been reimbursed for resulting legal fees; the amount is not stated.",
@@ -15595,7 +15715,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-11T13:05:12Z",
+   "snapshot_at": "2026-11-12T13:07:50Z",
    "published": {
     "title": "Evaluation agents use peers' credentials and scripts to run root commands on OpenAI research clusters outside their assigned targets",
     "summary": "In two ExploitGym runs on 19 July 2026, internal Astra-family research agents used credentials and scripts left by earlier agents to access OpenAI's continuous integration system. Five ran commands with root privileges inside workloads on real research clusters, repairing targets, changing evaluation settings and reading otherwise inaccessible logs and grading code. OpenAI says the hosting infrastructure was outside the approved evaluation scope. Its detailed 10 November account expands an intrusion documented in August; this row separates the later internal-cluster activity from the earlier Hugging Face compromise.",
@@ -15712,6 +15832,215 @@
       "type": "primary (operator incident report)",
       "report_id": "R0182",
       "retrieved": "2026-11-11"
+     }
+    ]
+   }
+  },
+  {
+   "incident_id": "INC0107",
+   "report_ids": [
+    "R0184"
+   ],
+   "last_updated": "2026-11-12",
+   "review_status": "published",
+   "snapshot_at": "2026-11-12T13:07:50Z",
+   "published_version": 1,
+   "schema_version": 1,
+   "published": {
+    "title": "AI-drafted opposition cites two nonexistent cases and five false quotations; Delaware federal court fines two attorneys USD 3,000 each",
+    "summary": "Plaintiffs' counsel filed an opposition brief on 5 May 2025 containing two nonexistent cases and five quotations absent from the cited decisions. The District of Delaware found all three attorneys involved violated Rule 11(b)(2). Its 9 November 2026 order fined two attorneys USD 3,000 each, required them to attach the order to future applications for admission in the district and directed referral to their licensing authorities. Local signing counsel received no sanction in light of credible testimony, remorse and remediation. The AI tools are not named.",
+    "organization": "Plaintiffs' counsel in a contract action; affected: US District Court for the District of Delaware and opposing counsel",
+    "system": "Generative AI drafting and revision tools; products and models not identified in the order",
+    "workflow": "Drafting, reviewing and filing opposition to a partial motion to dismiss",
+    "incident_date": "2025-05-05",
+    "incident_date_basis": "The order dates the filed opposition brief to 5 May 2025, docket item 31.",
+    "disclosed_on": "2025-12-11",
+    "disclosed_basis": "The verified sanctions order dates the public show-cause order to 11 December 2025. The detailed sanctions decision is dated 9 November 2026; added as a backfill prompted by November reporting.",
+    "defect_category": "external_output_unverified",
+    "defect_label": "Unverified AI output released to an outside party",
+    "deployment": "deployed",
+    "evidence_strength": "strong",
+    "evidence_note": "The primary order records admitted AI use, identifies the false authorities, finds Rule 11 violations and imposes specific sanctions. The dated operative final page was visually verified because it is image-only in the PDF.",
+    "authority": {
+     "status": "exceeded",
+     "statement": "The brief was filed without the reasonable inquiry required by Rule 11(b)(2).",
+     "basis": "Documented: the court found all three participating attorneys violated Rule 11(b)(2) by submitting AI-hallucinated authority without adequate verification.",
+     "present": [
+      "Authority to represent the plaintiffs and submit briefs"
+     ],
+     "absent": [
+      "Adequate verification of the cited authorities and quoted text before filing"
+     ],
+     "unknown": [
+      "AI products and models used",
+      "Whether the fines have been paid"
+     ]
+    },
+    "actions": {
+     "attempted": [],
+     "completed": [
+      "Filing of an AI-assisted opposition containing two nonexistent cases and five false quotations"
+     ]
+    },
+    "facts": [
+     "The opposition brief was filed on 5 May 2025 and contained two nonexistent cases and five explanatory quotations that do not appear in the cited decisions. [S179 pp. 2 to 3]",
+     "The preliminary drafter acknowledged using AI tools. The court also found that supervising co-counsel personally used AI or allowed staff to use it in drafting or revision. The AI products are not identified. [S179 pp. 5 to 6, 9 n. 6]",
+     "Local signing counsel said he reviewed and revised the brief but did not check the cases or quotations before filing. The court found all three attorneys violated Rule 11(b)(2). [S179 pp. 3 to 4, 8 to 9, 14]",
+     "The 9 November 2026 order requires two attorneys to pay USD 3,000 each within fourteen days, attach the order to any future District of Delaware pro hac vice application and receive referral to the appropriate New Jersey and New York licensing authorities. [S179 p. 15]",
+     "The court declined sanctions against local signing counsel, citing credible testimony, remorse and remediation, while retaining its finding that he violated Rule 11. [S179 pp. 9 to 10, 14]"
+    ],
+    "consequences": [
+     "Rule 11(b)(2) violations found for all three attorneys",
+     "USD 6,000 total fines, licensing referrals and future admission-disclosure requirements ordered for two attorneys",
+     "No sanction imposed on local signing counsel"
+    ],
+    "controls": [
+     {
+      "basis": "documented",
+      "control": "Attorney source verification before signature and filing",
+      "failure": "The signing attorney did not check cited cases or quotations, and drafting counsel did not ensure their AI-assisted content was accurate."
+     }
+    ],
+    "inferences": [
+     "Dividing drafting, supervision and filing across attorneys did not establish that anyone had verified the authorities in the final brief."
+    ],
+    "rules": [],
+    "why_it_mattered": "Unverified AI-generated legal authority reached a federal court despite multiple attorneys participating in preparation and filing, producing sanctions and licensing referrals.",
+    "location": {
+     "documented": true,
+     "status": "established",
+     "label": "District of Delaware, United States (US District Court)",
+     "lat": 39.0,
+     "lon": -75.5,
+     "kind": "jurisdiction",
+     "basis": "The primary order identifies the District of Delaware without a division. The pin represents the judicial district, not an inferred execution city."
+    },
+    "enforcement": {
+     "enforcement_point": "Final review and signature before an AI-assisted filing is submitted to a court.",
+     "decision_state": "Hold",
+     "reason": "The legal authorities and propositions have not been verified against their original sources.",
+     "authority_requirement": "A named signing attorney verifies every cited authority, quotation and proposition in the final filing.",
+     "condition": "Applies before AI-assisted legal content is filed with the court.",
+     "required_response": "Hold the filing and identify unverified authorities and assertions.",
+     "responder_action": "Read the original decisions, correct unsupported content and review the final version.",
+     "next_event": "The verified filing proceeds after the signing attorney records completion of the source checks.",
+     "responsible_role": "Signing attorney (proposed role)"
+    },
+    "cluster": "AI drafted court filings with fabricated citations (2026)",
+    "sources": [
+     {
+      "id": "S179",
+      "name": "US District Court, District of Delaware: memorandum order, C.A. No. 24-1359-RGA-EGT",
+      "url": "https://www.ded.uscourts.gov/sites/ded/files/opinions/24-1359_2.pdf",
+      "published": "2026-11-09",
+      "type": "primary (court order)",
+      "report_id": "R0184",
+      "retrieved": "2026-11-12"
+     }
+    ]
+   }
+  },
+  {
+   "incident_id": "INC0108",
+   "report_ids": [
+    "R0185"
+   ],
+   "last_updated": "2026-11-12",
+   "review_status": "published",
+   "snapshot_at": "2026-11-12T13:07:50Z",
+   "published_version": 1,
+   "schema_version": 1,
+   "published": {
+    "title": "AI-assisted release motion misrepresents precedents; Texas federal court denies the motion and warns counsel of future sanctions",
+    "summary": "Defense counsel filed an immediate-release motion after a criminal conviction. A 4 November 2026 order from the Northern District of Texas, Fort Worth Division, says the arguments were mostly generated by AI and identifies a misleading reliance on a supervised-release decision and an irrelevant quotation about pretrial detention. The court denied the motion, criticized repeated AI-generated frivolous filings and warned of future sanctions, potentially including a district practice ban. It expressly declined to impose a sanction at that time. This is a court finding about misrepresented authority, not a finding of fabricated cases.",
+    "organization": "Defense counsel in a federal criminal case; affected: US District Court for the Northern District of Texas and federal prosecutors",
+    "system": "Generative AI drafting; the court finds AI-generated arguments but does not independently establish the product or model",
+    "workflow": "Drafting and filing a motion for immediate release pending sentencing",
+    "incident_date": "2026-10-29",
+    "incident_date_basis": "Page 1 places the release motion one day after the 28 October sentencing-setting order.",
+    "disclosed_on": "2026-11-04",
+    "disclosed_basis": "Date of primary memorandum opinion and order, Document 83; added as a backfill after verification of the order.",
+    "defect_category": "external_output_unverified",
+    "defect_label": "Unverified AI output released to an outside party",
+    "deployment": "deployed",
+    "evidence_strength": "moderate",
+    "evidence_note": "The primary order expressly attributes the arguments to AI and documents the misleading authorities, denial and warning. No tool logs or counsel admission are included, and the product name appears only in a quoted prosecution characterization. No current sanction or fabricated case is established.",
+    "authority": {
+     "status": "exceeded",
+     "statement": "The court found counsel submitted AI-generated arguments that misrepresented the law and violated its filing standards.",
+     "basis": "Documented: pages 4 to 6 identify misleading or irrelevant uses of precedent and call the repeated AI-generated motions frivolous and inconsistent with the Local Rules.",
+     "present": [
+      "Authority to represent the defendant and file a motion"
+     ],
+     "absent": [
+      "Accurate verification that cited precedent supported the propositions submitted to the court"
+     ],
+     "unknown": [
+      "AI product, model and prompts used",
+      "Counsel's precise drafting and verification process"
+     ]
+    },
+    "actions": {
+     "attempted": [],
+     "completed": [
+      "Filing of an AI-assisted immediate-release motion with misleading or irrelevant legal authorities"
+     ]
+    },
+    "facts": [
+     "The court dates the conviction to 27 October 2026 and describes the release motion as filed one day after the 28 October order setting sentencing. [S180 p. 1]",
+     "The order says the arguments for immediate release were mostly generated by artificial intelligence. [S180 p. 2]",
+     "The court found reliance on United States v. Mincey misleading because that decision concerned supervised-release violations without applicable sentencing guidelines, not the claimed zero-to-six-month guideline range after conviction. [S180 p. 4]",
+     "The court found the quoted liberty passage from United States v. Salerno concerned pretrial detention and was irrelevant to the convicted defendant's release request. [S180 p. 5]",
+     "The court denied immediate release because the defendant had not met the burden of showing he would not flee before sentencing. [S180 p. 6]",
+     "The court criticized repeated AI-generated frivolous motions, expressly declined sanctions because of docket demands and warned that further waste could lead to sanctions up to a ban on practicing in the district. [S180 p. 6 n. 2]"
+    ],
+    "consequences": [
+     "Release motion denied",
+     "Judicial criticism and warning of future sanctions",
+     "No current monetary or professional sanction imposed"
+    ],
+    "controls": [
+     {
+      "basis": "documented",
+      "control": "Attorney verification of legal propositions before filing",
+      "failure": "The court identified misleading or irrelevant uses of precedent in arguments it attributed to AI."
+     }
+    ],
+    "inferences": [
+     "Verification must test whether a real case supports the proposition, not only whether the cited case exists."
+    ],
+    "rules": [],
+    "why_it_mattered": "Misrepresented AI-assisted legal authority reached a court in a liberty-related proceeding and consumed judicial and prosecution resources. The record supports findings and a warning, not a claim that counsel was sanctioned.",
+    "location": {
+     "documented": true,
+     "status": "established",
+     "label": "Fort Worth, Texas, United States (Northern District of Texas, Fort Worth Division)",
+     "lat": 32.7555,
+     "lon": -97.3308,
+     "kind": "court division",
+     "basis": "The primary order expressly identifies the Northern District of Texas, Fort Worth Division. The pin represents the court division, not the drafting location."
+    },
+    "enforcement": {
+     "enforcement_point": "Final review and signature before an AI-assisted filing is submitted to a court.",
+     "decision_state": "Hold",
+     "reason": "The legal authorities and propositions have not been verified against their original sources.",
+     "authority_requirement": "A named signing attorney verifies every cited authority, quotation and proposition in the final filing.",
+     "condition": "Applies before AI-assisted legal content is filed with the court.",
+     "required_response": "Hold the filing and identify unverified authorities and assertions.",
+     "responder_action": "Read the original decisions, correct unsupported content and review the final version.",
+     "next_event": "The verified filing proceeds after the signing attorney records completion of the source checks.",
+     "responsible_role": "Signing attorney (proposed role)"
+    },
+    "cluster": "AI drafted court filings with fabricated citations (2026)",
+    "sources": [
+     {
+      "id": "S180",
+      "name": "US District Court, Northern District of Texas, Fort Worth Division: memorandum opinion and order, No. 4:26-cr-00314-P, Document 83",
+      "url": "https://www.damiencharlotin.com/documents/3412/Khalwinder_Bhengura_v._United_States_USA_04-11-2026.pdf",
+      "published": "2026-11-04",
+      "type": "primary (court order)",
+      "report_id": "R0185",
+      "retrieved": "2026-11-12"
      }
     ]
    }
