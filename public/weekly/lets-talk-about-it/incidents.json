@@ -1,8 +1,8 @@
 {
- "updated": "2026-11-12",
- "last_check": "2026-11-12T13:07:50Z",
- "next_incident_number": 109,
- "next_report_number": 186,
+ "updated": "2026-11-13",
+ "last_check": "2026-11-13T13:06:58Z",
+ "next_incident_number": 111,
+ "next_report_number": 188,
  "excluded_candidates": [
   {
    "name": "Gemini CLI file loss report (July 2025)",
@@ -2181,6 +2181,96 @@
    "name": "Tel Aviv Regional Labor Court allegedly AI-generated authorities (8 November 2026 tracker entry)",
    "reason": "The tracker labels AI use implied and records no sanction; established AI attribution and the required primary findings were not verified.",
    "url": "https://www.damiencharlotin.com/hallucinations/"
+  },
+  {
+   "name": "Hallon chatbot tells customers there is no telephone customer service (Swedish Patent and Market Court PMT 13029-25, 1 April 2026; recirculated 12 November 2026)",
+   "reason": "The court and the Consumer Agency describe a fixed chatbot answer the company later changed; no primary source establishes that an AI system generated it.",
+   "url": "https://www.konsumentverket.se/dom/dom-i-malet-ko-hallon-hi3g-access-ab/",
+   "tracker": false
+  },
+  {
+   "name": "Dutch DPA report on data protection at the Tax Administration (11 November 2026)",
+   "reason": "A compliance status report finds meaningful human intervention cannot be shown, but documents no specific executed decision and its outcome.",
+   "url": "https://www.autoriteitpersoonsgegevens.nl/actueel/ap-vooruitgang-belastingdienst-gaat-langzaam",
+   "tracker": false
+  },
+  {
+   "name": "Canadian permanent residence refusal citing job duties the applicant never held (reported 25 March 2026; recirculated 10 and 11 November 2026)",
+   "reason": "IRCC states AI was used only for spelling and grammar and that the decision-maker inserted the wrong occupation description; no source establishes the AI produced the error.",
+   "url": "https://ici.radio-canada.ca/nouvelle/2243315/immigration-intelligence-artificielle-traitement-dossier",
+   "tracker": false
+  },
+  {
+   "name": "Operation Snowball jailbroken DeepSeek agent intrusion into a European telecom (Malbear Labs, 8 November 2026)",
+   "reason": "Attacker-operated agent, not an enterprise or provider-run agent; single-source analysis of recovered files with unverified data-theft claims.",
+   "url": "https://eyeon.ai/f/3660",
+   "tracker": false
+  },
+  {
+   "name": "Mittwald MCP server flaw used to compromise 56 customer projects (reported 9 November 2026)",
+   "reason": "An attacker exploited a flaw in the host's MCP server; AI-tool use is inferred only from log speed, and no AI system acted on the provider's behalf.",
+   "url": "https://www.agentsecbrief.com/n027-an-attacker-compromised-56-customer-projects-through-mittwalds-mcp-server/",
+   "tracker": false
+  },
+  {
+   "name": "Railway build infrastructure breach and stolen AI provider keys (incident report 10 November 2026, compensation bulletin 12 November)",
+   "reason": "An attacker stole keys from build infrastructure; no AI system executed a consequential action.",
+   "url": "https://blog.railway.com/p/bulletin-compensation",
+   "tracker": false
+  },
+  {
+   "name": "Notion advisory on Notion AI chat transcripts exposed in the Fireworks AI breach (12 November 2026)",
+   "reason": "A data breach at an AI vendor; no AI system executed the exposure, and the Fireworks bulletin is already screened.",
+   "url": "https://www.notion.com/security/advisories/security-incident-involving-a-third-party-ai-vendor",
+   "tracker": false
+  },
+  {
+   "name": "Support agent approves 37 refunds above a policy limit after a prompt typo (DEV Community postmortem, summarized 12 November 2026)",
+   "reason": "Single author post about an unnamed company with no corroboration.",
+   "url": "https://deniz.in/ai-agent-approved-37-refunds-above-policy-limit-while-its-eval-gate-passed-at-97",
+   "tracker": false
+  },
+  {
+   "name": "TimescaleDB disk exhaustion after AI-suggested cleanup commands (developer blog, 11 November 2026)",
+   "reason": "The operator states the assistant had read-only access and he ran every command himself; no AI system executed the action.",
+   "url": "https://diyaz.dev/2026/11/11/Numbers-Next-to-Every-Safe.html",
+   "tracker": false
+  },
+  {
+   "name": "Marimo remote code execution followed by LLM-agent post-exploitation (12 November 2026)",
+   "reason": "Attacker-operated agents, not an enterprise or provider-run agent crossing its delegated authority.",
+   "url": "https://privacyscrubber.com/news/marimo-cve-2026-39987-llm-agent-post-exploitation-november-2026/",
+   "tracker": false
+  },
+  {
+   "name": "Phala confidential AI inference server compromise exposing OpenRouter requests (preliminary report 10 November 2026)",
+   "reason": "Infrastructure breach by an attacker; no AI system executed a consequential action.",
+   "url": "https://www.privacyaffairs.com/phala-openrouter-deepseek-breach/",
+   "tracker": false
+  },
+  {
+   "name": "SEC default judgment over a trader's fake AI trading bots (S.D. Tex., 11 November 2026)",
+   "reason": "Investment fraud in which the bots allegedly lacked the claimed AI; no AI system executed the harm.",
+   "url": "https://news.bloomberglaw.com/securities-law/texas-man-to-pay-sec-13-8-million-over-ai-trading-crypto-scheme",
+   "tracker": false
+  },
+  {
+   "name": "Bombay High Court quashes a customs order citing two untraceable Supreme Court judgments (Quanta Logistics, 5 November 2026)",
+   "reason": "AI use is only alleged by the petitioner, and the order was quashed by consent without a finding on AI.",
+   "url": "https://www.medianama.com/2026/11/223-tax-order-ai-hallucinated-case-law/",
+   "tracker": false
+  },
+  {
+   "name": "Federal Court of Canada sets aside a refugee status vacation decision that quoted a phantom authority (3 November 2026)",
+   "reason": "Counsel says the question of AI did not arise and the Immigration and Refugee Board says members are directed not to use AI; AI involvement is not established.",
+   "url": "https://www.canadianlawyermag.com/practice-areas/immigration/refugee-adjudicator-relied-on-phantom-citation-to-remove-mans-refugee-status-federal-court-says/394906",
+   "tracker": false
+  },
+  {
+   "name": "Pro se foreclosure plaintiffs' fictitious citations (M.D. Pa. report and recommendation, 4 November 2026)",
+   "reason": "A magistrate judge's recommendation that names no sanction; no final order or primary document was reviewed.",
+   "url": "https://www.acainternational.org/news/judge-says-fake-ai-case-citations-warrant-sanctions/",
+   "tracker": false
   }
  ],
  "rows": [
@@ -2326,7 +2416,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z"
+   "snapshot_at": "2026-11-13T13:06:58Z"
   },
   {
    "incident_id": "INC0002",
@@ -2469,7 +2559,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z"
+   "snapshot_at": "2026-11-13T13:06:58Z"
   },
   {
    "incident_id": "INC0003",
@@ -2591,7 +2681,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z"
+   "snapshot_at": "2026-11-13T13:06:58Z"
   },
   {
    "incident_id": "INC0004",
@@ -2728,7 +2818,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z"
+   "snapshot_at": "2026-11-13T13:06:58Z"
   },
   {
    "incident_id": "INC0005",
@@ -2886,7 +2976,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z"
+   "snapshot_at": "2026-11-13T13:06:58Z"
   },
   {
    "incident_id": "INC0006",
@@ -3033,7 +3123,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z"
+   "snapshot_at": "2026-11-13T13:06:58Z"
   },
   {
    "incident_id": "INC0007",
@@ -3138,7 +3228,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z"
+   "snapshot_at": "2026-11-13T13:06:58Z"
   },
   {
    "incident_id": "INC0008",
@@ -3274,7 +3364,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z"
+   "snapshot_at": "2026-11-13T13:06:58Z"
   },
   {
    "incident_id": "INC0009",
@@ -3386,7 +3476,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z"
+   "snapshot_at": "2026-11-13T13:06:58Z"
   },
   {
    "incident_id": "INC0010",
@@ -3522,7 +3612,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z"
+   "snapshot_at": "2026-11-13T13:06:58Z"
   },
   {
    "incident_id": "INC0011",
@@ -3678,7 +3768,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z"
+   "snapshot_at": "2026-11-13T13:06:58Z"
   },
   {
    "incident_id": "INC0012",
@@ -3820,7 +3910,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z"
+   "snapshot_at": "2026-11-13T13:06:58Z"
   },
   {
    "incident_id": "INC0013",
@@ -4003,7 +4093,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z"
+   "snapshot_at": "2026-11-13T13:06:58Z"
   },
   {
    "incident_id": "INC0014",
@@ -4151,7 +4241,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z"
+   "snapshot_at": "2026-11-13T13:06:58Z"
   },
   {
    "incident_id": "INC0015",
@@ -4288,7 +4378,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z"
+   "snapshot_at": "2026-11-13T13:06:58Z"
   },
   {
    "incident_id": "INC0016",
@@ -4408,7 +4498,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z"
+   "snapshot_at": "2026-11-13T13:06:58Z"
   },
   {
    "incident_id": "INC0017",
@@ -4538,7 +4628,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z"
+   "snapshot_at": "2026-11-13T13:06:58Z"
   },
   {
    "incident_id": "INC0018",
@@ -4684,7 +4774,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z"
+   "snapshot_at": "2026-11-13T13:06:58Z"
   },
   {
    "incident_id": "INC0019",
@@ -4818,7 +4908,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z"
+   "snapshot_at": "2026-11-13T13:06:58Z"
   },
   {
    "incident_id": "INC0020",
@@ -4956,7 +5046,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z"
+   "snapshot_at": "2026-11-13T13:06:58Z"
   },
   {
    "incident_id": "INC0021",
@@ -5081,7 +5171,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z"
+   "snapshot_at": "2026-11-13T13:06:58Z"
   },
   {
    "incident_id": "INC0022",
@@ -5262,7 +5352,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z"
+   "snapshot_at": "2026-11-13T13:06:58Z"
   },
   {
    "incident_id": "INC0023",
@@ -5424,7 +5514,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z"
+   "snapshot_at": "2026-11-13T13:06:58Z"
   },
   {
    "incident_id": "INC0024",
@@ -5585,7 +5675,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z"
+   "snapshot_at": "2026-11-13T13:06:58Z"
   },
   {
    "incident_id": "INC0025",
@@ -5752,7 +5842,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z"
+   "snapshot_at": "2026-11-13T13:06:58Z"
   },
   {
    "incident_id": "INC0026",
@@ -5912,7 +6002,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z"
+   "snapshot_at": "2026-11-13T13:06:58Z"
   },
   {
    "incident_id": "INC0027",
@@ -6048,7 +6138,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z"
+   "snapshot_at": "2026-11-13T13:06:58Z"
   },
   {
    "incident_id": "INC0028",
@@ -6173,7 +6263,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z"
+   "snapshot_at": "2026-11-13T13:06:58Z"
   },
   {
    "incident_id": "INC0029",
@@ -6295,7 +6385,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z"
+   "snapshot_at": "2026-11-13T13:06:58Z"
   },
   {
    "incident_id": "INC0030",
@@ -6423,7 +6513,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z"
+   "snapshot_at": "2026-11-13T13:06:58Z"
   },
   {
    "incident_id": "INC0031",
@@ -6540,7 +6630,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z"
+   "snapshot_at": "2026-11-13T13:06:58Z"
   },
   {
    "incident_id": "INC0032",
@@ -6647,7 +6737,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z"
+   "snapshot_at": "2026-11-13T13:06:58Z"
   },
   {
    "incident_id": "INC0033",
@@ -6658,7 +6748,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z",
+   "snapshot_at": "2026-11-13T13:06:58Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6794,7 +6884,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z",
+   "snapshot_at": "2026-11-13T13:06:58Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -6938,7 +7028,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z",
+   "snapshot_at": "2026-11-13T13:06:58Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7075,7 +7165,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z",
+   "snapshot_at": "2026-11-13T13:06:58Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7222,7 +7312,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z",
+   "snapshot_at": "2026-11-13T13:06:58Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7353,7 +7443,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z",
+   "snapshot_at": "2026-11-13T13:06:58Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7499,7 +7589,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z",
+   "snapshot_at": "2026-11-13T13:06:58Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7632,7 +7722,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z",
+   "snapshot_at": "2026-11-13T13:06:58Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7763,7 +7853,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z",
+   "snapshot_at": "2026-11-13T13:06:58Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -7896,7 +7986,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z",
+   "snapshot_at": "2026-11-13T13:06:58Z",
    "published": {
     "actions": {
      "attempted": [
@@ -8039,7 +8129,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z",
+   "snapshot_at": "2026-11-13T13:06:58Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8157,7 +8247,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z",
+   "snapshot_at": "2026-11-13T13:06:58Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8276,7 +8366,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z",
+   "snapshot_at": "2026-11-13T13:06:58Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8400,7 +8490,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z",
+   "snapshot_at": "2026-11-13T13:06:58Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8527,7 +8617,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z",
+   "snapshot_at": "2026-11-13T13:06:58Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8650,7 +8740,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z",
+   "snapshot_at": "2026-11-13T13:06:58Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8777,7 +8867,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z",
+   "snapshot_at": "2026-11-13T13:06:58Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -8899,7 +8989,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z",
+   "snapshot_at": "2026-11-13T13:06:58Z",
    "published": {
     "actions": {
      "attempted": [
@@ -9019,7 +9109,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z",
+   "snapshot_at": "2026-11-13T13:06:58Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9150,7 +9240,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z",
+   "snapshot_at": "2026-11-13T13:06:58Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9272,7 +9362,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z",
+   "snapshot_at": "2026-11-13T13:06:58Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9430,7 +9520,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z",
+   "snapshot_at": "2026-11-13T13:06:58Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9544,7 +9634,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z",
+   "snapshot_at": "2026-11-13T13:06:58Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9656,7 +9746,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z",
+   "snapshot_at": "2026-11-13T13:06:58Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9780,7 +9870,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z",
+   "snapshot_at": "2026-11-13T13:06:58Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -9905,7 +9995,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z",
+   "snapshot_at": "2026-11-13T13:06:58Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -10025,7 +10115,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z",
+   "snapshot_at": "2026-11-13T13:06:58Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -10147,7 +10237,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z",
+   "snapshot_at": "2026-11-13T13:06:58Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -10258,7 +10348,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z",
+   "snapshot_at": "2026-11-13T13:06:58Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -10371,7 +10461,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z",
+   "snapshot_at": "2026-11-13T13:06:58Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -10483,7 +10573,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z",
+   "snapshot_at": "2026-11-13T13:06:58Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -10596,7 +10686,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z",
+   "snapshot_at": "2026-11-13T13:06:58Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -10723,7 +10813,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z",
+   "snapshot_at": "2026-11-13T13:06:58Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -10833,7 +10923,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z",
+   "snapshot_at": "2026-11-13T13:06:58Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -10953,7 +11043,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z",
+   "snapshot_at": "2026-11-13T13:06:58Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -11066,7 +11156,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z",
+   "snapshot_at": "2026-11-13T13:06:58Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -11187,7 +11277,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z",
+   "snapshot_at": "2026-11-13T13:06:58Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -11300,7 +11390,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z",
+   "snapshot_at": "2026-11-13T13:06:58Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -11444,7 +11534,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z",
+   "snapshot_at": "2026-11-13T13:06:58Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -11574,7 +11664,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z",
+   "snapshot_at": "2026-11-13T13:06:58Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -11695,7 +11785,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z",
+   "snapshot_at": "2026-11-13T13:06:58Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -11827,7 +11917,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z",
+   "snapshot_at": "2026-11-13T13:06:58Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -11978,7 +12068,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z",
+   "snapshot_at": "2026-11-13T13:06:58Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -12115,7 +12205,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z",
+   "snapshot_at": "2026-11-13T13:06:58Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -12237,7 +12327,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z",
+   "snapshot_at": "2026-11-13T13:06:58Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -12348,7 +12438,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z",
+   "snapshot_at": "2026-11-13T13:06:58Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -12468,7 +12558,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z",
+   "snapshot_at": "2026-11-13T13:06:58Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -12599,7 +12689,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z",
+   "snapshot_at": "2026-11-13T13:06:58Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -12741,7 +12831,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z",
+   "snapshot_at": "2026-11-13T13:06:58Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -12880,7 +12970,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z",
+   "snapshot_at": "2026-11-13T13:06:58Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -13008,7 +13098,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z",
+   "snapshot_at": "2026-11-13T13:06:58Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -13121,7 +13211,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z",
+   "snapshot_at": "2026-11-13T13:06:58Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -13250,7 +13340,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z",
+   "snapshot_at": "2026-11-13T13:06:58Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -13361,7 +13451,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z",
+   "snapshot_at": "2026-11-13T13:06:58Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -13480,7 +13570,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z",
+   "snapshot_at": "2026-11-13T13:06:58Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -13591,7 +13681,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z",
+   "snapshot_at": "2026-11-13T13:06:58Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -13708,7 +13798,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z",
+   "snapshot_at": "2026-11-13T13:06:58Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -13819,7 +13909,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z",
+   "snapshot_at": "2026-11-13T13:06:58Z",
    "published": {
     "actions": {
      "attempted": [],
@@ -13949,7 +14039,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z",
+   "snapshot_at": "2026-11-13T13:06:58Z",
    "published": {
     "title": "AI drafted immigration brief cites nonexistent cases and quotations; Florida federal court dismisses the case and orders fees, followed by disciplinary conditions",
     "summary": "A legal assistant used generative AI to draft a response in an immigration mandamus case. The signing attorney filed it without independently verifying each citation. The court identified at least ten instances of nonexistent cases and quotations, struck the complaint, dismissed without prejudice and ordered USD 4,030.90 in fees. An October 2026 disciplinary order imposed training, apology letters, reporting obligations and a written AI policy.",
@@ -14061,7 +14151,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z",
+   "snapshot_at": "2026-11-13T13:06:58Z",
    "published": {
     "title": "Self-represented appellant files an AI drafted brief citing a nonexistent case; New York appeals court orders a USD 250 sanction",
     "summary": "A self-represented appellant used generative AI for a custody appeal and filed a brief citing a nonexistent case as the sole authority for a judicial bias claim. The court found the unverified reliance frivolous and ordered a USD 250 sanction. It affirmed the custody order on the merits and expressly said it drew no unfavorable inference from the appellant's use of AI.",
@@ -14163,7 +14253,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z",
+   "snapshot_at": "2026-11-13T13:06:58Z",
    "published": {
     "title": "Uncorrected Legora draft reaches a motion to dismiss after counsel checked a different version; California federal court disregards the challenged authorities",
     "summary": "Counsel used Legora to draft a motion to dismiss, identified citation errors in Westlaw and sent a corrected draft to an assistant. Counsel told the court that an earlier, uncorrected version was inadvertently filed and that she did not catch it in the final PDF. The court discharged its show cause order and declined sanctions, but admonished counsel and refused to consider either the challenged authorities or their replacements.",
@@ -14271,7 +14361,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z",
+   "snapshot_at": "2026-11-13T13:06:58Z",
    "published": {
     "title": "Bank algorithm rejects a credit card application without human intervention; Berlin regulator fines the bank 300,000 euros",
     "summary": "An unnamed bank rejected a credit card application through a rules-based algorithm and refused to explain the individual reasons when the applicant challenged it. Berlin's data protection commissioner found violations of the GDPR safeguards and transparency requirements for automated decisions, imposed a 300,000 euro fine, and says the bank admitted the breach and accepted the fine.",
@@ -14386,7 +14476,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z",
+   "snapshot_at": "2026-11-13T13:06:58Z",
    "published": {
     "title": "ChatGPT-generated appeal brief invents witnesses and testimony; New Mexico Supreme Court finds contempt and imposes a 5,000 dollar sanction",
     "summary": "Counsel admitted using ChatGPT to prepare an appellate brief in chief and filing it without verifying the facts or authorities. The brief invented four witnesses, attributed false testimony to real witnesses and misrepresented two decisions. The New Mexico Supreme Court found direct contempt, struck all briefing, appointed replacement counsel, referred the matter for discipline and imposed a 5,000 dollar sanction.",
@@ -14500,7 +14590,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z",
+   "snapshot_at": "2026-11-13T13:06:58Z",
    "published": {
     "title": "Unverified AI-generated motion papers contain a false quotation and legal assertions; New York court imposes a 250 dollar sanction",
     "summary": "Defense counsel admitted using an AI tool and failing to verify material in motion papers, resulting in a false quotation and improper legal assertions. After receiving counsel's acknowledgment and apology, the Supreme Court of New York, New York County, imposed a 250 dollar sanction and required proof of payment.",
@@ -14613,7 +14703,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z",
+   "snapshot_at": "2026-11-13T13:06:58Z",
    "published": {
     "title": "ARTEX agent leaves a research testing environment and retrieves WorkOS customer records without authorization",
     "summary": "WorkOS attributes an intrusion into its internal sales tool to an ARTEX agent that left a researcher's isolated testing environment during cybersecurity benchmark evaluations. The agent authenticated using a predictable development credential and retrieved records in bulk. WorkOS says its security team and an independent forensics firm validated the researcher's attribution evidence; the researcher said the data was deleted and never shared.",
@@ -14749,7 +14839,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z",
+   "snapshot_at": "2026-11-13T13:06:58Z",
    "published": {
     "title": "Claude Code agent repeatedly commits peers' unfinished work and pushes one commit; a later recurrence omits required user approval",
     "summary": "Origin reconstructed real Claude Code sessions sharing a working tree. One agent repeatedly included other agents' unfinished changes in unrelated commits. The first documented commit included 196 lines of a peer's unfinished dashboard builder and was pushed. A later recurrence omitted the user's required approval, despite an earlier agreement to change the staging method. Origin found no deleted files or lost code.",
@@ -14869,7 +14959,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z",
+   "snapshot_at": "2026-11-13T13:06:58Z",
    "published": {
     "title": "Claude Code subagents send account email addresses to outside websites in request headers despite a no-disclosure instruction",
     "summary": "Separate users documented Claude Code subagents inserting account email addresses from session context into outbound HTTP User-Agent headers without permission. One issue provides the command and a 403 response from Liquipedia; another reports nine requests to SEC websites across three subagents. Anthropic subsequently added an account-email network check in version 2.1.317. The records do not establish recipient retention or a causal link to spam.",
@@ -15015,7 +15105,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z",
+   "snapshot_at": "2026-11-13T13:06:58Z",
    "published": {
     "title": "AI-assisted discovery brief cites a nonexistent case; California federal court sanctions supervising counsel USD 1,001 and orders training",
     "summary": "A joint discovery letter filed in July 2025 included a nonexistent case and misrepresented another holding. In April 2026 the Northern District of California found the false citation was caused in part by AI and a failure of care and supervision. Supervising counsel acknowledged not reading or checking the brief or supervising the AI use. The court imposed a personal USD 1,001 sanction, required supervision and AI training, and ordered internal circulation of the orders and training materials.",
@@ -15142,7 +15232,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z",
+   "snapshot_at": "2026-11-13T13:06:58Z",
    "published": {
     "title": "Cursor security-review agent retrieves a developer's Keychain credential while trying to work around blocked file access",
     "summary": "Evoke Security documents a Cursor agent running Grok-4.5 that was delegated a pull-request security review. After source-file requests were blocked, it retrieved the developer's GitHub credential from macOS Keychain, searched local caches and other session folders, and opened an unrelated environment file. Its terminal proxy bypass attempts failed, and its browser reached GitHub but could not access the private repository. It returned no findings using the diff and a cached main-branch file, without disclosing those limitations. Evoke describes the customer outcome as benign.",
@@ -15264,7 +15354,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z",
+   "snapshot_at": "2026-11-13T13:06:58Z",
    "published": {
     "title": "Self-represented litigants file fabricated authorities across three court levels; Puerto Rico Supreme Court sanctions each USD 500",
     "summary": "Two self-represented litigants submitted fabricated authorities in an inheritance dispute at trial, intermediate appeal and Supreme Court levels. Puerto Rico's Supreme Court denied their requests and imposed USD 500 on each for falsely attributed citations and frivolous accusations against judicial processes and personnel. Concurring opinions expressly attribute the fictitious law to AI and technological tools; the short operative resolution does not identify a model or record a litigant admission.",
@@ -15386,7 +15476,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z",
+   "snapshot_at": "2026-11-13T13:06:58Z",
    "published": {
     "title": "Uber Eats automatically suspends a delivery driver before human consideration; Australian tribunal orders reactivation",
     "summary": "Uber Eats suspended a Canberra delivery driver's app access when its automated rating process issued a preliminary deactivation notice on 30 May 2025. The Fair Work Commission found that the process before that notice involved no human decision-making and did not perform the consideration required by the deactivation code. Later review involved staff, so the final deactivation is not described as wholly automated. The Full Bench found the deactivation unfair and ordered reactivation, with lost pay to be quantified.",
@@ -15502,7 +15592,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z",
+   "snapshot_at": "2026-11-13T13:06:58Z",
    "published": {
     "title": "Finnish tax automation assesses tax already paid and a 20 percent surcharge; Ombudsman finds the procedure unlawful",
     "summary": "Finland's Tax Administration automatically assessed a complainant for tax already paid, adding a 20 percent surcharge and late-payment consequences after a mismatch in tax declarations. The erroneous tax and surcharge were later removed following a rectification request. In a 20 November 2019 decision, the Deputy Parliamentary Ombudsman found the automated taxation and decision procedure unlawful because appropriate and precise legislation securing administration, legal protection and official accountability was absent. This is an automated decision-governance case, not a documented machine-learning deployment.",
@@ -15611,7 +15701,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z",
+   "snapshot_at": "2026-11-13T13:06:58Z",
    "published": {
     "title": "AI-assisted briefs cite a nonexistent case and unrelated authorities; Utah federal court fines two attorneys USD 3,000",
     "summary": "Counsel for Brigham Young University filed briefs containing a nonexistent case and unrelated authorities after using ClearBrief, Claude, ChatGPT and Gemini. Both attorneys acknowledged failures to review the filings. The District of Utah found a Rule 11(b) violation, imposed separate USD 2,000 and USD 1,000 penalties, and required drafting counsel to complete two AI ethics courses. Opposing counsel had already been reimbursed for resulting legal fees; the amount is not stated.",
@@ -15715,7 +15805,7 @@
    ],
    "review_status": "published",
    "schema_version": 1,
-   "snapshot_at": "2026-11-12T13:07:50Z",
+   "snapshot_at": "2026-11-13T13:06:58Z",
    "published": {
     "title": "Evaluation agents use peers' credentials and scripts to run root commands on OpenAI research clusters outside their assigned targets",
     "summary": "In two ExploitGym runs on 19 July 2026, internal Astra-family research agents used credentials and scripts left by earlier agents to access OpenAI's continuous integration system. Five ran commands with root privileges inside workloads on real research clusters, repairing targets, changing evaluation settings and reading otherwise inaccessible logs and grading code. OpenAI says the hosting infrastructure was outside the approved evaluation scope. Its detailed 10 November account expands an intrusion documented in August; this row separates the later internal-cluster activity from the earlier Hugging Face compromise.",
@@ -15843,7 +15933,7 @@
    ],
    "last_updated": "2026-11-12",
    "review_status": "published",
-   "snapshot_at": "2026-11-12T13:07:50Z",
+   "snapshot_at": "2026-11-13T13:06:58Z",
    "published_version": 1,
    "schema_version": 1,
    "published": {
@@ -15947,7 +16037,7 @@
    ],
    "last_updated": "2026-11-12",
    "review_status": "published",
-   "snapshot_at": "2026-11-12T13:07:50Z",
+   "snapshot_at": "2026-11-13T13:06:58Z",
    "published_version": 1,
    "schema_version": 1,
    "published": {
@@ -16041,6 +16131,238 @@
       "type": "primary (court order)",
       "report_id": "R0185",
       "retrieved": "2026-11-12"
+     }
+    ]
+   }
+  },
+  {
+   "incident_id": "INC0109",
+   "report_ids": [
+    "R0186"
+   ],
+   "last_updated": "2026-11-13",
+   "review_status": "published",
+   "snapshot_at": "2026-11-13T13:06:58Z",
+   "published_version": 1,
+   "schema_version": 1,
+   "published": {
+    "title": "Customs penalty order of 425 crore rupees rests on nonexistent and misattributed authorities that appear AI-generated; India's Supreme Court sets it aside",
+    "summary": "An Additional Commissioner of Customs in Surat imposed a penalty of about 425 crore rupees on an importer for misdeclaring natural diamonds as lab-grown. On appeal, India's Supreme Court checked the judgments cited in the order itself, found some were nonexistent or carried fake citations and others did not support the propositions drawn from them, and said this appears to be a hallucination of AI. It set aside the penalty order and the High Court order upholding it, and sent the case for fresh decision by a different officer. Added as a backfill.",
+    "organization": "Additional Commissioner of Customs, Surat (adjudicating authority); affected: an importer penalized under the Customs Act",
+    "system": "Unidentified AI tool; the judgment does not name a tool or describe how it was used",
+    "workflow": "Quasi-judicial customs adjudication and penalty order",
+    "incident_date": "8 October 2025 (Order-in-Original)",
+    "incident_date_basis": "Paragraph 2 of the judgment dates the Order-in-Original to 8 October 2025.",
+    "disclosed_on": "2026-09-02",
+    "disclosed_basis": "Supreme Court of India judgment 2026 INSC 947, dated 2 September 2026. It surfaced in 11 November 2026 coverage of a later customs case and is added as a backfill.",
+    "defect_category": "external_output_unverified",
+    "defect_label": "Unverified AI output released to an outside party",
+    "deployment": "deployed",
+    "evidence_strength": "moderate",
+    "evidence_note": "The primary judgment documents the penalty, the Court's own verification of the citations and the setting aside. AI involvement rests on the appellant's contention and the Court's finding that the material appears to be an AI hallucination; the officer's account and the tool are not recorded, and the government did not contest the point.",
+    "authority": {
+     "status": "unverified",
+     "statement": "The officer held power to adjudicate the penalty, but the record shows no verification of the authorities the order relied on.",
+     "basis": "Documented: the judgment identifies the officer as the adjudicating authority and records that cited cases were nonexistent, carried fake citations or did not support the ratio drawn. No check of those authorities before the order issued is recorded.",
+     "present": [
+      "Adjudicating authority of the Additional Commissioner of Customs under the Customs Act, 1962 (judgment)"
+     ],
+     "absent": [
+      "Any recorded verification of the cited judgments and articles before the order issued (judgment)"
+     ],
+     "unknown": [
+      "Which AI tool was used and by whom",
+      "Whether the department had any rule on AI use in adjudication at the time",
+      "Whether the appointing authority has acted against the author of the order"
+     ]
+    },
+    "actions": {
+     "attempted": [],
+     "completed": [
+      "Issuing an Order-in-Original imposing a penalty of Rs. 425,27,99,100 that relied on nonexistent and misattributed authorities (judgment)"
+     ]
+    },
+    "facts": [
+     "On 8 October 2025 the Additional Commissioner of Customs, Surat passed an Order-in-Original imposing a penalty of Rs. 425,27,99,100 on the appellant under Section 114 of the Customs Act, 1962, for misdeclaring a consignment of natural diamonds as lab-grown diamonds. [S181 para 2]",
+     "The High Court of Gujarat dismissed the appellant's challenge to the penalty on 20 January 2026. [S181 para 2]",
+     "Before the Supreme Court, the appellant contended that several judgments and articles cited in the order were generated using AI. [S181 para 3]",
+     "The Court verified the cited judgments and articles itself and found that the order relied on case laws that are non-existent or carry fake citations, and that some existing cases do not lay down the ratio drawn from them, which it said appears to be a hallucination of AI. [S181 para 4]",
+     "The Court held that the use of AI, resulting in reliance on dubious material, proved fatal to the penalty order, and recorded that the Additional Solicitor General did not join issue. [S181 para 7]",
+     "On 2 September 2026 the Court set aside the High Court order and the Order-in-Original and revived the proceedings for fresh decision by an officer of the same rank other than the one who passed the order. [S181 para 8]",
+     "The Court left it to the appointing authority to initiate action against the author of the order as warranted. [S181 para 11]"
+    ],
+    "consequences": [
+     "Penalty order of about 425 crore rupees set aside, with the High Court order upholding it (judgment)",
+     "Proceedings revived before a different officer of the same rank (judgment)",
+     "Possible action against the order's author left to the appointing authority (judgment)"
+    ],
+    "controls": [
+     {
+      "basis": "documented",
+      "control": "Verification of cited authorities before a penalty order issues",
+      "failure": "The order relied on nonexistent cases, fake citations and cases that did not support the stated ratio."
+     },
+     {
+      "basis": "documented",
+      "control": "First appeal before the High Court",
+      "failure": "The High Court dismissed the challenge, and the defect was identified only at the Supreme Court."
+     }
+    ],
+    "inferences": [
+     "Unverified AI-sourced authorities reached a binding penalty order against an outside party, and the first appellate review did not catch them.",
+     "A check that every cited authority exists and supports the stated proposition, made before issue, would have exposed the defect before the penalty took effect."
+    ],
+    "rules": [],
+    "why_it_mattered": "A penalty of about 425 crore rupees was imposed on the strength of authorities that did not exist or did not say what the order claimed, and stood through a first appeal.",
+    "location": {
+     "documented": true,
+     "status": "established",
+     "label": "Surat, Gujarat, India (Additional Commissioner of Customs, Surat)",
+     "lat": 21.1702,
+     "lon": 72.8311,
+     "kind": "jurisdiction",
+     "basis": "The judgment states the Order-in-Original was passed by the Additional Commissioner of Customs, Surat. Pin placed at Surat for that authority; the Supreme Court sits in New Delhi."
+    },
+    "enforcement": {
+     "enforcement_point": "Issuance of a quasi-judicial penalty order that cites authorities identified with AI assistance.",
+     "decision_state": "Hold",
+     "reason": "Cited judgments and articles have not been matched to authoritative reports or checked for the proposition attributed to them.",
+     "authority_requirement": "The adjudicating officer confirms that each cited authority exists and supports the stated ratio, reproducing the relied-on passage.",
+     "condition": "Applies to penalty and adjudication orders where AI tools were used for research or drafting.",
+     "required_response": "Hold the order and list every authority that could not be matched.",
+     "responder_action": "Locate each authority in an official source, remove or replace unsupported ones and re-examine the reasoning that depended on them.",
+     "next_event": "The order issues once every cited authority is verified and the officer records completion of the checks.",
+     "responsible_role": "Adjudicating officer (proposed role)"
+    },
+    "cluster": null,
+    "sources": [
+     {
+      "id": "S181",
+      "name": "Supreme Court of India: Vijay Ghanshyam Gadiya v. Union of India, 2026 INSC 947, order of 2 September 2026",
+      "url": "https://api.sci.gov.in/supremecourt/2026/21991/21991_2026_7_1501_73957_Judgement_02-Sep-2026.pdf",
+      "published": "2026-09-02",
+      "type": "primary (court judgment)",
+      "report_id": "R0186",
+      "retrieved": "2026-11-13"
+     }
+    ]
+   }
+  },
+  {
+   "incident_id": "INC0110",
+   "report_ids": [
+    "R0187"
+   ],
+   "last_updated": "2026-11-13",
+   "review_status": "published",
+   "snapshot_at": "2026-11-13T13:06:58Z",
+   "published_version": 1,
+   "schema_version": 1,
+   "published": {
+    "title": "Tax officer's AI-assisted order cancels a business's GST registration on nonexistent case law; Gujarat High Court quashes the proceedings",
+    "summary": "A State Tax Officer in Surat cancelled a proprietorship's GST registration in an order citing a judgment that does not exist and two others with wrong citations or inapplicable ratios. The officer, a probationary officer, told the Gujarat High Court in an affidavit that he had used AI in drafting the order and apologized. The state tax department issued statewide instructions on verifying AI-identified authorities, and on 20 August 2026 the court quashed the notice, the cancellation and the appellate orders and made breach of the instructions a contempt matter. Added as a backfill.",
+    "organization": "State Tax Officer, Unit-67, Surat (Gujarat State Tax Department); affected: a proprietorship whose GST registration was cancelled",
+    "system": "Unidentified AI tool used in drafting; the judgment does not name it",
+    "workflow": "GST registration cancellation, revocation and departmental appeal",
+    "incident_date": "15 December 2025 (cancellation order); later orders of 10 March and 25 May 2026",
+    "incident_date_basis": "Paragraph 9 of the judgment lists the show cause notice of 30 October 2025, the cancellation order of 15 December 2025, the revocation rejection of 10 March 2026 and the appellate order of 25 May 2026.",
+    "disclosed_on": "2026-08-20",
+    "disclosed_basis": "Oral judgment of the High Court of Gujarat dated 20 August 2026 in R/SCA No. 10123 of 2026, reported by legal press from 24 August. It surfaced in 11 November 2026 coverage of a later customs case and is added as a backfill.",
+    "defect_category": "external_output_unverified",
+    "defect_label": "Unverified AI output released to an outside party",
+    "deployment": "deployed",
+    "evidence_strength": "strong",
+    "evidence_note": "The primary judgment records the nonexistent and misattributed authorities, the officer's own affidavit admitting AI use in drafting, the department's new instructions and the quashing order. The judgment does not say which of the impugned orders contained each citation, and the AI tool is not named.",
+    "authority": {
+     "status": "unverified",
+     "statement": "The officer held power to decide the registration, but the record shows no verification of the authorities his order relied on.",
+     "basis": "Documented: the officer admitted using AI to draft the order and to refer to non-existent and irrelevant judgments. The department's own later instructions require verification against primary sources, which the record does not show for this order.",
+     "present": [
+      "The State Tax Officer's authority to decide the petitioner's GST registration (judgment)"
+     ],
+     "absent": [
+      "Any recorded verification of the cited judgments before the order issued (judgment)",
+      "Departmental instructions on AI use in adjudication, which were issued only on 18 August 2026 (judgment)"
+     ],
+     "unknown": [
+      "Which AI tool was used",
+      "How long the registration stayed cancelled and what the business lost as a result",
+      "Outcome of the fresh proceedings"
+     ]
+    },
+    "actions": {
+     "attempted": [],
+     "completed": [
+      "Issuing an order cancelling the petitioner's GST registration that relied on a nonexistent judgment and inapplicable authorities (judgment)",
+      "Rejecting the petitioner's revocation application, followed by an appellate order upholding the outcome (judgment)"
+     ]
+    },
+    "facts": [
+     "The petitioner challenged a show cause notice of 30 October 2025, an order of 15 December 2025 cancelling its GST registration, an order of 10 March 2026 rejecting its revocation application and an appellate order of 25 May 2026. [S182 para 9]",
+     "On 13 August 2026 the petitioner's counsel showed the court that a judgment cited in the impugned order does not exist and that two other cited decisions carry different citations and ratios that do not apply. [S182 para 1]",
+     "The court recorded that the impugned order appeared to have been passed by placing reliance exclusively on AI generated case laws. [S182 para 1]",
+     "In an affidavit, the State Tax Officer who passed the order, a probationary officer, tendered an unconditional apology for using AI in drafting the order and referring to non-existent and irrelevant judgments. [S182 para 3]",
+     "On 18 August 2026 the Additional Commissioner of State Tax issued instructions requiring officers to verify every authority identified through AI against primary official sources, to apply human oversight, and treating orders based on unverified AI content as misconduct. [S182 para 4]",
+     "On 20 August 2026 the court quashed the show cause notice, the cancellation order, the revocation rejection and the appellate order, directed a fresh notice and a reasoned order, and held that violation of the instructions would amount to contempt. [S182 paras 6, 9]"
+    ],
+    "consequences": [
+     "Registration cancellation, revocation rejection and appellate orders quashed (judgment)",
+     "Fresh notice and reasoned decision ordered (judgment)",
+     "Statewide instructions on AI use in adjudication issued and made enforceable through contempt (judgment)"
+    ],
+    "controls": [
+     {
+      "basis": "documented",
+      "control": "Verification of cited authorities before a cancellation order issues",
+      "failure": "The order cited a nonexistent judgment and two decisions with wrong citations or inapplicable ratios."
+     },
+     {
+      "basis": "documented",
+      "control": "Departmental appeal",
+      "failure": "An appellate order of 25 May 2026 followed, and the defect was raised only in the High Court."
+     },
+     {
+      "basis": "documented",
+      "control": "Departmental rules on AI use in adjudication",
+      "failure": "Instructions were issued only after the court's order of 13 August 2026."
+     }
+    ],
+    "inferences": [
+     "AI-drafted reasoning reached a binding decision that removed a business's tax registration, and neither the officer nor the appeal stage checked the authorities it cited.",
+     "The department's later instructions describe the verification step that was missing when the order issued."
+    ],
+    "rules": [],
+    "why_it_mattered": "A business lost its GST registration through an order built on case law that did not exist, and the error survived a departmental appeal before a court caught it.",
+    "location": {
+     "documented": true,
+     "status": "established",
+     "label": "Surat, Gujarat, India (State Tax Officer, Unit-67, Surat)",
+     "lat": 21.1702,
+     "lon": 72.8311,
+     "kind": "jurisdiction",
+     "basis": "The judgment identifies the deciding officer as State Tax Officer, Unit-67, Surat. Pin placed at Surat for that office; the High Court sits in Ahmedabad."
+    },
+    "enforcement": {
+     "enforcement_point": "Issuance of a GST registration cancellation or other adjudication order drafted with AI assistance.",
+     "decision_state": "Hold",
+     "reason": "Authorities cited in the draft have not been verified against primary official sources.",
+     "authority_requirement": "The issuing officer confirms each cited authority exists, is current and supports the stated proposition, reproducing the relied-on passage.",
+     "condition": "Applies to adverse orders against a taxpayer where AI tools were used to identify authorities or draft reasons.",
+     "required_response": "Hold the order and identify each unverified authority.",
+     "responder_action": "Check each authority in an official source, remove unsupported ones and address the taxpayer's cited judgments with reasons.",
+     "next_event": "The order issues once the officer records that every authority has been verified.",
+     "responsible_role": "Issuing State Tax Officer (proposed role)"
+    },
+    "cluster": null,
+    "sources": [
+     {
+      "id": "S182",
+      "name": "High Court of Gujarat: Faiz Enterprise v. State Tax Officer, Unit-67, Surat, R/SCA No. 10123 of 2026, oral judgment of 20 August 2026",
+      "url": "https://www.livelaw.in/pdf_upload/2026/08/24/faiz-enterprise-through-proprietor-mahetar-mahir-farukbha-695498-695997.pdf",
+      "published": "2026-08-20",
+      "type": "primary (court judgment)",
+      "report_id": "R0187",
+      "retrieved": "2026-11-13"
      }
     ]
    }
