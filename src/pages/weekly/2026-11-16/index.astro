@@ -1,0 +1,83 @@
+---
+import Base from '../../../layouts/Base.astro';
+---
+<Base title="Decision Governance Weekly | 9 to 15 Nov 2026 | Issue 08" description="Decision Governance Weekly Issue 08: agent tool-call policy enforcement, refund approval limits and research execution evidence. Published by Jochanni Labs." type="article" publishedDate="2026-11-16">
+ <div class="weekly-header">
+<div class="container">
+<div class="weekly-brandline">
+<img alt="Jochanni Labs logo, a flame inside a shield" class="weekly-logo" height="64" src="/weekly/jochanni-labs-logo.jpg" width="64"/>
+<p class="weekly-kicker">Jochanni Labs / Decision Governance / Issue 08</p>
+</div>
+<h1>Decision Governance Weekly</h1>
+<p class="weekly-purpose">What happened. Where enforcement failed. How DAL-X can enforce authority before execution.</p>
+<div class="weekly-meta">
+<div class="weekly-meta-item"><span class="weekly-meta-label">Reporting period</span><span class="weekly-meta-value">Mon 9 Nov to Sun 15 Nov 2026</span></div>
+<div class="weekly-meta-item"><span class="weekly-meta-label">Publication date</span><span class="weekly-meta-value">16 November 2026</span></div>
+<div class="weekly-meta-item"><span class="weekly-meta-label">Publisher</span><span class="weekly-meta-value">Published by Jochanni Labs</span></div>
+<div class="weekly-meta-item"><span class="weekly-meta-label">Founder and publisher</span><span class="weekly-meta-value">Kevin Moore</span></div>
+</div>
+<span class="weekly-doctrine-tag">No Authority, No Execution</span>
+</div>
+</div>
+<main class="weekly-body">
+<section class="weekly-section weekly-section--lead">
+<div class="container">
+<div class="weekly-secnum">Opening finding</div>
+<h2>Obsidian puts policy decisions before agent tool calls</h2>
+<p class="weekly-lead-p">Obsidian Security's 10 November launch describes enforcement points that pause agent actions before they reach business applications.<sup><a href="#s1">1</a></sup> Its technical account separates policy evaluation from the component that must actually stop execution, a distinction enterprises need when testing authority controls.</p>
+<p>This is vendor-described behavior, not independently verified customer enforcement. Human approval is currently specified for Claude Code pre-operation policies, not every enforcement point.<sup><a href="#s2">2</a></sup></p>
+<div class="weekly-figure"><div class="weekly-figcaption-label">Explanatory diagram / Vendor-described request path</div><div class="weekly-flow weekly-flow--3"><div class="weekly-flow-step"><span class="weekly-flow-num">01 / REQUEST</span><b>Pause tool call</b><span>Enforcement point sends action and arguments.</span></div><div class="weekly-flow-step"><span class="weekly-flow-num">02 / DECISION</span><b>Evaluate policy</b><span>Engine returns a decision and reason.</span></div><div class="weekly-flow-step weekly-flow-step--outcome"><span class="weekly-flow-num">03 / ENFORCEMENT</span><b>Apply the decision</b><span>Connected component forwards, holds or blocks.</span></div></div><p class="weekly-figcaption">Source: <a href="https://www.obsidiansecurity.com/blog/runtime-policy-decision-engine" rel="noopener noreferrer" target="_blank">Obsidian technical account, 10 November 2026</a>. Credit: Jochanni Labs. Explanatory visual, not an observed customer execution. Approval support varies by enforcement point.</p></div>
+</div></section>
+<section class="weekly-section"><div class="container">
+<div class="weekly-secnum">01 / Market Response</div>
+<h2>Announcements do not establish deployed authority</h2>
+<div class="weekly-table-wrap"><table class="weekly-table" style="min-width:0;table-layout:fixed;overflow-wrap:anywhere;"><thead><tr><th style="white-space:normal;padding:0.6rem;">Organization</th><th style="white-space:normal;padding:0.6rem;">Reported response</th><th style="white-space:normal;padding:0.6rem;">Evidence level</th><th style="white-space:normal;padding:0.6rem;">Unverified</th></tr></thead><tbody>
+<tr><td style="white-space:normal;padding:0.6rem;">Obsidian<sup><a href="#s1">1</a>, <a href="#s3">3</a></sup></td><td style="white-space:normal;padding:0.6rem;">Policy engine and MCP proxy check calls before forwarding.</td><td style="white-space:normal;padding:0.6rem;">10 Nov announcement and technical description.</td><td style="white-space:normal;padding:0.6rem;">Customer bypass tests; approval binding and replay rejection.</td></tr>
+<tr><td style="white-space:normal;padding:0.6rem;">Teleport<sup><a href="#s4">4</a></sup></td><td style="white-space:normal;padding:0.6rem;">Beams separates plan review from execution with approved roles.</td><td style="white-space:normal;padding:0.6rem;">10 Nov release; availability dated 9 Nov.</td><td style="white-space:normal;padding:0.6rem;">Exact payload binding; reviewer mandate; customer results.</td></tr>
+<tr><td style="white-space:normal;padding:0.6rem;">apisec<sup><a href="#s5">5</a></sup></td><td style="white-space:normal;padding:0.6rem;">Demo adds approval gates to refund and cancellation tools.</td><td style="white-space:normal;padding:0.6rem;">9 Nov vendor demonstration and static recheck.</td><td style="white-space:normal;padding:0.6rem;">Runtime rejection; alternate paths; payment outcome.</td></tr>
+</tbody></table></div>
+<p>Teleport permits a human or an LLM judge to review plans. Plan review is not evidence of a named human's authority over each exact execution.</p>
+</div></section>
+<section class="weekly-section"><div class="container">
+<div class="weekly-secnum">02 / Incidents and Enforcement Gaps</div>
+<h2>Research execution is not a production incident</h2>
+<p>Research report, demonstrated vulnerability: Microsoft's 10 November Lazarus account describes altered model weights causing an agent to download and run attacker code when triggered. Experiments began in March; exact demonstration dates and enterprise victims are not established. The report does not establish a separate authority check at command execution.<sup><a href="#s6">6</a></sup></p>
+<p>New demonstration, enforcement unknown: apisec shows refund capability added without human approval, followed by an approval-gate edit. Static analysis confirms code placement, not that the gate resists bypass.<sup><a href="#s5">5</a></sup></p>
+<p>This reviewed case set contains one research vulnerability report and one development demonstration. It establishes no confirmed unauthorized production execution or blocked production attempt. No qualifying incident update was retained. These are source-set counts, not an incident rate.</p>
+</div></section>
+<section class="weekly-section"><div class="container">
+<div class="weekly-secnum">03 / Domains Requiring Enforcement</div>
+<h2>Put the check before the system changes</h2>
+<div class="weekly-table-wrap"><table class="weekly-table" style="min-width:0;table-layout:fixed;overflow-wrap:anywhere;"><thead><tr><th style="white-space:normal;padding:0.6rem;">Domain</th><th style="white-space:normal;padding:0.6rem;">Exact action</th><th style="white-space:normal;padding:0.6rem;">Check belongs</th><th style="white-space:normal;padding:0.6rem;">If absent</th></tr></thead><tbody>
+<tr><td style="white-space:normal;padding:0.6rem;">Agent host<sup><a href="#s6">6</a></sup></td><td style="white-space:normal;padding:0.6rem;">Download and run attacker code.</td><td style="white-space:normal;padding:0.6rem;">Network and process execution boundaries.</td><td style="white-space:normal;padding:0.6rem;">Code runs with the agent's access.</td></tr>
+<tr><td style="white-space:normal;padding:0.6rem;">Payments<sup><a href="#s5">5</a></sup></td><td style="white-space:normal;padding:0.6rem;">Refund a customer's order.</td><td style="white-space:normal;padding:0.6rem;">Refund handler before payment submission.</td><td style="white-space:normal;padding:0.6rem;">An unapproved refund can proceed.</td></tr>
+</tbody></table></div>
+</div></section>
+<section class="weekly-section"><div class="container">
+<div class="weekly-secnum">04 / Enforcement Evidence and DAL Impact</div>
+<h2>Receiving-system rejection still needs proof</h2>
+<p>Obsidian says its proxy retains application tokens and blocks disallowed calls before forwarding. This documents an enforcement design, not demonstrated downstream rejection of direct requests. The reviewed sources do not establish exact approval-payload binding, reviewer authority verification and single-use execution together.<sup><a href="#s3">3</a></sup></p>
+<p>Decision Governance is the category. The Decision Authority Layer is the runtime enforcement layer. DAL-X is the application Jochanni Labs is building. System access does not establish authority to execute a specific action. Enterprise trigger logic identifies actions requiring an authority decision.</p>
+<p>Conditional assessment: DAL-style enforcement could stop an unauthorized refund only if the refund handler rejects missing or invalid authority for the exact order, amount and destination; verifies current reviewer authority; binds approval to that payload; rejects replay; and covers every relevant execution path. An authorized refund can still be incorrect.<sup><a href="#s7">7</a></sup></p>
+<p class="weekly-status">DAL-X status: decisionauthoritylayer.com reports real-system sandbox execution with no customer deployment. dal-x.com still describes simulation with production enforcement controls incomplete. Neither establishes an enterprise pilot or production enforcement.<sup><a href="#s8">8</a>, <a href="#s9">9</a></sup></p>
+</div></section>
+<section class="weekly-section"><div class="container">
+<div class="weekly-secnum">05 / Enterprise Check and Next Week's Watch</div>
+<h2>Test a changed refund and a direct request</h2>
+<p>Refund execution: change the amount after approval and replay a used authorization. Effective control requires rejection before payment submission, with matching authority and outcome records.</p>
+<p>Repeat through direct API access, retries and administrative paths. No path should execute without valid authority. Watch for runtime refund tests from apisec and payload-binding, reviewer and bypass evidence for the announced Obsidian and Teleport controls.</p>
+<div class="weekly-question">Will your refund handler reject an otherwise valid account when authority for that exact refund is missing?</div>
+<nav aria-label="Further reading" class="weekly-explore"><a class="weekly-explore-link" href="https://www.decisionauthoritylayer.com/architecture" rel="noopener noreferrer" target="_blank">Execution-path architecture<span>Downstream checks and bypass coverage</span></a><a class="weekly-explore-link" href="https://www.dal-x.com/briefings/Strategic_Intelligence_Briefing_05/" rel="noopener noreferrer" target="_blank">Strategic Intelligence Series<span>AI output and consequential execution</span></a></nav>
+</div></section><div class="weekly-sources"><div class="container"><h2>Sources and evidence scope</h2><ol>
+<li id="s1"><a href="https://www.obsidiansecurity.com/news/context-aware-runtime-decision-engine" rel="noopener noreferrer" target="_blank">Obsidian Security: Runtime Policy Decision Engine launch</a>, 10 November 2026. Primary vendor announcement.</li>
+<li id="s2"><a href="https://www.obsidiansecurity.com/blog/runtime-policy-decision-engine" rel="noopener noreferrer" target="_blank">Obsidian: Runtime Policy Decision Engine technical account</a>, Page displays Published 10 November and Updated 9 November 2026. Primary vendor description.</li>
+<li id="s3"><a href="https://www.obsidiansecurity.com/blog/introducing-the-mcp-security-proxy" rel="noopener noreferrer" target="_blank">Obsidian: MCP Security Proxy</a>, Page displays Published 10 November and Updated 9 November 2026. Primary vendor description.</li>
+<li id="s4"><a href="https://goteleport.com/about/newsroom/press-releases/teleport-beams-trusted-runtime-ai-agents-general-availability/" rel="noopener noreferrer" target="_blank">Teleport: Beams general availability</a>, 10 November 2026 announcement; availability stated as 9 November 2026. Primary vendor release.</li>
+<li id="s5"><a href="https://www.apisec.ai/blog/ai-agent-attack-surface-surface-code-ai" rel="noopener noreferrer" target="_blank">apisec: One Prompt Gave an AI Agent the Power to Move Money</a>, 9 November 2026. Primary vendor demo account; demonstration date unspecified.</li>
+<li id="s6"><a href="https://www.microsoft.com/en-us/research/blog/lazare-veni-foras-reprogramming-dormant-neurons-to-backdoor-ai-agents/" rel="noopener noreferrer" target="_blank">Microsoft Research: Lazarus</a>, 10 November 2026. Primary researcher account; experiments began in March, exact test dates unspecified.</li>
+<li id="s7"><a href="https://www.decisionauthoritylayer.com/architecture" rel="noopener noreferrer" target="_blank">Jochanni Labs: DAL-X architecture</a>, Undated; checked 16 November 2026. Architecture claims, not enterprise test evidence.</li>
+<li id="s8"><a href="https://www.decisionauthoritylayer.com/product" rel="noopener noreferrer" target="_blank">Jochanni Labs: DAL-X product</a>, Undated; checked 16 November 2026. Reports real-system sandbox execution and no customer deployment.</li>
+<li id="s9"><a href="https://www.dal-x.com/dal-x" rel="noopener noreferrer" target="_blank">Jochanni Labs: DAL-X application</a>, Undated; checked 16 November 2026. Describes simulation and incomplete production enforcement controls.</li>
+</ol><p class="weekly-sources-note">Public primary sources only. No private enterprise telemetry or independently executed vendor tests. Absence of public evidence does not establish absence of enforcement.</p></div></div><div class="weekly-pilot-cta"><div class="container"><p class="weekly-pilot-cta-label">Integration Action</p><h2>Discuss a Paid Enterprise Pilot</h2><p>A paid enterprise pilot would test it against one agent, one consequential action, and one downstream system.</p><div class="weekly-pilot-cta-row"><a class="btn-primary" href="https://www.dal-x.com/contact" rel="noopener noreferrer" target="_blank">Contact to discuss the pilot</a><a class="btn-outline" href="https://www.dal-x.com/weekly/" rel="noopener noreferrer" target="_blank">All issues</a></div></div></div>
+</main>
+</Base>
