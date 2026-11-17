@@ -250,6 +250,18 @@ section.block:last-of-type { padding-bottom: clamp(56px, 9vw, 104px); }
 .tl-foot i { display: inline-block; width: 8px; height: 12px; border: 1.2px solid var(--orange); background: var(--charcoal-5); border-radius: 2px; vertical-align: -2px; margin-right: 6px; }
 .tl-foot i.n { background: var(--orange); }
 
+/* Catalog controls retain the existing dashboard layout and palette. */
+.catalog-controls { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-bottom: 12px; }
+.catalog-controls .field select { min-height: 44px; }
+.catalog-note { font-size: 0.86rem; color: var(--text-muted); margin-bottom: 14px; }
+.catalog-method { margin-bottom: 16px; border-bottom: 1px solid var(--border-faint); padding-bottom: 10px; }
+.catalog-method summary { cursor: pointer; min-height: 44px; display: flex; align-items: center; color: var(--orange-bright); font-size: 0.86rem; }
+.catalog-method p { font-size: 0.86rem; color: var(--text-muted); margin-bottom: 8px; max-width: 86ch; }
+.chip { white-space: normal; max-width: 100%; overflow-wrap: anywhere; }
+.catalog-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.catalog-tags .chip { font-size: 0.62rem; letter-spacing: 0.025em; }
+@media (max-width: 700px) { .catalog-controls { grid-template-columns: 1fr; } }
+
 /* Browser */
 .controls { display: grid; grid-template-columns: minmax(0, 1.4fr) repeat(3, minmax(0, 1fr)) auto; gap: 10px; align-items: end; margin-bottom: 14px; }
 .field { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
@@ -649,10 +661,23 @@ footer.site .wrap { display: flex; flex-wrap: wrap; gap: 10px 24px; justify-cont
       <p class="label accent">04 / Every finding</p>
       <h2 class="section-title" id="h-all">Browse the incidents</h2>
       <p class="lede" style="margin-bottom:24px">Newest disclosure first, a page at a time. Filter or search to narrow the list, and select any incident to open its case file.</p>
+      <div class="catalog-controls" aria-label="Catalog filters">
+        <div class="field"><label class="label" for="f-domain">Workflow domain</label><select id="f-domain"></select></div>
+        <div class="field"><label class="label" for="f-evidence">Evidence source</label><select id="f-evidence"></select></div>
+        <div class="field"><label class="label" for="f-coverage">Coverage</label><select id="f-coverage"></select></div>
+      </div>
+      <p class="catalog-note" id="catalog-mix"></p>
+      <p class="catalog-note">Workflow domain describes the actual work. Evidence source describes who documents it. Coverage describes when the case entered this repository, not when the action occurred.</p>
+      <details class="catalog-method">
+        <summary>Catalog method and limits</summary>
+        <p>Repository history starts on 12 October 2026. Cases in that first snapshot are the initial sample. Later cases are a new disclosure when added within 3 days of the recorded disclosure date; older disclosures are historical backfill. Coverage stays tied to the first repository record.</p>
+        <p>First recorded is repository provenance, not necessarily the original publication date. Evidence-source categories can overlap and are independent of workflow domain. Missing metadata is shown as Not classified, without keyword guessing. These curated counts do not establish prevalence or severity.</p>
+        <p>New only still means disclosed in the last 3 days, relative to today. It is separate from coverage at first record.</p>
+      </details>
       <div class="controls">
         <div class="field search">
           <label class="label" for="q">Search</label>
-          <input id="q" type="search" placeholder="Title, organization, system or place" autocomplete="off">
+          <input id="q" type="search" placeholder="Title, organization, system, place or catalog label" autocomplete="off">
         </div>
         <div class="field defect-f">
           <label class="label" for="f-defect">Defect</label>
@@ -695,17 +720,20 @@ footer.site .wrap { display: flex; flex-wrap: wrap; gap: 10px 24px; justify-cont
       <p class="label accent">06 / Screened but not included</p>
       <h2 class="section-title" id="h-screened">Every candidate screened out</h2>
       <div class="scale-intro">
-        <p>Candidates reviewed against the inclusion bar and left out. Updated daily. Select a card for the reason and source.</p>
-        <p>Exclusion does not mean a report is false. It means the evidence, the action or the scope fell short of a case file.</p>
+        <p>Screening records and later reviews. Updated daily. Select a card for the decision and source.</p>
+        <p>Exclusion does not mean a report is false. Original records remain visible when a later review includes the incident.</p>
+      </div>
+      <div class="catalog-controls">
+        <div class="field"><label class="label" for="s-domain">Workflow domain</label><select id="s-domain"></select></div>
       </div>
       <div class="controls">
         <div class="field search">
           <label class="label" for="sq">Search screened candidates</label>
-          <input id="sq" type="search" placeholder="Name, reason or source" autocomplete="off">
+          <input id="sq" type="search" placeholder="Name, reason, source or workflow domain" autocomplete="off">
         </div>
         <div class="field">
           <label class="label" for="s-in">Search in</label>
-          <select id="s-in"><option value="all">Name, reason and source</option><option value="name">Name only</option><option value="reason">Reason only</option><option value="url">Source link only</option></select>
+          <select id="s-in"><option value="all">Name, reason, source and domain</option><option value="name">Name only</option><option value="reason">Reason only</option><option value="url">Source link only</option></select>
         </div>
         <div class="field">
           <label class="label" for="s-src">Source</label>
@@ -762,6 +790,6 @@ footer.site .wrap { display: flex; flex-wrap: wrap; gap: 10px 24px; justify-cont
 </aside>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
-<script src="/weekly/lets-talk-about-it/app.js"></script>
+<script src="/weekly/lets-talk-about-it/app.js?v=20261117-catalog"></script>
 </body>
 </html>

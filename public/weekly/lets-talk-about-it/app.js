@@ -18,6 +18,38 @@
     { key: 'unbounded_execution', label: 'Agent ran without a spend or iteration limit', line: 'The agent kept running with no ceiling on cost or repetitions.' },
     { key: 'human_review_absent', label: 'Decision affecting a person executed without human review', line: 'An automated system took a decision with real consequences for a person, and no human looked first.' }
   ];
+  var DOMAINS = {
+    customer_service_commerce: 'Customer service and commerce', finance_payments: 'Finance and payments',
+    employment_hr: 'Employment and HR', health_insurance: 'Health and insurance', public_sector: 'Public sector',
+    software_it: 'Software and IT operations', security_access: 'Security and access', data_protection: 'Data protection',
+    frontier_evaluations: 'Frontier labs and evaluations', legal_filings: 'Legal and court filings', other: 'Other', unknown: 'Not classified'
+  };
+  var EVIDENCE = {
+    court_tribunal: 'Court or tribunal', regulator_ombudsman: 'Regulator or ombudsman', government_audit: 'Government or audit body',
+    vendor_operator: 'Vendor or operator', security_research: 'Security research', safety_research: 'Safety research', journalism: 'Journalism', unknown: 'Not classified'
+  };
+  var COVERAGE = { initial_sample: 'Initial sample', new_disclosure: 'New disclosure when added', historical_backfill: 'Historical backfill', unknown: 'Not classified' };
+  function classifiedKey(v, labels) { return Object.prototype.hasOwnProperty.call(labels, v) ? v : 'unknown'; }
+  function domainKey(v) { return classifiedKey(v, DOMAINS); }
+  function catalog(r) {
+    var c = r.catalog || {};
+    var evidence = arr(c.evidence_sources).map(function (k) { return classifiedKey(k, EVIDENCE); });
+    return { domain: domainKey(c.workflow_domain), evidence: evidence.length ? evidence : ['unknown'], coverage: classifiedKey(c.coverage_type, COVERAGE) };
+  }
+  function catalogText(r) {
+    var c = catalog(r);
+    return [DOMAINS[c.domain], c.evidence.map(function (k) { return EVIDENCE[k]; }).join(', '), COVERAGE[c.coverage], (r.catalog || {}).coverage_basis].join(' ');
+  }
+  function incidentSearchFields(r) {
+    var p = r.published;
+    return [r.incident_id, p.title, p.summary, p.organization, p.system, p.workflow, p.location && p.location.label, p.cluster, p.defect_label, catalogText(r)];
+  }
+  function catalogOptions(id, labels, rows, keys, allLabel) {
+    $(id).innerHTML = '<option value="">' + esc(allLabel) + ' (' + rows.length + ')</option>' + Object.keys(labels).map(function (k) {
+      var n = rows.filter(function (r) { return keys(r).indexOf(k) >= 0; }).length;
+      return '<option value="' + esc(k) + '">' + esc(labels[k]) + ' (' + n + ')</option>';
+    }).join('');
+  }
   var AUTH = { exceeded: 'Authority exceeded', unverified: 'Authority unverified', missing: 'Authority missing' };
   var DEPLOY = { deployed: 'Deployed system', evaluation_real_systems: 'Evaluation that reached real systems', research_simulation: 'Research simulation' };
   var DEPLOY_SHORT = { deployed: 'Deployed', evaluation_real_systems: 'Evaluation, real systems', research_simulation: 'Simulation' };
@@ -106,7 +138,7 @@
   /* ---------- State ---------- */
   var D = { rows: [], byId: {}, ctx: [], meta: {}, watch: [], screened: [] };
   var watchPage = 0, tilePage = 0, LEGEND_PAGE = 12, legendPage = 0, legendList = [];
-  var F = { defect: '', auth: '', dep: '', newOnly: false, q: '' };
+  var F = { defect: '', auth: '', dep: '', domain: '', evidence: '', coverage: '', newOnly: false, q: '' };
   var exclState = null;
   var openId = null, lastTrigger = null, expandedCluster = null, mapFocus = null, pushedHash = false;
 
@@ -148,6 +180,7 @@
       .map(function (c, i) { return { c: c, n: i + 1 }; }).reverse();
 
     renderHero();
+    renderCatalogSummary();
     buildFilterOptions();
     renderStats();
     bindScreened();
@@ -185,6 +218,12 @@
     $('newcount').textContent = nNew ? nNew + ' disclosed in the last 3 days' : '';
   }
 
+  function renderCatalogSummary() {
+    var legal = D.rows.filter(function (r) { return catalog(r).domain === 'legal_filings'; }).length;
+    var court = D.rows.filter(function (r) { return catalog(r).evidence.indexOf('court_tribunal') >= 0; }).length;
+    $('catalog-mix').textContent = 'Legal-workflow cases: ' + legal + ' of ' + D.rows.length + '. Cases with court or tribunal evidence: ' + court + ' of ' + D.rows.length + '. A court source does not make a case a legal workflow.';
+  }
+
   /* ---------- Filters ---------- */
   function defectList() {
     var known = DEFECTS.map(function (d) { return d.key; });
@@ -205,6 +244,9 @@
   }
 
   function buildFilterOptions() {
+    catalogOptions('f-domain', DOMAINS, D.rows, function (r) { return [catalog(r).domain]; }, 'All workflow domains');
+    catalogOptions('f-evidence', EVIDENCE, D.rows, function (r) { return catalog(r).evidence; }, 'All evidence sources');
+    catalogOptions('f-coverage', COVERAGE, D.rows, function (r) { return [catalog(r).coverage]; }, 'All coverage');
     var defs = defectList();
     D.defects = defs;
     var WORDS = ['No', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten', 'Eleven', 'Twelve'];
@@ -242,9 +284,7 @@
   var ISUGGEST = ['court', 'fabricated', 'evaluation', 'government', 'OpenAI', 'Claude', 'database', 'customer', '"human review"', 'regulator'];
   function renderISuggest() {
     $('isuggest').innerHTML = '<span class="label">Try</span>' + ISUGGEST.map(function (q) {
-      var save = F.q; F.q = q;
-      var n = D.rows.filter(function (r) { var sv = [F.defect, F.auth, F.dep, F.newOnly]; F.defect = F.auth = F.dep = ''; F.newOnly = false; var m = matches(r); F.defect = sv[0]; F.auth = sv[1]; F.dep = sv[2]; F.newOnly = sv[3]; return m; }).length;
-      F.q = save;
+      var n = D.rows.filter(function (r) { return matches(r, { q: q }); }).length;
       return n ? '<button type="button" class="chip" data-q="' + esc(q) + '" aria-pressed="false" title="Search for ' + esc(q) + '">' + esc(q.replace(/"/g, '')) + '<b>' + n + '</b></button>' : '';
     }).join('');
   }
@@ -263,6 +303,9 @@
     $('f-defect').addEventListener('change', function (e) { F.defect = e.target.value; applyFilters(); });
     $('f-auth').addEventListener('change', function (e) { F.auth = e.target.value; applyFilters(); });
     $('f-dep').addEventListener('change', function (e) { F.dep = e.target.value; applyFilters(); });
+    ['domain', 'evidence', 'coverage'].forEach(function (key) {
+      $('f-' + key).addEventListener('change', function (e) { F[key] = e.target.value; applyFilters(); });
+    });
     $('f-new').addEventListener('click', function () { F.newOnly = !F.newOnly; applyFilters(); });
     $('q').addEventListener('input', debounce(function () { F.q = $('q').value.trim(); applyFilters(); }, 160));
     ['filterreset', 'filterreset2', 'filterreset3'].forEach(function (id) {
@@ -302,32 +345,38 @@
   }
 
   function resetFilters() {
-    F = { defect: '', auth: '', dep: '', newOnly: false, q: '' };
+    F = { defect: '', auth: '', dep: '', domain: '', evidence: '', coverage: '', newOnly: false, q: '' };
     $('q').value = '';
     applyFilters();
   }
-  function anyFilter() { return !!(F.defect || F.auth || F.dep || F.newOnly || F.q); }
+  function anyFilter() { return !!(F.defect || F.auth || F.dep || F.domain || F.evidence || F.coverage || F.newOnly || F.q); }
 
-  function matches(r) {
-    var p = r.published;
-    if (F.defect && p.defect_category !== F.defect) return false;
-    if (F.auth && p.authority.status !== F.auth) return false;
-    if (F.dep && p.deployment !== F.dep) return false;
-    if (F.newOnly && !r._new) return false;
-    if (F.q) {
-      var hay = [r.incident_id, p.title, p.summary, p.organization, p.system, p.workflow, p.location && p.location.label, p.cluster, p.defect_label].join(' ').toLowerCase();
-      var terms = parseTerms(F.q);
+  function matches(r, state) {
+    var f = state || F, p = r.published, c = catalog(r);
+    if (f.defect && p.defect_category !== f.defect) return false;
+    if (f.auth && p.authority.status !== f.auth) return false;
+    if (f.dep && p.deployment !== f.dep) return false;
+    if (f.domain && c.domain !== f.domain) return false;
+    if (f.evidence && c.evidence.indexOf(f.evidence) < 0) return false;
+    if (f.coverage && c.coverage !== f.coverage) return false;
+    if (f.newOnly && !r._new) return false;
+    if (f.q) {
+      var hay = incidentSearchFields(r).join(' ').toLowerCase();
+      var terms = parseTerms(f.q);
       for (var i = 0; i < terms.length; i++) if (hay.indexOf(terms[i]) < 0) return false;
     }
     return true;
   }
-  function filtered() { return D.rows.filter(matches); }
+  function filtered() { return D.rows.filter(function (r) { return matches(r); }); }
 
   function describeFilters() {
     var parts = [];
     if (F.defect) { var d = (D.defects || []).find(function (x) { return x.key === F.defect; }); parts.push(d ? d.label : humanize(F.defect)); }
     if (F.auth) parts.push(authLabel(F.auth));
     if (F.dep) parts.push(depLabel(F.dep));
+    if (F.domain) parts.push('Workflow: ' + DOMAINS[F.domain]);
+    if (F.evidence) parts.push('Evidence: ' + EVIDENCE[F.evidence]);
+    if (F.coverage) parts.push('Coverage: ' + COVERAGE[F.coverage]);
     if (F.newOnly) parts.push('Disclosed in the last 3 days');
     if (F.q) parts.push('Search: ' + parseTerms(F.q).map(function (t) { return '"' + t + '"'; }).join(' and '));
     return parts.join(' / ');
@@ -341,6 +390,7 @@
       b.setAttribute('aria-pressed', b.dataset.defect === F.defect ? 'true' : 'false');
     });
     $('f-defect').value = F.defect; $('f-auth').value = F.auth; $('f-dep').value = F.dep;
+    ['domain', 'evidence', 'coverage'].forEach(function (key) { $('f-' + key).value = F[key]; });
     $('f-new').setAttribute('aria-pressed', F.newOnly ? 'true' : 'false');
     $('filterreset').hidden = !on;
     $('filterreset3').hidden = !on;
@@ -373,7 +423,7 @@
       var ttlLow = String(p.title || '').toLowerCase();
       var snip = '';
       if (terms.length && terms.some(function (t) { return ttlLow.indexOf(t) < 0; })) {
-        var fields = [p.summary, p.organization, p.system, p.workflow, p.location && p.location.label, p.cluster, p.defect_label];
+        var fields = incidentSearchFields(r);
         for (var fi = 0; fi < fields.length && !snip; fi++) snip = snippet(fields[fi], terms.filter(function (t) { return ttlLow.indexOf(t) < 0; }));
       }
       return '<button type="button" class="tile' + (r.incident_id === openId ? ' sel' : '') + '" data-id="' + esc(r.incident_id) + '" style="animation-delay:' + Math.min(i * 18, 360) + 'ms" aria-label="' + esc(r.incident_id + ': ' + (p.title || '')) + '">' +
@@ -381,6 +431,7 @@
         (p.disclosed_on ? '<span class="date">' + esc(fmtDay(p.disclosed_on)) + '</span>' : '') + '</span>' +
         '<span class="ttl">' + highlight(p.title || r.incident_id, terms) + '</span>' +
         (snip ? '<span class="snip">' + highlight(snip, terms) + '</span>' : '') +
+        '<span class="catalog-tags"><span class="chip">' + highlight(DOMAINS[catalog(r).domain], terms) + '</span><span class="chip">' + highlight(COVERAGE[catalog(r).coverage], terms) + '</span></span>' +
         '<span class="bot">' + (st ? '<span class="chip auth-' + esc(st) + '">' + esc(authLabel(st)) + '</span>' : '') +
         (p.deployment ? '<span class="chip dep">' + esc(depShort(p.deployment)) + '</span>' : '') + '</span>' +
         '</button>';
@@ -421,7 +472,8 @@
       (isW && has(c.reported_on) ? '<span class="date">' + esc(fmtMonthOrDay(c.reported_on)) + '</span>' : '') + '</span>' +
       '<span class="ttl">' + highlight(title, scope === 'reason' || scope === 'url' ? [] : terms) + '</span>' +
       (terms.length && scope !== 'name' && scope !== 'url' && snippet(c.reason, terms) ? '<span class="snip">' + highlight(snippet(c.reason, terms), terms) + '</span>' : '') +
-      '<span class="bot"><span class="chip ' + (isW ? 'excl-watch">Not verified' : 'excl-screen">Screened out') + '</span>' +
+      '<span class="bot"><span class="chip ' + (isW ? 'excl-watch">Not verified' : 'excl-screen">' + (c.screening_review && c.screening_review.outcome === 'included_after_review' ? 'Included as ' + esc(c.screening_review.incident_id) : 'Screened out')) + '</span>' +
+      '<span class="chip">' + highlight(DOMAINS[domainKey(c.workflow_domain)], scope === 'all' ? terms : []) + '</span>' +
       '<span class="chip">' + (has(c.url) ? 'Source linked' : 'No source URL') + '</span></span>' +
       '</button>';
   }
@@ -449,11 +501,12 @@
     return out;
   }
   function screenHay(c, scope) {
-    var parts = scope === 'name' ? [c.name] : scope === 'reason' ? [c.reason] : scope === 'url' ? [c.url] : [c.name, c.reason, c.url];
+    var parts = scope === 'name' ? [c.name] : scope === 'reason' ? [c.reason] : scope === 'url' ? [c.url] : [c.name, c.reason, c.url, DOMAINS[domainKey(c.workflow_domain)]];
     return parts.join(' ').toLowerCase();
   }
-  function screenedMatches(x, terms, scope, src) {
+  function screenedMatches(x, terms, scope, src, domain) {
     var c = x.c;
+    if (domain && domainKey(c.workflow_domain) !== domain) return false;
     if (src === 'linked' && !has(c.url)) return false;
     if (src === 'none' && has(c.url)) return false;
     if (!terms.length) return true;
@@ -461,7 +514,7 @@
     return terms.every(function (t) { return hay.indexOf(t) >= 0; });
   }
   function screenState() {
-    return { q: ($('sq').value || '').trim(), scope: $('s-in').value, src: $('s-src').value, sort: $('s-sort').value };
+    return { q: ($('sq').value || '').trim(), scope: $('s-in').value, src: $('s-src').value, domain: $('s-domain').value, sort: $('s-sort').value };
   }
   function highlight(text, terms) {
     var s = esc(text);
@@ -478,12 +531,12 @@
   }
   function screenedList() {
     var st = screenState(), terms = parseTerms(st.q);
-    var list = D.screened.filter(function (x) { return screenedMatches(x, terms, st.scope, st.src); });
+    var list = D.screened.filter(function (x) { return screenedMatches(x, terms, st.scope, st.src, st.domain); });
     if (st.sort === 'old') list = list.slice().reverse();
     else if (st.sort === 'az') list = list.slice().sort(function (p, q) { return String(p.c.name).localeCompare(String(q.c.name)); });
     return list;
   }
-  function screenFiltersOn() { var st = screenState(); return !!(st.q || st.scope !== 'all' || st.src || st.sort !== 'new'); }
+  function screenFiltersOn() { var st = screenState(); return !!(st.q || st.scope !== 'all' || st.src || st.domain || st.sort !== 'new'); }
   function renderSuggest() {
     $('suggest').innerHTML = '<span class="label">Try</span>' + SUGGEST.map(function (s) {
       var n = D.screened.filter(function (x) { return screenedMatches(x, parseTerms(s[1]), 'all', ''); }).length;
@@ -529,16 +582,18 @@
   }
   function exclMarkup(x, kind) {
     var c = x.c, isW = kind === 'w';
+    var included = c.screening_review && c.screening_review.outcome === 'included_after_review';
     var title = isW && has(c.tracker_title) ? c.tracker_title : c.name;
     var h = [];
     h.push('<header class="case-head"><div class="chips"><span class="chip">' + (isW ? 'WATCH' : 'SCR-' + String(x.n).padStart(3, '0')) + '</span>' +
-      '<span class="chip ' + (isW ? 'excl-watch">Watchlist, not verified' : 'excl-screen">Screened but not included') + '</span></div>' +
+      '<span class="chip ' + (isW ? 'excl-watch">Watchlist, not verified' : 'excl-screen">' + (included ? 'Included after review' : 'Screened but not included')) + '</span></div>' +
       '<h2 id="case-title" tabindex="-1">' + esc(title) + '</h2>' +
-      '<div class="defect-line">' + icon(isW ? 'watch' : 'screen') + '<span>' + (isW ? 'Reported, not verified to dashboard standard' : 'Reviewed against the inclusion bar and left out') + '</span></div>');
+      '<div class="defect-line">' + icon(isW ? 'watch' : 'screen') + '<span>' + (isW ? 'Reported, not verified to dashboard standard' : included ? 'Historical screening record, later included' : 'Reviewed against the inclusion bar and left out') + '</span></div>');
     if (isW && has(c.reported_on)) h.push('<dl class="facts-strip"><div class="wide"><dt>Reported</dt><dd>' + esc(fmtMonthOrDay(c.reported_on)) + '</dd></div></dl>');
+    h.push('<dl class="facts-strip"><div class="wide"><dt>Workflow domain</dt><dd>' + esc(DOMAINS[domainKey(c.workflow_domain)]) + '</dd></div></dl>');
     h.push('</header>');
-    h.push('<section class="cf-sec"><h3><span class="step">01</span>' + (isW ? 'Why it is not on the dashboard' : 'Why it is not included') + '</h3><p class="why">' + highlight(c.reason || 'Reason not stated', kind === 's' ? parseTerms(screenState().q) : []) + '</p>' +
-      '<p class="excl-note">Exclusion is not a finding that the report is false. It records why the public evidence, the action, or the scope did not meet the standard for a case file.</p></section>');
+    h.push('<section class="cf-sec"><h3><span class="step">01</span>' + (included ? 'Screening decision and later review' : isW ? 'Why it is not on the dashboard' : 'Why it is not included') + '</h3><p class="why">' + highlight(c.reason || 'Reason not stated', kind === 's' ? parseTerms(screenState().q) : []) + '</p>' +
+      (included ? '<p><button class="btn primary" type="button" data-goto="' + esc(c.screening_review.incident_id) + '">Open ' + esc(c.screening_review.incident_id) + '</button></p><p class="excl-note">The original screening record is retained. The linked incident contains the current evidence assessment.</p>' : '<p class="excl-note">Exclusion is not a finding that the report is false. It records why the public evidence, the action, or the scope did not meet the standard for a case file.</p>') + '</section>');
     h.push('<section class="cf-sec"><h3><span class="step">02</span>Source</h3>' + (has(c.url) ?
       '<ol class="srcs"><li><span class="sid">S</span><div><div class="sn"><a href="' + esc(c.url) + '" target="_blank" rel="noopener noreferrer">' + esc(c.url) + '</a></div></div></li></ol>' :
       '<p class="nosrc">No source URL recorded.</p>') + '</section>');
@@ -548,17 +603,18 @@
   function bindScreened() {
     var n = D.screened.filter(function (x) { return has(x.c.url); }).length;
     $('s-src').innerHTML = '<option value="">Any source status (' + D.screened.length + ')</option><option value="linked">Source linked (' + n + ')</option><option value="none">No source URL (' + (D.screened.length - n) + ')</option>';
+    catalogOptions('s-domain', DOMAINS, D.screened, function (x) { return [domainKey(x.c.workflow_domain)]; }, 'All workflow domains');
     renderSuggest();
     var rerender = function () { screenPage = 0; renderScreened(); };
     $('sq').addEventListener('input', debounce(rerender, 160));
-    ['s-in', 's-src', 's-sort'].forEach(function (id) { $(id).addEventListener('change', rerender); });
+    ['s-in', 's-src', 's-sort', 's-domain'].forEach(function (id) { $(id).addEventListener('change', rerender); });
     $('suggest').addEventListener('click', function (e) {
       var b = e.target.closest('button.chip'); if (!b) return;
       $('sq').value = $('sq').value.trim().toLowerCase() === b.dataset.q.toLowerCase() ? '' : b.dataset.q;
       $('s-in').value = 'all'; rerender();
     });
     $('sqclear').addEventListener('click', function () { $('sq').value = ''; rerender(); $('sq').focus(); });
-    $('sqreset').addEventListener('click', function () { $('sq').value = ''; $('s-in').value = 'all'; $('s-src').value = ''; $('s-sort').value = 'new'; rerender(); });
+    $('sqreset').addEventListener('click', function () { $('sq').value = ''; $('s-in').value = 'all'; $('s-src').value = ''; $('s-domain').value = ''; $('s-sort').value = 'new'; rerender(); });
     bindPager('screen', function (d) { screenPage += d; renderScreened(); }, 'screencount');
     $('screenlist').addEventListener('click', function (e) { var t = e.target.closest('.tile'); if (t) openExcl('s', +t.dataset.i, { trigger: t }); });
   }
@@ -972,6 +1028,12 @@
     fact('Organization', p.organization, null, true);
     fact('System', p.system);
     fact('Workflow', p.workflow);
+    var cat = catalog(r), provenance = r.catalog || {};
+    fact('Workflow domain', DOMAINS[cat.domain], provenance.workflow_basis);
+    fact('Evidence source', cat.evidence.map(function (k) { return EVIDENCE[k]; }).join(', '), 'Categories can overlap.');
+    fact('First recorded in repository', provenance.first_recorded_on ? fmtDay(provenance.first_recorded_on) : 'Not classified', provenance.first_recorded_commit ? 'Commit ' + provenance.first_recorded_commit : 'Repository provenance, not original publication.');
+    fact('Coverage at first record', COVERAGE[cat.coverage], provenance.coverage_basis);
+
     fact('Incident date', p.incident_date, p.incident_date_basis);
     fact('Disclosed', p.disclosed_on ? fmtDay(p.disclosed_on) : '', p.disclosed_basis);
     if (p.location && has(p.location.label)) fact('Location', p.location.label, p.location.basis, true);
