@@ -94,6 +94,21 @@ section.block { padding: clamp(56px, 9vw, 104px) 0 0; }
 section.block:last-of-type { padding-bottom: clamp(56px, 9vw, 104px); }
 .head-row { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px; margin-bottom: 28px; }
 
+/* Highlighted news bulletin, separate from the incident dataset */
+.news-bulletin { padding-top: 24px; }
+.news-card { border: 1px solid var(--orange-border); border-left: 4px solid var(--orange); border-radius: 6px; background: var(--charcoal-2); padding: clamp(18px, 3vw, 30px); }
+.news-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 18px; margin-bottom: 12px; }
+.news-meta .label { color: var(--orange-bright); }
+.news-meta time { font-family: var(--font-mono); font-size: 0.72rem; color: var(--silver-faint); }
+.news-card h2 { font-size: clamp(1.35rem, 2.6vw, 1.9rem); max-width: 49ch; line-height: 1.2; }
+.news-grid { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 16px 30px; margin-top: 16px; }
+.news-grid p { font-size: 1rem; line-height: 1.5; }
+.news-grid strong { color: var(--text-primary); font-weight: 600; }
+.news-status { margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--border-mid); font-size: 0.9rem; color: var(--silver-faint); }
+.news-links { display: flex; flex-wrap: wrap; gap: 4px 24px; margin-top: 8px; }
+.news-links a { display: inline-flex; align-items: center; min-height: 44px; color: var(--orange-bright); font-size: 0.92rem; text-underline-offset: 4px; }
+@media (max-width: 700px) { .news-grid { grid-template-columns: 1fr; gap: 12px; } .news-links { gap: 0 20px; } }
+
 /* Opening */
 .hero { padding: clamp(40px, 8vw, 88px) 0 0; }
 .hero-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: clamp(28px, 5vw, 64px); align-items: center; }
@@ -502,6 +517,27 @@ footer.site .wrap { display: flex; flex-wrap: wrap; gap: 10px 24px; justify-cont
 </div>
 
 <main id="main">
+  <aside class="news-bulletin" id="faa-smart-bulletin" aria-labelledby="faa-smart-title">
+    <div class="wrap">
+      <div class="news-card">
+        <div class="news-meta">
+          <p class="label">News bulletin / FAA SMART</p>
+          <time datetime="2026-11-17">17 November 2026</time>
+        </div>
+        <h2 id="faa-smart-title">FAA says SMART was not involved in the nationwide ground stop</h2>
+        <div class="news-grid">
+          <p><strong>What happened:</strong> The FAA issued a nationwide ground stop on 13 November after telecommunications instability. In its 15 November statement, the agency says SMART is a data aggregator, does not feed information into air traffic control and was unrelated to the disruption.</p>
+          <p><strong>What remains open:</strong> The FAA and L3Harris continue to investigate the root cause. AP reports that SMART makes recommendations to people, who retain decision authority. The rollout's timing does not establish that AI caused the ground stop.</p>
+        </div>
+        <p class="news-status"><strong>Not counted as an AI execution incident.</strong> The public record reviewed does not establish SMART causing the ground stop or executing an unauthorized action.</p>
+        <div class="news-links" aria-label="FAA SMART bulletin sources">
+          <a href="https://www.faa.gov/newsroom/nationwide-ground-stop-questions-and-answers" target="_blank" rel="noopener noreferrer">Read the FAA statement</a>
+          <a href="https://apnews.com/article/faa-smart-ai-outage-08af345749c81fd8364299cd75275fa6" target="_blank" rel="noopener noreferrer">Read AP's reporting</a>
+        </div>
+      </div>
+    </div>
+  </aside>
+
   <section class="hero" aria-labelledby="h-title">
     <div class="wrap hero-grid">
       <div>
