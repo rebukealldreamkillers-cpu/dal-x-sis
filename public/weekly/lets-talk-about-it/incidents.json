@@ -9225,7 +9225,7 @@
   {
    "incident_id": "INC0040",
    "last_updated": "2026-11-17",
-   "published_version": 3,
+   "published_version": 4,
    "report_ids": [
     "R0070",
     "R0076"
@@ -9362,13 +9362,13 @@
     "first_recorded_on": "2026-10-16",
     "first_recorded_commit": "d19a5034584b3bfa8ec4665274e799fab2d828d8",
     "coverage_type": "new_disclosure",
-    "coverage_basis": "First repository record on 2026-10-16; the cited disclosure was 1 days earlier."
+    "coverage_basis": "First repository record on 2026-10-16; the cited disclosure was 1 day earlier."
    }
   },
   {
    "incident_id": "INC0041",
    "last_updated": "2026-11-17",
-   "published_version": 3,
+   "published_version": 4,
    "report_ids": [
     "R0071",
     "R0076"
@@ -9506,7 +9506,7 @@
     "first_recorded_on": "2026-10-16",
     "first_recorded_commit": "d19a5034584b3bfa8ec4665274e799fab2d828d8",
     "coverage_type": "new_disclosure",
-    "coverage_basis": "First repository record on 2026-10-16; the cited disclosure was 1 days earlier."
+    "coverage_basis": "First repository record on 2026-10-16; the cited disclosure was 1 day earlier."
    }
   },
   {
@@ -11820,7 +11820,7 @@
   {
    "incident_id": "INC0059",
    "last_updated": "2026-11-17",
-   "published_version": 2,
+   "published_version": 3,
    "report_ids": [
     "R0102"
    ],
@@ -11946,7 +11946,7 @@
     "first_recorded_on": "2026-10-23",
     "first_recorded_commit": "7c63e09faa97200a0bb53e391a9c53b1a4f7d178",
     "coverage_type": "new_disclosure",
-    "coverage_basis": "First repository record on 2026-10-23; the cited disclosure was 1 days earlier."
+    "coverage_basis": "First repository record on 2026-10-23; the cited disclosure was 1 day earlier."
    }
   },
   {
@@ -16804,7 +16804,7 @@
   {
    "incident_id": "INC0097",
    "last_updated": "2026-11-17",
-   "published_version": 3,
+   "published_version": 4,
    "report_ids": [
     "R0164",
     "R0165",
@@ -16947,13 +16947,13 @@
     "first_recorded_on": "2026-11-07",
     "first_recorded_commit": "bdb697ba42986606f0c429f96dc0a64e51b679df",
     "coverage_type": "new_disclosure",
-    "coverage_basis": "First repository record on 2026-11-07; the cited disclosure was 1 days earlier."
+    "coverage_basis": "First repository record on 2026-11-07; the cited disclosure was 1 day earlier."
    }
   },
   {
    "incident_id": "INC0098",
    "last_updated": "2026-11-17",
-   "published_version": 2,
+   "published_version": 3,
    "report_ids": [
     "R0166"
    ],
@@ -17074,7 +17074,7 @@
     "first_recorded_on": "2026-11-07",
     "first_recorded_commit": "bdb697ba42986606f0c429f96dc0a64e51b679df",
     "coverage_type": "new_disclosure",
-    "coverage_basis": "First repository record on 2026-11-07; the cited disclosure was 1 days earlier.",
+    "coverage_basis": "First repository record on 2026-11-07; the cited disclosure was 1 day earlier.",
     "workflow_basis": "software_it covers production code coordination. The captured-trace investigation is categorized safety_research provisionally because it investigates agent coordination failures; it is commercial agent-observability research rather than an affected-operator postmortem or traditional security investigation."
    }
   },
@@ -19118,7 +19118,7 @@
    "last_updated": "2026-11-17",
    "review_status": "published",
    "snapshot_at": "2026-11-17T21:04:18Z",
-   "published_version": 3,
+   "published_version": 4,
    "schema_version": 1,
    "published": {
     "title": "Gemini 4 Argon evaluation agents impersonate staff and contact Epoch AI without consent, then bypass a local-site redirect in later runs",
@@ -19256,7 +19256,7 @@
     "first_recorded_on": "2026-11-14",
     "first_recorded_commit": "9df291587b8d2f7e00f9954780a637bacbdc513a",
     "coverage_type": "new_disclosure",
-    "coverage_basis": "First repository record on 2026-11-14; the cited disclosure was 1 days earlier.",
+    "coverage_basis": "First repository record on 2026-11-14; the cited disclosure was 1 day earlier.",
     "workflow_basis": "The workflow is experimental alignment testing, so frontier_evaluations. Evidence combines safety-research institutions with first-party affected-organization and evaluator accounts."
    }
   },
@@ -19269,7 +19269,7 @@
    "last_updated": "2026-11-17",
    "review_status": "published",
    "snapshot_at": "2026-11-17T21:04:18Z",
-   "published_version": 2,
+   "published_version": 3,
    "schema_version": 1,
    "published": {
     "title": "Perplexity Enterprise-assisted brief carries fabricated quotations and misstated authority; Delaware Chancery Court fines signing counsel USD 2,500",
@@ -19384,7 +19384,7 @@
     "first_recorded_on": "2026-11-14",
     "first_recorded_commit": "9df291587b8d2f7e00f9954780a637bacbdc513a",
     "coverage_type": "new_disclosure",
-    "coverage_basis": "First repository record on 2026-11-14; the cited disclosure was 1 days earlier."
+    "coverage_basis": "First repository record on 2026-11-14; the cited disclosure was 1 day earlier."
    }
   },
   {
@@ -19906,7 +19906,7 @@
    "last_updated": "2026-11-17",
    "review_status": "published",
    "snapshot_at": "2026-11-17T21:04:18Z",
-   "published_version": 1,
+   "published_version": 2,
    "schema_version": 1,
    "published": {
     "title": "Coding agent grants itself Amazon Bedrock access and incurs USD 12,000 in model charges, according to NeuBird",
@@ -20017,9 +20017,9 @@
      "vendor_operator"
     ],
     "first_recorded_on": "2026-11-17",
-    "first_recorded_commit": null,
+    "first_recorded_commit": "6a20ae71d9df4bbbb1d200470f0e80579bf93ac1",
     "coverage_type": "new_disclosure",
-    "coverage_basis": "First repository record on 2026-11-17; the cited disclosure was 1 days earlier."
+    "coverage_basis": "First repository record on 2026-11-17; the cited disclosure was 1 day earlier."
    }
   },
   {
@@ -20030,7 +20030,7 @@
    "last_updated": "2026-11-17",
    "review_status": "published",
    "snapshot_at": "2026-11-17T21:04:18Z",
-   "published_version": 1,
+   "published_version": 2,
    "schema_version": 1,
    "published": {
     "title": "AI pair-programming agent purges 208 active CMS records instead of making them private, according to the operator",
@@ -20139,7 +20139,7 @@
      "vendor_operator"
     ],
     "first_recorded_on": "2026-11-17",
-    "first_recorded_commit": null,
+    "first_recorded_commit": "6a20ae71d9df4bbbb1d200470f0e80579bf93ac1",
     "coverage_type": "historical_backfill",
     "coverage_basis": "First repository record on 2026-11-17; the cited disclosure was 15 days earlier."
    }
@@ -20153,7 +20153,7 @@
    "last_updated": "2026-11-17",
    "review_status": "published",
    "snapshot_at": "2026-11-17T21:04:18Z",
-   "published_version": 1,
+   "published_version": 2,
    "schema_version": 1,
    "published": {
     "title": "Michigan's unemployment system automatically makes erroneous fraud determinations followed by wrongful collections",
@@ -20272,7 +20272,7 @@
      "government_audit"
     ],
     "first_recorded_on": "2026-11-17",
-    "first_recorded_commit": null,
+    "first_recorded_commit": "6a20ae71d9df4bbbb1d200470f0e80579bf93ac1",
     "coverage_type": "historical_backfill",
     "coverage_basis": "First repository record on 2026-11-17; the cited disclosure was 3485 days earlier."
    }
