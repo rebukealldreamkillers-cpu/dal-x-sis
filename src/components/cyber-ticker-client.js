@@ -2,8 +2,14 @@ const endpoint = '/cybersecurity-data/snapshot.json';
 const refreshMs = 5 * 60_000;
 const staleMs = 2 * 60 * 60_000;
 const expireMs = 24 * 60 * 60_000;
-const labels = { incident:'National incident', breach:'Breach notice', advisory:'Advisory', kev:'Exploited vulnerability' };
+const labels = { filing:'SEC filing', agency:'Law enforcement announcement', incident:'National incident', breach:'Breach notice', advisory:'Advisory', kev:'Exploited vulnerability' };
 const endpoints = {
+  hhs:['breach',['ocrportal.hhs.gov','/ocr/breach/']],
+  ia:['breach',['www.iowaattorneygeneral.gov','/media/cms/']],
+  ma:['breach',['www.mass.gov','/doc/data-breach-report-2026/']],
+  sec:['filing',['www.sec.gov','/Archives/edgar/']],
+  ic3:['advisory',['www.ic3.gov','/CSA/'],['www.ic3.gov','/PSA/']],
+  doj:['agency',['www.justice.gov','/opa/pr/']],
   reviewed:['incident',['www.bleepingcomputer.com','/news/'],['www.nbcnews.com','/politics/'],['apnews.com','/article/'],['oag.ca.gov','/ecrime/databreach/'],['news.vanderbilt.edu','/2026/'],['www.sec.gov','/Archives/edgar/']],
   breach: ['breach', ['oag.ca.gov', '/ecrime/databreach/reports/']],
   wa: ['breach', ['www.atg.wa.gov', '/data-breach-notifications'], ['agportal-s3bucket.s3.amazonaws.com', '/databreach/']],
@@ -76,7 +82,7 @@ function init(root) {
       const s = sources[i.sourceId];
       return s?.status !== 'unavailable' && now - Date.parse(s?.checkedAt) < expireMs &&
         now - Date.parse(i.date) <= 14 * expireMs;
-    }).slice(0, 18) : [];
+    }).slice(0, 24) : [];
     const key = JSON.stringify(items);
     if (key !== rendered) {
       if (viewport.contains(document.activeElement) || (matchMedia('(hover:hover)').matches && viewport.matches(':hover'))) {

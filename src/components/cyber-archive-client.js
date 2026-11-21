@@ -1,7 +1,8 @@
 const archiveEndpoint = '/cybersecurity-data/archive-snapshot.json';
-const typeNames = { incident:'National incident', breach:'Breach notice', advisory:'Advisory', kev:'Exploited vulnerability' };
+const typeNames = { filing:'SEC filing', agency:'Law enforcement announcement', incident:'National incident', breach:'Breach notice', advisory:'Advisory', kev:'Exploited vulnerability' };
 const archiveHosts = {
-  reviewed:['www.bleepingcomputer.com','www.nbcnews.com','apnews.com','oag.ca.gov','news.vanderbilt.edu','www.sec.gov'],
+  hhs:['ocrportal.hhs.gov'],ia:['www.iowaattorneygeneral.gov'],ma:['www.mass.gov'],sec:['www.sec.gov'],ic3:['www.ic3.gov'],doj:['www.justice.gov'],
+  reviewed:['www.bleepingcomputer.com','www.nbcnews.com','apnews.com','oag.ca.gov','news.vanderbilt.edu','www.sec.gov','hscnews.unm.edu','www.azcourts.gov','www.chfs.ky.gov','www.mckesson.com'],
   breach:['oag.ca.gov'], wa:['www.atg.wa.gov','agportal-s3bucket.s3.amazonaws.com'],
   or:['justice.oregon.gov'], vt:['ago.vermont.gov'], advisory:['www.cisa.gov'], kev:['www.cisa.gov'],
 };
@@ -26,7 +27,9 @@ function reportRow(item) {
   const kind = document.createElement('span'); kind.className='cyber-archive__type'; kind.textContent=typeNames[item.kind];
   const date = document.createElement('time'); date.dateTime=item.date; date.textContent=item.date.slice(0,10);
   const source = document.createElement('span'); source.textContent=item.source;
-  meta.append(kind,source,date); row.append(meta,link); return row;
+  meta.append(kind,source,date); row.append(meta,link);
+  if (typeof item.note === 'string') { const note = document.createElement('span'); note.className='cyber-archive__meta'; note.textContent=item.note; row.append(note); }
+  return row;
 }
 
 async function initArchive(root) {

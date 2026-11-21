@@ -1,0 +1,45 @@
+---
+const publicSources = [
+  ['SEC EDGAR', 'https://www.sec.gov/search-filings', 'Selected company disclosures in Form 8-K. Includes material cybersecurity filings and verified voluntary disclosures.'],
+  ['HHS Office for Civil Rights', 'https://ocrportal.hhs.gov/ocr/breach/breach_report_hip.jsf', 'Healthcare hacking and IT incidents from the 500-plus-person public listing. Submission date, not incident date.'],
+  ['FBI Internet Crime Complaint Center', 'https://www.ic3.gov/CSA/', 'Selected cyber alerts and public warnings. An alert is not proof that a breach occurred.'],
+  ['U.S. Department of Justice', 'https://www.justice.gov/criminal/computer-crime-and-intellectual-property-section-ccips-news', 'Official cyber enforcement announcements. Charged allegations are not findings of guilt.'],
+  ['CISA Advisories', 'https://www.cisa.gov/news-events/cybersecurity-advisories', 'Federal threat campaigns and defensive advisories.'],
+  ['CISA Known Exploited Vulnerabilities', 'https://www.cisa.gov/known-exploited-vulnerabilities-catalog', 'Vulnerabilities CISA has identified as exploited. Not an incident count.'],
+  ['California DOJ', 'https://oag.ca.gov/privacy/databreach/list', 'State breach notices and original notification samples.'],
+  ['Washington Attorney General', 'https://www.atg.wa.gov/data-breach-notifications', 'Washington breach notices, with direct links where available.'],
+  ['Oregon DOJ', 'https://justice.oregon.gov/consumer/databreach/', 'Oregon breach records and reported dates.'],
+  ['Vermont Attorney General', 'https://ago.vermont.gov/categories/security-breach-notices', 'Vermont breach reports and reporting dates.'],
+  ['Iowa Attorney General', 'https://www.iowaattorneygeneral.gov/for-consumers/security-breach-notifications/2026-security-breach-notification', 'Iowa notices with original documents.'],
+  ['Massachusetts Consumer Affairs', 'https://www.mass.gov/doc/data-breach-report-2026/download', 'Selected notices involving at least 500 Massachusetts residents in the state report.'],
+];
+const reporting = [
+  ['Associated Press','https://apnews.com/'], ['Reuters','https://www.reuters.com/'], ['NBC News','https://www.nbcnews.com/'],
+  ['ABC News','https://abcnews.com/'], ['The Washington Post','https://www.washingtonpost.com/'],
+  ['BleepingComputer','https://www.bleepingcomputer.com/'], ['TechCrunch','https://techcrunch.com/'],
+  ['Becker’s Hospital Review','https://www.beckershospitalreview.com/'],
+];
+---
+<section id="cyber-source-bank" class="cyber-source-bank" aria-labelledby="cyber-source-bank-title">
+  <h2 id="cyber-source-bank-title">Sources and coverage</h2>
+  <p>The ticker prioritizes reviewed incidents and recent public reports. The archive is not a complete census of U.S. cyber incidents. Source coverage and publication schedules differ.</p>
+  <details>
+    <summary>12 public record and advisory sources</summary>
+    <ul>{publicSources.map(([name, url, scope]) => <li><a href={url} target="_blank" rel="noopener noreferrer">{name}</a><span>{scope}</span></li>)}</ul>
+  </details>
+  <details>
+    <summary>National and specialist reporting used for reviewed incidents</summary>
+    <p>Reporting helps identify incidents. Where available, reviewed entries also link to an original company, agency, court, or regulator disclosure. The site does not automatically republish publisher feeds.</p>
+    <ul>{reporting.map(([name,url]) => <li><a href={url} target="_blank" rel="noopener noreferrer">{name}</a></li>)}</ul>
+  </details>
+</section>
+<style>
+.cyber-source-bank{margin-block:2.5rem;overflow-wrap:anywhere;scroll-margin-top:1rem}
+.cyber-source-bank h2{font-size:clamp(1.8rem,5vw,3rem);line-height:1.1}
+.cyber-source-bank p{max-width:74ch;color:#cdc2b9;line-height:1.55;margin:.8rem 0}
+.cyber-source-bank details{border-block-end:1px solid #493a32}
+.cyber-source-bank summary{min-height:44px;padding:.7rem 0;cursor:pointer;color:#f1a373}
+.cyber-source-bank ul{padding:0 0 1rem;list-style:none;display:grid;gap:.75rem}
+.cyber-source-bank span{display:block;font-size:.85rem;color:#cdc2b9}
+.cyber-source-bank a{display:inline-flex;align-items:center;min-height:44px;color:#f4f0ec;text-decoration:underline}
+</style>

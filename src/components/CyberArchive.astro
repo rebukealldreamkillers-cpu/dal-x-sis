@@ -6,14 +6,14 @@
   </div>
   <div class="cyber-archive__controls" hidden>
     <label class="cyber-archive__search">Search reports<input type="search" data-filter="query" placeholder="Organization, headline, or CVE ID"></label>
-    <label>Type<select data-filter="kind"><option value="">All types</option><option value="incident">National incident</option><option value="breach">Breach notice</option><option value="advisory">Advisory</option><option value="kev">Exploited vulnerability</option></select></label>
+    <label>Type<select data-filter="kind"><option value="">All types</option><option value="incident">National incident</option><option value="breach">Breach notice</option><option value="filing">SEC filing</option><option value="agency">Law enforcement announcement</option><option value="advisory">Advisory</option><option value="kev">Exploited vulnerability</option></select></label>
     <label>Source<select data-filter="source"><option value="">All sources</option></select></label>
     <label>Period<select data-filter="days"><option value="90">Last 90 days</option><option value="30">Last 30 days</option><option value="7">Last 7 days</option></select></label>
   </div>
   <p class="cyber-archive__status" role="status">Loading reports…</p>
   <ul class="cyber-archive__results"></ul>
   <button type="button" class="cyber-archive__more" hidden>Show more reports</button>
-  <p class="cyber-archive__coverage">Includes reviewed national incidents and reports from six public sources. An incident may also have a separate state notice. These are not counts of unique incidents.</p>
+  <p class="cyber-archive__coverage">Includes sampled public records and reviewed national incidents. A single incident can appear as a state notice, an SEC filing, and a reviewed report. These are not counts of unique incidents.</p>
 </section>
 <script>
   import './cyber-archive-client.js';
