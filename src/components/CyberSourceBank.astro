@@ -22,7 +22,7 @@ const reporting = [
 ---
 <section id="cyber-source-bank" class="cyber-source-bank" aria-labelledby="cyber-source-bank-title">
   <h2 id="cyber-source-bank-title">Sources and coverage</h2>
-  <p>The ticker prioritizes reviewed incidents and recent public reports. The archive is not a complete census of U.S. cyber incidents. Source coverage and publication schedules differ.</p>
+  <p>The ticker prioritizes reviewed incidents and recent public reports. The archive is not a complete census of U.S. cyber incidents. Automatic ticker checks cover CISA advisories and KEV, FBI IC3 alerts, HHS, and the California, Washington, Oregon, Vermont, and Iowa registries. SEC, DOJ, Massachusetts, and reviewed national reporting are updated separately.</p>
   <details>
     <summary>12 public record and advisory sources</summary>
     <ul>{publicSources.map(([name, url, scope]) => <li><a href={url} target="_blank" rel="noopener noreferrer">{name}</a><span>{scope}</span></li>)}</ul>

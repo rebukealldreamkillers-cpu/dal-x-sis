@@ -1,4 +1,5 @@
-const endpoint = '/cybersecurity-data/snapshot.json';
+const endpoint = '/cybersecurity-data/ticker-feed.json';
+const seedEndpoint = '/cybersecurity-data/snapshot.json';
 const refreshMs = 5 * 60_000;
 const staleMs = 2 * 60 * 60_000;
 const expireMs = 24 * 60 * 60_000;
@@ -57,7 +58,8 @@ function init(root) {
   const viewport = find('window'), track = find('track'), list = find('list');
   const duplicate = find('copy'), status = find('status'), button = find('pause');
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
-  let paused = false, last = null, failed = false, loading = false, rendered = '', pending = false;
+  const next = find('next');
+  let paused = false, last = null, failed = false, loading = false, rendered = '', pending = false, nextAt = 0;
 
   function measure() {
     const length = list.getBoundingClientRect().width;
@@ -73,15 +75,16 @@ function init(root) {
   }
 
   function render() {
-    const now = Date.parse(last?.generatedAt ?? '');
-    const age = now - Date.parse(last?.generatedAt ?? '');
-    const usable = last && age < expireMs;
+    const snapshotAt = Date.parse(last?.generatedAt ?? '');
+    const now = last?.live ? Date.now() : snapshotAt;
+    const age = now - snapshotAt;
+    const usable = Boolean(last);
     const sources = usable ? last.sources : {};
     const items = usable ? last.items.filter(i => {
       if (!safeItem(i)) return false;
       const s = sources[i.sourceId];
-      return s?.status !== 'unavailable' && now - Date.parse(s?.checkedAt) < expireMs &&
-        now - Date.parse(i.date) <= 14 * expireMs;
+      const window = i.kind === 'incident' ? 30 : 14;
+      return s?.status !== 'unavailable' && now - Date.parse(i.date) <= window * expireMs;
     }).slice(0, 24) : [];
     const key = JSON.stringify(items);
     if (key !== rendered) {
@@ -95,31 +98,43 @@ function init(root) {
         viewport.hidden = !items.length;
       }
     }
-    const degraded = Object.keys(endpoints).map(k => sources[k]).filter(Boolean).filter(s => s.status !== 'current' || now - Date.parse(s.checkedAt) > staleMs);
-    const sourceLabels = degraded.map(s => s.label).join(', ');
-    const checked = usable ? new Date(last.generatedAt).toLocaleString(undefined, { dateStyle:'medium', timeStyle:'short' }) : '';
-    if (!usable) status.textContent = 'Updates unavailable. See the original sources below.';
-    else if (!items.length) status.textContent = degraded.length || failed || age > staleMs
-      ? 'Some feeds are unavailable or delayed. See original sources below.' : 'No items from the past 14 days in the connected sources.';
-    else if (failed || age > staleMs) status.textContent = `Showing saved reports. Snapshot: ${checked}.`;
-    else if (degraded.length) status.textContent = `Some feeds delayed or unavailable: ${sourceLabels}. Snapshot: ${checked}.`;
-    else status.textContent = `Published snapshot: ${checked}. Updates are not yet automatic.`;
+    const format = (date) => new Date(date).toLocaleString(undefined, {
+      month:'short', day:'numeric', hour:'numeric', minute:'2-digit', timeZoneName:'short',
+    });
+    if (!usable) status.textContent = 'Ticker temporarily unavailable. Use the original sources below.';
+    else if (!last.live) status.textContent = `Showing saved snapshot from ${format(last.generatedAt)}. Live check unavailable.`;
+    else if (!last.lastSuccessfulCheck) status.textContent = `Publisher checks unavailable. Showing saved reports from ${format(last.archiveAsOf)}.`;
+    else {
+      const warning = failed || age > staleMs ? ' Showing saved results.' : last.failedSources?.length ? ` Delayed: ${last.failedSources.join(', ')}.` : '';
+      status.textContent = `Last successful publisher check: ${format(last.lastSuccessfulCheck)}.${warning}`;
+    }
+    if (nextAt && next) next.textContent = `Next browser check: ${format(nextAt)} while this tab is open.`;
     measure();
   }
 
+  async function readSnapshot(url, live) {
+    const response = await fetch(url, { signal:AbortSignal.timeout(live ? 13000 : 4500) });
+    if (!response.ok) throw new Error('Ticker unavailable');
+    const data = await response.json();
+    if (data?.version !== 2 || !Array.isArray(data.items) || !Number.isFinite(Date.parse(data.generatedAt)) ||
+        (live && data.live !== true) || !Object.keys(endpoints).every(k => {
+          const src = data.sources?.[k];
+          return src && typeof src.label === 'string' && ['current', 'stale', 'unavailable'].includes(src.status);
+        })) throw new Error('Invalid snapshot');
+    return data;
+  }
   async function update() {
-    if (document.hidden || loading) return;
+    if (document.hidden || loading || (nextAt && Date.now() < nextAt)) return;
     loading = true;
+    nextAt = Date.now() + refreshMs;
+    // Paint the publish-time fallback without waiting for a cold live request.
+    if (!last) {
+      readSnapshot(seedEndpoint, false).then(data => {
+        if (!last) { last = data; render(); }
+      }).catch(() => {});
+    }
     try {
-      const response = await fetch(endpoint, { cache:'no-cache', signal:AbortSignal.timeout(4500) });
-      if (!response.ok) throw new Error('Ticker unavailable');
-      const data = await response.json();
-      if (data?.version !== 2 || !Array.isArray(data.items) || !Number.isFinite(Date.parse(data.generatedAt)) ||
-          !Object.keys(endpoints).every(k => {
-            const s = data.sources?.[k];
-            return s && typeof s.label === 'string' && ['current', 'stale', 'unavailable'].includes(s.status);
-          })) throw new Error('Invalid snapshot');
-      last = data;
+      last = await readSnapshot(endpoint, true);
       failed = false;
     } catch { failed = true; }
     finally { loading = false; render(); }
@@ -136,6 +151,8 @@ function init(root) {
   viewport.addEventListener('pointerleave', () => { if (pending) render(); });
   reduced.addEventListener('change', measure);
   new ResizeObserver(measure).observe(viewport);
+  document.addEventListener('visibilitychange', update);
+  setInterval(update, 15_000);
   update();
 }
 

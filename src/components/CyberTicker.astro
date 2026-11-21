@@ -10,7 +10,11 @@
       <ul class="cyber-ticker__list" data-ticker-copy aria-hidden="true" hidden></ul>
     </div>
   </div>
-  <p class="cyber-ticker__status" data-ticker-status>Loading public reports…</p>
+  <div class="cyber-ticker__refresh" aria-label="Refresh schedule">
+    <p><strong>Checks every 5 minutes</strong> while this tab is open. DAL-X caches automated publisher checks for about 60 minutes.</p>
+    <p data-ticker-status aria-live="polite">Loading public reports…</p>
+    <p data-ticker-next></p>
+  </div>
   <p class="cyber-ticker__sources">
     Selected sources: <a href="https://oag.ca.gov/privacy/databreach/list">California DOJ</a> ·
     <a href="https://www.atg.wa.gov/data-breach-notifications">Washington AG</a> ·
@@ -44,6 +48,8 @@
   .cyber-ticker__date,.cyber-ticker__status,.cyber-ticker__sources { color:#c5beb9; }
   .cyber-ticker a:focus-visible,.cyber-ticker button:focus-visible { outline:2px solid #f1a373; outline-offset:-3px; }
   .cyber-ticker__status,.cyber-ticker__sources { font-size:.75rem; margin:.3rem .9rem; overflow-wrap:anywhere; }
+  .cyber-ticker__refresh { padding:.55rem .9rem; font-size:.78rem; color:#ded4cd; overflow-wrap:anywhere; }
+  .cyber-ticker__refresh p { margin:.2rem 0; }
   .cyber-ticker__status a,.cyber-ticker__sources a { color:inherit; text-decoration:underline; }
   .cyber-ticker[data-moving] .cyber-ticker__track { animation:cyber-ticker-scroll var(--cyber-ticker-duration) linear infinite; }
   .cyber-ticker[data-manual] .cyber-ticker__window { overflow:auto; }
