@@ -218,11 +218,22 @@ def clean_output(item):
     return dict(item, title=re.sub(r'\s*[\u2013\u2014]\s*', ': ', item['title']))
 
 
+def source_key(url):
+    ref = urlsplit(url)
+    return ref.hostname, ref.path.rstrip('/'), ref.query
+
+
 def make_snapshot(seed, results, old_records, now, previous_success=None):
     stamp = datetime.fromtimestamp(now, UTC).isoformat()
     health = {k: dict(v) for k, v in seed['sources'].items()}
     records = dict(old_records)
-    items = [i for i in seed['items'] if i['sourceId'] not in SOURCES and now - 30 * DAY <= timestamp(i['date']) <= now + DAY]
+    reviewed_links = {source_key(url) for url in seed.get('reviewedSourceUrls', [])}
+
+    def public_report(item):
+        return item.get('kind') != 'incident' and item.get('sourceId') != 'reviewed' and source_key(item['url']) not in reviewed_links
+
+    items = [i for i in seed['items'] if i['sourceId'] not in SOURCES and public_report(i)
+             and now - 14 * DAY <= timestamp(i['date']) <= now + DAY]
     failures = []
     recovered_count = 0
     for key, (label, _, _) in SOURCES.items():
@@ -239,10 +250,9 @@ def make_snapshot(seed, results, old_records, now, previous_success=None):
             health[key] = dict(label=label, checkedAt=stamp, status='current')
             current = fresh
         kind = 'advisory' if key in ('ic3', 'advisory') else 'kev' if key == 'kev' else 'breach'
-        recent = [i for i in current if now - 14 * DAY <= timestamp(i['date']) <= now + DAY]
+        recent = [i for i in current if public_report(i) and now - 14 * DAY <= timestamp(i['date']) <= now + DAY]
         items.extend(dict(clean_output(i), kind=kind, sourceId=key, source=label) for i in recent[:2])
-    featured = sorted([i for i in items if i['kind'] == 'incident'], key=lambda i: i['date'], reverse=True)[:5]
-    other = sorted([i for i in items if i['kind'] != 'incident'], key=lambda i: timestamp(i['date']), reverse=True)
+    other = sorted(items, key=lambda i: timestamp(i['date']), reverse=True)
     # Give each automatically checked source with recent rows a slot before filling by date.
     reserved = {}
     for i in other:
@@ -250,11 +260,11 @@ def make_snapshot(seed, results, old_records, now, previous_success=None):
             reserved.setdefault(i['sourceId'], i)
     picked = set(i['id'] for i in reserved.values())
     remaining = [i for i in other if i['id'] not in picked]
-    selected = [*reserved.values(), *remaining[:max(0, 24 - len(featured) - len(reserved))]]
+    selected = [*reserved.values(), *remaining[:max(0, 24 - len(reserved))]]
     selected.sort(key=lambda i: timestamp(i['date']), reverse=True)
     last_success = stamp if recovered_count else previous_success
     return (dict(version=2, generatedAt=stamp, lastSuccessfulCheck=last_success, archiveAsOf=seed['generatedAt'],
-                 live=True, cachedMinutes=60, sources=health, items=[*featured, *selected][:24],
+                 live=True, cachedMinutes=60, sources=health, items=selected[:24],
                  failedSources=failures, connectedSources=len(SOURCES)), records, last_success)
 
 
