@@ -1,6 +1,6 @@
-<section class="cyber-ticker" data-cyber-ticker aria-label="U.S. cybersecurity updates">
+<section class="cyber-ticker" data-cyber-ticker aria-labelledby="cyber-ticker-title">
   <div class="cyber-ticker__head">
-    <strong>U.S. Cybersecurity Updates</strong>
+    <h2 id="cyber-ticker-title">Latest public reports</h2>
     <button type="button" data-ticker-pause aria-pressed="false" hidden>Pause scrolling</button>
   </div>
   <p class="cyber-ticker__status"><a href="#cyber-archive-title">Search past reports</a></p>
@@ -9,11 +9,6 @@
       <ul class="cyber-ticker__list" data-ticker-list></ul>
       <ul class="cyber-ticker__list" data-ticker-copy aria-hidden="true" hidden></ul>
     </div>
-  </div>
-  <div class="cyber-ticker__refresh" aria-label="Refresh schedule">
-    <p><strong>Checks every 5 minutes</strong> while this tab is open. DAL-X caches automated publisher checks for about 60 minutes.</p>
-    <p data-ticker-status aria-live="polite">Loading public reports…</p>
-    <p data-ticker-next></p>
   </div>
   <p class="cyber-ticker__sources">
     Selected sources: <a href="https://oag.ca.gov/privacy/databreach/list">California DOJ</a> ·
@@ -24,7 +19,6 @@
     <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">CISA KEV</a> ·
     <a href="#cyber-source-bank">See all sources</a>
   </p>
-  <noscript><style>.cyber-ticker [data-ticker-status]{display:none}</style></noscript>
 </section>
 
 <script>
@@ -35,7 +29,7 @@
   .cyber-ticker { color:#f4f2ef; background:#171717; border-block:1px solid #36312e; min-width:0; max-width:100%; }
   .cyber-ticker [hidden] { display:none !important; }
   .cyber-ticker__head { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:.25rem 1rem; padding:.25rem .9rem; }
-  .cyber-ticker__head strong { font-size:.9rem; }
+  .cyber-ticker__head h2 { margin:0; font-size:.9rem; }
   .cyber-ticker button { min-height:44px; padding:.25rem .65rem; color:inherit; background:transparent; border:1px solid #9b8172; border-radius:.3rem; cursor:pointer; }
   .cyber-ticker__window { overflow:hidden; }
   .cyber-ticker__track { display:flex; width:max-content; }
@@ -48,8 +42,6 @@
   .cyber-ticker__date,.cyber-ticker__status,.cyber-ticker__sources { color:#c5beb9; }
   .cyber-ticker a:focus-visible,.cyber-ticker button:focus-visible { outline:2px solid #f1a373; outline-offset:-3px; }
   .cyber-ticker__status,.cyber-ticker__sources { font-size:.75rem; margin:.3rem .9rem; overflow-wrap:anywhere; }
-  .cyber-ticker__refresh { padding:.55rem .9rem; font-size:.78rem; color:#ded4cd; overflow-wrap:anywhere; }
-  .cyber-ticker__refresh p { margin:.2rem 0; }
   .cyber-ticker__status a,.cyber-ticker__sources a { color:inherit; text-decoration:underline; }
   .cyber-ticker[data-moving] .cyber-ticker__track { animation:cyber-ticker-scroll var(--cyber-ticker-duration) linear infinite; }
   .cyber-ticker[data-manual] .cyber-ticker__window { overflow:auto; }

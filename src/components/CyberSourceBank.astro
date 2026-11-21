@@ -22,7 +22,13 @@ const reporting = [
 ---
 <section id="cyber-source-bank" class="cyber-source-bank" aria-labelledby="cyber-source-bank-title">
   <h2 id="cyber-source-bank-title">Sources and coverage</h2>
-  <p>The ticker prioritizes reviewed incidents and recent public reports. The archive is not a complete census of U.S. cyber incidents. Automatic ticker checks cover CISA advisories and KEV, FBI IC3 alerts, HHS, and seven state registries listed under State source coverage. SEC, DOJ, the periodic state sources, and reviewed national reporting are updated separately.</p>
+  <div class="cyber-source-bank__refresh" data-ticker-refresh aria-label="Refresh schedule">
+    <p><strong>Checks every 5 minutes</strong> while this tab is open. DAL-X caches automated publisher checks for about 60 minutes.</p>
+    <p data-ticker-status aria-live="polite">Loading public reports…</p>
+    <p data-ticker-next></p>
+  </div>
+  <noscript><style>.cyber-source-bank [data-ticker-status]{display:none}</style></noscript>
+  <p>The ticker prioritizes reviewed incidents and recent public reports. The archive is not a complete census of U.S. cyber incidents. Automatic ticker checks cover CISA advisories and KEV, FBI IC3 alerts, HHS, and seven state registries listed under State source coverage. SEC, DOJ, the periodic state sources, and reviewed national reporting are updated separately. The searchable archive and reviewed national stories were last published November 21, 2026.</p>
   <details>
     <summary>Federal sources and original state sources</summary>
     <ul>{publicSources.map(([name, url, scope]) => <li><a href={url} target="_blank" rel="noopener noreferrer">{name}</a><span>{scope}</span></li>)}</ul>
@@ -37,6 +43,8 @@ const reporting = [
 .cyber-source-bank{margin-block:2.5rem;overflow-wrap:anywhere;scroll-margin-top:1rem}
 .cyber-source-bank h2{font-size:clamp(1.8rem,5vw,3rem);line-height:1.1}
 .cyber-source-bank p{max-width:74ch;color:#cdc2b9;line-height:1.55;margin:.8rem 0}
+.cyber-source-bank__refresh{font-size:.85rem}
+.cyber-source-bank__refresh p{margin:.2rem 0}
 .cyber-source-bank details{border-block-end:1px solid #493a32}
 .cyber-source-bank summary{min-height:44px;padding:.7rem 0;cursor:pointer;color:#f1a373}
 .cyber-source-bank ul{padding:0 0 1rem;list-style:none;display:grid;gap:.75rem}
