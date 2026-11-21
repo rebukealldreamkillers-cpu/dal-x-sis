@@ -5,6 +5,8 @@ const staleMs = 2 * 60 * 60_000;
 const expireMs = 24 * 60 * 60_000;
 const labels = { filing:'SEC filing', agency:'Law enforcement announcement', incident:'National incident', breach:'Breach notice', advisory:'Advisory', kev:'Exploited vulnerability' };
 const endpoints = {
+  id:['breach',['www.ag.idaho.gov','/content/uploads/'],['www.ag.idaho.gov','/consumer-protection/security-breaches/']],
+  sc:['breach',['consumer.sc.gov','/sites/consumer/files/'],['consumer.sc.gov','/identity-theft-unit/security-breach-notices']],
   hhs:['breach',['ocrportal.hhs.gov','/ocr/breach/']],
   ia:['breach',['www.iowaattorneygeneral.gov','/media/cms/']],
   ma:['breach',['www.mass.gov','/doc/data-breach-report-2026/']],

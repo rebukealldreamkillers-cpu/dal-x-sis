@@ -25,6 +25,8 @@ SOURCES = {
     'hhs': ('HHS Office for Civil Rights', 'https://ocrportal.hhs.gov/ocr/breach/breach_report_hip.jsf', HOUR),
     'ia': ('Iowa Attorney General', 'https://www.iowaattorneygeneral.gov/for-consumers/security-breach-notifications/2026-security-breach-notification', HOUR),
     'ic3': ('FBI / IC3', 'https://www.ic3.gov/CSA/', HOUR),
+    'id': ('Idaho Attorney General', 'https://www.ag.idaho.gov/consumer-protection/security-breaches/', HOUR),
+    'sc': ('South Carolina Consumer Affairs', 'https://consumer.sc.gov/identity-theft-unit/security-breach-notices', HOUR),
     'kev': ('CISA KEV', 'https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json', HOUR),
 }
 
@@ -94,6 +96,26 @@ def parse(key, body):
                     elif key == 'or':
                         link = base + '#grid'
                     add(name, date, link, link if key == 'wa' and link != base else f'{key}:{date}:{name.casefold()}')
+                except ValueError:
+                    continue
+    elif key in ('id', 'sc'):
+        html = BeautifulSoup(body, 'html.parser')
+        for table in html.select('table'):
+            first = clean(table.select_one('tr').get_text(' ', strip=True)) if table.select_one('tr') else ''
+            required = 'Notifying Agency or Entity' if key == 'id' else 'Organization Name Date Reported'
+            if required not in first:
+                continue
+            for row in table.select('tbody tr'):
+                cells = row.find_all('td', recursive=False)
+                if len(cells) < 2:
+                    continue
+                name = clean(cells[0].get_text(' ', strip=True))
+                try:
+                    date = datetime.strptime(clean(cells[1].get_text()), '%m/%d/%Y').date().isoformat()
+                    link = cells[0].select_one('a[href]')
+                    prefix = '/content/uploads/' if key == 'id' else '/sites/consumer/files/'
+                    url = safe_url(link['href'], base, (prefix,)) if link else ''
+                    add(name, date, url or base, url or f'{key}:{date}:{name.casefold()}')
                 except ValueError:
                     continue
     elif key in ('hhs', 'ia', 'ic3'):
@@ -221,9 +243,18 @@ def make_snapshot(seed, results, old_records, now, previous_success=None):
         items.extend(dict(clean_output(i), kind=kind, sourceId=key, source=label) for i in recent[:2])
     featured = sorted([i for i in items if i['kind'] == 'incident'], key=lambda i: i['date'], reverse=True)[:5]
     other = sorted([i for i in items if i['kind'] != 'incident'], key=lambda i: timestamp(i['date']), reverse=True)
+    # Give each automatically checked source with recent rows a slot before filling by date.
+    reserved = {}
+    for i in other:
+        if i['sourceId'] in SOURCES:
+            reserved.setdefault(i['sourceId'], i)
+    picked = set(i['id'] for i in reserved.values())
+    remaining = [i for i in other if i['id'] not in picked]
+    selected = [*reserved.values(), *remaining[:max(0, 24 - len(featured) - len(reserved))]]
+    selected.sort(key=lambda i: timestamp(i['date']), reverse=True)
     last_success = stamp if recovered_count else previous_success
     return (dict(version=2, generatedAt=stamp, lastSuccessfulCheck=last_success, archiveAsOf=seed['generatedAt'],
-                 live=True, cachedMinutes=60, sources=health, items=[*featured, *other][:24],
+                 live=True, cachedMinutes=60, sources=health, items=[*featured, *selected][:24],
                  failedSources=failures, connectedSources=len(SOURCES)), records, last_success)
 
 
