@@ -13,7 +13,6 @@ const endpoints = {
   sec:['filing',['www.sec.gov','/Archives/edgar/']],
   ic3:['advisory',['www.ic3.gov','/CSA/'],['www.ic3.gov','/PSA/']],
   doj:['agency',['www.justice.gov','/opa/pr/']],
-  reviewed:['incident',['www.bleepingcomputer.com','/news/'],['www.nbcnews.com','/politics/'],['apnews.com','/article/'],['oag.ca.gov','/ecrime/databreach/'],['news.vanderbilt.edu','/2026/'],['www.sec.gov','/Archives/edgar/']],
   breach: ['breach', ['oag.ca.gov', '/ecrime/databreach/reports/']],
   wa: ['breach', ['www.atg.wa.gov', '/data-breach-notifications'], ['agportal-s3bucket.s3.amazonaws.com', '/databreach/']],
   or: ['breach', ['justice.oregon.gov', '/consumer/databreach/']],
@@ -87,8 +86,7 @@ function init(root) {
     const items = usable ? last.items.filter(i => {
       if (!safeItem(i)) return false;
       const s = sources[i.sourceId];
-      const window = i.kind === 'incident' ? 30 : 14;
-      return s?.status !== 'unavailable' && now - Date.parse(i.date) <= window * expireMs;
+      return s?.status !== 'unavailable' && now - Date.parse(i.date) <= 14 * expireMs;
     }).slice(0, 24) : [];
     const key = JSON.stringify(items);
     if (key !== rendered) {
