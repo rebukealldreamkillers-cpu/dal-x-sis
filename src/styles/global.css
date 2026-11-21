@@ -5138,3 +5138,9 @@ a.weekly-index-row:hover .weekly-index-title { color: var(--orange-bright); }
 @media (max-width: 640px) {
   .weekly-feature { padding: 1.25rem 1.125rem; }
 }
+
+/* Homepage headings: label styling kept when the label is a real heading. */
+h2.section-label, h2.emergence-label { line-height: 1.5; margin-top: 0; }
+.preview-grid--three { grid-template-columns: repeat(3, 1fr); }
+.preview-grid--three .preview-card h3 { font-size: 1.0625rem; }
+@media (max-width: 900px) { .preview-grid--three { grid-template-columns: 1fr; } }
