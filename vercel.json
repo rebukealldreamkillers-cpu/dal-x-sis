@@ -2,5 +2,17 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "installCommand": "npm install",
-  "framework": null
+  "framework": null,
+  "rewrites": [
+    {
+      "source": "/cybersecurity-data/ticker-feed.json",
+      "destination": "/api/cyber-ticker-feed"
+    }
+  ],
+  "functions": {
+    "api/cyber-ticker-feed.py": {
+      "includeFiles": "public/cybersecurity-data/snapshot.json",
+      "maxDuration": 30
+    }
+  }
 }
