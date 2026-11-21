@@ -14,5 +14,18 @@
       "includeFiles": "public/cybersecurity-data/snapshot.json",
       "maxDuration": 30
     }
-  }
+  },
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "dal-x.com"
+        }
+      ],
+      "destination": "https://www.dal-x.com/:path*",
+      "permanent": true
+    }
+  ]
 }

@@ -23,17 +23,19 @@ const seriesTopics = [
 ---
 
 <Base
-  title="DAL-X"
-  description="Execution governance for consequential AI agent executions. A publication on Decision Governance and runtime authority before execution proceeds."
+  title="AI Agent Governance and Runtime Authority | DAL-X"
+  description="Jochanni Labs publishes DAL-X.com on Decision Governance: how organizations verify authority before an AI agent takes a consequential action."
 >
   <!-- 1. Hero -->
   <section class="hero">
     <div class="container">
       <p class="hero-label">Strategic Intelligence Series</p>
-      <h1>Execution Governance for Consequential AI Agent Executions.</h1>
+      <h1>AI Agent Governance Starts Before Execution.</h1>
       <p class="hero-lead">
-        A publication on Decision Governance: authority over consequential AI agent
-        executions before they proceed.
+        DAL-X.com is the Jochanni Labs publication on Decision Governance. It explains how an
+        organization can require valid authority to be recorded and verified before an AI agent
+        executes a consequential action, such as sending a message, changing a record, filing a
+        claim, or releasing a payment.
       </p>
       <div class="btn-row">
         <a href="/briefings" class="btn-primary">Read the Briefings</a>
@@ -47,7 +49,7 @@ const seriesTopics = [
     <!-- 2. Latest Briefings -->
     <section class="home-section">
       <div class="container">
-        <p class="section-label">Latest Briefings</p>
+        <h2 class="section-label">Latest Decision Governance Briefings</h2>
         <div class="briefing-grid">
           {featuredBriefings.map(b => (
             <a href={`/briefings/${b.slug}`} class="briefing-card">
@@ -63,10 +65,38 @@ const seriesTopics = [
       </div>
     </section>
 
+    <!-- 2a. Questions the series answers -->
+    <section class="home-section" style="border-top: 1px solid var(--border-light);">
+      <div class="container">
+        <h2 class="section-label">Three Questions Decision Governance Answers</h2>
+        <p class="home-lead">
+          Written for leaders who approve AI deployments, risk and audit teams who verify
+          authority, and technical leaders who enforce it at runtime.
+        </p>
+        <div class="preview-grid preview-grid--three">
+          <div class="preview-card">
+            <h3>Who can authorize an AI agent action?</h3>
+            <p>System access does not establish authority to execute a specific action. Decision Governance names who may approve it.</p>
+          </div>
+          <div class="preview-card">
+            <h3>When must an action escalate?</h3>
+            <p>Trigger logic decides which proposed agent actions are consequential enough to hold for a named human reviewer.</p>
+          </div>
+          <div class="preview-card">
+            <h3>What proves approval existed?</h3>
+            <p>A decision record shows that valid authority existed before execution, bound to the exact action that was approved.</p>
+          </div>
+        </div>
+        <p style="margin-top: 2rem;">
+          <a href="/decision-governance" class="view-all-link">What is Decision Governance? →</a>
+        </p>
+      </div>
+    </section>
+
     <!-- 3. The Decision Governance Strategic Intelligence Series -->
     <section class="home-section" style="border-top: 1px solid var(--border-light);">
       <div class="container">
-        <p class="section-label">The Decision Governance Strategic Intelligence Series</p>
+        <h2 class="section-label">The Decision Governance Strategic Intelligence Series</h2>
         <p class="home-lead">
           A structured publication covering what Decision Governance actually requires, from
           first principles through the authority structures organizations need to govern
@@ -80,10 +110,29 @@ const seriesTopics = [
       </div>
     </section>
 
+    <!-- 3a. Public incident reporting -->
+    <section class="home-section" style="border-top: 1px solid var(--border-light);">
+      <div class="container">
+        <h2 class="section-label">Public Incident Reporting</h2>
+        <div class="preview-grid">
+          <div class="preview-card">
+            <h3>Decision Governance Weekly</h3>
+            <p>Reported AI agent incidents, where enforcement failed, and how authority can be enforced before execution.</p>
+            <a href="/weekly" class="preview-link">Read the weekly →</a>
+          </div>
+          <div class="preview-card">
+            <h3>US Cybersecurity Update</h3>
+            <p>Reviewed U.S. cyber incidents, searchable breach notices, SEC filings, and federal advisories, with links to the original sources.</p>
+            <a href="/cybersecurity/" class="preview-link">See the latest reports →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- 4. The Emergence of DAL-X -->
     <div class="emergence-block">
       <div class="container">
-        <p class="emergence-label">The Emergence of DAL-X</p>
+        <h2 class="emergence-label">The Emergence of DAL-X</h2>
         <p class="emergence-statement">
           The series defines the governance gap. DAL-X is the application being built to close it.
         </p>
@@ -94,7 +143,7 @@ const seriesTopics = [
     <!-- 5. About Kevin Moore + Jochanni Labs -->
     <section class="home-section">
       <div class="container">
-        <p class="section-label">The People and Institutions Behind the Work</p>
+        <h2 class="section-label">The People and Institutions Behind the Work</h2>
         <div class="preview-grid">
           <div class="preview-card">
             <p class="preview-card-label">About the Author</p>
