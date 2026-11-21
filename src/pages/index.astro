@@ -1,6 +1,5 @@
 ---
 import Base from '../layouts/Base.astro';
-import CyberTicker from '../components/CyberTicker.astro';
 import { BRIEFINGS } from '../data/briefings';
 
 const featuredBriefings = BRIEFINGS.slice(0, 3);
@@ -27,8 +26,6 @@ const seriesTopics = [
   title="DAL-X"
   description="Execution governance for consequential AI agent executions. A publication on Decision Governance and runtime authority before execution proceeds."
 >
-  <CyberTicker />
-
   <!-- 1. Hero -->
   <section class="hero">
     <div class="container">
