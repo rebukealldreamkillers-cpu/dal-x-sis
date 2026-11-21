@@ -1,0 +1,410 @@
+[
+  {
+    "code": "AL",
+    "state": "Alabama",
+    "status": "unavailable",
+    "newest": null,
+    "url": "https://www.alabamaag.gov/data-breach-notification/",
+    "note": "Official intake form; no statewide public register verified."
+  },
+  {
+    "code": "AK",
+    "state": "Alaska",
+    "status": "unavailable",
+    "newest": null,
+    "url": "https://law.alaska.gov/department/civil/consumer/IDtheft.html",
+    "note": "Official guidance; no statewide public register verified."
+  },
+  {
+    "code": "AZ",
+    "state": "Arizona",
+    "status": "unavailable",
+    "newest": null,
+    "url": "https://www.azag.gov/consumer/data-breach",
+    "note": "Official intake and guidance; no statewide public register verified. Separate court disclosures exist."
+  },
+  {
+    "code": "AR",
+    "state": "Arkansas",
+    "status": "unavailable",
+    "newest": null,
+    "url": "https://arkansasag.gov/divisions/public-protection/identity/security-or-data-breach/",
+    "note": "Official guidance; aggregate public-sector audit is not a breach notice register."
+  },
+  {
+    "code": "CA",
+    "state": "California",
+    "status": "automatic",
+    "newest": "2026-11-20",
+    "url": "https://oag.ca.gov/privacy/databreach/list",
+    "note": "Public HTML and CSV. Date reported."
+  },
+  {
+    "code": "CO",
+    "state": "Colorado",
+    "status": "unavailable",
+    "newest": null,
+    "url": "https://coag.gov/resources/data-protection-laws/",
+    "note": "Official intake and open-records guidance; no statewide public register verified."
+  },
+  {
+    "code": "CT",
+    "state": "Connecticut",
+    "status": "unavailable",
+    "newest": null,
+    "url": "https://portal.ct.gov/ag/sections/privacy/reporting-a-data-breach",
+    "note": "Official intake; separate state agency announcements are not a statewide register."
+  },
+  {
+    "code": "DE",
+    "state": "Delaware",
+    "status": "unavailable",
+    "newest": "2025-07-11",
+    "url": "https://attorneygeneral.delaware.gov/fraud/cpu/securitybreachnotification/database/",
+    "note": "Most recent report date in the index checked. Newer official notices exist outside that index; current systematic coverage was not verified."
+  },
+  {
+    "code": "DC",
+    "state": "District of Columbia",
+    "status": "unavailable",
+    "newest": null,
+    "url": "https://oag.dc.gov/about-oag/laws-legal-opinions/requirements-districts-data-breach-notification",
+    "note": "Official reporting instructions; no District-wide public register verified."
+  },
+  {
+    "code": "FL",
+    "state": "Florida",
+    "status": "unavailable",
+    "newest": null,
+    "url": "https://www.flsenate.gov/Laws/Statutes/2026/501.171",
+    "note": "State reporting law and standalone notices; no statewide public register verified."
+  },
+  {
+    "code": "GA",
+    "state": "Georgia",
+    "status": "unavailable",
+    "newest": null,
+    "url": "https://consumered.georgia.gov/ask-ed/2023-08-30/getting-notified-following-data-breach",
+    "note": "Official consumer guidance; agency incident intake is not a public register."
+  },
+  {
+    "code": "HI",
+    "state": "Hawaii",
+    "status": "unavailable",
+    "newest": "2024-04-01",
+    "url": "https://cca.hawaii.gov/ocp/notices/security-breach/",
+    "note": "Historical public table and letters. Latest visible reported date was outside the rolling archive window."
+  },
+  {
+    "code": "ID",
+    "state": "Idaho",
+    "status": "automatic",
+    "newest": "2026-11-09",
+    "url": "https://www.ag.idaho.gov/consumer-protection/security-breaches/",
+    "note": "Public notice list with PDF letters. Listed notice date."
+  },
+  {
+    "code": "IL",
+    "state": "Illinois",
+    "status": "periodic",
+    "newest": "2026-11-20",
+    "url": "https://databreachnoticetoattorneygeneral.illinoisattorneygeneral.gov/databreach-search",
+    "note": "Public search requires interaction; direct fetch was blocked. Case date, not notification date."
+  },
+  {
+    "code": "IN",
+    "state": "Indiana",
+    "status": "periodic",
+    "newest": "2026-11-05",
+    "url": "https://www.in.gov/attorneygeneral/consumer-protection-division/id-theft-prevention/security-breaches/",
+    "note": "Public year-to-date PDF. Notification sent date, not the date the breach began."
+  },
+  {
+    "code": "IA",
+    "state": "Iowa",
+    "status": "automatic",
+    "newest": "2026-11-11",
+    "url": "https://www.iowaattorneygeneral.gov/for-consumers/security-breach-notifications/2026-security-breach-notification",
+    "note": "Annual HTML notice index with linked PDFs. Date reported."
+  },
+  {
+    "code": "KS",
+    "state": "Kansas",
+    "status": "unavailable",
+    "newest": null,
+    "url": "https://www.ksrevisor.gov/statutes/chapters/ch50/050_007a02.html",
+    "note": "Official statute; no statewide public register verified."
+  },
+  {
+    "code": "KY",
+    "state": "Kentucky",
+    "status": "unavailable",
+    "newest": "2024-09-05",
+    "url": "https://apps.legislature.ky.gov/AgencyReports/IJC/TSBIT/C/2024%20Breach%20Report%20Final%20locked.xlsx.html",
+    "note": "Limited agency incident workbook, not a statewide register. Newest determination verified in that workbook."
+  },
+  {
+    "code": "LA",
+    "state": "Louisiana",
+    "status": "unavailable",
+    "newest": null,
+    "url": "https://ag.louisiana.gov/Page/DataBreach",
+    "note": "Official intake; no statewide public register verified."
+  },
+  {
+    "code": "ME",
+    "state": "Maine",
+    "status": "unavailable",
+    "newest": null,
+    "url": "https://www.maine.gov/ag/consumer-protection/data-security-breaches",
+    "note": "The Attorney General says the live database is offline. Separate archive covers 2010 through September 2020."
+  },
+  {
+    "code": "MD",
+    "state": "Maryland",
+    "status": "unavailable",
+    "newest": "2025-03-21",
+    "url": "https://oag.maryland.gov/resources-info/Pages/security-breach-notices.aspx",
+    "note": "Official index was accessible, but newest verified date received was in March 2025."
+  },
+  {
+    "code": "MA",
+    "state": "Massachusetts",
+    "status": "periodic",
+    "newest": "2026-11-20",
+    "url": "https://www.mass.gov/lists/data-breach-notification-reports",
+    "note": "Annual public PDFs and letter archive. Date reported to Consumer Affairs."
+  },
+  {
+    "code": "MI",
+    "state": "Michigan",
+    "status": "unavailable",
+    "newest": null,
+    "url": "https://www.legislature.mi.gov/Laws/MCL?objectName=MCL-445.72",
+    "note": "Official resident notification law; no statewide public register verified."
+  },
+  {
+    "code": "MN",
+    "state": "Minnesota",
+    "status": "unavailable",
+    "newest": null,
+    "url": "https://www.revisor.mn.gov/statutes/2026/cite/325E.61",
+    "note": "Official statute; no statewide public register verified."
+  },
+  {
+    "code": "MS",
+    "state": "Mississippi",
+    "status": "unavailable",
+    "newest": null,
+    "url": "https://attorneygenerallynnfitch.com/divisions/consumer-protection/",
+    "note": "Official consumer protection guidance. Sector-specific intake is not a public register."
+  },
+  {
+    "code": "MO",
+    "state": "Missouri",
+    "status": "unavailable",
+    "newest": null,
+    "url": "https://ago.mo.gov/get-help/programs-services-from-a-z/data-breaches/",
+    "note": "Official breach guidance; no statewide public register verified."
+  },
+  {
+    "code": "MT",
+    "state": "Montana",
+    "status": "periodic",
+    "newest": "2026-10-26",
+    "url": "https://dojmt.gov/office-of-consumer-protection/reported-data-breaches/",
+    "note": "Public browser table with linked letters; direct automated fetch was blocked. Date reported."
+  },
+  {
+    "code": "NE",
+    "state": "Nebraska",
+    "status": "periodic",
+    "newest": "2026-08-27",
+    "url": "https://ne.accessgov.com/ago/Forms/Page/ago/85cc7822-5ca7-4eb1-ba3a-e54a5f45eadb/6e853c78-d850-42c6-9163-59b7688e2632/0",
+    "note": "Public search and CSV export. Most recent consumer notification date independently verified against a linked letter."
+  },
+  {
+    "code": "NV",
+    "state": "Nevada",
+    "status": "unavailable",
+    "newest": null,
+    "url": "https://ag.nv.gov/Hot_Topics/Notice_Regarding_Data_Breaches/",
+    "note": "Official reporting guidance; no statewide public register verified."
+  },
+  {
+    "code": "NH",
+    "state": "New Hampshire",
+    "status": "periodic",
+    "newest": "2026-11-13",
+    "url": "https://www.doj.nh.gov/citizens/consumer-protection-antitrust-bureau/security-breach-notifications",
+    "note": "Public notice links verified in a browser; automated fetch was blocked. Date from the posted document listing, not occurrence date."
+  },
+  {
+    "code": "NJ",
+    "state": "New Jersey",
+    "status": "unavailable",
+    "newest": "2026-06-11",
+    "url": "https://www.cyber.nj.gov/threat-landscape/public-data-breaches",
+    "note": "Curated advisory listing, not a statewide filing register. Date from indexed official advisory."
+  },
+  {
+    "code": "NM",
+    "state": "New Mexico",
+    "status": "unavailable",
+    "newest": null,
+    "url": "https://www.nmlegis.gov/Sessions/17%20Regular/final/HB0015.PDF",
+    "note": "Official notification law; no statewide public register verified."
+  },
+  {
+    "code": "NY",
+    "state": "New York",
+    "status": "unavailable",
+    "newest": null,
+    "url": "https://ag.ny.gov/resources/organizations/data-breach-reporting",
+    "note": "Official joint intake; no statewide public register verified."
+  },
+  {
+    "code": "NC",
+    "state": "North Carolina",
+    "status": "unavailable",
+    "newest": null,
+    "url": "https://ncdoj.gov/2025-data-breach-report/",
+    "note": "Official aggregate report; no current public incident-level register verified."
+  },
+  {
+    "code": "ND",
+    "state": "North Dakota",
+    "status": "unavailable",
+    "newest": null,
+    "url": "https://ndlegis.gov/cencode/t51c30.pdf",
+    "note": "Official statute. Former public notices path returned 404; no replacement verified."
+  },
+  {
+    "code": "OH",
+    "state": "Ohio",
+    "status": "unavailable",
+    "newest": null,
+    "url": "https://www.ohioattorneygeneral.gov/Business/Services-for-Business/Business-Guide/Personal-Information-for-Consumers",
+    "note": "Official notice guidance; no statewide public register verified."
+  },
+  {
+    "code": "OK",
+    "state": "Oklahoma",
+    "status": "unavailable",
+    "newest": null,
+    "url": "https://oklahoma.gov/oag/complaints-tiplines/complaints/data-breach.html",
+    "note": "Official intake; no statewide public register verified."
+  },
+  {
+    "code": "OR",
+    "state": "Oregon",
+    "status": "automatic",
+    "newest": "2026-11-19",
+    "url": "https://justice.oregon.gov/consumer/databreach/",
+    "note": "Public initial-report HTML table. Date reported."
+  },
+  {
+    "code": "PA",
+    "state": "Pennsylvania",
+    "status": "unavailable",
+    "newest": null,
+    "url": "https://www.attorneygeneral.gov/report-a-data-breach/bpina/",
+    "note": "Official breach guidance and intake; no statewide public register verified."
+  },
+  {
+    "code": "RI",
+    "state": "Rhode Island",
+    "status": "periodic",
+    "newest": "2026-11-06",
+    "url": "https://riag.ri.gov/news-events/data-breach-notifications",
+    "note": "Public linked notices verified in a browser; direct automated fetch was blocked. Date printed beside the notice."
+  },
+  {
+    "code": "SC",
+    "state": "South Carolina",
+    "status": "automatic",
+    "newest": "2026-11-13",
+    "url": "https://consumer.sc.gov/identity-theft-unit/security-breach-notices",
+    "note": "Public HTML table with links to notices when available. Date reported."
+  },
+  {
+    "code": "SD",
+    "state": "South Dakota",
+    "status": "unavailable",
+    "newest": null,
+    "url": "https://sdlegislature.gov/Statutes/22-40-20",
+    "note": "Official reporting law; no statewide public register verified."
+  },
+  {
+    "code": "TN",
+    "state": "Tennessee",
+    "status": "unavailable",
+    "newest": null,
+    "url": "https://www.tn.gov/tenncare/legal/privacy-announcements.html",
+    "note": "TennCare posts agency-specific notices. No statewide public register verified."
+  },
+  {
+    "code": "TX",
+    "state": "Texas",
+    "status": "periodic",
+    "newest": "2026-11-20",
+    "url": "https://oag.my.site.com/datasecuritybreachreport/apex/DataSecurityReportsPage",
+    "note": "Public register renders in a browser; direct HTML does not include rows. Date published at the Attorney General website."
+  },
+  {
+    "code": "UT",
+    "state": "Utah",
+    "status": "unavailable",
+    "newest": null,
+    "url": "https://cybercenter.utah.gov/Report-a-Breach/",
+    "note": "Official intake; no statewide public register verified."
+  },
+  {
+    "code": "VT",
+    "state": "Vermont",
+    "status": "automatic",
+    "newest": "2026-11-20",
+    "url": "https://ago.vermont.gov/categories/security-breach-notices",
+    "note": "Public HTML report summaries. Date reported to Attorney General."
+  },
+  {
+    "code": "VA",
+    "state": "Virginia",
+    "status": "unavailable",
+    "newest": null,
+    "url": "https://law.lis.virginia.gov/vacode/title18.2/chapter6/section18.2-186.6/",
+    "note": "Official reporting law; no statewide public register verified."
+  },
+  {
+    "code": "WA",
+    "state": "Washington",
+    "status": "automatic",
+    "newest": "2026-11-14",
+    "url": "https://www.atg.wa.gov/data-breach-notifications",
+    "note": "Public paginated HTML directory with notice links. Date reported."
+  },
+  {
+    "code": "WV",
+    "state": "West Virginia",
+    "status": "unavailable",
+    "newest": null,
+    "url": "https://ago.wv.gov/faq",
+    "note": "The Attorney General FAQ provides an intake address, not a public register."
+  },
+  {
+    "code": "WI",
+    "state": "Wisconsin",
+    "status": "unavailable",
+    "newest": "2026-06-30",
+    "url": "https://datcp.wi.gov/Pages/Programs_Services/DataBreaches.aspx",
+    "note": "Public monthly summaries; newest verified public notification date was outside the rolling archive window."
+  },
+  {
+    "code": "WY",
+    "state": "Wyoming",
+    "status": "unavailable",
+    "newest": null,
+    "url": "https://statutes.wyoleg.gov/NXT/gateway.dll/2026%20Wyoming%20Statutes/2026%20Titles/2270/2284/2289?f=templates&fn=document-frameset.htm",
+    "note": "Official statute; no statewide public register verified."
+  }
+]
