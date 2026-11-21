@@ -58,9 +58,11 @@ function safeItem(item) {
 function init(root) {
   const find = (name) => root.querySelector(`[data-ticker-${name}]`);
   const viewport = find('window'), track = find('track'), list = find('list');
-  const duplicate = find('copy'), status = find('status'), button = find('pause');
+  const duplicate = find('copy'), button = find('pause');
+  const refresh = document.querySelector('[data-ticker-refresh]');
+  const status = refresh?.querySelector('[data-ticker-status]');
+  const next = refresh?.querySelector('[data-ticker-next]');
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
-  const next = find('next');
   let paused = false, last = null, failed = false, loading = false, rendered = '', pending = false, nextAt = 0;
 
   function measure() {
@@ -103,12 +105,14 @@ function init(root) {
     const format = (date) => new Date(date).toLocaleString(undefined, {
       month:'short', day:'numeric', hour:'numeric', minute:'2-digit', timeZoneName:'short',
     });
-    if (!usable) status.textContent = 'Ticker temporarily unavailable. Use the original sources below.';
-    else if (!last.live) status.textContent = `Showing saved snapshot from ${format(last.generatedAt)}. Live check unavailable.`;
-    else if (!last.lastSuccessfulCheck) status.textContent = `Publisher checks unavailable. Showing saved reports from ${format(last.archiveAsOf)}.`;
-    else {
-      const warning = failed || age > staleMs ? ' Showing saved results.' : last.failedSources?.length ? ` Delayed: ${last.failedSources.join(', ')}.` : '';
-      status.textContent = `Last successful publisher check: ${format(last.lastSuccessfulCheck)}.${warning}`;
+    if (status) {
+      if (!usable) status.textContent = 'Ticker temporarily unavailable. Use the original sources below.';
+      else if (!last.live) status.textContent = `Showing saved snapshot from ${format(last.generatedAt)}. Live check unavailable.`;
+      else if (!last.lastSuccessfulCheck) status.textContent = `Publisher checks unavailable. Showing saved reports from ${format(last.archiveAsOf)}.`;
+      else {
+        const warning = failed || age > staleMs ? ' Showing saved results.' : last.failedSources?.length ? ` Delayed: ${last.failedSources.join(', ')}.` : '';
+        status.textContent = `Last successful publisher check: ${format(last.lastSuccessfulCheck)}.${warning}`;
+      }
     }
     if (nextAt && next) next.textContent = `Next browser check: ${format(nextAt)} while this tab is open.`;
     measure();
