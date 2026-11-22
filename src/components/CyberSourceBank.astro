@@ -28,7 +28,12 @@ const reporting = [
     <p data-ticker-next></p>
   </div>
   <noscript><style>.cyber-source-bank [data-ticker-status]{display:none}</style></noscript>
-  <p>The ticker shows recent public notices, filings, and advisories. Reviewed incidents are presented separately. The archive is not a complete census of U.S. cyber incidents. Automatic ticker checks cover CISA advisories and KEV, FBI IC3 alerts, HHS, and seven state registries listed under State source coverage. SEC, DOJ, the periodic state sources, and reviewed national reporting are updated separately. The searchable archive and reviewed national stories were last published November 22, 2026.</p>
+  <p>The ticker shows recent public notices, filings, and advisories. Reviewed incidents are presented separately. The archive is not a complete census of U.S. cyber incidents. Automatic ticker checks cover CISA advisories and KEV, FBI IC3 alerts, HHS, and seven state registries listed under State source coverage. SEC, DOJ, the periodic state sources, and reviewed national reporting are updated separately. The archive combines a published history with recent reports from the automatic checks. Reviewed national stories are published separately.</p>
+  <details>
+    <summary>Automatic source status</summary>
+    <p>“Current” means DAL-X reached the source and read its records. It does not mean the publisher posted a new report. Dates below are the latest records the publisher returned, not attack dates.</p>
+    <ul class="cyber-source-bank__health" data-source-health><li>Waiting for a publisher check.</li></ul>
+  </details>
   <details>
     <summary>Federal sources and original state sources</summary>
     <ul>{publicSources.map(([name, url, scope]) => <li><a href={url} target="_blank" rel="noopener noreferrer">{name}</a><span>{scope}</span></li>)}</ul>

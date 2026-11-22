@@ -244,6 +244,8 @@ def make_snapshot(seed, results, old_records, now, previous_success=None):
     items = [i for i in seed['items'] if i['sourceId'] not in SOURCES and public_report(i)
              and now - 14 * DAY <= timestamp(i['date']) <= now + DAY]
     failures = []
+    archive_rows = []
+    feed_health = {}
     recovered_count = 0
     for key, (label, _, _) in SOURCES.items():
         fresh = results[key]
@@ -259,8 +261,12 @@ def make_snapshot(seed, results, old_records, now, previous_success=None):
             health[key] = dict(label=label, checkedAt=stamp, status='current')
             current = fresh
         kind = 'advisory' if key in ('ic3', 'advisory') else 'kev' if key == 'kev' else 'breach'
-        recent = [i for i in current if public_report(i) and now - 14 * DAY <= timestamp(i['date']) <= now + DAY]
-        items.extend(dict(clean_output(i), kind=kind, sourceId=key, source=label, topic=public_topic(i, kind)) for i in recent[:2])
+        recent = [i for i in current if now - 14 * DAY <= timestamp(i['date']) <= now + DAY]
+        recent.sort(key=lambda i: timestamp(i['date']), reverse=True)
+        feed_health[key] = dict(health[key], latestReportAt=current[0]['date'] if current else None)
+        shaped = [dict(clean_output(i), kind=kind, sourceId=key, source=label, topic=public_topic(i, kind)) for i in recent]
+        archive_rows.extend(shaped[:25])
+        items.extend([i for i in shaped if public_report(i)][:2])
     other = sorted(items, key=lambda i: timestamp(i['date']), reverse=True)
     # Give each automatically checked source with recent rows a slot before filling by date.
     reserved = {}
@@ -274,7 +280,7 @@ def make_snapshot(seed, results, old_records, now, previous_success=None):
     last_success = stamp if recovered_count else previous_success
     return (dict(version=2, generatedAt=stamp, lastSuccessfulCheck=last_success, archiveAsOf=seed['generatedAt'],
                  live=True, cachedMinutes=60, sources=health, items=selected[:24],
-                 failedSources=failures, connectedSources=len(SOURCES)), records, last_success)
+                 failedSources=failures, connectedSources=len(SOURCES), feedHealth=feed_health, recentReports=archive_rows), records, last_success)
 
 
 class handler(BaseHTTPRequestHandler):

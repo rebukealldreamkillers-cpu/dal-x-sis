@@ -1,10 +1,12 @@
+import { onCyberFeed } from './cyber-live-state.js';
+
 const archiveEndpoint = '/cybersecurity-data/archive-snapshot.json';
 const typeNames = { filing:'SEC filing', agency:'Law enforcement announcement', incident:'National incident', breach:'Breach notice', advisory:'Advisory', kev:'Exploited vulnerability' };
 const archiveHosts = {
   id:['www.ag.idaho.gov'], sc:['consumer.sc.gov'], in:['www.in.gov'], tx:['oag.my.site.com'],
   mt:['dojmt.gov'], nh:['mm.nh.gov'], ri:['riag.ri.gov'], ne:['nebraska.gov'], il:['databreachnoticetoattorneygeneral.illinoisattorneygeneral.gov'],
   hhs:['ocrportal.hhs.gov'],ia:['www.iowaattorneygeneral.gov'],ma:['www.mass.gov'],sec:['www.sec.gov'],ic3:['www.ic3.gov'],doj:['www.justice.gov'],
-  reviewed:['www.bleepingcomputer.com','www.nbcnews.com','apnews.com','oag.ca.gov','news.vanderbilt.edu','www.sec.gov','hscnews.unm.edu','www.azcourts.gov','www.chfs.ky.gov','www.mckesson.com','workos.com','www.microsoft.com','openai.com',None],
+  reviewed:["apnews.com","bnnbloomberg.ca","cursor.com","gambit.security","hscnews.unm.edu","news.vanderbilt.edu","oag.ca.gov","openai.com","therecord.media","unit42.paloaltonetworks.com","wikimediafoundation.org","workos.com","www.anthropic.com","www.azcourts.gov","www.bleepingcomputer.com","www.chainalysis.com","www.chfs.ky.gov","www.crowdstrike.com","www.mckesson.com","www.microsoft.com","www.nbcnews.com","www.sec.gov"],
   breach:['oag.ca.gov'], wa:['www.atg.wa.gov','agportal-s3bucket.s3.amazonaws.com'],
   or:['justice.oregon.gov'], vt:['ago.vermont.gov'], advisory:['www.cisa.gov'], kev:['www.cisa.gov'],
 };
@@ -51,11 +53,32 @@ async function initArchive(root) {
     doc=await response.json();
     if(doc?.version!==1 || !Array.isArray(doc.items) || !Number.isFinite(Date.parse(doc.generatedAt))) throw new Error('Invalid archive');
   } catch { status.textContent='Report history is unavailable. Try refreshing the page.'; return; }
-  const now=Date.parse(doc.generatedAt);
-  const items=doc.items.filter(i=>i && typeof i.title==='string' && typeof i.source==='string' &&
-    Object.hasOwn(typeNames,i.kind) && Number.isFinite(Date.parse(i.date)) && archiveLink(i))
-    .map(i=>({...i,searchText:normalize(`${i.title} ${i.source} ${typeNames[i.kind]} ${i.note ?? ''} ${i.evidence ?? ''} ${i.topic === 'ai-agent-security' ? 'AI agent security' : ''}`)}));
-  for(const [key,label] of new Map(items.map(i=>[i.sourceId,i.source]))) source.add(new Option(label,key));
+  const freshness=root.querySelector('[data-archive-freshness]');
+  let now=Date.parse(doc.generatedAt), items=[];
+  const valid=i=>i && typeof i.id==='string' && typeof i.title==='string' && typeof i.source==='string' &&
+    Object.hasOwn(typeNames,i.kind) && Number.isFinite(Date.parse(i.date)) && archiveLink(i);
+  const saved=doc.items.filter(valid);
+  function setItems(recent=[]) {
+    const sharedListings=new Set(['or','vt','hhs','ma','tx','in','il']);
+    const key=i=>{
+      const u=new URL(i.url);
+      const keyedByRecord=!sharedListings.has(i.sourceId) && !['/','/privacy/databreach/list','/identity-theft-unit/security-breach-notices','/consumer-protection/security-breaches/','/data-breach-notifications'].includes(u.pathname);
+      return keyedByRecord ? `${i.sourceId}:${u.hostname}${u.pathname.replace(/\/$/,'')}${u.search}` : `${i.sourceId}:${normalize(i.title)}:${i.date.slice(0,10)}`;
+    };
+    const collected=new Map(saved.map(i=>[key(i),i]));
+    for(const i of recent.filter(valid)) {
+      if(i.sourceId==='reviewed' || i.kind==='incident')continue;
+      const k=key(i), prior=collected.get(k);
+      collected.set(k,prior ? {...i,...prior,topic:prior.topic || i.topic} : i);
+    }
+    items=[...collected.values()].sort((a,b)=>Date.parse(b.date)-Date.parse(a.date))
+      .map(i=>({...i,searchText:normalize(`${i.title} ${i.source} ${typeNames[i.kind]} ${i.note ?? ''} ${i.evidence ?? ''} ${i.topic === 'ai-agent-security' ? 'AI agent security' : ''}`)}));
+    const known=new Set([...source.options].map(o=>o.value));
+    for(const [k,label] of new Map(items.map(i=>[i.sourceId,i.source]))) {
+      if (!known.has(k)) source.add(new Option(label,k));
+    }
+  }
+  setItems();
   control.hidden=false;
   let limit=pageSize;
   function render(focusIndex=-1) {
@@ -74,6 +97,15 @@ async function initArchive(root) {
   for(const element of [kind,source,days,topic]) element.addEventListener('change',reset);
   more.addEventListener('click',()=>{const old=limit;limit+=pageSize;render(old);});
   render();
+  onCyberFeed(({feed,delayed})=>{
+    if (feed?.recentReports && Array.isArray(feed.recentReports)) {
+      now=Math.max(now,Date.parse(feed.generatedAt));
+      setItems(feed.recentReports);
+      freshness.textContent=delayed ? 'Searching the archive and last saved public reports. Live refresh delayed.' : 'Searching the published archive and recent public reports from the latest source checks.';
+      // Keep the user's filter selection and how many rows they opened.
+      if(!results.contains(document.activeElement)) render();
+    } else if(delayed) freshness.textContent='Live public reports unavailable. The published archive is still searchable.';
+  });
 }
 
 document.querySelectorAll('[data-cyber-archive]').forEach(initArchive);

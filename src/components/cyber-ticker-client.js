@@ -1,3 +1,5 @@
+import { updateCyberFeed } from './cyber-live-state.js';
+
 const endpoint = '/cybersecurity-data/ticker-feed.json';
 const seedEndpoint = '/cybersecurity-data/snapshot.json';
 const refreshMs = 5 * 60_000;
@@ -141,7 +143,8 @@ function init(root) {
     try {
       last = await readSnapshot(endpoint, true);
       failed = false;
-    } catch { failed = true; }
+      updateCyberFeed(last, false);
+    } catch { failed = true; updateCyberFeed(null, true); }
     finally { loading = false; render(); }
   }
   button.addEventListener('click', () => { paused = !paused; measure(); });
