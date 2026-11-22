@@ -214,6 +214,15 @@ def pull(key):
         return None
 
 
+AGENT_TOPIC = re.compile(r'\b(?:agentic AI|AI agents?|agentic (?:security|attack|tooling)|AI (?:coding|security|research) agents?|MCP (?:server|gateway)|model context protocol)\b', re.I)
+
+
+def public_topic(item, kind):
+    if kind in ('advisory', 'kev') and AGENT_TOPIC.search(item['title']):
+        return 'ai-agent-security'
+    return None
+
+
 def clean_output(item):
     return dict(item, title=re.sub(r'\s*[\u2013\u2014]\s*', ': ', item['title']))
 
@@ -251,7 +260,7 @@ def make_snapshot(seed, results, old_records, now, previous_success=None):
             current = fresh
         kind = 'advisory' if key in ('ic3', 'advisory') else 'kev' if key == 'kev' else 'breach'
         recent = [i for i in current if public_report(i) and now - 14 * DAY <= timestamp(i['date']) <= now + DAY]
-        items.extend(dict(clean_output(i), kind=kind, sourceId=key, source=label) for i in recent[:2])
+        items.extend(dict(clean_output(i), kind=kind, sourceId=key, source=label, topic=public_topic(i, kind)) for i in recent[:2])
     other = sorted(items, key=lambda i: timestamp(i['date']), reverse=True)
     # Give each automatically checked source with recent rows a slot before filling by date.
     reserved = {}

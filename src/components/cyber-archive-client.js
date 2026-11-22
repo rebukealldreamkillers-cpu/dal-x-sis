@@ -4,7 +4,7 @@ const archiveHosts = {
   id:['www.ag.idaho.gov'], sc:['consumer.sc.gov'], in:['www.in.gov'], tx:['oag.my.site.com'],
   mt:['dojmt.gov'], nh:['mm.nh.gov'], ri:['riag.ri.gov'], ne:['nebraska.gov'], il:['databreachnoticetoattorneygeneral.illinoisattorneygeneral.gov'],
   hhs:['ocrportal.hhs.gov'],ia:['www.iowaattorneygeneral.gov'],ma:['www.mass.gov'],sec:['www.sec.gov'],ic3:['www.ic3.gov'],doj:['www.justice.gov'],
-  reviewed:['www.bleepingcomputer.com','www.nbcnews.com','apnews.com','oag.ca.gov','news.vanderbilt.edu','www.sec.gov','hscnews.unm.edu','www.azcourts.gov','www.chfs.ky.gov','www.mckesson.com'],
+  reviewed:['www.bleepingcomputer.com','www.nbcnews.com','apnews.com','oag.ca.gov','news.vanderbilt.edu','www.sec.gov','hscnews.unm.edu','www.azcourts.gov','www.chfs.ky.gov','www.mckesson.com','workos.com','www.microsoft.com','openai.com'],
   breach:['oag.ca.gov'], wa:['www.atg.wa.gov','agportal-s3bucket.s3.amazonaws.com'],
   or:['justice.oregon.gov'], vt:['ago.vermont.gov'], advisory:['www.cisa.gov'], kev:['www.cisa.gov'],
 };
@@ -29,7 +29,12 @@ function reportRow(item) {
   const kind = document.createElement('span'); kind.className='cyber-archive__type'; kind.textContent=typeNames[item.kind];
   const date = document.createElement('time'); date.dateTime=item.date; date.textContent=item.date.slice(0,10);
   const source = document.createElement('span'); source.textContent=item.source;
-  meta.append(kind,source,date); row.append(meta,link);
+  meta.append(kind,source,date);
+  if (item.topic === 'ai-agent-security') {
+    const topicLabel = document.createElement('span'); topicLabel.textContent = 'AI agent security'; meta.append(topicLabel);
+    if (typeof item.evidence === 'string') { const evidence = document.createElement('span'); evidence.textContent = item.evidence; meta.append(evidence); }
+  }
+  row.append(meta,link);
   if (typeof item.note === 'string') { const note = document.createElement('span'); note.className='cyber-archive__meta'; note.textContent=item.note; row.append(note); }
   return row;
 }
@@ -38,7 +43,7 @@ async function initArchive(root) {
   const control=root.querySelector('.cyber-archive__controls'), status=root.querySelector('.cyber-archive__status');
   const results=root.querySelector('.cyber-archive__results'), more=root.querySelector('.cyber-archive__more');
   const field=(name)=>root.querySelector(`[data-filter="${name}"]`);
-  const query=field('query'), kind=field('kind'), source=field('source'), days=field('days');
+  const query=field('query'), kind=field('kind'), source=field('source'), days=field('days'), topic=field('topic');
   let doc;
   try {
     const response = await fetch(archiveEndpoint,{cache:'no-cache',signal:AbortSignal.timeout(5000)});
@@ -49,7 +54,7 @@ async function initArchive(root) {
   const now=Date.parse(doc.generatedAt);
   const items=doc.items.filter(i=>i && typeof i.title==='string' && typeof i.source==='string' &&
     Object.hasOwn(typeNames,i.kind) && Number.isFinite(Date.parse(i.date)) && archiveLink(i))
-    .map(i=>({...i,searchText:normalize(`${i.title} ${i.source} ${typeNames[i.kind]} ${i.note ?? ''} ${i.evidence ?? ''}`)}));
+    .map(i=>({...i,searchText:normalize(`${i.title} ${i.source} ${typeNames[i.kind]} ${i.note ?? ''} ${i.evidence ?? ''} ${i.topic === 'ai-agent-security' ? 'AI agent security' : ''}`)}));
   for(const [key,label] of new Map(items.map(i=>[i.sourceId,i.source]))) source.add(new Option(label,key));
   control.hidden=false;
   let limit=pageSize;
@@ -57,7 +62,7 @@ async function initArchive(root) {
     const phrase=normalize(query.value).split(' ').filter(Boolean);
     const since=now-Number(days.value)*dayMs;
     const match=items.filter(i=>(!kind.value || i.kind===kind.value) && (!source.value || i.sourceId===source.value) &&
-      Date.parse(i.date)>=since && phrase.every(t=>i.searchText.includes(t)));
+      (!topic.value || i.topic===topic.value) && Date.parse(i.date)>=since && phrase.every(t=>i.searchText.includes(t)));
     const visible=match.slice(0,limit);
     results.replaceChildren(...visible.map(reportRow));
     more.hidden=match.length<=limit;
@@ -66,7 +71,7 @@ async function initArchive(root) {
   }
   function reset(){ limit=pageSize; render(); }
   query.addEventListener('input',reset);
-  for(const element of [kind,source,days]) element.addEventListener('change',reset);
+  for(const element of [kind,source,days,topic]) element.addEventListener('change',reset);
   more.addEventListener('click',()=>{const old=limit;limit+=pageSize;render(old);});
   render();
 }
