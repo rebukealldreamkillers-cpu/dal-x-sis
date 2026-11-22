@@ -27,7 +27,21 @@ const seriesTopics = [
   description="Jochanni Labs publishes DAL-X.com on Decision Governance: how organizations verify authority before an AI agent takes a consequential action."
 >
   <!-- 1. Hero -->
-  <section class="hero">
+  <section class="hero hero--video">
+    <div class="hero-media" aria-hidden="true">
+      <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="/media/hero-skyline.jpg" disablepictureinpicture>
+        <source src="/media/hero-skyline.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <script is:inline>
+      (function () {
+        var v = document.currentScript.previousElementSibling.querySelector('video');
+        var c = navigator.connection;
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || (c && c.saveData)) {
+          v.removeAttribute('autoplay'); v.pause(); v.preload = 'none';
+        }
+      })();
+    </script>
     <div class="container">
       <p class="hero-label">Strategic Intelligence Series</p>
       <h1>AI Agent Governance Starts Before Execution.</h1>
