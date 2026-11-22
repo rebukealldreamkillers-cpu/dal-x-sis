@@ -94,14 +94,3 @@ function init(root){
 }
 
 document.querySelectorAll('[data-cyber-numbers]').forEach(init);
-
-const openTrends=()=>{
-  if(location.hash!=='#the-numbers')return;
-  const section=document.getElementById('the-numbers');
-  const details=section?.closest('[data-report-trends]');
-  if(!details || details.open)return;
-  details.open=true;
-  section.scrollIntoView();
-};
-window.addEventListener('hashchange',openTrends);
-openTrends();
