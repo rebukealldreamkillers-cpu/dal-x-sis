@@ -1,0 +1,23 @@
+<section id="daily-disclosure-summary" class="cyber-daily" aria-labelledby="daily-brief-title" data-cyber-daily>
+  <div class="cyber-daily__header">
+    <h2 id="daily-brief-title">What changed today</h2>
+    <p data-daily-time>Reporting days use Eastern Time</p>
+  </div>
+  <p class="cyber-daily__copy" data-daily-copy aria-live="polite">Checking the latest public disclosures.</p>
+  <p class="cyber-daily__detail" data-daily-detail hidden></p>
+  <p class="cyber-daily__record" data-daily-record hidden></p>
+  <p class="cyber-daily__note">Today is a partial day. These counts reflect records returned by the same sources, not attacks that happened today.</p>
+  <noscript><style>.cyber-daily [data-daily-copy]{display:none}</style><p>The daily comparison requires JavaScript. The reviewed reports and previous disclosures are below.</p></noscript>
+</section>
+<script>
+  import './cyber-daily-brief-client.js';
+</script>
+<style is:global>
+.cyber-daily{margin-top:1rem;border:1px solid #4b3b32;border-inline-start:3px solid #bc714a;border-radius:.35rem;background:#1d1917;padding:clamp(.8rem,2vw,1.15rem);color:#eee5df;min-width:0;overflow-wrap:anywhere}
+.cyber-daily [hidden]{display:none!important}
+.cyber-daily__header{display:flex;justify-content:space-between;align-items:baseline;gap:.35rem 1rem;flex-wrap:wrap}
+.cyber-daily h2{font-size:clamp(1.1rem,3vw,1.5rem);line-height:1.2;letter-spacing:-.02em;margin:0}
+.cyber-daily__header p,.cyber-daily__note{font:.72rem/1.5 ui-monospace,monospace;color:#d9c5b8;margin:0}
+.cyber-daily__copy,.cyber-daily__detail,.cyber-daily__record{font-size:.9rem;line-height:1.5;margin:.53rem 0}
+.cyber-daily__record a{color:#f4b88f;text-decoration:underline}.cyber-daily__record a:focus-visible{outline:2px solid #f4b88f;outline-offset:2px}
+</style>

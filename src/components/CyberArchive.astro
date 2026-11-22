@@ -1,7 +1,7 @@
 <section class="cyber-archive" data-cyber-archive aria-labelledby="cyber-archive-title">
   <div class="cyber-archive__intro">
     <p class="cyber-archive__label">Searchable history / 90-day window</p>
-    <h2 id="cyber-archive-title">Browse reports</h2>
+    <h2 id="cyber-archive-title">Browse the reports</h2>
     <p>Search organizations, headlines, sources, or CVE IDs. Dates reflect when a report was filed or published, or when CISA added a vulnerability to its catalog.</p>
   </div>
   <div class="cyber-archive__controls" hidden>
@@ -16,6 +16,7 @@
   <ul class="cyber-archive__results"></ul>
   <button type="button" class="cyber-archive__more" hidden>Show more reports</button>
   <p class="cyber-archive__coverage">Includes sampled public records and reviewed national incidents. A single incident can appear as a state notice, an SEC filing, and a reviewed report. These are not counts of unique incidents.</p>
+  <slot />
 </section>
 <script>
   import './cyber-archive-client.js';
@@ -29,7 +30,7 @@
 .cyber-archive__label,.cyber-archive__type{color:#f1a373;}
 .cyber-archive__controls{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,170px),1fr));gap:.8rem;margin:1.35rem 0 .85rem;}
 .cyber-archive__controls label{display:grid;align-content:start;gap:.35rem;color:#e1d6cc;font-size:.8rem;min-width:0;}
-.cyber-archive input,.cyber-archive select,.cyber-archive button{width:100%;min-width:0;min-height:44px;font:inherit;color:#f4f0ec;background:#201c19;border:1px solid #776052;border-radius:.35rem;padding:.5rem .65rem;box-sizing:border-box;color-scheme:dark;}
+.cyber-archive__controls input,.cyber-archive__controls select,.cyber-archive__more{width:100%;min-width:0;min-height:44px;font:inherit;color:#f4f0ec;background:#201c19;border:1px solid #776052;border-radius:.35rem;padding:.5rem .65rem;box-sizing:border-box;color-scheme:dark;}
 .cyber-archive input::placeholder{color:#c3b7ae;}
 .cyber-archive a:focus-visible,.cyber-archive input:focus-visible,.cyber-archive select:focus-visible,.cyber-archive button:focus-visible,.cyber-archive li:focus{outline:2px solid #f1a373;outline-offset:2px;}
 .cyber-archive__status{color:#ddd0c4;margin:1rem 0;}
@@ -38,6 +39,6 @@
 .cyber-archive__meta{display:flex;flex-wrap:wrap;gap:.15rem .6rem;color:#cfc2b7;}
 .cyber-archive__results a{color:#f4f0ec;display:flex;align-items:center;min-height:44px;line-height:1.4;text-decoration:underline;text-underline-offset:.18em;text-decoration-color:#a47c66;}
 .cyber-archive__results a:hover{text-decoration-color:#f1a373;}
-.cyber-archive button{width:auto;cursor:pointer;margin-top:1rem;}
+.cyber-archive__more{width:auto;cursor:pointer;margin-top:1rem;}
 .cyber-archive__coverage{font-size:.82rem;margin-top:1rem;}
 </style>
