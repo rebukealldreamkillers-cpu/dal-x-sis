@@ -4,7 +4,7 @@ const archiveHosts = {
   id:['www.ag.idaho.gov'], sc:['consumer.sc.gov'], in:['www.in.gov'], tx:['oag.my.site.com'],
   mt:['dojmt.gov'], nh:['mm.nh.gov'], ri:['riag.ri.gov'], ne:['nebraska.gov'], il:['databreachnoticetoattorneygeneral.illinoisattorneygeneral.gov'],
   hhs:['ocrportal.hhs.gov'],ia:['www.iowaattorneygeneral.gov'],ma:['www.mass.gov'],sec:['www.sec.gov'],ic3:['www.ic3.gov'],doj:['www.justice.gov'],
-  reviewed:['www.bleepingcomputer.com','www.nbcnews.com','apnews.com','oag.ca.gov','news.vanderbilt.edu','www.sec.gov','hscnews.unm.edu','www.azcourts.gov','www.chfs.ky.gov','www.mckesson.com','workos.com','www.microsoft.com','openai.com'],
+  reviewed:['www.bleepingcomputer.com','www.nbcnews.com','apnews.com','oag.ca.gov','news.vanderbilt.edu','www.sec.gov','hscnews.unm.edu','www.azcourts.gov','www.chfs.ky.gov','www.mckesson.com','workos.com','www.microsoft.com','openai.com',None],
   breach:['oag.ca.gov'], wa:['www.atg.wa.gov','agportal-s3bucket.s3.amazonaws.com'],
   or:['justice.oregon.gov'], vt:['ago.vermont.gov'], advisory:['www.cisa.gov'], kev:['www.cisa.gov'],
 };
