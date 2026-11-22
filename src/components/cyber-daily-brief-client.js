@@ -40,14 +40,21 @@ function init(root){
       detail.textContent=`${checkedToday?`Today: ${todayBreakdown || 'none returned'}. `:''}Yesterday: ${yesterdayBreakdown || 'none returned'}.`;
       detail.hidden=false;
     }
+    const recentDay=Object.keys(brief.days).filter(day=>day<y && brief.days[day].total>0).sort().at(-1);
+    const previous=recentDay ? brief.days[recentDay] : null;
+    if(!current.total && !yesterday.total && previous){
+      detail.textContent=`The most recent records in this comparison were dated ${dateFormatter.format(atUTC(recentDay))}: ${breakdown(previous)}.`;
+      detail.hidden=false;
+    }
     const todayExample=checkedToday && current.examples[0];
-    const pick=todayExample || yesterday.examples[0];
+    const yesterdayExample=yesterday.examples[0];
+    const pick=todayExample || yesterdayExample || previous?.examples[0];
     if(pick){
       try{
         const url=new URL(pick.url);
         if(url.protocol==='https:' && !url.username && !url.password && !url.port){
           const a=document.createElement('a');a.href=url.href;a.target='_blank';a.rel='noopener noreferrer';a.textContent=pick.title;
-          record.append(`${todayExample?'Today’s source example':'Yesterday’s source example'}: `,a,` (${pick.source}).`);record.hidden=false;
+          record.append(`${todayExample?'Today’s source example':yesterdayExample?'Yesterday’s source example':'Earlier source example'}: `,a,` (${pick.source}).`);record.hidden=false;
         }
       }catch{}
     }
