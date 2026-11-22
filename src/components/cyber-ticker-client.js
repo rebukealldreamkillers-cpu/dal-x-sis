@@ -37,7 +37,8 @@ function listItem(item, copy = false) {
   if (copy) a.tabIndex = -1;
   const date = textNode('time', 'date', item.date.slice(0, 10));
   date.dateTime = item.date;
-  a.append(textNode('span', 'tag', `${labels[item.kind]} · ${item.source}`),
+  const topic = item.topic === 'ai-agent-security' ? 'AI agent security · ' : '';
+  a.append(textNode('span', 'tag', `${topic}${labels[item.kind]} · ${item.source}`),
     textNode('span', 'title', item.title), date);
   li.append(a);
   return li;
