@@ -2,8 +2,8 @@
   "asOf": "2026-11-22",
   "period": "Oct 24 to Nov 22",
   "comparison": "Sep 24 to Oct 23",
-  "headline": "Steady volume. Wider reach.",
-  "lede": "Comparable disclosure volume rose only slightly this month. What changed was reach: a handful of large breaches sent notices to residents in many states at once, and health-related organizations led the largest of them.",
+  "headline": "Steady volume. Wide reach.",
+  "lede": "Comparable disclosure volume rose only slightly this month. The standout was reach: a handful of large breaches sent notices to residents in many states at once, and health-related organizations led the largest of them.",
   "highlights": [
     {
       "figure": "+5%",
@@ -76,17 +76,17 @@
       "detail": "Nine sources with complete records in both periods returned 214 records, up from 204. The full archive rose from 267 to 392 because DAL-X added or expanded Texas, California, New Hampshire, and CISA advisory coverage this month."
     },
     {
-      "lead": "Breaches are reaching further.",
-      "summary": "Single incidents now show up in state after state.",
-      "detail": "23 organizations appear in at least four state breach lists in the period. Uber and Frontline Education each appear in eight. One breach produces a separate notice in each state where residents were affected, so these counts reflect reach, not separate incidents."
+      "lead": "Breaches reached many states at once.",
+      "summary": "Single incidents showed up in state after state.",
+      "detail": "23 organizations appear in at least four state breach lists in the period. Uber and Frontline Education each appear in eight. One breach produces a separate notice in each state where residents were affected, so these counts reflect reach, not separate incidents. Several of these states were added to the archive this month, so the count cannot yet be compared with earlier periods."
     },
     {
-      "lead": "Health care dominates the largest notices.",
+      "lead": "Health care led the largest notices.",
       "summary": "Eight of the 12 largest Texas notices came from health-related organizations.",
       "detail": "The group includes health care, dental, and medical-product organizations. The largest was DentaQuest, at 5,175,000 Texans, filed Nov 19 for a breach its Washington notice dates to May. Texas records entered the archive this month, so this is a snapshot, not a trend."
     },
     {
-      "lead": "Vendors and partners keep appearing.",
+      "lead": "Vendors and partners appeared repeatedly.",
       "summary": "Three of the 12 reviewed national incidents involved third-party access.",
       "detail": "Uber, the separate Chase, Visa and Mastercard vendor incidents, and Cursor each involved a vendor, service provider, or partner credential. DAL-X reviewed 12 national incidents in the period, up from 9. Five were AI agent security cases, the same as the prior period. Reviewed counts reflect editorial coverage, not incident frequency."
     },
