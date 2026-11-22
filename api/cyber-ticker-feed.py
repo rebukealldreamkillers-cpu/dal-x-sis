@@ -2,13 +2,14 @@ import json
 import re
 import time
 from concurrent.futures import ThreadPoolExecutor
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
 from pathlib import Path
 from urllib.error import HTTPError
 from urllib.parse import urlencode, urljoin, urlsplit, urlunsplit
 from urllib.request import HTTPRedirectHandler, Request, build_opener
 from xml.etree import ElementTree as ET
+from zoneinfo import ZoneInfo
 
 from bs4 import BeautifulSoup
 
@@ -232,6 +233,36 @@ def source_key(url):
     return ref.hostname, ref.path.rstrip('/'), ref.query
 
 
+EASTERN = ZoneInfo('America/New_York')
+
+
+def report_day(value):
+    if re.fullmatch(r'\d{4}-\d{2}-\d{2}', value):
+        return value
+    return datetime.fromisoformat(value.replace('Z', '+00:00')).astimezone(EASTERN).date().isoformat()
+
+
+def build_daily_brief(now, checked, records, eligible_example):
+    eastern_day = datetime.fromtimestamp(now, EASTERN).date()
+    # Include tomorrow so the browser can roll over at midnight without extra requests.
+    days = {(eastern_day + timedelta(days=offset)).isoformat(): {'total': 0, 'byType': {}, 'examples': []}
+            for offset in (-2, -1, 0, 1)}
+    seen = set()
+    for item in sorted(records, key=lambda i: timestamp(i['date']), reverse=True):
+        day = report_day(item['date'])
+        key = item['sourceId'], item['id'], day
+        if day not in days or key in seen:
+            continue
+        seen.add(key)
+        row = days[day]
+        row['total'] += 1
+        kind = item['kind']
+        row['byType'][kind] = row['byType'].get(kind, 0) + 1
+        if eligible_example(item) and len(row['examples']) < 3 and all(x['sourceId'] != item['sourceId'] for x in row['examples']):
+            row['examples'].append({k: item[k] for k in ('title', 'url', 'source', 'sourceId', 'kind')})
+    return {'checkedSources': checked, 'days': days}
+
+
 def make_snapshot(seed, results, old_records, now, previous_success=None):
     stamp = datetime.fromtimestamp(now, UTC).isoformat()
     health = {k: dict(v) for k, v in seed['sources'].items()}
@@ -246,6 +277,7 @@ def make_snapshot(seed, results, old_records, now, previous_success=None):
     failures = []
     archive_rows = []
     feed_health = {}
+    daily_rows = []
     recovered_count = 0
     for key, (label, _, _) in SOURCES.items():
         fresh = results[key]
@@ -266,6 +298,8 @@ def make_snapshot(seed, results, old_records, now, previous_success=None):
         feed_health[key] = dict(health[key], latestReportAt=current[0]['date'] if current else None)
         shaped = [dict(clean_output(i), kind=kind, sourceId=key, source=label, topic=public_topic(i, kind)) for i in recent]
         archive_rows.extend(shaped[:25])
+        if fresh is not None:
+            daily_rows.extend(shaped)
         items.extend([i for i in shaped if public_report(i)][:2])
     other = sorted(items, key=lambda i: timestamp(i['date']), reverse=True)
     # Give each automatically checked source with recent rows a slot before filling by date.
@@ -280,7 +314,8 @@ def make_snapshot(seed, results, old_records, now, previous_success=None):
     last_success = stamp if recovered_count else previous_success
     return (dict(version=2, generatedAt=stamp, lastSuccessfulCheck=last_success, archiveAsOf=seed['generatedAt'],
                  live=True, cachedMinutes=60, sources=health, items=selected[:24],
-                 failedSources=failures, connectedSources=len(SOURCES), feedHealth=feed_health, recentReports=archive_rows), records, last_success)
+                 failedSources=failures, connectedSources=len(SOURCES), feedHealth=feed_health, recentReports=archive_rows,
+                 dailyBrief=build_daily_brief(now, recovered_count, daily_rows, public_report)), records, last_success)
 
 
 class handler(BaseHTTPRequestHandler):
