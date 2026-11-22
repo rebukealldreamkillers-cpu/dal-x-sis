@@ -1,0 +1,45 @@
+{
+  "asOf": "2026-11-22",
+  "period": "Oct 24 to Nov 22, 2026",
+  "comparison": "Sep 24 to Oct 23, 2026",
+  "lede": "Comparable disclosure volume rose modestly over the last 30 days. The bigger shift was in reach: a small group of large breaches generated notices across many states at once, led by health-related organizations.",
+  "findings": [
+    {
+      "figure": "+5%",
+      "title": "Comparable volume is up modestly",
+      "body": "Nine sources with complete records in both periods returned 214 records, up from 204. The full archive rose from 267 to 392, mostly because DAL-X added or expanded Texas, California, New Hampshire, and CISA advisory coverage this month. The larger number does not show a 47% rise in incidents."
+    },
+    {
+      "figure": "69",
+      "title": "The week of Nov 9 was the busiest in two months",
+      "body": "The same nine sources logged 69 records from Nov 9 to Nov 15, the most of any week since late September. The current week shows 36 so far. States often post notices days after receiving them, so this week will likely rise."
+    },
+    {
+      "figure": "23",
+      "title": "Multi-state notices dominated",
+      "body": "23 organizations appear in at least four state breach lists in the period. Uber and Frontline Education each appear in eight. A single breach produces a separate notice in each state where residents were affected, so these counts reflect reach, not separate incidents."
+    },
+    {
+      "figure": "8 of 12",
+      "title": "Health-related organizations led the largest Texas notices",
+      "body": "Eight of the 12 largest Texas notices by residents affected involved health care, dental, or medical-product organizations. The largest was DentaQuest, at 5,175,000 Texans, filed Nov 19 for a breach its Washington notice dates to May. Texas records entered the archive this month, so this is a snapshot, not a trend."
+    },
+    {
+      "figure": "34",
+      "title": "Exploited-vulnerability additions held steady",
+      "body": "CISA added 34 entries to its Known Exploited Vulnerabilities catalog, compared with 35 in the prior period. Cisco had 3. Apache, Barracuda, Google, Ivanti, and PHP each had 2."
+    },
+    {
+      "figure": "15 of 20",
+      "title": "Industrial control advisories clustered",
+      "body": "Fifteen of the 20 CISA advisories published from Nov 12 to Nov 19 covered Siemens products. The archive does not yet hold enough earlier advisory history for a 60-day comparison."
+    },
+    {
+      "figure": "3 of 12",
+      "title": "Third-party access recurs in reviewed incidents",
+      "body": "DAL-X reviewed 12 national incidents in the period, up from 9. Three involved a vendor, service provider, or partner credential: Uber, the separate Chase, Visa and Mastercard vendor incidents, and Cursor. Five of the 12 were AI agent security cases, the same as the prior period. Reviewed counts reflect editorial coverage, not incident frequency."
+    }
+  ],
+  "gaps": "HHS shows no new hacking submissions after Oct 16 in the listing DAL-X checks, so federal health breach reporting is missing from this period. Washington and California provide only their most recent notices, so they are excluded from the comparison.",
+  "comparableSources": ["Vermont AG", "Oregon DOJ", "Massachusetts Consumer Affairs", "South Carolina Consumer Affairs", "Iowa Attorney General", "Indiana Attorney General", "Idaho Attorney General", "CISA Known Exploited Vulnerabilities", "FBI / IC3"]
+}

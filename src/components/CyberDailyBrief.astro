@@ -1,23 +1,56 @@
+---
+import analysis from '../data/thirtyDayAnalysis.json';
+---
 <section id="daily-disclosure-summary" class="cyber-daily" aria-labelledby="daily-brief-title" data-cyber-daily>
   <div class="cyber-daily__header">
-    <h2 id="daily-brief-title">What changed today</h2>
-    <p data-daily-time>Reporting days use Eastern Time</p>
+    <h2 id="daily-brief-title">What changed in the last 30 days</h2>
+    <p>{analysis.period} vs. {analysis.comparison} · Analysis as of <time datetime={analysis.asOf}>{analysis.asOf}</time></p>
   </div>
-  <p class="cyber-daily__copy" data-daily-copy aria-live="polite">Checking the latest public disclosures.</p>
-  <p class="cyber-daily__detail" data-daily-detail hidden></p>
-  <p class="cyber-daily__record" data-daily-record hidden></p>
-  <p class="cyber-daily__note">Today is a partial day. These counts reflect records returned by the same sources, not attacks that happened today.</p>
-  <noscript><style>.cyber-daily [data-daily-copy]{display:none}</style><p>The daily comparison requires JavaScript. The reviewed reports and previous disclosures are below.</p></noscript>
+  <p class="cyber-daily__lede">{analysis.lede}</p>
+  <ol class="cyber-daily__findings">
+    {analysis.findings.map((item) => (
+      <li>
+        <span class="cyber-daily__figure">{item.figure}</span>
+        <div><h3>{item.title}</h3><p>{item.body}</p></div>
+      </li>
+    ))}
+  </ol>
+  <p class="cyber-daily__gaps"><strong>Coverage gaps:</strong> {analysis.gaps}</p>
+  <details class="cyber-daily__method">
+    <summary>How these comparisons are made</summary>
+    <p>Counts use the date each record was filed, published, or added, not the date an attack happened. Period-over-period comparisons use only sources with complete records in both periods: {analysis.comparableSources.join(', ')}. One incident can appear in several state lists and in national reporting.</p>
+  </details>
+  <div class="cyber-daily__latest">
+    <div class="cyber-daily__latest-head"><h3>Latest check</h3><p data-daily-time>Reporting days use Eastern Time</p></div>
+    <p class="cyber-daily__copy" data-daily-copy aria-live="polite">Checking the latest public disclosures.</p>
+    <p class="cyber-daily__detail" data-daily-detail hidden></p>
+    <p class="cyber-daily__record" data-daily-record hidden></p>
+  </div>
+  <noscript><style>.cyber-daily [data-daily-copy]{display:none}</style></noscript>
 </section>
 <script>
   import './cyber-daily-brief-client.js';
 </script>
 <style is:global>
-.cyber-daily{margin-top:1rem;border:1px solid #4b3b32;border-inline-start:3px solid #bc714a;border-radius:.35rem;background:#1d1917;padding:clamp(.8rem,2vw,1.15rem);color:#eee5df;min-width:0;overflow-wrap:anywhere}
+.cyber-daily{margin-top:1rem;border:1px solid #4b3b32;border-inline-start:3px solid #bc714a;border-radius:.35rem;background:#1d1917;padding:clamp(.9rem,2.4vw,1.5rem);color:#eee5df;min-width:0;overflow-wrap:anywhere}
 .cyber-daily [hidden]{display:none!important}
 .cyber-daily__header{display:flex;justify-content:space-between;align-items:baseline;gap:.35rem 1rem;flex-wrap:wrap}
-.cyber-daily h2{font-size:clamp(1.1rem,3vw,1.5rem);line-height:1.2;letter-spacing:-.02em;margin:0}
-.cyber-daily__header p,.cyber-daily__note{font:.72rem/1.5 ui-monospace,monospace;color:#d9c5b8;margin:0}
-.cyber-daily__copy,.cyber-daily__detail,.cyber-daily__record{font-size:.9rem;line-height:1.5;margin:.53rem 0}
-.cyber-daily__record a{color:#f4b88f;text-decoration:underline}.cyber-daily__record a:focus-visible{outline:2px solid #f4b88f;outline-offset:2px}
+.cyber-daily h2{font-size:clamp(1.35rem,3.4vw,2rem);line-height:1.15;letter-spacing:-.03em;margin:0}
+.cyber-daily__header p,.cyber-daily__latest-head p{font:.72rem/1.5 ui-monospace,monospace;color:#d9c5b8;margin:0}
+.cyber-daily__lede{font-size:clamp(1rem,2.2vw,1.15rem);line-height:1.5;max-width:70ch;margin:.8rem 0 1rem;color:#f4ece6}
+.cyber-daily__findings{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr));gap:.6rem}
+.cyber-daily__findings li{display:grid;grid-template-columns:minmax(4.6rem,auto) minmax(0,1fr);gap:.75rem;align-items:start;background:#231d1a;border:1px solid #45362e;border-radius:.35rem;padding:.8rem}
+.cyber-daily__figure{font:700 1.3rem/1.1 ui-monospace,monospace;color:#f4af82;white-space:nowrap}
+.cyber-daily__findings h3{font-size:.95rem;line-height:1.3;margin:0 0 .3rem}
+.cyber-daily__findings p{font-size:.86rem;line-height:1.5;margin:0;color:#dccfc6}
+.cyber-daily__gaps{font-size:.84rem;line-height:1.5;color:#dccfc6;margin:.9rem 0 .4rem}
+.cyber-daily__method summary{cursor:pointer;color:#f2b189;padding:.55rem 0;min-height:44px;display:flex;align-items:center}
+.cyber-daily__method p{font-size:.82rem;line-height:1.55;color:#d2c3b8;margin:.2rem 0 .6rem;max-width:85ch}
+.cyber-daily__latest{border-top:1px solid #45362e;margin-top:.6rem;padding-top:.7rem}
+.cyber-daily__latest-head{display:flex;justify-content:space-between;align-items:baseline;gap:.3rem 1rem;flex-wrap:wrap}
+.cyber-daily__latest h3{font-size:.9rem;margin:0}
+.cyber-daily__copy,.cyber-daily__detail,.cyber-daily__record{font-size:.86rem;line-height:1.5;margin:.4rem 0;color:#dccfc6}
+.cyber-daily__record a{color:#f4b88f;text-decoration:underline}
+.cyber-daily :is(a,summary):focus-visible{outline:2px solid #f4b88f;outline-offset:2px}
+@media(max-width:420px){.cyber-daily__findings li{grid-template-columns:1fr;gap:.3rem}}
 </style>
