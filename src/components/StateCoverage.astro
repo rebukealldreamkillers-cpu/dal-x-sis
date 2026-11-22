@@ -19,11 +19,11 @@ const sorted = [...coverage].sort((a,b)=>a.state.localeCompare(b.state));
   </div>
   <p data-state-count role="status">51 jurisdictions</p>
   <table aria-label="Official breach notice sources by jurisdiction">
-    <thead><tr><th scope="col">Jurisdiction</th><th scope="col">Connection</th><th scope="col">Newest date verified</th><th scope="col">Official source and finding</th></tr></thead>
+    <thead><tr><th scope="col">Jurisdiction</th><th scope="col" class="state-coverage__connection">Connection</th><th scope="col">Newest date verified</th><th scope="col">Official source and finding</th></tr></thead>
     <tbody>{sorted.map((row) => (
       <tr data-state-row data-jurisdiction={row.state} data-state-code={row.code} data-mode={row.status}>
         <th scope="row">{row.state}</th>
-        <td data-label="Connection"><span class:list={['state-coverage__badge', row.status]}>{modes[row.status as keyof typeof modes]}</span></td>
+        <td class="state-coverage__connection" data-label="Connection"><span class:list={['state-coverage__badge', row.status]}>{modes[row.status as keyof typeof modes]}</span></td>
         <td data-label="Newest date verified">{row.newest ? <time datetime={row.newest}>{row.newest}</time> : 'Not verified'}</td>
         <td data-label="Official source and finding"><a href={row.url} target="_blank" rel="noopener noreferrer">Official source<span class="state-sr-only"> for {row.state}</span></a><span class="state-note">{row.note}</span></td>
       </tr>
@@ -70,6 +70,8 @@ const sorted = [...coverage].sort((a,b)=>a.state.localeCompare(b.state));
   .state-coverage th,.state-coverage td{text-align:left;vertical-align:top;border-bottom:1px solid #493a32;padding:.65rem .55rem}
   .state-coverage thead th{color:#e6c2ab;background:#211b18}
   .state-note{display:block;color:#ded4cd;margin:.1rem 0 0}
+  .state-coverage__connection{white-space:nowrap}
+  @media(min-width:641px){.state-coverage .state-coverage__connection{min-width:8.25rem}}
   .state-coverage__badge{font: .74rem ui-monospace,monospace;color:#e3d1c7}
   .state-coverage__badge.automatic{color:#f1a373}
   .state-coverage a{display:inline-flex;align-items:center;min-height:40px;color:#f4f0ec;text-decoration:underline}
