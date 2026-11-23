@@ -160,7 +160,7 @@ import Base from '../../../layouts/Base.astro';
         <p>The Decision Authority Layer is the runtime enforcement layer within Decision Governance. Enterprise trigger logic identifies consequential actions requiring an authority decision. System access does not establish authority to execute a specific action.</p>
         <p>DAL-X architecture describes signed tokens bound to the exact payload, current reviewer authority checks, single-use consumption, and downstream rejection.<sup><a href="#s5">5</a></sup> Conditional assessment: these controls could stop an unapproved form submission or secret-bearing outbound request only if the action triggers review, the reviewer has valid authority, and every relevant execution path rejects missing or mismatched authority. A valid approval does not establish that the content is correct.</p>
 
-        <p class="weekly-status">DAL-X runs in a simulated enterprise environment. Production enforcement controls are still being completed. No live enterprise deployment is established.<sup><a href="#s6">6</a></sup></p>
+
       </div>
     </section>
 
@@ -197,8 +197,8 @@ import Base from '../../../layouts/Base.astro';
           <li id="s2">Anthropic, "Investigating unintended model actions," 9 Oct 2026. First-party incident and remediation report. <a href="https://www.anthropic.com/research/investigating-unintended-model-actions" target="_blank" rel="noopener noreferrer">anthropic.com</a></li>
           <li id="s3">Microsoft, Execution Containers, 7 Oct 2026. First-party implementation announcement. <a href="https://blogs.windows.com/windowsdeveloper/2026/10/07/microsoft-execution-containers-policy-driven-containment-for-ai-agents/" target="_blank" rel="noopener noreferrer">blogs.windows.com</a></li>
           <li id="s4">Adversa AI, Copilot CLI disclosure, 6 Oct 2026. Researcher demonstration; vendor sells security tooling. <a href="https://adversa.ai/blog/cryptographic-context-injection-github-copilot/" target="_blank" rel="noopener noreferrer">adversa.ai</a></li>
-          <li id="s5">Decision Authority Layer, architecture. Current product documentation, reviewed 12 Oct 2026. Simulation evidence only. <a href="https://www.decisionauthoritylayer.com/architecture" target="_blank" rel="noopener noreferrer">decisionauthoritylayer.com/architecture</a></li>
-          <li id="s6">Decision Authority Layer, product status. Current product description, reviewed 12 Oct 2026. <a href="https://www.decisionauthoritylayer.com/product" target="_blank" rel="noopener noreferrer">decisionauthoritylayer.com/product</a></li>
+          <li id="s5">Decision Authority Layer, architecture. Architecture documentation, reviewed 12 Oct 2026. <a href="https://www.decisionauthoritylayer.com/architecture" target="_blank" rel="noopener noreferrer">decisionauthoritylayer.com/architecture</a></li>
+
         </ol>
         <p class="weekly-sources-note">Public-source review. No private telemetry. Selected records are not a market incident census. Diagram drawn by Jochanni Labs from source 1.</p>
       </div>
@@ -209,7 +209,7 @@ import Base from '../../../layouts/Base.astro';
       <div class="container">
         <p class="weekly-pilot-cta-label">Integration Action</p>
         <h2>Discuss a Paid Enterprise Pilot</h2>
-        <p>The incidents covered this week share one structural gap: no authority check at the receiving system. DAL-X enforces that check in a simulated enterprise environment. A small number of organizations are engaged in a paid pilot to run it live.</p>
+        <p>Discuss how to verify authority before a consequential agent action executes.</p>
         <div class="weekly-pilot-cta-row">
           <a href="/contact" class="btn-primary">Contact to discuss the pilot</a>
           <a href="/weekly/" class="btn-outline">All issues</a>

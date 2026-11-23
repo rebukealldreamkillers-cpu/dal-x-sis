@@ -162,10 +162,10 @@ import Base from '../../../layouts/Base.astro';
         <div class="weekly-secnum">04 / Enforcement Evidence and DAL Impact</div>
         <h2>A denied response needs downstream evidence</h2>
         <p>The Google Cloud author correlated runtime events with downstream request logs, rather than relying on the model's refusal. This demonstrates tool-level denial in that lab, not exact-payload approval, reviewer authority verification, or single-use authorization.<sup><a href="#s7">7</a></sup></p>
-        <p>Decision Governance is the category. The Decision Authority Layer is the runtime enforcement layer. DAL-X is the application Jochanni Labs is building. Its published simulation describes payload-bound signed tokens, reviewer-membership and authority-freshness checks, and rejection of invalid or consumed tokens.<sup><a href="#s8">8</a></sup></p>
+        <p>Decision Governance is the category. The Decision Authority Layer is the runtime enforcement layer. DAL-X is the application Jochanni Labs is building. Its technical documentation describes payload-bound signed tokens, reviewer-membership and authority-freshness checks, and rejection of invalid or consumed tokens.<sup><a href="#s8">8</a></sup></p>
         <p><strong>Conditional prevention:</strong> this design could stop an owner-only wallet transfer requested by a public caller if enterprise trigger logic selects it, valid authority binds the exact action and payload, and the downstream system rejects missing or invalid authority across every relevant execution path. It cannot control a public blockchain merely because DAL-X exists. An agent retaining an independently usable signing key could bypass a protected service.</p>
 
-        <p class="weekly-status">DAL-X currently runs in a simulated enterprise environment. Production enforcement controls are still being completed. No live enterprise deployment is established.<sup><a href="#s9">9</a></sup></p>
+
       </div>
     </section>
 
@@ -205,8 +205,8 @@ import Base from '../../../layouts/Base.astro';
           <li id="s5">GitHub Advisory Database, CVE-2026-76066. Published 15 Oct 2026. Unreviewed; patched version listed as unknown. <a href="https://github.com/advisories/GHSA-6qqv-mhm9-qrfj" target="_blank" rel="noopener noreferrer">github.com</a></li>
           <li id="s6">Lasso Security, "Executor Tool Authorization Bypass via ToolNode." Undated research page; local canary reproduction and remediation commit. <a href="https://www.lasso.security/vulnerability-database/cve-2026-76066" target="_blank" rel="noopener noreferrer">lasso.security</a></li>
           <li id="s7">Aman Swarnkar, Google Developer forums, "Fine-Grained MCP Tool Authorization," 12 Oct 2026. Author-reported synthetic lab, not an enterprise incident. <a href="https://discuss.google.dev/t/fine-grained-mcp-tool-authorization-for-ai-agents-with-google-cloud-agent-gateway/403605" target="_blank" rel="noopener noreferrer">discuss.google.dev</a></li>
-          <li id="s8">Jochanni Labs, "Authority in the Execution Path." Undated; reviewed 19 Oct 2026. Published simulation architecture, not an independently rerun test. <a href="https://www.decisionauthoritylayer.com/architecture" target="_blank" rel="noopener noreferrer">decisionauthoritylayer.com/architecture</a></li>
-          <li id="s9">Jochanni Labs, "DAL-X: The Working Preview of DAL." Undated; reviewed 19 Oct 2026. Current product status. <a href="https://www.decisionauthoritylayer.com/product" target="_blank" rel="noopener noreferrer">decisionauthoritylayer.com/product</a></li>
+          <li id="s8">Jochanni Labs, "Authority in the Execution Path." Undated; reviewed 19 Oct 2026. Published architecture documentation. <a href="https://www.decisionauthoritylayer.com/architecture" target="_blank" rel="noopener noreferrer">decisionauthoritylayer.com/architecture</a></li>
+
         </ol>
         <p class="weekly-sources-note">Public sources reviewed for this issue. No private enterprise telemetry. Vendor accounts and the lab have not been independently reproduced by Jochanni Labs. Absence of public evidence does not prove absence of enforcement.</p>
       </div>
@@ -217,7 +217,7 @@ import Base from '../../../layouts/Base.astro';
       <div class="container">
         <p class="weekly-pilot-cta-label">Integration Action</p>
         <h2>Discuss a Paid Enterprise Pilot</h2>
-        <p>The incidents covered this week share one structural gap: no authority check at the receiving system. DAL-X enforces that check in a simulated enterprise environment. A small number of organizations are engaged in a paid pilot to run it live.</p>
+        <p>Discuss how to verify authority before a consequential agent action executes.</p>
         <div class="weekly-pilot-cta-row">
           <a href="/contact" class="btn-primary">Contact to discuss the pilot</a>
           <a href="/weekly/" class="btn-outline">All issues</a>

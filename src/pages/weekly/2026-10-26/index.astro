@@ -84,7 +84,7 @@ import Base from '../../../layouts/Base.astro';
 <p>The Hermes denial and SurrealDB's credential check both refused requests under test, then failed where they read a proxy for the action: command spelling or a shared identity. No reviewed source demonstrated exact payload binding, reviewer authority verification, or single-use authorization in a deployed system.<sup><a href="#s10">10</a>, <a href="#s11">11</a></sup></p>
 <p>DAL-X, the application Jochanni Labs is building to enforce the Decision Authority Layer, publishes an architecture where the downstream system checks a single-use token bound to the exact action and payload.<sup><a href="#s12">12</a></sup></p>
 <p><strong>Conditional prevention:</strong> this design could stop a signed full-balance transfer to a server-chosen recipient. It requires trigger logic that flags the payment, a signing key held outside the agent, a signer that accepts only a token bound to the approved amount and recipient, and the same check on every path, including retries. A reviewer can still approve a wrong payment.</p>
-<p class="weekly-status">DAL-X status, 26 October 2026: DAL-X runs in a sandbox, with no customer deployment. This is not production evidence.<sup><a href="#s13">13</a>, <a href="#s14">14</a></sup></p>
+
 </div>
 </section>
 <section class="weekly-section">
@@ -95,7 +95,7 @@ import Base from '../../../layouts/Base.astro';
 <div class="weekly-check"><div class="weekly-check-name">Check 02 / Unattended sessions</div><dl><dt>Action</dt><dd>Writes to approval config or SSH files.</dd><dt>Defect to test</dt><dd>The gate matches command text, so unlisted write methods pass.</dd><dt>Effective control</dt><dd>Denials by target path for every write method tested, with the files unchanged.</dd></dl></div>
 <h3>Watch list</h3><ul class="weekly-watch"><li>Hermes Agent: a released fix.</li><li>ServiceNow: AI Passport enforcement availability.</li><li>Walmart: the Agent Profiles launch.</li></ul>
 <div class="weekly-question">If a seller's server asked your agent for its whole balance tomorrow, which system would refuse to sign?</div>
-<nav class="weekly-explore" aria-label="Further reading"><a class="weekly-explore-link" href="https://www.decisionauthoritylayer.com/architecture" rel="noopener noreferrer" target="_blank">Where the execution is held<span>Decision Authority Layer / Architecture</span></a><a class="weekly-explore-link" href="https://www.decisionauthoritylayer.com/product" rel="noopener noreferrer" target="_blank">The DAL-X sandbox demo<span>Decision Authority Layer / Product</span></a><a class="weekly-explore-link" href="/dal-x/">The application being built<span>DAL-X / DAL-X</span></a><a class="weekly-explore-link" href="/briefings/">Decision Governance Strategic Intelligence Series<span>DAL-X / Briefings</span></a></nav>
+<nav class="weekly-explore" aria-label="Further reading"><a class="weekly-explore-link" href="https://www.decisionauthoritylayer.com/architecture" rel="noopener noreferrer" target="_blank">Where the execution is held<span>Decision Authority Layer / Architecture</span></a><a class="weekly-explore-link" href="https://www.decisionauthoritylayer.com/product" rel="noopener noreferrer" target="_blank">DAL-X product overview<span>Decision Authority Layer / Product</span></a><a class="weekly-explore-link" href="/dal-x/">The application being built<span>DAL-X / DAL-X</span></a><a class="weekly-explore-link" href="/briefings/">Decision Governance Strategic Intelligence Series<span>DAL-X / Briefings</span></a></nav>
 </div>
 </section>
 
@@ -114,9 +114,9 @@ import Base from '../../../layouts/Base.astro';
 <li id="s9"><a href="https://www.bleepingcomputer.com/news/security/ai-coding-agents-hijacked-using-agentsmd-file-in-downloads-folder/" rel="noopener noreferrer" target="_blank">BleepingComputer, AI coding agents hijacked using AGENTS.md file in Downloads folder. 25 October 2026. Secondary.</a></li>
 <li id="s10"><a href="https://github.com/NousResearch/hermes-agent/issues/143198" rel="noopener noreferrer" target="_blank">NousResearch hermes-agent, issue 143198. Created 22 October 2026. Reporter's reproduction; open at review.</a></li>
 <li id="s11"><a href="https://github.com/surrealdb/surrealdb/security/advisories/GHSA-pgh9-49q4-hqcx" rel="noopener noreferrer" target="_blank">SurrealDB, GHSA-pgh9-49q4-hqcx. Published 19 October 2026. Patched in 3.3.0.</a></li>
-<li id="s12"><a href="https://www.decisionauthoritylayer.com/architecture" rel="noopener noreferrer" target="_blank">Jochanni Labs, Authority in the Execution Path. Undated; reviewed 26 October 2026. Published architecture, not an independently rerun test.</a></li>
-<li id="s13"><a href="https://www.decisionauthoritylayer.com/product" rel="noopener noreferrer" target="_blank">Jochanni Labs, DAL-X: The Working Preview of DAL. Undated; reviewed 26 October 2026.</a></li>
-<li id="s14"><a href="/dal-x/">Jochanni Labs, DAL-X: Decision Authority Layer, Execute. Undated; reviewed 26 October 2026.</a></li>
+<li id="s12"><a href="https://www.decisionauthoritylayer.com/architecture" rel="noopener noreferrer" target="_blank">Jochanni Labs, Authority in the Execution Path. Undated; reviewed 26 October 2026. Architecture documentation.</a></li>
+
+
 </ol>
 <p class="weekly-sources-note">Public sources reviewed for this issue. No private enterprise telemetry. Jochanni Labs has not reproduced any vendor or researcher test. Absence of public evidence does not prove absence of enforcement.</p>
 </div>
@@ -126,7 +126,7 @@ import Base from '../../../layouts/Base.astro';
       <div class="container">
         <p class="weekly-pilot-cta-label">Integration Action</p>
         <h2>Discuss a Paid Enterprise Pilot</h2>
-        <p>The incidents covered this week share one structural gap: no authority check at the receiving system. DAL-X enforces that check in a simulated enterprise environment. A paid enterprise pilot would test it against one agent, one consequential action, and one downstream system.</p>
+        <p>Discuss how to verify authority before a consequential agent action executes.</p>
         <div class="weekly-pilot-cta-row">
           <a href="/contact" class="btn-primary">Contact to discuss the pilot</a>
           <a href="/weekly/" class="btn-outline">All issues</a>

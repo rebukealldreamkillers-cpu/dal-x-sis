@@ -74,7 +74,7 @@ import Base from '../../../layouts/Base.astro';
 <p>Algen describes an executor refusing calls without covering approval, storing exact parameters and recording idempotency keys. Interrupted writes remain indeterminate rather than automatically retried. Its example is synthetic, and the runtime is a single-node prerelease.<sup><a href="#s3">3</a></sup></p>
 <p>Decision Governance is the category. The Decision Authority Layer is the runtime enforcement layer; DAL-X is the application Jochanni Labs is building. System access does not establish authority to execute a specific action. Enterprise trigger logic identifies actions requiring an authority decision.</p>
 <p>Conditional assessment: DAL-style enforcement could stop an unauthorized shell command only if triggers cover it, reviewer authority is verified independently of exposed request identifiers, approval binds the exact payload, and every relevant execution path rejects missing, mismatched, expired or consumed authority before launch. This would not make an approved command correct.<sup><a href="#s8">8</a></sup></p>
-<p class="weekly-status">DAL-X status: the layer site reports real-system sandbox execution with no customer deployment. The application site still describes simulation with production controls incomplete. Neither establishes an enterprise pilot or production enforcement.<sup><a href="#s9">9</a>, <a href="#s10">10</a></sup></p>
+
 </div>
 </section>
 <section class="weekly-section">
@@ -100,8 +100,8 @@ import Base from '../../../layouts/Base.astro';
 <li id="s6"><a href="https://github.com/langchain-ai/langgraph/pull/9589" rel="noopener noreferrer" target="_blank">LangGraph PR 9589: distinct interrupt IDs</a>, merged 4 November 2026. Maintainer test report; not independently run.</li>
 <li id="s7"><a href="https://www.sysdig.com/press-releases/sysdig-launches-sysdig-ai-defense-bringing-runtime-security-to-every-action-ai-agents-take" rel="noopener noreferrer" target="_blank">Sysdig AI Defense announcement</a>, 4 November 2026. Vendor claims, not independent enforcement tests.</li>
 <li id="s8"><a href="https://www.decisionauthoritylayer.com/architecture" rel="noopener noreferrer" target="_blank">Jochanni Labs: DAL-X architecture</a>. Undated; checked 9 November 2026.</li>
-<li id="s9"><a href="https://www.decisionauthoritylayer.com/product" rel="noopener noreferrer" target="_blank">Jochanni Labs: DAL-X product</a>. Undated; checked 9 November 2026.</li>
-<li id="s10"><a href="/dal-x/">Jochanni Labs: DAL-X application</a>. Undated; checked 9 November 2026.</li>
+
+
 </ol>
 <p class="weekly-sources-note">Public primary sources only. No private enterprise telemetry or independently executed vendor tests. Absence of public evidence does not establish absence of enforcement.</p>
 </div>
@@ -111,7 +111,7 @@ import Base from '../../../layouts/Base.astro';
       <div class="container">
         <p class="weekly-pilot-cta-label">Integration Action</p>
         <h2>Discuss a Paid Enterprise Pilot</h2>
-        <p>The incidents covered this week share one structural gap: no authority check at the receiving system. DAL-X enforces that check in a simulated enterprise environment. A paid enterprise pilot would test it against one agent, one consequential action, and one downstream system.</p>
+        <p>Discuss how to verify authority before a consequential agent action executes.</p>
         <div class="weekly-pilot-cta-row">
           <a href="/contact" class="btn-primary">Contact to discuss the pilot</a>
           <a href="/weekly/" class="btn-outline">All issues</a>
