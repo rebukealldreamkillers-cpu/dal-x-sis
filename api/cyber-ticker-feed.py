@@ -17,6 +17,7 @@ UTC = timezone.utc
 HOUR = 3600
 DAY = 24 * HOUR
 MAX_BYTES = 5 * 1024 * 1024
+MAX_NEWS_URL_LENGTH = 8192
 NEWS_INTERVAL = 15 * 60
 NEWS_SOURCES = ('gnews', 'bleeping', 'record', 'securityweek', 'cyberscoop')
 NEWS_HOSTS = {'gnews': 'news.google.com', 'bleeping': 'www.bleepingcomputer.com', 'record': 'therecord.media',
@@ -229,13 +230,18 @@ def parse(key, body):
             outlet = clean(outlet_node.text) if outlet_node is not None and outlet_node.text else SOURCES[key][0]
             if key == 'gnews' and outlet and title.endswith(' - ' + outlet):
                 title = title[:-(len(outlet) + 3)].strip()
-            link = clean(row.findtext('link'))
+            # RSS article URLs can contain long opaque tokens. Never apply headline truncation to them.
+            link = (row.findtext('link') or '').strip()
+            if not link or len(link) > MAX_NEWS_URL_LENGTH or re.search(r'[\s\x00-\x1f\x7f]', link):
+                continue
             try:
                 ref = urlsplit(link)
                 t = parsedate_to_datetime(row.findtext('pubDate') or '')
             except (TypeError, ValueError):
                 continue
-            if ref.scheme != 'https' or ref.hostname != NEWS_HOSTS[key] or ref.username or ref.password:
+            if ref.scheme != 'https' or ref.netloc != NEWS_HOSTS[key]:
+                continue
+            if key == 'gnews' and not ref.path.startswith('/rss/articles/'):
                 continue
             # Discovery only: headline, outlet, and link. No article text is stored or republished.
             if not title or not NEWS_EVENT.search(title) or NEWS_SKIP.search(title):
