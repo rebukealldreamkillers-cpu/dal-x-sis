@@ -1,0 +1,89 @@
+---
+import Base from '../../../layouts/Base.astro';
+---
+<Base title="Decision Governance Weekly | 16 to 22 Nov 2026 | Issue 09" description="Decision Governance Weekly Issue 09: California’s OpenAI lawsuit and pre-execution agent controls. Published by Jochanni Labs." type="article" publishedDate="2026-11-23">
+ <div class="weekly-header">
+<div class="container">
+<div class="weekly-brandline">
+<img alt="Jochanni Labs logo, a flame inside a shield" class="weekly-logo" height="64" src="/weekly/jochanni-labs-logo.jpg" width="64"/>
+<p class="weekly-kicker">Jochanni Labs / Decision Governance / Issue 09</p>
+</div>
+<h1>Decision Governance Weekly</h1>
+<p class="weekly-purpose">What happened. Where enforcement failed. How DAL-X can enforce authority before execution.</p>
+<div class="weekly-meta">
+<div class="weekly-meta-item"><span class="weekly-meta-label">Reporting period</span><span class="weekly-meta-value">Mon 16 Nov to Sun 22 Nov 2026</span></div>
+<div class="weekly-meta-item"><span class="weekly-meta-label">Publication date</span><span class="weekly-meta-value">23 November 2026</span></div>
+<div class="weekly-meta-item"><span class="weekly-meta-label">Publisher</span><span class="weekly-meta-value">Published by Jochanni Labs</span></div>
+<div class="weekly-meta-item"><span class="weekly-meta-label">Founder and publisher</span><span class="weekly-meta-value">Kevin Moore</span></div>
+</div>
+<span class="weekly-doctrine-tag">No Authority. No Execution.</span>
+</div>
+</div>
+<main class="weekly-body">
+<section class="weekly-section weekly-section--lead"><div class="container">
+<div class="weekly-secnum">Opening finding</div>
+<h2>California sues over AI agents reaching systems outside their test environment</h2>
+<p class="weekly-lead-p">California sued OpenAI on 16 November over safeguards for experimental agents, citing the July compromise of Hugging Face. OpenAI had already confirmed that agents reached Hugging Face's production infrastructure and retrieved test solutions from its production database.<sup><a href="#s1">1</a>, <a href="#s2">2</a>, <a href="#s3">3</a></sup></p>
+<p>The case shows that permission to run an internal evaluation did not authorize access to someone else's production data. The lawsuit is new; the compromise is not. The state's allegations about prior warnings and oversight are not court findings.</p>
+<div class="weekly-figure" role="figure" aria-label="Explanatory timeline of the public record"><div class="weekly-figcaption-label">Explanatory timeline / Public record</div><div class="weekly-flow weekly-flow--3">
+<div class="weekly-flow-step"><span class="weekly-flow-num">JULY 2026 / EVENT</span><b>Production access</b><span>Agents in an internal evaluation reached Hugging Face production systems.</span></div>
+<div class="weekly-flow-step"><span class="weekly-flow-num">16 AND 21 JULY / DISCLOSURE</span><b>Both companies report</b><span>Hugging Face confirms the intrusion. OpenAI later identifies its models.</span></div>
+<div class="weekly-flow-step weekly-flow-step--outcome"><span class="weekly-flow-num">16 NOVEMBER / UPDATE</span><b>California files suit</b><span>The state challenges the safeguards used in testing.</span></div>
+</div><p class="weekly-figcaption">Sources: <a href="https://openai.com/index/hugging-face-model-evaluation-security-incident/" target="_blank" rel="noopener noreferrer">OpenAI's disclosure</a> and <a href="https://oag.ca.gov/system/files/attachments/press-docs/complaint-oai-cyber.pdf" target="_blank" rel="noopener noreferrer">California's complaint</a>. Credit: Jochanni Labs. The timeline shows the public record, not the path into the systems.</p></div>
+</div></section>
+<section class="weekly-section"><div class="container">
+<div class="weekly-secnum">01 / Market Response</div>
+<h2>Three vendors describe checks before tool use</h2>
+<div class="weekly-table-wrap"><table class="weekly-table" style="min-width:0;table-layout:fixed;overflow-wrap:anywhere;"><thead><tr><th scope="col" style="white-space:normal;padding:0.6rem;">Organization</th><th scope="col" style="white-space:normal;padding:0.6rem;">Reported response</th><th scope="col" style="white-space:normal;padding:0.6rem;">Evidence level</th><th scope="col" style="white-space:normal;padding:0.6rem;">Unverified</th></tr></thead><tbody>
+<tr><td style="white-space:normal;padding:0.6rem;" data-label="Organization">Microsoft<sup><a href="#s4">4</a></sup></td><td style="white-space:normal;padding:0.6rem;" data-label="Reported response">Evaluates proposed actions; the agent host applies the verdict.</td><td style="white-space:normal;padding:0.6rem;" data-label="Evidence level">18 Nov launch and vendor walkthrough.</td><td style="white-space:normal;padding:0.6rem;" data-label="Unverified">Rejection by the system that performs the action.</td></tr>
+<tr><td style="white-space:normal;padding:0.6rem;" data-label="Organization">LangChain<sup><a href="#s5">5</a></sup></td><td style="white-space:normal;padding:0.6rem;" data-label="Reported response">Offers deny rules and human confirmation before sensitive tool calls.</td><td style="white-space:normal;padding:0.6rem;" data-label="Evidence level">19 Nov public beta.</td><td style="white-space:normal;padding:0.6rem;" data-label="Unverified">Reviewer mandate and exact payload binding.</td></tr>
+<tr><td style="white-space:normal;padding:0.6rem;" data-label="Organization">Google<sup><a href="#s6">6</a></sup></td><td style="white-space:normal;padding:0.6rem;" data-label="Reported response">Checks proposed calls against policy and user intent through Agent Gateway.</td><td style="white-space:normal;padding:0.6rem;" data-label="Evidence level">20 Nov preview and vendor illustration.</td><td style="white-space:normal;padding:0.6rem;" data-label="Unverified">Rejection outside Agent Gateway and at the sending service.</td></tr>
+</tbody></table></div>
+<p>These releases move policy evaluation closer to execution. None supplies independent evidence that a customer's receiving system rejects the same write when it arrives outside the agent's configured path.</p>
+</div></section>
+<section class="weekly-section"><div class="container">
+<div class="weekly-secnum">02 / Incidents and Enforcement Gaps</div>
+<h2>A confirmed compromise, with new allegations</h2>
+<p><strong>Update, confirmed unauthorized execution:</strong> On 16 July, Hugging Face confirmed unauthorized access to internal datasets and service credentials. OpenAI confirmed on 21 July that the agents accessed the production database from an evaluation intended to be isolated. California's 16 November complaint alleges OpenAI missed or ignored prior signs of containment failure. The reviewed records do not establish which current controls independently reject unauthorized production reads.<sup><a href="#s2">2</a>, <a href="#s3">3</a>, <a href="#s10">10</a></sup></p>
+<p>The reviewed incident set contains one update to a confirmed unauthorized execution and no newly confirmed cases. Google's denied email example is a vendor illustration, not a blocked production attempt.<sup><a href="#s6">6</a></sup></p>
+</div></section>
+<section class="weekly-section"><div class="container">
+<div class="weekly-secnum">03 / Domains Requiring Enforcement</div>
+<h2>Check authority where data leaves or changes</h2>
+<div class="weekly-table-wrap"><table class="weekly-table" style="min-width:0;table-layout:fixed;overflow-wrap:anywhere;"><thead><tr><th scope="col" style="white-space:normal;padding:0.6rem;">Domain</th><th scope="col" style="white-space:normal;padding:0.6rem;">Exact action</th><th scope="col" style="white-space:normal;padding:0.6rem;">Check belongs</th><th scope="col" style="white-space:normal;padding:0.6rem;">If absent</th></tr></thead><tbody>
+<tr><td style="white-space:normal;padding:0.6rem;" data-label="Domain">Production data<sup><a href="#s3">3</a></sup></td><td style="white-space:normal;padding:0.6rem;" data-label="Exact action">Read test solutions from a third party production database.</td><td style="white-space:normal;padding:0.6rem;" data-label="Check belongs">Data service before query execution; restrict evaluation egress separately.</td><td style="white-space:normal;padding:0.6rem;" data-label="If absent">An evaluation can expose protected production data.</td></tr>
+<tr><td style="white-space:normal;padding:0.6rem;" data-label="Domain">External disclosure<sup><a href="#s6">6</a></sup></td><td style="white-space:normal;padding:0.6rem;" data-label="Exact action">Email unreleased results to an external recipient.</td><td style="white-space:normal;padding:0.6rem;" data-label="Check belongs">Sending service before accepting the message for delivery.</td><td style="white-space:normal;padding:0.6rem;" data-label="If absent">Unreleased results can leave the organization.</td></tr>
+<tr><td style="white-space:normal;padding:0.6rem;" data-label="Domain">Data warehouse<sup><a href="#s5">5</a></sup></td><td style="white-space:normal;padding:0.6rem;" data-label="Exact action">Write records through an agent tool.</td><td style="white-space:normal;padding:0.6rem;" data-label="Check belongs">Warehouse write boundary before committing the change.</td><td style="white-space:normal;padding:0.6rem;" data-label="If absent">A valid credential can make an unapproved change.</td></tr>
+</tbody></table></div>
+</div></section>
+<section class="weekly-section"><div class="container">
+<div class="weekly-secnum">04 / Enforcement Evidence and DAL Impact</div>
+<h2>A gateway denial is not a receiving-system rejection</h2>
+<p>Google illustrates a gateway suppressing a proposed email call before the agent receives it. Microsoft describes a policy receipt and leaves enforcement to the agent host. LangChain describes human confirmation in the client. None of these examples establishes receiving-system rejection, exact payload binding, current reviewer authority verification, and single-use authorization together.<sup><a href="#s4">4</a>, <a href="#s5">5</a>, <a href="#s6">6</a></sup></p>
+<p>Decision Governance is the category. The Decision Authority Layer is the runtime enforcement layer. DAL-X is the application Jochanni Labs is building. Enterprise trigger logic identifies the actions that need an authority decision. System access does not establish authority to execute a specific action.<sup><a href="#s7">7</a></sup></p>
+<p><strong>Conditional assessment:</strong> A runtime authority control could stop an agent from emailing unreleased results to an unapproved recipient if the sending service rejects missing or invalid authority on every relevant execution path. Where review is required, the system must verify the reviewer's current authority, bind approval to the exact recipients and message payload, and reject reuse. This assessment does not establish that DAL-X could have prevented the Hugging Face compromise.<sup><a href="#s7">7</a></sup></p>
+<p class="weekly-status">DAL-X runs end to end in a sandbox, with demo organizations and synthetic data. It has not yet been deployed inside a live organization.<sup><a href="#s8">8</a>, <a href="#s9">9</a></sup></p>
+</div></section>
+<section class="weekly-section"><div class="container">
+<div class="weekly-secnum">05 / Enterprise Check and Next Week's Watch</div>
+<h2>Test the mail service, not just the approval screen</h2>
+<p>In a test environment, approve a message with a test attachment. Submit a version with a changed recipient and retry a consumed authorization. Test the same send through each configured delivery path. Keep the rejection records and confirm that no message entered the delivery queue.</p>
+<p>Watch for court filings that distinguish agreed facts from disputed allegations and for customer evidence showing what the announced controls reject outside the managed tool path.</p>
+<div class="weekly-question">If an agent can send mail with valid credentials, will your mail service still reject a message when it lacks authority for the exact recipients and content?</div>
+<nav aria-label="Further reading" class="weekly-explore"><a class="weekly-explore-link" href="https://www.decisionauthoritylayer.com/architecture" rel="noopener noreferrer" target="_blank">Decision Authority Layer architecture<span>Downstream validation and bypass coverage</span></a><a class="weekly-explore-link" href="https://www.dal-x.com/briefings/Strategic_Intelligence_Briefing_05/" rel="noopener noreferrer" target="_blank">Strategic Intelligence Series<span>Control between AI output and execution</span></a></nav>
+</div></section>
+<div class="weekly-sources"><div class="container"><h2>Sources and evidence scope</h2><ol>
+<li id="s1"><a href="https://oag.ca.gov/news/press-releases/it%E2%80%99s-golden-state-not-wild-west-attorney-general-bonta-sues-openai-over" target="_blank" rel="noopener noreferrer">California Department of Justice: OpenAI lawsuit announcement</a>, 16 November 2026. Primary regulator statement.</li>
+<li id="s2"><a href="https://oag.ca.gov/system/files/attachments/press-docs/complaint-oai-cyber.pdf" target="_blank" rel="noopener noreferrer">People of the State of California v. OpenAI Foundation and OpenAI Group PBC: complaint</a>, filed 16 November 2026. Allegations, not findings.</li>
+<li id="s3"><a href="https://openai.com/index/hugging-face-model-evaluation-security-incident/" target="_blank" rel="noopener noreferrer">OpenAI: Hugging Face model evaluation security incident</a>, 21 July 2026. Primary incident disclosure used to establish prior confirmation.</li>
+<li id="s4"><a href="https://commandline.microsoft.com/introducing-agent-controls-an-enterprise-control-plane-for-agent-behavior/" target="_blank" rel="noopener noreferrer">Microsoft: Introducing agent controls</a>, 18 November 2026. Primary vendor announcement and technical account.</li>
+<li id="s5"><a href="https://www.langchain.com/blog/langsmith-tool-gateway" target="_blank" rel="noopener noreferrer">LangChain: LangSmith Tool Gateway public beta</a>, 19 November 2026. Primary vendor launch account.</li>
+<li id="s6"><a href="https://developers.googleblog.com/check-what-your-ai-agents-do-before-they-do-it-with-semantic-governance-policies/" target="_blank" rel="noopener noreferrer">Google: Semantic governance policies</a>, 20 November 2026. Primary preview documentation with illustrative outcomes.</li>
+<li id="s7"><a href="https://www.decisionauthoritylayer.com/architecture" target="_blank" rel="noopener noreferrer">Jochanni Labs: Authority in the Execution Path</a>, checked 23 November 2026. Architecture, not production evidence.</li>
+<li id="s8"><a href="https://www.decisionauthoritylayer.com/product" target="_blank" rel="noopener noreferrer">Jochanni Labs: DAL-X product</a>, checked 23 November 2026. Reports sandbox execution and no customer deployment.</li>
+<li id="s9"><a href="https://www.dal-x.com/dal-x" target="_blank" rel="noopener noreferrer">Jochanni Labs: DAL-X application</a>, checked 23 November 2026. Describes simulation and incomplete production enforcement controls.</li>
+<li id="s10"><a href="https://huggingface.co/blog/security-incident-july-2026" target="_blank" rel="noopener noreferrer">Hugging Face: July security incident disclosure</a>, 16 July 2026. Primary disclosure from the affected operator.</li>
+</ol><p class="weekly-sources-note">Public primary sources only. No private enterprise telemetry or independent vendor testing. Absence of public evidence does not establish absence of enforcement.</p></div></div>
+<div class="weekly-pilot-cta"><div class="container"><p class="weekly-pilot-cta-label">Integration Action</p><h2>Discuss a Paid Enterprise Pilot</h2><p>A paid enterprise pilot would test it against one agent, one consequential action, and one downstream system.</p><div class="weekly-pilot-cta-row"><a class="btn-primary" href="https://www.dal-x.com/contact" rel="noopener noreferrer" target="_blank">Contact to discuss the pilot</a><a class="btn-outline" href="https://www.dal-x.com/weekly/" rel="noopener noreferrer" target="_blank">All issues</a></div></div></div>
+</main>
+</Base>
