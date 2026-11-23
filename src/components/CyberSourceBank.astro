@@ -23,7 +23,7 @@ const reporting = [
 <section id="cyber-source-bank" class="cyber-source-bank" aria-labelledby="cyber-source-bank-title">
   <h2 id="cyber-source-bank-title">Sources and coverage</h2>
   <div class="cyber-source-bank__refresh" data-ticker-refresh aria-label="Refresh schedule">
-    <p><strong>Checks every 5 minutes</strong> while this tab is open. DAL-X caches automated publisher checks for about 60 minutes.</p>
+    <p><strong>Checks every 5 minutes</strong> while this tab is open. DAL-X checks news sources about every 15 minutes and official sources about every 60 minutes, then shares one cached result with all visitors.</p>
     <p data-ticker-status aria-live="polite">Loading public reports…</p>
     <p data-ticker-next></p>
   </div>
@@ -37,6 +37,11 @@ const reporting = [
   <details>
     <summary>Federal sources and original state sources</summary>
     <ul>{publicSources.map(([name, url, scope]) => <li><a href={url} target="_blank" rel="noopener noreferrer">{name}</a><span>{scope}</span></li>)}</ul>
+  </details>
+  <details>
+    <summary>How breaking reports are captured</summary>
+    <p>Breaking reports are U.S. cyber incident headlines from national, local, and specialist news outlets, captured within about 15 minutes of publication. DAL-X stores only the headline, outlet, time, and link. Coverage of the same story from several outlets is grouped into one entry. These are unreviewed news reports, not confirmed incidents. Stories that DAL-X verifies move into the reviewed incidents, labeled as a national cyber incident or AI agent security case.</p>
+    <p>News sources: Google News U.S. edition (filtered to reputable national outlets and U.S. local newsrooms), BleepingComputer, The Record, SecurityWeek, and CyberScoop.</p>
   </details>
   <details>
     <summary>How we classify AI agent security reports</summary>

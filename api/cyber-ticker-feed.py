@@ -17,6 +17,12 @@ UTC = timezone.utc
 HOUR = 3600
 DAY = 24 * HOUR
 MAX_BYTES = 5 * 1024 * 1024
+NEWS_INTERVAL = 15 * 60
+NEWS_SOURCES = ('gnews', 'bleeping', 'record', 'securityweek', 'cyberscoop')
+NEWS_HOSTS = {'gnews': 'news.google.com', 'bleeping': 'www.bleepingcomputer.com', 'record': 'therecord.media',
+              'securityweek': 'www.securityweek.com', 'cyberscoop': 'cyberscoop.com'}
+NEWS_EVENT = re.compile(r'\b(?:cyber ?attacks?|hack(?:ed|ers?|s|ing)?|breach(?:ed|es)?|ransomware|intrusions?|compromis(?:e|ed|es)|data (?:theft|leak|exposure)|stole|stolen|extortion|cyber incident|cybersecurity incident|security incident|outage)\b', re.I)
+NEWS_SKIP = re.compile(r"^(?:what|how|why|when|opinion|podcast|webinar|video|watch|listen|week in review|the week)\b|\b(?:could|tips|guide|explained|best practices|survey|report finds|funding|raises|acquires|launches|appoint|appoints|taps|nominee|wasn['’]t|isn['’]t|let['’]s)\b|\((?:OB|LSE|TSX|ASX|NSE|HKEX|KRX|TYO|EPA|ETR):", re.I)
 SOURCES = {
     'breach': ('California DOJ', 'https://oag.ca.gov/privacy/databreach/list', HOUR),
     'wa': ('Washington AG', 'https://www.atg.wa.gov/data-breach-notifications', HOUR),
@@ -28,12 +34,64 @@ SOURCES = {
     'ic3': ('FBI / IC3', 'https://www.ic3.gov/CSA/', HOUR),
     'id': ('Idaho Attorney General', 'https://www.ag.idaho.gov/consumer-protection/security-breaches/', HOUR),
     'sc': ('South Carolina Consumer Affairs', 'https://consumer.sc.gov/identity-theft-unit/security-breach-notices', HOUR),
+    'gnews': ('Google News (U.S.)', 'https://news.google.com/rss/search?q=cyberattack+OR+hackers+OR+%22data+breach%22+OR+ransomware+OR+%22cyber+incident%22+when:2d&hl=en-US&gl=US&ceid=US:en', NEWS_INTERVAL),
+    'bleeping': ('BleepingComputer', 'https://www.bleepingcomputer.com/feed/', NEWS_INTERVAL),
+    'record': ('The Record', 'https://therecord.media/feed', NEWS_INTERVAL),
+    'securityweek': ('SecurityWeek', 'https://www.securityweek.com/feed/', NEWS_INTERVAL),
+    'cyberscoop': ('CyberScoop', 'https://cyberscoop.com/feed/', NEWS_INTERVAL),
     'kev': ('CISA KEV', 'https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json', HOUR),
 }
 
 class NoRedirect(HTTPRedirectHandler):
     def redirect_request(self, *args, **kwargs):
         return None
+
+TRUSTED_OUTLETS = {o.lower() for o in [
+    'Reuters', 'Associated Press', 'AP News', 'Bloomberg', 'Bloomberg.com', 'Financial Times', 'The Wall Street Journal', 'WSJ',
+    'The New York Times', 'The Washington Post', 'CNN', 'NBC News', 'CBS News', 'ABC News', 'NPR', 'PBS', 'Politico',
+    'POLITICO', 'Axios', 'The Hill', 'CNBC', 'USA Today', 'USA TODAY', 'Fox News', 'Fox Business', 'Los Angeles Times',
+    'TechCrunch', 'The Verge', 'WIRED', 'Wired', 'Ars Technica', 'BleepingComputer', 'The Record', 'The Record from Recorded Future News',
+    'SecurityWeek', 'CyberScoop', 'Dark Reading', 'SC Media', 'Cybersecurity Dive', 'The Register', 'Infosecurity Magazine',
+    'Industrial Cyber', 'Nextgov/FCW', 'Nextgov', 'Federal News Network', 'StateScoop', 'Government Technology', 'GovTech',
+    'Healthcare Dive', "Becker's Hospital Review", 'The HIPAA Journal', 'HIPAA Journal', 'Fierce Healthcare', 'American Banker',
+    'Insurance Journal', 'BankInfoSecurity', 'Cybernews', 'The Hacker News', 'Help Net Security', 'Krebs on Security',
+    '404 Media', 'Engadget', 'Newsweek', 'Forbes', 'Business Insider', 'Fortune', 'TIME', 'Time', 'Gizmodo', 'Semafor',
+    'The Daily Beast', 'Breitbart', 'NewsNation', 'Scripps News', 'Spectrum News', 'ProPublica', 'The Guardian US', 'MarketWatch',
+    'Barron\'s', 'Yahoo', 'Yahoo News', 'Yahoo Finance', 'MSN', 'Newsmax', 'Washington Examiner', 'National Review', 'Vox']}
+US_PLACES = ('Alabama|Alaska|Arizona|Arkansas|California|Colorado|Connecticut|Delaware|Florida|Georgia|Hawaii|Idaho|Illinois|Indiana|'
+             'Iowa|Kansas|Kentucky|Louisiana|Maine|Maryland|Massachusetts|Michigan|Minnesota|Mississippi|Missouri|Montana|Nebraska|'
+             'Nevada|New Hampshire|New Jersey|New Mexico|New York|North Carolina|North Dakota|Ohio|Oklahoma|Oregon|Pennsylvania|'
+             'Rhode Island|South Carolina|South Dakota|Tennessee|Texas|Utah|Vermont|Virginia|Washington|West Virginia|Wisconsin|Wyoming|'
+             'Los Angeles|Chicago|Houston|Phoenix|Philadelphia|San Antonio|San Diego|Dallas|Austin|Jacksonville|Columbus|Charlotte|'
+             'Indianapolis|San Francisco|Seattle|Denver|Boston|Nashville|Detroit|Portland|Las Vegas|Memphis|Louisville|Baltimore|'
+             'Milwaukee|Albuquerque|Tucson|Sacramento|Kansas City|Atlanta|Miami|Omaha|Raleigh|Minneapolis|Tampa|Tulsa|Cleveland|'
+             'New Orleans|Pittsburgh|Cincinnati|St\\. Louis|Orlando|Honolulu|Salt Lake|Richmond|Hartford|Buffalo|Providence|Des Moines|'
+             'Boise|Anchorage|Spokane|Tacoma|Albany|Toledo|Dayton|Knoxville|Savannah|Charleston|Wilmington|Norfolk|Newark|Baton Rouge|'
+             'Little Rock|Madison|Sioux Falls|Fargo|Billings|Reno|El Paso|Corpus Christi|Wichita|Springfield|Harrisburg|Burlington')
+US_SIGNAL = re.compile(r'\bU\.?S\.?\b|United States|\bAmerica(?:n|ns)?\b|\bFBI\b|\bCISA\b|\bNSA\b|Pentagon|\bfederal\b|Congress|Senate|'
+                       r'White House|Medicare|Medicaid|\bD\.?C\.?\b|\b(?:' + US_PLACES + r')\b', re.I)
+FOREIGN_SIGNAL = re.compile(r'\b(?:Canada|Canadian|Ontario|Quebec|Manitoba|Alberta|Toronto|Vancouver|Montreal|U\.?K\.?|Britain|British|'
+                            r'England|Scotland|Wales|Ireland|Irish|NHS|Europe|European|EU|Germany|German|France|French|Italy|Italian|'
+                            r'Spain|Spanish|Netherlands|Dutch|Belgium|Belgian|Sweden|Swedish|Norway|Norwegian|Denmark|Danish|Finland|'
+                            r'Finnish|Poland|Polish|Ukraine|Ukrainian|Japan|Japanese|Korea|Korean|KEPCO|Australia|Australian|'
+                            r'New Zealand|India|Indian|Pakistan|Singapore|Malaysia|Indonesia|Philippines|Vietnam|Thailand|Taiwan|'
+                            r'Hong Kong|Israel|Israeli|Turkey|Turkish|Saudi|UAE|Dubai|Qatar|Africa|African|Nigeria|Kenya|Brazil|'
+                            r'Mexico|Mexican|Argentina|Chile|Colombia|Bulgaria|Bulgarian|Romania|Romanian|Greece|Greek|Czech|'
+                            r'Austria|Switzerland|Swiss|Portugal|Bell MTS)\b', re.I)
+CALL_LETTERS = re.compile(r'^[KW][A-Z]{2,3}(?:[- ](?:TV|FM|AM|\d+))?\b')
+STATE_OR_CITY_OUTLET = re.compile(r'\b(?:' + US_PLACES + r')\b', re.I)
+
+
+def news_quality(item):
+    """Keep reputable or U.S.-local outlets and headlines about U.S. victims."""
+    outlet, title = item.get('outlet') or '', item['title']
+    trusted = outlet.lower() in TRUSTED_OUTLETS
+    local = bool(CALL_LETTERS.match(outlet)) or bool(STATE_OR_CITY_OUTLET.search(outlet))
+    if not (trusted or local) or title.rstrip().endswith('?'):
+        return False
+    if FOREIGN_SIGNAL.search(title) and not US_SIGNAL.search(title):
+        return False
+    return True
 
 
 def clean(s):
@@ -158,6 +216,37 @@ def parse(key, body):
                     add(title, date, safe_url(link['href'], base, ('/CSA/',)))
                 except ValueError:
                     continue
+    elif key in NEWS_SOURCES:
+        decoded = body.decode('utf-8-sig')
+        if re.search(r'<!\s*(?:DOCTYPE|ENTITY)', decoded, re.I):
+            raise ValueError('Unexpected RSS DTD or entity')
+        rows = ET.fromstring(decoded).findall('./channel/item')
+        if not rows:
+            raise ValueError('No RSS items')
+        for row in rows[:100]:
+            title = clean(row.findtext('title'))
+            outlet_node = row.find('source')
+            outlet = clean(outlet_node.text) if outlet_node is not None and outlet_node.text else SOURCES[key][0]
+            if key == 'gnews' and outlet and title.endswith(' - ' + outlet):
+                title = title[:-(len(outlet) + 3)].strip()
+            link = clean(row.findtext('link'))
+            try:
+                ref = urlsplit(link)
+                t = parsedate_to_datetime(row.findtext('pubDate') or '')
+            except (TypeError, ValueError):
+                continue
+            if ref.scheme != 'https' or ref.hostname != NEWS_HOSTS[key] or ref.username or ref.password:
+                continue
+            # Discovery only: headline, outlet, and link. No article text is stored or republished.
+            if not title or not NEWS_EVENT.search(title) or NEWS_SKIP.search(title):
+                continue
+            date = t.replace(tzinfo=t.tzinfo or UTC).astimezone(UTC).isoformat()
+            url = urlunsplit((ref.scheme, ref.netloc, ref.path, ref.query if key == 'gnews' else '', ''))
+            row = dict(id=url, title=title, date=date, url=url, outlet=outlet)
+            if news_quality(row):
+                items[url] = row
+        if not items:
+            return []
     elif key == 'advisory':
         # Refuse DTDs/custom entities. No article HTML is emitted.
         decoded = body.decode('utf-8-sig')
@@ -185,7 +274,7 @@ def parse(key, body):
                 continue
             if title and re.fullmatch(r'CVE-\d{4}-\d{4,}', id):
                 add(f'{id}: {title}', date, 'https://www.cisa.gov/known-exploited-vulnerabilities-catalog?' + urlencode({'search': id}), id)
-    if not items:
+    if not items and key not in NEWS_SOURCES:
         raise ValueError('Feed returned no recognizable entries')
     if key == 'advisory':
         items = {k: v for k, v in items.items() if not re.match(r'CISA Adds?\b.*Known Exploited Vulnerabilit', v['title'], re.I)}
@@ -196,8 +285,9 @@ from http.server import BaseHTTPRequestHandler
 from threading import Lock
 
 SEED = Path(__file__).resolve().parent.parent / 'public' / 'cybersecurity-data' / 'snapshot.json'
-CACHE_SECONDS = HOUR
-CACHE = {'body': None, 'expires': 0, 'records': {}, 'lastSuccess': None}
+CACHE_SECONDS = NEWS_INTERVAL
+CACHE = {'body': None, 'expires': 0, 'records': {}, 'lastSuccess': None, 'pulled': {}}
+CACHED = object()
 LOCK = Lock()
 
 
@@ -263,6 +353,60 @@ def build_daily_brief(now, checked, records, eligible_example):
     return {'checkedSources': checked, 'days': days}
 
 
+STOP = {'the','a','an','of','to','in','on','for','and','with','after','as','by','at','from','is','are','its','says','said','new','report','reports','amid','over','into','about','face','faces','latest'}
+SYNONYM = {'cyberattack': 'attack', 'cyberattacks': 'attack', 'attacks': 'attack', 'hackers': 'hack', 'hacked': 'hack', 'hacker': 'hack',
+           'breaches': 'breach', 'breached': 'breach', 'database': 'data', 'databases': 'data'}
+
+
+GENERIC = {'data','breach','attack','hack','cyber','security','incident','system','customer','patient','information','info','expose',
+           'exposed','stole','stolen','ransomware','network','user','account','record','million','warn','target','access',
+           'vulnerability','flaw','exploit','service','outage','investigating','investigate','apparent','reportedly','allegedly','hit',
+           'say','major','day','week','recent','after','could','may','affected','new'}
+
+
+def tokens(title):
+    out = set()
+    for w in re.findall(r'[a-z0-9]+', title.lower().replace('u.s.', 'us')):
+        w = SYNONYM.get(w, w)
+        if len(w) > 3 and w.endswith('s') and not w.endswith('ss'):
+            w = w[:-1]
+        if w not in STOP and len(w) > 1:
+            out.add(w)
+    return out
+
+
+def cluster_news(rows):
+    groups = []
+    for row in sorted(rows, key=lambda r: timestamp(r['date'])):
+        words = tokens(row['title'])
+        row = dict(row, _words=words)
+        for group in groups:
+            lead = group[0]
+            union = words | group[1]
+            distinctive = (words & group[1]) - GENERIC
+            if union and (len(distinctive) >= 2 or len(words & group[1]) / len(union) >= 0.5) and abs(timestamp(row['date']) - timestamp(lead['date'])) <= 3 * DAY:
+                group[2].append(row)
+                group[1] |= words
+                break
+        else:
+            groups.append([row, set(words), [row]])
+    out = []
+    for _, _, members in groups:
+        trusted = [m for m in members if (m['source'] or '').lower() in TRUSTED_OUTLETS]
+        lead = (trusted or members)[0]
+        outlets = [lead['source']]
+        for m in members:
+            if m['source'] not in outlets:
+                outlets.append(m['source'])
+        newest = max(timestamp(m['date']) for m in members)
+        note = 'Unreviewed news report.'
+        if len(outlets) > 1:
+            note += f" Also reported by {', '.join(outlets[1:4])}{' and others' if len(outlets) > 4 else ''}."
+        lead = {k: v for k, v in lead.items() if k != '_words'}
+        out.append(dict(lead, note=note, outlets=len(outlets), lastReportedAt=datetime.fromtimestamp(newest, UTC).isoformat()))
+    return sorted(out, key=lambda r: timestamp(r['date']), reverse=True)
+
+
 def make_snapshot(seed, results, old_records, now, previous_success=None):
     stamp = datetime.fromtimestamp(now, UTC).isoformat()
     health = {k: dict(v) for k, v in seed['sources'].items()}
@@ -279,9 +423,13 @@ def make_snapshot(seed, results, old_records, now, previous_success=None):
     feed_health = {}
     daily_rows = []
     recovered_count = 0
+    news_rows = []
     for key, (label, _, _) in SOURCES.items():
         fresh = results[key]
-        if fresh is None:
+        if fresh is CACHED and key in records:
+            checked_at, current = records[key]
+            health[key] = dict(label=label, checkedAt=checked_at, status='current')
+        elif fresh is None or fresh is CACHED:
             failures.append(label)
             prior = records.get(key)
             checked = prior[0] if prior else health.get(key, {}).get('checkedAt')
@@ -292,15 +440,24 @@ def make_snapshot(seed, results, old_records, now, previous_success=None):
             records[key] = (stamp, fresh[:100])
             health[key] = dict(label=label, checkedAt=stamp, status='current')
             current = fresh
-        kind = 'advisory' if key in ('ic3', 'advisory') else 'kev' if key == 'kev' else 'breach'
+        kind = 'news' if key in NEWS_SOURCES else 'advisory' if key in ('ic3', 'advisory') else 'kev' if key == 'kev' else 'breach'
         recent = [i for i in current if now - 14 * DAY <= timestamp(i['date']) <= now + DAY]
         recent.sort(key=lambda i: timestamp(i['date']), reverse=True)
         feed_health[key] = dict(health[key], latestReportAt=current[0]['date'] if current else None)
-        shaped = [dict(clean_output(i), kind=kind, sourceId=key, source=label, topic=public_topic(i, kind)) for i in recent]
+        recent_window = 3 * DAY if key in NEWS_SOURCES else 14 * DAY
+        recent = [i for i in recent if now - recent_window <= timestamp(i['date'])]
+        shaped = [dict(clean_output(i), kind=kind, sourceId=key, source=i.get('outlet') or label, topic=public_topic(i, kind)) for i in recent]
+        if key in NEWS_SOURCES:
+            news_rows.extend(shaped)
+            if fresh is not None:
+                daily_rows.extend(shaped)
+            continue
         archive_rows.extend(shaped[:25])
         if fresh is not None:
             daily_rows.extend(shaped)
         items.extend([i for i in shaped if public_report(i)][:2])
+    breaking = [r for r in cluster_news(news_rows) if public_report(r)]
+    archive_rows.extend(breaking[:40])
     other = sorted(items, key=lambda i: timestamp(i['date']), reverse=True)
     # Give each automatically checked source with recent rows a slot before filling by date.
     reserved = {}
@@ -309,11 +466,13 @@ def make_snapshot(seed, results, old_records, now, previous_success=None):
             reserved.setdefault(i['sourceId'], i)
     picked = set(i['id'] for i in reserved.values())
     remaining = [i for i in other if i['id'] not in picked]
-    selected = [*reserved.values(), *remaining[:max(0, 24 - len(reserved))]]
+    # Breaking news leads the ticker; official records fill the rest.
+    lead_news = breaking[:8]
+    selected = [*lead_news, *reserved.values(), *remaining[:max(0, 24 - len(reserved) - len(lead_news))]]
     selected.sort(key=lambda i: timestamp(i['date']), reverse=True)
     last_success = stamp if recovered_count else previous_success
     return (dict(version=2, generatedAt=stamp, lastSuccessfulCheck=last_success, archiveAsOf=seed['generatedAt'],
-                 live=True, cachedMinutes=60, sources=health, items=selected[:24],
+                 live=True, cachedMinutes=15, sources=health, items=selected[:24],
                  failedSources=failures, connectedSources=len(SOURCES), feedHealth=feed_health, recentReports=archive_rows,
                  dailyBrief=build_daily_brief(now, recovered_count, daily_rows, public_report)), records, last_success)
 
@@ -328,8 +487,14 @@ class handler(BaseHTTPRequestHandler):
             if CACHE['body'] is None or now >= CACHE['expires']:
                 try:
                     seed = json.loads(SEED.read_text(encoding='utf-8'))
-                    with ThreadPoolExecutor(max_workers=len(SOURCES)) as pool:
-                        results = dict(zip(SOURCES, pool.map(pull, SOURCES)))
+                    due = [k for k, (_, _, every) in SOURCES.items()
+                           if k not in CACHE['records'] or now - CACHE['pulled'].get(k, 0) >= every]
+                    with ThreadPoolExecutor(max_workers=max(1, len(due))) as pool:
+                        pulled = dict(zip(due, pool.map(pull, due)))
+                    for k, v in pulled.items():
+                        if v is not None:
+                            CACHE['pulled'][k] = now
+                    results = {k: pulled.get(k, CACHED) for k in SOURCES}
                     doc, records, last = make_snapshot(seed, results, CACHE['records'], now, CACHE['lastSuccess'])
                     # Reuse the last response even after partial failure; never retry a publisher per visitor.
                     CACHE.update(body=json.dumps(doc, separators=(',', ':')).encode('utf-8'),
@@ -343,7 +508,7 @@ class handler(BaseHTTPRequestHandler):
         self.send_response(200)
         self.send_header('Content-Type', 'application/json; charset=utf-8')
         self.send_header('Cache-Control', 'public, max-age=60')
-        self.send_header('Vercel-CDN-Cache-Control', 'public, s-maxage=3600, stale-while-revalidate=3600')
+        self.send_header('Vercel-CDN-Cache-Control', 'public, s-maxage=900, stale-while-revalidate=900')
         self.send_header('Content-Length', str(len(body)))
         self.send_header('X-Content-Type-Options', 'nosniff')
         self.end_headers()

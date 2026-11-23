@@ -87,8 +87,8 @@
     },
     {
       "lead": "Vendors and partners appeared repeatedly.",
-      "summary": "Three of the 12 reviewed national incidents involved third-party access.",
-      "detail": "Uber, the separate Chase, Visa and Mastercard vendor incidents, and Cursor each involved a vendor, service provider, or partner credential. DAL-X reviewed 12 national incidents in the period, up from 9. Five were AI agent security cases, the same as the prior period. Reviewed counts reflect editorial coverage, not incident frequency."
+      "summary": "Three of the 13 reviewed national incidents involved third-party access.",
+      "detail": "Uber, the separate Chase, Visa and Mastercard vendor incidents, and Cursor each involved a vendor, service provider, or partner credential. DAL-X reviewed 13 national incidents in the period, up from 9. Five were AI agent security cases, the same as the prior period. Reviewed counts reflect editorial coverage, not incident frequency."
     },
     {
       "lead": "Exploited vulnerabilities held steady.",
