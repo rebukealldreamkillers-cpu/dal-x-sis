@@ -3,7 +3,7 @@ import { onCyberFeed } from './cyber-live-state.js';
 const dayFormatter=new Intl.DateTimeFormat('en-CA',{timeZone:'America/New_York',year:'numeric',month:'2-digit',day:'2-digit'});
 const dateFormatter=new Intl.DateTimeFormat('en-US',{timeZone:'UTC',month:'short',day:'numeric'});
 const checkFormatter=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',month:'short',day:'numeric',hour:'numeric',minute:'2-digit',timeZoneName:'short'});
-const labels={breach:['breach notice','breach notices'],advisory:['advisory','advisories'],kev:['exploited vulnerability entry','exploited vulnerability entries'],filing:['filing','filings'],agency:['agency announcement','agency announcements']};
+const labels={news:['news report','news reports'],breach:['breach notice','breach notices'],advisory:['advisory','advisories'],kev:['exploited vulnerability entry','exploited vulnerability entries'],filing:['filing','filings'],agency:['agency announcement','agency announcements']};
 const dateKey=(value=new Date())=>{
   const p=Object.fromEntries(dayFormatter.formatToParts(value).map(j=>[j.type,j.value]));
   return `${p.year}-${p.month}-${p.day}`;

@@ -5,8 +5,13 @@ const seedEndpoint = '/cybersecurity-data/snapshot.json';
 const refreshMs = 5 * 60_000;
 const staleMs = 2 * 60 * 60_000;
 const expireMs = 24 * 60 * 60_000;
-const labels = { filing:'SEC filing', agency:'Law enforcement announcement', incident:'National incident', breach:'Breach notice', advisory:'Advisory', kev:'Exploited vulnerability' };
+const labels = { news:'Breaking report', filing:'SEC filing', agency:'Law enforcement announcement', incident:'National incident', breach:'Breach notice', advisory:'Advisory', kev:'Exploited vulnerability' };
 const endpoints = {
+  gnews:['news',['news.google.com','/rss/articles/']],
+  bleeping:['news',['www.bleepingcomputer.com','/news/']],
+  record:['news',['therecord.media','/']],
+  securityweek:['news',['www.securityweek.com','/']],
+  cyberscoop:['news',['cyberscoop.com','/']],
   id:['breach',['www.ag.idaho.gov','/content/uploads/'],['www.ag.idaho.gov','/consumer-protection/security-breaches/']],
   sc:['breach',['consumer.sc.gov','/sites/consumer/files/'],['consumer.sc.gov','/identity-theft-unit/security-breach-notices']],
   hhs:['breach',['ocrportal.hhs.gov','/ocr/breach/']],
