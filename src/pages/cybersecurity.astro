@@ -34,10 +34,10 @@ const topicLabel = (t: string) => t === 'ai-agent-security' ? 'AI agent security
     <CyberTicker />
     <CyberDailyBrief />
     <CyberNumbers />
-    <section class="national" aria-labelledby="national-title"><p class="overline">Reviewed coverage</p><h2 id="national-title">National incidents</h2><p>Nationally reported U.S. incidents and consequential disclosures, reviewed separately from the automated feeds. Dates mark the linked coverage or disclosure, not when the intrusion began.</p><div class="national-filter" role="group" aria-label="Filter reviewed incidents" data-national-filter hidden><button type="button" aria-pressed="true" data-topic="">All</button><button type="button" aria-pressed="false" data-topic="national-cyber">National cyber incidents</button><button type="button" aria-pressed="false" data-topic="ai-agent-security">AI agent security</button></div><ul data-national-list>
+    <section class="national" aria-labelledby="national-title"><p class="overline">Reviewed coverage</p><h2 id="national-title">National incidents</h2><p>Nationally reported U.S. incidents and consequential disclosures, reviewed separately from the automated feeds. Dates mark the linked coverage or disclosure, not when the intrusion began.</p><div class="national-filter" role="group" aria-label="Filter reviewed incidents" data-national-filter hidden><button type="button" aria-pressed="true" data-topic="">All</button><button type="button" aria-pressed="false" data-topic="national-cyber">National cyber incidents</button><button type="button" aria-pressed="false" data-topic="ai-agent-security">AI agent security</button><button type="button" aria-pressed="false" data-recent="14">Updated in last 14 days</button></div><ul data-national-list>
       {reviewed.map((c) => (
-        <li id={c.id} data-topic={c.topic} class="national-card">
-          <p class="national-meta"><time datetime={c.date}>{c.date}</time><span class="national-cat">{topicLabel(c.topic)}</span><span>{c.evidence}</span></p>
+        <li id={c.id} data-topic={c.topic} data-updated={c.lastUpdated} class="national-card">
+          <p class="national-meta"><time datetime={c.date}>{c.date}</time><span class="national-cat">{topicLabel(c.topic)}</span><span>{c.evidence}</span>{c.timeline.length > 1 && <span class="national-updated">Updated <time datetime={c.lastUpdated}>{c.lastUpdated}</time></span>}</p>
           <h3><a href={`#${c.id}`}>{c.title}</a></h3>
           <dl class="national-brief">
             <div><dt>What happened</dt><dd>{c.happened}</dd></div>
@@ -45,6 +45,19 @@ const topicLabel = (t: string) => t === 'ai-agent-security' ? 'AI agent security
             <div><dt>Who confirmed it</dt><dd>{c.confirmed}</dd></div>
             <div><dt>What is still unknown</dt><dd>{c.unknown}</dd></div>
           </dl>
+          <div class="national-history">
+            <p class="national-latest"><span>{c.timeline.length > 1 ? 'Latest update' : 'First disclosed'}</span> <time datetime={c.lastUpdated}>{c.lastUpdated}</time> · <b>{c.timeline[c.timeline.length - 1].kind}.</b> {c.timeline[c.timeline.length - 1].fact} <a href={c.timeline[c.timeline.length - 1].source.url} target="_blank" rel="noopener noreferrer">{c.timeline[c.timeline.length - 1].source.label}</a></p>
+            {c.timeline.length > 1 && (
+              <details>
+                <summary>How this story developed ({c.timeline.length} updates)</summary>
+                <ol class="national-timeline">
+                  {[...c.timeline].reverse().map((t) => (
+                    <li><time datetime={t.date}>{t.date}</time><div><b>{t.kind}.</b> {t.fact} <span class="national-by">Established by <a href={t.source.url} target="_blank" rel="noopener noreferrer">{t.source.label}</a></span></div></li>
+                  ))}
+                </ol>
+              </details>
+            )}
+          </div>
           <p class="national-links"><span>Sources</span>{c.sources.map((src) => <a href={src.url} target="_blank" rel="noopener noreferrer">{src.label}</a>)}</p>
           <div class="national-actions">
             <button type="button" data-copy-brief>Copy briefing</button>
@@ -73,7 +86,7 @@ const topicLabel = (t: string) => t === 'ai-agent-security' ? 'AI agent security
     const status = card.querySelector('.national-copied');
     card.querySelector('[data-copy-brief]').addEventListener('click', () => {
       const lines = [`${data.title} (${data.date})`, `Evidence: ${data.evidence}`, ...labels.map(([k, l]) => `${l}: ${data[k]}`),
-        `Sources: ${data.sources.map((s) => `${s.label} ${s.url}`).join('; ')}`, `Via DAL-X US Cybersecurity Updates: ${pageUrl}#${data.id}`];
+        'Timeline:', ...[...data.timeline].map((t) => `  ${t.date}: ${t.kind}. ${t.fact} (${t.source.label})`), `Sources: ${data.sources.map((s) => `${s.label} ${s.url}`).join('; ')}`, `Via DAL-X US Cybersecurity Updates: ${pageUrl}#${data.id}`];
       copyText(lines.join('\n'), status);
     });
     card.querySelector('[data-copy-link]').addEventListener('click', () => copyText(`${pageUrl}#${data.id}`, status));
@@ -88,7 +101,12 @@ const topicLabel = (t: string) => t === 'ai-agent-security' ? 'AI agent security
       const button = event.target.closest('button');
       if (!button) return;
       for (const b of filter.querySelectorAll('button')) b.setAttribute('aria-pressed', String(b === button));
-      for (const card of cards) card.hidden = Boolean(button.dataset.topic) && card.dataset.topic !== button.dataset.topic;
+      const cutoff = button.dataset.recent ? Date.now() - Number(button.dataset.recent) * 86_400_000 : 0;
+      for (const card of cards) {
+        const topicMiss = Boolean(button.dataset.topic) && card.dataset.topic !== button.dataset.topic;
+        const recentMiss = cutoff && Date.parse(card.dataset.updated + 'T23:59:59Z') < cutoff;
+        card.hidden = Boolean(topicMiss || recentMiss);
+      }
     });
   }
 </script>
@@ -104,6 +122,20 @@ const topicLabel = (t: string) => t === 'ai-agent-security' ? 'AI agent security
 .cyber-updates-note{font:.74rem/1.5 ui-monospace,monospace!important;color:#a99a90!important;margin-top:.8rem!important}
 @media(max-width:760px){.cyber-updates-why{grid-template-columns:minmax(0,1fr)}}
 .cyber-updates-page .overline{font:.75rem ui-monospace,monospace;letter-spacing:.08em;text-transform:uppercase;color:#f1a373}
+.national-updated{color:#1a120d;background:#f6a26d;border-radius:999px;padding:0 .5rem;font-weight:600}
+.national-updated time{color:inherit}
+.national-history{margin:.2rem 0 .4rem;padding:.55rem .65rem;background:#231c18;border:1px solid #45362e;border-radius:.35rem}
+.national-latest{margin:0!important;font-size:.84rem!important;line-height:1.5;color:#e9ded6!important}
+.national-latest>span{font:.66rem ui-monospace,monospace;letter-spacing:.1em;text-transform:uppercase;color:#f09a63}
+.national-latest a,.national-timeline a{color:#f4b88f}
+.national-history details{margin-top:.35rem}
+.national-history summary{cursor:pointer;color:#f2b189;font-size:.8rem;min-height:40px;display:flex;align-items:center}
+.national-timeline{list-style:none;margin:.2rem 0 0;padding:0 0 0 .2rem;border-left:2px solid #5a463b}
+.national-timeline li{display:grid;grid-template-columns:5.6rem minmax(0,1fr);gap:.5rem;padding:.35rem 0 .35rem .6rem;font-size:.82rem;line-height:1.5;color:#dccfc6;position:relative}
+.national-timeline li::before{content:'';position:absolute;left:-.38rem;top:.7rem;width:.55rem;height:.55rem;border-radius:50%;background:#e86020}
+.national-timeline time{font:.72rem ui-monospace,monospace;color:#f09a63;padding-top:.1rem}
+.national-by{display:block;color:#a99a90;font-size:.76rem}
+@media(max-width:480px){.national-timeline li{grid-template-columns:minmax(0,1fr);gap:.1rem}}
 .national-card{scroll-margin-top:1rem}
 .national-card.is-target{outline:2px solid #e86020;outline-offset:2px}
 .national ul[data-national-list]{grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr))!important}
