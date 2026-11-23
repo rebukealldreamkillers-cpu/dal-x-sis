@@ -10,12 +10,14 @@ from xml.etree import ElementTree as ET
 
 from bs4 import BeautifulSoup
 
-BLUE = 'https://blueradius.io/research/ai-agent-incident-tracker'
 RSS = {
     'Microsoft Security': ('https://www.microsoft.com/en-us/security/blog/feed/', 'www.microsoft.com'),
     'Unit 42': ('https://unit42.paloaltonetworks.com/feed/', 'unit42.paloaltonetworks.com'),
     'BleepingComputer': ('https://www.bleepingcomputer.com/feed/', 'www.bleepingcomputer.com'),
+    'The Record': ('https://therecord.media/feed', 'therecord.media'),
+    'SecurityWeek': ('https://www.securityweek.com/feed/', 'www.securityweek.com'),
 }
+# Competitor incident trackers are never used as sources or lead lists.
 AGENT = re.compile(r'\b(?:AI agents?|agentic AI|agentic (?:attack|tooling|security)|AI (?:coding|security|research|hacking) agents?|MCP (?:servers?|gateway)|model context protocol)\b', re.I)
 EVENT = re.compile(r'\b(?:breach(?:ed|es)?|intrusion|compromis\w*|unauthori[sz]ed|misus\w*|abuse[ds]?|malicious|supply.chain attack|campaign|incident|hijack\w*)\b', re.I)
 LIMIT = 2 * 1024 * 1024
@@ -49,33 +51,6 @@ def text(value, max_len=180):
     return ' '.join((value or '').split())[:max_len]
 
 
-def tracker(body):
-    doc = BeautifulSoup(body, 'html.parser')
-    table = next((t for t in doc.select('table') if 'Disclosed' in t.get_text(' ', strip=True)[:150]), None)
-    if not table:
-        raise ValueError('Tracker format changed')
-    parsed = []
-    cutoff = (datetime.now(timezone.utc) - timedelta(days=90)).strftime('%Y-%m')
-    for row in table.select('tbody tr'):
-        cells = row.find_all('td', recursive=False)
-        if len(cells) != 5 or cells[2].get_text(strip=True) != 'Incident':
-            continue
-        published = text(cells[0].get_text())
-        try:
-            if datetime.strptime(published, '%b %Y').strftime('%Y-%m') < cutoff:
-                continue
-        except ValueError:
-            continue
-        title, link, evidence = cells[1].find('p'), cells[4].select_one('a[href]'), cells[4].find('p')
-        if title and link and ref(link['href']) and evidence:
-            parsed.append(dict(source='BlueRadius Research', title=text(title.get_text()), url=link['href'],
-                               published=published, sourceSignal=text(evidence.get_text()),
-                               decision='Review required'))
-    if not parsed:
-        raise ValueError('Tracker returned no incident rows')
-    return parsed[:35]
-
-
 def rss(body, name, host):
     if re.search(br'<!\s*(?:DOCTYPE|ENTITY)', body, re.I):
         raise ValueError('Unexpected XML DTD or entity')
@@ -101,7 +76,7 @@ def main():
     data = Path(__file__).resolve().parents[1] / 'public/cybersecurity-data/archive-snapshot.json'
     already = {ref(i['url']) for i in json.loads(data.read_text())['items'] if i.get('topic') == 'ai-agent-security'}
     candidates, failures = [], []
-    inputs = [('BlueRadius Research', BLUE, tracker)] + [(name, url, lambda b, n=name, h=host: rss(b, n, h)) for name, (url, host) in RSS.items()]
+    inputs = [(name, url, lambda b, n=name, h=host: rss(b, n, h)) for name, (url, host) in RSS.items()]
     for name, url, parse in inputs:
         try:
             candidates.extend(parse(load(url)))
