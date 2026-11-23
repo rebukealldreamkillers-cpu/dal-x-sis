@@ -10,9 +10,24 @@ import StateCoverage from '../components/StateCoverage.astro';
 <Base title="U.S. Cybersecurity Updates" description="National cyber incident reporting and a searchable archive of public breach notices and federal advisories.">
   <main class="container cyber-updates-page">
     <header class="cyber-updates-intro">
-      <p class="overline">Public reporting</p>
+      <p class="overline">Public reporting · A free resource from Jochanni Labs</p>
       <h1>U.S. Cybersecurity Updates</h1>
-      <p>Reviewed U.S. cyber incidents, searchable breach notices, and public advisories.</p>
+      <p class="cyber-updates-lede">One place to follow U.S. cyber incidents as they are disclosed, from first news report to official confirmation, with every entry linked to its original source.</p>
+      <div class="cyber-updates-why">
+        <div>
+          <h2>What this is</h2>
+          <p>DAL-X brings together breaking news, state breach notices, federal advisories, SEC filings, and incidents our editors have reviewed. Breaking reports usually appear within 30 minutes of publication.</p>
+        </div>
+        <div>
+          <h2>How it helps you</h2>
+          <p>When you need to brief a board, a client, or your team, start here. Reviewed incidents state what happened, who confirmed it, and what is still unknown. Everything is searchable.</p>
+        </div>
+        <div>
+          <h2>Why Jochanni Labs publishes it</h2>
+          <p>Jochanni Labs studies how organizations confirm an action is authorized before it runs, including actions taken by AI agents. Public incident records show where those controls hold and where they fail. We publish this so decision makers, risk teams, and technical teams can work from the same verified facts.</p>
+        </div>
+      </div>
+      <p class="cyber-updates-note">This page reports public disclosures. It is not live attack telemetry.</p>
     </header>
     <CyberTicker />
     <CyberDailyBrief />
@@ -41,6 +56,12 @@ import StateCoverage from '../components/StateCoverage.astro';
 .cyber-updates-intro{margin-bottom:1.5rem}
 .cyber-updates-intro h1{font-size:clamp(2rem,7vw,4.6rem);line-height:1.05;margin:.5rem 0 1rem;overflow-wrap:anywhere}
 .cyber-updates-intro p{color:#cdc2b9;max-width:70ch;line-height:1.55;margin:.45rem 0}
+.cyber-updates-lede{font-size:clamp(1.05rem,2.2vw,1.25rem);color:#ece3dc!important;max-width:62ch!important}
+.cyber-updates-why{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(.75rem,2vw,1.5rem);margin:1.4rem 0 .6rem;padding-top:1.1rem;border-top:1px solid #3c302a}
+.cyber-updates-why h2{font-size:.78rem;font-family:ui-monospace,monospace;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:#f09a63;margin:0 0 .45rem;line-height:1.4}
+.cyber-updates-why p{font-size:.92rem;margin:0;color:#d6cac1}
+.cyber-updates-note{font:.74rem/1.5 ui-monospace,monospace!important;color:#a99a90!important;margin-top:.8rem!important}
+@media(max-width:760px){.cyber-updates-why{grid-template-columns:minmax(0,1fr)}}
 .cyber-updates-page .overline{font:.75rem ui-monospace,monospace;letter-spacing:.08em;text-transform:uppercase;color:#f1a373}
 .national-filter{display:flex;flex-wrap:wrap;gap:.4rem;margin:1rem 0 .2rem}.national-filter button{min-height:40px;padding:.35rem .8rem;border-radius:999px;border:1px solid #6d5546;background:#1c1816;color:#e9ded6;font:inherit;font-size:.82rem;cursor:pointer}.national-filter button[aria-pressed=true]{background:#d05010;border-color:#d05010;color:#fff}.national-filter button:focus-visible{outline:2px solid #f6a26d;outline-offset:2px}.national [hidden]{display:none!important}
 .national{margin-block:clamp(2rem,5vw,4.5rem);min-width:0}.national h2{margin:.2rem 0 .75rem;font-size:clamp(1.8rem,5vw,3rem);letter-spacing:-.04em;line-height:1.1}.national p{max-width:76ch;line-height:1.55;color:#cdc2b9}.national .overline{color:#f1a373}.national ul{list-style:none;margin:1.1rem 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:.85rem}.national li{background:#1c1917;border:1px solid #493a32;border-radius:.45rem;padding:1rem;overflow-wrap:anywhere}.national h3{margin:.35rem 0 .4rem;font-size:1.05rem;line-height:1.35}.national li p{margin:.35rem 0;font-size:.85rem}.national li .national-meta{display:flex;flex-wrap:wrap;gap:.15rem .65rem;font:.7rem ui-monospace,monospace;color:#f1a373}.national-links a{display:inline-flex;align-items:center;min-height:44px;color:#f4f0ec;text-underline-offset:.18em}.national-links a:focus-visible{outline:2px solid #f1a373;outline-offset:2px}
