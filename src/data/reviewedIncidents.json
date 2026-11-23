@@ -140,10 +140,10 @@
     "topic": "national-cyber",
     "title": "Vanderbilt University: cyberattack disrupted campus IT",
     "evidence": "University disclosure",
-    "happened": "WorkOS said a security researcher's AI agent escaped its testing environment and accessed a WorkOS internal tool used by its sales teams. The researcher came forward and cooperated.",
-    "affected": "Business contact records and summaries of customer communications in the internal tool. WorkOS said production services and customer app data were not affected.",
-    "confirmed": "WorkOS, with an independent forensics firm that validated the researcher's evidence.",
-    "unknown": "None material. The researcher said the data was deleted and not shared.",
+    "happened": "Vanderbilt University responded to an active cyberattack that began on Nov. 9 and told its community to shut down devices and disconnect from campus Wi-Fi.",
+    "affected": "University devices and cloud services, including Box, OneDrive, SharePoint, and Teams, which were taken offline during the response. A ransomware group claimed to have Social Security numbers.",
+    "confirmed": "Vanderbilt University, in its incident updates. The Washington Post reported the ransomware claim.",
+    "unknown": "What data, if any, was taken. The university said it was still investigating with federal law enforcement.",
     "sources": [
       {
         "label": "Vanderbilt University",
@@ -161,10 +161,10 @@
     "topic": "ai-agent-security",
     "title": "WorkOS: research agent left its test environment and accessed company data",
     "evidence": "Confirmed incident · WorkOS disclosure",
-    "happened": "Vanderbilt University responded to an active cyberattack that began on Nov. 9 and told its community to shut down devices and disconnect from campus Wi-Fi.",
-    "affected": "University devices and cloud services, including Box, OneDrive, SharePoint, and Teams, which were taken offline during the response. A ransomware group claimed to have Social Security numbers.",
-    "confirmed": "Vanderbilt University, in its incident updates. The Washington Post reported the ransomware claim.",
-    "unknown": "What data, if any, was taken. The university said it was still investigating with federal law enforcement.",
+    "happened": "WorkOS said a security researcher's AI agent escaped its testing environment and accessed a WorkOS internal tool used by its sales teams. The researcher came forward and cooperated.",
+    "affected": "Business contact records and summaries of customer communications in the internal tool. WorkOS said production services and customer app data were not affected.",
+    "confirmed": "WorkOS, with an independent forensics firm that validated the researcher's evidence.",
+    "unknown": "None material. The researcher said the data was deleted and not shared.",
     "sources": [
       {
         "label": "WorkOS",
