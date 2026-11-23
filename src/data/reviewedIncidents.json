@@ -1,0 +1,554 @@
+[
+  {
+    "id": "u-s-ports-report-a-surge-in-attempted-cyberattacks",
+    "date": "2026-11-22",
+    "topic": "national-cyber",
+    "title": "U.S. ports report a surge in attempted cyberattacks",
+    "evidence": "Attack attempts · No successful breach disclosed at Corpus Christi",
+    "happened": "Hundreds or thousands of attempted cyberattacks a day are hitting U.S. ports, including phishing that impersonates port executives, according to the Port of Corpus Christi chief executive.",
+    "affected": "Port IT networks at Corpus Christi, the largest U.S. crude export hub. The Port of Los Angeles said it blocked about 120 million attempts in August. No successful breach was disclosed at Corpus Christi.",
+    "confirmed": "Port of Corpus Christi chief executive Kent Britton, speaking to the Financial Times. The Los Angeles figure comes from the port, reported by Bloomberg.",
+    "unknown": "Which attempts, if any, succeeded at other ports. Attempt counts measure blocked activity, not compromises.",
+    "sources": [
+      {
+        "label": "The Hill, summarizing the Financial Times",
+        "url": "https://thehill.com/policy/technology/6235972-us-ports-ai-cyberattacks/"
+      },
+      {
+        "label": "IBTimes",
+        "url": "https://www.ibtimes.co.uk/corpus-christi-port-daily-cyberattack-attempts-1833900"
+      }
+    ]
+  },
+  {
+    "id": "microsoft-entra-connect-health-tenant-metadata-exposed",
+    "date": "2026-11-21",
+    "topic": "national-cyber",
+    "title": "Microsoft Entra Connect Health: tenant metadata exposed",
+    "evidence": "Company statement to press",
+    "happened": "Attackers exploited a flaw in Microsoft Entra Connect Health to read tenant-level metadata. Microsoft fixed the flaw on Nov. 19 and began notifying affected organizations.",
+    "affected": "Administrator and technical contact email addresses, tenant IDs and names, and Connect Health configuration details. Microsoft said passwords, tokens, and valid keys were not exposed and found no unauthorized configuration changes.",
+    "confirmed": "Microsoft, in customer notices and a statement to BleepingComputer.",
+    "unknown": "How many organizations were affected, who exploited the flaw, and when exploitation began.",
+    "sources": [
+      {
+        "label": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/microsoft-entra-connect-health-flaw-exploited-to-steal-tenant-data/"
+      }
+    ]
+  },
+  {
+    "id": "usda-intrusion-into-a-farm-payment-system-reported",
+    "date": "2026-11-20",
+    "topic": "national-cyber",
+    "title": "USDA: intrusion into a farm-payment system reported",
+    "evidence": "Media report; not independently confirmed",
+    "happened": "Intruders accessed a U.S. Department of Agriculture system used to make payments to farmers, NBC News reported.",
+    "affected": "A USDA farm-payment system. Any data exposure has not been confirmed.",
+    "confirmed": "NBC News, citing sources familiar with the incident. USDA has not publicly confirmed details.",
+    "unknown": "What data was accessed, who was responsible, and whether payments were affected.",
+    "sources": [
+      {
+        "label": "NBC News",
+        "url": "https://www.nbcnews.com/politics/national-security/agriculture-department-breached-hackers-sources-say-rcna610497"
+      }
+    ]
+  },
+  {
+    "id": "separate-vendor-incidents-reported-by-chase-visa-and-masterc",
+    "date": "2026-11-19",
+    "topic": "national-cyber",
+    "title": "Separate vendor incidents reported by Chase, Visa and Mastercard",
+    "evidence": "Company statements to press",
+    "happened": "Chase, Visa and Mastercard each said a third-party vendor had an incident that exposed limited customer information. These are separate vendor incidents, not one breach of the three companies.",
+    "affected": "Marketing and contact data held by vendors, such as names and email addresses. Visa said its systems and card numbers were not affected. Mastercard described a small subset of cardholders in one benefit program.",
+    "confirmed": "JPMorgan Chase, Visa, and Mastercard, in statements to the press.",
+    "unknown": "How many customers were affected in total and which vendors were breached.",
+    "sources": [
+      {
+        "label": "Associated Press",
+        "url": "https://apnews.com/article/chase-data-leak-cyberattack-8470d475450721b66858bdace47091c0"
+      },
+      {
+        "label": "ABC News",
+        "url": "https://abcnews.com/US/jpmorgan-chase-reports-cyberattack-party-service-providers/story?id=138287705"
+      }
+    ]
+  },
+  {
+    "id": "uber-driver-license-data-exposed-through-a-service-provider",
+    "date": "2026-11-16",
+    "topic": "national-cyber",
+    "title": "Uber: driver license data exposed through a service provider",
+    "evidence": "State breach notice",
+    "happened": "An unauthorized party used compromised credentials at a service provider to access Uber driver data. TechCrunch identified the provider as Fireworks AI.",
+    "affected": "Close to 150,000 drivers. Exposed data includes names, addresses, dates of birth, and driver's license numbers.",
+    "confirmed": "Uber, in breach notices filed with state attorneys general including California. TechCrunch reported the driver count and provider.",
+    "unknown": "Who was behind the access to the provider.",
+    "sources": [
+      {
+        "label": "California DOJ",
+        "url": "https://oag.ca.gov/ecrime/databreach/reports/sb24-632751"
+      },
+      {
+        "label": "TechCrunch",
+        "url": "https://techcrunch.com/2026/11/16/uber-confirms-hackers-stole-thousands-of-drivers-license-information-in-data-breach/"
+      }
+    ]
+  },
+  {
+    "id": "cursor-breach-reached-its-coding-agent-extension-marketplace",
+    "date": "2026-11-13",
+    "topic": "ai-agent-security",
+    "title": "Cursor: breach reached its coding-agent extension marketplace",
+    "evidence": "Confirmed agent tooling compromise · Cursor disclosure",
+    "happened": "An attacker obtained a Cursor access key that Fireworks AI had exposed, reached Cursor internal tools, and placed unauthorized copies of Anthropic's Claude Code extension in Cursor's extension marketplace on Oct. 29.",
+    "affected": "Limited coding agent traces, archived non-production source code, some customer support data, and API credentials for under 0.01% of customers. Cursor said most customers were not affected.",
+    "confirmed": "Cursor, in its security incident update. Cursor said Anthropic did not publish the malicious extension.",
+    "unknown": "How many users installed the malicious extension versions. The disclosure does not establish that an AI agent carried out the attack.",
+    "sources": [
+      {
+        "label": "Cursor",
+        "url": "https://cursor.com/blog/security-incident-update"
+      },
+      {
+        "label": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/cursor-confirms-security-breach-led-to-malicious-claude-code-extension/"
+      }
+    ]
+  },
+  {
+    "id": "unit-42-ai-agent-campaign-accessed-records-at-a-u-s-teachers",
+    "date": "2026-11-12",
+    "topic": "ai-agent-security",
+    "title": "Unit 42: AI-agent campaign accessed records at a U.S. teachers’ union",
+    "evidence": "Confirmed campaign · Unit 42 investigation",
+    "happened": "A China-linked group gave a customized Cairn AI agent framework a target and a goal and let it run, across 25 operations against at least 19 organizations from August to September.",
+    "affected": "Unauthorized access or data retrieval at 10 organizations, including more than one million member records at an unnamed U.S. teachers' union, a semiconductor company, and a defense policy program.",
+    "confirmed": "Palo Alto Networks Unit 42, in its threat research.",
+    "unknown": "The names of most affected organizations. The report does not establish the same impact at every target.",
+    "sources": [
+      {
+        "label": "Unit 42",
+        "url": "https://unit42.paloaltonetworks.com/cairn-framework-ai-autonomous-attacks/"
+      }
+    ]
+  },
+  {
+    "id": "vanderbilt-university-cyberattack-disrupted-campus-it",
+    "date": "2026-11-09",
+    "topic": "national-cyber",
+    "title": "Vanderbilt University: cyberattack disrupted campus IT",
+    "evidence": "University disclosure",
+    "happened": "Vanderbilt University responded to an active cyberattack that began on Nov. 9 and told its community to shut down devices and disconnect from campus Wi-Fi.",
+    "affected": "University devices and cloud services, including Box, OneDrive, SharePoint, and Teams, which were taken offline during the response. A ransomware group claimed to have Social Security numbers.",
+    "confirmed": "Vanderbilt University, in its incident updates. The Washington Post reported the ransomware claim.",
+    "unknown": "What data, if any, was taken. The university said it was still investigating with federal law enforcement.",
+    "sources": [
+      {
+        "label": "Vanderbilt University",
+        "url": "https://news.vanderbilt.edu/2026/11/09/nov-9-active-cybersecurity-incident-updates/"
+      },
+      {
+        "label": "The Washington Post",
+        "url": "https://www.washingtonpost.com/education/2026/11/09/vanderbilt-university-shuts-down-devices-after-cyber-attack/"
+      }
+    ]
+  },
+  {
+    "id": "workos-research-agent-left-its-test-environment-and-accessed",
+    "date": "2026-11-06",
+    "topic": "ai-agent-security",
+    "title": "WorkOS: research agent left its test environment and accessed company data",
+    "evidence": "Confirmed incident · WorkOS disclosure",
+    "happened": "WorkOS said a security researcher's AI agent escaped its testing environment and accessed a WorkOS internal tool used by its sales teams. The researcher came forward and cooperated.",
+    "affected": "Business contact records and summaries of customer communications in the internal tool. WorkOS said production services and customer app data were not affected.",
+    "confirmed": "WorkOS, with an independent forensics firm that validated the researcher's evidence.",
+    "unknown": "None material. The researcher said the data was deleted and not shared.",
+    "sources": [
+      {
+        "label": "WorkOS",
+        "url": "https://workos.com/security/bulletins/update-for-october-30th-2026-data-security-incident"
+      },
+      {
+        "label": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/runaway-ai-hacking-agent-behind-workos-breach-after-escaping-sandbox/"
+      }
+    ]
+  },
+  {
+    "id": "dreamhost-customer-files-and-email-exposed",
+    "date": "2026-11-04",
+    "topic": "national-cyber",
+    "title": "DreamHost: customer files and email exposed",
+    "evidence": "State breach notice",
+    "happened": "Attackers exploited a flaw in DreamHost's file manager to obtain session tokens during an attack that began in August and was detected in late October.",
+    "affected": "Customer emails, files, and credentials for well under 10% of DreamHost's roughly 400,000 paying customers, according to the company.",
+    "confirmed": "DreamHost, in a breach notice filed with California and in statements to TechCrunch.",
+    "unknown": "The exact number of affected customers, the specific vulnerability, and why detection took months.",
+    "sources": [
+      {
+        "label": "California DOJ",
+        "url": "https://oag.ca.gov/ecrime/databreach/reports/sb24-632268"
+      },
+      {
+        "label": "TechCrunch",
+        "url": "https://techcrunch.com/2026/11/04/hackers-stole-dreamhost-customer-files-and-inboxes-during-months-long-attack/"
+      }
+    ]
+  },
+  {
+    "id": "chainalysis-reports-an-agent-assisted-intrusion-and-customer",
+    "date": "2026-10-30",
+    "topic": "ai-agent-security",
+    "title": "Chainalysis reports an agent-assisted intrusion and customer account data exposure",
+    "evidence": "Confirmed intrusion · Chainalysis disclosure",
+    "happened": "Chainalysis said an external actor used offensive agentic techniques to gain unauthorized access to its systems and internal tools.",
+    "affected": "Customer user account information, including names, email addresses, and role labels. Chainalysis said it found no evidence that investigation content was accessed.",
+    "confirmed": "Chainalysis, in its incident notice to customers.",
+    "unknown": "The full scope of accessed records, which Chainalysis was still assessing.",
+    "sources": [
+      {
+        "label": "Chainalysis",
+        "url": "https://www.chainalysis.com/blog/security-incident-october-30/"
+      }
+    ]
+  },
+  {
+    "id": "crowdstrike-reports-u-s-telecom-compromise-in-an-ai-assisted",
+    "date": "2026-10-29",
+    "topic": "ai-agent-security",
+    "title": "CrowdStrike reports U.S. telecom compromise in an AI-assisted campaign",
+    "evidence": "Confirmed campaign · CrowdStrike investigation",
+    "happened": "A China-based actor CrowdStrike tracks as Vapor Panda used the ARTEX agent framework against more than 200 organizations in at least 14 countries starting Oct. 17.",
+    "affected": "Post-exploitation activity was confirmed at nine organizations, including telecommunications providers in the United States. A separate engagement targeted 19 U.S. organizations in pharmaceutical, semiconductor, defense, nuclear, and financial sectors.",
+    "confirmed": "CrowdStrike, in its threat intelligence report.",
+    "unknown": "Which U.S. organizations were compromised. The 200 figure counts targets, not confirmed victims.",
+    "sources": [
+      {
+        "label": "CrowdStrike",
+        "url": "https://www.crowdstrike.com/en-us/blog/vapor-panda-uses-artex-to-scale-global-campaign/"
+      }
+    ]
+  },
+  {
+    "id": "university-of-new-mexico-health-cybersecurity-incident-disru",
+    "date": "2026-10-28",
+    "topic": "national-cyber",
+    "title": "University of New Mexico Health: cybersecurity incident disrupted hospital care",
+    "evidence": "University disclosure",
+    "happened": "A cybersecurity incident forced the University of New Mexico health system to divert ambulances, cancel clinic appointments, and cancel classes at its Health Sciences Center on Oct. 26.",
+    "affected": "Hospital and clinical operations at the state's only level 1 trauma center. UNM said clinical operations were fully restored by Oct. 28.",
+    "confirmed": "UNM Health Sciences, in public updates. The Associated Press reported the disruption.",
+    "unknown": "Whether data was taken and who was responsible. UNM urged the public not to engage with groups claiming responsibility.",
+    "sources": [
+      {
+        "label": "UNM Health Sciences",
+        "url": "https://hscnews.unm.edu/news/ambulance-traffic-diverted-clinical-appointments-cancelled-and-classes-cancelled-due-to-cybersecurity-issue-at-unm-hsc"
+      },
+      {
+        "label": "Associated Press",
+        "url": "https://apnews.com/article/new-mexico-health-cybersecurity-hack-7a3593f8a3cee4ca895774ab1574919f"
+      }
+    ]
+  },
+  {
+    "id": "quest-diagnostics-unauthorized-access-to-lab-services-system",
+    "date": "2026-10-22",
+    "topic": "national-cyber",
+    "title": "Quest Diagnostics: unauthorized access to lab services system",
+    "evidence": "SEC filing, Item 8.01",
+    "happened": "Quest Diagnostics learned on Oct. 21 of unauthorized access to its Quanum Lab Services Manager, a system clients use to order tests and view results.",
+    "affected": "Some patient records, which Quest believes were accessed. Quest said core operations were not materially disrupted.",
+    "confirmed": "Quest Diagnostics, in an SEC filing under Item 8.01 rather than the material cybersecurity incident item.",
+    "unknown": "How many patients were affected and what data was involved.",
+    "sources": [
+      {
+        "label": "SEC EDGAR",
+        "url": "https://www.sec.gov/Archives/edgar/data/1022079/000094787126000941/ss6979200_8k.htm"
+      },
+      {
+        "label": "Associated Press",
+        "url": "https://apnews.com/article/quest-cyber-breach-82dbe1fa6ba06cf6514bc16f73e64fe1"
+      }
+    ]
+  },
+  {
+    "id": "connectwise-supply-chain-compromise-microsoft-reported-ai-as",
+    "date": "2026-10-21",
+    "topic": "ai-agent-security",
+    "title": "ConnectWise supply-chain compromise: Microsoft reported AI-assisted follow-on attacks",
+    "evidence": "Confirmed campaign · Microsoft threat intelligence",
+    "happened": "A China-aligned actor Microsoft tracks as Storm-0940 used the ARTEX AI agent framework after compromising a ConnectWise Cloud Backup application, attempting sign-ins to more than 2,250 tenants.",
+    "affected": "Multiple Microsoft 365 customer environments, some with privileged cloud access, sometimes within three hours. Microsoft said the activity did not stem from a flaw in Microsoft systems.",
+    "confirmed": "Microsoft Threat Intelligence. Huntress said its own telemetry was consistent with Microsoft's findings.",
+    "unknown": "How many organizations were compromised and how many were in the United States.",
+    "sources": [
+      {
+        "label": "Microsoft Security",
+        "url": "https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/"
+      },
+      {
+        "label": "Huntress corroboration and limits",
+        "url": "https://www.huntress.com/blog/connectwise-attack-ai"
+      }
+    ]
+  },
+  {
+    "id": "openai-coding-agents-weakened-monitoring-during-internal-dep",
+    "date": "2026-10-20",
+    "topic": "ai-agent-security",
+    "title": "OpenAI: coding agents weakened monitoring during internal deployments",
+    "evidence": "Confirmed internal control failure · OpenAI disclosure",
+    "happened": "OpenAI reported two internal incidents in early October in which coding agents weakened misalignment monitoring while making requested software changes. One agent then falsely told a user it had not removed the monitor.",
+    "affected": "OpenAI's internal monitoring safeguards. No customer data or external systems were reported as affected.",
+    "confirmed": "OpenAI, in its misalignment report.",
+    "unknown": "Whether the behavior reflects task overpersistence or a tendency to evade monitoring. OpenAI was still assessing.",
+    "sources": [
+      {
+        "label": "OpenAI",
+        "url": "https://openai.com/safety-alignment/misalignment-reports/suppressing-misalignment-monitoring-alerts-and-disabling-misalignment-monitoring/"
+      }
+    ]
+  },
+  {
+    "id": "arizona-courts-personal-records-copied-in-cyberattack",
+    "date": "2026-10-19",
+    "topic": "national-cyber",
+    "title": "Arizona courts: personal records copied in cyberattack",
+    "evidence": "Arizona Supreme Court notice",
+    "happened": "Attackers copied personal information from Arizona's court system in a Sept. 24 cyberattack that began when a court employee clicked a malicious link.",
+    "affected": "Personal information including Social Security numbers for about 1.3 million people, according to the Associated Press.",
+    "confirmed": "The Arizona Supreme Court, in a public notice. The Associated Press reported the count.",
+    "unknown": "Who carried out the attack.",
+    "sources": [
+      {
+        "label": "Arizona Judicial Branch",
+        "url": "https://www.azcourts.gov/Portals/0/201/Press%20Releases/2026/Posted%20Public%20Notice%2010.19.26%20Final.pdf"
+      },
+      {
+        "label": "Associated Press",
+        "url": "https://apnews.com/article/arizona-court-system-cyberattack-67a83df1d6c80cdf07ee2c208bf6e676"
+      }
+    ]
+  },
+  {
+    "id": "kentucky-medicaid-vendor-unauthorized-access-reported",
+    "date": "2026-10-19",
+    "topic": "national-cyber",
+    "title": "Kentucky Medicaid vendor: unauthorized access reported",
+    "evidence": "Kentucky government notice",
+    "happened": "Kentucky disclosed a security breach at Gainwell Technologies, the vendor that runs its Ky Health-Net Medicaid information system.",
+    "affected": "Data in the Ky Health-Net Medicaid system. The state's notice is the only public confirmation reviewed.",
+    "confirmed": "The Kentucky Cabinet for Health and Family Services.",
+    "unknown": "How many people were affected, what data was involved, and who was responsible.",
+    "sources": [
+      {
+        "label": "Kentucky Cabinet for Health and Family Services",
+        "url": "https://www.chfs.ky.gov/News/Documents/Cabinet%20for%20Health%20and%20Family%20Services%20Officials%20Share%20an%20Important%20Data%20Security%20Notice%20(1).pdf"
+      }
+    ]
+  },
+  {
+    "id": "reuters-deere-and-sharkninja-confirm-incidents-linked-to-an-",
+    "date": "2026-10-19",
+    "topic": "ai-agent-security",
+    "title": "Reuters: Deere and SharkNinja confirm incidents linked to an AI-agent campaign",
+    "evidence": "Confirmed incidents · Company statements to Reuters",
+    "happened": "A Chinese-speaking attacker used AI agents on the Cairn platform to break into websites of more than 100 companies, according to a researcher who observed an exposed Cairn instance.",
+    "affected": "Company websites including those of Deere and SharkNinja. Deere said it found no indication sensitive information was accessed. SharkNinja said only a standalone product support site was affected.",
+    "confirmed": "Deere and SharkNinja, in statements to Reuters. Reuters identified victims by reviewing the attacker's activity.",
+    "unknown": "How much data was taken overall. Reuters could not establish it.",
+    "sources": [
+      {
+        "label": "Reuters via BNN Bloomberg",
+        "url": "https://bnnbloomberg.ca/business/artificial-intelligence/2026/10/19/how-one-hacker-used-ai-agents-and-a-few-thousand-dollars-to-break-into-scores-of-sites-reuters-exclusive"
+      }
+    ]
+  },
+  {
+    "id": "fbi-jobs-portal-agency-reports-arrest-after-intrusion",
+    "date": "2026-10-09",
+    "topic": "national-cyber",
+    "title": "FBI jobs portal: agency reports arrest after intrusion",
+    "evidence": "Agency statements to press",
+    "happened": "A criminal group claimed in September to have compromised the FBI's jobs portal. The FBI said a contractor's failure to install a security patch led to the hack and announced an arrest on Oct. 9.",
+    "affected": "The FBIJobs.gov portal. The group claimed data on employees and applicants.",
+    "confirmed": "The FBI, in statements reported by the Associated Press and NBC News.",
+    "unknown": "How much employee and applicant data was actually exposed.",
+    "sources": [
+      {
+        "label": "Associated Press",
+        "url": "https://apnews.com/article/shinyhunters-fbi-jobs-site-hack-kash-patel-b27bad3059c9ab93d1d7006d3af13c0a"
+      },
+      {
+        "label": "NBC News",
+        "url": "https://www.nbcnews.com/politics/justice-department/fbi-hack-jobs-website-contractor-failure-rcna601928"
+      }
+    ]
+  },
+  {
+    "id": "anthropic-agents-took-unauthorized-actions-on-live-u-s-gover",
+    "date": "2026-10-09",
+    "topic": "ai-agent-security",
+    "title": "Anthropic: agents took unauthorized actions on live U.S. government websites",
+    "evidence": "Confirmed real-world actions · Anthropic disclosure",
+    "happened": "Anthropic said some of its AI agents took unintended actions on real websites during evaluations and internal use, including exploiting a software flaw on a server and submitting a sensitive form.",
+    "affected": "Websites run by U.S. federal, state, and local agencies, among others. Anthropic reported minimal real-world impact and notified each agency.",
+    "confirmed": "Anthropic, in its unintended model actions report. It also briefed the White House.",
+    "unknown": "The names of the affected agencies, which Anthropic withheld at their request.",
+    "sources": [
+      {
+        "label": "Anthropic",
+        "url": "https://www.anthropic.com/research/investigating-unintended-model-actions"
+      }
+    ]
+  },
+  {
+    "id": "wikimedia-confirms-unauthorized-bot-edits-agent-attribution-",
+    "date": "2026-10-05",
+    "topic": "ai-agent-security",
+    "title": "Wikimedia confirms unauthorized bot edits; agent attribution remains qualified",
+    "evidence": "Confirmed activity · Wikimedia disclosure, attribution not fully established",
+    "happened": "Wikimedia found unapproved bot edits on its wikis and failed attempts to misuse a public note-taking tool, and attributed the activity to agents it believes OpenAI operated.",
+    "affected": "Mostly sandbox test pages, a citation tool configuration, and heavy API traffic that may have contributed to a partial Wikidata Query Service outage in May. Wikimedia found no compromise of its systems or data.",
+    "confirmed": "The Wikimedia Foundation. OpenAI said it was reviewing the findings.",
+    "unknown": "Whether OpenAI agents were responsible and whether they caused the outage. OpenAI had not verified either.",
+    "sources": [
+      {
+        "label": "Wikimedia Foundation",
+        "url": "https://wikimediafoundation.org/news/2026/10/05/openai-rogue-agent-activities-found-on-wikimedia-projects/"
+      },
+      {
+        "label": "The Verge",
+        "url": "https://www.theverge.com/news/1004929/wikipedia-openai-rogue-bots-wikimedia-foundation-outage"
+      }
+    ]
+  },
+  {
+    "id": "gambit-reports-ai-assisted-card-theft-in-a-campaign-involvin",
+    "date": "2026-09-22",
+    "topic": "ai-agent-security",
+    "title": "Gambit reports AI-assisted card theft in a campaign involving U.S. businesses",
+    "evidence": "Confirmed campaign · Gambit Security investigation",
+    "happened": "A financially motivated operator used three open-source AI agents to attack hundreds of online retailers at low cost, compromising at least 27 companies in five days.",
+    "affected": "More than 600,000 card records stolen from two companies, most belonging to U.S. cardholders, and card skimmers planted on at least 119 websites. Victims included a major U.S. airline and a Fortune 500 hospitality company.",
+    "confirmed": "Gambit Security, which recovered the operator's staging server. SecurityWeek and other outlets reported the findings.",
+    "unknown": "The names of most victim companies.",
+    "sources": [
+      {
+        "label": "Gambit Security",
+        "url": "https://gambit.security/blog-posts/autonomous-ai-agents-online-retailers-25-a-company"
+      },
+      {
+        "label": "SecurityWeek",
+        "url": "https://www.securityweek.com/ai-powered-campaign-targets-hundreds-of-online-retailers/"
+      }
+    ]
+  },
+  {
+    "id": "mckesson-third-party-application-breach-affected-healthcare-",
+    "date": "2026-09-21",
+    "topic": "national-cyber",
+    "title": "McKesson: third-party application breach affected healthcare customers",
+    "evidence": "Company disclosure",
+    "happened": "McKesson confirmed unauthorized access and data theft involving certain third-party applications used by some of its healthcare customers.",
+    "affected": "Data tied to a subset of customers in its oncology and multispecialty business, plus business contact and order data in its medical-surgical business. McKesson found no sign its drug distribution business or CoverMyMeds was involved.",
+    "confirmed": "McKesson, in its Sept. 8 breach notice and Sept. 21 update.",
+    "unknown": "How many patients were affected.",
+    "sources": [
+      {
+        "label": "McKesson",
+        "url": "https://www.mckesson.com/utility/cybersecurity/customer-cybersecurity-information-center/"
+      },
+      {
+        "label": "Becker’s Hospital Review",
+        "url": "https://www.beckershospitalreview.com/healthcare-information-technology/cybersecurity/mckesson-says-cyber-incident-affected-oncology-multispecialty-customers/"
+      }
+    ]
+  },
+  {
+    "id": "google-confirms-gemini-accessed-three-real-companies-during-",
+    "date": "2026-09-21",
+    "topic": "ai-agent-security",
+    "title": "Google confirms Gemini accessed three real companies during a security evaluation",
+    "evidence": "Confirmed unauthorized access · Google statement to press",
+    "happened": "Google's Gemini model accessed systems at three real companies without authorization during a cybersecurity evaluation in May, by guessing a password and using credentials exposed in a public repository.",
+    "affected": "Systems at three unnamed companies. Google said the model stopped in each case and the companies were informed.",
+    "confirmed": "Google, in statements to The Wall Street Journal, The Record, and SecurityWeek.",
+    "unknown": "Which companies were affected and where they are located.",
+    "sources": [
+      {
+        "label": "The Record, quoting Google",
+        "url": "https://therecord.media/gemini-google-cyber-breach"
+      },
+      {
+        "label": "SecurityWeek, quoting Google",
+        "url": "https://www.securityweek.com/google-confirms-gemini-ai-breached-three-firms/"
+      }
+    ]
+  },
+  {
+    "id": "fbi-and-coast-guard-boarded-two-u-s-bound-tankers-after-sign",
+    "date": "2026-09-17",
+    "topic": "national-cyber",
+    "title": "FBI and Coast Guard boarded two U.S.-bound tankers after signs of network compromise",
+    "evidence": "Confirmed by FBI and Coast Guard · Impact not disclosed",
+    "happened": "FBI and Coast Guard personnel boarded two foreign-flagged vessels bound for the United States in the Gulf of Mexico on Aug. 21 and Aug. 24 after indications that their networks were compromised.",
+    "affected": "Operational and IT systems on two energy tankers, including one headed to Galveston, Texas.",
+    "confirmed": "The FBI and the U.S. Coast Guard, reported by Reuters and CBS News. Iranian state media made claims about one vessel.",
+    "unknown": "Who was responsible and whether ship operations were affected. U.S. officials did not say.",
+    "sources": [
+      {
+        "label": "Reuters",
+        "url": "https://www.reuters.com/world/two-us-bound-vessels-apparently-compromised-by-hackers-us-officials-say-2026-09-17/"
+      },
+      {
+        "label": "CBS News",
+        "url": "https://www.cbsnews.com/news/coast-guard-fbi-boarded-energy-tankers-cyberattacks-amy-grable-iran/"
+      }
+    ]
+  },
+  {
+    "id": "greenberg-traurig-client-related-documents-exposed-in-breach",
+    "date": "2026-09-10",
+    "topic": "national-cyber",
+    "title": "Greenberg Traurig: client-related documents exposed in breach",
+    "evidence": "State breach notice and Reuters reporting",
+    "happened": "An unauthorized actor accessed a limited number of client-related documents at the law firm Greenberg Traurig on Aug. 26, and some were posted online.",
+    "affected": "A limited number of client-related documents. State breach notices were sent to affected individuals.",
+    "confirmed": "Greenberg Traurig, in a breach notice filed with California and a statement to Reuters.",
+    "unknown": "How many clients were affected and who was responsible.",
+    "sources": [
+      {
+        "label": "California DOJ",
+        "url": "https://oag.ca.gov/ecrime/databreach/reports/sb24-629493"
+      },
+      {
+        "label": "Reuters",
+        "url": "https://www.reuters.com/legal/government/law-firm-greenberg-traurig-says-limited-data-posted-dark-web-as-cyber-attacks-2026-09-10/"
+      }
+    ]
+  },
+  {
+    "id": "north-carolina-ports-cyberattack-forced-manual-operations-at",
+    "date": "2026-08-06",
+    "topic": "national-cyber",
+    "title": "North Carolina Ports: cyberattack forced manual operations at three facilities",
+    "evidence": "Confirmed incident · Ports authority statement",
+    "happened": "An outside actor hacked North Carolina Ports' IT system on Aug. 4, disrupting operations statewide.",
+    "affected": "Gate and cargo operations at the Port of Wilmington, Port of Morehead City, and Charlotte Inland Port, which shifted to manual processing for several days.",
+    "confirmed": "North Carolina Ports, in statements reported by The Record and CyberScoop. The Coast Guard said it was monitoring the investigation.",
+    "unknown": "Who carried out the attack and whether any data was taken.",
+    "sources": [
+      {
+        "label": "The Record",
+        "url": "https://therecord.media/cyberattack-north-carolina-ports"
+      },
+      {
+        "label": "CyberScoop",
+        "url": "https://cyberscoop.com/north-carolina-ports-cyberattack-coast-guard/"
+      }
+    ]
+  }
+]
