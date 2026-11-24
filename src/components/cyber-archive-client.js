@@ -1,4 +1,5 @@
 import { onCyberFeed } from './cyber-live-state.js';
+import { breakingStoryKey, indexReport, matchesReport, normalize } from './cyber-archive-index.js';
 
 const archiveEndpoint = '/cybersecurity-data/archive-snapshot.json';
 const typeNames = { news:'Breaking report', filing:'SEC filing', agency:'Law enforcement announcement', incident:'National incident', breach:'Breach notice', advisory:'Advisory', kev:'Exploited vulnerability' };
@@ -13,7 +14,6 @@ const archiveHosts = {
 };
 const dayMs = 86_400_000;
 const pageSize = 12;
-const normalize = (s) => s.normalize('NFKC').toLowerCase().replace(/[^\p{L}\p{N}]+/gu,' ').trim();
 
 function archiveLink(item) {
   try {
@@ -62,6 +62,8 @@ async function initArchive(root) {
   function setItems(recent=[]) {
     const sharedListings=new Set(['or','vt','hhs','ma','tx','in','il']);
     const key=i=>{
+      const story=breakingStoryKey(i);
+      if(story) return story;
       const u=new URL(i.url);
       const keyedByRecord=!sharedListings.has(i.sourceId) && !['/','/privacy/databreach/list','/identity-theft-unit/security-breach-notices','/consumer-protection/security-breaches/','/data-breach-notifications'].includes(u.pathname);
       return keyedByRecord ? `${i.sourceId}:${u.hostname}${u.pathname.replace(/\/$/,'')}${u.search}` : `${i.sourceId}:${normalize(i.title)}:${i.date.slice(0,10)}`;
@@ -73,7 +75,7 @@ async function initArchive(root) {
       collected.set(k,prior ? {...i,...prior,topic:prior.topic || i.topic} : i);
     }
     items=[...collected.values()].sort((a,b)=>Date.parse(b.date)-Date.parse(a.date))
-      .map(i=>({...i,searchText:normalize(`${i.title} ${i.source} ${typeNames[i.kind]} ${i.note ?? ''} ${i.evidence ?? ''} ${i.topic === 'ai-agent-security' ? 'AI agent security' : i.topic === 'national-cyber' ? 'National cyber incident' : ''}`)}));
+      .map(i=>({...i,searchText:indexReport(i,`${i.title} ${i.source} ${typeNames[i.kind]} ${i.note ?? ''} ${i.evidence ?? ''} ${i.topic === 'ai-agent-security' ? 'AI agent security' : i.topic === 'national-cyber' ? 'National cyber incident' : ''}`)}));
     const known=new Set([...source.options].map(o=>o.value));
     for(const [k,label] of new Map(items.map(i=>[i.sourceId,i.source]))) {
       if (!known.has(k)) source.add(new Option(label,k));
@@ -83,10 +85,10 @@ async function initArchive(root) {
   control.hidden=false;
   let limit=pageSize;
   function render(focusIndex=-1) {
-    const phrase=normalize(query.value).split(' ').filter(Boolean);
+    const phrase=query.value;
     const since=now-Number(days.value)*dayMs;
     const match=items.filter(i=>(!kind.value || i.kind===kind.value) && (!source.value || i.sourceId===source.value) &&
-      (!topic.value || i.topic===topic.value) && Date.parse(i.date)>=since && phrase.every(t=>i.searchText.includes(t)));
+      (!topic.value || i.topic===topic.value) && Date.parse(i.date)>=since && matchesReport(i.searchText,phrase));
     const visible=match.slice(0,limit);
     results.replaceChildren(...visible.map(reportRow));
     more.hidden=match.length<=limit;
