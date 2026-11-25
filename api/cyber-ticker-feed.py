@@ -62,6 +62,22 @@ TRUSTED_OUTLETS = {o.lower() for o in [
     '404 Media', 'Engadget', 'Newsweek', 'Forbes', 'Business Insider', 'Fortune', 'TIME', 'Time', 'Gizmodo', 'Semafor',
     'The Daily Beast', 'Breitbart', 'NewsNation', 'Scripps News', 'Spectrum News', 'ProPublica', 'The Guardian US', 'MarketWatch',
     'Barron\'s', 'Yahoo', 'Yahoo News', 'Yahoo Finance', 'MSN', 'Newsmax', 'Washington Examiner', 'National Review', 'Vox']}
+# Google News is a discovery feed. Only outlets approved for normally open access
+# can supply a public link. Access policies can change; this is not a live paywall detector.
+OPEN_NEWS_OUTLETS = {name.casefold() for name in (
+    'AP News', 'Associated Press', 'CNN', 'NBC News', 'CBS News', 'ABC News', 'NPR', 'PBS',
+    'The Hill', 'CNBC', 'Fox News', 'Fox Business', 'Scripps News', 'NewsNation',
+    'BleepingComputer', 'The Record', 'The Record from Recorded Future News', 'SecurityWeek',
+    'CyberScoop', 'Cybersecurity Dive', 'The Register', 'Federal News Network', 'StateScoop',
+    'Government Technology', 'GovTech', 'Healthcare Dive', 'The HIPAA Journal', 'HIPAA Journal',
+    'TechCrunch', 'Help Net Security', 'Krebs on Security', 'The Hacker News',
+)}
+
+
+def open_news_link(row):
+    return row['sourceId'] not in GOOGLE_NEWS_SOURCES or row['source'].casefold() in OPEN_NEWS_OUTLETS
+
+
 US_PLACES = ('Alabama|Alaska|Arizona|Arkansas|California|Colorado|Connecticut|Delaware|Florida|Georgia|Hawaii|Idaho|Illinois|Indiana|'
              'Iowa|Kansas|Kentucky|Louisiana|Maine|Maryland|Massachusetts|Michigan|Minnesota|Mississippi|Missouri|Montana|Nebraska|'
              'Nevada|New Hampshire|New Jersey|New Mexico|New York|North Carolina|North Dakota|Ohio|Oklahoma|Oregon|Pennsylvania|'
@@ -401,8 +417,11 @@ def cluster_news(rows):
             groups.append([row, set(words), [row]])
     out = []
     for _, _, members in groups:
-        trusted = [m for m in members if (m['source'] or '').lower() in TRUSTED_OUTLETS]
-        lead = (trusted or members)[0]
+        eligible = [m for m in members if open_news_link(m)]
+        if not eligible:
+            continue
+        direct = [m for m in eligible if m['sourceId'] not in GOOGLE_NEWS_SOURCES]
+        lead = (direct or eligible)[0]
         outlets = [lead['source']]
         for m in members:
             if m['source'] not in outlets:
@@ -465,7 +484,17 @@ def make_snapshot(seed, results, old_records, now, previous_success=None):
         if fresh is not None:
             daily_rows.extend(shaped)
         items.extend([i for i in shaped if public_report(i)][:2])
-    breaking = [r for r in cluster_news(news_rows) if public_report(r)]
+    public_disclosures = [i for i in seed.get('publicBreakingReports', [])
+                          if now - 3 * DAY <= timestamp(i['date']) <= now and public_report(i)]
+    # A dated, editorially matched primary source supersedes media copies of that disclosure.
+    for disclosure in public_disclosures:
+        news_rows = [i for i in news_rows if not (
+            abs(timestamp(i['date']) - timestamp(disclosure['date'])) <= DAY
+            and any(name in i['title'].casefold() for name in disclosure['supersedes'])
+            and NEWS_EVENT.search(i['title'])
+        )]
+    breaking = sorted([*public_disclosures, *(r for r in cluster_news(news_rows) if public_report(r))],
+                      key=lambda i: timestamp(i['date']), reverse=True)
     archive_rows.extend(breaking[:40])
     other = sorted(items, key=lambda i: timestamp(i['date']), reverse=True)
     # Give each automatically checked source with recent rows a slot before filling by date.
@@ -483,7 +512,8 @@ def make_snapshot(seed, results, old_records, now, previous_success=None):
     return (dict(version=2, generatedAt=stamp, lastSuccessfulCheck=last_success, archiveAsOf=seed['generatedAt'],
                  live=True, cachedMinutes=15, sources=health, items=selected[:24],
                  failedSources=failures, connectedSources=len(SOURCES), feedHealth=feed_health, recentReports=archive_rows,
-                 dailyBrief=build_daily_brief(now, recovered_count, daily_rows, public_report)), records, last_success)
+                 dailyBrief=build_daily_brief(now, recovered_count, [*daily_rows, *public_disclosures],
+                                             lambda i: public_report(i) and open_news_link(i))), records, last_success)
 
 
 class handler(BaseHTTPRequestHandler):

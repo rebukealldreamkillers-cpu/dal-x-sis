@@ -7,6 +7,7 @@ import CyberNumbers from '../components/CyberNumbers.astro';
 import CyberSourceBank from '../components/CyberSourceBank.astro';
 import StateCoverage from '../components/StateCoverage.astro';
 import reviewed from '../data/reviewedIncidents.json';
+const accessLabel = (url: string) => /^(?:www\.)?(?:theverge\.com|washingtonpost\.com|bloomberg\.com|ft\.com|reuters\.com|forbes\.com)$/.test(new URL(url).hostname) ? ' (may require subscription)' : '';
 const topicLabel = (t: string) => t === 'ai-agent-security' ? 'AI agent security' : 'National cyber incident';
 ---
 <Base title="U.S. Cybersecurity Updates" description="National cyber incident reporting and a searchable archive of public breach notices and federal advisories.">
@@ -46,19 +47,19 @@ const topicLabel = (t: string) => t === 'ai-agent-security' ? 'AI agent security
             <div><dt>What is still unknown</dt><dd>{c.unknown}</dd></div>
           </dl>
           <div class="national-history">
-            <p class="national-latest"><span>{c.timeline.length > 1 ? 'Latest update' : 'First disclosed'}</span> <time datetime={c.lastUpdated}>{c.lastUpdated}</time> · <b>{c.timeline[c.timeline.length - 1].kind}.</b> {c.timeline[c.timeline.length - 1].fact} <a href={c.timeline[c.timeline.length - 1].source.url} target="_blank" rel="noopener noreferrer">{c.timeline[c.timeline.length - 1].source.label}</a></p>
+            <p class="national-latest"><span>{c.timeline.length > 1 ? 'Latest update' : 'First disclosed'}</span> <time datetime={c.lastUpdated}>{c.lastUpdated}</time> · <b>{c.timeline[c.timeline.length - 1].kind}.</b> {c.timeline[c.timeline.length - 1].fact} <a href={c.timeline[c.timeline.length - 1].source.url} target="_blank" rel="noopener noreferrer">{c.timeline[c.timeline.length - 1].source.label}{accessLabel(c.timeline[c.timeline.length - 1].source.url)}</a></p>
             {c.timeline.length > 1 && (
               <details>
                 <summary>How this story developed ({c.timeline.length} updates)</summary>
                 <ol class="national-timeline">
                   {[...c.timeline].reverse().map((t) => (
-                    <li><time datetime={t.date}>{t.date}</time><div><b>{t.kind}.</b> {t.fact} <span class="national-by">Established by <a href={t.source.url} target="_blank" rel="noopener noreferrer">{t.source.label}</a></span></div></li>
+                    <li><time datetime={t.date}>{t.date}</time><div><b>{t.kind}.</b> {t.fact} <span class="national-by">Established by <a href={t.source.url} target="_blank" rel="noopener noreferrer">{t.source.label}{accessLabel(t.source.url)}</a></span></div></li>
                   ))}
                 </ol>
               </details>
             )}
           </div>
-          <p class="national-links"><span>Sources</span>{c.sources.map((src) => <a href={src.url} target="_blank" rel="noopener noreferrer">{src.label}</a>)}</p>
+          <p class="national-links"><span>Sources</span>{c.sources.map((src) => <a href={src.url} target="_blank" rel="noopener noreferrer">{src.label}{accessLabel(src.url)}</a>)}</p>
           <div class="national-actions">
             <button type="button" data-copy-brief>Copy briefing</button>
             <button type="button" data-copy-link>Copy link</button>

@@ -5,7 +5,7 @@ import { breakingStoryKey, indexReport, matchesReport } from '../src/components/
 
 const archive = JSON.parse(readFileSync(new URL('../public/cybersecurity-data/archive-snapshot.json', import.meta.url), 'utf8'));
 const canonical = archive.items.find((row) => row.url === 'https://therecord.media/fbi-cyberattack-data-breach');
-const search = (row, query) => matchesReport(indexReport(row, `${row.title} ${row.source} ${row.note ?? ''}`), query);
+const search = (row, query) => matchesReport(indexReport(row, `${row.title} ${row.source} ${row.entity ?? ''} ${row.note ?? ''}`), query);
 
 test('all NCIC spellings find one November 23 breaking report in the saved archive', () => {
   for (const query of ['NCIC', 'FBI NCIC', 'National Crime Information Center', 'F.B.I. N.C.I.C.']) {
@@ -35,9 +35,9 @@ test('aliases apply across report types in both directions without matching insi
 });
 
 test('FinCEN and Treasury names find the November 24 incident disclosure once', () => {
-  const fincen = archive.items.filter((row) => row.sourceId === 'gnewsincident' && row.title.startsWith('US financial crimes bureau'));
+  const fincen = archive.items.filter((row) => row.sourceId === 'official-breaking' && row.title.startsWith('FinCEN'));
   assert.equal(fincen.length, 1);
   for (const query of ['FinCEN', 'Financial Crimes Enforcement Network', 'Treasury Department', 'BSA E-Filing']) {
-    assert.deepEqual(archive.items.filter((row) => search(row, query)).filter((row) => row.title.includes('financial crimes bureau')), fincen);
+    assert.deepEqual(archive.items.filter((row) => search(row, query)).filter((row) => row.title.startsWith('FinCEN')), fincen);
   }
 });

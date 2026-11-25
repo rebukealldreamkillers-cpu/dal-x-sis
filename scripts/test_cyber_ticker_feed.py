@@ -55,6 +55,17 @@ class NewsLinksTest(unittest.TestCase):
         self.assertIn('%22cybersecurity+incident%22', feed.SOURCES['gnewsincident'][1])
         self.assertIn('%22unauthorized+access%22', feed.SOURCES['gnewsincident'][1])
 
+    def test_public_breaking_links_exclude_subscription_only_coverage(self):
+        title = 'Example hospital confirms unauthorized access'
+        row = dict(title=title, url='https://news.google.com/rss/articles/example',
+                   date='2026-11-24T21:00:00+00:00', sourceId='gnewsincident', source='The Verge')
+        self.assertEqual(feed.cluster_news([row]), [])
+        public = dict(row, source='Associated Press')
+        self.assertEqual(feed.cluster_news([row, public])[0]['source'], 'Associated Press')
+        direct = dict(row, source='BleepingComputer', sourceId='bleeping',
+                      url='https://www.bleepingcomputer.com/news/security/example/')
+        self.assertEqual(feed.cluster_news([row, public, direct])[0]['url'], direct['url'])
+
 
 if __name__ == '__main__':
     unittest.main()
