@@ -1,4 +1,5 @@
 import { onCyberFeed } from './cyber-live-state.js';
+import { buildRollingBrief, mergeReporting } from './cyber-reporting-data.js';
 
 const dayFormatter=new Intl.DateTimeFormat('en-CA',{timeZone:'America/New_York',year:'numeric',month:'2-digit',day:'2-digit'});
 const dateFormatter=new Intl.DateTimeFormat('en-US',{timeZone:'UTC',month:'short',day:'numeric'});
@@ -62,7 +63,39 @@ function init(root){
     const warning=state.delayed||Date.now()-checkedAt>2*60*60_000 ? ' · Using saved check' : '';
     time.textContent=`Checked ${checkFormatter.format(checkedAt)}${problems>0?` · ${quantity(problems,'source excluded','sources excluded')}`:''}${warning}`;
   }
-  onCyberFeed(next=>{state=next;render();});
+  const archive = JSON.parse(document.querySelector('[data-numbers-json]').textContent);
+  let rollingKey;
+  function drawRolling({feed,delayed}) {
+    const key = `${feed?.generatedAt || archive.generatedAt}:${delayed}`;
+    if (key === rollingKey) return;
+    rollingKey = key;
+    const rolling = buildRollingBrief(mergeReporting(archive,feed));
+    for (const [field,value] of Object.entries({ period:rolling.period, headline:rolling.headline,
+      current:rolling.current.toLocaleString('en-US'), previous:rolling.previous.toLocaleString('en-US'),
+      'current-range':rolling.period,'prior-range':rolling.comparison,
+      change:rolling.change===null?'N/A':`${rolling.change>0?'+':''}${rolling.change}%` })) {
+      q(`[data-rolling-${field}]`).textContent=value;
+    }
+    const status=q('[data-rolling-status]');
+    status.textContent=!feed ? 'Using the saved archive.' : delayed || feed.failedSources?.length ?
+      `Using available records. ${feed.failedSources?.length ? `${feed.failedSources.length} live sources delayed.` : 'Live refresh delayed.'}` :
+      `Source check: ${checkFormatter.format(new Date(feed.generatedAt))}.`;
+    const bars=q('[data-rolling-bars]');
+    const peak=Math.max(1,...rolling.weeks.map(w=>w.count));
+    bars.style.setProperty('--rolling-weeks',rolling.weeks.length);
+    bars.replaceChildren(...rolling.weeks.map(w=>{
+      const item=document.createElement('li');item.tabIndex=0;
+      item.classList.toggle('is-peak',w.count===peak);item.classList.toggle('is-partial',w.partial);
+      item.style.setProperty('--h',`${w.count/peak*100}%`);
+      item.setAttribute('aria-label',`${w.range}: ${w.count} records${w.partial?', partial week':''}`);
+      for(const [cls,text] of [['bar',''],['tip',`${w.count} · ${w.range}`],['week',w.label]]){
+        const span=document.createElement('span');span.className=`brief__${cls}`;span.textContent=text;span.setAttribute('aria-hidden','true');item.append(span);
+      }
+      return item;
+    }));
+    q('[data-rolling-chart]').hidden=false;
+  }
+  onCyberFeed(next=>{state=next;drawRolling(next);render();});
   setInterval(()=>{if(dateKey()!==priorDate)render();},60_000);
   document.addEventListener('visibilitychange',()=>{if(!document.hidden && dateKey()!==priorDate)render();});
 }

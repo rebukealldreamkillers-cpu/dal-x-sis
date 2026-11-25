@@ -1,3 +1,7 @@
+import { buildNumbers } from './cyber-numbers-data.js';
+import { mergeReporting } from './cyber-reporting-data.js';
+import { onCyberFeed } from './cyber-live-state.js';
+
 const names={reviewed:'Reviewed entries',agent:'AI agent security',public:'Public records'};
 const count=new Intl.NumberFormat('en-US');
 const el=(tag,text='',cls='')=>{
@@ -10,7 +14,8 @@ const color=(i)=>`var(--chart-${i})`;
 const csvCell=(v)=>`"${String(v).replace(/"/g,'""')}"`;
 function init(root){
   const get=s=>root.querySelector(s);
-  const data=JSON.parse(get('[data-numbers-json]').textContent);
+  const archive=JSON.parse(get('[data-numbers-json]').textContent);
+  let data=buildNumbers(mergeReporting(archive));
   const scope=get('[data-numbers-scope]'), range=get('[data-numbers-window]');
   const bars=get('[data-numbers-bars]'), legend=get('[data-numbers-legend]'), table=get('[data-numbers-table]');
   const detailTitle=get('[data-numbers-detail-title]'), detailCount=get('[data-numbers-detail-count]');
@@ -35,7 +40,7 @@ function init(root){
         try{parsed=new URL(url);if(parsed.protocol!=='https:')continue;}catch{continue;}
         const a=el('a',title);a.href=parsed.href;a.target='_blank';a.rel='noopener noreferrer';a.append(el('small',source));examples.append(a);
       }
-    }else examples.append(el('p','No matching records in this week of the published archive.'));
+    }else examples.append(el('p','No matching records in this week.'));
     for(const [i,b] of Array.from(bars.children).entries()) b.setAttribute('aria-pressed',String(i===index));
   }
   function makeTable(chart){
@@ -91,6 +96,16 @@ function init(root){
     const link=el('a');link.href=url;link.download=`dal-x-${scope.value}-${range.value}d-${data.asOf}.csv`;root.append(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);
   });
   draw();panel.hidden=false;
+  let lastStamp;
+  onCyberFeed(({feed,delayed})=>{
+    const stamp=feed?.generatedAt;
+    get('[data-numbers-status]').textContent=!stamp ? 'Published archive through' : delayed || feed.failedSources?.length ? 'Latest available records through' : 'Archive and live records through';
+    if (!stamp || stamp===lastStamp) return;
+    lastStamp=stamp;
+    data=buildNumbers(mergeReporting(archive,feed));
+    const time=get('[data-numbers-asof]');time.dateTime=data.asOf;time.textContent=data.asOf;
+    draw();
+  });
 }
 
 document.querySelectorAll('[data-cyber-numbers]').forEach(init);

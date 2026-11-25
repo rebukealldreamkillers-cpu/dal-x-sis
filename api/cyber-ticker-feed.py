@@ -450,6 +450,7 @@ def make_snapshot(seed, results, old_records, now, previous_success=None):
     archive_rows = []
     feed_health = {}
     daily_rows = []
+    public_records = []
     recovered_count = 0
     news_rows = []
     for key, (label, _, _) in SOURCES.items():
@@ -465,10 +466,15 @@ def make_snapshot(seed, results, old_records, now, previous_success=None):
             current = prior[1] if prior else [i for i in seed['items'] if i['sourceId'] == key]
         else:
             recovered_count += 1
-            records[key] = (stamp, fresh[:100])
+            records[key] = (stamp, fresh[:100 if key in NEWS_SOURCES else 800])
             health[key] = dict(label=label, checkedAt=stamp, status='current')
             current = fresh
         kind = 'news' if key in NEWS_SOURCES else 'advisory' if key in ('ic3', 'advisory') else 'kev' if key == 'kev' else 'breach'
+        if key not in NEWS_SOURCES:
+            earliest = datetime.fromtimestamp(now, EASTERN).date() - timedelta(days=90)
+            latest = datetime.fromtimestamp(now, EASTERN).date()
+            public_records.extend(dict(clean_output(i), kind=kind, sourceId=key, source=label)
+                                  for i in current[:800] if earliest.isoformat() <= report_day(i['date']) <= latest.isoformat())
         recent = [i for i in current if now - 14 * DAY <= timestamp(i['date']) <= now + DAY]
         recent.sort(key=lambda i: timestamp(i['date']), reverse=True)
         feed_health[key] = dict(health[key], latestReportAt=current[0]['date'] if current else None)
@@ -511,7 +517,7 @@ def make_snapshot(seed, results, old_records, now, previous_success=None):
     last_success = stamp if recovered_count else previous_success
     return (dict(version=2, generatedAt=stamp, lastSuccessfulCheck=last_success, archiveAsOf=seed['generatedAt'],
                  live=True, cachedMinutes=15, sources=health, items=selected[:24],
-                 failedSources=failures, connectedSources=len(SOURCES), feedHealth=feed_health, recentReports=archive_rows,
+                 failedSources=failures, connectedSources=len(SOURCES), feedHealth=feed_health, recentReports=archive_rows, publicRecords=public_records,
                  dailyBrief=build_daily_brief(now, recovered_count, [*daily_rows, *public_disclosures],
                                              lambda i: public_report(i) and open_news_link(i))), records, last_success)
 
