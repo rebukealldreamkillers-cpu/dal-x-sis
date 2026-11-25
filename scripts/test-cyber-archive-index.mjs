@@ -35,7 +35,7 @@ test('aliases apply across report types in both directions without matching insi
 });
 
 test('FinCEN and Treasury names find the November 24 incident disclosure once', () => {
-  const fincen = archive.items.filter((row) => row.sourceId === 'official-breaking' && row.title.startsWith('FinCEN'));
+  const fincen = archive.items.filter((row) => row.sourceId === 'reviewed' && row.title.startsWith('FinCEN'));
   assert.equal(fincen.length, 1);
   for (const query of ['FinCEN', 'Financial Crimes Enforcement Network', 'Treasury Department', 'BSA E-Filing']) {
     assert.deepEqual(archive.items.filter((row) => search(row, query)).filter((row) => row.title.startsWith('FinCEN')), fincen);

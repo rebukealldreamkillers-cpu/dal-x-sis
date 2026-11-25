@@ -9,7 +9,7 @@ const archiveHosts = {
   id:['www.ag.idaho.gov'], sc:['consumer.sc.gov'], in:['www.in.gov'], tx:['oag.my.site.com'],
   mt:['dojmt.gov'], nh:['mm.nh.gov'], ri:['riag.ri.gov'], ne:['nebraska.gov'], il:['databreachnoticetoattorneygeneral.illinoisattorneygeneral.gov'],
   hhs:['ocrportal.hhs.gov'],ia:['www.iowaattorneygeneral.gov'],ma:['www.mass.gov'],sec:['www.sec.gov'],ic3:['www.ic3.gov'],doj:['www.justice.gov'],
-  reviewed:["apnews.com","bnnbloomberg.ca","cursor.com","cyberscoop.com","gambit.security","hscnews.unm.edu","news.vanderbilt.edu","oag.ca.gov","openai.com","thehill.com","therecord.media","unit42.paloaltonetworks.com","wikimediafoundation.org","workos.com","www.anthropic.com","www.azcourts.gov","www.bleepingcomputer.com","www.cbsnews.com","www.chainalysis.com","www.chfs.ky.gov","www.crowdstrike.com","www.ibtimes.co.uk","www.mckesson.com","www.microsoft.com","www.nbcnews.com","www.reuters.com","www.sec.gov"],
+  reviewed:["bsaefiling.fincen.gov","oit.colorado.gov","apnews.com","bnnbloomberg.ca","cursor.com","cyberscoop.com","gambit.security","hscnews.unm.edu","news.vanderbilt.edu","oag.ca.gov","openai.com","thehill.com","therecord.media","unit42.paloaltonetworks.com","wikimediafoundation.org","workos.com","www.anthropic.com","www.azcourts.gov","www.bleepingcomputer.com","www.cbsnews.com","www.chainalysis.com","www.chfs.ky.gov","www.crowdstrike.com","www.ibtimes.co.uk","www.mckesson.com","www.microsoft.com","www.nbcnews.com","www.reuters.com","www.sec.gov"],
   breach:['oag.ca.gov'], wa:['www.atg.wa.gov','agportal-s3bucket.s3.amazonaws.com'],
   or:['justice.oregon.gov'], vt:['ago.vermont.gov'], advisory:['www.cisa.gov'], kev:['www.cisa.gov'],
 };
@@ -70,8 +70,9 @@ async function initArchive(root) {
       return keyedByRecord ? `${i.sourceId}:${u.hostname}${u.pathname.replace(/\/$/,'')}${u.search}` : `${i.sourceId}:${normalize(i.title)}:${i.date.slice(0,10)}`;
     };
     const collected=new Map(saved.map(i=>[key(i),i]));
+    const reviewedUrls=new Set(saved.filter(i=>i.kind==='incident').map(i=>i.url));
     for(const i of recent.filter(valid)) {
-      if(i.sourceId==='reviewed' || i.kind==='incident')continue;
+      if(i.sourceId==='reviewed' || i.kind==='incident' || (i.kind==='news' && reviewedUrls.has(i.url)))continue;
       const k=key(i), prior=collected.get(k);
       collected.set(k,prior ? {...i,...prior,topic:prior.topic || i.topic} : i);
     }

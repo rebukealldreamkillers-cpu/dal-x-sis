@@ -1,5 +1,89 @@
 [
   {
+    "id": "fincen-confirms-unauthorized-access-and-takes-some-systems-offline",
+    "date": "2026-11-24",
+    "title": "FinCEN confirms unauthorized access and takes some systems offline",
+    "happened": "FinCEN said an unauthorized party accessed a limited subset of its systems. The bureau took some systems offline as a precaution.",
+    "affected": "The BSA E-Filing website remained operational, but some services could be unavailable. The Financial Institutions Hotline was not affected.",
+    "confirmed": "FinCEN confirmed unauthorized access in its BSA E-Filing alert. A separate November 24 order extended certain filing deadlines to December 30 because of a service disruption.",
+    "unknown": "Which systems were accessed, whether data was taken, when access began, and when all services will return. No public evidence links this incident to other recent federal reports.",
+    "sources": [
+      {
+        "label": "FinCEN BSA E-Filing alert",
+        "url": "https://bsaefiling.fincen.gov/"
+      },
+      {
+        "label": "FinCEN Order FIN-2026-R002",
+        "url": "https://www.fincen.gov/sites/default/files/100/ORDER-FIN-2026-R002.pdf"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2026-11-24",
+        "kind": "Disclosure",
+        "fact": "FinCEN confirmed unauthorized access to a limited subset of its systems and said some systems were taken offline.",
+        "source": {
+          "label": "FinCEN BSA E-Filing alert",
+          "url": "https://bsaefiling.fincen.gov/"
+        }
+      },
+      {
+        "date": "2026-11-24",
+        "kind": "Filing relief",
+        "fact": "FinCEN extended certain filings due November 18 through December 29 to December 30. The order cites a disruption and does not identify its cause.",
+        "source": {
+          "label": "FinCEN Order FIN-2026-R002",
+          "url": "https://www.fincen.gov/sites/default/files/100/ORDER-FIN-2026-R002.pdf"
+        }
+      }
+    ],
+    "topic": "national-cyber",
+    "evidence": "Confirmed unauthorized access",
+    "lastUpdated": "2026-11-24"
+  },
+  {
+    "id": "colorado-takes-mycolorado-digital-id-app-offline-after-unauthorized-access",
+    "date": "2026-11-23",
+    "title": "Colorado takes myColorado digital ID app offline after unauthorized access",
+    "happened": "The Colorado Office of Information Technology found unauthorized access to app data on November 18 and shut down the app to protect users while it investigated.",
+    "affected": "The state estimated that data for 50,000 to 150,000 people may have been affected. The estimate is not a confirmed count. The app had about 2.1 million users.",
+    "confirmed": "Colorado’s Office of Information Technology confirmed the access and shutdown. The Colorado Sun reported the app was still unavailable on November 24.",
+    "unknown": "Which data was accessed or copied, the final number of affected people, and when the app will return.",
+    "sources": [
+      {
+        "label": "Colorado Office of Information Technology",
+        "url": "https://oit.colorado.gov/press-releases/mycolorado-mobile-app-temporarily-unavailable-office-of-information-technology"
+      },
+      {
+        "label": "The Colorado Sun",
+        "url": "https://coloradosun.com/2026/11/24/mycolorado-digital-id-app-down-cyber-security-incident/"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2026-11-23",
+        "kind": "Disclosure",
+        "fact": "Colorado confirmed unauthorized access and published a preliminary estimate of 50,000 to 150,000 potentially affected people.",
+        "source": {
+          "label": "Colorado Office of Information Technology",
+          "url": "https://oit.colorado.gov/press-releases/mycolorado-mobile-app-temporarily-unavailable-office-of-information-technology"
+        }
+      },
+      {
+        "date": "2026-11-24",
+        "kind": "Service status",
+        "fact": "The app remained offline with no restoration date, and residents were advised to carry physical IDs.",
+        "source": {
+          "label": "The Colorado Sun",
+          "url": "https://coloradosun.com/2026/11/24/mycolorado-digital-id-app-down-cyber-security-incident/"
+        }
+      }
+    ],
+    "topic": "national-cyber",
+    "evidence": "Confirmed unauthorized access",
+    "lastUpdated": "2026-11-24"
+  },
+  {
     "id": "u-s-ports-report-a-surge-in-attempted-cyberattacks",
     "date": "2026-11-22",
     "topic": "national-cyber",

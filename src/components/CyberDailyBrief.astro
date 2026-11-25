@@ -1,52 +1,30 @@
 ---
-import analysis from '../data/thirtyDayAnalysis.json';
-const weeks = analysis.weekly.weeks;
-const peak = Math.max(...weeks.map((w) => w.count));
+import archive from '../../public/cybersecurity-data/archive-snapshot.json';
+import { buildRollingBrief, cohort, mergeReporting } from './cyber-reporting-data.js';
+const initial = buildRollingBrief(mergeReporting(archive));
 ---
 <section id="daily-disclosure-summary" class="brief" aria-labelledby="daily-brief-title" data-cyber-daily>
-  <p class="brief__kicker">30-day briefing · {analysis.period}</p>
+  <p class="brief__kicker">Rolling 30-day briefing · <span data-rolling-period>{initial.period}</span></p>
   <h2 id="daily-brief-title">What changed in the last 30 days</h2>
-  <p class="brief__headline">{analysis.headline}</p>
-  <p class="brief__lede">{analysis.lede}</p>
-
+  <p class="brief__headline" data-rolling-headline>{initial.headline}</p>
+  <p class="brief__lede">A like-for-like look at published records from seven continuously monitored sources, compared with the preceding 30 days.</p>
   <div class="brief__top">
-    <ul class="brief__stats" aria-label="Headline figures">
-      {analysis.highlights.map((h) => (
-        <li><strong>{h.figure}</strong><span class="brief__stat-label">{h.label}</span><span class="brief__stat-context">{h.context}</span></li>
-      ))}
+    <ul class="brief__stats" aria-label="Rolling disclosure counts">
+      <li><strong data-rolling-current>{initial.current}</strong><span class="brief__stat-label">Records this period</span><span class="brief__stat-context" data-rolling-current-range>{initial.period}</span></li>
+      <li><strong data-rolling-previous>{initial.previous}</strong><span class="brief__stat-label">Records in prior period</span><span class="brief__stat-context" data-rolling-prior-range>{initial.comparison}</span></li>
+      <li><strong data-rolling-change>{initial.change === null ? 'N/A' : `${initial.change > 0 ? '+' : ''}${initial.change}%`}</strong><span class="brief__stat-label">Change in records</span><span class="brief__stat-context">Same source list</span></li>
     </ul>
-    <figure class="brief__chart">
-      <figcaption>{analysis.weekly.label}</figcaption>
-      <ol class="brief__bars">
-        {weeks.map((w) => (
-          <li class:list={[{ 'is-peak': w.count === peak, 'is-partial': w.partial }]} style={`--h:${(w.count / peak) * 100}%`} tabindex="0"
-            aria-label={`${w.range}: ${w.count} records${w.partial ? ', partial week' : ''}`}>
-            <span class="brief__bar" aria-hidden="true"></span>
-            <span class="brief__tip" aria-hidden="true"><b>{w.count}</b> {w.range}{w.note ? <em>{w.note}</em> : null}</span>
-            <span class="brief__week" aria-hidden="true">{w.label}</span>
-          </li>
-        ))}
-      </ol>
+    <figure class="brief__chart" data-rolling-chart hidden>
+      <figcaption>Records per week in the current window</figcaption>
+      <ol class="brief__bars" data-rolling-bars></ol>
     </figure>
   </div>
-
-  <ul class="brief__takeaways">
-    {analysis.takeaways.map((t) => (
-      <li>
-        <details>
-          <summary><span><b>{t.lead}</b> {t.summary}</span><span class="brief__more" aria-hidden="true"></span></summary>
-          <p>{t.detail}</p>
-        </details>
-      </li>
-    ))}
-  </ul>
-
+  <p class="brief__latest-meta" data-rolling-status>Using the saved archive until the live source check completes.</p>
   <details class="brief__notes">
-    <summary>Notes on the data</summary>
-    <p><strong>Coverage gaps.</strong> {analysis.gaps}</p>
-    <p><strong>Method.</strong> Counts use the date each record was filed, published, or added, not the date an attack happened. Comparisons with {analysis.comparison} use only sources with complete records in both periods: {analysis.comparableSources.join(', ')}. One incident can appear in several state lists and in national reporting. Analysis as of <time datetime={analysis.asOf}>{analysis.asOf}</time>.</p>
+    <summary>How the rolling comparison works</summary>
+    <p>Uses the last 30 completed reporting days and the 30 days before them, in Eastern time. Today is shown in the latest check below, not in the comparison. Counts use the date a record became public, not the date an attack occurred.</p>
+    <p><strong>Sources:</strong> {Object.values(cohort).join(', ')}. Counts reflect records DAL-X has collected. Backfills, changes in publisher coverage and delayed feeds can move the numbers. Notices from different regulators can describe the same incident.</p>
   </details>
-
   <div class="brief__latest">
     <span class="brief__pulse" aria-hidden="true"></span>
     <div>
@@ -73,7 +51,7 @@ const peak = Math.max(...weeks.map((w) => w.count));
 .brief__stat-context{font-size:.76rem;color:#bfb0a6;line-height:1.35}
 .brief__chart{margin:0;min-width:0}
 .brief__chart figcaption{font:.7rem/1.4 ui-monospace,monospace;color:#bfb0a6;letter-spacing:.06em;text-transform:uppercase;margin-bottom:.5rem}
-.brief__bars{list-style:none;margin:0;padding:0;height:120px;display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:6px;align-items:end;border-bottom:1px solid #4a3b33}
+.brief__bars{list-style:none;margin:0;padding:0;height:120px;display:grid;grid-template-columns:repeat(var(--rolling-weeks,5),minmax(0,1fr));gap:6px;align-items:end;border-bottom:1px solid #4a3b33}
 .brief__bars li{position:relative;height:100%;display:flex;align-items:end;justify-content:center;outline:none;cursor:default}
 .brief__bar{display:block;width:100%;height:var(--h);min-height:3px;border-radius:3px 3px 0 0;background:#5c4a40;transition:background .15s}
 .brief__bars li.is-peak .brief__bar{background:#e86020}

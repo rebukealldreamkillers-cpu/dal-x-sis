@@ -1,17 +1,18 @@
 ---
 import archive from '../../public/cybersecurity-data/archive-snapshot.json';
 import { buildNumbers } from './cyber-numbers-data.js';
-const data=buildNumbers(archive);
+import { mergeReporting } from './cyber-reporting-data.js';
+const data=buildNumbers(mergeReporting(archive));
 const initial=data.windows[90];
 const labels=[['reviewed','Reviewed entries','Editorial reports and campaign write-ups.'],['agent','AI agent security','A subset of reviewed entries, not an additional total.'],['public','Public records','Notices, filings, advisories, and catalog entries.']];
-const serialized=JSON.stringify(data).replace(/</g,'\\u003c');
+const serialized=JSON.stringify(archive).replace(/</g,'\\u003c');
 ---
 <section id="the-numbers" class="cyber-numbers" aria-labelledby="numbers-title" data-cyber-numbers>
   <header class="numbers-head">
     <div><p class="numbers-kicker">Disclosure trends</p><h2 id="numbers-title">The numbers</h2></div>
-    <p class="numbers-date">Published archive through <time datetime={data.asOf}>{data.asOf}</time></p>
+    <p class="numbers-date"><span data-numbers-status>Published archive through</span> <time data-numbers-asof datetime={data.asOf}>{data.asOf}</time></p>
   </header>
-  <p class="numbers-intro">See how reviewed incidents and public reports appear over time. These are disclosure volumes in the DAL-X archive, not counts of attacks or affected organizations.</p>
+  <p class="numbers-intro">See how reviewed incidents and public reports appear over time. These are disclosure volumes from the saved archive and latest source checks, not counts of attacks or affected organizations.</p>
   <div class="numbers-kpis">
     {labels.map(([key,label,desc])=><div class="numbers-kpi"><div class="numbers-number" data-figure={key}>{initial.series[key].total.toLocaleString('en-US')}</div><strong>{label}</strong><p>{desc}</p></div>)}
   </div>
@@ -42,8 +43,8 @@ const serialized=JSON.stringify(data).replace(/</g,'\\u003c');
   </div>
   <noscript><p>Enable JavaScript to explore weekly breakdowns, or use the published archive for source records.</p></noscript>
   <details class="numbers-method"><summary>How these numbers are counted</summary>
-    <p>Each row in the published archive is counted once by its filing, publication, or catalog date, not the date an attack happened. Reviewed entries are a separate view. AI agent security is a subset of reviewed entries. Campaigns may cover multiple organizations, and notices from different regulators may cover the same incident.</p>
-    <p>Weeks start Monday and use UTC dates. Partial weeks are marked with an asterisk. Differences can reflect publishing schedules, source coverage, and backfills. The live ticker can show newer reports before they enter the published archive. Do not use this chart as a measure of attack frequency.</p>
+    <p>Each source record is counted once across the saved archive and current source checks by its filing, publication, or catalog date, not the date an attack happened. Reviewed entries are a separate view. AI agent security is a subset of reviewed entries. Campaigns may cover multiple organizations, and notices from different regulators may cover the same incident.</p>
+    <p>Weeks start Monday and use Eastern reporting dates. Partial weeks are marked with an asterisk. Differences can reflect publishing schedules, source coverage, and backfills. Live public records refresh with the feed; reviewed entries change only when a review is published. The current reporting day can be incomplete. Do not use this chart as a measure of attack frequency.</p>
   </details>
   <script type="application/json" is:inline data-numbers-json set:html={serialized}></script>
 </section>
