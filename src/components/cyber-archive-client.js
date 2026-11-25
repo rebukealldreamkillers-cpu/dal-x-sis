@@ -4,7 +4,7 @@ import { breakingStoryKey, indexReport, matchesReport, normalize } from './cyber
 const archiveEndpoint = '/cybersecurity-data/archive-snapshot.json';
 const typeNames = { news:'Breaking report', filing:'SEC filing', agency:'Law enforcement announcement', incident:'National incident', breach:'Breach notice', advisory:'Advisory', kev:'Exploited vulnerability' };
 const archiveHosts = {
-  gnews:['news.google.com'], bleeping:['www.bleepingcomputer.com'], record:['therecord.media'], securityweek:['www.securityweek.com'], cyberscoop:['cyberscoop.com'],
+  gnews:['news.google.com'], gnewsincident:['news.google.com'], bleeping:['www.bleepingcomputer.com'], record:['therecord.media'], securityweek:['www.securityweek.com'], cyberscoop:['cyberscoop.com'],
   id:['www.ag.idaho.gov'], sc:['consumer.sc.gov'], in:['www.in.gov'], tx:['oag.my.site.com'],
   mt:['dojmt.gov'], nh:['mm.nh.gov'], ri:['riag.ri.gov'], ne:['nebraska.gov'], il:['databreachnoticetoattorneygeneral.illinoisattorneygeneral.gov'],
   hhs:['ocrportal.hhs.gov'],ia:['www.iowaattorneygeneral.gov'],ma:['www.mass.gov'],sec:['www.sec.gov'],ic3:['www.ic3.gov'],doj:['www.justice.gov'],
