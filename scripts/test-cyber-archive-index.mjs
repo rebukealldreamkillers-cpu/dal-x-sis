@@ -33,3 +33,11 @@ test('aliases apply across report types in both directions without matching insi
   assert.ok(search({ title: 'CISA updates alert for CVE-2026-12345', source: 'Example' }, 'CVE-2026-12345'));
   assert.equal(search({ title: 'Security policy', source: 'Example' }, 'SEC'), false);
 });
+
+test('FinCEN and Treasury names find the November 24 incident disclosure once', () => {
+  const fincen = archive.items.filter((row) => row.sourceId === 'gnewsincident' && row.title.startsWith('US financial crimes bureau'));
+  assert.equal(fincen.length, 1);
+  for (const query of ['FinCEN', 'Financial Crimes Enforcement Network', 'Treasury Department', 'BSA E-Filing']) {
+    assert.deepEqual(archive.items.filter((row) => search(row, query)).filter((row) => row.title.includes('financial crimes bureau')), fincen);
+  }
+});

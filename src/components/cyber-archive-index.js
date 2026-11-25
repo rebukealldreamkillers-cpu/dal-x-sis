@@ -6,6 +6,11 @@ export const normalize = (value) => value.normalize('NFKC').toLowerCase()
 const aliases = [
   ['National Crime Information Center', 'NCIC', 'FBI NCIC'],
   ['Federal Bureau of Investigation', 'FBI'],
+  ['Financial Crimes Enforcement Network', 'FinCEN', 'US financial crimes bureau', 'Treasury FinCEN'],
+  ['Department of the Treasury', 'Treasury Department', 'U.S. Treasury', 'US Treasury'],
+  ['Bank Secrecy Act', 'BSA', 'BSA E-Filing'],
+  ['Central Intelligence Agency', 'CIA'],
+  ['Office of the Director of National Intelligence', 'ODNI', 'Director of National Intelligence'],
   ['Cybersecurity and Infrastructure Security Agency', 'CISA'],
   ['Department of Justice', 'DOJ', 'Justice Department'],
   ['Securities and Exchange Commission', 'SEC', 'SEC EDGAR'],

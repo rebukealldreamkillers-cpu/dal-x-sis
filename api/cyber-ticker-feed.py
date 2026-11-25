@@ -19,10 +19,11 @@ DAY = 24 * HOUR
 MAX_BYTES = 5 * 1024 * 1024
 MAX_NEWS_URL_LENGTH = 8192
 NEWS_INTERVAL = 15 * 60
-NEWS_SOURCES = ('gnews', 'bleeping', 'record', 'securityweek', 'cyberscoop')
-NEWS_HOSTS = {'gnews': 'news.google.com', 'bleeping': 'www.bleepingcomputer.com', 'record': 'therecord.media',
+GOOGLE_NEWS_SOURCES = ('gnews', 'gnewsincident')
+NEWS_SOURCES = ('gnews', 'gnewsincident', 'bleeping', 'record', 'securityweek', 'cyberscoop')
+NEWS_HOSTS = {'gnews': 'news.google.com', 'gnewsincident': 'news.google.com', 'bleeping': 'www.bleepingcomputer.com', 'record': 'therecord.media',
               'securityweek': 'www.securityweek.com', 'cyberscoop': 'cyberscoop.com'}
-NEWS_EVENT = re.compile(r'\b(?:cyber ?attacks?|hack(?:ed|ers?|s|ing)?|breach(?:ed|es)?|ransomware|intrusions?|compromis(?:e|ed|es)|data (?:theft|leak|exposure)|stole|stolen|extortion|cyber incident|cybersecurity incident|security incident|outage)\b', re.I)
+NEWS_EVENT = re.compile(r'\b(?:cyber ?attacks?|hack(?:ed|ers?|s|ing)?|breach(?:ed|es)?|ransomware|intrusions?|compromis(?:e|ed|es)|data (?:theft|leak|exposure)|stole|stolen|extortion|cyber incident|cybersecurity incident|security incident|unauthorized access|outage)\b', re.I)
 NEWS_SKIP = re.compile(r"^(?:what|how|why|when|opinion|podcast|webinar|video|watch|listen|week in review|the week)\b|\b(?:could|tips|guide|explained|best practices|survey|report finds|funding|raises|acquires|launches|appoint|appoints|taps|nominee|wasn['’]t|isn['’]t|let['’]s)\b|\((?:OB|LSE|TSX|ASX|NSE|HKEX|KRX|TYO|EPA|ETR):", re.I)
 SOURCES = {
     'breach': ('California DOJ', 'https://oag.ca.gov/privacy/databreach/list', HOUR),
@@ -36,6 +37,8 @@ SOURCES = {
     'id': ('Idaho Attorney General', 'https://www.ag.idaho.gov/consumer-protection/security-breaches/', HOUR),
     'sc': ('South Carolina Consumer Affairs', 'https://consumer.sc.gov/identity-theft-unit/security-breach-notices', HOUR),
     'gnews': ('Google News (U.S.)', 'https://news.google.com/rss/search?q=cyberattack+OR+hackers+OR+%22data+breach%22+OR+ransomware+OR+%22cyber+incident%22+when:2d&hl=en-US&gl=US&ceid=US:en', NEWS_INTERVAL),
+    # Official disclosures often say 'cybersecurity incident' or 'unauthorized access' rather than 'cyberattack'.
+    'gnewsincident': ('Google News (U.S.) incident disclosures', 'https://news.google.com/rss/search?q=%22cybersecurity+incident%22+OR+%22security+incident%22+OR+%22unauthorized+access%22+OR+intrusion+OR+breached+OR+%22systems+offline%22+when:2d&hl=en-US&gl=US&ceid=US:en', NEWS_INTERVAL),
     'bleeping': ('BleepingComputer', 'https://www.bleepingcomputer.com/feed/', NEWS_INTERVAL),
     'record': ('The Record', 'https://therecord.media/feed', NEWS_INTERVAL),
     'securityweek': ('SecurityWeek', 'https://www.securityweek.com/feed/', NEWS_INTERVAL),
@@ -228,7 +231,7 @@ def parse(key, body):
             title = clean(row.findtext('title'))
             outlet_node = row.find('source')
             outlet = clean(outlet_node.text) if outlet_node is not None and outlet_node.text else SOURCES[key][0]
-            if key == 'gnews' and outlet and title.endswith(' - ' + outlet):
+            if key in GOOGLE_NEWS_SOURCES and outlet and title.endswith(' - ' + outlet):
                 title = title[:-(len(outlet) + 3)].strip()
             # RSS article URLs can contain long opaque tokens. Never apply headline truncation to them.
             link = (row.findtext('link') or '').strip()
@@ -241,13 +244,13 @@ def parse(key, body):
                 continue
             if ref.scheme != 'https' or ref.netloc != NEWS_HOSTS[key]:
                 continue
-            if key == 'gnews' and not ref.path.startswith('/rss/articles/'):
+            if key in GOOGLE_NEWS_SOURCES and not ref.path.startswith('/rss/articles/'):
                 continue
             # Discovery only: headline, outlet, and link. No article text is stored or republished.
             if not title or not NEWS_EVENT.search(title) or NEWS_SKIP.search(title):
                 continue
             date = t.replace(tzinfo=t.tzinfo or UTC).astimezone(UTC).isoformat()
-            url = urlunsplit((ref.scheme, ref.netloc, ref.path, ref.query if key == 'gnews' else '', ''))
+            url = urlunsplit((ref.scheme, ref.netloc, ref.path, ref.query if key in GOOGLE_NEWS_SOURCES else '', ''))
             row = dict(id=url, title=title, date=date, url=url, outlet=outlet)
             if news_quality(row):
                 items[url] = row

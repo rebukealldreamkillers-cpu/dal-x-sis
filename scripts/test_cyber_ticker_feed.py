@@ -45,6 +45,16 @@ class NewsLinksTest(unittest.TestCase):
         row, = feed.parse('bleeping', rss(url + '?utm_source=rss'))
         self.assertEqual(row['url'], url)
 
+    def test_incident_disclosure_query_keeps_official_wording(self):
+        url = 'https://news.google.com/rss/articles/CBMiFinCEN?oc=5'
+        body = rss(url).replace(b'Data breach reported in California', 'US financial crimes bureau discloses ‘cybersecurity incident’'.encode()).replace(b'BleepingComputer', b'The Verge')
+        row, = feed.parse('gnewsincident', body)
+        self.assertEqual(row['url'], url)
+        self.assertEqual(row['title'], 'US financial crimes bureau discloses ‘cybersecurity incident’')
+        self.assertTrue(feed.news_quality(row))
+        self.assertIn('%22cybersecurity+incident%22', feed.SOURCES['gnewsincident'][1])
+        self.assertIn('%22unauthorized+access%22', feed.SOURCES['gnewsincident'][1])
+
 
 if __name__ == '__main__':
     unittest.main()

@@ -8,6 +8,7 @@ const expireMs = 24 * 60 * 60_000;
 const labels = { news:'Breaking report', filing:'SEC filing', agency:'Law enforcement announcement', incident:'National incident', breach:'Breach notice', advisory:'Advisory', kev:'Exploited vulnerability' };
 const endpoints = {
   gnews:['news',['news.google.com','/rss/articles/']],
+  gnewsincident:['news',['news.google.com','/rss/articles/']],
   bleeping:['news',['www.bleepingcomputer.com','/news/']],
   record:['news',['therecord.media','/']],
   securityweek:['news',['www.securityweek.com','/']],
